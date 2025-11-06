@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sso_test.dir/sso_test.cpp.o -o sso_test  ../libfastcomments.a ../lib/libgtest_main.a -lssl -lcrypto ../lib/libgtest.a

@@ -1,0 +1,5 @@
+if(EXISTS "/home/winrid/dev/fastcomments/fastcomments-cpp/build/tests/sso_integration_test[1]_tests.cmake")
+  include("/home/winrid/dev/fastcomments/fastcomments-cpp/build/tests/sso_integration_test[1]_tests.cmake")
+else()
+  add_test(sso_integration_test_NOT_BUILT sso_integration_test_NOT_BUILT)
+endif()
