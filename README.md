@@ -66,7 +66,7 @@ int main() {
     // OR: config->setBaseUrl(utility::conversions::to_string_t("https://eu.fastcomments.com"));  // EU
 
     // REQUIRED: Set your API key
-    config->setApiKey(utility::conversions::to_string_t("x-api-key"), utility::conversions::to_string_t("YOUR_API_KEY_HERE"));
+    config->setApiKey(utility::conversions::to_string_t("api_key"), utility::conversions::to_string_t("YOUR_API_KEY_HERE"));
 
     auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
     org::openapitools::client::api::DefaultApi api(apiClient);
@@ -103,7 +103,7 @@ int main() {
 ### Common Issues
 
 1. **"URI must contain a hostname" error**: Make sure you call `config->setBaseUrl(utility::conversions::to_string_t("https://fastcomments.com"))` before creating the ApiClient. The cpp-restsdk generator doesn't automatically read the server URL from the OpenAPI spec.
-2. **401 "missing-api-key" error**: Make sure you call `config->setApiKey(utility::conversions::to_string_t("x-api-key"), utility::conversions::to_string_t("YOUR_KEY"))` before creating the DefaultAPI instance.
+2. **401 "missing-api-key" error**: Make sure you call `config->setApiKey(utility::conversions::to_string_t("api_key"), utility::conversions::to_string_t("YOUR_KEY"))` before creating the DefaultAPI instance.
 3. **Wrong API class**: Use `DefaultAPI` for server-side authenticated requests, `PublicAPI` for client-side/public requests.
 
 ## Notes
