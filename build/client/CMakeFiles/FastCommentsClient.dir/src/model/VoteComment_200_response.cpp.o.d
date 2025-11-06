@@ -311,6 +311,4 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentThreadDeletionMode.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SortDirections.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse_status.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIError.h

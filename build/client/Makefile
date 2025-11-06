@@ -5729,30 +5729,6 @@ src/model/VoteDeleteResponse.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.s
 .PHONY : src/model/VoteDeleteResponse.cpp.s
 
-src/model/VoteDeleteResponse_status.o: src/model/VoteDeleteResponse_status.cpp.o
-.PHONY : src/model/VoteDeleteResponse_status.o
-
-# target to build an object file
-src/model/VoteDeleteResponse_status.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o
-.PHONY : src/model/VoteDeleteResponse_status.cpp.o
-
-src/model/VoteDeleteResponse_status.i: src/model/VoteDeleteResponse_status.cpp.i
-.PHONY : src/model/VoteDeleteResponse_status.i
-
-# target to preprocess a source file
-src/model/VoteDeleteResponse_status.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.i
-.PHONY : src/model/VoteDeleteResponse_status.cpp.i
-
-src/model/VoteDeleteResponse_status.s: src/model/VoteDeleteResponse_status.cpp.s
-.PHONY : src/model/VoteDeleteResponse_status.s
-
-# target to generate assembly for a file
-src/model/VoteDeleteResponse_status.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.s
-.PHONY : src/model/VoteDeleteResponse_status.cpp.s
-
 src/model/VoteResponse.o: src/model/VoteResponse.cpp.o
 .PHONY : src/model/VoteResponse.o
 
@@ -5800,30 +5776,6 @@ src/model/VoteResponseUser.s: src/model/VoteResponseUser.cpp.s
 src/model/VoteResponseUser.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.s
 .PHONY : src/model/VoteResponseUser.cpp.s
-
-src/model/VoteResponse_status.o: src/model/VoteResponse_status.cpp.o
-.PHONY : src/model/VoteResponse_status.o
-
-# target to build an object file
-src/model/VoteResponse_status.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o
-.PHONY : src/model/VoteResponse_status.cpp.o
-
-src/model/VoteResponse_status.i: src/model/VoteResponse_status.cpp.i
-.PHONY : src/model/VoteResponse_status.i
-
-# target to preprocess a source file
-src/model/VoteResponse_status.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.i
-.PHONY : src/model/VoteResponse_status.cpp.i
-
-src/model/VoteResponse_status.s: src/model/VoteResponse_status.cpp.s
-.PHONY : src/model/VoteResponse_status.s
-
-# target to generate assembly for a file
-src/model/VoteResponse_status.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.s
-.PHONY : src/model/VoteResponse_status.cpp.s
 
 src/model/VoteStyle.o: src/model/VoteStyle.cpp.o
 .PHONY : src/model/VoteStyle.o
@@ -6556,18 +6508,12 @@ help:
 	@echo "... src/model/VoteDeleteResponse.o"
 	@echo "... src/model/VoteDeleteResponse.i"
 	@echo "... src/model/VoteDeleteResponse.s"
-	@echo "... src/model/VoteDeleteResponse_status.o"
-	@echo "... src/model/VoteDeleteResponse_status.i"
-	@echo "... src/model/VoteDeleteResponse_status.s"
 	@echo "... src/model/VoteResponse.o"
 	@echo "... src/model/VoteResponse.i"
 	@echo "... src/model/VoteResponse.s"
 	@echo "... src/model/VoteResponseUser.o"
 	@echo "... src/model/VoteResponseUser.i"
 	@echo "... src/model/VoteResponseUser.s"
-	@echo "... src/model/VoteResponse_status.o"
-	@echo "... src/model/VoteResponse_status.i"
-	@echo "... src/model/VoteResponse_status.s"
 	@echo "... src/model/VoteStyle.o"
 	@echo "... src/model/VoteStyle.i"
 	@echo "... src/model/VoteStyle.s"

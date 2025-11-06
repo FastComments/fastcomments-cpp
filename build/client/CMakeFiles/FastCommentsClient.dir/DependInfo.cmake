@@ -239,10 +239,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteBodyParams.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o.d"
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteComment_200_response.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o.d"
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o.d"
-  "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse_status.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o.d"
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o.d"
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o.d"
-  "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse_status.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o.d"
   "/home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteStyle.cpp" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o" "gcc" "client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o.d"
   )
 

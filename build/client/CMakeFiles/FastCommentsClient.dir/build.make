@@ -3303,24 +3303,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.s: cma
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse_status.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse_status.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse_status.cpp > CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse_status.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.i: cmake_force
@@ -3334,7 +3320,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.s: cmake_for
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.i: cmake_force
@@ -3345,24 +3331,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse_status.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse_status.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse_status.cpp > CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse_status.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteStyle.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteStyle.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.i: cmake_force
@@ -3606,10 +3578,8 @@ FastCommentsClient_OBJECTS = \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o"
 
 # External object files for target FastCommentsClient
@@ -3846,14 +3816,12 @@ client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/mod
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse_status.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse_status.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/build.make
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Linking CXX static library libFastCommentsClient.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Linking CXX static library libFastCommentsClient.a"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && $(CMAKE_COMMAND) -P CMakeFiles/FastCommentsClient.dir/cmake_clean_target.cmake
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FastCommentsClient.dir/link.txt --verbose=$(VERBOSE)
 

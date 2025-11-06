@@ -236,10 +236,8 @@ include/FastCommentsClient/model/UserSessionInfo.h
 include/FastCommentsClient/model/VoteBodyParams.h
 include/FastCommentsClient/model/VoteComment_200_response.h
 include/FastCommentsClient/model/VoteDeleteResponse.h
-include/FastCommentsClient/model/VoteDeleteResponse_status.h
 include/FastCommentsClient/model/VoteResponse.h
 include/FastCommentsClient/model/VoteResponseUser.h
-include/FastCommentsClient/model/VoteResponse_status.h
 include/FastCommentsClient/model/VoteStyle.h
 src/AnyType.cpp
 src/ApiClient.cpp
@@ -472,8 +470,6 @@ src/model/UserSessionInfo.cpp
 src/model/VoteBodyParams.cpp
 src/model/VoteComment_200_response.cpp
 src/model/VoteDeleteResponse.cpp
-src/model/VoteDeleteResponse_status.cpp
 src/model/VoteResponse.cpp
 src/model/VoteResponseUser.cpp
-src/model/VoteResponse_status.cpp
 src/model/VoteStyle.cpp

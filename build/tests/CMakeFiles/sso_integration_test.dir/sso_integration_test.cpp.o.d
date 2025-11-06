@@ -1051,7 +1051,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicAPIDeleteCommentResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentVote_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteDeleteResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteDeleteResponse_status.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteFeedPostPublic_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteFeedPostPublic_200_response_anyOf.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FlagCommentPublic_200_response.h \
@@ -1110,7 +1109,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteComment_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponseUser.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse_status.h \
  /usr/include/boost/optional.hpp /usr/include/boost/optional/optional.hpp \
  /usr/include/boost/core/explicit_operator_bool.hpp \
  /usr/include/boost/core/swap.hpp \

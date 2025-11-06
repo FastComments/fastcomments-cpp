@@ -241,10 +241,8 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteBodyParams.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteComment_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteDeleteResponse.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteDeleteResponse_status.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponseUser.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteResponse_status.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteStyle.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/include/fastcomments/sso/fastcomments_sso.hpp
  /home/winrid/dev/fastcomments/fastcomments-cpp/include/fastcomments/sso/helpers.hpp

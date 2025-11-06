@@ -128,26 +128,31 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
 
     auto config = std::make_shared<org::openapitools::client::api::ApiConfiguration>();
     config->setBaseUrl(utility::conversions::to_string_t("https://fastcomments.com"));
-    config->setApiKey(utility::conversions::to_string_t("x-api-key"), utility::conversions::to_string_t(apiKey));
+    config->setApiKey(utility::conversions::to_string_t("api_key"), utility::conversions::to_string_t(apiKey));
     auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
     DefaultApi defaultApi(apiClient);
 
-    // Note: This endpoint may return 401 depending on API key permissions
-    // The test verifies the SDK can make the call, not that auth works
-    try {
-        auto response = defaultApi.getComments(
-            utility::conversions::to_string_t(tenantID),
-            boost::none, boost::none, boost::none, boost::none, boost::none,
-            boost::none, boost::none, boost::none, boost::none, boost::none,
-            boost::none, boost::none, boost::none, boost::none
-        ).get();
+    auto response = defaultApi.getComments(
+        utility::conversions::to_string_t(tenantID),
+        boost::none, boost::none, boost::none, boost::none, boost::none,
+        boost::none, boost::none, boost::none, boost::none, boost::none,
+        boost::none, boost::none, boost::none, boost::none
+    ).get();
 
-        ASSERT_NE(response, nullptr);
-    } catch (const std::exception& e) {
-        // Accept auth errors - SDK correctly made the authenticated call
-        std::string error(e.what());
-        EXPECT_TRUE(error.find("Unauthorized") != std::string::npos || error.find("401") != std::string::npos)
-            << "Unexpected error: " << error;
+    ASSERT_NE(response, nullptr);
+
+    // Verify response contains expected fields
+    if (response->codeIsSet()) {
+        std::cout << "Response code: " << utility::conversions::to_utf8string(response->getCode()) << std::endl;
+    }
+    if (response->reasonIsSet()) {
+        std::cout << "Response reason: " << utility::conversions::to_utf8string(response->getReason()) << std::endl;
+    }
+
+    // The API should return successfully with authentication
+    EXPECT_TRUE(response->statusIsSet());
+    if (response->statusIsSet()) {
+        std::cout << "Response status: " << utility::conversions::to_utf8string(response->getStatus()) << std::endl;
     }
 }
 
