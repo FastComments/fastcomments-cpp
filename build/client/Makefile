@@ -1865,30 +1865,6 @@ src/model/CreateCommentParams.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.s
 .PHONY : src/model/CreateCommentParams.cpp.s
 
-src/model/CreateCommentPublic_200_response.o: src/model/CreateCommentPublic_200_response.cpp.o
-.PHONY : src/model/CreateCommentPublic_200_response.o
-
-# target to build an object file
-src/model/CreateCommentPublic_200_response.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o
-.PHONY : src/model/CreateCommentPublic_200_response.cpp.o
-
-src/model/CreateCommentPublic_200_response.i: src/model/CreateCommentPublic_200_response.cpp.i
-.PHONY : src/model/CreateCommentPublic_200_response.i
-
-# target to preprocess a source file
-src/model/CreateCommentPublic_200_response.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.i
-.PHONY : src/model/CreateCommentPublic_200_response.cpp.i
-
-src/model/CreateCommentPublic_200_response.s: src/model/CreateCommentPublic_200_response.cpp.s
-.PHONY : src/model/CreateCommentPublic_200_response.s
-
-# target to generate assembly for a file
-src/model/CreateCommentPublic_200_response.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.s
-.PHONY : src/model/CreateCommentPublic_200_response.cpp.s
-
 src/model/CreateFeedPostParams.o: src/model/CreateFeedPostParams.cpp.o
 .PHONY : src/model/CreateFeedPostParams.o
 
@@ -2128,30 +2104,6 @@ src/model/DeleteCommentAction.s: src/model/DeleteCommentAction.cpp.s
 src/model/DeleteCommentAction.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.s
 .PHONY : src/model/DeleteCommentAction.cpp.s
-
-src/model/DeleteCommentPublic_200_response.o: src/model/DeleteCommentPublic_200_response.cpp.o
-.PHONY : src/model/DeleteCommentPublic_200_response.o
-
-# target to build an object file
-src/model/DeleteCommentPublic_200_response.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o
-.PHONY : src/model/DeleteCommentPublic_200_response.cpp.o
-
-src/model/DeleteCommentPublic_200_response.i: src/model/DeleteCommentPublic_200_response.cpp.i
-.PHONY : src/model/DeleteCommentPublic_200_response.i
-
-# target to preprocess a source file
-src/model/DeleteCommentPublic_200_response.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.i
-.PHONY : src/model/DeleteCommentPublic_200_response.cpp.i
-
-src/model/DeleteCommentPublic_200_response.s: src/model/DeleteCommentPublic_200_response.cpp.s
-.PHONY : src/model/DeleteCommentPublic_200_response.s
-
-# target to generate assembly for a file
-src/model/DeleteCommentPublic_200_response.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.s
-.PHONY : src/model/DeleteCommentPublic_200_response.cpp.s
 
 src/model/DeleteCommentResult.o: src/model/DeleteCommentResult.cpp.o
 .PHONY : src/model/DeleteCommentResult.o
@@ -2849,30 +2801,6 @@ src/model/GetComment_200_response.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.s
 .PHONY : src/model/GetComment_200_response.cpp.s
 
-src/model/GetCommentsPublic_200_response.o: src/model/GetCommentsPublic_200_response.cpp.o
-.PHONY : src/model/GetCommentsPublic_200_response.o
-
-# target to build an object file
-src/model/GetCommentsPublic_200_response.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o
-.PHONY : src/model/GetCommentsPublic_200_response.cpp.o
-
-src/model/GetCommentsPublic_200_response.i: src/model/GetCommentsPublic_200_response.cpp.i
-.PHONY : src/model/GetCommentsPublic_200_response.i
-
-# target to preprocess a source file
-src/model/GetCommentsPublic_200_response.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.i
-.PHONY : src/model/GetCommentsPublic_200_response.cpp.i
-
-src/model/GetCommentsPublic_200_response.s: src/model/GetCommentsPublic_200_response.cpp.s
-.PHONY : src/model/GetCommentsPublic_200_response.s
-
-# target to generate assembly for a file
-src/model/GetCommentsPublic_200_response.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.s
-.PHONY : src/model/GetCommentsPublic_200_response.cpp.s
-
 src/model/GetCommentsResponseWithPresence_PublicComment_.o: src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o
 .PHONY : src/model/GetCommentsResponseWithPresence_PublicComment_.o
 
@@ -2920,30 +2848,6 @@ src/model/GetCommentsResponse_PublicComment_.s: src/model/GetCommentsResponse_Pu
 src/model/GetCommentsResponse_PublicComment_.cpp.s:
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.s
 .PHONY : src/model/GetCommentsResponse_PublicComment_.cpp.s
-
-src/model/GetComments_200_response.o: src/model/GetComments_200_response.cpp.o
-.PHONY : src/model/GetComments_200_response.o
-
-# target to build an object file
-src/model/GetComments_200_response.cpp.o:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o
-.PHONY : src/model/GetComments_200_response.cpp.o
-
-src/model/GetComments_200_response.i: src/model/GetComments_200_response.cpp.i
-.PHONY : src/model/GetComments_200_response.i
-
-# target to preprocess a source file
-src/model/GetComments_200_response.cpp.i:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.i
-.PHONY : src/model/GetComments_200_response.cpp.i
-
-src/model/GetComments_200_response.s: src/model/GetComments_200_response.cpp.s
-.PHONY : src/model/GetComments_200_response.s
-
-# target to generate assembly for a file
-src/model/GetComments_200_response.cpp.s:
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/FastCommentsClient.dir/build.make client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.s
-.PHONY : src/model/GetComments_200_response.cpp.s
 
 src/model/GetDomainConfig_200_response.o: src/model/GetDomainConfig_200_response.cpp.o
 .PHONY : src/model/GetDomainConfig_200_response.o
@@ -6025,9 +5929,6 @@ help:
 	@echo "... src/model/CreateCommentParams.o"
 	@echo "... src/model/CreateCommentParams.i"
 	@echo "... src/model/CreateCommentParams.s"
-	@echo "... src/model/CreateCommentPublic_200_response.o"
-	@echo "... src/model/CreateCommentPublic_200_response.i"
-	@echo "... src/model/CreateCommentPublic_200_response.s"
 	@echo "... src/model/CreateFeedPostParams.o"
 	@echo "... src/model/CreateFeedPostParams.i"
 	@echo "... src/model/CreateFeedPostParams.s"
@@ -6058,9 +5959,6 @@ help:
 	@echo "... src/model/DeleteCommentAction.o"
 	@echo "... src/model/DeleteCommentAction.i"
 	@echo "... src/model/DeleteCommentAction.s"
-	@echo "... src/model/DeleteCommentPublic_200_response.o"
-	@echo "... src/model/DeleteCommentPublic_200_response.i"
-	@echo "... src/model/DeleteCommentPublic_200_response.s"
 	@echo "... src/model/DeleteCommentResult.o"
 	@echo "... src/model/DeleteCommentResult.i"
 	@echo "... src/model/DeleteCommentResult.s"
@@ -6148,18 +6046,12 @@ help:
 	@echo "... src/model/GetComment_200_response.o"
 	@echo "... src/model/GetComment_200_response.i"
 	@echo "... src/model/GetComment_200_response.s"
-	@echo "... src/model/GetCommentsPublic_200_response.o"
-	@echo "... src/model/GetCommentsPublic_200_response.i"
-	@echo "... src/model/GetCommentsPublic_200_response.s"
 	@echo "... src/model/GetCommentsResponseWithPresence_PublicComment_.o"
 	@echo "... src/model/GetCommentsResponseWithPresence_PublicComment_.i"
 	@echo "... src/model/GetCommentsResponseWithPresence_PublicComment_.s"
 	@echo "... src/model/GetCommentsResponse_PublicComment_.o"
 	@echo "... src/model/GetCommentsResponse_PublicComment_.i"
 	@echo "... src/model/GetCommentsResponse_PublicComment_.s"
-	@echo "... src/model/GetComments_200_response.o"
-	@echo "... src/model/GetComments_200_response.i"
-	@echo "... src/model/GetComments_200_response.s"
 	@echo "... src/model/GetDomainConfig_200_response.o"
 	@echo "... src/model/GetDomainConfig_200_response.i"
 	@echo "... src/model/GetDomainConfig_200_response.s"

@@ -22,8 +22,8 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include "FastCommentsClient/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.h"
+#include <cpprest/details/basic_types.h>
 
 namespace org {
 namespace openapitools {
@@ -55,6 +55,25 @@ public:
     /////////////////////////////////////////////
     /// PublicAPIDeleteCommentResponse members
 
+    enum class StatusEnum
+    {
+        SUCCESS,
+        FAILED,
+    };
+
+    StatusEnum toStatusEnum(const utility::string_t& value) const;
+    const utility::string_t fromStatusEnum(const StatusEnum value) const;
+
+
+    utility::string_t getReason() const;
+    bool reasonIsSet() const;
+    void unsetReason();
+    void setReason(const utility::string_t& value);
+
+    utility::string_t getCode() const;
+    bool codeIsSet() const;
+    void unsetCode();
+    void setCode(const utility::string_t& value);
 
     std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> getComment() const;
     bool commentIsSet() const;
@@ -66,20 +85,26 @@ public:
     void unsetHardRemoved();
     void setHardRemoved(bool value);
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    StatusEnum getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const StatusEnum value);
 
 
 protected:
+    utility::string_t m_Reason;
+    bool m_ReasonIsSet;
+
+    utility::string_t m_Code;
+    bool m_CodeIsSet;
+
     std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> m_Comment;
     bool m_CommentIsSet;
 
     bool m_HardRemoved;
     bool m_HardRemovedIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    StatusEnum m_Status;
     bool m_StatusIsSet;
 
 };

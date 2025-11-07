@@ -974,11 +974,18 @@ client/CMakeFiles/FastCommentsClient.dir/src/api/DefaultApi.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/MultipartFormData.h \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentsResponse.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserBadgeInfo.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserHashTagInfo.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserMentionInfo.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys__meta.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/AnyType.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/Object.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIStatus.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfigParams.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfig_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf_1.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/AnyType.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/Object.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfig_200_response_anyOf.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddPageAPIResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIPage.h \
@@ -1005,7 +1012,6 @@ client/CMakeFiles/FastCommentsClient.dir/src/api/DefaultApi.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SortDirections.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIError.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AggregateQuestionResultsResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIStatus.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AggregateTimeBucket.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AggregationRequest.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AggregationOperation.h \
@@ -1030,10 +1036,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/api/DefaultApi.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FindCommentsByRangeResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FindCommentsByRangeItem.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FComment.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserBadgeInfo.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FComment_meta.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserHashTagInfo.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserMentionInfo.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentLogEntry.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentLogData.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/RepeatCommentCheckIgnoredReason.h \
@@ -1075,10 +1078,6 @@ client/CMakeFiles/FastCommentsClient.dir/src/api/DefaultApi.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_TenantAuditLog_TenantAuditLogKeys_.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComment_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys__meta.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComments_200_response.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentsResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfig_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf.h \

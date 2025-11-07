@@ -1049,24 +1049,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateCommentParams.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateCommentPublic_200_response.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateCommentPublic_200_response.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateCommentPublic_200_response.cpp > CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateCommentPublic_200_response.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.i: cmake_force
@@ -1080,7 +1066,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.i: cmake_force
@@ -1094,7 +1080,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_resp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.i: cmake_force
@@ -1108,7 +1094,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.s:
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPost_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPost_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.cpp.i: cmake_force
@@ -1122,7 +1108,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPost_200_response.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateFeedPostsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.i: cmake_force
@@ -1136,7 +1122,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostsResponse.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateSubscriptionAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateSubscriptionAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse.cpp.i: cmake_force
@@ -1150,7 +1136,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateSubscriptionAPIResponse
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateUserBadgeParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateUserBadgeParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.i: cmake_force
@@ -1164,7 +1150,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadgeParams.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateUserBadge_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CreateUserBadge_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.i: cmake_force
@@ -1178,7 +1164,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.
 client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CustomConfigParameters.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/CustomConfigParameters.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.i: cmake_force
@@ -1192,7 +1178,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.s:
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentAction.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentAction.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.i: cmake_force
@@ -1203,24 +1189,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentAction.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentPublic_200_response.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentPublic_200_response.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentPublic_200_response.cpp > CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentPublic_200_response.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentResult.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentResult.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.i: cmake_force
@@ -1234,7 +1206,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentVote_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteCommentVote_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.i: cmake_force
@@ -1248,7 +1220,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_respons
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.i: cmake_force
@@ -1262,7 +1234,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteDomainConfig_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteDomainConfig_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_response.cpp.i: cmake_force
@@ -1276,7 +1248,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteDomainConfig_200_respon
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteFeedPostPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteFeedPostPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response.cpp.i: cmake_force
@@ -1290,7 +1262,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_resp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_response_anyOf.cpp.i: cmake_force
@@ -1304,7 +1276,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteFeedPostPublic_200_resp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeletePageAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeletePageAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.i: cmake_force
@@ -1318,7 +1290,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeletePageAPIResponse.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteSSOUserAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteSSOUserAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.i: cmake_force
@@ -1332,7 +1304,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSSOUserAPIResponse.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteSubscriptionAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/DeleteSubscriptionAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse.cpp.i: cmake_force
@@ -1346,7 +1318,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteSubscriptionAPIResponse
 client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/EventLogEntry.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/EventLogEntry.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.i: cmake_force
@@ -1360,7 +1332,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/EventLogEntry.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FComment.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FComment.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.i: cmake_force
@@ -1374,7 +1346,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FComment.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FComment_meta.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FComment_meta.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.i: cmake_force
@@ -1388,7 +1360,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FComment_meta.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPost.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPost.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.i: cmake_force
@@ -1402,7 +1374,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPost.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostLink.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostLink.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.i: cmake_force
@@ -1416,7 +1388,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostLink.cpp.s: cmake_for
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostMediaItem.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostMediaItem.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.i: cmake_force
@@ -1430,7 +1402,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItem.cpp.s: cmak
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostMediaItemAsset.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostMediaItemAsset.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.i: cmake_force
@@ -1444,7 +1416,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostMediaItemAsset.cpp.s:
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostStats.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostStats.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.i: cmake_force
@@ -1458,7 +1430,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostStats.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostsStatsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FeedPostsStatsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.i: cmake_force
@@ -1472,7 +1444,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FeedPostsStatsResponse.cpp.s:
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FindCommentsByRangeItem.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FindCommentsByRangeItem.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.i: cmake_force
@@ -1486,7 +1458,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeItem.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FindCommentsByRangeResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FindCommentsByRangeResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.cpp.i: cmake_force
@@ -1500,7 +1472,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FindCommentsByRangeResponse.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagCommentPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagCommentPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_response.cpp.i: cmake_force
@@ -1514,7 +1486,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentPublic_200_respons
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagCommentResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagCommentResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.i: cmake_force
@@ -1528,7 +1500,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FlagCommentResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/FlagComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.i: cmake_force
@@ -1542,7 +1514,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/FlagComment_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetAuditLogsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetAuditLogsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.i: cmake_force
@@ -1556,7 +1528,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogsResponse.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetAuditLogs_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetAuditLogs_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp.i: cmake_force
@@ -1570,7 +1542,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetAuditLogs_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentText_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentText_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.cpp.i: cmake_force
@@ -1584,7 +1556,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentText_200_response.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentVoteUserNamesSuccessResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentVoteUserNamesSuccessResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.i: cmake_force
@@ -1598,7 +1570,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSucces
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentVoteUserNames_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentVoteUserNames_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.i: cmake_force
@@ -1612,7 +1584,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_r
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.i: cmake_force
@@ -1623,24 +1595,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComment_200_response.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsPublic_200_response.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsPublic_200_response.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsPublic_200_response.cpp > CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsPublic_200_response.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.i: cmake_force
@@ -1654,7 +1612,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresen
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsResponse_PublicComment_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsResponse_PublicComment_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.i: cmake_force
@@ -1665,24 +1623,10 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicCom
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.s"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetCommentsResponse_PublicComment_.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.s
 
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComments_200_response.cpp
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComments_200_response.cpp
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.i"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComments_200_response.cpp > CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.i
-
-client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.s"
-	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetComments_200_response.cpp -o CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.s
-
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfig_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfig_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.i: cmake_force
@@ -1696,7 +1640,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.i: cmake_force
@@ -1710,7 +1654,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response_anyOf.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response_anyOf.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.i: cmake_force
@@ -1724,7 +1668,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response_anyOf_1.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetDomainConfigs_200_response_anyOf_1.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf_1.cpp.i: cmake_force
@@ -1738,7 +1682,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetEventLogResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetEventLogResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.i: cmake_force
@@ -1752,7 +1696,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLogResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetEventLog_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetEventLog_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.i: cmake_force
@@ -1766,7 +1710,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetEventLog_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_response.cpp.i: cmake_force
@@ -1780,7 +1724,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsPublic_200_respon
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.i: cmake_force
@@ -1794,7 +1738,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsResponse.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsStats_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPostsStats_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_response.cpp.i: cmake_force
@@ -1808,7 +1752,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPostsStats_200_respons
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPosts_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetFeedPosts_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp.i: cmake_force
@@ -1822,7 +1766,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetFeedPosts_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetMyNotificationsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetMyNotificationsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cpp.i: cmake_force
@@ -1836,7 +1780,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetMyNotificationsResponse.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPageByURLIdAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPageByURLIdAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp.i: cmake_force
@@ -1850,7 +1794,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetPageByURLIdAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPagesAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPagesAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.i: cmake_force
@@ -1864,7 +1808,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetPagesAPIResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPublicFeedPostsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetPublicFeedPostsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cpp.i: cmake_force
@@ -1878,7 +1822,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetPublicFeedPostsResponse.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUserByEmailAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUserByEmailAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.cpp.i: cmake_force
@@ -1892,7 +1836,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByEmailAPIResponse.
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUserByIdAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUserByIdAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp.i: cmake_force
@@ -1906,7 +1850,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUserByIdAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUsers_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSSOUsers_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.i: cmake_force
@@ -1920,7 +1864,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetSSOUsers_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSubscriptionsAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetSubscriptionsAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.cpp.i: cmake_force
@@ -1934,7 +1878,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetSubscriptionsAPIResponse.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadgeProgressById_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadgeProgressById_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_response.cpp.i: cmake_force
@@ -1948,7 +1892,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressById_200_
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadgeProgressList_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadgeProgressList_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_response.cpp.i: cmake_force
@@ -1962,7 +1906,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadgeProgressList_200_
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadge_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadge_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp.i: cmake_force
@@ -1976,7 +1920,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadge_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadges_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserBadges_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cpp.i: cmake_force
@@ -1990,7 +1934,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserBadges_200_response.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotificationCountResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotificationCountResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountResponse.cpp.i: cmake_force
@@ -2004,7 +1948,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCountRespo
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotificationCount_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotificationCount_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_response.cpp.i: cmake_force
@@ -2018,7 +1962,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotificationCount_200_
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotifications_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserNotifications_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_response.cpp.i: cmake_force
@@ -2032,7 +1976,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserNotifications_200_resp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserPresenceStatusesResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserPresenceStatusesResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesResponse.cpp.i: cmake_force
@@ -2046,7 +1990,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatusesRespon
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserPresenceStatuses_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserPresenceStatuses_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_response.cpp.i: cmake_force
@@ -2060,7 +2004,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserPresenceStatuses_200_r
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserReactsPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GetUserReactsPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_response.cpp.i: cmake_force
@@ -2074,7 +2018,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GetUserReactsPublic_200_respo
 client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GifRating.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/GifRating.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.i: cmake_force
@@ -2088,7 +2032,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/GifRating.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/HeaderState.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/HeaderState.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.i: cmake_force
@@ -2102,7 +2046,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/HeaderState.cpp.s: cmake_forc
 client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/IgnoredResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/IgnoredResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.i: cmake_force
@@ -2116,7 +2060,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/IgnoredResponse.cpp.s: cmake_
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImageContentProfanityLevel.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImageContentProfanityLevel.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cpp.i: cmake_force
@@ -2130,7 +2074,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ImageContentProfanityLevel.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImportedAPIStatus_FAILED.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImportedAPIStatus_FAILED.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.i: cmake_force
@@ -2144,7 +2088,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_FAILED.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImportedAPIStatus_SUCCESS.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ImportedAPIStatus_SUCCESS.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp.i: cmake_force
@@ -2158,7 +2102,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ImportedAPIStatus_SUCCESS.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEvent.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEvent.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.i: cmake_force
@@ -2172,7 +2116,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEventType.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEventType.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.i: cmake_force
@@ -2186,7 +2130,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEventType.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEvent_extraInfo.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LiveEvent_extraInfo.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.i: cmake_force
@@ -2200,7 +2144,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/LiveEvent_extraInfo.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LockComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/LockComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.i: cmake_force
@@ -2214,7 +2158,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/LockComment_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/MediaAsset.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/MediaAsset.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.i: cmake_force
@@ -2228,7 +2172,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/MediaAsset.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/MetaItem.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/MetaItem.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.i: cmake_force
@@ -2242,7 +2186,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/MetaItem.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationAndCount.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationAndCount.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.i: cmake_force
@@ -2256,7 +2200,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationAndCount.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationObjectType.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationObjectType.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.i: cmake_force
@@ -2270,7 +2214,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationObjectType.cpp.s:
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationType.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/NotificationType.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.i: cmake_force
@@ -2284,7 +2228,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/NotificationType.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchDomainConfigParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchDomainConfigParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.i: cmake_force
@@ -2298,7 +2242,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PatchDomainConfigParams.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchPageAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchPageAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.i: cmake_force
@@ -2312,7 +2256,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PatchPageAPIResponse.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchSSOUserAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PatchSSOUserAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.i: cmake_force
@@ -2326,7 +2270,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PatchSSOUserAPIResponse.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_APIComment_UpdatableCommentFields_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_APIComment_UpdatableCommentFields_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableCommentFields_.cpp.i: cmake_force
@@ -2340,7 +2284,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_APIComment_UpdatableComm
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_APICommentFieldsKeys_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_APICommentFieldsKeys_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys_.cpp.i: cmake_force
@@ -2354,7 +2298,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentField
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentFieldsKeys__meta.cpp.i: cmake_force
@@ -2368,7 +2312,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_APICommentField
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFieldsKeys_.cpp.i: cmake_force
@@ -2382,7 +2326,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_PublicCommentFi
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_approved_or_commentHTML_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_approved_or_commentHTML_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_commentHTML_.cpp.i: cmake_force
@@ -2396,7 +2340,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_approved_or_com
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.cpp.i: cmake_force
@@ -2410,7 +2354,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_FComment_isDeleted_or_co
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__PublicCommentPubSubFieldsKeys_.cpp.i: cmake_force
@@ -2424,7 +2368,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_Omit_FComment_date__Publ
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAuditLogKeys_.cpp.i: cmake_force
@@ -2438,7 +2382,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Pick_TenantAuditLog_TenantAud
 client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PinComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PinComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.i: cmake_force
@@ -2452,7 +2396,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PinComment_200_response.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PubSubComment.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PubSubComment.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.i: cmake_force
@@ -2466,7 +2410,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubComment.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PubSubVote.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PubSubVote.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.i: cmake_force
@@ -2480,7 +2424,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PubSubVote.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPIDeleteCommentResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPIDeleteCommentResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentResponse.cpp.i: cmake_force
@@ -2494,7 +2438,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentRespons
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPIGetCommentTextResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPIGetCommentTextResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextResponse.cpp.i: cmake_force
@@ -2508,7 +2452,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIGetCommentTextRespon
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPISetCommentTextResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicAPISetCommentTextResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextResponse.cpp.i: cmake_force
@@ -2522,7 +2466,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPISetCommentTextRespon
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicBlockFromCommentParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicBlockFromCommentParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.cpp.i: cmake_force
@@ -2536,7 +2480,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicBlockFromCommentParams.
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicComment.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicComment.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.i: cmake_force
@@ -2550,7 +2494,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicComment.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicFeedPostsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PublicFeedPostsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.i: cmake_force
@@ -2564,7 +2508,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicFeedPostsResponse.cpp.s
 client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PutSSOUserAPIResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/PutSSOUserAPIResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.i: cmake_force
@@ -2578,7 +2522,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PutSSOUserAPIResponse.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QueryPredicate.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QueryPredicate.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.i: cmake_force
@@ -2592,7 +2536,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate.cpp.s: cmake_f
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QueryPredicate_value.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QueryPredicate_value.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.i: cmake_force
@@ -2606,7 +2550,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QueryPredicate_value.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionDatum.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionDatum.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.i: cmake_force
@@ -2620,7 +2564,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionDatum.cpp.s: cmake_fo
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionRenderingType.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionRenderingType.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.i: cmake_force
@@ -2634,7 +2578,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionRenderingType.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionResult.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionResult.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.i: cmake_force
@@ -2648,7 +2592,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResult.cpp.s: cmake_f
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionResultAggregationOverall.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionResultAggregationOverall.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOverall.cpp.i: cmake_force
@@ -2662,7 +2606,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionResultAggregationOver
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionSubQuestionVisibility.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionSubQuestionVisibility.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility.cpp.i: cmake_force
@@ -2676,7 +2620,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionSubQuestionVisibility
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionWhenSave.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/QuestionWhenSave.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.i: cmake_force
@@ -2690,7 +2634,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/QuestionWhenSave.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactBodyParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactBodyParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.i: cmake_force
@@ -2704,7 +2648,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ReactBodyParams.cpp.s: cmake_
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactFeedPostPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactFeedPostPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_response.cpp.i: cmake_force
@@ -2718,7 +2662,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostPublic_200_respo
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactFeedPostResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ReactFeedPostResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.i: cmake_force
@@ -2732,7 +2676,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ReactFeedPostResponse.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_or_null__after_string_or_null___value.cpp.i: cmake_force
@@ -2746,7 +2690,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string__before_string_
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Record_string_string_or_number__value.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/Record_string_string_or_number__value.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_number__value.cpp.i: cmake_force
@@ -2760,7 +2704,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/Record_string_string_or_numbe
 client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RenderableUserNotification.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RenderableUserNotification.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cpp.i: cmake_force
@@ -2774,7 +2718,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/RenderableUserNotification.cp
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RepeatCommentCheckIgnoredReason.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RepeatCommentCheckIgnoredReason.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReason.cpp.i: cmake_force
@@ -2788,7 +2732,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentCheckIgnoredReas
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RepeatCommentHandlingAction.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/RepeatCommentHandlingAction.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.cpp.i: cmake_force
@@ -2802,7 +2746,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/RepeatCommentHandlingAction.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ResetUserNotificationsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ResetUserNotificationsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsResponse.cpp.i: cmake_force
@@ -2816,7 +2760,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotificationsRespons
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ResetUserNotifications_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/ResetUserNotifications_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_response.cpp.i: cmake_force
@@ -2830,7 +2774,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/ResetUserNotifications_200_re
 client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SORT_DIR.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SORT_DIR.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.i: cmake_force
@@ -2844,7 +2788,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SORT_DIR.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SSOSecurityLevel.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SSOSecurityLevel.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.i: cmake_force
@@ -2858,7 +2802,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SSOSecurityLevel.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.i: cmake_force
@@ -2872,7 +2816,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentResponseOptimized.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentResponseOptimized.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.cpp.i: cmake_force
@@ -2886,7 +2830,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.i: cmake_force
@@ -2900,7 +2844,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SaveComment_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentsResponseWithPresence.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SaveCommentsResponseWithPresence.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPresence.cpp.i: cmake_force
@@ -2914,7 +2858,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentsResponseWithPrese
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SearchUsersResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SearchUsersResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.i: cmake_force
@@ -2928,7 +2872,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsersResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SearchUsers_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SearchUsers_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.i: cmake_force
@@ -2942,7 +2886,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SearchUsers_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SetCommentText_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SetCommentText_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.cpp.i: cmake_force
@@ -2956,7 +2900,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SetCommentText_200_response.c
 client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SizePreset.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SizePreset.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.i: cmake_force
@@ -2970,7 +2914,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SizePreset.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SortDirections.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SortDirections.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.i: cmake_force
@@ -2984,7 +2928,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SortDirections.cpp.s: cmake_f
 client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SpamRule.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/SpamRule.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.i: cmake_force
@@ -2998,7 +2942,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SpamRule.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnBlockCommentPublic_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnBlockCommentPublic_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_response.cpp.i: cmake_force
@@ -3012,7 +2956,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockCommentPublic_200_resp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnBlockFromCommentParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnBlockFromCommentParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.i: cmake_force
@@ -3026,7 +2970,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UnBlockFromCommentParams.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnblockSuccess.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UnblockSuccess.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.i: cmake_force
@@ -3040,7 +2984,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UnblockSuccess.cpp.s: cmake_f
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateAPIPageData.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateAPIPageData.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.i: cmake_force
@@ -3054,7 +2998,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPIPageData.cpp.s: cmak
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateAPISSOUserData.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateAPISSOUserData.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.i: cmake_force
@@ -3068,7 +3012,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateAPISSOUserData.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateDomainConfigParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateDomainConfigParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.i: cmake_force
@@ -3082,7 +3026,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateDomainConfigParams.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateFeedPostParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateFeedPostParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.i: cmake_force
@@ -3096,7 +3040,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateFeedPostParams.cpp.s: c
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserBadgeParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserBadgeParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.i: cmake_force
@@ -3110,7 +3054,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadgeParams.cpp.s: 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserBadge_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserBadge_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.cpp.i: cmake_force
@@ -3124,7 +3068,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserBadge_200_response.
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserNotificationStatus_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UpdateUserNotificationStatus_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_200_response.cpp.i: cmake_force
@@ -3138,7 +3082,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UpdateUserNotificationStatus_
 client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UploadImageResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UploadImageResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.i: cmake_force
@@ -3152,7 +3096,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UploadImageResponse.cpp.s: cm
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserBadge.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserBadge.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.i: cmake_force
@@ -3166,7 +3110,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadge.cpp.s: cmake_force
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserBadgeProgress.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserBadgeProgress.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.i: cmake_force
@@ -3180,7 +3124,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserBadgeProgress.cpp.s: cmak
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserNotification.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserNotification.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.i: cmake_force
@@ -3194,7 +3138,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotification.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserNotificationWriteResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserNotificationWriteResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse.cpp.i: cmake_force
@@ -3208,7 +3152,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserNotificationWriteResponse
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserPresenceData.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserPresenceData.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.i: cmake_force
@@ -3222,7 +3166,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserPresenceData.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserReactsResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserReactsResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.i: cmake_force
@@ -3236,7 +3180,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserReactsResponse.cpp.s: cma
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserSearchResult.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserSearchResult.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.i: cmake_force
@@ -3250,7 +3194,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserSearchResult.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserSessionInfo.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/UserSessionInfo.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.i: cmake_force
@@ -3264,7 +3208,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/UserSessionInfo.cpp.s: cmake_
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteBodyParams.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteBodyParams.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.i: cmake_force
@@ -3278,7 +3222,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteBodyParams.cpp.s: cmake_f
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteComment_200_response.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteComment_200_response.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.i: cmake_force
@@ -3292,7 +3236,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteComment_200_response.cpp.
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteDeleteResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.i: cmake_force
@@ -3306,7 +3250,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteDeleteResponse.cpp.s: cma
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponse.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.i: cmake_force
@@ -3320,7 +3264,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponse.cpp.s: cmake_for
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteResponseUser.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.i: cmake_force
@@ -3334,7 +3278,7 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/VoteResponseUser.cpp.s: cmake
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: client/CMakeFiles/FastCommentsClient.dir/flags.make
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteStyle.cpp
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o: client/CMakeFiles/FastCommentsClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building CXX object client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o -MF CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o.d -o CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o -c /home/winrid/dev/fastcomments/fastcomments-cpp/client/src/model/VoteStyle.cpp
 
 client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.i: cmake_force
@@ -3417,7 +3361,6 @@ FastCommentsClient_OBJECTS = \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateAPISSOUserData.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateAPIUserSubscriptionData.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o" \
@@ -3428,7 +3371,6 @@ FastCommentsClient_OBJECTS = \
 "CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o" \
@@ -3458,10 +3400,8 @@ FastCommentsClient_OBJECTS = \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o" \
-"CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o" \
 "CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o" \
@@ -3655,7 +3595,6 @@ client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/mod
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateAPISSOUserData.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateAPIUserSubscriptionData.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentParams.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateCommentPublic_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostParams.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostPublic_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateFeedPostResponse.cpp.o
@@ -3666,7 +3605,6 @@ client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/mod
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CreateUserBadge_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/CustomConfigParameters.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentAction.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentPublic_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentResult.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteCommentVote_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/DeleteComment_200_response.cpp.o
@@ -3696,10 +3634,8 @@ client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/mod
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNamesSuccessResponse.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentVoteUserNames_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetComment_200_response.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsPublic_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponseWithPresence_PublicComment_.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetCommentsResponse_PublicComment_.cpp.o
-client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetComments_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfig_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/GetDomainConfigs_200_response_anyOf.cpp.o
@@ -3821,7 +3757,7 @@ client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/mod
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/src/model/VoteStyle.cpp.o
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/build.make
 client/libFastCommentsClient.a: client/CMakeFiles/FastCommentsClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Linking CXX static library libFastCommentsClient.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/winrid/dev/fastcomments/fastcomments-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Linking CXX static library libFastCommentsClient.a"
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && $(CMAKE_COMMAND) -P CMakeFiles/FastCommentsClient.dir/cmake_clean_target.cmake
 	cd /home/winrid/dev/fastcomments/fastcomments-cpp/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FastCommentsClient.dir/link.txt --verbose=$(VERBOSE)
 

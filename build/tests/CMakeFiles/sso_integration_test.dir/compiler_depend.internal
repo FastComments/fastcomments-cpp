@@ -94,7 +94,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateAPISSOUserData.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateAPIUserSubscriptionData.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateCommentParams.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateCommentPublic_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateFeedPostParams.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateFeedPostPublic_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateFeedPostResponse.h
@@ -105,7 +104,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateUserBadge_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CustomConfigParameters.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentAction.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentPublic_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentResult.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentVote_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteComment_200_response.h
@@ -135,9 +133,7 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentVoteUserNamesSuccessResponse.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentVoteUserNames_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComment_200_response.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentsPublic_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentsResponseWithPresence_PublicComment_.h
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComments_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfig_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response.h
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf.h

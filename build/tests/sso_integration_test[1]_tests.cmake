@@ -4,4 +4,6 @@ add_test([=[SSOIntegrationTest.PublicAPIWithSecureSSO]=]  /home/winrid/dev/fastc
 set_tests_properties([=[SSOIntegrationTest.PublicAPIWithSecureSSO]=]  PROPERTIES WORKING_DIRECTORY /home/winrid/dev/fastcomments/fastcomments-cpp/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test([=[SSOIntegrationTest.DefaultAPIWithAPIKey]=]  /home/winrid/dev/fastcomments/fastcomments-cpp/build/tests/sso_integration_test [==[--gtest_filter=SSOIntegrationTest.DefaultAPIWithAPIKey]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[SSOIntegrationTest.DefaultAPIWithAPIKey]=]  PROPERTIES WORKING_DIRECTORY /home/winrid/dev/fastcomments/fastcomments-cpp/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  sso_integration_test_TESTS SSOIntegrationTest.PublicAPINoSSO SSOIntegrationTest.PublicAPIWithSecureSSO SSOIntegrationTest.DefaultAPIWithAPIKey)
+add_test([=[SSOIntegrationTest.PublicAPICreateAndFetch]=]  /home/winrid/dev/fastcomments/fastcomments-cpp/build/tests/sso_integration_test [==[--gtest_filter=SSOIntegrationTest.PublicAPICreateAndFetch]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SSOIntegrationTest.PublicAPICreateAndFetch]=]  PROPERTIES WORKING_DIRECTORY /home/winrid/dev/fastcomments/fastcomments-cpp/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  sso_integration_test_TESTS SSOIntegrationTest.PublicAPINoSSO SSOIntegrationTest.PublicAPIWithSecureSSO SSOIntegrationTest.DefaultAPIWithAPIKey SSOIntegrationTest.PublicAPICreateAndFetch)

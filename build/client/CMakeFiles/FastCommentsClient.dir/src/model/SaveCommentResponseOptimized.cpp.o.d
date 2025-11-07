@@ -295,7 +295,6 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/SaveCommentResponseOptimized.
  /usr/include/c++/13/bits/stl_multiset.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/UserSessionInfo.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserBadgeInfo.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicComment.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/AnyType.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/Object.h

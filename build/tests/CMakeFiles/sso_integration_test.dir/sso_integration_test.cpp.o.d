@@ -1033,11 +1033,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/Object.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserMentionInfo.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentTextUpdateRequest.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateCommentPublic_200_response.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/UserSessionInfo.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserBadgeInfo.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicComment.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SaveCommentsResponseWithPresence.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateFeedPostParams.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FeedPostMediaItem.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FeedPostMediaItemAsset.h \
@@ -1046,9 +1041,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CreateFeedPostResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/FeedPost.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIStatus.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentPublic_200_response.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicAPIDeleteCommentResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteCommentVote_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/VoteDeleteResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/DeleteFeedPostPublic_200_response.h \
@@ -1059,8 +1051,10 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicAPIGetCommentTextResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentVoteUserNames_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentVoteUserNamesSuccessResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentsPublic_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetCommentsResponseWithPresence_PublicComment_.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/UserSessionInfo.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/CommentUserBadgeInfo.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicComment.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetEventLog_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/EventLogEntry.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetEventLogResponse.h \
@@ -1084,12 +1078,15 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PinComment_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ChangeCommentPinStatusResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Record_string__before_string_or_null__after_string_or_null___value.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicAPIDeleteCommentResponse.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/PublicBlockFromCommentParams.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ReactBodyParams.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ReactFeedPostPublic_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ReactFeedPostResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ResetUserNotifications_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ResetUserNotificationsResponse.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SaveCommentsResponseWithPresence.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SearchUsers_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/SearchUsersResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/UserSearchResult.h \
@@ -1183,10 +1180,13 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /usr/include/boost/optional/detail/optional_relops.hpp \
  /usr/include/boost/optional/detail/optional_swap.hpp \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/api/DefaultApi.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentsResponse.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys__meta.h \
+ /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/AnyType.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfigParams.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfig_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf_1.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/AnyType.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddDomainConfig_200_response_anyOf.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/AddPageAPIResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIPage.h \
@@ -1251,10 +1251,6 @@ tests/CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o: \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_TenantAuditLog_TenantAuditLogKeys_.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComment_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentResponse.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys__meta.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetComments_200_response.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/APIGetCommentsResponse.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfig_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf.h \

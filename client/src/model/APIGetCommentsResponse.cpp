@@ -22,6 +22,10 @@ APIGetCommentsResponse::APIGetCommentsResponse()
 {
     m_StatusIsSet = false;
     m_CommentsIsSet = false;
+    m_Code = utility::conversions::to_string_t("");
+    m_CodeIsSet = false;
+    m_Reason = utility::conversions::to_string_t("");
+    m_ReasonIsSet = false;
 }
 
 APIGetCommentsResponse::~APIGetCommentsResponse()
@@ -45,6 +49,16 @@ web::json::value APIGetCommentsResponse::toJson() const
     {   
         
         val[utility::conversions::to_string_t(_XPLATSTR("comments"))] = ModelBase::toJson(m_Comments);
+    }
+    if(m_CodeIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
+    }
+    if(m_ReasonIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
 
     return val;
@@ -75,6 +89,28 @@ bool APIGetCommentsResponse::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("code")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCode);
+            setCode(refVal_setCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reason")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setReason;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setReason);
+            setReason(refVal_setReason);
+            
+        }
+    }
     return ok;
 }
 
@@ -92,6 +128,14 @@ void APIGetCommentsResponse::toMultipart(std::shared_ptr<MultipartFormData> mult
     if(m_CommentsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comments")), m_Comments));
+    }
+    if(m_CodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
+    }
+    if(m_ReasonIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
     }
 }
 
@@ -115,6 +159,18 @@ bool APIGetCommentsResponse::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         std::vector<std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>> refVal_setComments;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comments"))), refVal_setComments );
         setComments(refVal_setComments);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        utility::string_t refVal_setCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
+        setCode(refVal_setCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        utility::string_t refVal_setReason;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reason"))), refVal_setReason );
+        setReason(refVal_setReason);
     }
     return ok;
 }
@@ -161,6 +217,48 @@ bool APIGetCommentsResponse::commentsIsSet() const
 void APIGetCommentsResponse::unsetComments()
 {
     m_CommentsIsSet = false;
+}
+utility::string_t APIGetCommentsResponse::getCode() const
+{
+    return m_Code;
+}
+
+
+void APIGetCommentsResponse::setCode(const utility::string_t& value)
+{
+    m_Code = value;
+    m_CodeIsSet = true;
+}
+
+bool APIGetCommentsResponse::codeIsSet() const
+{
+    return m_CodeIsSet;
+}
+
+void APIGetCommentsResponse::unsetCode()
+{
+    m_CodeIsSet = false;
+}
+utility::string_t APIGetCommentsResponse::getReason() const
+{
+    return m_Reason;
+}
+
+
+void APIGetCommentsResponse::setReason(const utility::string_t& value)
+{
+    m_Reason = value;
+    m_ReasonIsSet = true;
+}
+
+bool APIGetCommentsResponse::reasonIsSet() const
+{
+    return m_ReasonIsSet;
+}
+
+void APIGetCommentsResponse::unsetReason()
+{
+    m_ReasonIsSet = false;
 }
 
 }

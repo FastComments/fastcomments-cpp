@@ -24,6 +24,10 @@ SaveCommentResponseOptimized::SaveCommentResponseOptimized()
     m_CommentIsSet = false;
     m_UserIsSet = false;
     m_ModuleDataIsSet = false;
+    m_Code = utility::conversions::to_string_t("");
+    m_CodeIsSet = false;
+    m_Reason = utility::conversions::to_string_t("");
+    m_ReasonIsSet = false;
 }
 
 SaveCommentResponseOptimized::~SaveCommentResponseOptimized()
@@ -41,7 +45,9 @@ web::json::value SaveCommentResponseOptimized::toJson() const
     if(m_StatusIsSet)
     {   
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        utility::string_t refVal = fromStatusEnum(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(refVal);
+        
     }
     if(m_CommentIsSet)
     {   
@@ -58,6 +64,16 @@ web::json::value SaveCommentResponseOptimized::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("moduleData"))] = ModelBase::toJson(m_ModuleData);
     }
+    if(m_CodeIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
+    }
+    if(m_ReasonIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
+    }
 
     return val;
 }
@@ -70,9 +86,10 @@ bool SaveCommentResponseOptimized::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+            utility::string_t refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
-            setStatus(refVal_setStatus);
+            
+            setStatus(toStatusEnum(refVal_setStatus));
             
         }
     }
@@ -109,6 +126,28 @@ bool SaveCommentResponseOptimized::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("code")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCode);
+            setCode(refVal_setCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reason")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setReason;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setReason);
+            setReason(refVal_setReason);
+            
+        }
+    }
     return ok;
 }
 
@@ -121,7 +160,7 @@ void SaveCommentResponseOptimized::toMultipart(std::shared_ptr<MultipartFormData
     }
     if(m_StatusIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), fromStatusEnum(m_Status)));
     }
     if(m_CommentIsSet)
     {
@@ -134,6 +173,14 @@ void SaveCommentResponseOptimized::toMultipart(std::shared_ptr<MultipartFormData
     if(m_ModuleDataIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moduleData")), m_ModuleData));
+    }
+    if(m_CodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
+    }
+    if(m_ReasonIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
     }
 }
 
@@ -148,9 +195,9 @@ bool SaveCommentResponseOptimized::fromMultiPart(std::shared_ptr<MultipartFormDa
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+        utility::string_t refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
-        setStatus(refVal_setStatus);
+        setStatus(toStatusEnum(refVal_setStatus));
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
     {
@@ -170,17 +217,56 @@ bool SaveCommentResponseOptimized::fromMultiPart(std::shared_ptr<MultipartFormDa
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("moduleData"))), refVal_setModuleData );
         setModuleData(refVal_setModuleData);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        utility::string_t refVal_setCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
+        setCode(refVal_setCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        utility::string_t refVal_setReason;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reason"))), refVal_setReason );
+        setReason(refVal_setReason);
+    }
     return ok;
 }
 
+SaveCommentResponseOptimized::StatusEnum SaveCommentResponseOptimized::toStatusEnum(const utility::string_t& value) const
+{
+    
+    if (value == utility::conversions::to_string_t("success")) {
+        return StatusEnum::SUCCESS;
+    }
+    
+    if (value == utility::conversions::to_string_t("failed")) {
+        return StatusEnum::FAILED;
+    }
+    
+    throw std::invalid_argument("Invalid value for conversion to StatusEnum");
+}
 
-std::shared_ptr<ImportedAPIStatus_SUCCESS> SaveCommentResponseOptimized::getStatus() const
+
+const utility::string_t SaveCommentResponseOptimized::fromStatusEnum(const StatusEnum value) const
+{
+    switch(value)
+    {
+        
+        case StatusEnum::SUCCESS: return utility::conversions::to_string_t("success");
+        
+        case StatusEnum::FAILED: return utility::conversions::to_string_t("failed");
+        
+    }
+}
+
+
+SaveCommentResponseOptimized::StatusEnum SaveCommentResponseOptimized::getStatus() const
 {
     return m_Status;
 }
 
 
-void SaveCommentResponseOptimized::setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value)
+void SaveCommentResponseOptimized::setStatus(const StatusEnum value)
 {
     m_Status = value;
     m_StatusIsSet = true;
@@ -257,6 +343,48 @@ bool SaveCommentResponseOptimized::moduleDataIsSet() const
 void SaveCommentResponseOptimized::unsetModuleData()
 {
     m_ModuleDataIsSet = false;
+}
+utility::string_t SaveCommentResponseOptimized::getCode() const
+{
+    return m_Code;
+}
+
+
+void SaveCommentResponseOptimized::setCode(const utility::string_t& value)
+{
+    m_Code = value;
+    m_CodeIsSet = true;
+}
+
+bool SaveCommentResponseOptimized::codeIsSet() const
+{
+    return m_CodeIsSet;
+}
+
+void SaveCommentResponseOptimized::unsetCode()
+{
+    m_CodeIsSet = false;
+}
+utility::string_t SaveCommentResponseOptimized::getReason() const
+{
+    return m_Reason;
+}
+
+
+void SaveCommentResponseOptimized::setReason(const utility::string_t& value)
+{
+    m_Reason = value;
+    m_ReasonIsSet = true;
+}
+
+bool SaveCommentResponseOptimized::reasonIsSet() const
+{
+    return m_ReasonIsSet;
+}
+
+void SaveCommentResponseOptimized::unsetReason()
+{
+    m_ReasonIsSet = false;
 }
 
 }

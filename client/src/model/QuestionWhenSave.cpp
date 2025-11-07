@@ -72,6 +72,9 @@ web::json::value QuestionWhenSave::toJson() const
 
 bool QuestionWhenSave::fromJson(const web::json::value& val)
 {
+    if (!val.is_number()) {
+        return false;
+    }
     m_value = toEnum(val.as_number().to_int64());
     return true;
 }

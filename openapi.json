@@ -2284,10 +2284,7 @@
 					}
 				},
 				"required": [
-					"status",
-					"comments",
-					"user",
-					"pageNumber"
+					"status"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -2305,7 +2302,14 @@
 			"SaveCommentResponseOptimized": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"anyOf": [
+							{
+								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+							},
+							{
+								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
+							}
+						]
 					},
 					"comment": {
 						"$ref": "#/components/schemas/PublicComment"
@@ -2320,12 +2324,16 @@
 					},
 					"moduleData": {
 						"$ref": "#/components/schemas/Record_string.any_"
+					},
+					"code": {
+						"type": "string"
+					},
+					"reason": {
+						"type": "string"
 					}
 				},
 				"required": [
-					"status",
-					"comment",
-					"user"
+					"status"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -2492,6 +2500,12 @@
 			},
 			"PublicAPIDeleteCommentResponse": {
 				"properties": {
+					"reason": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
 					"comment": {
 						"$ref": "#/components/schemas/Pick_FComment.isDeleted-or-commentHTML-or-commenterName-or-userId_"
 					},
@@ -2499,11 +2513,17 @@
 						"type": "boolean"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"anyOf": [
+							{
+								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+							},
+							{
+								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
+							}
+						]
 					}
 				},
 				"required": [
-					"hardRemoved",
 					"status"
 				],
 				"type": "object"
@@ -4063,12 +4083,6 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"CommentLog": {
-				"items": {
-					"$ref": "#/components/schemas/CommentLogEntry"
-				},
-				"type": "array"
-			},
 			"FComment": {
 				"properties": {
 					"_id": {
@@ -4346,11 +4360,10 @@
 						"type": "array"
 					},
 					"logs": {
-						"allOf": [
-							{
-								"$ref": "#/components/schemas/CommentLog"
-							}
-						],
+						"items": {
+							"$ref": "#/components/schemas/CommentLogEntry"
+						},
+						"type": "array",
 						"nullable": true
 					},
 					"groupIds": {
@@ -4884,11 +4897,16 @@
 							"$ref": "#/components/schemas/APIComment"
 						},
 						"type": "array"
+					},
+					"code": {
+						"type": "string"
+					},
+					"reason": {
+						"type": "string"
 					}
 				},
 				"required": [
-					"status",
-					"comments"
+					"status"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -7191,14 +7209,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
 								}
 							}
 						}
@@ -7453,14 +7464,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
 								}
 							}
 						}
@@ -7533,14 +7537,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
 								}
 							}
 						}
@@ -10432,14 +10429,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetCommentsResponse"
 								}
 							}
 						}

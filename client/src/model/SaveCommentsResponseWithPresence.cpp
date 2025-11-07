@@ -24,6 +24,10 @@ SaveCommentsResponseWithPresence::SaveCommentsResponseWithPresence()
     m_CommentIsSet = false;
     m_UserIsSet = false;
     m_ModuleDataIsSet = false;
+    m_Code = utility::conversions::to_string_t("");
+    m_CodeIsSet = false;
+    m_Reason = utility::conversions::to_string_t("");
+    m_ReasonIsSet = false;
     m_UserIdWS = utility::conversions::to_string_t("");
     m_UserIdWSIsSet = false;
 }
@@ -43,7 +47,9 @@ web::json::value SaveCommentsResponseWithPresence::toJson() const
     if(m_StatusIsSet)
     {   
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        utility::string_t refVal = fromStatusEnum(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(refVal);
+        
     }
     if(m_CommentIsSet)
     {   
@@ -59,6 +65,16 @@ web::json::value SaveCommentsResponseWithPresence::toJson() const
     {   
         
         val[utility::conversions::to_string_t(_XPLATSTR("moduleData"))] = ModelBase::toJson(m_ModuleData);
+    }
+    if(m_CodeIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
+    }
+    if(m_ReasonIsSet)
+    {   
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_UserIdWSIsSet)
     {   
@@ -77,9 +93,10 @@ bool SaveCommentsResponseWithPresence::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+            utility::string_t refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
-            setStatus(refVal_setStatus);
+            
+            setStatus(toStatusEnum(refVal_setStatus));
             
         }
     }
@@ -116,6 +133,28 @@ bool SaveCommentsResponseWithPresence::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("code")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCode);
+            setCode(refVal_setCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reason")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setReason;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setReason);
+            setReason(refVal_setReason);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("userIdWS"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("userIdWS")));
@@ -139,7 +178,7 @@ void SaveCommentsResponseWithPresence::toMultipart(std::shared_ptr<MultipartForm
     }
     if(m_StatusIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), fromStatusEnum(m_Status)));
     }
     if(m_CommentIsSet)
     {
@@ -152,6 +191,14 @@ void SaveCommentsResponseWithPresence::toMultipart(std::shared_ptr<MultipartForm
     if(m_ModuleDataIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moduleData")), m_ModuleData));
+    }
+    if(m_CodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
+    }
+    if(m_ReasonIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
     }
     if(m_UserIdWSIsSet)
     {
@@ -170,9 +217,9 @@ bool SaveCommentsResponseWithPresence::fromMultiPart(std::shared_ptr<MultipartFo
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+        utility::string_t refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
-        setStatus(refVal_setStatus);
+        setStatus(toStatusEnum(refVal_setStatus));
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
     {
@@ -192,6 +239,18 @@ bool SaveCommentsResponseWithPresence::fromMultiPart(std::shared_ptr<MultipartFo
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("moduleData"))), refVal_setModuleData );
         setModuleData(refVal_setModuleData);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        utility::string_t refVal_setCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
+        setCode(refVal_setCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        utility::string_t refVal_setReason;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reason"))), refVal_setReason );
+        setReason(refVal_setReason);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("userIdWS"))))
     {
         utility::string_t refVal_setUserIdWS;
@@ -201,14 +260,41 @@ bool SaveCommentsResponseWithPresence::fromMultiPart(std::shared_ptr<MultipartFo
     return ok;
 }
 
+SaveCommentsResponseWithPresence::StatusEnum SaveCommentsResponseWithPresence::toStatusEnum(const utility::string_t& value) const
+{
+    
+    if (value == utility::conversions::to_string_t("success")) {
+        return StatusEnum::SUCCESS;
+    }
+    
+    if (value == utility::conversions::to_string_t("failed")) {
+        return StatusEnum::FAILED;
+    }
+    
+    throw std::invalid_argument("Invalid value for conversion to StatusEnum");
+}
 
-std::shared_ptr<ImportedAPIStatus_SUCCESS> SaveCommentsResponseWithPresence::getStatus() const
+
+const utility::string_t SaveCommentsResponseWithPresence::fromStatusEnum(const StatusEnum value) const
+{
+    switch(value)
+    {
+        
+        case StatusEnum::SUCCESS: return utility::conversions::to_string_t("success");
+        
+        case StatusEnum::FAILED: return utility::conversions::to_string_t("failed");
+        
+    }
+}
+
+
+SaveCommentsResponseWithPresence::StatusEnum SaveCommentsResponseWithPresence::getStatus() const
 {
     return m_Status;
 }
 
 
-void SaveCommentsResponseWithPresence::setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value)
+void SaveCommentsResponseWithPresence::setStatus(const StatusEnum value)
 {
     m_Status = value;
     m_StatusIsSet = true;
@@ -285,6 +371,48 @@ bool SaveCommentsResponseWithPresence::moduleDataIsSet() const
 void SaveCommentsResponseWithPresence::unsetModuleData()
 {
     m_ModuleDataIsSet = false;
+}
+utility::string_t SaveCommentsResponseWithPresence::getCode() const
+{
+    return m_Code;
+}
+
+
+void SaveCommentsResponseWithPresence::setCode(const utility::string_t& value)
+{
+    m_Code = value;
+    m_CodeIsSet = true;
+}
+
+bool SaveCommentsResponseWithPresence::codeIsSet() const
+{
+    return m_CodeIsSet;
+}
+
+void SaveCommentsResponseWithPresence::unsetCode()
+{
+    m_CodeIsSet = false;
+}
+utility::string_t SaveCommentsResponseWithPresence::getReason() const
+{
+    return m_Reason;
+}
+
+
+void SaveCommentsResponseWithPresence::setReason(const utility::string_t& value)
+{
+    m_Reason = value;
+    m_ReasonIsSet = true;
+}
+
+bool SaveCommentsResponseWithPresence::reasonIsSet() const
+{
+    return m_ReasonIsSet;
+}
+
+void SaveCommentsResponseWithPresence::unsetReason()
+{
+    m_ReasonIsSet = false;
 }
 utility::string_t SaveCommentsResponseWithPresence::getUserIdWS() const
 {

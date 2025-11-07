@@ -293,5 +293,4 @@ client/CMakeFiles/FastCommentsClient.dir/src/model/PublicAPIDeleteCommentRespons
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
- /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h \
  /home/winrid/dev/fastcomments/fastcomments-cpp/client/include/FastCommentsClient/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.h
