@@ -25,3 +25,7 @@ Makefile
 
 # OS
 .DS_Store
+
+# OpenAPI Generator metadata
+.openapi-generator/
+.openapi-generator-ignore
