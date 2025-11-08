@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/sso_integration_test.dir/sso_integration_test.cpp.o -o sso_integration_test  ../libfastcomments.a ../client/libFastCommentsClient.a ../lib/libgtest_main.a -lssl -lcrypto /usr/lib/x86_64-linux-gnu/libcpprest.so.2.10 ../lib/libgtest.a

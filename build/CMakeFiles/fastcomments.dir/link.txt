@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfastcomments.a CMakeFiles/fastcomments.dir/src/sso/helpers.cpp.o CMakeFiles/fastcomments.dir/src/sso/secure_sso_user_data.cpp.o CMakeFiles/fastcomments.dir/src/sso/simple_sso_user_data.cpp.o CMakeFiles/fastcomments.dir/src/sso/secure_sso_payload.cpp.o CMakeFiles/fastcomments.dir/src/sso/fastcomments_sso.cpp.o
-/usr/bin/ranlib libfastcomments.a
