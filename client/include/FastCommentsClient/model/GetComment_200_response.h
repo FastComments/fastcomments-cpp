@@ -22,19 +22,19 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
+#include "FastCommentsClient/model/APIComment.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include "FastCommentsClient/model/APIGetCommentResponse.h"
 #include <cpprest/details/basic_types.h>
-#include "FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h"
 #include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_FComment_APICommentFieldsKeys_;
+class APIComment;
 class CustomConfigParameters;
 
 
@@ -61,15 +61,15 @@ public:
     /// GetComment_200_response members
 
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys_> getComment() const;
+    std::shared_ptr<APIComment> getComment() const;
     bool commentIsSet() const;
     void unsetComment();
-    void setComment(const std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>& value);
+    void setComment(const std::shared_ptr<APIComment>& value);
 
     utility::string_t getReason() const;
     bool reasonIsSet() const;
@@ -108,10 +108,10 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys_> m_Comment;
+    std::shared_ptr<APIComment> m_Comment;
     bool m_CommentIsSet;
 
     utility::string_t m_Reason;

@@ -69,7 +69,7 @@ bool ChangeCommentPinStatusResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+            std::shared_ptr<APIStatus> refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
             setStatus(refVal_setStatus);
             
@@ -112,7 +112,7 @@ bool ChangeCommentPinStatusResponse::fromMultiPart(std::shared_ptr<MultipartForm
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+        std::shared_ptr<APIStatus> refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
         setStatus(refVal_setStatus);
     }
@@ -141,13 +141,13 @@ void ChangeCommentPinStatusResponse::unsetCommentPositions()
 {
     m_CommentPositionsIsSet = false;
 }
-std::shared_ptr<ImportedAPIStatus_SUCCESS> ChangeCommentPinStatusResponse::getStatus() const
+std::shared_ptr<APIStatus> ChangeCommentPinStatusResponse::getStatus() const
 {
     return m_Status;
 }
 
 
-void ChangeCommentPinStatusResponse::setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value)
+void ChangeCommentPinStatusResponse::setStatus(const std::shared_ptr<APIStatus>& value)
 {
     m_Status = value;
     m_StatusIsSet = true;

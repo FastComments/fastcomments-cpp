@@ -71,9 +71,6 @@ web::json::value AggregateTimeBucket::toJson() const
 
 bool AggregateTimeBucket::fromJson(const web::json::value& val)
 {
-    if (!val.is_string()) {
-        return false;
-    }
     m_value = toEnum(val.as_string());
     return true;
 }

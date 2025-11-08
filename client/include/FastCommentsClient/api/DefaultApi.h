@@ -22,7 +22,6 @@
 
 #include "FastCommentsClient/ApiClient.h"
 
-#include "FastCommentsClient/model/APIGetCommentsResponse.h"
 #include "FastCommentsClient/model/AddDomainConfigParams.h"
 #include "FastCommentsClient/model/AddDomainConfig_200_response.h"
 #include "FastCommentsClient/model/AddPageAPIResponse.h"
@@ -55,6 +54,7 @@
 #include "FastCommentsClient/model/FlagComment_200_response.h"
 #include "FastCommentsClient/model/GetAuditLogs_200_response.h"
 #include "FastCommentsClient/model/GetComment_200_response.h"
+#include "FastCommentsClient/model/GetComments_200_response.h"
 #include "FastCommentsClient/model/GetDomainConfig_200_response.h"
 #include "FastCommentsClient/model/GetDomainConfigs_200_response.h"
 #include "FastCommentsClient/model/GetFeedPosts_200_response.h"
@@ -431,7 +431,7 @@ public:
     /// <param name="hashTag"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="parentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="direction"> (optional, default to new SortDirections())</param>
-    pplx::task<std::shared_ptr<APIGetCommentsResponse>> getComments(
+    pplx::task<std::shared_ptr<GetComments_200_response>> getComments(
         utility::string_t tenantId,
         boost::optional<int32_t> page,
         boost::optional<int32_t> limit,

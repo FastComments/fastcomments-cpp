@@ -22,9 +22,9 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include "FastCommentsClient/model/UserSearchResult.h"
 #include <vector>
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -57,10 +57,10 @@ public:
     /// SearchUsersResponse members
 
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     std::vector<std::shared_ptr<UserSearchResult>> getUsers() const;
     bool usersIsSet() const;
@@ -69,7 +69,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::vector<std::shared_ptr<UserSearchResult>> m_Users;

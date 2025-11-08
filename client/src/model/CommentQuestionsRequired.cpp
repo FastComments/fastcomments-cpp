@@ -72,9 +72,6 @@ web::json::value CommentQuestionsRequired::toJson() const
 
 bool CommentQuestionsRequired::fromJson(const web::json::value& val)
 {
-    if (!val.is_number()) {
-        return false;
-    }
     m_value = toEnum(val.as_number().to_int64());
     return true;
 }

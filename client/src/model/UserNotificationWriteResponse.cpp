@@ -66,7 +66,7 @@ bool UserNotificationWriteResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+            std::shared_ptr<APIStatus> refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
             setStatus(refVal_setStatus);
             
@@ -129,7 +129,7 @@ bool UserNotificationWriteResponse::fromMultiPart(std::shared_ptr<MultipartFormD
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        std::shared_ptr<ImportedAPIStatus_SUCCESS> refVal_setStatus;
+        std::shared_ptr<APIStatus> refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
         setStatus(refVal_setStatus);
     }
@@ -149,13 +149,13 @@ bool UserNotificationWriteResponse::fromMultiPart(std::shared_ptr<MultipartFormD
 }
 
 
-std::shared_ptr<ImportedAPIStatus_SUCCESS> UserNotificationWriteResponse::getStatus() const
+std::shared_ptr<APIStatus> UserNotificationWriteResponse::getStatus() const
 {
     return m_Status;
 }
 
 
-void UserNotificationWriteResponse::setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value)
+void UserNotificationWriteResponse::setStatus(const std::shared_ptr<APIStatus>& value)
 {
     m_Status = value;
     m_StatusIsSet = true;

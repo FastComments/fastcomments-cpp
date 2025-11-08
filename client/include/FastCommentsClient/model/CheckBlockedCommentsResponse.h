@@ -22,8 +22,8 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include <map>
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -63,17 +63,17 @@ public:
     void unsetCommentStatuses();
     void setCommentStatuses(std::map<utility::string_t, bool> value);
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
 
 protected:
     std::map<utility::string_t, bool> m_CommentStatuses;
     bool m_CommentStatusesIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
 };

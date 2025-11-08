@@ -45,16 +45,10 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"ImportedAPIStatus.SUCCESS": {
-				"enum": [
-					"success"
-				],
-				"type": "string"
-			},
 			"SearchUsersResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"users": {
 						"items": {
@@ -68,12 +62,6 @@
 					"users"
 				],
 				"type": "object"
-			},
-			"ImportedAPIStatus.FAILED": {
-				"enum": [
-					"failed"
-				],
-				"type": "string"
 			},
 			"CommentHTMLRenderingMode": {
 				"enum": [
@@ -478,7 +466,7 @@
 			"APIError": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"reason": {
 						"type": "string"
@@ -523,7 +511,7 @@
 			"GetUserPresenceStatusesResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"userIdsOnline": {
 						"$ref": "#/components/schemas/Record_string.boolean_"
@@ -674,7 +662,7 @@
 						"type": "array"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -688,7 +676,7 @@
 			"ResetUserNotificationsResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"code": {
 						"type": "string",
@@ -707,7 +695,7 @@
 			"GetUserNotificationCountResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"count": {
 						"type": "integer",
@@ -745,7 +733,7 @@
 			"HeaderState": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"NotificationType": {
 						"$ref": "#/components/schemas/EnumAsObject_typeofNotificationType_"
@@ -776,7 +764,7 @@
 			"UserNotificationWriteResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"matchedCount": {
 						"type": "integer",
@@ -798,7 +786,7 @@
 			"IgnoredResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"note": {
 						"type": "string",
@@ -874,7 +862,7 @@
 			"APIEmptyResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -1127,7 +1115,7 @@
 			"GetPublicFeedPostsResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"feedPosts": {
 						"items": {
@@ -1416,7 +1404,7 @@
 						"type": "array"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -1888,7 +1876,7 @@
 			"PublicAPIGetCommentTextResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"commentText": {
 						"type": "string"
@@ -1926,7 +1914,7 @@
 						"$ref": "#/components/schemas/Pick_FComment.approved-or-commentHTML_"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -2284,7 +2272,10 @@
 					}
 				},
 				"required": [
-					"status"
+					"status",
+					"comments",
+					"user",
+					"pageNumber"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -2302,14 +2293,7 @@
 			"SaveCommentResponseOptimized": {
 				"properties": {
 					"status": {
-						"anyOf": [
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
-							},
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
-							}
-						]
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"comment": {
 						"$ref": "#/components/schemas/PublicComment"
@@ -2324,16 +2308,12 @@
 					},
 					"moduleData": {
 						"$ref": "#/components/schemas/Record_string.any_"
-					},
-					"code": {
-						"type": "string"
-					},
-					"reason": {
-						"type": "string"
 					}
 				},
 				"required": [
-					"status"
+					"status",
+					"comment",
+					"user"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -2500,12 +2480,6 @@
 			},
 			"PublicAPIDeleteCommentResponse": {
 				"properties": {
-					"reason": {
-						"type": "string"
-					},
-					"code": {
-						"type": "string"
-					},
 					"comment": {
 						"$ref": "#/components/schemas/Pick_FComment.isDeleted-or-commentHTML-or-commenterName-or-userId_"
 					},
@@ -2513,17 +2487,11 @@
 						"type": "boolean"
 					},
 					"status": {
-						"anyOf": [
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
-							},
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
-							}
-						]
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
+					"hardRemoved",
 					"status"
 				],
 				"type": "object"
@@ -2534,7 +2502,7 @@
 						"$ref": "#/components/schemas/Record_string.boolean_"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -2558,10 +2526,7 @@
 					"status": {
 						"anyOf": [
 							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
-							},
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
+								"$ref": "#/components/schemas/APIStatus"
 							},
 							{
 								"type": "string",
@@ -2624,14 +2589,7 @@
 			"VoteDeleteResponse": {
 				"properties": {
 					"status": {
-						"anyOf": [
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
-							},
-							{
-								"$ref": "#/components/schemas/ImportedAPIStatus.FAILED"
-							}
-						]
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"wasPendingVote": {
 						"type": "boolean"
@@ -2646,7 +2604,7 @@
 			"GetCommentVoteUserNamesSuccessResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"voteUserNames": {
 						"items": {
@@ -2672,7 +2630,7 @@
 						"$ref": "#/components/schemas/CommentPositions"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -2684,7 +2642,7 @@
 			"BlockSuccess": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"commentStatuses": {
 						"$ref": "#/components/schemas/Record_string.boolean_"
@@ -2717,7 +2675,7 @@
 			"UnblockSuccess": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"commentStatuses": {
 						"$ref": "#/components/schemas/Record_string.boolean_"
@@ -4869,7 +4827,24 @@
 				"description": "From T, pick a set of properties whose keys are in the union K"
 			},
 			"APIComment": {
-				"$ref": "#/components/schemas/Pick_FComment.APICommentFieldsKeys_"
+				"allOf": [
+					{
+						"$ref": "#/components/schemas/Pick_FComment.APICommentFieldsKeys_"
+					},
+					{
+						"properties": {
+							"date": {
+								"type": "number",
+								"format": "double",
+								"nullable": true
+							}
+						},
+						"required": [
+							"date"
+						],
+						"type": "object"
+					}
+				]
 			},
 			"APIGetCommentResponse": {
 				"properties": {
@@ -4897,16 +4872,11 @@
 							"$ref": "#/components/schemas/APIComment"
 						},
 						"type": "array"
-					},
-					"code": {
-						"type": "string"
-					},
-					"reason": {
-						"type": "string"
 					}
 				},
 				"required": [
-					"status"
+					"status",
+					"comments"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -4914,8 +4884,16 @@
 			"Pick_APIComment.UpdatableCommentFields_": {
 				"properties": {
 					"date": {
-						"type": "string",
-						"format": "date-time"
+						"allOf": [
+							{
+								"type": "string",
+								"format": "date-time"
+							},
+							{
+								"type": "number",
+								"format": "double"
+							}
+						]
 					},
 					"urlId": {
 						"type": "string"
@@ -5084,7 +5062,7 @@
 						"$ref": "#/components/schemas/DeleteCommentAction"
 					},
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					}
 				},
 				"required": [
@@ -5096,7 +5074,7 @@
 			"SaveCommentResponse": {
 				"properties": {
 					"status": {
-						"$ref": "#/components/schemas/ImportedAPIStatus.SUCCESS"
+						"$ref": "#/components/schemas/APIStatus"
 					},
 					"comment": {
 						"$ref": "#/components/schemas/FComment"
@@ -7209,7 +7187,14 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
 								}
 							}
 						}
@@ -7464,7 +7449,14 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
 								}
 							}
 						}
@@ -7537,7 +7529,14 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
 								}
 							}
 						}
@@ -10429,7 +10428,14 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/APIGetCommentsResponse"
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIGetCommentsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
 								}
 							}
 						}

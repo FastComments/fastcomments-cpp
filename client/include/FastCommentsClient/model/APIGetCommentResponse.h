@@ -22,7 +22,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h"
+#include "FastCommentsClient/model/APIComment.h"
 #include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
@@ -30,7 +30,7 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_FComment_APICommentFieldsKeys_;
+class APIComment;
 
 
 class  APIGetCommentResponse
@@ -61,17 +61,17 @@ public:
     void unsetStatus();
     void setStatus(const std::shared_ptr<APIStatus>& value);
 
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys_> getComment() const;
+    std::shared_ptr<APIComment> getComment() const;
     bool commentIsSet() const;
     void unsetComment();
-    void setComment(const std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>& value);
+    void setComment(const std::shared_ptr<APIComment>& value);
 
 
 protected:
     std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys_> m_Comment;
+    std::shared_ptr<APIComment> m_Comment;
     bool m_CommentIsSet;
 
 };

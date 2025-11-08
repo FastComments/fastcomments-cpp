@@ -27,14 +27,16 @@
 #include "FastCommentsClient/model/CheckedCommentsForBlocked_200_response.h"
 #include "FastCommentsClient/model/CommentData.h"
 #include "FastCommentsClient/model/CommentTextUpdateRequest.h"
+#include "FastCommentsClient/model/CreateCommentPublic_200_response.h"
 #include "FastCommentsClient/model/CreateFeedPostParams.h"
 #include "FastCommentsClient/model/CreateFeedPostPublic_200_response.h"
+#include "FastCommentsClient/model/DeleteCommentPublic_200_response.h"
 #include "FastCommentsClient/model/DeleteCommentVote_200_response.h"
 #include "FastCommentsClient/model/DeleteFeedPostPublic_200_response.h"
 #include "FastCommentsClient/model/FlagCommentPublic_200_response.h"
 #include "FastCommentsClient/model/GetCommentText_200_response.h"
 #include "FastCommentsClient/model/GetCommentVoteUserNames_200_response.h"
-#include "FastCommentsClient/model/GetCommentsResponseWithPresence_PublicComment_.h"
+#include "FastCommentsClient/model/GetCommentsPublic_200_response.h"
 #include "FastCommentsClient/model/GetEventLog_200_response.h"
 #include "FastCommentsClient/model/GetFeedPostsPublic_200_response.h"
 #include "FastCommentsClient/model/GetFeedPostsStats_200_response.h"
@@ -45,12 +47,10 @@
 #include "FastCommentsClient/HttpContent.h"
 #include "FastCommentsClient/model/LockComment_200_response.h"
 #include "FastCommentsClient/model/PinComment_200_response.h"
-#include "FastCommentsClient/model/PublicAPIDeleteCommentResponse.h"
 #include "FastCommentsClient/model/PublicBlockFromCommentParams.h"
 #include "FastCommentsClient/model/ReactBodyParams.h"
 #include "FastCommentsClient/model/ReactFeedPostPublic_200_response.h"
 #include "FastCommentsClient/model/ResetUserNotifications_200_response.h"
-#include "FastCommentsClient/model/SaveCommentsResponseWithPresence.h"
 #include "FastCommentsClient/model/SearchUsers_200_response.h"
 #include "FastCommentsClient/model/SetCommentText_200_response.h"
 #include "FastCommentsClient/model/SizePreset.h"
@@ -124,7 +124,7 @@ public:
     /// <param name="commentData"></param>
     /// <param name="sessionId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> createCommentPublic(
+    pplx::task<std::shared_ptr<CreateCommentPublic_200_response>> createCommentPublic(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t broadcastId,
@@ -159,7 +159,7 @@ public:
     /// <param name="broadcastId"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> deleteCommentPublic(
+    pplx::task<std::shared_ptr<DeleteCommentPublic_200_response>> deleteCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -286,7 +286,7 @@ public:
     /// <param name="customConfigStr"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="afterCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="beforeCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> getCommentsPublic(
+    pplx::task<std::shared_ptr<GetCommentsPublic_200_response>> getCommentsPublic(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<int32_t> page,

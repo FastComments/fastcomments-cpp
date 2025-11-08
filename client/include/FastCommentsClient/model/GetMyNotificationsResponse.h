@@ -22,10 +22,10 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include <cpprest/details/basic_types.h>
 #include <map>
 #include <vector>
+#include "FastCommentsClient/model/APIStatus.h"
 #include "FastCommentsClient/model/RenderableUserNotification.h"
 
 namespace org {
@@ -82,10 +82,10 @@ public:
     void unsetNotifications();
     void setNotifications(const std::vector<std::shared_ptr<RenderableUserNotification>>& value);
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
 
 protected:
@@ -101,7 +101,7 @@ protected:
     std::vector<std::shared_ptr<RenderableUserNotification>> m_Notifications;
     bool m_NotificationsIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
 };

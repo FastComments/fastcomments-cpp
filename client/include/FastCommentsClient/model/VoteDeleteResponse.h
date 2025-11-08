@@ -22,7 +22,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include <cpprest/details/basic_types.h>
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -53,20 +53,11 @@ public:
     /////////////////////////////////////////////
     /// VoteDeleteResponse members
 
-    enum class StatusEnum
-    {
-        SUCCESS,
-        FAILED,
-    };
 
-    StatusEnum toStatusEnum(const utility::string_t& value) const;
-    const utility::string_t fromStatusEnum(const StatusEnum value) const;
-
-
-    StatusEnum getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const StatusEnum value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     bool isWasPendingVote() const;
     bool wasPendingVoteIsSet() const;
@@ -75,7 +66,7 @@ public:
 
 
 protected:
-    StatusEnum m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     bool m_WasPendingVote;

@@ -22,9 +22,9 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include "FastCommentsClient/model/Record_string__before_string_or_null__after_string_or_null___value.h"
 #include <map>
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -65,17 +65,17 @@ public:
     void unsetCommentPositions();
     void setCommentPositions(const std::map<utility::string_t, std::shared_ptr<Record_string__before_string_or_null__after_string_or_null___value>>& value);
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
 
 protected:
     std::map<utility::string_t, std::shared_ptr<Record_string__before_string_or_null__after_string_or_null___value>> m_CommentPositions;
     bool m_CommentPositionsIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
 };

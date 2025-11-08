@@ -23,9 +23,9 @@
 #include "FastCommentsClient/ModelBase.h"
 
 #include "FastCommentsClient/model/UserSessionInfo.h"
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
 #include <map>
 #include "FastCommentsClient/model/FComment.h"
+#include "FastCommentsClient/model/APIStatus.h"
 #include "FastCommentsClient/AnyType.h"
 
 namespace org {
@@ -60,10 +60,10 @@ public:
     /// SaveCommentResponse members
 
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     std::shared_ptr<FComment> getComment() const;
     bool commentIsSet() const;
@@ -85,7 +85,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::shared_ptr<FComment> m_Comment;

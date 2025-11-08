@@ -22,7 +22,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h"
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -54,10 +54,10 @@ public:
     /// UserNotificationWriteResponse members
 
 
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_SUCCESS>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     int64_t getMatchedCount() const;
     bool matchedCountIsSet() const;
@@ -71,7 +71,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_SUCCESS> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     int64_t m_MatchedCount;

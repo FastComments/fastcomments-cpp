@@ -22,11 +22,11 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/QuestionResultAggregationOverall.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIStatus.h"
 #include "FastCommentsClient/model/AggregateQuestionResultsResponse.h"
 
 namespace org {
@@ -61,10 +61,10 @@ public:
     /// AggregateQuestionResults_200_response members
 
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     std::shared_ptr<QuestionResultAggregationOverall> getData() const;
     bool dataIsSet() const;
@@ -108,7 +108,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::shared_ptr<QuestionResultAggregationOverall> m_Data;

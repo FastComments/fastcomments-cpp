@@ -22,8 +22,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include <cpprest/details/basic_types.h>
-#include "FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys_.h"
+#include "FastCommentsClient/model/APIComment.h"
 #include <vector>
 #include "FastCommentsClient/model/APIStatus.h"
 
@@ -32,7 +31,7 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_FComment_APICommentFieldsKeys_;
+class APIComment;
 
 
 class  APIGetCommentsResponse
@@ -63,34 +62,18 @@ public:
     void unsetStatus();
     void setStatus(const std::shared_ptr<APIStatus>& value);
 
-    std::vector<std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>> getComments() const;
+    std::vector<std::shared_ptr<APIComment>> getComments() const;
     bool commentsIsSet() const;
     void unsetComments();
-    void setComments(const std::vector<std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>>& value);
-
-    utility::string_t getCode() const;
-    bool codeIsSet() const;
-    void unsetCode();
-    void setCode(const utility::string_t& value);
-
-    utility::string_t getReason() const;
-    bool reasonIsSet() const;
-    void unsetReason();
-    void setReason(const utility::string_t& value);
+    void setComments(const std::vector<std::shared_ptr<APIComment>>& value);
 
 
 protected:
     std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
-    std::vector<std::shared_ptr<Pick_FComment_APICommentFieldsKeys_>> m_Comments;
+    std::vector<std::shared_ptr<APIComment>> m_Comments;
     bool m_CommentsIsSet;
-
-    utility::string_t m_Code;
-    bool m_CodeIsSet;
-
-    utility::string_t m_Reason;
-    bool m_ReasonIsSet;
 
 };
 

@@ -20,7 +20,6 @@ namespace model {
 
 Pick_APIComment_UpdatableCommentFields_::Pick_APIComment_UpdatableCommentFields_()
 {
-    m_date = utility::datetime();
     m_dateIsSet = false;
     m_UrlId = utility::conversions::to_string_t("");
     m_UrlIdIsSet = false;

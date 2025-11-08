@@ -23,7 +23,6 @@
 #include "FastCommentsClient/ModelBase.h"
 
 #include "FastCommentsClient/model/UserSessionInfo.h"
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/PublicFeedPostsResponse.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include "FastCommentsClient/model/FeedPost.h"
@@ -31,6 +30,7 @@
 #include <map>
 #include <vector>
 #include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -70,10 +70,10 @@ public:
     void unsetMyReacts();
     void setMyReacts(const std::map<utility::string_t, std::map<utility::string_t, bool>>& value);
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     std::vector<std::shared_ptr<FeedPost>> getFeedPosts() const;
     bool feedPostsIsSet() const;
@@ -140,7 +140,7 @@ protected:
     std::map<utility::string_t, std::map<utility::string_t, bool>> m_MyReacts;
     bool m_MyReactsIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::vector<std::shared_ptr<FeedPost>> m_FeedPosts;

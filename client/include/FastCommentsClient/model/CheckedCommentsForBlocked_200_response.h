@@ -22,12 +22,12 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
 #include <map>
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/CheckBlockedCommentsResponse.h"
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -68,10 +68,10 @@ public:
     void unsetCommentStatuses();
     void setCommentStatuses(std::map<utility::string_t, bool> value);
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     utility::string_t getReason() const;
     bool reasonIsSet() const;
@@ -113,7 +113,7 @@ protected:
     std::map<utility::string_t, bool> m_CommentStatuses;
     bool m_CommentStatusesIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     utility::string_t m_Reason;

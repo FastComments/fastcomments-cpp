@@ -22,11 +22,11 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/GetUserNotificationCountResponse.h"
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -59,10 +59,10 @@ public:
     /// GetUserNotificationCount_200_response members
 
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     int64_t getCount() const;
     bool countIsSet() const;
@@ -106,7 +106,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     int64_t m_Count;

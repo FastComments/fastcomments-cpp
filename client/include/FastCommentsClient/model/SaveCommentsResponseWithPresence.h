@@ -27,6 +27,7 @@
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/Object.h"
 #include <map>
+#include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
 namespace openapitools {
@@ -59,20 +60,11 @@ public:
     /////////////////////////////////////////////
     /// SaveCommentsResponseWithPresence members
 
-    enum class StatusEnum
-    {
-        SUCCESS,
-        FAILED,
-    };
 
-    StatusEnum toStatusEnum(const utility::string_t& value) const;
-    const utility::string_t fromStatusEnum(const StatusEnum value) const;
-
-
-    StatusEnum getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const StatusEnum value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     std::shared_ptr<PublicComment> getComment() const;
     bool commentIsSet() const;
@@ -92,16 +84,6 @@ public:
     void unsetModuleData();
     void setModuleData(const std::map<utility::string_t, std::shared_ptr<Object>>& value);
 
-    utility::string_t getCode() const;
-    bool codeIsSet() const;
-    void unsetCode();
-    void setCode(const utility::string_t& value);
-
-    utility::string_t getReason() const;
-    bool reasonIsSet() const;
-    void unsetReason();
-    void setReason(const utility::string_t& value);
-
     utility::string_t getUserIdWS() const;
     bool userIdWSIsSet() const;
     void unsetUserIdWS();
@@ -109,7 +91,7 @@ public:
 
 
 protected:
-    StatusEnum m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::shared_ptr<PublicComment> m_Comment;
@@ -120,12 +102,6 @@ protected:
 
     std::map<utility::string_t, std::shared_ptr<Object>> m_ModuleData;
     bool m_ModuleDataIsSet;
-
-    utility::string_t m_Code;
-    bool m_CodeIsSet;
-
-    utility::string_t m_Reason;
-    bool m_ReasonIsSet;
 
     utility::string_t m_UserIdWS;
     bool m_UserIdWSIsSet;

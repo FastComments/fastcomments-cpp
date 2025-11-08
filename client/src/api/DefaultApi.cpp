@@ -3051,7 +3051,7 @@ pplx::task<std::shared_ptr<GetComment_200_response>> DefaultApi::getComment(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(utility::string_t tenantId, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<int32_t> skip, boost::optional<bool> asTree, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limitChildren, boost::optional<int32_t> maxTreeDepth, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId, boost::optional<utility::string_t> contextUserId, boost::optional<utility::string_t> hashTag, boost::optional<utility::string_t> parentId, boost::optional<std::shared_ptr<SortDirections>> direction) const
+pplx::task<std::shared_ptr<GetComments_200_response>> DefaultApi::getComments(utility::string_t tenantId, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<int32_t> skip, boost::optional<bool> asTree, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limitChildren, boost::optional<int32_t> maxTreeDepth, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId, boost::optional<utility::string_t> contextUserId, boost::optional<utility::string_t> hashTag, boost::optional<utility::string_t> parentId, boost::optional<std::shared_ptr<SortDirections>> direction) const
 {
 
 
@@ -3219,7 +3219,7 @@ pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetCommentsResponse> localVarResult(new APIGetCommentsResponse());
+        std::shared_ptr<GetComments_200_response> localVarResult(new GetComments_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

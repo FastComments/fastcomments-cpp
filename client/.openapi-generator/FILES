@@ -16,6 +16,7 @@ include/FastCommentsClient/MultipartFormData.h
 include/FastCommentsClient/Object.h
 include/FastCommentsClient/api/DefaultApi.h
 include/FastCommentsClient/api/PublicApi.h
+include/FastCommentsClient/model/APIComment.h
 include/FastCommentsClient/model/APICreateUserBadgeResponse.h
 include/FastCommentsClient/model/APIEmptyResponse.h
 include/FastCommentsClient/model/APIEmptySuccessResponse.h
@@ -75,6 +76,7 @@ include/FastCommentsClient/model/CreateAPIPageData.h
 include/FastCommentsClient/model/CreateAPISSOUserData.h
 include/FastCommentsClient/model/CreateAPIUserSubscriptionData.h
 include/FastCommentsClient/model/CreateCommentParams.h
+include/FastCommentsClient/model/CreateCommentPublic_200_response.h
 include/FastCommentsClient/model/CreateFeedPostParams.h
 include/FastCommentsClient/model/CreateFeedPostPublic_200_response.h
 include/FastCommentsClient/model/CreateFeedPostResponse.h
@@ -85,6 +87,7 @@ include/FastCommentsClient/model/CreateUserBadgeParams.h
 include/FastCommentsClient/model/CreateUserBadge_200_response.h
 include/FastCommentsClient/model/CustomConfigParameters.h
 include/FastCommentsClient/model/DeleteCommentAction.h
+include/FastCommentsClient/model/DeleteCommentPublic_200_response.h
 include/FastCommentsClient/model/DeleteCommentResult.h
 include/FastCommentsClient/model/DeleteCommentVote_200_response.h
 include/FastCommentsClient/model/DeleteComment_200_response.h
@@ -114,8 +117,10 @@ include/FastCommentsClient/model/GetCommentText_200_response.h
 include/FastCommentsClient/model/GetCommentVoteUserNamesSuccessResponse.h
 include/FastCommentsClient/model/GetCommentVoteUserNames_200_response.h
 include/FastCommentsClient/model/GetComment_200_response.h
+include/FastCommentsClient/model/GetCommentsPublic_200_response.h
 include/FastCommentsClient/model/GetCommentsResponseWithPresence_PublicComment_.h
 include/FastCommentsClient/model/GetCommentsResponse_PublicComment_.h
+include/FastCommentsClient/model/GetComments_200_response.h
 include/FastCommentsClient/model/GetDomainConfig_200_response.h
 include/FastCommentsClient/model/GetDomainConfigs_200_response.h
 include/FastCommentsClient/model/GetDomainConfigs_200_response_anyOf.h
@@ -148,8 +153,6 @@ include/FastCommentsClient/model/GifRating.h
 include/FastCommentsClient/model/HeaderState.h
 include/FastCommentsClient/model/IgnoredResponse.h
 include/FastCommentsClient/model/ImageContentProfanityLevel.h
-include/FastCommentsClient/model/ImportedAPIStatus_FAILED.h
-include/FastCommentsClient/model/ImportedAPIStatus_SUCCESS.h
 include/FastCommentsClient/model/LiveEvent.h
 include/FastCommentsClient/model/LiveEventType.h
 include/FastCommentsClient/model/LiveEvent_extraInfo.h
@@ -246,6 +249,7 @@ src/MultipartFormData.cpp
 src/Object.cpp
 src/api/DefaultApi.cpp
 src/api/PublicApi.cpp
+src/model/APIComment.cpp
 src/model/APICreateUserBadgeResponse.cpp
 src/model/APIEmptyResponse.cpp
 src/model/APIEmptySuccessResponse.cpp
@@ -305,6 +309,7 @@ src/model/CreateAPIPageData.cpp
 src/model/CreateAPISSOUserData.cpp
 src/model/CreateAPIUserSubscriptionData.cpp
 src/model/CreateCommentParams.cpp
+src/model/CreateCommentPublic_200_response.cpp
 src/model/CreateFeedPostParams.cpp
 src/model/CreateFeedPostPublic_200_response.cpp
 src/model/CreateFeedPostResponse.cpp
@@ -315,6 +320,7 @@ src/model/CreateUserBadgeParams.cpp
 src/model/CreateUserBadge_200_response.cpp
 src/model/CustomConfigParameters.cpp
 src/model/DeleteCommentAction.cpp
+src/model/DeleteCommentPublic_200_response.cpp
 src/model/DeleteCommentResult.cpp
 src/model/DeleteCommentVote_200_response.cpp
 src/model/DeleteComment_200_response.cpp
@@ -344,8 +350,10 @@ src/model/GetCommentText_200_response.cpp
 src/model/GetCommentVoteUserNamesSuccessResponse.cpp
 src/model/GetCommentVoteUserNames_200_response.cpp
 src/model/GetComment_200_response.cpp
+src/model/GetCommentsPublic_200_response.cpp
 src/model/GetCommentsResponseWithPresence_PublicComment_.cpp
 src/model/GetCommentsResponse_PublicComment_.cpp
+src/model/GetComments_200_response.cpp
 src/model/GetDomainConfig_200_response.cpp
 src/model/GetDomainConfigs_200_response.cpp
 src/model/GetDomainConfigs_200_response_anyOf.cpp
@@ -378,8 +386,6 @@ src/model/GifRating.cpp
 src/model/HeaderState.cpp
 src/model/IgnoredResponse.cpp
 src/model/ImageContentProfanityLevel.cpp
-src/model/ImportedAPIStatus_FAILED.cpp
-src/model/ImportedAPIStatus_SUCCESS.cpp
 src/model/LiveEvent.cpp
 src/model/LiveEventType.cpp
 src/model/LiveEvent_extraInfo.cpp

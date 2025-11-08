@@ -22,13 +22,13 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include "FastCommentsClient/model/GetMyNotificationsResponse.h"
 #include <cpprest/details/basic_types.h>
 #include <map>
 #include <vector>
 #include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIStatus.h"
 #include "FastCommentsClient/model/RenderableUserNotification.h"
 
 namespace org {
@@ -86,10 +86,10 @@ public:
     void unsetNotifications();
     void setNotifications(const std::vector<std::shared_ptr<RenderableUserNotification>>& value);
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     utility::string_t getReason() const;
     bool reasonIsSet() const;
@@ -140,7 +140,7 @@ protected:
     std::vector<std::shared_ptr<RenderableUserNotification>> m_Notifications;
     bool m_NotificationsIsSet;
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     utility::string_t m_Reason;

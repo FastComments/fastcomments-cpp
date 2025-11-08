@@ -320,7 +320,7 @@ pplx::task<std::shared_ptr<CheckedCommentsForBlocked_200_response>> PublicApi::c
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> PublicApi::createCommentPublic(utility::string_t tenantId, utility::string_t urlId, utility::string_t broadcastId, std::shared_ptr<CommentData> commentData, boost::optional<utility::string_t> sessionId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<CreateCommentPublic_200_response>> PublicApi::createCommentPublic(utility::string_t tenantId, utility::string_t urlId, utility::string_t broadcastId, std::shared_ptr<CommentData> commentData, boost::optional<utility::string_t> sessionId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'commentData' is set
@@ -459,7 +459,7 @@ pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> PublicApi::createC
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<SaveCommentsResponseWithPresence> localVarResult(new SaveCommentsResponseWithPresence());
+        std::shared_ptr<CreateCommentPublic_200_response> localVarResult(new CreateCommentPublic_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -634,7 +634,7 @@ pplx::task<std::shared_ptr<CreateFeedPostPublic_200_response>> PublicApi::create
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> PublicApi::deleteCommentPublic(utility::string_t tenantId, utility::string_t commentId, utility::string_t broadcastId, boost::optional<utility::string_t> editKey, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<DeleteCommentPublic_200_response>> PublicApi::deleteCommentPublic(utility::string_t tenantId, utility::string_t commentId, utility::string_t broadcastId, boost::optional<utility::string_t> editKey, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -748,7 +748,7 @@ pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> PublicApi::deleteCom
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PublicAPIDeleteCommentResponse> localVarResult(new PublicAPIDeleteCommentResponse());
+        std::shared_ptr<DeleteCommentPublic_200_response> localVarResult(new DeleteCommentPublic_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1436,7 +1436,7 @@ pplx::task<std::shared_ptr<GetCommentVoteUserNames_200_response>> PublicApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> PublicApi::getCommentsPublic(utility::string_t tenantId, utility::string_t urlId, boost::optional<int32_t> page, boost::optional<std::shared_ptr<SortDirections>> direction, boost::optional<utility::string_t> sso, boost::optional<int32_t> skip, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limit, boost::optional<int32_t> limitChildren, boost::optional<bool> countChildren, boost::optional<utility::string_t> fetchPageForCommentId, boost::optional<bool> includeConfig, boost::optional<bool> countAll, boost::optional<bool> includei10n, boost::optional<utility::string_t> locale, boost::optional<utility::string_t> modules, boost::optional<bool> isCrawler, boost::optional<bool> includeNotificationCount, boost::optional<bool> asTree, boost::optional<int32_t> maxTreeDepth, boost::optional<bool> useFullTranslationIds, boost::optional<utility::string_t> parentId, boost::optional<utility::string_t> searchText, boost::optional<std::vector<utility::string_t>> hashTags, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> customConfigStr, boost::optional<utility::string_t> afterCommentId, boost::optional<utility::string_t> beforeCommentId) const
+pplx::task<std::shared_ptr<GetCommentsPublic_200_response>> PublicApi::getCommentsPublic(utility::string_t tenantId, utility::string_t urlId, boost::optional<int32_t> page, boost::optional<std::shared_ptr<SortDirections>> direction, boost::optional<utility::string_t> sso, boost::optional<int32_t> skip, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limit, boost::optional<int32_t> limitChildren, boost::optional<bool> countChildren, boost::optional<utility::string_t> fetchPageForCommentId, boost::optional<bool> includeConfig, boost::optional<bool> countAll, boost::optional<bool> includei10n, boost::optional<utility::string_t> locale, boost::optional<utility::string_t> modules, boost::optional<bool> isCrawler, boost::optional<bool> includeNotificationCount, boost::optional<bool> asTree, boost::optional<int32_t> maxTreeDepth, boost::optional<bool> useFullTranslationIds, boost::optional<utility::string_t> parentId, boost::optional<utility::string_t> searchText, boost::optional<std::vector<utility::string_t>> hashTags, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> customConfigStr, boost::optional<utility::string_t> afterCommentId, boost::optional<utility::string_t> beforeCommentId) const
 {
 
 
@@ -1645,7 +1645,7 @@ pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> Publ
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_> localVarResult(new GetCommentsResponseWithPresence_PublicComment_());
+        std::shared_ptr<GetCommentsPublic_200_response> localVarResult(new GetCommentsPublic_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

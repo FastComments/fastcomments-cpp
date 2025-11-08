@@ -40,9 +40,7 @@ web::json::value VoteDeleteResponse::toJson() const
     if(m_StatusIsSet)
     {   
         
-        utility::string_t refVal = fromStatusEnum(m_Status);
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(refVal);
-        
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_WasPendingVoteIsSet)
     {   
@@ -61,10 +59,9 @@ bool VoteDeleteResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            utility::string_t refVal_setStatus;
+            std::shared_ptr<APIStatus> refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
-            
-            setStatus(toStatusEnum(refVal_setStatus));
+            setStatus(refVal_setStatus);
             
         }
     }
@@ -91,7 +88,7 @@ void VoteDeleteResponse::toMultipart(std::shared_ptr<MultipartFormData> multipar
     }
     if(m_StatusIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), fromStatusEnum(m_Status)));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
     }
     if(m_WasPendingVoteIsSet)
     {
@@ -110,9 +107,9 @@ bool VoteDeleteResponse::fromMultiPart(std::shared_ptr<MultipartFormData> multip
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        utility::string_t refVal_setStatus;
+        std::shared_ptr<APIStatus> refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
-        setStatus(toStatusEnum(refVal_setStatus));
+        setStatus(refVal_setStatus);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("wasPendingVote"))))
     {
@@ -123,41 +120,14 @@ bool VoteDeleteResponse::fromMultiPart(std::shared_ptr<MultipartFormData> multip
     return ok;
 }
 
-VoteDeleteResponse::StatusEnum VoteDeleteResponse::toStatusEnum(const utility::string_t& value) const
-{
-    
-    if (value == utility::conversions::to_string_t("success")) {
-        return StatusEnum::SUCCESS;
-    }
-    
-    if (value == utility::conversions::to_string_t("failed")) {
-        return StatusEnum::FAILED;
-    }
-    
-    throw std::invalid_argument("Invalid value for conversion to StatusEnum");
-}
 
-
-const utility::string_t VoteDeleteResponse::fromStatusEnum(const StatusEnum value) const
-{
-    switch(value)
-    {
-        
-        case StatusEnum::SUCCESS: return utility::conversions::to_string_t("success");
-        
-        case StatusEnum::FAILED: return utility::conversions::to_string_t("failed");
-        
-    }
-}
-
-
-VoteDeleteResponse::StatusEnum VoteDeleteResponse::getStatus() const
+std::shared_ptr<APIStatus> VoteDeleteResponse::getStatus() const
 {
     return m_Status;
 }
 
 
-void VoteDeleteResponse::setStatus(const StatusEnum value)
+void VoteDeleteResponse::setStatus(const std::shared_ptr<APIStatus>& value)
 {
     m_Status = value;
     m_StatusIsSet = true;

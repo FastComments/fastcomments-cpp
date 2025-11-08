@@ -122,7 +122,7 @@ bool UpdateUserNotificationStatus_200_response::fromJson(const web::json::value&
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("status")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<ImportedAPIStatus_FAILED> refVal_setStatus;
+            std::shared_ptr<APIStatus> refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
             setStatus(refVal_setStatus);
             
@@ -306,7 +306,7 @@ bool UpdateUserNotificationStatus_200_response::fromMultiPart(std::shared_ptr<Mu
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("status"))))
     {
-        std::shared_ptr<ImportedAPIStatus_FAILED> refVal_setStatus;
+        std::shared_ptr<APIStatus> refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
         setStatus(refVal_setStatus);
     }
@@ -401,13 +401,13 @@ const utility::string_t UpdateUserNotificationStatus_200_response::fromNoteEnum(
 }
 
 
-std::shared_ptr<ImportedAPIStatus_FAILED> UpdateUserNotificationStatus_200_response::getStatus() const
+std::shared_ptr<APIStatus> UpdateUserNotificationStatus_200_response::getStatus() const
 {
     return m_Status;
 }
 
 
-void UpdateUserNotificationStatus_200_response::setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value)
+void UpdateUserNotificationStatus_200_response::setStatus(const std::shared_ptr<APIStatus>& value)
 {
     m_Status = value;
     m_StatusIsSet = true;

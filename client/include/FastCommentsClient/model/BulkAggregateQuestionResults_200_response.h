@@ -22,12 +22,12 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/ImportedAPIStatus_FAILED.h"
 #include "FastCommentsClient/model/QuestionResultAggregationOverall.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
 #include <map>
 #include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIStatus.h"
 #include "FastCommentsClient/model/BulkAggregateQuestionResultsResponse.h"
 
 namespace org {
@@ -62,10 +62,10 @@ public:
     /// BulkAggregateQuestionResults_200_response members
 
 
-    std::shared_ptr<ImportedAPIStatus_FAILED> getStatus() const;
+    std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
     void unsetStatus();
-    void setStatus(const std::shared_ptr<ImportedAPIStatus_FAILED>& value);
+    void setStatus(const std::shared_ptr<APIStatus>& value);
 
     /// <summary>
     /// Construct a type with a set of properties K of type T
@@ -112,7 +112,7 @@ public:
 
 
 protected:
-    std::shared_ptr<ImportedAPIStatus_FAILED> m_Status;
+    std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
     std::map<utility::string_t, std::shared_ptr<QuestionResultAggregationOverall>> m_Data;
