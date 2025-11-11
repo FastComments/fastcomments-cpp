@@ -10,13 +10,28 @@ else
     SPEC_FILE="./openapi.json"
 fi
 
-npx @openapitools/openapi-generator-cli generate \
+java -jar ../openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
     -i "$SPEC_FILE" \
     -g cpp-restsdk \
     -o ./client \
     -c config.json
 
 echo "Generated C++ client in ./client"
+
+# Generate markdown documentation
+echo "Generating markdown documentation..."
+rm -rf ./docs
+java -jar ../openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
+    -i "$SPEC_FILE" \
+    -g markdown \
+    -o ./docs
+
+if [ $? -eq 0 ]; then
+    echo "✓ Generated documentation in ./docs"
+else
+    echo "✗ Documentation generation failed!"
+    exit 1
+fi
 
 if [ -d "build" ]; then
     rm -rf build
@@ -25,7 +40,7 @@ fi
 mkdir build
 cd build
 cmake ..
-make
+make -j8
 
 if [ $? -eq 0 ]; then
     echo "✓ C++ SDK built successfully!"
