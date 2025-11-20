@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_SaveCommentResponseOptimized_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -91,8 +92,7 @@ protected:
     std::shared_ptr<PublicComment> m_Comment;
     bool m_CommentIsSet;
 
-    std::shared_ptr<UserSessionInfo> m_User;
-    bool m_UserIsSet;
+    boost::optional<std::shared_ptr<UserSessionInfo>> m_User;
 
     std::map<utility::string_t, std::shared_ptr<AnyType>> m_ModuleData;
     bool m_ModuleDataIsSet;

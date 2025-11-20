@@ -24,8 +24,6 @@ CommentUserHashTagInfo::CommentUserHashTagInfo()
     m_IdIsSet = false;
     m_Tag = utility::conversions::to_string_t("");
     m_TagIsSet = false;
-    m_Url = utility::conversions::to_string_t("");
-    m_UrlIsSet = false;
     m_Retain = false;
     m_RetainIsSet = false;
 }
@@ -43,22 +41,22 @@ web::json::value CommentUserHashTagInfo::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }
     if(m_TagIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tag"))] = ModelBase::toJson(m_Tag);
     }
-    if(m_UrlIsSet)
-    {   
+    if(m_Url.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
+        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url.get());
     }
     if(m_RetainIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("retain"))] = ModelBase::toJson(m_Retain);
     }
@@ -131,9 +129,9 @@ void CommentUserHashTagInfo::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tag")), m_Tag));
     }
-    if(m_UrlIsSet)
+    if(m_Url.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url.get()));
     }
     if(m_RetainIsSet)
     {
@@ -222,24 +220,23 @@ void CommentUserHashTagInfo::unsetTag()
 }
 utility::string_t CommentUserHashTagInfo::getUrl() const
 {
-    return m_Url;
+    return m_Url.get();
 }
 
 
 void CommentUserHashTagInfo::setUrl(const utility::string_t& value)
 {
     m_Url = value;
-    m_UrlIsSet = true;
 }
 
 bool CommentUserHashTagInfo::urlIsSet() const
 {
-    return m_UrlIsSet;
+    return m_Url.has_value();
 }
 
 void CommentUserHashTagInfo::unsetUrl()
 {
-    m_UrlIsSet = false;
+    m_Url.reset();
 }
 bool CommentUserHashTagInfo::isRetain() const
 {

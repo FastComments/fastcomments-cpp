@@ -1276,7 +1276,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateComment"></a>
 # **updateComment**
-> FlagCommentPublic_200_response updateComment(tenantId, id, body, contextUserId, doSpamCheck, isLive)
+> FlagCommentPublic_200_response updateComment(tenantId, id, UpdatableCommentParams, contextUserId, doSpamCheck, isLive)
 
 
 
@@ -1286,7 +1286,7 @@ All URIs are relative to *https://fastcomments.com*
 |------------- | ------------- | ------------- | -------------|
 | **tenantId** | **String**|  | [default to null] |
 | **id** | **String**|  | [default to null] |
-| **body** | **Pick_APIComment.UpdatableCommentFields_**|  | |
+| **UpdatableCommentParams** | [**UpdatableCommentParams**](../Models/UpdatableCommentParams.md)|  | |
 | **contextUserId** | **String**|  | [optional] [default to null] |
 | **doSpamCheck** | **Boolean**|  | [optional] [default to null] |
 | **isLive** | **Boolean**|  | [optional] [default to null] |

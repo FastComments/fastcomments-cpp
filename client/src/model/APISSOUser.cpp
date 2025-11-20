@@ -74,102 +74,102 @@ web::json::value APISSOUser::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }
     if(m_UsernameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("username"))] = ModelBase::toJson(m_Username);
     }
     if(m_WebsiteUrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("websiteUrl"))] = ModelBase::toJson(m_WebsiteUrl);
     }
     if(m_EmailIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("email"))] = ModelBase::toJson(m_Email);
     }
     if(m_SignUpDateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("signUpDate"))] = ModelBase::toJson(m_SignUpDate);
     }
     if(m_CreatedFromUrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdFromUrlId"))] = ModelBase::toJson(m_CreatedFromUrlId);
     }
     if(m_LoginCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("loginCount"))] = ModelBase::toJson(m_LoginCount);
     }
     if(m_AvatarSrcIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
     }
     if(m_OptedInNotificationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("optedInNotifications"))] = ModelBase::toJson(m_OptedInNotifications);
     }
     if(m_OptedInSubscriptionNotificationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("optedInSubscriptionNotifications"))] = ModelBase::toJson(m_OptedInSubscriptionNotifications);
     }
     if(m_DisplayLabelIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
     }
     if(m_DisplayNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayName"))] = ModelBase::toJson(m_DisplayName);
     }
     if(m_IsAccountOwnerIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isAccountOwner"))] = ModelBase::toJson(m_IsAccountOwner);
     }
     if(m_IsAdminAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isAdminAdmin"))] = ModelBase::toJson(m_IsAdminAdmin);
     }
     if(m_IsCommentModeratorAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isCommentModeratorAdmin"))] = ModelBase::toJson(m_IsCommentModeratorAdmin);
     }
     if(m_IsProfileActivityPrivateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isProfileActivityPrivate"))] = ModelBase::toJson(m_IsProfileActivityPrivate);
     }
     if(m_IsProfileCommentsPrivateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isProfileCommentsPrivate"))] = ModelBase::toJson(m_IsProfileCommentsPrivate);
     }
     if(m_IsProfileDMDisabledIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isProfileDMDisabled"))] = ModelBase::toJson(m_IsProfileDMDisabled);
     }
     if(m_HasBlockedUsersIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasBlockedUsers"))] = ModelBase::toJson(m_HasBlockedUsers);
     }
     if(m_GroupIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds);
     }

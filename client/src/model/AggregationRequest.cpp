@@ -41,27 +41,27 @@ web::json::value AggregationRequest::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_QueryIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("query"))] = ModelBase::toJson(m_Query);
     }
     if(m_ResourceNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("resourceName"))] = ModelBase::toJson(m_ResourceName);
     }
     if(m_GroupByIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("groupBy"))] = ModelBase::toJson(m_GroupBy);
     }
     if(m_OperationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("operations"))] = ModelBase::toJson(m_Operations);
     }
     if(m_SortIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("sort"))] = ModelBase::toJson(m_Sort);
     }

@@ -31,11 +31,8 @@ GetCommentsResponseWithPresence_PublicComment_::GetCommentsResponseWithPresence_
     m_TranslatedWarning = utility::conversions::to_string_t("");
     m_TranslatedWarningIsSet = false;
     m_CommentsIsSet = false;
-    m_UserIsSet = false;
     m_UrlIdClean = utility::conversions::to_string_t("");
     m_UrlIdCleanIsSet = false;
-    m_LastGenDate = 0L;
-    m_LastGenDateIsSet = false;
     m_IncludesPastPages = false;
     m_IncludesPastPagesIsSet = false;
     m_IsDemo = false;
@@ -85,137 +82,137 @@ web::json::value GetCommentsResponseWithPresence_PublicComment_::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("statusCode"))] = ModelBase::toJson(m_StatusCode);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_TranslatedWarningIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedWarning"))] = ModelBase::toJson(m_TranslatedWarning);
     }
     if(m_CommentsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comments"))] = ModelBase::toJson(m_Comments);
     }
-    if(m_UserIsSet)
-    {   
+    if(m_User.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
+        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User.get());
     }
     if(m_UrlIdCleanIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdClean"))] = ModelBase::toJson(m_UrlIdClean);
     }
-    if(m_LastGenDateIsSet)
-    {   
+    if(m_LastGenDate.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("lastGenDate"))] = ModelBase::toJson(m_LastGenDate);
+        val[utility::conversions::to_string_t(_XPLATSTR("lastGenDate"))] = ModelBase::toJson(m_LastGenDate.get());
     }
     if(m_IncludesPastPagesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("includesPastPages"))] = ModelBase::toJson(m_IncludesPastPages);
     }
     if(m_IsDemoIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDemo"))] = ModelBase::toJson(m_IsDemo);
     }
     if(m_CommentCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentCount"))] = ModelBase::toJson(m_CommentCount);
     }
     if(m_IsSiteAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin"))] = ModelBase::toJson(m_IsSiteAdmin);
     }
     if(m_HasBillingIssueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasBillingIssue"))] = ModelBase::toJson(m_HasBillingIssue);
     }
     if(m_ModuleDataIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("moduleData"))] = ModelBase::toJson(m_ModuleData);
     }
     if(m_PageNumberIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("pageNumber"))] = ModelBase::toJson(m_PageNumber);
     }
     if(m_IsWhiteLabeledIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isWhiteLabeled"))] = ModelBase::toJson(m_IsWhiteLabeled);
     }
     if(m_IsProdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isProd"))] = ModelBase::toJson(m_IsProd);
     }
     if(m_IsCrawlerIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isCrawler"))] = ModelBase::toJson(m_IsCrawler);
     }
     if(m_NotificationCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationCount"))] = ModelBase::toJson(m_NotificationCount);
     }
     if(m_HasMoreIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasMore"))] = ModelBase::toJson(m_HasMore);
     }
     if(m_IsClosedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isClosed"))] = ModelBase::toJson(m_IsClosed);
     }
     if(m_PresencePollStateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("presencePollState"))] = ModelBase::toJson(m_PresencePollState);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
     if(m_UrlIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdWS"))] = ModelBase::toJson(m_UrlIdWS);
     }
     if(m_UserIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userIdWS"))] = ModelBase::toJson(m_UserIdWS);
     }
     if(m_TenantIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantIdWS"))] = ModelBase::toJson(m_TenantIdWS);
     }
@@ -557,17 +554,17 @@ void GetCommentsResponseWithPresence_PublicComment_::toMultipart(std::shared_ptr
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comments")), m_Comments));
     }
-    if(m_UserIsSet)
+    if(m_User.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User.get()));
     }
     if(m_UrlIdCleanIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("urlIdClean")), m_UrlIdClean));
     }
-    if(m_LastGenDateIsSet)
+    if(m_LastGenDate.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("lastGenDate")), m_LastGenDate));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("lastGenDate")), m_LastGenDate.get()));
     }
     if(m_IncludesPastPagesIsSet)
     {
@@ -945,24 +942,23 @@ void GetCommentsResponseWithPresence_PublicComment_::unsetComments()
 }
 std::shared_ptr<UserSessionInfo> GetCommentsResponseWithPresence_PublicComment_::getUser() const
 {
-    return m_User;
+    return m_User.get();
 }
 
 
 void GetCommentsResponseWithPresence_PublicComment_::setUser(const std::shared_ptr<UserSessionInfo>& value)
 {
     m_User = value;
-    m_UserIsSet = true;
 }
 
 bool GetCommentsResponseWithPresence_PublicComment_::userIsSet() const
 {
-    return m_UserIsSet;
+    return m_User.has_value();
 }
 
 void GetCommentsResponseWithPresence_PublicComment_::unsetUser()
 {
-    m_UserIsSet = false;
+    m_User.reset();
 }
 utility::string_t GetCommentsResponseWithPresence_PublicComment_::getUrlIdClean() const
 {
@@ -987,23 +983,22 @@ void GetCommentsResponseWithPresence_PublicComment_::unsetUrlIdClean()
 }
 int64_t GetCommentsResponseWithPresence_PublicComment_::getLastGenDate() const
 {
-    return m_LastGenDate;
+    return m_LastGenDate.get();
 }
 
 void GetCommentsResponseWithPresence_PublicComment_::setLastGenDate(int64_t value)
 {
     m_LastGenDate = value;
-    m_LastGenDateIsSet = true;
 }
 
 bool GetCommentsResponseWithPresence_PublicComment_::lastGenDateIsSet() const
 {
-    return m_LastGenDateIsSet;
+    return m_LastGenDate.has_value();
 }
 
 void GetCommentsResponseWithPresence_PublicComment_::unsetLastGenDate()
 {
-    m_LastGenDateIsSet = false;
+    m_LastGenDate.reset();
 }
 bool GetCommentsResponseWithPresence_PublicComment_::isIncludesPastPages() const
 {

@@ -47,32 +47,32 @@ web::json::value EventLogEntry::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_BroadcastIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("broadcastId"))] = ModelBase::toJson(m_BroadcastId);
     }
     if(m_DataIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("data"))] = ModelBase::toJson(m_Data);
     }

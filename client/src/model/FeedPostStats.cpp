@@ -38,12 +38,12 @@ web::json::value FeedPostStats::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReactsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reacts"))] = ModelBase::toJson(m_Reacts);
     }
     if(m_CommentCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentCount"))] = ModelBase::toJson(m_CommentCount);
     }

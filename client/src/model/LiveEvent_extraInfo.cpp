@@ -36,7 +36,7 @@ web::json::value LiveEvent_extraInfo::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentPositionsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentPositions"))] = ModelBase::toJson(m_CommentPositions);
     }

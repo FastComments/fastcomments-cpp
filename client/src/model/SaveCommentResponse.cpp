@@ -22,7 +22,6 @@ SaveCommentResponse::SaveCommentResponse()
 {
     m_StatusIsSet = false;
     m_CommentIsSet = false;
-    m_UserIsSet = false;
     m_ModuleDataIsSet = false;
 }
 
@@ -39,22 +38,22 @@ web::json::value SaveCommentResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
-    if(m_UserIsSet)
-    {   
+    if(m_User.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
+        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User.get());
     }
     if(m_ModuleDataIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("moduleData"))] = ModelBase::toJson(m_ModuleData);
     }
@@ -127,9 +126,9 @@ void SaveCommentResponse::toMultipart(std::shared_ptr<MultipartFormData> multipa
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment));
     }
-    if(m_UserIsSet)
+    if(m_User.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User.get()));
     }
     if(m_ModuleDataIsSet)
     {
@@ -218,24 +217,23 @@ void SaveCommentResponse::unsetComment()
 }
 std::shared_ptr<UserSessionInfo> SaveCommentResponse::getUser() const
 {
-    return m_User;
+    return m_User.get();
 }
 
 
 void SaveCommentResponse::setUser(const std::shared_ptr<UserSessionInfo>& value)
 {
     m_User = value;
-    m_UserIsSet = true;
 }
 
 bool SaveCommentResponse::userIsSet() const
 {
-    return m_UserIsSet;
+    return m_User.has_value();
 }
 
 void SaveCommentResponse::unsetUser()
 {
-    m_UserIsSet = false;
+    m_User.reset();
 }
 std::map<utility::string_t, std::shared_ptr<AnyType>> SaveCommentResponse::getModuleData() const
 {

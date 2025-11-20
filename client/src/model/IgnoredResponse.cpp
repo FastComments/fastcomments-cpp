@@ -37,12 +37,12 @@ web::json::value IgnoredResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_NoteIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromNoteEnum(m_Note);
         val[utility::conversions::to_string_t(_XPLATSTR("note"))] = ModelBase::toJson(refVal);

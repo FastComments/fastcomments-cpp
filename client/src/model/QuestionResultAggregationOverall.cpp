@@ -44,32 +44,32 @@ web::json::value QuestionResultAggregationOverall::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_DataByDateBucketIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("dataByDateBucket"))] = ModelBase::toJson(m_DataByDateBucket);
     }
     if(m_DataByUrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("dataByUrlId"))] = ModelBase::toJson(m_DataByUrlId);
     }
     if(m_CountsByValueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("countsByValue"))] = ModelBase::toJson(m_CountsByValue);
     }
     if(m_TotalIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("total"))] = ModelBase::toJson(m_Total);
     }
     if(m_AverageIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("average"))] = ModelBase::toJson(m_Average);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }

@@ -24,6 +24,8 @@ PatchPageAPIResponse::PatchPageAPIResponse()
     m_ReasonIsSet = false;
     m_Code = utility::conversions::to_string_t("");
     m_CodeIsSet = false;
+    m_CommentsUpdated = 0L;
+    m_CommentsUpdatedIsSet = false;
     m_PageIsSet = false;
     m_Status = utility::conversions::to_string_t("");
     m_StatusIsSet = false;
@@ -42,22 +44,27 @@ web::json::value PatchPageAPIResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
+    if(m_CommentsUpdatedIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("commentsUpdated"))] = ModelBase::toJson(m_CommentsUpdated);
+    }
     if(m_PageIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("page"))] = ModelBase::toJson(m_Page);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
@@ -87,6 +94,17 @@ bool PatchPageAPIResponse::fromJson(const web::json::value& val)
             utility::string_t refVal_setCode;
             ok &= ModelBase::fromJson(fieldValue, refVal_setCode);
             setCode(refVal_setCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("commentsUpdated"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("commentsUpdated")));
+        if(!fieldValue.is_null())
+        {
+            int64_t refVal_setCommentsUpdated;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCommentsUpdated);
+            setCommentsUpdated(refVal_setCommentsUpdated);
             
         }
     }
@@ -130,6 +148,10 @@ void PatchPageAPIResponse::toMultipart(std::shared_ptr<MultipartFormData> multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
     }
+    if(m_CommentsUpdatedIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentsUpdated")), m_CommentsUpdated));
+    }
     if(m_PageIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("page")), m_Page));
@@ -160,6 +182,12 @@ bool PatchPageAPIResponse::fromMultiPart(std::shared_ptr<MultipartFormData> mult
         utility::string_t refVal_setCode;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
         setCode(refVal_setCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("commentsUpdated"))))
+    {
+        int64_t refVal_setCommentsUpdated;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("commentsUpdated"))), refVal_setCommentsUpdated );
+        setCommentsUpdated(refVal_setCommentsUpdated);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("page"))))
     {
@@ -218,6 +246,26 @@ bool PatchPageAPIResponse::codeIsSet() const
 void PatchPageAPIResponse::unsetCode()
 {
     m_CodeIsSet = false;
+}
+int64_t PatchPageAPIResponse::getCommentsUpdated() const
+{
+    return m_CommentsUpdated;
+}
+
+void PatchPageAPIResponse::setCommentsUpdated(int64_t value)
+{
+    m_CommentsUpdated = value;
+    m_CommentsUpdatedIsSet = true;
+}
+
+bool PatchPageAPIResponse::commentsUpdatedIsSet() const
+{
+    return m_CommentsUpdatedIsSet;
+}
+
+void PatchPageAPIResponse::unsetCommentsUpdated()
+{
+    m_CommentsUpdatedIsSet = false;
 }
 std::shared_ptr<APIPage> PatchPageAPIResponse::getPage() const
 {

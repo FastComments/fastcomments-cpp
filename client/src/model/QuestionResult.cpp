@@ -34,11 +34,8 @@ QuestionResult::QuestionResult()
     m_CreatedAtIsSet = false;
     m_Value = 0;
     m_ValueIsSet = false;
-    m_CommentId = utility::conversions::to_string_t("");
-    m_CommentIdIsSet = false;
     m_QuestionId = utility::conversions::to_string_t("");
     m_QuestionIdIsSet = false;
-    m_MetaIsSet = false;
     m_IpHash = utility::conversions::to_string_t("");
     m_IpHashIsSet = false;
 }
@@ -56,57 +53,57 @@ web::json::value QuestionResult::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_AnonUserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_ValueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("value"))] = ModelBase::toJson(m_Value);
     }
-    if(m_CommentIdIsSet)
-    {   
+    if(m_CommentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commentId"))] = ModelBase::toJson(m_CommentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("commentId"))] = ModelBase::toJson(m_CommentId.get());
     }
     if(m_QuestionIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("questionId"))] = ModelBase::toJson(m_QuestionId);
     }
-    if(m_MetaIsSet)
-    {   
+    if(m_Meta.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta);
+        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta.get());
     }
     if(m_IpHashIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("ipHash"))] = ModelBase::toJson(m_IpHash);
     }
@@ -276,17 +273,17 @@ void QuestionResult::toMultipart(std::shared_ptr<MultipartFormData> multipart, c
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("value")), m_Value));
     }
-    if(m_CommentIdIsSet)
+    if(m_CommentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentId")), m_CommentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentId")), m_CommentId.get()));
     }
     if(m_QuestionIdIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("questionId")), m_QuestionId));
     }
-    if(m_MetaIsSet)
+    if(m_Meta.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta.get()));
     }
     if(m_IpHashIsSet)
     {
@@ -521,24 +518,23 @@ void QuestionResult::unsetValue()
 }
 utility::string_t QuestionResult::getCommentId() const
 {
-    return m_CommentId;
+    return m_CommentId.get();
 }
 
 
 void QuestionResult::setCommentId(const utility::string_t& value)
 {
     m_CommentId = value;
-    m_CommentIdIsSet = true;
 }
 
 bool QuestionResult::commentIdIsSet() const
 {
-    return m_CommentIdIsSet;
+    return m_CommentId.has_value();
 }
 
 void QuestionResult::unsetCommentId()
 {
-    m_CommentIdIsSet = false;
+    m_CommentId.reset();
 }
 utility::string_t QuestionResult::getQuestionId() const
 {
@@ -563,24 +559,23 @@ void QuestionResult::unsetQuestionId()
 }
 std::vector<std::shared_ptr<MetaItem>> QuestionResult::getMeta() const
 {
-    return m_Meta;
+    return m_Meta.get();
 }
 
 
 void QuestionResult::setMeta(const std::vector<std::shared_ptr<MetaItem>>& value)
 {
     m_Meta = value;
-    m_MetaIsSet = true;
 }
 
 bool QuestionResult::metaIsSet() const
 {
-    return m_MetaIsSet;
+    return m_Meta.has_value();
 }
 
 void QuestionResult::unsetMeta()
 {
-    m_MetaIsSet = false;
+    m_Meta.reset();
 }
 utility::string_t QuestionResult::getIpHash() const
 {

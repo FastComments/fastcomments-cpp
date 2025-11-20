@@ -44,27 +44,27 @@ web::json::value FlagCommentResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("statusCode"))] = ModelBase::toJson(m_StatusCode);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_WasUnapprovedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wasUnapproved"))] = ModelBase::toJson(m_WasUnapproved);
     }

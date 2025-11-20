@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_CommentUserBadgeInfo_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CommentUserBadgeInfo_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -109,23 +110,17 @@ protected:
     utility::string_t m_Description;
     bool m_DescriptionIsSet;
 
-    utility::string_t m_DisplayLabel;
-    bool m_DisplayLabelIsSet;
+    boost::optional<utility::string_t> m_DisplayLabel;
 
-    utility::string_t m_DisplaySrc;
-    bool m_DisplaySrcIsSet;
+    boost::optional<utility::string_t> m_DisplaySrc;
 
-    utility::string_t m_BackgroundColor;
-    bool m_BackgroundColorIsSet;
+    boost::optional<utility::string_t> m_BackgroundColor;
 
-    utility::string_t m_BorderColor;
-    bool m_BorderColorIsSet;
+    boost::optional<utility::string_t> m_BorderColor;
 
-    utility::string_t m_TextColor;
-    bool m_TextColorIsSet;
+    boost::optional<utility::string_t> m_TextColor;
 
-    utility::string_t m_CssClass;
-    bool m_CssClassIsSet;
+    boost::optional<utility::string_t> m_CssClass;
 
 };
 

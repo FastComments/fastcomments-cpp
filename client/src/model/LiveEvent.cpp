@@ -56,82 +56,82 @@ web::json::value LiveEvent::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(m_Type);
     }
     if(m_TimestampIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("timestamp"))] = ModelBase::toJson(m_Timestamp);
     }
     if(m_TsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("ts"))] = ModelBase::toJson(m_Ts);
     }
     if(m_BroadcastIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("broadcastId"))] = ModelBase::toJson(m_BroadcastId);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_BadgesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges);
     }
     if(m_NotificationIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notification"))] = ModelBase::toJson(m_Notification);
     }
     if(m_VoteIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("vote"))] = ModelBase::toJson(m_Vote);
     }
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_FeedPostIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("feedPost"))] = ModelBase::toJson(m_FeedPost);
     }
     if(m_ExtraInfoIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("extraInfo"))] = ModelBase::toJson(m_ExtraInfo);
     }
     if(m_ConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("config"))] = ModelBase::toJson(m_Config);
     }
     if(m_IsClosedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isClosed"))] = ModelBase::toJson(m_IsClosed);
     }
     if(m_UjIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("uj"))] = ModelBase::toJson(m_Uj);
     }
     if(m_UlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("ul"))] = ModelBase::toJson(m_Ul);
     }
     if(m_ChangesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("changes"))] = ModelBase::toJson(m_Changes);
     }

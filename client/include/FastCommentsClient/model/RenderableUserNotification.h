@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_RenderableUserNotification_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -185,17 +186,13 @@ protected:
     bool m_OptedOut;
     bool m_OptedOutIsSet;
 
-    utility::string_t m_FromUserAvatarSrc;
-    bool m_FromUserAvatarSrcIsSet;
+    boost::optional<utility::string_t> m_FromUserAvatarSrc;
 
-    utility::string_t m_FromUserId;
-    bool m_FromUserIdIsSet;
+    boost::optional<utility::string_t> m_FromUserId;
 
-    utility::string_t m_FromUserName;
-    bool m_FromUserNameIsSet;
+    boost::optional<utility::string_t> m_FromUserName;
 
-    utility::string_t m_FromCommentId;
-    bool m_FromCommentIdIsSet;
+    boost::optional<utility::string_t> m_FromCommentId;
 
     std::shared_ptr<NotificationType> m_Type;
     bool m_TypeIsSet;
@@ -215,8 +212,7 @@ protected:
     std::shared_ptr<NotificationObjectType> m_RelatedObjectType;
     bool m_RelatedObjectTypeIsSet;
 
-    utility::string_t m_PageTitle;
-    bool m_PageTitleIsSet;
+    boost::optional<utility::string_t> m_PageTitle;
 
     utility::string_t m_Url;
     bool m_UrlIsSet;

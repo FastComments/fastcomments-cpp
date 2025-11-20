@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PublicComment_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PublicComment_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -57,11 +58,6 @@ public:
     /// PublicComment members
 
 
-    utility::datetime getDate() const;
-    bool dateIsSet() const;
-    void unsetdate();
-    void setDate(const utility::datetime& value);
-
     utility::string_t getId() const;
     bool idIsSet() const;
     void unset_id();
@@ -71,11 +67,6 @@ public:
     bool userIdIsSet() const;
     void unsetUserId();
     void setUserId(const utility::string_t& value);
-
-    utility::string_t getAnonUserId() const;
-    bool anonUserIdIsSet() const;
-    void unsetAnonUserId();
-    void setAnonUserId(const utility::string_t& value);
 
     utility::string_t getCommenterName() const;
     bool commenterNameIsSet() const;
@@ -96,6 +87,11 @@ public:
     bool parentIdIsSet() const;
     void unsetParentId();
     void setParentId(const utility::string_t& value);
+
+    utility::datetime getDate() const;
+    bool dateIsSet() const;
+    void unsetdate();
+    void setDate(const utility::datetime& value);
 
     int32_t getVotes() const;
     bool votesIsSet() const;
@@ -122,25 +118,10 @@ public:
     void unsetAvatarSrc();
     void setAvatarSrc(const utility::string_t& value);
 
-    bool isIsSpam() const;
-    bool isSpamIsSet() const;
-    void unsetIsSpam();
-    void setIsSpam(bool value);
-
     bool isHasImages() const;
     bool hasImagesIsSet() const;
     void unsetHasImages();
     void setHasImages(bool value);
-
-    bool isIsDeleted() const;
-    bool isDeletedIsSet() const;
-    void unsetIsDeleted();
-    void setIsDeleted(bool value);
-
-    bool isIsDeletedUser() const;
-    bool isDeletedUserIsSet() const;
-    void unsetIsDeletedUser();
-    void setIsDeletedUser(bool value);
 
     bool isIsByAdmin() const;
     bool isByAdminIsSet() const;
@@ -162,30 +143,50 @@ public:
     void unsetIsLocked();
     void setIsLocked(bool value);
 
-    double getRating() const;
-    bool ratingIsSet() const;
-    void unsetRating();
-    void setRating(double value);
-
     utility::string_t getDisplayLabel() const;
     bool displayLabelIsSet() const;
     void unsetDisplayLabel();
     void setDisplayLabel(const utility::string_t& value);
+
+    double getRating() const;
+    bool ratingIsSet() const;
+    void unsetRating();
+    void setRating(double value);
 
     std::vector<std::shared_ptr<CommentUserBadgeInfo>> getBadges() const;
     bool badgesIsSet() const;
     void unsetBadges();
     void setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value);
 
-    std::vector<utility::string_t> getFeedbackIds() const;
-    bool feedbackIdsIsSet() const;
-    void unsetFeedbackIds();
-    void setFeedbackIds(const std::vector<utility::string_t>& value);
-
     int64_t getViewCount() const;
     bool viewCountIsSet() const;
     void unsetViewCount();
     void setViewCount(int64_t value);
+
+    bool isIsDeleted() const;
+    bool isDeletedIsSet() const;
+    void unsetIsDeleted();
+    void setIsDeleted(bool value);
+
+    bool isIsDeletedUser() const;
+    bool isDeletedUserIsSet() const;
+    void unsetIsDeletedUser();
+    void setIsDeletedUser(bool value);
+
+    bool isIsSpam() const;
+    bool isSpamIsSet() const;
+    void unsetIsSpam();
+    void setIsSpam(bool value);
+
+    utility::string_t getAnonUserId() const;
+    bool anonUserIdIsSet() const;
+    void unsetAnonUserId();
+    void setAnonUserId(const utility::string_t& value);
+
+    std::vector<utility::string_t> getFeedbackIds() const;
+    bool feedbackIdsIsSet() const;
+    void unsetFeedbackIds();
+    void setFeedbackIds(const std::vector<utility::string_t>& value);
 
     bool isRequiresVerification() const;
     bool requiresVerificationIsSet() const;
@@ -196,6 +197,11 @@ public:
     bool editKeyIsSet() const;
     void unsetEditKey();
     void setEditKey(const utility::string_t& value);
+
+    bool isApproved() const;
+    bool approvedIsSet() const;
+    void unsetApproved();
+    void setApproved(bool value);
 
     bool isIsUnread() const;
     bool isUnreadIsSet() const;
@@ -258,56 +264,36 @@ public:
 
 
 protected:
-    utility::datetime m_date;
-    bool m_dateIsSet;
-
     utility::string_t m__id;
     bool m__idIsSet;
 
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
-
-    utility::string_t m_AnonUserId;
-    bool m_AnonUserIdIsSet;
+    boost::optional<utility::string_t> m_UserId;
 
     utility::string_t m_CommenterName;
     bool m_CommenterNameIsSet;
 
-    utility::string_t m_CommenterLink;
-    bool m_CommenterLinkIsSet;
+    boost::optional<utility::string_t> m_CommenterLink;
 
     utility::string_t m_CommentHTML;
     bool m_CommentHTMLIsSet;
 
-    utility::string_t m_ParentId;
-    bool m_ParentIdIsSet;
+    boost::optional<utility::string_t> m_ParentId;
 
-    int32_t m_Votes;
-    bool m_VotesIsSet;
+    boost::optional<utility::datetime> m_date;
 
-    int32_t m_VotesUp;
-    bool m_VotesUpIsSet;
+    boost::optional<int32_t> m_Votes;
 
-    int32_t m_VotesDown;
-    bool m_VotesDownIsSet;
+    boost::optional<int32_t> m_VotesUp;
+
+    boost::optional<int32_t> m_VotesDown;
 
     bool m_Verified;
     bool m_VerifiedIsSet;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
-
-    bool m_IsSpam;
-    bool m_IsSpamIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
     bool m_HasImages;
     bool m_HasImagesIsSet;
-
-    bool m_IsDeleted;
-    bool m_IsDeletedIsSet;
-
-    bool m_IsDeletedUser;
-    bool m_IsDeletedUserIsSet;
 
     bool m_IsByAdmin;
     bool m_IsByAdminIsSet;
@@ -315,32 +301,40 @@ protected:
     bool m_IsByModerator;
     bool m_IsByModeratorIsSet;
 
-    bool m_IsPinned;
-    bool m_IsPinnedIsSet;
+    boost::optional<bool> m_IsPinned;
 
-    bool m_IsLocked;
-    bool m_IsLockedIsSet;
+    boost::optional<bool> m_IsLocked;
 
-    double m_Rating;
-    bool m_RatingIsSet;
+    boost::optional<utility::string_t> m_DisplayLabel;
 
-    utility::string_t m_DisplayLabel;
-    bool m_DisplayLabelIsSet;
+    boost::optional<double> m_Rating;
 
-    std::vector<std::shared_ptr<CommentUserBadgeInfo>> m_Badges;
-    bool m_BadgesIsSet;
+    boost::optional<std::vector<std::shared_ptr<CommentUserBadgeInfo>>> m_Badges;
+
+    boost::optional<int64_t> m_ViewCount;
+
+    bool m_IsDeleted;
+    bool m_IsDeletedIsSet;
+
+    bool m_IsDeletedUser;
+    bool m_IsDeletedUserIsSet;
+
+    bool m_IsSpam;
+    bool m_IsSpamIsSet;
+
+    boost::optional<utility::string_t> m_AnonUserId;
 
     std::vector<utility::string_t> m_FeedbackIds;
     bool m_FeedbackIdsIsSet;
-
-    int64_t m_ViewCount;
-    bool m_ViewCountIsSet;
 
     bool m_RequiresVerification;
     bool m_RequiresVerificationIsSet;
 
     utility::string_t m_EditKey;
     bool m_EditKeyIsSet;
+
+    bool m_Approved;
+    bool m_ApprovedIsSet;
 
     bool m_IsUnread;
     bool m_IsUnreadIsSet;

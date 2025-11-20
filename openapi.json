@@ -387,6 +387,9 @@
 					"readonly": {
 						"type": "boolean"
 					},
+					"noNewRootComments": {
+						"type": "boolean"
+					},
 					"requireSSO": {
 						"type": "boolean"
 					},
@@ -1596,95 +1599,74 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Pick_Omit_FComment.date_.PublicCommentPubSubFieldsKeys_": {
+			"UserId": {
+				"type": "string"
+			},
+			"FDomain": {
+				"type": "string"
+			},
+			"PubSubCommentBase": {
 				"properties": {
-					"date": {},
 					"_id": {
 						"type": "string"
 					},
 					"tenantId": {
 						"type": "string"
 					},
-					"urlId": {
-						"type": "string"
-					},
-					"url": {
-						"type": "string"
-					},
-					"pageTitle": {
-						"type": "string"
-					},
 					"userId": {
-						"type": "string"
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/UserId"
+							}
+						],
+						"nullable": true
 					},
-					"anonUserId": {
+					"urlId": {
 						"type": "string"
 					},
 					"commenterName": {
 						"type": "string"
 					},
 					"commenterLink": {
+						"type": "string",
+						"nullable": true
+					},
+					"commentHTML": {
 						"type": "string"
 					},
 					"comment": {
 						"type": "string"
 					},
-					"commentHTML": {
-						"type": "string"
-					},
 					"parentId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"votes": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesUp": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesDown": {
 						"type": "integer",
-						"format": "int32"
-					},
-					"expireAt": {
-						"type": "string",
-						"format": "date-time"
+						"format": "int32",
+						"nullable": true
 					},
 					"verified": {
 						"type": "boolean"
 					},
-					"reviewed": {
-						"type": "boolean"
-					},
 					"avatarSrc": {
-						"type": "string"
-					},
-					"isSpam": {
-						"type": "boolean"
+						"type": "string",
+						"nullable": true
 					},
 					"hasImages": {
 						"type": "boolean"
 					},
 					"hasLinks": {
-						"type": "boolean"
-					},
-					"hasCode": {
-						"type": "boolean"
-					},
-					"approved": {
-						"type": "boolean"
-					},
-					"locale": {
-						"type": "string"
-					},
-					"isDeleted": {
-						"type": "boolean"
-					},
-					"isDeletedUser": {
-						"type": "boolean"
-					},
-					"isBannedUser": {
 						"type": "boolean"
 					},
 					"isByAdmin": {
@@ -1694,30 +1676,46 @@
 						"type": "boolean"
 					},
 					"isPinned": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
 					},
 					"isLocked": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
 					},
-					"flagCount": {
-						"type": "integer",
-						"format": "int32"
+					"displayLabel": {
+						"type": "string",
+						"nullable": true
 					},
 					"rating": {
 						"type": "number",
-						"format": "double"
-					},
-					"displayLabel": {
-						"type": "string"
+						"format": "double",
+						"nullable": true
 					},
 					"badges": {
 						"items": {
 							"$ref": "#/components/schemas/CommentUserBadgeInfo"
 						},
-						"type": "array"
+						"type": "array",
+						"nullable": true
 					},
-					"domain": {
-						"type": "string"
+					"viewCount": {
+						"type": "integer",
+						"format": "int64",
+						"nullable": true
+					},
+					"isDeleted": {
+						"type": "boolean"
+					},
+					"isDeletedUser": {
+						"type": "boolean"
+					},
+					"isSpam": {
+						"type": "boolean"
+					},
+					"anonUserId": {
+						"type": "string",
+						"nullable": true
 					},
 					"feedbackIds": {
 						"items": {
@@ -1725,37 +1723,74 @@
 						},
 						"type": "array"
 					},
+					"flagCount": {
+						"type": "integer",
+						"format": "int32",
+						"nullable": true
+					},
+					"domain": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/FDomain"
+							}
+						],
+						"nullable": true
+					},
+					"url": {
+						"type": "string"
+					},
+					"pageTitle": {
+						"type": "string",
+						"nullable": true
+					},
+					"expireAt": {
+						"type": "string",
+						"format": "date-time",
+						"nullable": true
+					},
+					"reviewed": {
+						"type": "boolean"
+					},
+					"hasCode": {
+						"type": "boolean"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"locale": {
+						"type": "string",
+						"nullable": true
+					},
+					"isBannedUser": {
+						"type": "boolean"
+					},
 					"groupIds": {
 						"items": {
 							"type": "string"
 						},
-						"type": "array"
-					},
-					"viewCount": {
-						"type": "integer",
-						"format": "int64"
+						"type": "array",
+						"nullable": true
 					}
 				},
 				"required": [
-					"date",
 					"_id",
 					"tenantId",
 					"urlId",
-					"url",
 					"commenterName",
-					"comment",
 					"commentHTML",
+					"comment",
 					"verified",
+					"url",
 					"approved",
 					"locale"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
+				"additionalProperties": false
 			},
 			"PubSubComment": {
 				"allOf": [
 					{
-						"$ref": "#/components/schemas/Pick_Omit_FComment.date_.PublicCommentPubSubFieldsKeys_"
+						"$ref": "#/components/schemas/PubSubCommentBase"
 					},
 					{
 						"properties": {
@@ -1892,26 +1927,26 @@
 				],
 				"type": "object"
 			},
-			"Pick_FComment.approved-or-commentHTML_": {
+			"SetCommentTextResult": {
 				"properties": {
-					"commentHTML": {
-						"type": "string"
-					},
 					"approved": {
 						"type": "boolean"
+					},
+					"commentHTML": {
+						"type": "string"
 					}
 				},
 				"required": [
-					"commentHTML",
-					"approved"
+					"approved",
+					"commentHTML"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
+				"additionalProperties": false
 			},
 			"PublicAPISetCommentTextResponse": {
 				"properties": {
 					"comment": {
-						"$ref": "#/components/schemas/Pick_FComment.approved-or-commentHTML_"
+						"$ref": "#/components/schemas/SetCommentTextResult"
 					},
 					"status": {
 						"$ref": "#/components/schemas/APIStatus"
@@ -2046,65 +2081,65 @@
 						"type": "object"
 					},
 					{
-						"$ref": "#/components/schemas/Pick_FComment.PublicCommentFieldsKeys_"
+						"$ref": "#/components/schemas/PublicCommentBase"
 					}
 				]
 			},
-			"Pick_FComment.PublicCommentFieldsKeys_": {
+			"PublicCommentBase": {
 				"properties": {
-					"date": {
-						"type": "string",
-						"format": "date-time"
-					},
 					"_id": {
 						"type": "string"
 					},
 					"userId": {
-						"type": "string"
-					},
-					"anonUserId": {
-						"type": "string"
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/UserId"
+							}
+						],
+						"nullable": true
 					},
 					"commenterName": {
 						"type": "string"
 					},
 					"commenterLink": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"commentHTML": {
 						"type": "string"
 					},
 					"parentId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
+					},
+					"date": {
+						"type": "string",
+						"format": "date-time",
+						"nullable": true
 					},
 					"votes": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesUp": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesDown": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"verified": {
 						"type": "boolean"
 					},
 					"avatarSrc": {
-						"type": "string"
-					},
-					"isSpam": {
-						"type": "boolean"
+						"type": "string",
+						"nullable": true
 					},
 					"hasImages": {
-						"type": "boolean"
-					},
-					"isDeleted": {
-						"type": "boolean"
-					},
-					"isDeletedUser": {
 						"type": "boolean"
 					},
 					"isByAdmin": {
@@ -2114,23 +2149,46 @@
 						"type": "boolean"
 					},
 					"isPinned": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
 					},
 					"isLocked": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
+					},
+					"displayLabel": {
+						"type": "string",
+						"nullable": true
 					},
 					"rating": {
 						"type": "number",
-						"format": "double"
-					},
-					"displayLabel": {
-						"type": "string"
+						"format": "double",
+						"nullable": true
 					},
 					"badges": {
 						"items": {
 							"$ref": "#/components/schemas/CommentUserBadgeInfo"
 						},
-						"type": "array"
+						"type": "array",
+						"nullable": true
+					},
+					"viewCount": {
+						"type": "integer",
+						"format": "int64",
+						"nullable": true
+					},
+					"isDeleted": {
+						"type": "boolean"
+					},
+					"isDeletedUser": {
+						"type": "boolean"
+					},
+					"isSpam": {
+						"type": "boolean"
+					},
+					"anonUserId": {
+						"type": "string",
+						"nullable": true
 					},
 					"feedbackIds": {
 						"items": {
@@ -2138,26 +2196,25 @@
 						},
 						"type": "array"
 					},
-					"viewCount": {
-						"type": "integer",
-						"format": "int64"
-					},
 					"requiresVerification": {
 						"type": "boolean"
 					},
 					"editKey": {
 						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
 					}
 				},
 				"required": [
-					"date",
 					"_id",
 					"commenterName",
 					"commentHTML",
+					"date",
 					"verified"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
+				"additionalProperties": false
 			},
 			"Record_string.any_": {
 				"properties": {},
@@ -2456,32 +2513,33 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Pick_FComment.isDeleted-or-commentHTML-or-commenterName-or-userId_": {
+			"DeletedCommentResultComment": {
 				"properties": {
-					"userId": {
+					"isDeleted": {
+						"type": "boolean"
+					},
+					"commentHTML": {
 						"type": "string"
 					},
 					"commenterName": {
 						"type": "string"
 					},
-					"commentHTML": {
-						"type": "string"
-					},
-					"isDeleted": {
-						"type": "boolean"
+					"userId": {
+						"type": "string",
+						"nullable": true
 					}
 				},
 				"required": [
-					"commenterName",
-					"commentHTML"
+					"commentHTML",
+					"commenterName"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
+				"additionalProperties": false
 			},
 			"PublicAPIDeleteCommentResponse": {
 				"properties": {
 					"comment": {
-						"$ref": "#/components/schemas/Pick_FComment.isDeleted-or-commentHTML-or-commenterName-or-userId_"
+						"$ref": "#/components/schemas/DeletedCommentResultComment"
 					},
 					"hardRemoved": {
 						"type": "boolean"
@@ -3308,6 +3366,10 @@
 					"code": {
 						"type": "string"
 					},
+					"commentsUpdated": {
+						"type": "integer",
+						"format": "int64"
+					},
 					"page": {
 						"$ref": "#/components/schemas/APIPage"
 					},
@@ -3487,6 +3549,12 @@
 					},
 					"userBadge": {
 						"$ref": "#/components/schemas/UserBadge"
+					},
+					"notes": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
 					}
 				},
 				"required": [
@@ -3780,12 +3848,6 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"UserId": {
-				"type": "string"
-			},
-			"FDomain": {
-				"type": "string"
-			},
 			"CommentLogType": {
 				"enum": [
 					0,
@@ -3836,7 +3898,13 @@
 					45,
 					46,
 					47,
-					48
+					48,
+					49,
+					50,
+					51,
+					52,
+					53,
+					54
 				],
 				"type": "number"
 			},
@@ -4614,44 +4682,31 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Pick_FComment.APICommentFieldsKeys_": {
+			"APICommentBase": {
 				"properties": {
-					"date": {
-						"type": "string",
-						"format": "date-time"
-					},
 					"_id": {
 						"type": "string"
 					},
-					"tenantId": {
-						"type": "string"
-					},
-					"urlId": {
-						"type": "string"
-					},
-					"urlIdRaw": {
-						"type": "string"
-					},
-					"url": {
-						"type": "string"
-					},
-					"pageTitle": {
-						"type": "string"
-					},
-					"userId": {
-						"type": "string"
+					"aiDeterminedSpam": {
+						"type": "boolean"
 					},
 					"anonUserId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
-					"commenterEmail": {
-						"type": "string"
+					"approved": {
+						"type": "boolean"
 					},
-					"commenterName": {
-						"type": "string"
+					"avatarSrc": {
+						"type": "string",
+						"nullable": true
 					},
-					"commenterLink": {
-						"type": "string"
+					"badges": {
+						"items": {
+							"$ref": "#/components/schemas/CommentUserBadgeInfo"
+						},
+						"type": "array",
+						"nullable": true
 					},
 					"comment": {
 						"type": "string"
@@ -4659,61 +4714,62 @@
 					"commentHTML": {
 						"type": "string"
 					},
-					"parentId": {
+					"commenterEmail": {
+						"type": "string",
+						"nullable": true
+					},
+					"commenterLink": {
+						"type": "string",
+						"nullable": true
+					},
+					"commenterName": {
 						"type": "string"
 					},
-					"localDateString": {
-						"type": "string"
-					},
-					"localDateHours": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"votes": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"votesUp": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"votesDown": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"expireAt": {
+					"date": {
 						"type": "string",
-						"format": "date-time"
+						"format": "date-time",
+						"nullable": true
 					},
-					"verified": {
-						"type": "boolean"
-					},
-					"verifiedDate": {
+					"displayLabel": {
 						"type": "string",
-						"format": "date-time"
+						"nullable": true
 					},
-					"notificationSentForParent": {
-						"type": "boolean"
-					},
-					"notificationSentForParentTenant": {
-						"type": "boolean"
-					},
-					"reviewed": {
-						"type": "boolean"
+					"domain": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/FDomain"
+							}
+						],
+						"nullable": true
 					},
 					"externalId": {
 						"type": "string"
 					},
 					"externalParentId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
-					"avatarSrc": {
-						"type": "string"
+					"expireAt": {
+						"type": "string",
+						"format": "date-time",
+						"nullable": true
 					},
-					"isSpam": {
-						"type": "boolean"
+					"feedbackIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
 					},
-					"aiDeterminedSpam": {
+					"flagCount": {
+						"type": "integer",
+						"format": "int32",
+						"nullable": true
+					},
+					"fromProductId": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"hasCode": {
 						"type": "boolean"
 					},
 					"hasImages": {
@@ -4722,20 +4778,11 @@
 					"hasLinks": {
 						"type": "boolean"
 					},
-					"hasCode": {
-						"type": "boolean"
-					},
-					"approved": {
-						"type": "boolean"
-					},
-					"locale": {
-						"type": "string"
-					},
-					"isDeleted": {
-						"type": "boolean"
-					},
-					"isDeletedUser": {
-						"type": "boolean"
+					"hashTags": {
+						"items": {
+							"$ref": "#/components/schemas/CommentUserHashTagInfo"
+						},
+						"type": "array"
 					},
 					"isByAdmin": {
 						"type": "boolean"
@@ -4743,26 +4790,41 @@
 					"isByModerator": {
 						"type": "boolean"
 					},
-					"isPinned": {
+					"isDeleted": {
 						"type": "boolean"
+					},
+					"isDeletedUser": {
+						"type": "boolean"
+					},
+					"isPinned": {
+						"type": "boolean",
+						"nullable": true
 					},
 					"isLocked": {
+						"type": "boolean",
+						"nullable": true
+					},
+					"isSpam": {
 						"type": "boolean"
 					},
-					"flagCount": {
+					"localDateHours": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
-					"rating": {
-						"type": "number",
-						"format": "double"
+					"localDateString": {
+						"type": "string",
+						"nullable": true
 					},
-					"displayLabel": {
-						"type": "string"
+					"locale": {
+						"type": "string",
+						"nullable": true
 					},
-					"fromProductId": {
-						"type": "integer",
-						"format": "int32"
+					"mentions": {
+						"items": {
+							"$ref": "#/components/schemas/CommentUserMentionInfo"
+						},
+						"type": "array"
 					},
 					"meta": {
 						"properties": {
@@ -4774,62 +4836,102 @@
 							}
 						},
 						"additionalProperties": {},
-						"type": "object"
-					},
-					"mentions": {
-						"items": {
-							"$ref": "#/components/schemas/CommentUserMentionInfo"
-						},
-						"type": "array"
-					},
-					"hashTags": {
-						"items": {
-							"$ref": "#/components/schemas/CommentUserHashTagInfo"
-						},
-						"type": "array"
-					},
-					"badges": {
-						"items": {
-							"$ref": "#/components/schemas/CommentUserBadgeInfo"
-						},
-						"type": "array"
-					},
-					"domain": {
-						"type": "string"
+						"type": "object",
+						"nullable": true
 					},
 					"moderationGroupIds": {
 						"items": {
 							"type": "string"
 						},
-						"type": "array"
+						"type": "array",
+						"nullable": true
 					},
-					"feedbackIds": {
-						"items": {
-							"type": "string"
-						},
-						"type": "array"
+					"notificationSentForParent": {
+						"type": "boolean"
+					},
+					"notificationSentForParentTenant": {
+						"type": "boolean"
+					},
+					"pageTitle": {
+						"type": "string",
+						"nullable": true
+					},
+					"parentId": {
+						"type": "string",
+						"nullable": true
+					},
+					"rating": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"reviewed": {
+						"type": "boolean"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					},
+					"urlId": {
+						"type": "string"
+					},
+					"urlIdRaw": {
+						"type": "string"
+					},
+					"userId": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/UserId"
+							}
+						],
+						"nullable": true
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"verifiedDate": {
+						"type": "string",
+						"format": "date-time",
+						"nullable": true
+					},
+					"votes": {
+						"type": "integer",
+						"format": "int32",
+						"nullable": true
+					},
+					"votesDown": {
+						"type": "integer",
+						"format": "int32",
+						"nullable": true
+					},
+					"votesUp": {
+						"type": "integer",
+						"format": "int32",
+						"nullable": true
 					}
 				},
 				"required": [
-					"date",
 					"_id",
-					"tenantId",
-					"urlId",
-					"url",
-					"commenterName",
+					"approved",
 					"comment",
 					"commentHTML",
-					"verified",
-					"approved",
-					"locale"
+					"commenterName",
+					"date",
+					"locale",
+					"tenantId",
+					"url",
+					"urlId",
+					"verified"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
+				"additionalProperties": false
 			},
 			"APIComment": {
 				"allOf": [
 					{
-						"$ref": "#/components/schemas/Pick_FComment.APICommentFieldsKeys_"
+						"$ref": "#/components/schemas/APICommentBase"
 					},
 					{
 						"properties": {
@@ -4881,20 +4983,8 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Pick_APIComment.UpdatableCommentFields_": {
+			"UpdatableCommentParams": {
 				"properties": {
-					"date": {
-						"allOf": [
-							{
-								"type": "string",
-								"format": "date-time"
-							},
-							{
-								"type": "number",
-								"format": "double"
-							}
-						]
-					},
 					"urlId": {
 						"type": "string"
 					},
@@ -4905,19 +4995,27 @@
 						"type": "string"
 					},
 					"pageTitle": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"userId": {
-						"type": "string"
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/UserId"
+							}
+						],
+						"nullable": true
 					},
 					"commenterEmail": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"commenterName": {
 						"type": "string"
 					},
 					"commenterLink": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"comment": {
 						"type": "string"
@@ -4926,37 +5024,50 @@
 						"type": "string"
 					},
 					"parentId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
+					},
+					"date": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
 					},
 					"localDateString": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"localDateHours": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votes": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesUp": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"votesDown": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"expireAt": {
 						"type": "string",
-						"format": "date-time"
+						"format": "date-time",
+						"nullable": true
 					},
 					"verified": {
 						"type": "boolean"
 					},
 					"verifiedDate": {
 						"type": "string",
-						"format": "date-time"
+						"format": "date-time",
+						"nullable": true
 					},
 					"notificationSentForParent": {
 						"type": "boolean"
@@ -4971,10 +5082,12 @@
 						"type": "string"
 					},
 					"externalParentId": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"avatarSrc": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"isSpam": {
 						"type": "boolean"
@@ -4995,17 +5108,21 @@
 						"type": "boolean"
 					},
 					"isPinned": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
 					},
 					"isLocked": {
-						"type": "boolean"
+						"type": "boolean",
+						"nullable": true
 					},
 					"flagCount": {
 						"type": "integer",
-						"format": "int32"
+						"format": "int32",
+						"nullable": true
 					},
 					"displayLabel": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"meta": {
 						"properties": {
@@ -5017,13 +5134,15 @@
 							}
 						},
 						"additionalProperties": {},
-						"type": "object"
+						"type": "object",
+						"nullable": true
 					},
 					"moderationGroupIds": {
 						"items": {
 							"type": "string"
 						},
-						"type": "array"
+						"type": "array",
+						"nullable": true
 					},
 					"feedbackIds": {
 						"items": {
@@ -5032,21 +5151,8 @@
 						"type": "array"
 					}
 				},
-				"required": [
-					"date",
-					"urlId",
-					"url",
-					"commenterName",
-					"comment",
-					"commentHTML",
-					"verified",
-					"approved"
-				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
-			},
-			"UpdatableCommentParams": {
-				"$ref": "#/components/schemas/Pick_APIComment.UpdatableCommentFields_"
+				"additionalProperties": false
 			},
 			"DeleteCommentAction": {
 				"type": "string",
@@ -5290,12 +5396,9 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Pick_TenantAuditLog.TenantAuditLogKeys_": {
+			"APIAuditLog": {
 				"properties": {
 					"_id": {
-						"type": "string"
-					},
-					"url": {
 						"type": "string"
 					},
 					"userId": {
@@ -5325,8 +5428,13 @@
 							"cron"
 						]
 					},
+					"url": {
+						"type": "string",
+						"nullable": true
+					},
 					"ip": {
-						"type": "string"
+						"type": "string",
+						"nullable": true
 					},
 					"when": {
 						"type": "string",
@@ -5340,7 +5448,12 @@
 						"format": "date-time"
 					},
 					"objectDetails": {
-						"$ref": "#/components/schemas/Record_string.any_"
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/Record_string.any_"
+							}
+						],
+						"nullable": true
 					}
 				},
 				"required": [
@@ -5349,10 +5462,7 @@
 					"crudType"
 				],
 				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
-			},
-			"APIAuditLog": {
-				"$ref": "#/components/schemas/Pick_TenantAuditLog.TenantAuditLogKeys_"
+				"additionalProperties": false
 			},
 			"GetAuditLogsResponse": {
 				"properties": {

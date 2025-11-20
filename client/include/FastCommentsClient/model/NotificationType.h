@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_NotificationType_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_NotificationType_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 

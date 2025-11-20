@@ -44,27 +44,27 @@ web::json::value UpdateAPIPageData::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IsClosedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isClosed"))] = ModelBase::toJson(m_IsClosed);
     }
     if(m_AccessibleByGroupIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("accessibleByGroupIds"))] = ModelBase::toJson(m_AccessibleByGroupIds);
     }
     if(m_TitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("title"))] = ModelBase::toJson(m_Title);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }

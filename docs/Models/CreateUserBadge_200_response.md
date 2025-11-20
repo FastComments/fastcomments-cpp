@@ -5,6 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **status** | [**APIStatus**](APIStatus.md) |  | [default to null] |
 | **userBadge** | [**UserBadge**](UserBadge.md) |  | [default to null] |
+| **notes** | **List** |  | [optional] [default to null] |
 | **reason** | **String** |  | [default to null] |
 | **code** | **String** |  | [default to null] |
 | **secondaryCode** | **String** |  | [optional] [default to null] |

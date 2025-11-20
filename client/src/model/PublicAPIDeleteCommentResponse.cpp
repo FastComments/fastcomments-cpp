@@ -39,17 +39,17 @@ web::json::value PublicAPIDeleteCommentResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_HardRemovedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hardRemoved"))] = ModelBase::toJson(m_HardRemoved);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
@@ -65,7 +65,7 @@ bool PublicAPIDeleteCommentResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("comment")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> refVal_setComment;
+            std::shared_ptr<DeletedCommentResultComment> refVal_setComment;
             ok &= ModelBase::fromJson(fieldValue, refVal_setComment);
             setComment(refVal_setComment);
             
@@ -128,7 +128,7 @@ bool PublicAPIDeleteCommentResponse::fromMultiPart(std::shared_ptr<MultipartForm
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
     {
-        std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> refVal_setComment;
+        std::shared_ptr<DeletedCommentResultComment> refVal_setComment;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comment"))), refVal_setComment );
         setComment(refVal_setComment);
     }
@@ -148,13 +148,13 @@ bool PublicAPIDeleteCommentResponse::fromMultiPart(std::shared_ptr<MultipartForm
 }
 
 
-std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> PublicAPIDeleteCommentResponse::getComment() const
+std::shared_ptr<DeletedCommentResultComment> PublicAPIDeleteCommentResponse::getComment() const
 {
     return m_Comment;
 }
 
 
-void PublicAPIDeleteCommentResponse::setComment(const std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_>& value)
+void PublicAPIDeleteCommentResponse::setComment(const std::shared_ptr<DeletedCommentResultComment>& value)
 {
     m_Comment = value;
     m_CommentIsSet = true;

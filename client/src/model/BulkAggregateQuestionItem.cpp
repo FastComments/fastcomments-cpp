@@ -45,32 +45,32 @@ web::json::value BulkAggregateQuestionItem::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_AggIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("aggId"))] = ModelBase::toJson(m_AggId);
     }
     if(m_QuestionIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("questionId"))] = ModelBase::toJson(m_QuestionId);
     }
     if(m_QuestionIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("questionIds"))] = ModelBase::toJson(m_QuestionIds);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_TimeBucketIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("timeBucket"))] = ModelBase::toJson(m_TimeBucket);
     }
     if(m_StartDateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("startDate"))] = ModelBase::toJson(m_StartDate);
     }

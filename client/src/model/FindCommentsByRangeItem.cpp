@@ -20,7 +20,6 @@ namespace model {
 
 FindCommentsByRangeItem::FindCommentsByRangeItem()
 {
-    m_CommentIsSet = false;
     m_ResultIsSet = false;
 }
 
@@ -36,13 +35,13 @@ void FindCommentsByRangeItem::validate()
 web::json::value FindCommentsByRangeItem::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_CommentIsSet)
-    {   
+    if(m_Comment.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
+        val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment.get());
     }
     if(m_ResultIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("result"))] = ModelBase::toJson(m_Result);
     }
@@ -85,9 +84,9 @@ void FindCommentsByRangeItem::toMultipart(std::shared_ptr<MultipartFormData> mul
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_CommentIsSet)
+    if(m_Comment.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment.get()));
     }
     if(m_ResultIsSet)
     {
@@ -122,24 +121,23 @@ bool FindCommentsByRangeItem::fromMultiPart(std::shared_ptr<MultipartFormData> m
 
 std::shared_ptr<FComment> FindCommentsByRangeItem::getComment() const
 {
-    return m_Comment;
+    return m_Comment.get();
 }
 
 
 void FindCommentsByRangeItem::setComment(const std::shared_ptr<FComment>& value)
 {
     m_Comment = value;
-    m_CommentIsSet = true;
 }
 
 bool FindCommentsByRangeItem::commentIsSet() const
 {
-    return m_CommentIsSet;
+    return m_Comment.has_value();
 }
 
 void FindCommentsByRangeItem::unsetComment()
 {
-    m_CommentIsSet = false;
+    m_Comment.reset();
 }
 std::shared_ptr<QuestionResult> FindCommentsByRangeItem::getResult() const
 {

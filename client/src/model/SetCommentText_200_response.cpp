@@ -50,47 +50,47 @@ web::json::value SetCommentText_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
@@ -106,7 +106,7 @@ bool SetCommentText_200_response::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("comment")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<Pick_FComment_approved_or_commentHTML_> refVal_setComment;
+            std::shared_ptr<SetCommentTextResult> refVal_setComment;
             ok &= ModelBase::fromJson(fieldValue, refVal_setComment);
             setComment(refVal_setComment);
             
@@ -259,7 +259,7 @@ bool SetCommentText_200_response::fromMultiPart(std::shared_ptr<MultipartFormDat
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
     {
-        std::shared_ptr<Pick_FComment_approved_or_commentHTML_> refVal_setComment;
+        std::shared_ptr<SetCommentTextResult> refVal_setComment;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comment"))), refVal_setComment );
         setComment(refVal_setComment);
     }
@@ -315,13 +315,13 @@ bool SetCommentText_200_response::fromMultiPart(std::shared_ptr<MultipartFormDat
 }
 
 
-std::shared_ptr<Pick_FComment_approved_or_commentHTML_> SetCommentText_200_response::getComment() const
+std::shared_ptr<SetCommentTextResult> SetCommentText_200_response::getComment() const
 {
     return m_Comment;
 }
 
 
-void SetCommentText_200_response::setComment(const std::shared_ptr<Pick_FComment_approved_or_commentHTML_>& value)
+void SetCommentText_200_response::setComment(const std::shared_ptr<SetCommentTextResult>& value)
 {
     m_Comment = value;
     m_CommentIsSet = true;

@@ -40,17 +40,17 @@ web::json::value PublicAPIGetCommentTextResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CommentTextIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentText"))] = ModelBase::toJson(m_CommentText);
     }
     if(m_SanitizedCommentTextIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("sanitizedCommentText"))] = ModelBase::toJson(m_SanitizedCommentText);
     }

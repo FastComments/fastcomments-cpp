@@ -19,10 +19,11 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_GetAuditLogsResponse_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/Pick_TenantAuditLog_TenantAuditLogKeys_.h"
+#include "FastCommentsClient/model/APIAuditLog.h"
 #include <vector>
 #include "FastCommentsClient/model/APIStatus.h"
 
@@ -31,7 +32,7 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_TenantAuditLog_TenantAuditLogKeys_;
+class APIAuditLog;
 
 
 class  GetAuditLogsResponse
@@ -62,17 +63,17 @@ public:
     void unsetStatus();
     void setStatus(const std::shared_ptr<APIStatus>& value);
 
-    std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> getAuditLogs() const;
+    std::vector<std::shared_ptr<APIAuditLog>> getAuditLogs() const;
     bool auditLogsIsSet() const;
     void unsetAuditLogs();
-    void setAuditLogs(const std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>>& value);
+    void setAuditLogs(const std::vector<std::shared_ptr<APIAuditLog>>& value);
 
 
 protected:
     std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
 
-    std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> m_AuditLogs;
+    std::vector<std::shared_ptr<APIAuditLog>> m_AuditLogs;
     bool m_AuditLogsIsSet;
 
 };

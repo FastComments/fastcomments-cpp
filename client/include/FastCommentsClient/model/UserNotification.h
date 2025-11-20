@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_UserNotification_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -185,11 +186,9 @@ protected:
     utility::string_t m_TenantId;
     bool m_TenantIdIsSet;
 
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
+    boost::optional<utility::string_t> m_UserId;
 
-    utility::string_t m_AnonUserId;
-    bool m_AnonUserIdIsSet;
+    boost::optional<utility::string_t> m_AnonUserId;
 
     utility::string_t m_UrlId;
     bool m_UrlIdIsSet;
@@ -197,8 +196,7 @@ protected:
     utility::string_t m_Url;
     bool m_UrlIsSet;
 
-    utility::string_t m_PageTitle;
-    bool m_PageTitleIsSet;
+    boost::optional<utility::string_t> m_PageTitle;
 
     std::shared_ptr<NotificationObjectType> m_RelatedObjectType;
     bool m_RelatedObjectTypeIsSet;
@@ -221,20 +219,15 @@ protected:
     std::shared_ptr<NotificationType> m_Type;
     bool m_TypeIsSet;
 
-    utility::string_t m_FromCommentId;
-    bool m_FromCommentIdIsSet;
+    boost::optional<utility::string_t> m_FromCommentId;
 
-    utility::string_t m_FromVoteId;
-    bool m_FromVoteIdIsSet;
+    boost::optional<utility::string_t> m_FromVoteId;
 
-    utility::string_t m_FromUserName;
-    bool m_FromUserNameIsSet;
+    boost::optional<utility::string_t> m_FromUserName;
 
-    utility::string_t m_FromUserId;
-    bool m_FromUserIdIsSet;
+    boost::optional<utility::string_t> m_FromUserId;
 
-    utility::string_t m_FromUserAvatarSrc;
-    bool m_FromUserAvatarSrcIsSet;
+    boost::optional<utility::string_t> m_FromUserAvatarSrc;
 
     bool m_OptedOut;
     bool m_OptedOutIsSet;

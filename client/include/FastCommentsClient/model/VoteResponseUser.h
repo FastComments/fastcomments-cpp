@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_VoteResponseUser_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_VoteResponseUser_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -60,8 +61,7 @@ public:
 
 
 protected:
-    utility::string_t m_SessionId;
-    bool m_SessionIdIsSet;
+    boost::optional<utility::string_t> m_SessionId;
 
 };
 

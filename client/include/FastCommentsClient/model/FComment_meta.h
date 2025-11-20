@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_FComment_meta_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_FComment_meta_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 

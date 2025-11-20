@@ -18,24 +18,25 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_APIComment_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_APIComment_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
 #include "FastCommentsClient/model/CommentUserBadgeInfo.h"
+#include "FastCommentsClient/model/FComment_meta.h"
 #include "FastCommentsClient/model/CommentUserHashTagInfo.h"
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/model/CommentUserMentionInfo.h"
 #include <vector>
-#include "FastCommentsClient/model/Pick_FComment_APICommentFieldsKeys__meta.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-class CommentUserMentionInfo;
-class CommentUserHashTagInfo;
 class CommentUserBadgeInfo;
+class CommentUserHashTagInfo;
+class CommentUserMentionInfo;
 
 
 class  APIComment
@@ -61,65 +62,35 @@ public:
     /// APIComment members
 
 
-    double getDate() const;
-    bool dateIsSet() const;
-    void unsetdate();
-    void setDate(double value);
-
     utility::string_t getId() const;
     bool idIsSet() const;
     void unset_id();
     void setId(const utility::string_t& value);
 
-    utility::string_t getTenantId() const;
-    bool tenantIdIsSet() const;
-    void unsetTenantId();
-    void setTenantId(const utility::string_t& value);
-
-    utility::string_t getUrlId() const;
-    bool urlIdIsSet() const;
-    void unsetUrlId();
-    void setUrlId(const utility::string_t& value);
-
-    utility::string_t getUrlIdRaw() const;
-    bool urlIdRawIsSet() const;
-    void unsetUrlIdRaw();
-    void setUrlIdRaw(const utility::string_t& value);
-
-    utility::string_t getUrl() const;
-    bool urlIsSet() const;
-    void unsetUrl();
-    void setUrl(const utility::string_t& value);
-
-    utility::string_t getPageTitle() const;
-    bool pageTitleIsSet() const;
-    void unsetPageTitle();
-    void setPageTitle(const utility::string_t& value);
-
-    utility::string_t getUserId() const;
-    bool userIdIsSet() const;
-    void unsetUserId();
-    void setUserId(const utility::string_t& value);
+    bool isAiDeterminedSpam() const;
+    bool aiDeterminedSpamIsSet() const;
+    void unsetAiDeterminedSpam();
+    void setAiDeterminedSpam(bool value);
 
     utility::string_t getAnonUserId() const;
     bool anonUserIdIsSet() const;
     void unsetAnonUserId();
     void setAnonUserId(const utility::string_t& value);
 
-    utility::string_t getCommenterEmail() const;
-    bool commenterEmailIsSet() const;
-    void unsetCommenterEmail();
-    void setCommenterEmail(const utility::string_t& value);
+    bool isApproved() const;
+    bool approvedIsSet() const;
+    void unsetApproved();
+    void setApproved(bool value);
 
-    utility::string_t getCommenterName() const;
-    bool commenterNameIsSet() const;
-    void unsetCommenterName();
-    void setCommenterName(const utility::string_t& value);
+    utility::string_t getAvatarSrc() const;
+    bool avatarSrcIsSet() const;
+    void unsetAvatarSrc();
+    void setAvatarSrc(const utility::string_t& value);
 
-    utility::string_t getCommenterLink() const;
-    bool commenterLinkIsSet() const;
-    void unsetCommenterLink();
-    void setCommenterLink(const utility::string_t& value);
+    std::vector<std::shared_ptr<CommentUserBadgeInfo>> getBadges() const;
+    bool badgesIsSet() const;
+    void unsetBadges();
+    void setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value);
 
     utility::string_t getComment() const;
     bool commentIsSet() const;
@@ -131,65 +102,35 @@ public:
     void unsetCommentHTML();
     void setCommentHTML(const utility::string_t& value);
 
-    utility::string_t getParentId() const;
-    bool parentIdIsSet() const;
-    void unsetParentId();
-    void setParentId(const utility::string_t& value);
+    utility::string_t getCommenterEmail() const;
+    bool commenterEmailIsSet() const;
+    void unsetCommenterEmail();
+    void setCommenterEmail(const utility::string_t& value);
 
-    utility::string_t getLocalDateString() const;
-    bool localDateStringIsSet() const;
-    void unsetLocalDateString();
-    void setLocalDateString(const utility::string_t& value);
+    utility::string_t getCommenterLink() const;
+    bool commenterLinkIsSet() const;
+    void unsetCommenterLink();
+    void setCommenterLink(const utility::string_t& value);
 
-    int32_t getLocalDateHours() const;
-    bool localDateHoursIsSet() const;
-    void unsetLocalDateHours();
-    void setLocalDateHours(int32_t value);
+    utility::string_t getCommenterName() const;
+    bool commenterNameIsSet() const;
+    void unsetCommenterName();
+    void setCommenterName(const utility::string_t& value);
 
-    int32_t getVotes() const;
-    bool votesIsSet() const;
-    void unsetVotes();
-    void setVotes(int32_t value);
+    double getDate() const;
+    bool dateIsSet() const;
+    void unsetdate();
+    void setDate(double value);
 
-    int32_t getVotesUp() const;
-    bool votesUpIsSet() const;
-    void unsetVotesUp();
-    void setVotesUp(int32_t value);
+    utility::string_t getDisplayLabel() const;
+    bool displayLabelIsSet() const;
+    void unsetDisplayLabel();
+    void setDisplayLabel(const utility::string_t& value);
 
-    int32_t getVotesDown() const;
-    bool votesDownIsSet() const;
-    void unsetVotesDown();
-    void setVotesDown(int32_t value);
-
-    utility::datetime getExpireAt() const;
-    bool expireAtIsSet() const;
-    void unsetExpireAt();
-    void setExpireAt(const utility::datetime& value);
-
-    bool isVerified() const;
-    bool verifiedIsSet() const;
-    void unsetVerified();
-    void setVerified(bool value);
-
-    utility::datetime getVerifiedDate() const;
-    bool verifiedDateIsSet() const;
-    void unsetVerifiedDate();
-    void setVerifiedDate(const utility::datetime& value);
-
-    bool isNotificationSentForParent() const;
-    bool notificationSentForParentIsSet() const;
-    void unsetNotificationSentForParent();
-    void setNotificationSentForParent(bool value);
-
-    bool isNotificationSentForParentTenant() const;
-    bool notificationSentForParentTenantIsSet() const;
-    void unsetNotificationSentForParentTenant();
-    void setNotificationSentForParentTenant(bool value);
-
-    bool isReviewed() const;
-    bool reviewedIsSet() const;
-    void unsetReviewed();
-    void setReviewed(bool value);
+    utility::string_t getDomain() const;
+    bool domainIsSet() const;
+    void unsetDomain();
+    void setDomain(const utility::string_t& value);
 
     utility::string_t getExternalId() const;
     bool externalIdIsSet() const;
@@ -201,20 +142,30 @@ public:
     void unsetExternalParentId();
     void setExternalParentId(const utility::string_t& value);
 
-    utility::string_t getAvatarSrc() const;
-    bool avatarSrcIsSet() const;
-    void unsetAvatarSrc();
-    void setAvatarSrc(const utility::string_t& value);
+    utility::datetime getExpireAt() const;
+    bool expireAtIsSet() const;
+    void unsetExpireAt();
+    void setExpireAt(const utility::datetime& value);
 
-    bool isIsSpam() const;
-    bool isSpamIsSet() const;
-    void unsetIsSpam();
-    void setIsSpam(bool value);
+    std::vector<utility::string_t> getFeedbackIds() const;
+    bool feedbackIdsIsSet() const;
+    void unsetFeedbackIds();
+    void setFeedbackIds(const std::vector<utility::string_t>& value);
 
-    bool isAiDeterminedSpam() const;
-    bool aiDeterminedSpamIsSet() const;
-    void unsetAiDeterminedSpam();
-    void setAiDeterminedSpam(bool value);
+    int32_t getFlagCount() const;
+    bool flagCountIsSet() const;
+    void unsetFlagCount();
+    void setFlagCount(int32_t value);
+
+    int32_t getFromProductId() const;
+    bool fromProductIdIsSet() const;
+    void unsetFromProductId();
+    void setFromProductId(int32_t value);
+
+    bool isHasCode() const;
+    bool hasCodeIsSet() const;
+    void unsetHasCode();
+    void setHasCode(bool value);
 
     bool isHasImages() const;
     bool hasImagesIsSet() const;
@@ -226,30 +177,10 @@ public:
     void unsetHasLinks();
     void setHasLinks(bool value);
 
-    bool isHasCode() const;
-    bool hasCodeIsSet() const;
-    void unsetHasCode();
-    void setHasCode(bool value);
-
-    bool isApproved() const;
-    bool approvedIsSet() const;
-    void unsetApproved();
-    void setApproved(bool value);
-
-    utility::string_t getLocale() const;
-    bool localeIsSet() const;
-    void unsetLocale();
-    void setLocale(const utility::string_t& value);
-
-    bool isIsDeleted() const;
-    bool isDeletedIsSet() const;
-    void unsetIsDeleted();
-    void setIsDeleted(bool value);
-
-    bool isIsDeletedUser() const;
-    bool isDeletedUserIsSet() const;
-    void unsetIsDeletedUser();
-    void setIsDeletedUser(bool value);
+    std::vector<std::shared_ptr<CommentUserHashTagInfo>> getHashTags() const;
+    bool hashTagsIsSet() const;
+    void unsetHashTags();
+    void setHashTags(const std::vector<std::shared_ptr<CommentUserHashTagInfo>>& value);
 
     bool isIsByAdmin() const;
     bool isByAdminIsSet() const;
@@ -261,6 +192,16 @@ public:
     void unsetIsByModerator();
     void setIsByModerator(bool value);
 
+    bool isIsDeleted() const;
+    bool isDeletedIsSet() const;
+    void unsetIsDeleted();
+    void setIsDeleted(bool value);
+
+    bool isIsDeletedUser() const;
+    bool isDeletedUserIsSet() const;
+    void unsetIsDeletedUser();
+    void setIsDeletedUser(bool value);
+
     bool isIsPinned() const;
     bool isPinnedIsSet() const;
     void unsetIsPinned();
@@ -271,98 +212,137 @@ public:
     void unsetIsLocked();
     void setIsLocked(bool value);
 
-    int32_t getFlagCount() const;
-    bool flagCountIsSet() const;
-    void unsetFlagCount();
-    void setFlagCount(int32_t value);
+    bool isIsSpam() const;
+    bool isSpamIsSet() const;
+    void unsetIsSpam();
+    void setIsSpam(bool value);
 
-    double getRating() const;
-    bool ratingIsSet() const;
-    void unsetRating();
-    void setRating(double value);
+    int32_t getLocalDateHours() const;
+    bool localDateHoursIsSet() const;
+    void unsetLocalDateHours();
+    void setLocalDateHours(int32_t value);
 
-    utility::string_t getDisplayLabel() const;
-    bool displayLabelIsSet() const;
-    void unsetDisplayLabel();
-    void setDisplayLabel(const utility::string_t& value);
+    utility::string_t getLocalDateString() const;
+    bool localDateStringIsSet() const;
+    void unsetLocalDateString();
+    void setLocalDateString(const utility::string_t& value);
 
-    int32_t getFromProductId() const;
-    bool fromProductIdIsSet() const;
-    void unsetFromProductId();
-    void setFromProductId(int32_t value);
-
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta> getMeta() const;
-    bool metaIsSet() const;
-    void unsetMeta();
-    void setMeta(const std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta>& value);
+    utility::string_t getLocale() const;
+    bool localeIsSet() const;
+    void unsetLocale();
+    void setLocale(const utility::string_t& value);
 
     std::vector<std::shared_ptr<CommentUserMentionInfo>> getMentions() const;
     bool mentionsIsSet() const;
     void unsetMentions();
     void setMentions(const std::vector<std::shared_ptr<CommentUserMentionInfo>>& value);
 
-    std::vector<std::shared_ptr<CommentUserHashTagInfo>> getHashTags() const;
-    bool hashTagsIsSet() const;
-    void unsetHashTags();
-    void setHashTags(const std::vector<std::shared_ptr<CommentUserHashTagInfo>>& value);
-
-    std::vector<std::shared_ptr<CommentUserBadgeInfo>> getBadges() const;
-    bool badgesIsSet() const;
-    void unsetBadges();
-    void setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value);
-
-    utility::string_t getDomain() const;
-    bool domainIsSet() const;
-    void unsetDomain();
-    void setDomain(const utility::string_t& value);
+    std::shared_ptr<FComment_meta> getMeta() const;
+    bool metaIsSet() const;
+    void unsetMeta();
+    void setMeta(const std::shared_ptr<FComment_meta>& value);
 
     std::vector<utility::string_t> getModerationGroupIds() const;
     bool moderationGroupIdsIsSet() const;
     void unsetModerationGroupIds();
     void setModerationGroupIds(const std::vector<utility::string_t>& value);
 
-    std::vector<utility::string_t> getFeedbackIds() const;
-    bool feedbackIdsIsSet() const;
-    void unsetFeedbackIds();
-    void setFeedbackIds(const std::vector<utility::string_t>& value);
+    bool isNotificationSentForParent() const;
+    bool notificationSentForParentIsSet() const;
+    void unsetNotificationSentForParent();
+    void setNotificationSentForParent(bool value);
+
+    bool isNotificationSentForParentTenant() const;
+    bool notificationSentForParentTenantIsSet() const;
+    void unsetNotificationSentForParentTenant();
+    void setNotificationSentForParentTenant(bool value);
+
+    utility::string_t getPageTitle() const;
+    bool pageTitleIsSet() const;
+    void unsetPageTitle();
+    void setPageTitle(const utility::string_t& value);
+
+    utility::string_t getParentId() const;
+    bool parentIdIsSet() const;
+    void unsetParentId();
+    void setParentId(const utility::string_t& value);
+
+    double getRating() const;
+    bool ratingIsSet() const;
+    void unsetRating();
+    void setRating(double value);
+
+    bool isReviewed() const;
+    bool reviewedIsSet() const;
+    void unsetReviewed();
+    void setReviewed(bool value);
+
+    utility::string_t getTenantId() const;
+    bool tenantIdIsSet() const;
+    void unsetTenantId();
+    void setTenantId(const utility::string_t& value);
+
+    utility::string_t getUrl() const;
+    bool urlIsSet() const;
+    void unsetUrl();
+    void setUrl(const utility::string_t& value);
+
+    utility::string_t getUrlId() const;
+    bool urlIdIsSet() const;
+    void unsetUrlId();
+    void setUrlId(const utility::string_t& value);
+
+    utility::string_t getUrlIdRaw() const;
+    bool urlIdRawIsSet() const;
+    void unsetUrlIdRaw();
+    void setUrlIdRaw(const utility::string_t& value);
+
+    utility::string_t getUserId() const;
+    bool userIdIsSet() const;
+    void unsetUserId();
+    void setUserId(const utility::string_t& value);
+
+    bool isVerified() const;
+    bool verifiedIsSet() const;
+    void unsetVerified();
+    void setVerified(bool value);
+
+    utility::datetime getVerifiedDate() const;
+    bool verifiedDateIsSet() const;
+    void unsetVerifiedDate();
+    void setVerifiedDate(const utility::datetime& value);
+
+    int32_t getVotes() const;
+    bool votesIsSet() const;
+    void unsetVotes();
+    void setVotes(int32_t value);
+
+    int32_t getVotesDown() const;
+    bool votesDownIsSet() const;
+    void unsetVotesDown();
+    void setVotesDown(int32_t value);
+
+    int32_t getVotesUp() const;
+    bool votesUpIsSet() const;
+    void unsetVotesUp();
+    void setVotesUp(int32_t value);
 
 
 protected:
-    double m_date;
-    bool m_dateIsSet;
-
     utility::string_t m__id;
     bool m__idIsSet;
 
-    utility::string_t m_TenantId;
-    bool m_TenantIdIsSet;
+    bool m_AiDeterminedSpam;
+    bool m_AiDeterminedSpamIsSet;
 
-    utility::string_t m_UrlId;
-    bool m_UrlIdIsSet;
+    boost::optional<utility::string_t> m_AnonUserId;
 
-    utility::string_t m_UrlIdRaw;
-    bool m_UrlIdRawIsSet;
+    bool m_Approved;
+    bool m_ApprovedIsSet;
 
-    utility::string_t m_Url;
-    bool m_UrlIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
-    utility::string_t m_PageTitle;
-    bool m_PageTitleIsSet;
-
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
-
-    utility::string_t m_AnonUserId;
-    bool m_AnonUserIdIsSet;
-
-    utility::string_t m_CommenterEmail;
-    bool m_CommenterEmailIsSet;
-
-    utility::string_t m_CommenterName;
-    bool m_CommenterNameIsSet;
-
-    utility::string_t m_CommenterLink;
-    bool m_CommenterLinkIsSet;
+    boost::optional<std::vector<std::shared_ptr<CommentUserBadgeInfo>>> m_Badges;
 
     utility::string_t m_Comment;
     bool m_CommentIsSet;
@@ -370,56 +350,36 @@ protected:
     utility::string_t m_CommentHTML;
     bool m_CommentHTMLIsSet;
 
-    utility::string_t m_ParentId;
-    bool m_ParentIdIsSet;
+    boost::optional<utility::string_t> m_CommenterEmail;
 
-    utility::string_t m_LocalDateString;
-    bool m_LocalDateStringIsSet;
+    boost::optional<utility::string_t> m_CommenterLink;
 
-    int32_t m_LocalDateHours;
-    bool m_LocalDateHoursIsSet;
+    utility::string_t m_CommenterName;
+    bool m_CommenterNameIsSet;
 
-    int32_t m_Votes;
-    bool m_VotesIsSet;
+    boost::optional<double> m_date;
 
-    int32_t m_VotesUp;
-    bool m_VotesUpIsSet;
+    boost::optional<utility::string_t> m_DisplayLabel;
 
-    int32_t m_VotesDown;
-    bool m_VotesDownIsSet;
-
-    utility::datetime m_ExpireAt;
-    bool m_ExpireAtIsSet;
-
-    bool m_Verified;
-    bool m_VerifiedIsSet;
-
-    utility::datetime m_VerifiedDate;
-    bool m_VerifiedDateIsSet;
-
-    bool m_NotificationSentForParent;
-    bool m_NotificationSentForParentIsSet;
-
-    bool m_NotificationSentForParentTenant;
-    bool m_NotificationSentForParentTenantIsSet;
-
-    bool m_Reviewed;
-    bool m_ReviewedIsSet;
+    boost::optional<utility::string_t> m_Domain;
 
     utility::string_t m_ExternalId;
     bool m_ExternalIdIsSet;
 
-    utility::string_t m_ExternalParentId;
-    bool m_ExternalParentIdIsSet;
+    boost::optional<utility::string_t> m_ExternalParentId;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
+    boost::optional<utility::datetime> m_ExpireAt;
 
-    bool m_IsSpam;
-    bool m_IsSpamIsSet;
+    std::vector<utility::string_t> m_FeedbackIds;
+    bool m_FeedbackIdsIsSet;
 
-    bool m_AiDeterminedSpam;
-    bool m_AiDeterminedSpamIsSet;
+    boost::optional<int32_t> m_FlagCount;
+
+    int32_t m_FromProductId;
+    bool m_FromProductIdIsSet;
+
+    bool m_HasCode;
+    bool m_HasCodeIsSet;
 
     bool m_HasImages;
     bool m_HasImagesIsSet;
@@ -427,20 +387,8 @@ protected:
     bool m_HasLinks;
     bool m_HasLinksIsSet;
 
-    bool m_HasCode;
-    bool m_HasCodeIsSet;
-
-    bool m_Approved;
-    bool m_ApprovedIsSet;
-
-    utility::string_t m_Locale;
-    bool m_LocaleIsSet;
-
-    bool m_IsDeleted;
-    bool m_IsDeletedIsSet;
-
-    bool m_IsDeletedUser;
-    bool m_IsDeletedUserIsSet;
+    std::vector<std::shared_ptr<CommentUserHashTagInfo>> m_HashTags;
+    bool m_HashTagsIsSet;
 
     bool m_IsByAdmin;
     bool m_IsByAdminIsSet;
@@ -448,44 +396,71 @@ protected:
     bool m_IsByModerator;
     bool m_IsByModeratorIsSet;
 
-    bool m_IsPinned;
-    bool m_IsPinnedIsSet;
+    bool m_IsDeleted;
+    bool m_IsDeletedIsSet;
 
-    bool m_IsLocked;
-    bool m_IsLockedIsSet;
+    bool m_IsDeletedUser;
+    bool m_IsDeletedUserIsSet;
 
-    int32_t m_FlagCount;
-    bool m_FlagCountIsSet;
+    boost::optional<bool> m_IsPinned;
 
-    double m_Rating;
-    bool m_RatingIsSet;
+    boost::optional<bool> m_IsLocked;
 
-    utility::string_t m_DisplayLabel;
-    bool m_DisplayLabelIsSet;
+    bool m_IsSpam;
+    bool m_IsSpamIsSet;
 
-    int32_t m_FromProductId;
-    bool m_FromProductIdIsSet;
+    boost::optional<int32_t> m_LocalDateHours;
 
-    std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta> m_Meta;
-    bool m_MetaIsSet;
+    boost::optional<utility::string_t> m_LocalDateString;
+
+    boost::optional<utility::string_t> m_Locale;
 
     std::vector<std::shared_ptr<CommentUserMentionInfo>> m_Mentions;
     bool m_MentionsIsSet;
 
-    std::vector<std::shared_ptr<CommentUserHashTagInfo>> m_HashTags;
-    bool m_HashTagsIsSet;
+    boost::optional<std::shared_ptr<FComment_meta>> m_Meta;
 
-    std::vector<std::shared_ptr<CommentUserBadgeInfo>> m_Badges;
-    bool m_BadgesIsSet;
+    boost::optional<std::vector<utility::string_t>> m_ModerationGroupIds;
 
-    utility::string_t m_Domain;
-    bool m_DomainIsSet;
+    bool m_NotificationSentForParent;
+    bool m_NotificationSentForParentIsSet;
 
-    std::vector<utility::string_t> m_ModerationGroupIds;
-    bool m_ModerationGroupIdsIsSet;
+    bool m_NotificationSentForParentTenant;
+    bool m_NotificationSentForParentTenantIsSet;
 
-    std::vector<utility::string_t> m_FeedbackIds;
-    bool m_FeedbackIdsIsSet;
+    boost::optional<utility::string_t> m_PageTitle;
+
+    boost::optional<utility::string_t> m_ParentId;
+
+    boost::optional<double> m_Rating;
+
+    bool m_Reviewed;
+    bool m_ReviewedIsSet;
+
+    utility::string_t m_TenantId;
+    bool m_TenantIdIsSet;
+
+    utility::string_t m_Url;
+    bool m_UrlIsSet;
+
+    utility::string_t m_UrlId;
+    bool m_UrlIdIsSet;
+
+    utility::string_t m_UrlIdRaw;
+    bool m_UrlIdRawIsSet;
+
+    boost::optional<utility::string_t> m_UserId;
+
+    bool m_Verified;
+    bool m_VerifiedIsSet;
+
+    boost::optional<utility::datetime> m_VerifiedDate;
+
+    boost::optional<int32_t> m_Votes;
+
+    boost::optional<int32_t> m_VotesDown;
+
+    boost::optional<int32_t> m_VotesUp;
 
 };
 

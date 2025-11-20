@@ -41,17 +41,17 @@ web::json::value FeedPostMediaItemAsset::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_wIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("w"))] = ModelBase::toJson(m_w);
     }
     if(m_hIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("h"))] = ModelBase::toJson(m_h);
     }
     if(m_SrcIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("src"))] = ModelBase::toJson(m_Src);
     }

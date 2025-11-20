@@ -19,12 +19,13 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_DeleteCommentPublic_200_response_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
+#include "FastCommentsClient/model/DeletedCommentResultComment.h"
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/PublicAPIDeleteCommentResponse.h"
 #include "FastCommentsClient/model/APIStatus.h"
@@ -34,7 +35,7 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_;
+class DeletedCommentResultComment;
 class CustomConfigParameters;
 
 
@@ -61,10 +62,10 @@ public:
     /// DeleteCommentPublic_200_response members
 
 
-    std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> getComment() const;
+    std::shared_ptr<DeletedCommentResultComment> getComment() const;
     bool commentIsSet() const;
     void unsetComment();
-    void setComment(const std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_>& value);
+    void setComment(const std::shared_ptr<DeletedCommentResultComment>& value);
 
     bool isHardRemoved() const;
     bool hardRemovedIsSet() const;
@@ -113,7 +114,7 @@ public:
 
 
 protected:
-    std::shared_ptr<Pick_FComment_isDeleted_or_commentHTML_or_commenterName_or_userId_> m_Comment;
+    std::shared_ptr<DeletedCommentResultComment> m_Comment;
     bool m_CommentIsSet;
 
     bool m_HardRemoved;

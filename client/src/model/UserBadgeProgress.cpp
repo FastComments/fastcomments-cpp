@@ -50,42 +50,42 @@ web::json::value UserBadgeProgress::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_FirstCommentIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("firstCommentId"))] = ModelBase::toJson(m_FirstCommentId);
     }
     if(m_FirstCommentDateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("firstCommentDate"))] = ModelBase::toJson(m_FirstCommentDate);
     }
     if(m_AutoTrustFactorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("autoTrustFactor"))] = ModelBase::toJson(m_AutoTrustFactor);
     }
     if(m_ManualTrustFactorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("manualTrustFactor"))] = ModelBase::toJson(m_ManualTrustFactor);
     }
     if(m_ProgressIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("progress"))] = ModelBase::toJson(m_Progress);
     }

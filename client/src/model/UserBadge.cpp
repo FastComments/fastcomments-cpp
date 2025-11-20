@@ -38,16 +38,6 @@ UserBadge::UserBadge()
     m_DescriptionIsSet = false;
     m_DisplayLabel = utility::conversions::to_string_t("");
     m_DisplayLabelIsSet = false;
-    m_DisplaySrc = utility::conversions::to_string_t("");
-    m_DisplaySrcIsSet = false;
-    m_BackgroundColor = utility::conversions::to_string_t("");
-    m_BackgroundColorIsSet = false;
-    m_BorderColor = utility::conversions::to_string_t("");
-    m_BorderColorIsSet = false;
-    m_TextColor = utility::conversions::to_string_t("");
-    m_TextColorIsSet = false;
-    m_CssClass = utility::conversions::to_string_t("");
-    m_CssClassIsSet = false;
     m_VeteranUserThresholdMillis = 0L;
     m_VeteranUserThresholdMillisIsSet = false;
     m_DisplayedOnComments = false;
@@ -71,92 +61,92 @@ web::json::value UserBadge::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_BadgeIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badgeId"))] = ModelBase::toJson(m_BadgeId);
     }
     if(m_FromTenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromTenantId"))] = ModelBase::toJson(m_FromTenantId);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_TypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(m_Type);
     }
     if(m_ThresholdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("threshold"))] = ModelBase::toJson(m_Threshold);
     }
     if(m_DescriptionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("description"))] = ModelBase::toJson(m_Description);
     }
     if(m_DisplayLabelIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
     }
-    if(m_DisplaySrcIsSet)
-    {   
+    if(m_DisplaySrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("displaySrc"))] = ModelBase::toJson(m_DisplaySrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("displaySrc"))] = ModelBase::toJson(m_DisplaySrc.get());
     }
-    if(m_BackgroundColorIsSet)
-    {   
+    if(m_BackgroundColor.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("backgroundColor"))] = ModelBase::toJson(m_BackgroundColor);
+        val[utility::conversions::to_string_t(_XPLATSTR("backgroundColor"))] = ModelBase::toJson(m_BackgroundColor.get());
     }
-    if(m_BorderColorIsSet)
-    {   
+    if(m_BorderColor.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("borderColor"))] = ModelBase::toJson(m_BorderColor);
+        val[utility::conversions::to_string_t(_XPLATSTR("borderColor"))] = ModelBase::toJson(m_BorderColor.get());
     }
-    if(m_TextColorIsSet)
-    {   
+    if(m_TextColor.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("textColor"))] = ModelBase::toJson(m_TextColor);
+        val[utility::conversions::to_string_t(_XPLATSTR("textColor"))] = ModelBase::toJson(m_TextColor.get());
     }
-    if(m_CssClassIsSet)
-    {   
+    if(m_CssClass.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("cssClass"))] = ModelBase::toJson(m_CssClass);
+        val[utility::conversions::to_string_t(_XPLATSTR("cssClass"))] = ModelBase::toJson(m_CssClass.get());
     }
     if(m_VeteranUserThresholdMillisIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("veteranUserThresholdMillis"))] = ModelBase::toJson(m_VeteranUserThresholdMillis);
     }
     if(m_DisplayedOnCommentsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayedOnComments"))] = ModelBase::toJson(m_DisplayedOnComments);
     }
     if(m_ReceivedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("receivedAt"))] = ModelBase::toJson(m_ReceivedAt);
     }
     if(m_OrderIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("order"))] = ModelBase::toJson(m_Order);
     }
@@ -411,25 +401,25 @@ void UserBadge::toMultipart(std::shared_ptr<MultipartFormData> multipart, const 
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel));
     }
-    if(m_DisplaySrcIsSet)
+    if(m_DisplaySrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displaySrc")), m_DisplaySrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displaySrc")), m_DisplaySrc.get()));
     }
-    if(m_BackgroundColorIsSet)
+    if(m_BackgroundColor.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("backgroundColor")), m_BackgroundColor));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("backgroundColor")), m_BackgroundColor.get()));
     }
-    if(m_BorderColorIsSet)
+    if(m_BorderColor.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("borderColor")), m_BorderColor));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("borderColor")), m_BorderColor.get()));
     }
-    if(m_TextColorIsSet)
+    if(m_TextColor.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("textColor")), m_TextColor));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("textColor")), m_TextColor.get()));
     }
-    if(m_CssClassIsSet)
+    if(m_CssClass.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("cssClass")), m_CssClass));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("cssClass")), m_CssClass.get()));
     }
     if(m_VeteranUserThresholdMillisIsSet)
     {
@@ -759,108 +749,103 @@ void UserBadge::unsetDisplayLabel()
 }
 utility::string_t UserBadge::getDisplaySrc() const
 {
-    return m_DisplaySrc;
+    return m_DisplaySrc.get();
 }
 
 
 void UserBadge::setDisplaySrc(const utility::string_t& value)
 {
     m_DisplaySrc = value;
-    m_DisplaySrcIsSet = true;
 }
 
 bool UserBadge::displaySrcIsSet() const
 {
-    return m_DisplaySrcIsSet;
+    return m_DisplaySrc.has_value();
 }
 
 void UserBadge::unsetDisplaySrc()
 {
-    m_DisplaySrcIsSet = false;
+    m_DisplaySrc.reset();
 }
 utility::string_t UserBadge::getBackgroundColor() const
 {
-    return m_BackgroundColor;
+    return m_BackgroundColor.get();
 }
 
 
 void UserBadge::setBackgroundColor(const utility::string_t& value)
 {
     m_BackgroundColor = value;
-    m_BackgroundColorIsSet = true;
 }
 
 bool UserBadge::backgroundColorIsSet() const
 {
-    return m_BackgroundColorIsSet;
+    return m_BackgroundColor.has_value();
 }
 
 void UserBadge::unsetBackgroundColor()
 {
-    m_BackgroundColorIsSet = false;
+    m_BackgroundColor.reset();
 }
 utility::string_t UserBadge::getBorderColor() const
 {
-    return m_BorderColor;
+    return m_BorderColor.get();
 }
 
 
 void UserBadge::setBorderColor(const utility::string_t& value)
 {
     m_BorderColor = value;
-    m_BorderColorIsSet = true;
 }
 
 bool UserBadge::borderColorIsSet() const
 {
-    return m_BorderColorIsSet;
+    return m_BorderColor.has_value();
 }
 
 void UserBadge::unsetBorderColor()
 {
-    m_BorderColorIsSet = false;
+    m_BorderColor.reset();
 }
 utility::string_t UserBadge::getTextColor() const
 {
-    return m_TextColor;
+    return m_TextColor.get();
 }
 
 
 void UserBadge::setTextColor(const utility::string_t& value)
 {
     m_TextColor = value;
-    m_TextColorIsSet = true;
 }
 
 bool UserBadge::textColorIsSet() const
 {
-    return m_TextColorIsSet;
+    return m_TextColor.has_value();
 }
 
 void UserBadge::unsetTextColor()
 {
-    m_TextColorIsSet = false;
+    m_TextColor.reset();
 }
 utility::string_t UserBadge::getCssClass() const
 {
-    return m_CssClass;
+    return m_CssClass.get();
 }
 
 
 void UserBadge::setCssClass(const utility::string_t& value)
 {
     m_CssClass = value;
-    m_CssClassIsSet = true;
 }
 
 bool UserBadge::cssClassIsSet() const
 {
-    return m_CssClassIsSet;
+    return m_CssClass.has_value();
 }
 
 void UserBadge::unsetCssClass()
 {
-    m_CssClassIsSet = false;
+    m_CssClass.reset();
 }
 int64_t UserBadge::getVeteranUserThresholdMillis() const
 {

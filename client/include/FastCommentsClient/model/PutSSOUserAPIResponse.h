@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PutSSOUserAPIResponse_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PutSSOUserAPIResponse_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -83,8 +84,7 @@ protected:
     utility::string_t m_Code;
     bool m_CodeIsSet;
 
-    std::shared_ptr<APISSOUser> m_User;
-    bool m_UserIsSet;
+    boost::optional<std::shared_ptr<APISSOUser>> m_User;
 
     utility::string_t m_Status;
     bool m_StatusIsSet;

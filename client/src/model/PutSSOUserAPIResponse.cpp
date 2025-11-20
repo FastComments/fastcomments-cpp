@@ -24,7 +24,6 @@ PutSSOUserAPIResponse::PutSSOUserAPIResponse()
     m_ReasonIsSet = false;
     m_Code = utility::conversions::to_string_t("");
     m_CodeIsSet = false;
-    m_UserIsSet = false;
     m_Status = utility::conversions::to_string_t("");
     m_StatusIsSet = false;
 }
@@ -42,22 +41,22 @@ web::json::value PutSSOUserAPIResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
-    if(m_UserIsSet)
-    {   
+    if(m_User.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
+        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User.get());
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
@@ -130,9 +129,9 @@ void PutSSOUserAPIResponse::toMultipart(std::shared_ptr<MultipartFormData> multi
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
     }
-    if(m_UserIsSet)
+    if(m_User.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User.get()));
     }
     if(m_StatusIsSet)
     {
@@ -221,24 +220,23 @@ void PutSSOUserAPIResponse::unsetCode()
 }
 std::shared_ptr<APISSOUser> PutSSOUserAPIResponse::getUser() const
 {
-    return m_User;
+    return m_User.get();
 }
 
 
 void PutSSOUserAPIResponse::setUser(const std::shared_ptr<APISSOUser>& value)
 {
     m_User = value;
-    m_UserIsSet = true;
 }
 
 bool PutSSOUserAPIResponse::userIsSet() const
 {
-    return m_UserIsSet;
+    return m_User.has_value();
 }
 
 void PutSSOUserAPIResponse::unsetUser()
 {
-    m_UserIsSet = false;
+    m_User.reset();
 }
 utility::string_t PutSSOUserAPIResponse::getStatus() const
 {

@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CommentLogData_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -341,23 +342,17 @@ protected:
     double m_NotificationCount;
     bool m_NotificationCountIsSet;
 
-    double m_VotesBefore;
-    bool m_VotesBeforeIsSet;
+    boost::optional<double> m_VotesBefore;
 
-    double m_VotesUpBefore;
-    bool m_VotesUpBeforeIsSet;
+    boost::optional<double> m_VotesUpBefore;
 
-    double m_VotesDownBefore;
-    bool m_VotesDownBeforeIsSet;
+    boost::optional<double> m_VotesDownBefore;
 
-    double m_VotesAfter;
-    bool m_VotesAfterIsSet;
+    boost::optional<double> m_VotesAfter;
 
-    double m_VotesUpAfter;
-    bool m_VotesUpAfterIsSet;
+    boost::optional<double> m_VotesUpAfter;
 
-    double m_VotesDownAfter;
-    bool m_VotesDownAfterIsSet;
+    boost::optional<double> m_VotesDownAfter;
 
     std::shared_ptr<RepeatCommentHandlingAction> m_RepeatAction;
     bool m_RepeatActionIsSet;
@@ -365,8 +360,7 @@ protected:
     std::shared_ptr<RepeatCommentCheckIgnoredReason> m_Reason;
     bool m_ReasonIsSet;
 
-    std::shared_ptr<AnyType> m_OtherData;
-    bool m_OtherDataIsSet;
+    boost::optional<std::shared_ptr<AnyType>> m_OtherData;
 
     bool m_SpamBefore;
     bool m_SpamBeforeIsSet;
@@ -395,14 +389,11 @@ protected:
     utility::string_t m_TextAfter;
     bool m_TextAfterIsSet;
 
-    utility::datetime m_ExpireBefore;
-    bool m_ExpireBeforeIsSet;
+    boost::optional<utility::datetime> m_ExpireBefore;
 
-    utility::datetime m_ExpireAfter;
-    bool m_ExpireAfterIsSet;
+    boost::optional<utility::datetime> m_ExpireAfter;
 
-    double m_FlagCountBefore;
-    bool m_FlagCountBeforeIsSet;
+    boost::optional<double> m_FlagCountBefore;
 
     double m_TrustFactorBefore;
     bool m_TrustFactorBeforeIsSet;

@@ -38,12 +38,12 @@ web::json::value QuestionDatum::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_vIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("v"))] = ModelBase::toJson(m_v);
     }
     if(m_TotalIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("total"))] = ModelBase::toJson(m_Total);
     }

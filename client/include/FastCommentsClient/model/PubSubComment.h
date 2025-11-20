@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PubSubComment_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PubSubComment_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -56,11 +57,6 @@ public:
     /// PubSubComment members
 
 
-    utility::string_t getDate() const;
-    bool dateIsSet() const;
-    void unsetdate();
-    void setDate(const utility::string_t& value);
-
     utility::string_t getId() const;
     bool idIsSet() const;
     void unset_id();
@@ -71,30 +67,15 @@ public:
     void unsetTenantId();
     void setTenantId(const utility::string_t& value);
 
-    utility::string_t getUrlId() const;
-    bool urlIdIsSet() const;
-    void unsetUrlId();
-    void setUrlId(const utility::string_t& value);
-
-    utility::string_t getUrl() const;
-    bool urlIsSet() const;
-    void unsetUrl();
-    void setUrl(const utility::string_t& value);
-
-    utility::string_t getPageTitle() const;
-    bool pageTitleIsSet() const;
-    void unsetPageTitle();
-    void setPageTitle(const utility::string_t& value);
-
     utility::string_t getUserId() const;
     bool userIdIsSet() const;
     void unsetUserId();
     void setUserId(const utility::string_t& value);
 
-    utility::string_t getAnonUserId() const;
-    bool anonUserIdIsSet() const;
-    void unsetAnonUserId();
-    void setAnonUserId(const utility::string_t& value);
+    utility::string_t getUrlId() const;
+    bool urlIdIsSet() const;
+    void unsetUrlId();
+    void setUrlId(const utility::string_t& value);
 
     utility::string_t getCommenterName() const;
     bool commenterNameIsSet() const;
@@ -106,15 +87,15 @@ public:
     void unsetCommenterLink();
     void setCommenterLink(const utility::string_t& value);
 
-    utility::string_t getComment() const;
-    bool commentIsSet() const;
-    void unsetComment();
-    void setComment(const utility::string_t& value);
-
     utility::string_t getCommentHTML() const;
     bool commentHTMLIsSet() const;
     void unsetCommentHTML();
     void setCommentHTML(const utility::string_t& value);
+
+    utility::string_t getComment() const;
+    bool commentIsSet() const;
+    void unsetComment();
+    void setComment(const utility::string_t& value);
 
     utility::string_t getParentId() const;
     bool parentIdIsSet() const;
@@ -136,30 +117,15 @@ public:
     void unsetVotesDown();
     void setVotesDown(int32_t value);
 
-    utility::datetime getExpireAt() const;
-    bool expireAtIsSet() const;
-    void unsetExpireAt();
-    void setExpireAt(const utility::datetime& value);
-
     bool isVerified() const;
     bool verifiedIsSet() const;
     void unsetVerified();
     void setVerified(bool value);
 
-    bool isReviewed() const;
-    bool reviewedIsSet() const;
-    void unsetReviewed();
-    void setReviewed(bool value);
-
     utility::string_t getAvatarSrc() const;
     bool avatarSrcIsSet() const;
     void unsetAvatarSrc();
     void setAvatarSrc(const utility::string_t& value);
-
-    bool isIsSpam() const;
-    bool isSpamIsSet() const;
-    void unsetIsSpam();
-    void setIsSpam(bool value);
 
     bool isHasImages() const;
     bool hasImagesIsSet() const;
@@ -170,36 +136,6 @@ public:
     bool hasLinksIsSet() const;
     void unsetHasLinks();
     void setHasLinks(bool value);
-
-    bool isHasCode() const;
-    bool hasCodeIsSet() const;
-    void unsetHasCode();
-    void setHasCode(bool value);
-
-    bool isApproved() const;
-    bool approvedIsSet() const;
-    void unsetApproved();
-    void setApproved(bool value);
-
-    utility::string_t getLocale() const;
-    bool localeIsSet() const;
-    void unsetLocale();
-    void setLocale(const utility::string_t& value);
-
-    bool isIsDeleted() const;
-    bool isDeletedIsSet() const;
-    void unsetIsDeleted();
-    void setIsDeleted(bool value);
-
-    bool isIsDeletedUser() const;
-    bool isDeletedUserIsSet() const;
-    void unsetIsDeletedUser();
-    void setIsDeletedUser(bool value);
-
-    bool isIsBannedUser() const;
-    bool isBannedUserIsSet() const;
-    void unsetIsBannedUser();
-    void setIsBannedUser(bool value);
 
     bool isIsByAdmin() const;
     bool isByAdminIsSet() const;
@@ -221,45 +157,105 @@ public:
     void unsetIsLocked();
     void setIsLocked(bool value);
 
-    int32_t getFlagCount() const;
-    bool flagCountIsSet() const;
-    void unsetFlagCount();
-    void setFlagCount(int32_t value);
+    utility::string_t getDisplayLabel() const;
+    bool displayLabelIsSet() const;
+    void unsetDisplayLabel();
+    void setDisplayLabel(const utility::string_t& value);
 
     double getRating() const;
     bool ratingIsSet() const;
     void unsetRating();
     void setRating(double value);
 
-    utility::string_t getDisplayLabel() const;
-    bool displayLabelIsSet() const;
-    void unsetDisplayLabel();
-    void setDisplayLabel(const utility::string_t& value);
-
     std::vector<std::shared_ptr<CommentUserBadgeInfo>> getBadges() const;
     bool badgesIsSet() const;
     void unsetBadges();
     void setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value);
 
-    utility::string_t getDomain() const;
-    bool domainIsSet() const;
-    void unsetDomain();
-    void setDomain(const utility::string_t& value);
+    int64_t getViewCount() const;
+    bool viewCountIsSet() const;
+    void unsetViewCount();
+    void setViewCount(int64_t value);
+
+    bool isIsDeleted() const;
+    bool isDeletedIsSet() const;
+    void unsetIsDeleted();
+    void setIsDeleted(bool value);
+
+    bool isIsDeletedUser() const;
+    bool isDeletedUserIsSet() const;
+    void unsetIsDeletedUser();
+    void setIsDeletedUser(bool value);
+
+    bool isIsSpam() const;
+    bool isSpamIsSet() const;
+    void unsetIsSpam();
+    void setIsSpam(bool value);
+
+    utility::string_t getAnonUserId() const;
+    bool anonUserIdIsSet() const;
+    void unsetAnonUserId();
+    void setAnonUserId(const utility::string_t& value);
 
     std::vector<utility::string_t> getFeedbackIds() const;
     bool feedbackIdsIsSet() const;
     void unsetFeedbackIds();
     void setFeedbackIds(const std::vector<utility::string_t>& value);
 
+    int32_t getFlagCount() const;
+    bool flagCountIsSet() const;
+    void unsetFlagCount();
+    void setFlagCount(int32_t value);
+
+    utility::string_t getDomain() const;
+    bool domainIsSet() const;
+    void unsetDomain();
+    void setDomain(const utility::string_t& value);
+
+    utility::string_t getUrl() const;
+    bool urlIsSet() const;
+    void unsetUrl();
+    void setUrl(const utility::string_t& value);
+
+    utility::string_t getPageTitle() const;
+    bool pageTitleIsSet() const;
+    void unsetPageTitle();
+    void setPageTitle(const utility::string_t& value);
+
+    utility::datetime getExpireAt() const;
+    bool expireAtIsSet() const;
+    void unsetExpireAt();
+    void setExpireAt(const utility::datetime& value);
+
+    bool isReviewed() const;
+    bool reviewedIsSet() const;
+    void unsetReviewed();
+    void setReviewed(bool value);
+
+    bool isHasCode() const;
+    bool hasCodeIsSet() const;
+    void unsetHasCode();
+    void setHasCode(bool value);
+
+    bool isApproved() const;
+    bool approvedIsSet() const;
+    void unsetApproved();
+    void setApproved(bool value);
+
+    utility::string_t getLocale() const;
+    bool localeIsSet() const;
+    void unsetLocale();
+    void setLocale(const utility::string_t& value);
+
+    bool isIsBannedUser() const;
+    bool isBannedUserIsSet() const;
+    void unsetIsBannedUser();
+    void setIsBannedUser(bool value);
+
     std::vector<utility::string_t> getGroupIds() const;
     bool groupIdsIsSet() const;
     void unsetGroupIds();
     void setGroupIds(const std::vector<utility::string_t>& value);
-
-    int64_t getViewCount() const;
-    bool viewCountIsSet() const;
-    void unsetViewCount();
-    void setViewCount(int64_t value);
 
     bool isIsLive() const;
     bool isLiveIsSet() const;
@@ -271,70 +267,47 @@ public:
     void unsetHidden();
     void setHidden(bool value);
 
+    utility::string_t getDate() const;
+    bool dateIsSet() const;
+    void unsetdate();
+    void setDate(const utility::string_t& value);
+
 
 protected:
-    utility::string_t m_date;
-    bool m_dateIsSet;
-
     utility::string_t m__id;
     bool m__idIsSet;
 
     utility::string_t m_TenantId;
     bool m_TenantIdIsSet;
 
+    boost::optional<utility::string_t> m_UserId;
+
     utility::string_t m_UrlId;
     bool m_UrlIdIsSet;
-
-    utility::string_t m_Url;
-    bool m_UrlIsSet;
-
-    utility::string_t m_PageTitle;
-    bool m_PageTitleIsSet;
-
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
-
-    utility::string_t m_AnonUserId;
-    bool m_AnonUserIdIsSet;
 
     utility::string_t m_CommenterName;
     bool m_CommenterNameIsSet;
 
-    utility::string_t m_CommenterLink;
-    bool m_CommenterLinkIsSet;
-
-    utility::string_t m_Comment;
-    bool m_CommentIsSet;
+    boost::optional<utility::string_t> m_CommenterLink;
 
     utility::string_t m_CommentHTML;
     bool m_CommentHTMLIsSet;
 
-    utility::string_t m_ParentId;
-    bool m_ParentIdIsSet;
+    utility::string_t m_Comment;
+    bool m_CommentIsSet;
 
-    int32_t m_Votes;
-    bool m_VotesIsSet;
+    boost::optional<utility::string_t> m_ParentId;
 
-    int32_t m_VotesUp;
-    bool m_VotesUpIsSet;
+    boost::optional<int32_t> m_Votes;
 
-    int32_t m_VotesDown;
-    bool m_VotesDownIsSet;
+    boost::optional<int32_t> m_VotesUp;
 
-    utility::datetime m_ExpireAt;
-    bool m_ExpireAtIsSet;
+    boost::optional<int32_t> m_VotesDown;
 
     bool m_Verified;
     bool m_VerifiedIsSet;
 
-    bool m_Reviewed;
-    bool m_ReviewedIsSet;
-
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
-
-    bool m_IsSpam;
-    bool m_IsSpamIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
     bool m_HasImages;
     bool m_HasImagesIsSet;
@@ -342,14 +315,23 @@ protected:
     bool m_HasLinks;
     bool m_HasLinksIsSet;
 
-    bool m_HasCode;
-    bool m_HasCodeIsSet;
+    bool m_IsByAdmin;
+    bool m_IsByAdminIsSet;
 
-    bool m_Approved;
-    bool m_ApprovedIsSet;
+    bool m_IsByModerator;
+    bool m_IsByModeratorIsSet;
 
-    utility::string_t m_Locale;
-    bool m_LocaleIsSet;
+    boost::optional<bool> m_IsPinned;
+
+    boost::optional<bool> m_IsLocked;
+
+    boost::optional<utility::string_t> m_DisplayLabel;
+
+    boost::optional<double> m_Rating;
+
+    boost::optional<std::vector<std::shared_ptr<CommentUserBadgeInfo>>> m_Badges;
+
+    boost::optional<int64_t> m_ViewCount;
 
     bool m_IsDeleted;
     bool m_IsDeletedIsSet;
@@ -357,50 +339,49 @@ protected:
     bool m_IsDeletedUser;
     bool m_IsDeletedUserIsSet;
 
-    bool m_IsBannedUser;
-    bool m_IsBannedUserIsSet;
+    bool m_IsSpam;
+    bool m_IsSpamIsSet;
 
-    bool m_IsByAdmin;
-    bool m_IsByAdminIsSet;
-
-    bool m_IsByModerator;
-    bool m_IsByModeratorIsSet;
-
-    bool m_IsPinned;
-    bool m_IsPinnedIsSet;
-
-    bool m_IsLocked;
-    bool m_IsLockedIsSet;
-
-    int32_t m_FlagCount;
-    bool m_FlagCountIsSet;
-
-    double m_Rating;
-    bool m_RatingIsSet;
-
-    utility::string_t m_DisplayLabel;
-    bool m_DisplayLabelIsSet;
-
-    std::vector<std::shared_ptr<CommentUserBadgeInfo>> m_Badges;
-    bool m_BadgesIsSet;
-
-    utility::string_t m_Domain;
-    bool m_DomainIsSet;
+    boost::optional<utility::string_t> m_AnonUserId;
 
     std::vector<utility::string_t> m_FeedbackIds;
     bool m_FeedbackIdsIsSet;
 
-    std::vector<utility::string_t> m_GroupIds;
-    bool m_GroupIdsIsSet;
+    boost::optional<int32_t> m_FlagCount;
 
-    int64_t m_ViewCount;
-    bool m_ViewCountIsSet;
+    boost::optional<utility::string_t> m_Domain;
+
+    utility::string_t m_Url;
+    bool m_UrlIsSet;
+
+    boost::optional<utility::string_t> m_PageTitle;
+
+    boost::optional<utility::datetime> m_ExpireAt;
+
+    bool m_Reviewed;
+    bool m_ReviewedIsSet;
+
+    bool m_HasCode;
+    bool m_HasCodeIsSet;
+
+    bool m_Approved;
+    bool m_ApprovedIsSet;
+
+    boost::optional<utility::string_t> m_Locale;
+
+    bool m_IsBannedUser;
+    bool m_IsBannedUserIsSet;
+
+    boost::optional<std::vector<utility::string_t>> m_GroupIds;
 
     bool m_IsLive;
     bool m_IsLiveIsSet;
 
     bool m_Hidden;
     bool m_HiddenIsSet;
+
+    utility::string_t m_date;
+    bool m_dateIsSet;
 
 };
 

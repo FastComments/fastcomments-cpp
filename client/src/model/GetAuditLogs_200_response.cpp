@@ -50,47 +50,47 @@ web::json::value GetAuditLogs_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_AuditLogsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("auditLogs"))] = ModelBase::toJson(m_AuditLogs);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
@@ -117,7 +117,7 @@ bool GetAuditLogs_200_response::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("auditLogs")));
         if(!fieldValue.is_null())
         {
-            std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> refVal_setAuditLogs;
+            std::vector<std::shared_ptr<APIAuditLog>> refVal_setAuditLogs;
             ok &= ModelBase::fromJson(fieldValue, refVal_setAuditLogs);
             setAuditLogs(refVal_setAuditLogs);
             
@@ -265,7 +265,7 @@ bool GetAuditLogs_200_response::fromMultiPart(std::shared_ptr<MultipartFormData>
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("auditLogs"))))
     {
-        std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> refVal_setAuditLogs;
+        std::vector<std::shared_ptr<APIAuditLog>> refVal_setAuditLogs;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("auditLogs"))), refVal_setAuditLogs );
         setAuditLogs(refVal_setAuditLogs);
     }
@@ -336,13 +336,13 @@ void GetAuditLogs_200_response::unsetStatus()
 {
     m_StatusIsSet = false;
 }
-std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> GetAuditLogs_200_response::getAuditLogs() const
+std::vector<std::shared_ptr<APIAuditLog>> GetAuditLogs_200_response::getAuditLogs() const
 {
     return m_AuditLogs;
 }
 
 
-void GetAuditLogs_200_response::setAuditLogs(const std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>>& value)
+void GetAuditLogs_200_response::setAuditLogs(const std::vector<std::shared_ptr<APIAuditLog>>& value)
 {
     m_AuditLogs = value;
     m_AuditLogsIsSet = true;

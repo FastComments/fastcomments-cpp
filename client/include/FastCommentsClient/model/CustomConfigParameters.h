@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CustomConfigParameters_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -331,6 +332,11 @@ public:
     void unsetReadonly();
     void setReadonly(bool value);
 
+    bool isNoNewRootComments() const;
+    bool noNewRootCommentsIsSet() const;
+    void unsetNoNewRootComments();
+    void setNoNewRootComments(bool value);
+
     bool isRequireSSO() const;
     bool requireSSOIsSet() const;
     void unsetRequireSSO();
@@ -451,38 +457,30 @@ protected:
     bool m_AllowAnonVotes;
     bool m_AllowAnonVotesIsSet;
 
-    std::vector<utility::string_t> m_AllowedLanguages;
-    bool m_AllowedLanguagesIsSet;
+    boost::optional<std::vector<utility::string_t>> m_AllowedLanguages;
 
     bool m_CollapseReplies;
     bool m_CollapseRepliesIsSet;
 
-    utility::string_t m_CommentCountFormat;
-    bool m_CommentCountFormatIsSet;
+    boost::optional<utility::string_t> m_CommentCountFormat;
 
     std::shared_ptr<CommentHTMLRenderingMode> m_CommentHTMLRenderingMode;
     bool m_CommentHTMLRenderingModeIsSet;
 
-    std::shared_ptr<CommentThreadDeletionMode> m_CommentThreadDeleteMode;
-    bool m_CommentThreadDeleteModeIsSet;
+    boost::optional<std::shared_ptr<CommentThreadDeletionMode>> m_CommentThreadDeleteMode;
 
-    std::shared_ptr<CommenterNameFormats> m_CommenterNameFormat;
-    bool m_CommenterNameFormatIsSet;
+    boost::optional<std::shared_ptr<CommenterNameFormats>> m_CommenterNameFormat;
 
     int32_t m_CountAboveToggle;
     bool m_CountAboveToggleIsSet;
 
-    utility::string_t m_CustomCSS;
-    bool m_CustomCSSIsSet;
+    boost::optional<utility::string_t> m_CustomCSS;
 
-    utility::string_t m_DefaultAvatarSrc;
-    bool m_DefaultAvatarSrcIsSet;
+    boost::optional<utility::string_t> m_DefaultAvatarSrc;
 
-    std::shared_ptr<SortDirections> m_DefaultSortDirection;
-    bool m_DefaultSortDirectionIsSet;
+    boost::optional<std::shared_ptr<SortDirections>> m_DefaultSortDirection;
 
-    utility::string_t m_DefaultUsername;
-    bool m_DefaultUsernameIsSet;
+    boost::optional<utility::string_t> m_DefaultUsername;
 
     bool m_DisableAutoAdminMigration;
     bool m_DisableAutoAdminMigrationIsSet;
@@ -550,14 +548,12 @@ protected:
     bool m_HasDarkBackground;
     bool m_HasDarkBackgroundIsSet;
 
-    utility::string_t m_HeaderHTML;
-    bool m_HeaderHTMLIsSet;
+    boost::optional<utility::string_t> m_HeaderHTML;
 
     bool m_HideAvatars;
     bool m_HideAvatarsIsSet;
 
-    utility::string_t m_HideCommentsUnderCountTextFormat;
-    bool m_HideCommentsUnderCountTextFormatIsSet;
+    boost::optional<utility::string_t> m_HideCommentsUnderCountTextFormat;
 
     std::shared_ptr<ImageContentProfanityLevel> m_ImageContentProfanityLevel;
     bool m_ImageContentProfanityLevelIsSet;
@@ -568,14 +564,11 @@ protected:
     bool m_LimitCommentsByGroups;
     bool m_LimitCommentsByGroupsIsSet;
 
-    utility::string_t m_Locale;
-    bool m_LocaleIsSet;
+    boost::optional<utility::string_t> m_Locale;
 
-    int32_t m_MaxCommentCharacterLength;
-    bool m_MaxCommentCharacterLengthIsSet;
+    boost::optional<int32_t> m_MaxCommentCharacterLength;
 
-    int32_t m_MaxCommentCreatedCountPUPM;
-    bool m_MaxCommentCreatedCountPUPMIsSet;
+    boost::optional<int32_t> m_MaxCommentCreatedCountPUPM;
 
     bool m_NoCustomConfig;
     bool m_NoCustomConfigIsSet;
@@ -586,11 +579,13 @@ protected:
     bool m_NoStyles;
     bool m_NoStylesIsSet;
 
-    int32_t m_PageSize;
-    bool m_PageSizeIsSet;
+    boost::optional<int32_t> m_PageSize;
 
     bool m_Readonly;
     bool m_ReadonlyIsSet;
+
+    bool m_NoNewRootComments;
+    bool m_NoNewRootCommentsIsSet;
 
     bool m_RequireSSO;
     bool m_RequireSSOIsSet;
@@ -598,8 +593,7 @@ protected:
     bool m_EnableResizeHandle;
     bool m_EnableResizeHandleIsSet;
 
-    std::vector<utility::string_t> m_RestrictedLinkDomains;
-    bool m_RestrictedLinkDomainsIsSet;
+    boost::optional<std::vector<utility::string_t>> m_RestrictedLinkDomains;
 
     bool m_ShowBadgesInTopBar;
     bool m_ShowBadgesInTopBarIsSet;
@@ -619,8 +613,7 @@ protected:
     std::shared_ptr<SSOSecurityLevel> m_SsoSecLvl;
     bool m_SsoSecLvlIsSet;
 
-    std::map<utility::string_t, utility::string_t> m_Translations;
-    bool m_TranslationsIsSet;
+    boost::optional<std::map<utility::string_t, utility::string_t>> m_Translations;
 
     bool m_UseShowCommentsToggle;
     bool m_UseShowCommentsToggleIsSet;

@@ -39,17 +39,17 @@ web::json::value CommentLogEntry::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_dIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("d"))] = ModelBase::toJson(m_d);
     }
     if(m_tIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("t"))] = ModelBase::toJson(m_t);
     }
     if(m_DaIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("da"))] = ModelBase::toJson(m_Da);
     }

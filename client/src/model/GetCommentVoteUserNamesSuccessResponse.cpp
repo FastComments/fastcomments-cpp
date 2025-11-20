@@ -39,17 +39,17 @@ web::json::value GetCommentVoteUserNamesSuccessResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_VoteUserNamesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("voteUserNames"))] = ModelBase::toJson(m_VoteUserNames);
     }
     if(m_HasMoreIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasMore"))] = ModelBase::toJson(m_HasMore);
     }

@@ -5,6 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **reason** | **String** |  | [optional] [default to null] |
 | **code** | **String** |  | [optional] [default to null] |
+| **commentsUpdated** | **Long** |  | [optional] [default to null] |
 | **page** | [**APIPage**](APIPage.md) |  | [optional] [default to null] |
 | **status** | **String** |  | [default to null] |
 

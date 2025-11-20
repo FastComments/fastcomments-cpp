@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_CommentUserHashTagInfo_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CommentUserHashTagInfo_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -81,8 +82,7 @@ protected:
     utility::string_t m_Tag;
     bool m_TagIsSet;
 
-    utility::string_t m_Url;
-    bool m_UrlIsSet;
+    boost::optional<utility::string_t> m_Url;
 
     bool m_Retain;
     bool m_RetainIsSet;

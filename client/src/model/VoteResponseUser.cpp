@@ -20,8 +20,6 @@ namespace model {
 
 VoteResponseUser::VoteResponseUser()
 {
-    m_SessionId = utility::conversions::to_string_t("");
-    m_SessionIdIsSet = false;
 }
 
 VoteResponseUser::~VoteResponseUser()
@@ -36,10 +34,10 @@ void VoteResponseUser::validate()
 web::json::value VoteResponseUser::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_SessionIdIsSet)
-    {   
+    if(m_SessionId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("sessionId"))] = ModelBase::toJson(m_SessionId);
+        val[utility::conversions::to_string_t(_XPLATSTR("sessionId"))] = ModelBase::toJson(m_SessionId.get());
     }
 
     return val;
@@ -69,9 +67,9 @@ void VoteResponseUser::toMultipart(std::shared_ptr<MultipartFormData> multipart,
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_SessionIdIsSet)
+    if(m_SessionId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sessionId")), m_SessionId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sessionId")), m_SessionId.get()));
     }
 }
 
@@ -96,24 +94,23 @@ bool VoteResponseUser::fromMultiPart(std::shared_ptr<MultipartFormData> multipar
 
 utility::string_t VoteResponseUser::getSessionId() const
 {
-    return m_SessionId;
+    return m_SessionId.get();
 }
 
 
 void VoteResponseUser::setSessionId(const utility::string_t& value)
 {
     m_SessionId = value;
-    m_SessionIdIsSet = true;
 }
 
 bool VoteResponseUser::sessionIdIsSet() const
 {
-    return m_SessionIdIsSet;
+    return m_SessionId.has_value();
 }
 
 void VoteResponseUser::unsetSessionId()
 {
-    m_SessionIdIsSet = false;
+    m_SessionId.reset();
 }
 
 }

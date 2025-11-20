@@ -10,15 +10,16 @@
  */
 
 /*
- * Pick_TenantAuditLog_TenantAuditLogKeys_.h
+ * APIAuditLog.h
  *
- * From T, pick a set of properties whose keys are in the union K
+ * 
  */
 
-#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_TenantAuditLog_TenantAuditLogKeys__H_
-#define ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_TenantAuditLog_TenantAuditLogKeys__H_
+#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_APIAuditLog_H_
+#define ORG_OPENAPITOOLS_CLIENT_MODEL_APIAuditLog_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -33,15 +34,12 @@ namespace model {
 
 
 
-/// <summary>
-/// From T, pick a set of properties whose keys are in the union K
-/// </summary>
-class  Pick_TenantAuditLog_TenantAuditLogKeys_
+class  APIAuditLog
     : public ModelBase
 {
 public:
-    Pick_TenantAuditLog_TenantAuditLogKeys_();
-    virtual ~Pick_TenantAuditLog_TenantAuditLogKeys_();
+    APIAuditLog();
+    virtual ~APIAuditLog();
 
     /////////////////////////////////////////////
     /// ModelBase overrides
@@ -56,7 +54,7 @@ public:
 
 
     /////////////////////////////////////////////
-    /// Pick_TenantAuditLog_TenantAuditLogKeys_ members
+    /// APIAuditLog members
 
     enum class CrudTypeEnum
     {
@@ -86,11 +84,6 @@ public:
     void unset_id();
     void setId(const utility::string_t& value);
 
-    utility::string_t getUrl() const;
-    bool urlIsSet() const;
-    void unsetUrl();
-    void setUrl(const utility::string_t& value);
-
     utility::string_t getUserId() const;
     bool userIdIsSet() const;
     void unsetUserId();
@@ -115,6 +108,11 @@ public:
     bool fromIsSet() const;
     void unsetFrom();
     void setFrom(const FromEnum value);
+
+    utility::string_t getUrl() const;
+    bool urlIsSet() const;
+    void unsetUrl();
+    void setUrl(const utility::string_t& value);
 
     utility::string_t getIp() const;
     bool ipIsSet() const;
@@ -149,9 +147,6 @@ protected:
     utility::string_t m__id;
     bool m__idIsSet;
 
-    utility::string_t m_Url;
-    bool m_UrlIsSet;
-
     utility::string_t m_UserId;
     bool m_UserIdIsSet;
 
@@ -167,8 +162,9 @@ protected:
     FromEnum m_From;
     bool m_FromIsSet;
 
-    utility::string_t m_Ip;
-    bool m_IpIsSet;
+    boost::optional<utility::string_t> m_Url;
+
+    boost::optional<utility::string_t> m_Ip;
 
     utility::datetime m_When;
     bool m_WhenIsSet;
@@ -179,8 +175,7 @@ protected:
     utility::datetime m_ServerStartDate;
     bool m_ServerStartDateIsSet;
 
-    std::map<utility::string_t, std::shared_ptr<AnyType>> m_ObjectDetails;
-    bool m_ObjectDetailsIsSet;
+    boost::optional<std::map<utility::string_t, std::shared_ptr<AnyType>>> m_ObjectDetails;
 
 };
 
@@ -190,4 +185,4 @@ protected:
 }
 }
 
-#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_TenantAuditLog_TenantAuditLogKeys__H_ */
+#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_APIAuditLog_H_ */

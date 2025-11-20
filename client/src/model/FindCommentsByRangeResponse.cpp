@@ -38,12 +38,12 @@ web::json::value FindCommentsByRangeResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ResultsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("results"))] = ModelBase::toJson(m_Results);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }

@@ -43,32 +43,32 @@ web::json::value UpdateFeedPostParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("title"))] = ModelBase::toJson(m_Title);
     }
     if(m_ContentHTMLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("contentHTML"))] = ModelBase::toJson(m_ContentHTML);
     }
     if(m_MediaIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("media"))] = ModelBase::toJson(m_Media);
     }
     if(m_LinksIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("links"))] = ModelBase::toJson(m_Links);
     }
     if(m_TagsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tags"))] = ModelBase::toJson(m_Tags);
     }
     if(m_MetaIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta);
     }

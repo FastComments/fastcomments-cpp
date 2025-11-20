@@ -6620,8 +6620,14 @@ pplx::task<std::shared_ptr<FlagComment_200_response>> DefaultApi::unFlagComment(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<FlagCommentPublic_200_response>> DefaultApi::updateComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<Pick_APIComment_UpdatableCommentFields_> body, boost::optional<utility::string_t> contextUserId, boost::optional<bool> doSpamCheck, boost::optional<bool> isLive) const
+pplx::task<std::shared_ptr<FlagCommentPublic_200_response>> DefaultApi::updateComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdatableCommentParams> updatableCommentParams, boost::optional<utility::string_t> contextUserId, boost::optional<bool> doSpamCheck, boost::optional<bool> isLive) const
 {
+
+    // verify the required parameter 'updatableCommentParams' is set
+    if (updatableCommentParams == nullptr)
+    {
+        throw ApiException(400, utility::conversions::to_string_t("Missing required parameter 'updatableCommentParams' when calling DefaultApi->updateComment"));
+    }
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6688,7 +6694,8 @@ pplx::task<std::shared_ptr<FlagCommentPublic_200_response>> DefaultApi::updateCo
         localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
         web::json::value localVarJson;
 
-        localVarJson = ModelBase::toJson(body);
+        localVarJson = ModelBase::toJson(updatableCommentParams);
+        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -6697,7 +6704,11 @@ pplx::task<std::shared_ptr<FlagCommentPublic_200_response>> DefaultApi::updateCo
     {
         localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
         std::shared_ptr<MultipartFormData> localVarMultipart(new MultipartFormData);
-        localVarMultipart->add(ModelBase::toHttpContent(utility::conversions::to_string_t("body"), body));
+
+        if(updatableCommentParams.get())
+        {
+            updatableCommentParams->toMultipart(localVarMultipart, utility::conversions::to_string_t("updatableCommentParams"));
+        }
         
 
         localVarHttpBody = localVarMultipart;

@@ -22,6 +22,7 @@ APICreateUserBadgeResponse::APICreateUserBadgeResponse()
 {
     m_StatusIsSet = false;
     m_UserBadgeIsSet = false;
+    m_NotesIsSet = false;
 }
 
 APICreateUserBadgeResponse::~APICreateUserBadgeResponse()
@@ -37,14 +38,19 @@ web::json::value APICreateUserBadgeResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_UserBadgeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userBadge"))] = ModelBase::toJson(m_UserBadge);
+    }
+    if(m_NotesIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("notes"))] = ModelBase::toJson(m_Notes);
     }
 
     return val;
@@ -75,6 +81,17 @@ bool APICreateUserBadgeResponse::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("notes"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("notes")));
+        if(!fieldValue.is_null())
+        {
+            std::vector<utility::string_t> refVal_setNotes;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNotes);
+            setNotes(refVal_setNotes);
+            
+        }
+    }
     return ok;
 }
 
@@ -92,6 +109,10 @@ void APICreateUserBadgeResponse::toMultipart(std::shared_ptr<MultipartFormData> 
     if(m_UserBadgeIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userBadge")), m_UserBadge));
+    }
+    if(m_NotesIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notes")), m_Notes));
     }
 }
 
@@ -115,6 +136,12 @@ bool APICreateUserBadgeResponse::fromMultiPart(std::shared_ptr<MultipartFormData
         std::shared_ptr<UserBadge> refVal_setUserBadge;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("userBadge"))), refVal_setUserBadge );
         setUserBadge(refVal_setUserBadge);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("notes"))))
+    {
+        std::vector<utility::string_t> refVal_setNotes;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("notes"))), refVal_setNotes );
+        setNotes(refVal_setNotes);
     }
     return ok;
 }
@@ -161,6 +188,27 @@ bool APICreateUserBadgeResponse::userBadgeIsSet() const
 void APICreateUserBadgeResponse::unsetUserBadge()
 {
     m_UserBadgeIsSet = false;
+}
+std::vector<utility::string_t> APICreateUserBadgeResponse::getNotes() const
+{
+    return m_Notes;
+}
+
+
+void APICreateUserBadgeResponse::setNotes(const std::vector<utility::string_t>& value)
+{
+    m_Notes = value;
+    m_NotesIsSet = true;
+}
+
+bool APICreateUserBadgeResponse::notesIsSet() const
+{
+    return m_NotesIsSet;
+}
+
+void APICreateUserBadgeResponse::unsetNotes()
+{
+    m_NotesIsSet = false;
 }
 
 }

@@ -24,22 +24,16 @@ UserSessionInfo::UserSessionInfo()
     m_IdIsSet = false;
     m_Authorized = false;
     m_AuthorizedIsSet = false;
-    m_AvatarSrc = utility::conversions::to_string_t("");
-    m_AvatarSrcIsSet = false;
     m_BadgesIsSet = false;
     m_DisplayLabel = utility::conversions::to_string_t("");
     m_DisplayLabelIsSet = false;
     m_DisplayName = utility::conversions::to_string_t("");
     m_DisplayNameIsSet = false;
-    m_Email = utility::conversions::to_string_t("");
-    m_EmailIsSet = false;
     m_GroupIdsIsSet = false;
     m_HasBlockedUsers = false;
     m_HasBlockedUsersIsSet = false;
     m_IsAnonSession = false;
     m_IsAnonSessionIsSet = false;
-    m_SessionId = utility::conversions::to_string_t("");
-    m_SessionIdIsSet = false;
     m_Username = utility::conversions::to_string_t("");
     m_UsernameIsSet = false;
     m_WebsiteUrl = utility::conversions::to_string_t("");
@@ -59,67 +53,67 @@ web::json::value UserSessionInfo::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }
     if(m_AuthorizedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("authorized"))] = ModelBase::toJson(m_Authorized);
     }
-    if(m_AvatarSrcIsSet)
-    {   
+    if(m_AvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc.get());
     }
     if(m_BadgesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges);
     }
     if(m_DisplayLabelIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
     }
     if(m_DisplayNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayName"))] = ModelBase::toJson(m_DisplayName);
     }
-    if(m_EmailIsSet)
-    {   
+    if(m_Email.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("email"))] = ModelBase::toJson(m_Email);
+        val[utility::conversions::to_string_t(_XPLATSTR("email"))] = ModelBase::toJson(m_Email.get());
     }
     if(m_GroupIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds);
     }
     if(m_HasBlockedUsersIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasBlockedUsers"))] = ModelBase::toJson(m_HasBlockedUsers);
     }
     if(m_IsAnonSessionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isAnonSession"))] = ModelBase::toJson(m_IsAnonSession);
     }
-    if(m_SessionIdIsSet)
-    {   
+    if(m_SessionId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("sessionId"))] = ModelBase::toJson(m_SessionId);
+        val[utility::conversions::to_string_t(_XPLATSTR("sessionId"))] = ModelBase::toJson(m_SessionId.get());
     }
     if(m_UsernameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("username"))] = ModelBase::toJson(m_Username);
     }
     if(m_WebsiteUrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("websiteUrl"))] = ModelBase::toJson(m_WebsiteUrl);
     }
@@ -291,9 +285,9 @@ void UserSessionInfo::toMultipart(std::shared_ptr<MultipartFormData> multipart, 
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("authorized")), m_Authorized));
     }
-    if(m_AvatarSrcIsSet)
+    if(m_AvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc.get()));
     }
     if(m_BadgesIsSet)
     {
@@ -307,9 +301,9 @@ void UserSessionInfo::toMultipart(std::shared_ptr<MultipartFormData> multipart, 
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayName")), m_DisplayName));
     }
-    if(m_EmailIsSet)
+    if(m_Email.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("email")), m_Email));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("email")), m_Email.get()));
     }
     if(m_GroupIdsIsSet)
     {
@@ -323,9 +317,9 @@ void UserSessionInfo::toMultipart(std::shared_ptr<MultipartFormData> multipart, 
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isAnonSession")), m_IsAnonSession));
     }
-    if(m_SessionIdIsSet)
+    if(m_SessionId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sessionId")), m_SessionId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sessionId")), m_SessionId.get()));
     }
     if(m_UsernameIsSet)
     {
@@ -471,24 +465,23 @@ void UserSessionInfo::unsetAuthorized()
 }
 utility::string_t UserSessionInfo::getAvatarSrc() const
 {
-    return m_AvatarSrc;
+    return m_AvatarSrc.get();
 }
 
 
 void UserSessionInfo::setAvatarSrc(const utility::string_t& value)
 {
     m_AvatarSrc = value;
-    m_AvatarSrcIsSet = true;
 }
 
 bool UserSessionInfo::avatarSrcIsSet() const
 {
-    return m_AvatarSrcIsSet;
+    return m_AvatarSrc.has_value();
 }
 
 void UserSessionInfo::unsetAvatarSrc()
 {
-    m_AvatarSrcIsSet = false;
+    m_AvatarSrc.reset();
 }
 std::vector<std::shared_ptr<CommentUserBadgeInfo>> UserSessionInfo::getBadges() const
 {
@@ -555,24 +548,23 @@ void UserSessionInfo::unsetDisplayName()
 }
 utility::string_t UserSessionInfo::getEmail() const
 {
-    return m_Email;
+    return m_Email.get();
 }
 
 
 void UserSessionInfo::setEmail(const utility::string_t& value)
 {
     m_Email = value;
-    m_EmailIsSet = true;
 }
 
 bool UserSessionInfo::emailIsSet() const
 {
-    return m_EmailIsSet;
+    return m_Email.has_value();
 }
 
 void UserSessionInfo::unsetEmail()
 {
-    m_EmailIsSet = false;
+    m_Email.reset();
 }
 std::vector<utility::string_t> UserSessionInfo::getGroupIds() const
 {
@@ -637,24 +629,23 @@ void UserSessionInfo::unsetIsAnonSession()
 }
 utility::string_t UserSessionInfo::getSessionId() const
 {
-    return m_SessionId;
+    return m_SessionId.get();
 }
 
 
 void UserSessionInfo::setSessionId(const utility::string_t& value)
 {
     m_SessionId = value;
-    m_SessionIdIsSet = true;
 }
 
 bool UserSessionInfo::sessionIdIsSet() const
 {
-    return m_SessionIdIsSet;
+    return m_SessionId.has_value();
 }
 
 void UserSessionInfo::unsetSessionId()
 {
-    m_SessionIdIsSet = false;
+    m_SessionId.reset();
 }
 utility::string_t UserSessionInfo::getUsername() const
 {

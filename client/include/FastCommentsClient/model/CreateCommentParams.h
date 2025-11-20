@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_CreateCommentParams_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CreateCommentParams_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -251,11 +252,9 @@ protected:
     utility::string_t m_CommenterName;
     bool m_CommenterNameIsSet;
 
-    utility::string_t m_CommenterEmail;
-    bool m_CommenterEmailIsSet;
+    boost::optional<utility::string_t> m_CommenterEmail;
 
-    utility::string_t m_CommenterLink;
-    bool m_CommenterLinkIsSet;
+    boost::optional<utility::string_t> m_CommenterLink;
 
     utility::string_t m_Comment;
     bool m_CommentIsSet;
@@ -263,14 +262,11 @@ protected:
     int32_t m_ProductId;
     bool m_ProductIdIsSet;
 
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
+    boost::optional<utility::string_t> m_UserId;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
-    utility::string_t m_ParentId;
-    bool m_ParentIdIsSet;
+    boost::optional<utility::string_t> m_ParentId;
 
     std::vector<std::shared_ptr<CommentUserMentionInfo>> m_Mentions;
     bool m_MentionsIsSet;

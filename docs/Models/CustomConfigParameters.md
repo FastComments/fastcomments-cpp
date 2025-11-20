@@ -55,6 +55,7 @@
 | **noStyles** | **Boolean** |  | [optional] [default to null] |
 | **pageSize** | **Integer** |  | [optional] [default to null] |
 | **readonly** | **Boolean** |  | [optional] [default to null] |
+| **noNewRootComments** | **Boolean** |  | [optional] [default to null] |
 | **requireSSO** | **Boolean** |  | [optional] [default to null] |
 | **enableResizeHandle** | **Boolean** |  | [optional] [default to null] |
 | **restrictedLinkDomains** | **List** |  | [optional] [default to null] |

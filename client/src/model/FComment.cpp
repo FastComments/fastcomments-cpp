@@ -30,44 +30,14 @@ FComment::FComment()
     m_UrlIdRawIsSet = false;
     m_Url = utility::conversions::to_string_t("");
     m_UrlIsSet = false;
-    m_PageTitle = utility::conversions::to_string_t("");
-    m_PageTitleIsSet = false;
-    m_UserId = nullptr;
-    m_UserIdIsSet = false;
-    m_AnonUserId = utility::conversions::to_string_t("");
-    m_AnonUserIdIsSet = false;
-    m_CommenterEmail = utility::conversions::to_string_t("");
-    m_CommenterEmailIsSet = false;
     m_CommenterName = utility::conversions::to_string_t("");
     m_CommenterNameIsSet = false;
-    m_CommenterLink = utility::conversions::to_string_t("");
-    m_CommenterLinkIsSet = false;
     m_Comment = utility::conversions::to_string_t("");
     m_CommentIsSet = false;
     m_CommentHTML = utility::conversions::to_string_t("");
     m_CommentHTMLIsSet = false;
-    m_ParentId = utility::conversions::to_string_t("");
-    m_ParentIdIsSet = false;
-    m_date = utility::datetime();
-    m_dateIsSet = false;
-    m_LocalDateString = utility::conversions::to_string_t("");
-    m_LocalDateStringIsSet = false;
-    m_LocalDateHours = 0;
-    m_LocalDateHoursIsSet = false;
-    m_Votes = 0;
-    m_VotesIsSet = false;
-    m_VotesUp = 0;
-    m_VotesUpIsSet = false;
-    m_VotesDown = 0;
-    m_VotesDownIsSet = false;
-    m_ExpireAt = utility::datetime();
-    m_ExpireAtIsSet = false;
     m_Verified = false;
     m_VerifiedIsSet = false;
-    m_VerifiedDate = utility::datetime();
-    m_VerifiedDateIsSet = false;
-    m_VerificationId = utility::conversions::to_string_t("");
-    m_VerificationIdIsSet = false;
     m_NotificationSentForParent = false;
     m_NotificationSentForParentIsSet = false;
     m_NotificationSentForParentTenant = false;
@@ -78,10 +48,6 @@ FComment::FComment()
     m_ImportedIsSet = false;
     m_ExternalId = utility::conversions::to_string_t("");
     m_ExternalIdIsSet = false;
-    m_ExternalParentId = utility::conversions::to_string_t("");
-    m_ExternalParentIdIsSet = false;
-    m_AvatarSrc = utility::conversions::to_string_t("");
-    m_AvatarSrcIsSet = false;
     m_IsSpam = false;
     m_IsSpamIsSet = false;
     m_PermNotSpam = false;
@@ -90,20 +56,12 @@ FComment::FComment()
     m_AiDeterminedSpamIsSet = false;
     m_HasImages = false;
     m_HasImagesIsSet = false;
-    m_PageNumber = 0;
-    m_PageNumberIsSet = false;
-    m_PageNumberOF = 0;
-    m_PageNumberOFIsSet = false;
-    m_PageNumberNF = 0;
-    m_PageNumberNFIsSet = false;
     m_HasLinks = false;
     m_HasLinksIsSet = false;
     m_HasCode = false;
     m_HasCodeIsSet = false;
     m_Approved = false;
     m_ApprovedIsSet = false;
-    m_Locale = utility::conversions::to_string_t("");
-    m_LocaleIsSet = false;
     m_IsDeleted = false;
     m_IsDeletedIsSet = false;
     m_IsDeletedUser = false;
@@ -114,29 +72,14 @@ FComment::FComment()
     m_IsByAdminIsSet = false;
     m_IsByModerator = false;
     m_IsByModeratorIsSet = false;
-    m_IsPinned = false;
-    m_IsPinnedIsSet = false;
-    m_IsLocked = false;
-    m_IsLockedIsSet = false;
-    m_FlagCount = 0;
-    m_FlagCountIsSet = false;
-    m_Rating = 0.0;
-    m_RatingIsSet = false;
-    m_DisplayLabel = utility::conversions::to_string_t("");
-    m_DisplayLabelIsSet = false;
     m_FromProductId = 0;
     m_FromProductIdIsSet = false;
-    m_MetaIsSet = false;
     m_IpHash = utility::conversions::to_string_t("");
     m_IpHashIsSet = false;
     m_MentionsIsSet = false;
     m_HashTagsIsSet = false;
-    m_BadgesIsSet = false;
-    m_Domain = nullptr;
-    m_DomainIsSet = false;
     m_VeteranBadgeProcessed = utility::conversions::to_string_t("");
     m_VeteranBadgeProcessedIsSet = false;
-    m_ModerationGroupIdsIsSet = false;
     m_DidProcessBadges = false;
     m_DidProcessBadgesIsSet = false;
     m_FromOfflineRestore = false;
@@ -146,10 +89,6 @@ FComment::FComment()
     m_AutoplayDelayMS = 0L;
     m_AutoplayDelayMSIsSet = false;
     m_FeedbackIdsIsSet = false;
-    m_LogsIsSet = false;
-    m_GroupIdsIsSet = false;
-    m_ViewCount = 0L;
-    m_ViewCountIsSet = false;
     m_RequiresVerification = false;
     m_RequiresVerificationIsSet = false;
     m_EditKey = utility::conversions::to_string_t("");
@@ -169,357 +108,357 @@ web::json::value FComment::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_UrlIdRawIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdRaw"))] = ModelBase::toJson(m_UrlIdRaw);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
-    if(m_PageTitleIsSet)
-    {   
+    if(m_PageTitle.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle.get());
     }
-    if(m_UserIdIsSet)
-    {   
+    if(m_UserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId.get());
     }
-    if(m_AnonUserIdIsSet)
-    {   
+    if(m_AnonUserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId.get());
     }
-    if(m_CommenterEmailIsSet)
-    {   
+    if(m_CommenterEmail.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail.get());
     }
     if(m_CommenterNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commenterName"))] = ModelBase::toJson(m_CommenterName);
     }
-    if(m_CommenterLinkIsSet)
-    {   
+    if(m_CommenterLink.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink.get());
     }
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_CommentHTMLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentHTML"))] = ModelBase::toJson(m_CommentHTML);
     }
-    if(m_ParentIdIsSet)
-    {   
+    if(m_ParentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId.get());
     }
-    if(m_dateIsSet)
-    {   
+    if(m_date.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date);
+        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date.get());
     }
-    if(m_LocalDateStringIsSet)
-    {   
+    if(m_LocalDateString.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("localDateString"))] = ModelBase::toJson(m_LocalDateString);
+        val[utility::conversions::to_string_t(_XPLATSTR("localDateString"))] = ModelBase::toJson(m_LocalDateString.get());
     }
-    if(m_LocalDateHoursIsSet)
-    {   
+    if(m_LocalDateHours.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("localDateHours"))] = ModelBase::toJson(m_LocalDateHours);
+        val[utility::conversions::to_string_t(_XPLATSTR("localDateHours"))] = ModelBase::toJson(m_LocalDateHours.get());
     }
-    if(m_VotesIsSet)
-    {   
+    if(m_Votes.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes);
+        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes.get());
     }
-    if(m_VotesUpIsSet)
-    {   
+    if(m_VotesUp.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp.get());
     }
-    if(m_VotesDownIsSet)
-    {   
+    if(m_VotesDown.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown.get());
     }
-    if(m_ExpireAtIsSet)
-    {   
+    if(m_ExpireAt.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt);
+        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt.get());
     }
     if(m_VerifiedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("verified"))] = ModelBase::toJson(m_Verified);
     }
-    if(m_VerifiedDateIsSet)
-    {   
+    if(m_VerifiedDate.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("verifiedDate"))] = ModelBase::toJson(m_VerifiedDate);
+        val[utility::conversions::to_string_t(_XPLATSTR("verifiedDate"))] = ModelBase::toJson(m_VerifiedDate.get());
     }
-    if(m_VerificationIdIsSet)
-    {   
+    if(m_VerificationId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("verificationId"))] = ModelBase::toJson(m_VerificationId);
+        val[utility::conversions::to_string_t(_XPLATSTR("verificationId"))] = ModelBase::toJson(m_VerificationId.get());
     }
     if(m_NotificationSentForParentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationSentForParent"))] = ModelBase::toJson(m_NotificationSentForParent);
     }
     if(m_NotificationSentForParentTenantIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationSentForParentTenant"))] = ModelBase::toJson(m_NotificationSentForParentTenant);
     }
     if(m_ReviewedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reviewed"))] = ModelBase::toJson(m_Reviewed);
     }
     if(m_ImportedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("imported"))] = ModelBase::toJson(m_Imported);
     }
     if(m_ExternalIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("externalId"))] = ModelBase::toJson(m_ExternalId);
     }
-    if(m_ExternalParentIdIsSet)
-    {   
+    if(m_ExternalParentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("externalParentId"))] = ModelBase::toJson(m_ExternalParentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("externalParentId"))] = ModelBase::toJson(m_ExternalParentId.get());
     }
-    if(m_AvatarSrcIsSet)
-    {   
+    if(m_AvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc.get());
     }
     if(m_IsSpamIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isSpam"))] = ModelBase::toJson(m_IsSpam);
     }
     if(m_PermNotSpamIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("permNotSpam"))] = ModelBase::toJson(m_PermNotSpam);
     }
     if(m_AiDeterminedSpamIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("aiDeterminedSpam"))] = ModelBase::toJson(m_AiDeterminedSpam);
     }
     if(m_HasImagesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasImages"))] = ModelBase::toJson(m_HasImages);
     }
-    if(m_PageNumberIsSet)
-    {   
+    if(m_PageNumber.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageNumber"))] = ModelBase::toJson(m_PageNumber);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageNumber"))] = ModelBase::toJson(m_PageNumber.get());
     }
-    if(m_PageNumberOFIsSet)
-    {   
+    if(m_PageNumberOF.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageNumberOF"))] = ModelBase::toJson(m_PageNumberOF);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageNumberOF"))] = ModelBase::toJson(m_PageNumberOF.get());
     }
-    if(m_PageNumberNFIsSet)
-    {   
+    if(m_PageNumberNF.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageNumberNF"))] = ModelBase::toJson(m_PageNumberNF);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageNumberNF"))] = ModelBase::toJson(m_PageNumberNF.get());
     }
     if(m_HasLinksIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasLinks"))] = ModelBase::toJson(m_HasLinks);
     }
     if(m_HasCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasCode"))] = ModelBase::toJson(m_HasCode);
     }
     if(m_ApprovedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("approved"))] = ModelBase::toJson(m_Approved);
     }
-    if(m_LocaleIsSet)
-    {   
+    if(m_Locale.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale);
+        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale.get());
     }
     if(m_IsDeletedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDeleted"))] = ModelBase::toJson(m_IsDeleted);
     }
     if(m_IsDeletedUserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))] = ModelBase::toJson(m_IsDeletedUser);
     }
     if(m_IsBannedUserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))] = ModelBase::toJson(m_IsBannedUser);
     }
     if(m_IsByAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByAdmin"))] = ModelBase::toJson(m_IsByAdmin);
     }
     if(m_IsByModeratorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByModerator"))] = ModelBase::toJson(m_IsByModerator);
     }
-    if(m_IsPinnedIsSet)
-    {   
+    if(m_IsPinned.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned);
+        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned.get());
     }
-    if(m_IsLockedIsSet)
-    {   
+    if(m_IsLocked.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked);
+        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked.get());
     }
-    if(m_FlagCountIsSet)
-    {   
+    if(m_FlagCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount.get());
     }
-    if(m_RatingIsSet)
-    {   
+    if(m_Rating.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("rating"))] = ModelBase::toJson(m_Rating);
+        val[utility::conversions::to_string_t(_XPLATSTR("rating"))] = ModelBase::toJson(m_Rating.get());
     }
-    if(m_DisplayLabelIsSet)
-    {   
+    if(m_DisplayLabel.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
+        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel.get());
     }
     if(m_FromProductIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromProductId"))] = ModelBase::toJson(m_FromProductId);
     }
-    if(m_MetaIsSet)
-    {   
+    if(m_Meta.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta);
+        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta.get());
     }
     if(m_IpHashIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("ipHash"))] = ModelBase::toJson(m_IpHash);
     }
     if(m_MentionsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("mentions"))] = ModelBase::toJson(m_Mentions);
     }
     if(m_HashTagsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hashTags"))] = ModelBase::toJson(m_HashTags);
     }
-    if(m_BadgesIsSet)
-    {   
+    if(m_Badges.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges);
+        val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges.get());
     }
-    if(m_DomainIsSet)
-    {   
+    if(m_Domain.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("domain"))] = ModelBase::toJson(m_Domain);
+        val[utility::conversions::to_string_t(_XPLATSTR("domain"))] = ModelBase::toJson(m_Domain.get());
     }
     if(m_VeteranBadgeProcessedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("veteranBadgeProcessed"))] = ModelBase::toJson(m_VeteranBadgeProcessed);
     }
-    if(m_ModerationGroupIdsIsSet)
-    {   
+    if(m_ModerationGroupIds.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))] = ModelBase::toJson(m_ModerationGroupIds);
+        val[utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))] = ModelBase::toJson(m_ModerationGroupIds.get());
     }
     if(m_DidProcessBadgesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("didProcessBadges"))] = ModelBase::toJson(m_DidProcessBadges);
     }
     if(m_FromOfflineRestoreIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromOfflineRestore"))] = ModelBase::toJson(m_FromOfflineRestore);
     }
     if(m_AutoplayJobIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("autoplayJobId"))] = ModelBase::toJson(m_AutoplayJobId);
     }
     if(m_AutoplayDelayMSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("autoplayDelayMS"))] = ModelBase::toJson(m_AutoplayDelayMS);
     }
     if(m_FeedbackIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("feedbackIds"))] = ModelBase::toJson(m_FeedbackIds);
     }
-    if(m_LogsIsSet)
-    {   
+    if(m_Logs.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("logs"))] = ModelBase::toJson(m_Logs);
+        val[utility::conversions::to_string_t(_XPLATSTR("logs"))] = ModelBase::toJson(m_Logs.get());
     }
-    if(m_GroupIdsIsSet)
-    {   
+    if(m_GroupIds.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds);
+        val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds.get());
     }
-    if(m_ViewCountIsSet)
-    {   
+    if(m_ViewCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("viewCount"))] = ModelBase::toJson(m_ViewCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("viewCount"))] = ModelBase::toJson(m_ViewCount.get());
     }
     if(m_RequiresVerificationIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("requiresVerification"))] = ModelBase::toJson(m_RequiresVerification);
     }
     if(m_EditKeyIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("editKey"))] = ModelBase::toJson(m_EditKey);
     }
@@ -1341,29 +1280,29 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
     }
-    if(m_PageTitleIsSet)
+    if(m_PageTitle.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle.get()));
     }
-    if(m_UserIdIsSet)
+    if(m_UserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId.get()));
     }
-    if(m_AnonUserIdIsSet)
+    if(m_AnonUserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId.get()));
     }
-    if(m_CommenterEmailIsSet)
+    if(m_CommenterEmail.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail.get()));
     }
     if(m_CommenterNameIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterName")), m_CommenterName));
     }
-    if(m_CommenterLinkIsSet)
+    if(m_CommenterLink.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink.get()));
     }
     if(m_CommentIsSet)
     {
@@ -1373,49 +1312,49 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentHTML")), m_CommentHTML));
     }
-    if(m_ParentIdIsSet)
+    if(m_ParentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId.get()));
     }
-    if(m_dateIsSet)
+    if(m_date.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date.get()));
     }
-    if(m_LocalDateStringIsSet)
+    if(m_LocalDateString.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateString")), m_LocalDateString));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateString")), m_LocalDateString.get()));
     }
-    if(m_LocalDateHoursIsSet)
+    if(m_LocalDateHours.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateHours")), m_LocalDateHours));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateHours")), m_LocalDateHours.get()));
     }
-    if(m_VotesIsSet)
+    if(m_Votes.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes.get()));
     }
-    if(m_VotesUpIsSet)
+    if(m_VotesUp.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp.get()));
     }
-    if(m_VotesDownIsSet)
+    if(m_VotesDown.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown.get()));
     }
-    if(m_ExpireAtIsSet)
+    if(m_ExpireAt.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt.get()));
     }
     if(m_VerifiedIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verified")), m_Verified));
     }
-    if(m_VerifiedDateIsSet)
+    if(m_VerifiedDate.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verifiedDate")), m_VerifiedDate));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verifiedDate")), m_VerifiedDate.get()));
     }
-    if(m_VerificationIdIsSet)
+    if(m_VerificationId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verificationId")), m_VerificationId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verificationId")), m_VerificationId.get()));
     }
     if(m_NotificationSentForParentIsSet)
     {
@@ -1437,13 +1376,13 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalId")), m_ExternalId));
     }
-    if(m_ExternalParentIdIsSet)
+    if(m_ExternalParentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalParentId")), m_ExternalParentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalParentId")), m_ExternalParentId.get()));
     }
-    if(m_AvatarSrcIsSet)
+    if(m_AvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc.get()));
     }
     if(m_IsSpamIsSet)
     {
@@ -1461,17 +1400,17 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasImages")), m_HasImages));
     }
-    if(m_PageNumberIsSet)
+    if(m_PageNumber.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumber")), m_PageNumber));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumber")), m_PageNumber.get()));
     }
-    if(m_PageNumberOFIsSet)
+    if(m_PageNumberOF.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumberOF")), m_PageNumberOF));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumberOF")), m_PageNumberOF.get()));
     }
-    if(m_PageNumberNFIsSet)
+    if(m_PageNumberNF.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumberNF")), m_PageNumberNF));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageNumberNF")), m_PageNumberNF.get()));
     }
     if(m_HasLinksIsSet)
     {
@@ -1485,9 +1424,9 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("approved")), m_Approved));
     }
-    if(m_LocaleIsSet)
+    if(m_Locale.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale.get()));
     }
     if(m_IsDeletedIsSet)
     {
@@ -1509,33 +1448,33 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByModerator")), m_IsByModerator));
     }
-    if(m_IsPinnedIsSet)
+    if(m_IsPinned.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned.get()));
     }
-    if(m_IsLockedIsSet)
+    if(m_IsLocked.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked.get()));
     }
-    if(m_FlagCountIsSet)
+    if(m_FlagCount.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount.get()));
     }
-    if(m_RatingIsSet)
+    if(m_Rating.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("rating")), m_Rating));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("rating")), m_Rating.get()));
     }
-    if(m_DisplayLabelIsSet)
+    if(m_DisplayLabel.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel.get()));
     }
     if(m_FromProductIdIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromProductId")), m_FromProductId));
     }
-    if(m_MetaIsSet)
+    if(m_Meta.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta.get()));
     }
     if(m_IpHashIsSet)
     {
@@ -1549,21 +1488,21 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hashTags")), m_HashTags));
     }
-    if(m_BadgesIsSet)
+    if(m_Badges.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("badges")), m_Badges));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("badges")), m_Badges.get()));
     }
-    if(m_DomainIsSet)
+    if(m_Domain.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("domain")), m_Domain));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("domain")), m_Domain.get()));
     }
     if(m_VeteranBadgeProcessedIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("veteranBadgeProcessed")), m_VeteranBadgeProcessed));
     }
-    if(m_ModerationGroupIdsIsSet)
+    if(m_ModerationGroupIds.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds")), m_ModerationGroupIds));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds")), m_ModerationGroupIds.get()));
     }
     if(m_DidProcessBadgesIsSet)
     {
@@ -1585,17 +1524,17 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("feedbackIds")), m_FeedbackIds));
     }
-    if(m_LogsIsSet)
+    if(m_Logs.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("logs")), m_Logs));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("logs")), m_Logs.get()));
     }
-    if(m_GroupIdsIsSet)
+    if(m_GroupIds.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("groupIds")), m_GroupIds));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("groupIds")), m_GroupIds.get()));
     }
-    if(m_ViewCountIsSet)
+    if(m_ViewCount.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("viewCount")), m_ViewCount));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("viewCount")), m_ViewCount.get()));
     }
     if(m_RequiresVerificationIsSet)
     {
@@ -2153,87 +2092,83 @@ void FComment::unsetUrl()
 }
 utility::string_t FComment::getPageTitle() const
 {
-    return m_PageTitle;
+    return m_PageTitle.get();
 }
 
 
 void FComment::setPageTitle(const utility::string_t& value)
 {
     m_PageTitle = value;
-    m_PageTitleIsSet = true;
 }
 
 bool FComment::pageTitleIsSet() const
 {
-    return m_PageTitleIsSet;
+    return m_PageTitle.has_value();
 }
 
 void FComment::unsetPageTitle()
 {
-    m_PageTitleIsSet = false;
+    m_PageTitle.reset();
 }
 utility::string_t FComment::getUserId() const
 {
-    return m_UserId;
+    return m_UserId.get();
 }
 
 
 void FComment::setUserId(const utility::string_t& value)
 {
     m_UserId = value;
-    m_UserIdIsSet = true;
 }
 
 bool FComment::userIdIsSet() const
 {
-    return m_UserIdIsSet;
+    return m_UserId.has_value();
 }
 
 void FComment::unsetUserId()
 {
-    m_UserIdIsSet = false;
+    m_UserId.reset();
 }
 utility::string_t FComment::getAnonUserId() const
 {
-    return m_AnonUserId;
+    return m_AnonUserId.get();
 }
 
 
 void FComment::setAnonUserId(const utility::string_t& value)
 {
     m_AnonUserId = value;
-    m_AnonUserIdIsSet = true;
 }
 
 bool FComment::anonUserIdIsSet() const
 {
-    return m_AnonUserIdIsSet;
+    return m_AnonUserId.has_value();
 }
 
 void FComment::unsetAnonUserId()
 {
-    m_AnonUserIdIsSet = false;
+    m_AnonUserId.reset();
 }
 utility::string_t FComment::getCommenterEmail() const
 {
-    return m_CommenterEmail;
+    return m_CommenterEmail.get();
 }
 
 
 void FComment::setCommenterEmail(const utility::string_t& value)
 {
     m_CommenterEmail = value;
-    m_CommenterEmailIsSet = true;
 }
 
 bool FComment::commenterEmailIsSet() const
 {
-    return m_CommenterEmailIsSet;
+    return m_CommenterEmail.has_value();
 }
 
 void FComment::unsetCommenterEmail()
 {
-    m_CommenterEmailIsSet = false;
+    m_CommenterEmail.reset();
 }
 utility::string_t FComment::getCommenterName() const
 {
@@ -2258,24 +2193,23 @@ void FComment::unsetCommenterName()
 }
 utility::string_t FComment::getCommenterLink() const
 {
-    return m_CommenterLink;
+    return m_CommenterLink.get();
 }
 
 
 void FComment::setCommenterLink(const utility::string_t& value)
 {
     m_CommenterLink = value;
-    m_CommenterLinkIsSet = true;
 }
 
 bool FComment::commenterLinkIsSet() const
 {
-    return m_CommenterLinkIsSet;
+    return m_CommenterLink.has_value();
 }
 
 void FComment::unsetCommenterLink()
 {
-    m_CommenterLinkIsSet = false;
+    m_CommenterLink.reset();
 }
 utility::string_t FComment::getComment() const
 {
@@ -2321,167 +2255,159 @@ void FComment::unsetCommentHTML()
 }
 utility::string_t FComment::getParentId() const
 {
-    return m_ParentId;
+    return m_ParentId.get();
 }
 
 
 void FComment::setParentId(const utility::string_t& value)
 {
     m_ParentId = value;
-    m_ParentIdIsSet = true;
 }
 
 bool FComment::parentIdIsSet() const
 {
-    return m_ParentIdIsSet;
+    return m_ParentId.has_value();
 }
 
 void FComment::unsetParentId()
 {
-    m_ParentIdIsSet = false;
+    m_ParentId.reset();
 }
 utility::datetime FComment::getDate() const
 {
-    return m_date;
+    return m_date.get();
 }
 
 
 void FComment::setDate(const utility::datetime& value)
 {
     m_date = value;
-    m_dateIsSet = true;
 }
 
 bool FComment::dateIsSet() const
 {
-    return m_dateIsSet;
+    return m_date.has_value();
 }
 
 void FComment::unsetdate()
 {
-    m_dateIsSet = false;
+    m_date.reset();
 }
 utility::string_t FComment::getLocalDateString() const
 {
-    return m_LocalDateString;
+    return m_LocalDateString.get();
 }
 
 
 void FComment::setLocalDateString(const utility::string_t& value)
 {
     m_LocalDateString = value;
-    m_LocalDateStringIsSet = true;
 }
 
 bool FComment::localDateStringIsSet() const
 {
-    return m_LocalDateStringIsSet;
+    return m_LocalDateString.has_value();
 }
 
 void FComment::unsetLocalDateString()
 {
-    m_LocalDateStringIsSet = false;
+    m_LocalDateString.reset();
 }
 int32_t FComment::getLocalDateHours() const
 {
-    return m_LocalDateHours;
+    return m_LocalDateHours.get();
 }
 
 void FComment::setLocalDateHours(int32_t value)
 {
     m_LocalDateHours = value;
-    m_LocalDateHoursIsSet = true;
 }
 
 bool FComment::localDateHoursIsSet() const
 {
-    return m_LocalDateHoursIsSet;
+    return m_LocalDateHours.has_value();
 }
 
 void FComment::unsetLocalDateHours()
 {
-    m_LocalDateHoursIsSet = false;
+    m_LocalDateHours.reset();
 }
 int32_t FComment::getVotes() const
 {
-    return m_Votes;
+    return m_Votes.get();
 }
 
 void FComment::setVotes(int32_t value)
 {
     m_Votes = value;
-    m_VotesIsSet = true;
 }
 
 bool FComment::votesIsSet() const
 {
-    return m_VotesIsSet;
+    return m_Votes.has_value();
 }
 
 void FComment::unsetVotes()
 {
-    m_VotesIsSet = false;
+    m_Votes.reset();
 }
 int32_t FComment::getVotesUp() const
 {
-    return m_VotesUp;
+    return m_VotesUp.get();
 }
 
 void FComment::setVotesUp(int32_t value)
 {
     m_VotesUp = value;
-    m_VotesUpIsSet = true;
 }
 
 bool FComment::votesUpIsSet() const
 {
-    return m_VotesUpIsSet;
+    return m_VotesUp.has_value();
 }
 
 void FComment::unsetVotesUp()
 {
-    m_VotesUpIsSet = false;
+    m_VotesUp.reset();
 }
 int32_t FComment::getVotesDown() const
 {
-    return m_VotesDown;
+    return m_VotesDown.get();
 }
 
 void FComment::setVotesDown(int32_t value)
 {
     m_VotesDown = value;
-    m_VotesDownIsSet = true;
 }
 
 bool FComment::votesDownIsSet() const
 {
-    return m_VotesDownIsSet;
+    return m_VotesDown.has_value();
 }
 
 void FComment::unsetVotesDown()
 {
-    m_VotesDownIsSet = false;
+    m_VotesDown.reset();
 }
 utility::datetime FComment::getExpireAt() const
 {
-    return m_ExpireAt;
+    return m_ExpireAt.get();
 }
 
 
 void FComment::setExpireAt(const utility::datetime& value)
 {
     m_ExpireAt = value;
-    m_ExpireAtIsSet = true;
 }
 
 bool FComment::expireAtIsSet() const
 {
-    return m_ExpireAtIsSet;
+    return m_ExpireAt.has_value();
 }
 
 void FComment::unsetExpireAt()
 {
-    m_ExpireAtIsSet = false;
+    m_ExpireAt.reset();
 }
 bool FComment::isVerified() const
 {
@@ -2505,45 +2431,43 @@ void FComment::unsetVerified()
 }
 utility::datetime FComment::getVerifiedDate() const
 {
-    return m_VerifiedDate;
+    return m_VerifiedDate.get();
 }
 
 
 void FComment::setVerifiedDate(const utility::datetime& value)
 {
     m_VerifiedDate = value;
-    m_VerifiedDateIsSet = true;
 }
 
 bool FComment::verifiedDateIsSet() const
 {
-    return m_VerifiedDateIsSet;
+    return m_VerifiedDate.has_value();
 }
 
 void FComment::unsetVerifiedDate()
 {
-    m_VerifiedDateIsSet = false;
+    m_VerifiedDate.reset();
 }
 utility::string_t FComment::getVerificationId() const
 {
-    return m_VerificationId;
+    return m_VerificationId.get();
 }
 
 
 void FComment::setVerificationId(const utility::string_t& value)
 {
     m_VerificationId = value;
-    m_VerificationIdIsSet = true;
 }
 
 bool FComment::verificationIdIsSet() const
 {
-    return m_VerificationIdIsSet;
+    return m_VerificationId.has_value();
 }
 
 void FComment::unsetVerificationId()
 {
-    m_VerificationIdIsSet = false;
+    m_VerificationId.reset();
 }
 bool FComment::isNotificationSentForParent() const
 {
@@ -2648,45 +2572,43 @@ void FComment::unsetExternalId()
 }
 utility::string_t FComment::getExternalParentId() const
 {
-    return m_ExternalParentId;
+    return m_ExternalParentId.get();
 }
 
 
 void FComment::setExternalParentId(const utility::string_t& value)
 {
     m_ExternalParentId = value;
-    m_ExternalParentIdIsSet = true;
 }
 
 bool FComment::externalParentIdIsSet() const
 {
-    return m_ExternalParentIdIsSet;
+    return m_ExternalParentId.has_value();
 }
 
 void FComment::unsetExternalParentId()
 {
-    m_ExternalParentIdIsSet = false;
+    m_ExternalParentId.reset();
 }
 utility::string_t FComment::getAvatarSrc() const
 {
-    return m_AvatarSrc;
+    return m_AvatarSrc.get();
 }
 
 
 void FComment::setAvatarSrc(const utility::string_t& value)
 {
     m_AvatarSrc = value;
-    m_AvatarSrcIsSet = true;
 }
 
 bool FComment::avatarSrcIsSet() const
 {
-    return m_AvatarSrcIsSet;
+    return m_AvatarSrc.has_value();
 }
 
 void FComment::unsetAvatarSrc()
 {
-    m_AvatarSrcIsSet = false;
+    m_AvatarSrc.reset();
 }
 bool FComment::isIsSpam() const
 {
@@ -2770,63 +2692,60 @@ void FComment::unsetHasImages()
 }
 int32_t FComment::getPageNumber() const
 {
-    return m_PageNumber;
+    return m_PageNumber.get();
 }
 
 void FComment::setPageNumber(int32_t value)
 {
     m_PageNumber = value;
-    m_PageNumberIsSet = true;
 }
 
 bool FComment::pageNumberIsSet() const
 {
-    return m_PageNumberIsSet;
+    return m_PageNumber.has_value();
 }
 
 void FComment::unsetPageNumber()
 {
-    m_PageNumberIsSet = false;
+    m_PageNumber.reset();
 }
 int32_t FComment::getPageNumberOF() const
 {
-    return m_PageNumberOF;
+    return m_PageNumberOF.get();
 }
 
 void FComment::setPageNumberOF(int32_t value)
 {
     m_PageNumberOF = value;
-    m_PageNumberOFIsSet = true;
 }
 
 bool FComment::pageNumberOFIsSet() const
 {
-    return m_PageNumberOFIsSet;
+    return m_PageNumberOF.has_value();
 }
 
 void FComment::unsetPageNumberOF()
 {
-    m_PageNumberOFIsSet = false;
+    m_PageNumberOF.reset();
 }
 int32_t FComment::getPageNumberNF() const
 {
-    return m_PageNumberNF;
+    return m_PageNumberNF.get();
 }
 
 void FComment::setPageNumberNF(int32_t value)
 {
     m_PageNumberNF = value;
-    m_PageNumberNFIsSet = true;
 }
 
 bool FComment::pageNumberNFIsSet() const
 {
-    return m_PageNumberNFIsSet;
+    return m_PageNumberNF.has_value();
 }
 
 void FComment::unsetPageNumberNF()
 {
-    m_PageNumberNFIsSet = false;
+    m_PageNumberNF.reset();
 }
 bool FComment::isHasLinks() const
 {
@@ -2890,24 +2809,23 @@ void FComment::unsetApproved()
 }
 utility::string_t FComment::getLocale() const
 {
-    return m_Locale;
+    return m_Locale.get();
 }
 
 
 void FComment::setLocale(const utility::string_t& value)
 {
     m_Locale = value;
-    m_LocaleIsSet = true;
 }
 
 bool FComment::localeIsSet() const
 {
-    return m_LocaleIsSet;
+    return m_Locale.has_value();
 }
 
 void FComment::unsetLocale()
 {
-    m_LocaleIsSet = false;
+    m_Locale.reset();
 }
 bool FComment::isIsDeleted() const
 {
@@ -3011,104 +2929,99 @@ void FComment::unsetIsByModerator()
 }
 bool FComment::isIsPinned() const
 {
-    return m_IsPinned;
+    return m_IsPinned.get();
 }
 
 void FComment::setIsPinned(bool value)
 {
     m_IsPinned = value;
-    m_IsPinnedIsSet = true;
 }
 
 bool FComment::isPinnedIsSet() const
 {
-    return m_IsPinnedIsSet;
+    return m_IsPinned.has_value();
 }
 
 void FComment::unsetIsPinned()
 {
-    m_IsPinnedIsSet = false;
+    m_IsPinned.reset();
 }
 bool FComment::isIsLocked() const
 {
-    return m_IsLocked;
+    return m_IsLocked.get();
 }
 
 void FComment::setIsLocked(bool value)
 {
     m_IsLocked = value;
-    m_IsLockedIsSet = true;
 }
 
 bool FComment::isLockedIsSet() const
 {
-    return m_IsLockedIsSet;
+    return m_IsLocked.has_value();
 }
 
 void FComment::unsetIsLocked()
 {
-    m_IsLockedIsSet = false;
+    m_IsLocked.reset();
 }
 int32_t FComment::getFlagCount() const
 {
-    return m_FlagCount;
+    return m_FlagCount.get();
 }
 
 void FComment::setFlagCount(int32_t value)
 {
     m_FlagCount = value;
-    m_FlagCountIsSet = true;
 }
 
 bool FComment::flagCountIsSet() const
 {
-    return m_FlagCountIsSet;
+    return m_FlagCount.has_value();
 }
 
 void FComment::unsetFlagCount()
 {
-    m_FlagCountIsSet = false;
+    m_FlagCount.reset();
 }
 double FComment::getRating() const
 {
-    return m_Rating;
+    return m_Rating.get();
 }
 
 void FComment::setRating(double value)
 {
     m_Rating = value;
-    m_RatingIsSet = true;
 }
 
 bool FComment::ratingIsSet() const
 {
-    return m_RatingIsSet;
+    return m_Rating.has_value();
 }
 
 void FComment::unsetRating()
 {
-    m_RatingIsSet = false;
+    m_Rating.reset();
 }
 utility::string_t FComment::getDisplayLabel() const
 {
-    return m_DisplayLabel;
+    return m_DisplayLabel.get();
 }
 
 
 void FComment::setDisplayLabel(const utility::string_t& value)
 {
     m_DisplayLabel = value;
-    m_DisplayLabelIsSet = true;
 }
 
 bool FComment::displayLabelIsSet() const
 {
-    return m_DisplayLabelIsSet;
+    return m_DisplayLabel.has_value();
 }
 
 void FComment::unsetDisplayLabel()
 {
-    m_DisplayLabelIsSet = false;
+    m_DisplayLabel.reset();
 }
 int32_t FComment::getFromProductId() const
 {
@@ -3132,24 +3045,23 @@ void FComment::unsetFromProductId()
 }
 std::shared_ptr<FComment_meta> FComment::getMeta() const
 {
-    return m_Meta;
+    return m_Meta.get();
 }
 
 
 void FComment::setMeta(const std::shared_ptr<FComment_meta>& value)
 {
     m_Meta = value;
-    m_MetaIsSet = true;
 }
 
 bool FComment::metaIsSet() const
 {
-    return m_MetaIsSet;
+    return m_Meta.has_value();
 }
 
 void FComment::unsetMeta()
 {
-    m_MetaIsSet = false;
+    m_Meta.reset();
 }
 utility::string_t FComment::getIpHash() const
 {
@@ -3216,45 +3128,43 @@ void FComment::unsetHashTags()
 }
 std::vector<std::shared_ptr<CommentUserBadgeInfo>> FComment::getBadges() const
 {
-    return m_Badges;
+    return m_Badges.get();
 }
 
 
 void FComment::setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value)
 {
     m_Badges = value;
-    m_BadgesIsSet = true;
 }
 
 bool FComment::badgesIsSet() const
 {
-    return m_BadgesIsSet;
+    return m_Badges.has_value();
 }
 
 void FComment::unsetBadges()
 {
-    m_BadgesIsSet = false;
+    m_Badges.reset();
 }
 utility::string_t FComment::getDomain() const
 {
-    return m_Domain;
+    return m_Domain.get();
 }
 
 
 void FComment::setDomain(const utility::string_t& value)
 {
     m_Domain = value;
-    m_DomainIsSet = true;
 }
 
 bool FComment::domainIsSet() const
 {
-    return m_DomainIsSet;
+    return m_Domain.has_value();
 }
 
 void FComment::unsetDomain()
 {
-    m_DomainIsSet = false;
+    m_Domain.reset();
 }
 utility::string_t FComment::getVeteranBadgeProcessed() const
 {
@@ -3279,24 +3189,23 @@ void FComment::unsetVeteranBadgeProcessed()
 }
 std::vector<utility::string_t> FComment::getModerationGroupIds() const
 {
-    return m_ModerationGroupIds;
+    return m_ModerationGroupIds.get();
 }
 
 
 void FComment::setModerationGroupIds(const std::vector<utility::string_t>& value)
 {
     m_ModerationGroupIds = value;
-    m_ModerationGroupIdsIsSet = true;
 }
 
 bool FComment::moderationGroupIdsIsSet() const
 {
-    return m_ModerationGroupIdsIsSet;
+    return m_ModerationGroupIds.has_value();
 }
 
 void FComment::unsetModerationGroupIds()
 {
-    m_ModerationGroupIdsIsSet = false;
+    m_ModerationGroupIds.reset();
 }
 bool FComment::isDidProcessBadges() const
 {
@@ -3402,65 +3311,62 @@ void FComment::unsetFeedbackIds()
 }
 std::vector<std::shared_ptr<CommentLogEntry>> FComment::getLogs() const
 {
-    return m_Logs;
+    return m_Logs.get();
 }
 
 
 void FComment::setLogs(const std::vector<std::shared_ptr<CommentLogEntry>>& value)
 {
     m_Logs = value;
-    m_LogsIsSet = true;
 }
 
 bool FComment::logsIsSet() const
 {
-    return m_LogsIsSet;
+    return m_Logs.has_value();
 }
 
 void FComment::unsetLogs()
 {
-    m_LogsIsSet = false;
+    m_Logs.reset();
 }
 std::vector<utility::string_t> FComment::getGroupIds() const
 {
-    return m_GroupIds;
+    return m_GroupIds.get();
 }
 
 
 void FComment::setGroupIds(const std::vector<utility::string_t>& value)
 {
     m_GroupIds = value;
-    m_GroupIdsIsSet = true;
 }
 
 bool FComment::groupIdsIsSet() const
 {
-    return m_GroupIdsIsSet;
+    return m_GroupIds.has_value();
 }
 
 void FComment::unsetGroupIds()
 {
-    m_GroupIdsIsSet = false;
+    m_GroupIds.reset();
 }
 int64_t FComment::getViewCount() const
 {
-    return m_ViewCount;
+    return m_ViewCount.get();
 }
 
 void FComment::setViewCount(int64_t value)
 {
     m_ViewCount = value;
-    m_ViewCountIsSet = true;
 }
 
 bool FComment::viewCountIsSet() const
 {
-    return m_ViewCountIsSet;
+    return m_ViewCount.has_value();
 }
 
 void FComment::unsetViewCount()
 {
-    m_ViewCountIsSet = false;
+    m_ViewCount.reset();
 }
 bool FComment::isRequiresVerification() const
 {

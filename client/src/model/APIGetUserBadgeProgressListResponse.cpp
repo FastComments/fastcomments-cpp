@@ -37,12 +37,12 @@ web::json::value APIGetUserBadgeProgressListResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_UserBadgeProgressesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userBadgeProgresses"))] = ModelBase::toJson(m_UserBadgeProgresses);
     }

@@ -42,27 +42,27 @@ web::json::value HeaderState::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_NotificationTypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("NotificationType"))] = ModelBase::toJson(m_NotificationType);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_UserIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userIdWS"))] = ModelBase::toJson(m_UserIdWS);
     }
     if(m_NotificationCountsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationCounts"))] = ModelBase::toJson(m_NotificationCounts);
     }

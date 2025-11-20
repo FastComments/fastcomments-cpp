@@ -22,7 +22,6 @@ CreateCommentPublic_200_response::CreateCommentPublic_200_response()
 {
     m_StatusIsSet = false;
     m_CommentIsSet = false;
-    m_UserIsSet = false;
     m_ModuleDataIsSet = false;
     m_UserIdWS = utility::conversions::to_string_t("");
     m_UserIdWSIsSet = false;
@@ -54,62 +53,62 @@ web::json::value CreateCommentPublic_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
-    if(m_UserIsSet)
-    {   
+    if(m_User.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
+        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User.get());
     }
     if(m_ModuleDataIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("moduleData"))] = ModelBase::toJson(m_ModuleData);
     }
     if(m_UserIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userIdWS"))] = ModelBase::toJson(m_UserIdWS);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
@@ -270,9 +269,9 @@ void CreateCommentPublic_200_response::toMultipart(std::shared_ptr<MultipartForm
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment));
     }
-    if(m_UserIsSet)
+    if(m_User.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User.get()));
     }
     if(m_ModuleDataIsSet)
     {
@@ -441,24 +440,23 @@ void CreateCommentPublic_200_response::unsetComment()
 }
 std::shared_ptr<UserSessionInfo> CreateCommentPublic_200_response::getUser() const
 {
-    return m_User;
+    return m_User.get();
 }
 
 
 void CreateCommentPublic_200_response::setUser(const std::shared_ptr<UserSessionInfo>& value)
 {
     m_User = value;
-    m_UserIsSet = true;
 }
 
 bool CreateCommentPublic_200_response::userIsSet() const
 {
-    return m_UserIsSet;
+    return m_User.has_value();
 }
 
 void CreateCommentPublic_200_response::unsetUser()
 {
-    m_UserIsSet = false;
+    m_User.reset();
 }
 std::map<utility::string_t, std::shared_ptr<Object>> CreateCommentPublic_200_response::getModuleData() const
 {

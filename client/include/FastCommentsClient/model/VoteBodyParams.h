@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_VoteBodyParams_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -85,17 +86,14 @@ public:
 
 
 protected:
-    utility::string_t m_CommenterEmail;
-    bool m_CommenterEmailIsSet;
+    boost::optional<utility::string_t> m_CommenterEmail;
 
-    utility::string_t m_CommenterName;
-    bool m_CommenterNameIsSet;
+    boost::optional<utility::string_t> m_CommenterName;
 
     VoteDirEnum m_VoteDir;
     bool m_VoteDirIsSet;
 
-    utility::string_t m_Url;
-    bool m_UrlIsSet;
+    boost::optional<utility::string_t> m_Url;
 
 };
 

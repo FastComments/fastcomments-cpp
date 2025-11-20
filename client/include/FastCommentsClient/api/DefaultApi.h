@@ -71,13 +71,13 @@
 #include "FastCommentsClient/model/PatchDomainConfigParams.h"
 #include "FastCommentsClient/model/PatchPageAPIResponse.h"
 #include "FastCommentsClient/model/PatchSSOUserAPIResponse.h"
-#include "FastCommentsClient/model/Pick_APIComment_UpdatableCommentFields_.h"
 #include "FastCommentsClient/model/PutSSOUserAPIResponse.h"
 #include "FastCommentsClient/model/SORT_DIR.h"
 #include "FastCommentsClient/model/SaveComment_200_response.h"
 #include "FastCommentsClient/model/SortDirections.h"
 #include "FastCommentsClient/model/UnBlockCommentPublic_200_response.h"
 #include "FastCommentsClient/model/UnBlockFromCommentParams.h"
+#include "FastCommentsClient/model/UpdatableCommentParams.h"
 #include "FastCommentsClient/model/UpdateAPIPageData.h"
 #include "FastCommentsClient/model/UpdateAPISSOUserData.h"
 #include "FastCommentsClient/model/UpdateDomainConfigParams.h"
@@ -786,14 +786,14 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    /// <param name="body"></param>
+    /// <param name="updatableCommentParams"></param>
     /// <param name="contextUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="doSpamCheck"> (optional, default to false)</param>
     /// <param name="isLive"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<FlagCommentPublic_200_response>> updateComment(
         utility::string_t tenantId,
         utility::string_t id,
-        std::shared_ptr<Pick_APIComment_UpdatableCommentFields_> body,
+        std::shared_ptr<UpdatableCommentParams> updatableCommentParams,
         boost::optional<utility::string_t> contextUserId,
         boost::optional<bool> doSpamCheck,
         boost::optional<bool> isLive

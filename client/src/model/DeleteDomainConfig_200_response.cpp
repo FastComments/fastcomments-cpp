@@ -20,7 +20,6 @@ namespace model {
 
 DeleteDomainConfig_200_response::DeleteDomainConfig_200_response()
 {
-    m_StatusIsSet = false;
 }
 
 DeleteDomainConfig_200_response::~DeleteDomainConfig_200_response()
@@ -35,10 +34,10 @@ void DeleteDomainConfig_200_response::validate()
 web::json::value DeleteDomainConfig_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_StatusIsSet)
-    {   
+    if(m_Status.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status.get());
     }
 
     return val;
@@ -68,9 +67,9 @@ void DeleteDomainConfig_200_response::toMultipart(std::shared_ptr<MultipartFormD
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_StatusIsSet)
+    if(m_Status.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status.get()));
     }
 }
 
@@ -95,24 +94,23 @@ bool DeleteDomainConfig_200_response::fromMultiPart(std::shared_ptr<MultipartFor
 
 std::shared_ptr<AnyType> DeleteDomainConfig_200_response::getStatus() const
 {
-    return m_Status;
+    return m_Status.get();
 }
 
 
 void DeleteDomainConfig_200_response::setStatus(const std::shared_ptr<AnyType>& value)
 {
     m_Status = value;
-    m_StatusIsSet = true;
 }
 
 bool DeleteDomainConfig_200_response::statusIsSet() const
 {
-    return m_StatusIsSet;
+    return m_Status.has_value();
 }
 
 void DeleteDomainConfig_200_response::unsetStatus()
 {
-    m_StatusIsSet = false;
+    m_Status.reset();
 }
 
 }

@@ -10,20 +10,19 @@
  */
 
 /*
- * Pick_FComment_APICommentFieldsKeys__meta.h
+ * SetCommentTextResult.h
  *
  * 
  */
 
-#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_APICommentFieldsKeys__meta_H_
-#define ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_APICommentFieldsKeys__meta_H_
+#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_SetCommentTextResult_H_
+#define ORG_OPENAPITOOLS_CLIENT_MODEL_SetCommentTextResult_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
 #include <cpprest/details/basic_types.h>
-#include <map>
-#include "FastCommentsClient/AnyType.h"
 
 namespace org {
 namespace openapitools {
@@ -32,12 +31,12 @@ namespace model {
 
 
 
-class  Pick_FComment_APICommentFieldsKeys__meta
+class  SetCommentTextResult
     : public ModelBase
 {
 public:
-    Pick_FComment_APICommentFieldsKeys__meta();
-    virtual ~Pick_FComment_APICommentFieldsKeys__meta();
+    SetCommentTextResult();
+    virtual ~SetCommentTextResult();
 
     /////////////////////////////////////////////
     /// ModelBase overrides
@@ -52,26 +51,26 @@ public:
 
 
     /////////////////////////////////////////////
-    /// Pick_FComment_APICommentFieldsKeys__meta members
+    /// SetCommentTextResult members
 
 
-    utility::string_t getWpUserId() const;
-    bool wpUserIdIsSet() const;
-    void unsetWpUserId();
-    void setWpUserId(const utility::string_t& value);
+    bool isApproved() const;
+    bool approvedIsSet() const;
+    void unsetApproved();
+    void setApproved(bool value);
 
-    utility::string_t getWpPostId() const;
-    bool wpPostIdIsSet() const;
-    void unsetWpPostId();
-    void setWpPostId(const utility::string_t& value);
+    utility::string_t getCommentHTML() const;
+    bool commentHTMLIsSet() const;
+    void unsetCommentHTML();
+    void setCommentHTML(const utility::string_t& value);
 
 
 protected:
-    utility::string_t m_WpUserId;
-    bool m_WpUserIdIsSet;
+    bool m_Approved;
+    bool m_ApprovedIsSet;
 
-    utility::string_t m_WpPostId;
-    bool m_WpPostIdIsSet;
+    utility::string_t m_CommentHTML;
+    bool m_CommentHTMLIsSet;
 
 };
 
@@ -81,4 +80,4 @@ protected:
 }
 }
 
-#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_APICommentFieldsKeys__meta_H_ */
+#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_SetCommentTextResult_H_ */

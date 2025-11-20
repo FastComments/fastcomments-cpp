@@ -11,54 +11,29 @@
 
 
 
-#include "FastCommentsClient/model/Pick_APIComment_UpdatableCommentFields_.h"
+#include "FastCommentsClient/model/UpdatableCommentParams.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-Pick_APIComment_UpdatableCommentFields_::Pick_APIComment_UpdatableCommentFields_()
+UpdatableCommentParams::UpdatableCommentParams()
 {
-    m_dateIsSet = false;
     m_UrlId = utility::conversions::to_string_t("");
     m_UrlIdIsSet = false;
     m_UrlIdRaw = utility::conversions::to_string_t("");
     m_UrlIdRawIsSet = false;
     m_Url = utility::conversions::to_string_t("");
     m_UrlIsSet = false;
-    m_PageTitle = utility::conversions::to_string_t("");
-    m_PageTitleIsSet = false;
-    m_UserId = utility::conversions::to_string_t("");
-    m_UserIdIsSet = false;
-    m_CommenterEmail = utility::conversions::to_string_t("");
-    m_CommenterEmailIsSet = false;
     m_CommenterName = utility::conversions::to_string_t("");
     m_CommenterNameIsSet = false;
-    m_CommenterLink = utility::conversions::to_string_t("");
-    m_CommenterLinkIsSet = false;
     m_Comment = utility::conversions::to_string_t("");
     m_CommentIsSet = false;
     m_CommentHTML = utility::conversions::to_string_t("");
     m_CommentHTMLIsSet = false;
-    m_ParentId = utility::conversions::to_string_t("");
-    m_ParentIdIsSet = false;
-    m_LocalDateString = utility::conversions::to_string_t("");
-    m_LocalDateStringIsSet = false;
-    m_LocalDateHours = 0;
-    m_LocalDateHoursIsSet = false;
-    m_Votes = 0;
-    m_VotesIsSet = false;
-    m_VotesUp = 0;
-    m_VotesUpIsSet = false;
-    m_VotesDown = 0;
-    m_VotesDownIsSet = false;
-    m_ExpireAt = utility::datetime();
-    m_ExpireAtIsSet = false;
     m_Verified = false;
     m_VerifiedIsSet = false;
-    m_VerifiedDate = utility::datetime();
-    m_VerifiedDateIsSet = false;
     m_NotificationSentForParent = false;
     m_NotificationSentForParentIsSet = false;
     m_NotificationSentForParentTenant = false;
@@ -67,10 +42,6 @@ Pick_APIComment_UpdatableCommentFields_::Pick_APIComment_UpdatableCommentFields_
     m_ReviewedIsSet = false;
     m_ExternalId = utility::conversions::to_string_t("");
     m_ExternalIdIsSet = false;
-    m_ExternalParentId = utility::conversions::to_string_t("");
-    m_ExternalParentIdIsSet = false;
-    m_AvatarSrc = utility::conversions::to_string_t("");
-    m_AvatarSrcIsSet = false;
     m_IsSpam = false;
     m_IsSpamIsSet = false;
     m_Approved = false;
@@ -83,223 +54,213 @@ Pick_APIComment_UpdatableCommentFields_::Pick_APIComment_UpdatableCommentFields_
     m_IsByAdminIsSet = false;
     m_IsByModerator = false;
     m_IsByModeratorIsSet = false;
-    m_IsPinned = false;
-    m_IsPinnedIsSet = false;
-    m_IsLocked = false;
-    m_IsLockedIsSet = false;
-    m_FlagCount = 0;
-    m_FlagCountIsSet = false;
-    m_DisplayLabel = utility::conversions::to_string_t("");
-    m_DisplayLabelIsSet = false;
-    m_MetaIsSet = false;
-    m_ModerationGroupIdsIsSet = false;
     m_FeedbackIdsIsSet = false;
 }
 
-Pick_APIComment_UpdatableCommentFields_::~Pick_APIComment_UpdatableCommentFields_()
+UpdatableCommentParams::~UpdatableCommentParams()
 {
 }
 
-void Pick_APIComment_UpdatableCommentFields_::validate()
+void UpdatableCommentParams::validate()
 {
     // TODO: implement validation
 }
 
-web::json::value Pick_APIComment_UpdatableCommentFields_::toJson() const
+web::json::value UpdatableCommentParams::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_dateIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date);
-    }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_UrlIdRawIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdRaw"))] = ModelBase::toJson(m_UrlIdRaw);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
-    if(m_PageTitleIsSet)
-    {   
+    if(m_PageTitle.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle.get());
     }
-    if(m_UserIdIsSet)
-    {   
+    if(m_UserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId.get());
     }
-    if(m_CommenterEmailIsSet)
-    {   
+    if(m_CommenterEmail.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail.get());
     }
     if(m_CommenterNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commenterName"))] = ModelBase::toJson(m_CommenterName);
     }
-    if(m_CommenterLinkIsSet)
-    {   
+    if(m_CommenterLink.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink.get());
     }
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_CommentHTMLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentHTML"))] = ModelBase::toJson(m_CommentHTML);
     }
-    if(m_ParentIdIsSet)
-    {   
+    if(m_ParentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId.get());
     }
-    if(m_LocalDateStringIsSet)
-    {   
+    if(m_date.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("localDateString"))] = ModelBase::toJson(m_LocalDateString);
+        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date.get());
     }
-    if(m_LocalDateHoursIsSet)
-    {   
+    if(m_LocalDateString.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("localDateHours"))] = ModelBase::toJson(m_LocalDateHours);
+        val[utility::conversions::to_string_t(_XPLATSTR("localDateString"))] = ModelBase::toJson(m_LocalDateString.get());
     }
-    if(m_VotesIsSet)
-    {   
+    if(m_LocalDateHours.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes);
+        val[utility::conversions::to_string_t(_XPLATSTR("localDateHours"))] = ModelBase::toJson(m_LocalDateHours.get());
     }
-    if(m_VotesUpIsSet)
-    {   
+    if(m_Votes.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp);
+        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes.get());
     }
-    if(m_VotesDownIsSet)
-    {   
+    if(m_VotesUp.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp.get());
     }
-    if(m_ExpireAtIsSet)
-    {   
+    if(m_VotesDown.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown.get());
+    }
+    if(m_ExpireAt.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt.get());
     }
     if(m_VerifiedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("verified"))] = ModelBase::toJson(m_Verified);
     }
-    if(m_VerifiedDateIsSet)
-    {   
+    if(m_VerifiedDate.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("verifiedDate"))] = ModelBase::toJson(m_VerifiedDate);
+        val[utility::conversions::to_string_t(_XPLATSTR("verifiedDate"))] = ModelBase::toJson(m_VerifiedDate.get());
     }
     if(m_NotificationSentForParentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationSentForParent"))] = ModelBase::toJson(m_NotificationSentForParent);
     }
     if(m_NotificationSentForParentTenantIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationSentForParentTenant"))] = ModelBase::toJson(m_NotificationSentForParentTenant);
     }
     if(m_ReviewedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reviewed"))] = ModelBase::toJson(m_Reviewed);
     }
     if(m_ExternalIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("externalId"))] = ModelBase::toJson(m_ExternalId);
     }
-    if(m_ExternalParentIdIsSet)
-    {   
+    if(m_ExternalParentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("externalParentId"))] = ModelBase::toJson(m_ExternalParentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("externalParentId"))] = ModelBase::toJson(m_ExternalParentId.get());
     }
-    if(m_AvatarSrcIsSet)
-    {   
+    if(m_AvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc.get());
     }
     if(m_IsSpamIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isSpam"))] = ModelBase::toJson(m_IsSpam);
     }
     if(m_ApprovedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("approved"))] = ModelBase::toJson(m_Approved);
     }
     if(m_IsDeletedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDeleted"))] = ModelBase::toJson(m_IsDeleted);
     }
     if(m_IsDeletedUserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))] = ModelBase::toJson(m_IsDeletedUser);
     }
     if(m_IsByAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByAdmin"))] = ModelBase::toJson(m_IsByAdmin);
     }
     if(m_IsByModeratorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByModerator"))] = ModelBase::toJson(m_IsByModerator);
     }
-    if(m_IsPinnedIsSet)
-    {   
+    if(m_IsPinned.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned);
+        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned.get());
     }
-    if(m_IsLockedIsSet)
-    {   
+    if(m_IsLocked.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked);
+        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked.get());
     }
-    if(m_FlagCountIsSet)
-    {   
+    if(m_FlagCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount.get());
     }
-    if(m_DisplayLabelIsSet)
-    {   
+    if(m_DisplayLabel.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
+        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel.get());
     }
-    if(m_MetaIsSet)
-    {   
+    if(m_Meta.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta);
+        val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta.get());
     }
-    if(m_ModerationGroupIdsIsSet)
-    {   
+    if(m_ModerationGroupIds.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))] = ModelBase::toJson(m_ModerationGroupIds);
+        val[utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))] = ModelBase::toJson(m_ModerationGroupIds.get());
     }
     if(m_FeedbackIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("feedbackIds"))] = ModelBase::toJson(m_FeedbackIds);
     }
@@ -307,20 +268,9 @@ web::json::value Pick_APIComment_UpdatableCommentFields_::toJson() const
     return val;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::fromJson(const web::json::value& val)
+bool UpdatableCommentParams::fromJson(const web::json::value& val)
 {
     bool ok = true;
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("date"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("date")));
-        if(!fieldValue.is_null())
-        {
-            utility::datetime refVal_setDate;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setDate);
-            setDate(refVal_setDate);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("urlId")));
@@ -439,6 +389,17 @@ bool Pick_APIComment_UpdatableCommentFields_::fromJson(const web::json::value& v
             utility::string_t refVal_setParentId;
             ok &= ModelBase::fromJson(fieldValue, refVal_setParentId);
             setParentId(refVal_setParentId);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("date"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("date")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setDate;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDate);
+            setDate(refVal_setDate);
             
         }
     }
@@ -711,7 +672,7 @@ bool Pick_APIComment_UpdatableCommentFields_::fromJson(const web::json::value& v
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("meta")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta> refVal_setMeta;
+            std::shared_ptr<FComment_meta> refVal_setMeta;
             ok &= ModelBase::fromJson(fieldValue, refVal_setMeta);
             setMeta(refVal_setMeta);
             
@@ -742,16 +703,12 @@ bool Pick_APIComment_UpdatableCommentFields_::fromJson(const web::json::value& v
     return ok;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
+void UpdatableCommentParams::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
 {
     utility::string_t namePrefix = prefix;
     if(namePrefix.size() > 0 && namePrefix.substr(namePrefix.size() - 1) != utility::conversions::to_string_t(_XPLATSTR(".")))
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
-    }
-    if(m_dateIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date));
     }
     if(m_UrlIdIsSet)
     {
@@ -765,25 +722,25 @@ void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
     }
-    if(m_PageTitleIsSet)
+    if(m_PageTitle.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle.get()));
     }
-    if(m_UserIdIsSet)
+    if(m_UserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId.get()));
     }
-    if(m_CommenterEmailIsSet)
+    if(m_CommenterEmail.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail.get()));
     }
     if(m_CommenterNameIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterName")), m_CommenterName));
     }
-    if(m_CommenterLinkIsSet)
+    if(m_CommenterLink.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink.get()));
     }
     if(m_CommentIsSet)
     {
@@ -793,41 +750,45 @@ void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentHTML")), m_CommentHTML));
     }
-    if(m_ParentIdIsSet)
+    if(m_ParentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId.get()));
     }
-    if(m_LocalDateStringIsSet)
+    if(m_date.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateString")), m_LocalDateString));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date.get()));
     }
-    if(m_LocalDateHoursIsSet)
+    if(m_LocalDateString.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateHours")), m_LocalDateHours));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateString")), m_LocalDateString.get()));
     }
-    if(m_VotesIsSet)
+    if(m_LocalDateHours.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("localDateHours")), m_LocalDateHours.get()));
     }
-    if(m_VotesUpIsSet)
+    if(m_Votes.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes.get()));
     }
-    if(m_VotesDownIsSet)
+    if(m_VotesUp.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp.get()));
     }
-    if(m_ExpireAtIsSet)
+    if(m_VotesDown.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown.get()));
+    }
+    if(m_ExpireAt.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt.get()));
     }
     if(m_VerifiedIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verified")), m_Verified));
     }
-    if(m_VerifiedDateIsSet)
+    if(m_VerifiedDate.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verifiedDate")), m_VerifiedDate));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verifiedDate")), m_VerifiedDate.get()));
     }
     if(m_NotificationSentForParentIsSet)
     {
@@ -845,13 +806,13 @@ void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalId")), m_ExternalId));
     }
-    if(m_ExternalParentIdIsSet)
+    if(m_ExternalParentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalParentId")), m_ExternalParentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("externalParentId")), m_ExternalParentId.get()));
     }
-    if(m_AvatarSrcIsSet)
+    if(m_AvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc.get()));
     }
     if(m_IsSpamIsSet)
     {
@@ -877,29 +838,29 @@ void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByModerator")), m_IsByModerator));
     }
-    if(m_IsPinnedIsSet)
+    if(m_IsPinned.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned.get()));
     }
-    if(m_IsLockedIsSet)
+    if(m_IsLocked.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked.get()));
     }
-    if(m_FlagCountIsSet)
+    if(m_FlagCount.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount.get()));
     }
-    if(m_DisplayLabelIsSet)
+    if(m_DisplayLabel.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel.get()));
     }
-    if(m_MetaIsSet)
+    if(m_Meta.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("meta")), m_Meta.get()));
     }
-    if(m_ModerationGroupIdsIsSet)
+    if(m_ModerationGroupIds.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds")), m_ModerationGroupIds));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds")), m_ModerationGroupIds.get()));
     }
     if(m_FeedbackIdsIsSet)
     {
@@ -907,7 +868,7 @@ void Pick_APIComment_UpdatableCommentFields_::toMultipart(std::shared_ptr<Multip
     }
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
+bool UpdatableCommentParams::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
 {
     bool ok = true;
     utility::string_t namePrefix = prefix;
@@ -916,12 +877,6 @@ bool Pick_APIComment_UpdatableCommentFields_::fromMultiPart(std::shared_ptr<Mult
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
 
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("date"))))
-    {
-        utility::datetime refVal_setDate;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("date"))), refVal_setDate );
-        setDate(refVal_setDate);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
     {
         utility::string_t refVal_setUrlId;
@@ -987,6 +942,12 @@ bool Pick_APIComment_UpdatableCommentFields_::fromMultiPart(std::shared_ptr<Mult
         utility::string_t refVal_setParentId;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("parentId"))), refVal_setParentId );
         setParentId(refVal_setParentId);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("date"))))
+    {
+        double refVal_setDate;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("date"))), refVal_setDate );
+        setDate(refVal_setDate);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("localDateString"))))
     {
@@ -1134,7 +1095,7 @@ bool Pick_APIComment_UpdatableCommentFields_::fromMultiPart(std::shared_ptr<Mult
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("meta"))))
     {
-        std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta> refVal_setMeta;
+        std::shared_ptr<FComment_meta> refVal_setMeta;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("meta"))), refVal_setMeta );
         setMeta(refVal_setMeta);
     }
@@ -1154,805 +1115,783 @@ bool Pick_APIComment_UpdatableCommentFields_::fromMultiPart(std::shared_ptr<Mult
 }
 
 
-utility::datetime Pick_APIComment_UpdatableCommentFields_::getDate() const
-{
-    return m_date;
-}
-
-
-void Pick_APIComment_UpdatableCommentFields_::setDate(const utility::datetime& value)
-{
-    m_date = value;
-    m_dateIsSet = true;
-}
-
-bool Pick_APIComment_UpdatableCommentFields_::dateIsSet() const
-{
-    return m_dateIsSet;
-}
-
-void Pick_APIComment_UpdatableCommentFields_::unsetdate()
-{
-    m_dateIsSet = false;
-}
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getUrlId() const
+utility::string_t UpdatableCommentParams::getUrlId() const
 {
     return m_UrlId;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setUrlId(const utility::string_t& value)
+void UpdatableCommentParams::setUrlId(const utility::string_t& value)
 {
     m_UrlId = value;
     m_UrlIdIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::urlIdIsSet() const
+bool UpdatableCommentParams::urlIdIsSet() const
 {
     return m_UrlIdIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetUrlId()
+void UpdatableCommentParams::unsetUrlId()
 {
     m_UrlIdIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getUrlIdRaw() const
+utility::string_t UpdatableCommentParams::getUrlIdRaw() const
 {
     return m_UrlIdRaw;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setUrlIdRaw(const utility::string_t& value)
+void UpdatableCommentParams::setUrlIdRaw(const utility::string_t& value)
 {
     m_UrlIdRaw = value;
     m_UrlIdRawIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::urlIdRawIsSet() const
+bool UpdatableCommentParams::urlIdRawIsSet() const
 {
     return m_UrlIdRawIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetUrlIdRaw()
+void UpdatableCommentParams::unsetUrlIdRaw()
 {
     m_UrlIdRawIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getUrl() const
+utility::string_t UpdatableCommentParams::getUrl() const
 {
     return m_Url;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setUrl(const utility::string_t& value)
+void UpdatableCommentParams::setUrl(const utility::string_t& value)
 {
     m_Url = value;
     m_UrlIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::urlIsSet() const
+bool UpdatableCommentParams::urlIsSet() const
 {
     return m_UrlIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetUrl()
+void UpdatableCommentParams::unsetUrl()
 {
     m_UrlIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getPageTitle() const
+utility::string_t UpdatableCommentParams::getPageTitle() const
 {
-    return m_PageTitle;
+    return m_PageTitle.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setPageTitle(const utility::string_t& value)
+void UpdatableCommentParams::setPageTitle(const utility::string_t& value)
 {
     m_PageTitle = value;
-    m_PageTitleIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::pageTitleIsSet() const
+bool UpdatableCommentParams::pageTitleIsSet() const
 {
-    return m_PageTitleIsSet;
+    return m_PageTitle.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetPageTitle()
+void UpdatableCommentParams::unsetPageTitle()
 {
-    m_PageTitleIsSet = false;
+    m_PageTitle.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getUserId() const
+utility::string_t UpdatableCommentParams::getUserId() const
 {
-    return m_UserId;
+    return m_UserId.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setUserId(const utility::string_t& value)
+void UpdatableCommentParams::setUserId(const utility::string_t& value)
 {
     m_UserId = value;
-    m_UserIdIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::userIdIsSet() const
+bool UpdatableCommentParams::userIdIsSet() const
 {
-    return m_UserIdIsSet;
+    return m_UserId.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetUserId()
+void UpdatableCommentParams::unsetUserId()
 {
-    m_UserIdIsSet = false;
+    m_UserId.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getCommenterEmail() const
+utility::string_t UpdatableCommentParams::getCommenterEmail() const
 {
-    return m_CommenterEmail;
+    return m_CommenterEmail.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setCommenterEmail(const utility::string_t& value)
+void UpdatableCommentParams::setCommenterEmail(const utility::string_t& value)
 {
     m_CommenterEmail = value;
-    m_CommenterEmailIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::commenterEmailIsSet() const
+bool UpdatableCommentParams::commenterEmailIsSet() const
 {
-    return m_CommenterEmailIsSet;
+    return m_CommenterEmail.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetCommenterEmail()
+void UpdatableCommentParams::unsetCommenterEmail()
 {
-    m_CommenterEmailIsSet = false;
+    m_CommenterEmail.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getCommenterName() const
+utility::string_t UpdatableCommentParams::getCommenterName() const
 {
     return m_CommenterName;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setCommenterName(const utility::string_t& value)
+void UpdatableCommentParams::setCommenterName(const utility::string_t& value)
 {
     m_CommenterName = value;
     m_CommenterNameIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::commenterNameIsSet() const
+bool UpdatableCommentParams::commenterNameIsSet() const
 {
     return m_CommenterNameIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetCommenterName()
+void UpdatableCommentParams::unsetCommenterName()
 {
     m_CommenterNameIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getCommenterLink() const
+utility::string_t UpdatableCommentParams::getCommenterLink() const
 {
-    return m_CommenterLink;
+    return m_CommenterLink.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setCommenterLink(const utility::string_t& value)
+void UpdatableCommentParams::setCommenterLink(const utility::string_t& value)
 {
     m_CommenterLink = value;
-    m_CommenterLinkIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::commenterLinkIsSet() const
+bool UpdatableCommentParams::commenterLinkIsSet() const
 {
-    return m_CommenterLinkIsSet;
+    return m_CommenterLink.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetCommenterLink()
+void UpdatableCommentParams::unsetCommenterLink()
 {
-    m_CommenterLinkIsSet = false;
+    m_CommenterLink.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getComment() const
+utility::string_t UpdatableCommentParams::getComment() const
 {
     return m_Comment;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setComment(const utility::string_t& value)
+void UpdatableCommentParams::setComment(const utility::string_t& value)
 {
     m_Comment = value;
     m_CommentIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::commentIsSet() const
+bool UpdatableCommentParams::commentIsSet() const
 {
     return m_CommentIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetComment()
+void UpdatableCommentParams::unsetComment()
 {
     m_CommentIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getCommentHTML() const
+utility::string_t UpdatableCommentParams::getCommentHTML() const
 {
     return m_CommentHTML;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setCommentHTML(const utility::string_t& value)
+void UpdatableCommentParams::setCommentHTML(const utility::string_t& value)
 {
     m_CommentHTML = value;
     m_CommentHTMLIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::commentHTMLIsSet() const
+bool UpdatableCommentParams::commentHTMLIsSet() const
 {
     return m_CommentHTMLIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetCommentHTML()
+void UpdatableCommentParams::unsetCommentHTML()
 {
     m_CommentHTMLIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getParentId() const
+utility::string_t UpdatableCommentParams::getParentId() const
 {
-    return m_ParentId;
+    return m_ParentId.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setParentId(const utility::string_t& value)
+void UpdatableCommentParams::setParentId(const utility::string_t& value)
 {
     m_ParentId = value;
-    m_ParentIdIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::parentIdIsSet() const
+bool UpdatableCommentParams::parentIdIsSet() const
 {
-    return m_ParentIdIsSet;
+    return m_ParentId.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetParentId()
+void UpdatableCommentParams::unsetParentId()
 {
-    m_ParentIdIsSet = false;
+    m_ParentId.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getLocalDateString() const
+double UpdatableCommentParams::getDate() const
 {
-    return m_LocalDateString;
+    return m_date.get();
+}
+
+void UpdatableCommentParams::setDate(double value)
+{
+    m_date = value;
+}
+
+bool UpdatableCommentParams::dateIsSet() const
+{
+    return m_date.has_value();
+}
+
+void UpdatableCommentParams::unsetdate()
+{
+    m_date.reset();
+}
+utility::string_t UpdatableCommentParams::getLocalDateString() const
+{
+    return m_LocalDateString.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setLocalDateString(const utility::string_t& value)
+void UpdatableCommentParams::setLocalDateString(const utility::string_t& value)
 {
     m_LocalDateString = value;
-    m_LocalDateStringIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::localDateStringIsSet() const
+bool UpdatableCommentParams::localDateStringIsSet() const
 {
-    return m_LocalDateStringIsSet;
+    return m_LocalDateString.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetLocalDateString()
+void UpdatableCommentParams::unsetLocalDateString()
 {
-    m_LocalDateStringIsSet = false;
+    m_LocalDateString.reset();
 }
-int32_t Pick_APIComment_UpdatableCommentFields_::getLocalDateHours() const
+int32_t UpdatableCommentParams::getLocalDateHours() const
 {
-    return m_LocalDateHours;
+    return m_LocalDateHours.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setLocalDateHours(int32_t value)
+void UpdatableCommentParams::setLocalDateHours(int32_t value)
 {
     m_LocalDateHours = value;
-    m_LocalDateHoursIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::localDateHoursIsSet() const
+bool UpdatableCommentParams::localDateHoursIsSet() const
 {
-    return m_LocalDateHoursIsSet;
+    return m_LocalDateHours.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetLocalDateHours()
+void UpdatableCommentParams::unsetLocalDateHours()
 {
-    m_LocalDateHoursIsSet = false;
+    m_LocalDateHours.reset();
 }
-int32_t Pick_APIComment_UpdatableCommentFields_::getVotes() const
+int32_t UpdatableCommentParams::getVotes() const
 {
-    return m_Votes;
+    return m_Votes.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setVotes(int32_t value)
+void UpdatableCommentParams::setVotes(int32_t value)
 {
     m_Votes = value;
-    m_VotesIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::votesIsSet() const
+bool UpdatableCommentParams::votesIsSet() const
 {
-    return m_VotesIsSet;
+    return m_Votes.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetVotes()
+void UpdatableCommentParams::unsetVotes()
 {
-    m_VotesIsSet = false;
+    m_Votes.reset();
 }
-int32_t Pick_APIComment_UpdatableCommentFields_::getVotesUp() const
+int32_t UpdatableCommentParams::getVotesUp() const
 {
-    return m_VotesUp;
+    return m_VotesUp.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setVotesUp(int32_t value)
+void UpdatableCommentParams::setVotesUp(int32_t value)
 {
     m_VotesUp = value;
-    m_VotesUpIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::votesUpIsSet() const
+bool UpdatableCommentParams::votesUpIsSet() const
 {
-    return m_VotesUpIsSet;
+    return m_VotesUp.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetVotesUp()
+void UpdatableCommentParams::unsetVotesUp()
 {
-    m_VotesUpIsSet = false;
+    m_VotesUp.reset();
 }
-int32_t Pick_APIComment_UpdatableCommentFields_::getVotesDown() const
+int32_t UpdatableCommentParams::getVotesDown() const
 {
-    return m_VotesDown;
+    return m_VotesDown.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setVotesDown(int32_t value)
+void UpdatableCommentParams::setVotesDown(int32_t value)
 {
     m_VotesDown = value;
-    m_VotesDownIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::votesDownIsSet() const
+bool UpdatableCommentParams::votesDownIsSet() const
 {
-    return m_VotesDownIsSet;
+    return m_VotesDown.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetVotesDown()
+void UpdatableCommentParams::unsetVotesDown()
 {
-    m_VotesDownIsSet = false;
+    m_VotesDown.reset();
 }
-utility::datetime Pick_APIComment_UpdatableCommentFields_::getExpireAt() const
+utility::datetime UpdatableCommentParams::getExpireAt() const
 {
-    return m_ExpireAt;
+    return m_ExpireAt.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setExpireAt(const utility::datetime& value)
+void UpdatableCommentParams::setExpireAt(const utility::datetime& value)
 {
     m_ExpireAt = value;
-    m_ExpireAtIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::expireAtIsSet() const
+bool UpdatableCommentParams::expireAtIsSet() const
 {
-    return m_ExpireAtIsSet;
+    return m_ExpireAt.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetExpireAt()
+void UpdatableCommentParams::unsetExpireAt()
 {
-    m_ExpireAtIsSet = false;
+    m_ExpireAt.reset();
 }
-bool Pick_APIComment_UpdatableCommentFields_::isVerified() const
+bool UpdatableCommentParams::isVerified() const
 {
     return m_Verified;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setVerified(bool value)
+void UpdatableCommentParams::setVerified(bool value)
 {
     m_Verified = value;
     m_VerifiedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::verifiedIsSet() const
+bool UpdatableCommentParams::verifiedIsSet() const
 {
     return m_VerifiedIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetVerified()
+void UpdatableCommentParams::unsetVerified()
 {
     m_VerifiedIsSet = false;
 }
-utility::datetime Pick_APIComment_UpdatableCommentFields_::getVerifiedDate() const
+utility::datetime UpdatableCommentParams::getVerifiedDate() const
 {
-    return m_VerifiedDate;
+    return m_VerifiedDate.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setVerifiedDate(const utility::datetime& value)
+void UpdatableCommentParams::setVerifiedDate(const utility::datetime& value)
 {
     m_VerifiedDate = value;
-    m_VerifiedDateIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::verifiedDateIsSet() const
+bool UpdatableCommentParams::verifiedDateIsSet() const
 {
-    return m_VerifiedDateIsSet;
+    return m_VerifiedDate.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetVerifiedDate()
+void UpdatableCommentParams::unsetVerifiedDate()
 {
-    m_VerifiedDateIsSet = false;
+    m_VerifiedDate.reset();
 }
-bool Pick_APIComment_UpdatableCommentFields_::isNotificationSentForParent() const
+bool UpdatableCommentParams::isNotificationSentForParent() const
 {
     return m_NotificationSentForParent;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setNotificationSentForParent(bool value)
+void UpdatableCommentParams::setNotificationSentForParent(bool value)
 {
     m_NotificationSentForParent = value;
     m_NotificationSentForParentIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::notificationSentForParentIsSet() const
+bool UpdatableCommentParams::notificationSentForParentIsSet() const
 {
     return m_NotificationSentForParentIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetNotificationSentForParent()
+void UpdatableCommentParams::unsetNotificationSentForParent()
 {
     m_NotificationSentForParentIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isNotificationSentForParentTenant() const
+bool UpdatableCommentParams::isNotificationSentForParentTenant() const
 {
     return m_NotificationSentForParentTenant;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setNotificationSentForParentTenant(bool value)
+void UpdatableCommentParams::setNotificationSentForParentTenant(bool value)
 {
     m_NotificationSentForParentTenant = value;
     m_NotificationSentForParentTenantIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::notificationSentForParentTenantIsSet() const
+bool UpdatableCommentParams::notificationSentForParentTenantIsSet() const
 {
     return m_NotificationSentForParentTenantIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetNotificationSentForParentTenant()
+void UpdatableCommentParams::unsetNotificationSentForParentTenant()
 {
     m_NotificationSentForParentTenantIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isReviewed() const
+bool UpdatableCommentParams::isReviewed() const
 {
     return m_Reviewed;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setReviewed(bool value)
+void UpdatableCommentParams::setReviewed(bool value)
 {
     m_Reviewed = value;
     m_ReviewedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::reviewedIsSet() const
+bool UpdatableCommentParams::reviewedIsSet() const
 {
     return m_ReviewedIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetReviewed()
+void UpdatableCommentParams::unsetReviewed()
 {
     m_ReviewedIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getExternalId() const
+utility::string_t UpdatableCommentParams::getExternalId() const
 {
     return m_ExternalId;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setExternalId(const utility::string_t& value)
+void UpdatableCommentParams::setExternalId(const utility::string_t& value)
 {
     m_ExternalId = value;
     m_ExternalIdIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::externalIdIsSet() const
+bool UpdatableCommentParams::externalIdIsSet() const
 {
     return m_ExternalIdIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetExternalId()
+void UpdatableCommentParams::unsetExternalId()
 {
     m_ExternalIdIsSet = false;
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getExternalParentId() const
+utility::string_t UpdatableCommentParams::getExternalParentId() const
 {
-    return m_ExternalParentId;
+    return m_ExternalParentId.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setExternalParentId(const utility::string_t& value)
+void UpdatableCommentParams::setExternalParentId(const utility::string_t& value)
 {
     m_ExternalParentId = value;
-    m_ExternalParentIdIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::externalParentIdIsSet() const
+bool UpdatableCommentParams::externalParentIdIsSet() const
 {
-    return m_ExternalParentIdIsSet;
+    return m_ExternalParentId.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetExternalParentId()
+void UpdatableCommentParams::unsetExternalParentId()
 {
-    m_ExternalParentIdIsSet = false;
+    m_ExternalParentId.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getAvatarSrc() const
+utility::string_t UpdatableCommentParams::getAvatarSrc() const
 {
-    return m_AvatarSrc;
+    return m_AvatarSrc.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setAvatarSrc(const utility::string_t& value)
+void UpdatableCommentParams::setAvatarSrc(const utility::string_t& value)
 {
     m_AvatarSrc = value;
-    m_AvatarSrcIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::avatarSrcIsSet() const
+bool UpdatableCommentParams::avatarSrcIsSet() const
 {
-    return m_AvatarSrcIsSet;
+    return m_AvatarSrc.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetAvatarSrc()
+void UpdatableCommentParams::unsetAvatarSrc()
 {
-    m_AvatarSrcIsSet = false;
+    m_AvatarSrc.reset();
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsSpam() const
+bool UpdatableCommentParams::isIsSpam() const
 {
     return m_IsSpam;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsSpam(bool value)
+void UpdatableCommentParams::setIsSpam(bool value)
 {
     m_IsSpam = value;
     m_IsSpamIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isSpamIsSet() const
+bool UpdatableCommentParams::isSpamIsSet() const
 {
     return m_IsSpamIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsSpam()
+void UpdatableCommentParams::unsetIsSpam()
 {
     m_IsSpamIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isApproved() const
+bool UpdatableCommentParams::isApproved() const
 {
     return m_Approved;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setApproved(bool value)
+void UpdatableCommentParams::setApproved(bool value)
 {
     m_Approved = value;
     m_ApprovedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::approvedIsSet() const
+bool UpdatableCommentParams::approvedIsSet() const
 {
     return m_ApprovedIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetApproved()
+void UpdatableCommentParams::unsetApproved()
 {
     m_ApprovedIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsDeleted() const
+bool UpdatableCommentParams::isIsDeleted() const
 {
     return m_IsDeleted;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsDeleted(bool value)
+void UpdatableCommentParams::setIsDeleted(bool value)
 {
     m_IsDeleted = value;
     m_IsDeletedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isDeletedIsSet() const
+bool UpdatableCommentParams::isDeletedIsSet() const
 {
     return m_IsDeletedIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsDeleted()
+void UpdatableCommentParams::unsetIsDeleted()
 {
     m_IsDeletedIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsDeletedUser() const
+bool UpdatableCommentParams::isIsDeletedUser() const
 {
     return m_IsDeletedUser;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsDeletedUser(bool value)
+void UpdatableCommentParams::setIsDeletedUser(bool value)
 {
     m_IsDeletedUser = value;
     m_IsDeletedUserIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isDeletedUserIsSet() const
+bool UpdatableCommentParams::isDeletedUserIsSet() const
 {
     return m_IsDeletedUserIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsDeletedUser()
+void UpdatableCommentParams::unsetIsDeletedUser()
 {
     m_IsDeletedUserIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsByAdmin() const
+bool UpdatableCommentParams::isIsByAdmin() const
 {
     return m_IsByAdmin;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsByAdmin(bool value)
+void UpdatableCommentParams::setIsByAdmin(bool value)
 {
     m_IsByAdmin = value;
     m_IsByAdminIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isByAdminIsSet() const
+bool UpdatableCommentParams::isByAdminIsSet() const
 {
     return m_IsByAdminIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsByAdmin()
+void UpdatableCommentParams::unsetIsByAdmin()
 {
     m_IsByAdminIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsByModerator() const
+bool UpdatableCommentParams::isIsByModerator() const
 {
     return m_IsByModerator;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsByModerator(bool value)
+void UpdatableCommentParams::setIsByModerator(bool value)
 {
     m_IsByModerator = value;
     m_IsByModeratorIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isByModeratorIsSet() const
+bool UpdatableCommentParams::isByModeratorIsSet() const
 {
     return m_IsByModeratorIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsByModerator()
+void UpdatableCommentParams::unsetIsByModerator()
 {
     m_IsByModeratorIsSet = false;
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsPinned() const
+bool UpdatableCommentParams::isIsPinned() const
 {
-    return m_IsPinned;
+    return m_IsPinned.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsPinned(bool value)
+void UpdatableCommentParams::setIsPinned(bool value)
 {
     m_IsPinned = value;
-    m_IsPinnedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isPinnedIsSet() const
+bool UpdatableCommentParams::isPinnedIsSet() const
 {
-    return m_IsPinnedIsSet;
+    return m_IsPinned.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsPinned()
+void UpdatableCommentParams::unsetIsPinned()
 {
-    m_IsPinnedIsSet = false;
+    m_IsPinned.reset();
 }
-bool Pick_APIComment_UpdatableCommentFields_::isIsLocked() const
+bool UpdatableCommentParams::isIsLocked() const
 {
-    return m_IsLocked;
+    return m_IsLocked.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setIsLocked(bool value)
+void UpdatableCommentParams::setIsLocked(bool value)
 {
     m_IsLocked = value;
-    m_IsLockedIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::isLockedIsSet() const
+bool UpdatableCommentParams::isLockedIsSet() const
 {
-    return m_IsLockedIsSet;
+    return m_IsLocked.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetIsLocked()
+void UpdatableCommentParams::unsetIsLocked()
 {
-    m_IsLockedIsSet = false;
+    m_IsLocked.reset();
 }
-int32_t Pick_APIComment_UpdatableCommentFields_::getFlagCount() const
+int32_t UpdatableCommentParams::getFlagCount() const
 {
-    return m_FlagCount;
+    return m_FlagCount.get();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::setFlagCount(int32_t value)
+void UpdatableCommentParams::setFlagCount(int32_t value)
 {
     m_FlagCount = value;
-    m_FlagCountIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::flagCountIsSet() const
+bool UpdatableCommentParams::flagCountIsSet() const
 {
-    return m_FlagCountIsSet;
+    return m_FlagCount.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetFlagCount()
+void UpdatableCommentParams::unsetFlagCount()
 {
-    m_FlagCountIsSet = false;
+    m_FlagCount.reset();
 }
-utility::string_t Pick_APIComment_UpdatableCommentFields_::getDisplayLabel() const
+utility::string_t UpdatableCommentParams::getDisplayLabel() const
 {
-    return m_DisplayLabel;
+    return m_DisplayLabel.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setDisplayLabel(const utility::string_t& value)
+void UpdatableCommentParams::setDisplayLabel(const utility::string_t& value)
 {
     m_DisplayLabel = value;
-    m_DisplayLabelIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::displayLabelIsSet() const
+bool UpdatableCommentParams::displayLabelIsSet() const
 {
-    return m_DisplayLabelIsSet;
+    return m_DisplayLabel.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetDisplayLabel()
+void UpdatableCommentParams::unsetDisplayLabel()
 {
-    m_DisplayLabelIsSet = false;
+    m_DisplayLabel.reset();
 }
-std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta> Pick_APIComment_UpdatableCommentFields_::getMeta() const
+std::shared_ptr<FComment_meta> UpdatableCommentParams::getMeta() const
 {
-    return m_Meta;
+    return m_Meta.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setMeta(const std::shared_ptr<Pick_FComment_APICommentFieldsKeys__meta>& value)
+void UpdatableCommentParams::setMeta(const std::shared_ptr<FComment_meta>& value)
 {
     m_Meta = value;
-    m_MetaIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::metaIsSet() const
+bool UpdatableCommentParams::metaIsSet() const
 {
-    return m_MetaIsSet;
+    return m_Meta.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetMeta()
+void UpdatableCommentParams::unsetMeta()
 {
-    m_MetaIsSet = false;
+    m_Meta.reset();
 }
-std::vector<utility::string_t> Pick_APIComment_UpdatableCommentFields_::getModerationGroupIds() const
+std::vector<utility::string_t> UpdatableCommentParams::getModerationGroupIds() const
 {
-    return m_ModerationGroupIds;
+    return m_ModerationGroupIds.get();
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setModerationGroupIds(const std::vector<utility::string_t>& value)
+void UpdatableCommentParams::setModerationGroupIds(const std::vector<utility::string_t>& value)
 {
     m_ModerationGroupIds = value;
-    m_ModerationGroupIdsIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::moderationGroupIdsIsSet() const
+bool UpdatableCommentParams::moderationGroupIdsIsSet() const
 {
-    return m_ModerationGroupIdsIsSet;
+    return m_ModerationGroupIds.has_value();
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetModerationGroupIds()
+void UpdatableCommentParams::unsetModerationGroupIds()
 {
-    m_ModerationGroupIdsIsSet = false;
+    m_ModerationGroupIds.reset();
 }
-std::vector<utility::string_t> Pick_APIComment_UpdatableCommentFields_::getFeedbackIds() const
+std::vector<utility::string_t> UpdatableCommentParams::getFeedbackIds() const
 {
     return m_FeedbackIds;
 }
 
 
-void Pick_APIComment_UpdatableCommentFields_::setFeedbackIds(const std::vector<utility::string_t>& value)
+void UpdatableCommentParams::setFeedbackIds(const std::vector<utility::string_t>& value)
 {
     m_FeedbackIds = value;
     m_FeedbackIdsIsSet = true;
 }
 
-bool Pick_APIComment_UpdatableCommentFields_::feedbackIdsIsSet() const
+bool UpdatableCommentParams::feedbackIdsIsSet() const
 {
     return m_FeedbackIdsIsSet;
 }
 
-void Pick_APIComment_UpdatableCommentFields_::unsetFeedbackIds()
+void UpdatableCommentParams::unsetFeedbackIds()
 {
     m_FeedbackIdsIsSet = false;
 }

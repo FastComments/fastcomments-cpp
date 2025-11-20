@@ -36,7 +36,7 @@ web::json::value AggregationItem::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_GroupsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("groups"))] = ModelBase::toJson(m_Groups);
     }

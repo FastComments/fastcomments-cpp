@@ -41,17 +41,17 @@ web::json::value CreateUserBadgeParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_BadgeIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badgeId"))] = ModelBase::toJson(m_BadgeId);
     }
     if(m_DisplayedOnCommentsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayedOnComments"))] = ModelBase::toJson(m_DisplayedOnComments);
     }
