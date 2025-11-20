@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CreateUserBadge_200_response_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -26,6 +27,7 @@
 #include "FastCommentsClient/model/APICreateUserBadgeResponse.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include <cpprest/details/basic_types.h>
+#include <vector>
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/APIStatus.h"
 
@@ -71,6 +73,11 @@ public:
     void unsetUserBadge();
     void setUserBadge(const std::shared_ptr<UserBadge>& value);
 
+    std::vector<utility::string_t> getNotes() const;
+    bool notesIsSet() const;
+    void unsetNotes();
+    void setNotes(const std::vector<utility::string_t>& value);
+
     utility::string_t getReason() const;
     bool reasonIsSet() const;
     void unsetReason();
@@ -113,6 +120,9 @@ protected:
 
     std::shared_ptr<UserBadge> m_UserBadge;
     bool m_UserBadgeIsSet;
+
+    std::vector<utility::string_t> m_Notes;
+    bool m_NotesIsSet;
 
     utility::string_t m_Reason;
     bool m_ReasonIsSet;

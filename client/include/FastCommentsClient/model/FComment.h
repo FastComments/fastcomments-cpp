@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_FComment_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_FComment_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -435,23 +436,18 @@ protected:
     utility::string_t m_Url;
     bool m_UrlIsSet;
 
-    utility::string_t m_PageTitle;
-    bool m_PageTitleIsSet;
+    boost::optional<utility::string_t> m_PageTitle;
 
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
+    boost::optional<utility::string_t> m_UserId;
 
-    utility::string_t m_AnonUserId;
-    bool m_AnonUserIdIsSet;
+    boost::optional<utility::string_t> m_AnonUserId;
 
-    utility::string_t m_CommenterEmail;
-    bool m_CommenterEmailIsSet;
+    boost::optional<utility::string_t> m_CommenterEmail;
 
     utility::string_t m_CommenterName;
     bool m_CommenterNameIsSet;
 
-    utility::string_t m_CommenterLink;
-    bool m_CommenterLinkIsSet;
+    boost::optional<utility::string_t> m_CommenterLink;
 
     utility::string_t m_Comment;
     bool m_CommentIsSet;
@@ -459,38 +455,28 @@ protected:
     utility::string_t m_CommentHTML;
     bool m_CommentHTMLIsSet;
 
-    utility::string_t m_ParentId;
-    bool m_ParentIdIsSet;
+    boost::optional<utility::string_t> m_ParentId;
 
-    utility::datetime m_date;
-    bool m_dateIsSet;
+    boost::optional<utility::datetime> m_date;
 
-    utility::string_t m_LocalDateString;
-    bool m_LocalDateStringIsSet;
+    boost::optional<utility::string_t> m_LocalDateString;
 
-    int32_t m_LocalDateHours;
-    bool m_LocalDateHoursIsSet;
+    boost::optional<int32_t> m_LocalDateHours;
 
-    int32_t m_Votes;
-    bool m_VotesIsSet;
+    boost::optional<int32_t> m_Votes;
 
-    int32_t m_VotesUp;
-    bool m_VotesUpIsSet;
+    boost::optional<int32_t> m_VotesUp;
 
-    int32_t m_VotesDown;
-    bool m_VotesDownIsSet;
+    boost::optional<int32_t> m_VotesDown;
 
-    utility::datetime m_ExpireAt;
-    bool m_ExpireAtIsSet;
+    boost::optional<utility::datetime> m_ExpireAt;
 
     bool m_Verified;
     bool m_VerifiedIsSet;
 
-    utility::datetime m_VerifiedDate;
-    bool m_VerifiedDateIsSet;
+    boost::optional<utility::datetime> m_VerifiedDate;
 
-    utility::string_t m_VerificationId;
-    bool m_VerificationIdIsSet;
+    boost::optional<utility::string_t> m_VerificationId;
 
     bool m_NotificationSentForParent;
     bool m_NotificationSentForParentIsSet;
@@ -507,11 +493,9 @@ protected:
     utility::string_t m_ExternalId;
     bool m_ExternalIdIsSet;
 
-    utility::string_t m_ExternalParentId;
-    bool m_ExternalParentIdIsSet;
+    boost::optional<utility::string_t> m_ExternalParentId;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
     bool m_IsSpam;
     bool m_IsSpamIsSet;
@@ -525,14 +509,11 @@ protected:
     bool m_HasImages;
     bool m_HasImagesIsSet;
 
-    int32_t m_PageNumber;
-    bool m_PageNumberIsSet;
+    boost::optional<int32_t> m_PageNumber;
 
-    int32_t m_PageNumberOF;
-    bool m_PageNumberOFIsSet;
+    boost::optional<int32_t> m_PageNumberOF;
 
-    int32_t m_PageNumberNF;
-    bool m_PageNumberNFIsSet;
+    boost::optional<int32_t> m_PageNumberNF;
 
     bool m_HasLinks;
     bool m_HasLinksIsSet;
@@ -543,8 +524,7 @@ protected:
     bool m_Approved;
     bool m_ApprovedIsSet;
 
-    utility::string_t m_Locale;
-    bool m_LocaleIsSet;
+    boost::optional<utility::string_t> m_Locale;
 
     bool m_IsDeleted;
     bool m_IsDeletedIsSet;
@@ -561,26 +541,20 @@ protected:
     bool m_IsByModerator;
     bool m_IsByModeratorIsSet;
 
-    bool m_IsPinned;
-    bool m_IsPinnedIsSet;
+    boost::optional<bool> m_IsPinned;
 
-    bool m_IsLocked;
-    bool m_IsLockedIsSet;
+    boost::optional<bool> m_IsLocked;
 
-    int32_t m_FlagCount;
-    bool m_FlagCountIsSet;
+    boost::optional<int32_t> m_FlagCount;
 
-    double m_Rating;
-    bool m_RatingIsSet;
+    boost::optional<double> m_Rating;
 
-    utility::string_t m_DisplayLabel;
-    bool m_DisplayLabelIsSet;
+    boost::optional<utility::string_t> m_DisplayLabel;
 
     int32_t m_FromProductId;
     bool m_FromProductIdIsSet;
 
-    std::shared_ptr<FComment_meta> m_Meta;
-    bool m_MetaIsSet;
+    boost::optional<std::shared_ptr<FComment_meta>> m_Meta;
 
     utility::string_t m_IpHash;
     bool m_IpHashIsSet;
@@ -591,17 +565,14 @@ protected:
     std::vector<std::shared_ptr<CommentUserHashTagInfo>> m_HashTags;
     bool m_HashTagsIsSet;
 
-    std::vector<std::shared_ptr<CommentUserBadgeInfo>> m_Badges;
-    bool m_BadgesIsSet;
+    boost::optional<std::vector<std::shared_ptr<CommentUserBadgeInfo>>> m_Badges;
 
-    utility::string_t m_Domain;
-    bool m_DomainIsSet;
+    boost::optional<utility::string_t> m_Domain;
 
     utility::string_t m_VeteranBadgeProcessed;
     bool m_VeteranBadgeProcessedIsSet;
 
-    std::vector<utility::string_t> m_ModerationGroupIds;
-    bool m_ModerationGroupIdsIsSet;
+    boost::optional<std::vector<utility::string_t>> m_ModerationGroupIds;
 
     bool m_DidProcessBadges;
     bool m_DidProcessBadgesIsSet;
@@ -618,14 +589,11 @@ protected:
     std::vector<utility::string_t> m_FeedbackIds;
     bool m_FeedbackIdsIsSet;
 
-    std::vector<std::shared_ptr<CommentLogEntry>> m_Logs;
-    bool m_LogsIsSet;
+    boost::optional<std::vector<std::shared_ptr<CommentLogEntry>>> m_Logs;
 
-    std::vector<utility::string_t> m_GroupIds;
-    bool m_GroupIdsIsSet;
+    boost::optional<std::vector<utility::string_t>> m_GroupIds;
 
-    int64_t m_ViewCount;
-    bool m_ViewCountIsSet;
+    boost::optional<int64_t> m_ViewCount;
 
     bool m_RequiresVerification;
     bool m_RequiresVerificationIsSet;

@@ -42,22 +42,22 @@ web::json::value AggregationOperation::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_FieldIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("field"))] = ModelBase::toJson(m_Field);
     }
     if(m_OpIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("op"))] = ModelBase::toJson(m_Op);
     }
     if(m_AliasIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("alias"))] = ModelBase::toJson(m_Alias);
     }
     if(m_ExpandArrayIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("expandArray"))] = ModelBase::toJson(m_ExpandArray);
     }

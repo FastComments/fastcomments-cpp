@@ -20,8 +20,6 @@ namespace model {
 
 GetDomainConfigs_200_response::GetDomainConfigs_200_response()
 {
-    m_ConfigurationsIsSet = false;
-    m_StatusIsSet = false;
     m_Reason = utility::conversions::to_string_t("");
     m_ReasonIsSet = false;
     m_Code = utility::conversions::to_string_t("");
@@ -40,23 +38,23 @@ void GetDomainConfigs_200_response::validate()
 web::json::value GetDomainConfigs_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_ConfigurationsIsSet)
-    {   
+    if(m_Configurations.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("configurations"))] = ModelBase::toJson(m_Configurations);
+        val[utility::conversions::to_string_t(_XPLATSTR("configurations"))] = ModelBase::toJson(m_Configurations.get());
     }
-    if(m_StatusIsSet)
-    {   
+    if(m_Status.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status.get());
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
@@ -121,13 +119,13 @@ void GetDomainConfigs_200_response::toMultipart(std::shared_ptr<MultipartFormDat
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_ConfigurationsIsSet)
+    if(m_Configurations.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("configurations")), m_Configurations));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("configurations")), m_Configurations.get()));
     }
-    if(m_StatusIsSet)
+    if(m_Status.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status.get()));
     }
     if(m_ReasonIsSet)
     {
@@ -178,45 +176,43 @@ bool GetDomainConfigs_200_response::fromMultiPart(std::shared_ptr<MultipartFormD
 
 std::shared_ptr<Object> GetDomainConfigs_200_response::getConfigurations() const
 {
-    return m_Configurations;
+    return m_Configurations.get();
 }
 
 
 void GetDomainConfigs_200_response::setConfigurations(const std::shared_ptr<Object>& value)
 {
     m_Configurations = value;
-    m_ConfigurationsIsSet = true;
 }
 
 bool GetDomainConfigs_200_response::configurationsIsSet() const
 {
-    return m_ConfigurationsIsSet;
+    return m_Configurations.has_value();
 }
 
 void GetDomainConfigs_200_response::unsetConfigurations()
 {
-    m_ConfigurationsIsSet = false;
+    m_Configurations.reset();
 }
 std::shared_ptr<Object> GetDomainConfigs_200_response::getStatus() const
 {
-    return m_Status;
+    return m_Status.get();
 }
 
 
 void GetDomainConfigs_200_response::setStatus(const std::shared_ptr<Object>& value)
 {
     m_Status = value;
-    m_StatusIsSet = true;
 }
 
 bool GetDomainConfigs_200_response::statusIsSet() const
 {
-    return m_StatusIsSet;
+    return m_Status.has_value();
 }
 
 void GetDomainConfigs_200_response::unsetStatus()
 {
-    m_StatusIsSet = false;
+    m_Status.reset();
 }
 utility::string_t GetDomainConfigs_200_response::getReason() const
 {

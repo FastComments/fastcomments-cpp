@@ -37,12 +37,12 @@ web::json::value FeedPostsStatsResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_StatsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("stats"))] = ModelBase::toJson(m_Stats);
     }

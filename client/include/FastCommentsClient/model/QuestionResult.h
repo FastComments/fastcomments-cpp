@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_QuestionResult_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_QuestionResult_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -134,14 +135,12 @@ protected:
     int32_t m_Value;
     bool m_ValueIsSet;
 
-    utility::string_t m_CommentId;
-    bool m_CommentIdIsSet;
+    boost::optional<utility::string_t> m_CommentId;
 
     utility::string_t m_QuestionId;
     bool m_QuestionIdIsSet;
 
-    std::vector<std::shared_ptr<MetaItem>> m_Meta;
-    bool m_MetaIsSet;
+    boost::optional<std::vector<std::shared_ptr<MetaItem>>> m_Meta;
 
     utility::string_t m_IpHash;
     bool m_IpHashIsSet;

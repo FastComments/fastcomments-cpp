@@ -48,37 +48,37 @@ web::json::value PatchDomainConfigParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_DomainIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("domain"))] = ModelBase::toJson(m_Domain);
     }
     if(m_EmailFromNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("emailFromName"))] = ModelBase::toJson(m_EmailFromName);
     }
     if(m_EmailFromEmailIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("emailFromEmail"))] = ModelBase::toJson(m_EmailFromEmail);
     }
     if(m_LogoSrcIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("logoSrc"))] = ModelBase::toJson(m_LogoSrc);
     }
     if(m_LogoSrc100pxIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("logoSrc100px"))] = ModelBase::toJson(m_LogoSrc100px);
     }
     if(m_FooterUnsubscribeURLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("footerUnsubscribeURL"))] = ModelBase::toJson(m_FooterUnsubscribeURL);
     }
     if(m_EmailHeadersIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("emailHeaders"))] = ModelBase::toJson(m_EmailHeaders);
     }

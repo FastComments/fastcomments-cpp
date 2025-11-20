@@ -37,12 +37,12 @@ web::json::value ChangeCommentPinStatusResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentPositionsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentPositions"))] = ModelBase::toJson(m_CommentPositions);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }

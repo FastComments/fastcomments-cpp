@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_UserSessionInfo_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_UserSessionInfo_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -129,8 +130,7 @@ protected:
     bool m_Authorized;
     bool m_AuthorizedIsSet;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
     std::vector<std::shared_ptr<CommentUserBadgeInfo>> m_Badges;
     bool m_BadgesIsSet;
@@ -141,8 +141,7 @@ protected:
     utility::string_t m_DisplayName;
     bool m_DisplayNameIsSet;
 
-    utility::string_t m_Email;
-    bool m_EmailIsSet;
+    boost::optional<utility::string_t> m_Email;
 
     std::vector<utility::string_t> m_GroupIds;
     bool m_GroupIdsIsSet;
@@ -153,8 +152,7 @@ protected:
     bool m_IsAnonSession;
     bool m_IsAnonSessionIsSet;
 
-    utility::string_t m_SessionId;
-    bool m_SessionIdIsSet;
+    boost::optional<utility::string_t> m_SessionId;
 
     utility::string_t m_Username;
     bool m_UsernameIsSet;

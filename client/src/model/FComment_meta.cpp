@@ -39,12 +39,12 @@ web::json::value FComment_meta::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_WpUserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wpUserId"))] = ModelBase::toJson(m_WpUserId);
     }
     if(m_WpPostIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wpPostId"))] = ModelBase::toJson(m_WpPostId);
     }

@@ -124,6 +124,18 @@ CommentLogType::eCommentLogType toEnum(const EnumUnderlyingType& val)
         return CommentLogType::eCommentLogType::_47;
     case 48:
         return CommentLogType::eCommentLogType::_48;
+    case 49:
+        return CommentLogType::eCommentLogType::_49;
+    case 50:
+        return CommentLogType::eCommentLogType::_50;
+    case 51:
+        return CommentLogType::eCommentLogType::_51;
+    case 52:
+        return CommentLogType::eCommentLogType::_52;
+    case 53:
+        return CommentLogType::eCommentLogType::_53;
+    case 54:
+        return CommentLogType::eCommentLogType::_54;
     default:
         break;
     }
@@ -232,6 +244,18 @@ EnumUnderlyingType fromEnum(CommentLogType::eCommentLogType e)
         return 47;
     case CommentLogType::eCommentLogType::_48:
         return 48;
+    case CommentLogType::eCommentLogType::_49:
+        return 49;
+    case CommentLogType::eCommentLogType::_50:
+        return 50;
+    case CommentLogType::eCommentLogType::_51:
+        return 51;
+    case CommentLogType::eCommentLogType::_52:
+        return 52;
+    case CommentLogType::eCommentLogType::_53:
+        return 53;
+    case CommentLogType::eCommentLogType::_54:
+        return 54;
     default:
         break;
     }

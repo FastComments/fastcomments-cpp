@@ -43,27 +43,27 @@ web::json::value AggregationValue::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_GroupsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("groups"))] = ModelBase::toJson(m_Groups);
     }
     if(m_StringValueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("stringValue"))] = ModelBase::toJson(m_StringValue);
     }
     if(m_NumericValueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("numericValue"))] = ModelBase::toJson(m_NumericValue);
     }
     if(m_DistinctCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("distinctCount"))] = ModelBase::toJson(m_DistinctCount);
     }
     if(m_DistinctCountsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("distinctCounts"))] = ModelBase::toJson(m_DistinctCounts);
     }

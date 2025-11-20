@@ -36,7 +36,7 @@ web::json::value BulkAggregateQuestionResultsRequest::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_AggregationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("aggregations"))] = ModelBase::toJson(m_Aggregations);
     }

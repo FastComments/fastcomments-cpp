@@ -37,7 +37,7 @@ web::json::value ReactBodyParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReactTypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reactType"))] = ModelBase::toJson(m_ReactType);
     }

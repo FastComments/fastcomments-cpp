@@ -10,14 +10,15 @@
  */
 
 /*
- * Pick_FComment_approved_or_commentHTML_.h
+ * DeletedCommentResultComment.h
  *
- * From T, pick a set of properties whose keys are in the union K
+ * 
  */
 
-#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_approved_or_commentHTML__H_
-#define ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_approved_or_commentHTML__H_
+#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_DeletedCommentResultComment_H_
+#define ORG_OPENAPITOOLS_CLIENT_MODEL_DeletedCommentResultComment_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -30,15 +31,12 @@ namespace model {
 
 
 
-/// <summary>
-/// From T, pick a set of properties whose keys are in the union K
-/// </summary>
-class  Pick_FComment_approved_or_commentHTML_
+class  DeletedCommentResultComment
     : public ModelBase
 {
 public:
-    Pick_FComment_approved_or_commentHTML_();
-    virtual ~Pick_FComment_approved_or_commentHTML_();
+    DeletedCommentResultComment();
+    virtual ~DeletedCommentResultComment();
 
     /////////////////////////////////////////////
     /// ModelBase overrides
@@ -53,26 +51,41 @@ public:
 
 
     /////////////////////////////////////////////
-    /// Pick_FComment_approved_or_commentHTML_ members
+    /// DeletedCommentResultComment members
 
+
+    bool isIsDeleted() const;
+    bool isDeletedIsSet() const;
+    void unsetIsDeleted();
+    void setIsDeleted(bool value);
 
     utility::string_t getCommentHTML() const;
     bool commentHTMLIsSet() const;
     void unsetCommentHTML();
     void setCommentHTML(const utility::string_t& value);
 
-    bool isApproved() const;
-    bool approvedIsSet() const;
-    void unsetApproved();
-    void setApproved(bool value);
+    utility::string_t getCommenterName() const;
+    bool commenterNameIsSet() const;
+    void unsetCommenterName();
+    void setCommenterName(const utility::string_t& value);
+
+    utility::string_t getUserId() const;
+    bool userIdIsSet() const;
+    void unsetUserId();
+    void setUserId(const utility::string_t& value);
 
 
 protected:
+    bool m_IsDeleted;
+    bool m_IsDeletedIsSet;
+
     utility::string_t m_CommentHTML;
     bool m_CommentHTMLIsSet;
 
-    bool m_Approved;
-    bool m_ApprovedIsSet;
+    utility::string_t m_CommenterName;
+    bool m_CommenterNameIsSet;
+
+    boost::optional<utility::string_t> m_UserId;
 
 };
 
@@ -82,4 +95,4 @@ protected:
 }
 }
 
-#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_Pick_FComment_approved_or_commentHTML__H_ */
+#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_DeletedCommentResultComment_H_ */

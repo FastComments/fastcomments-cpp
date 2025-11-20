@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_GetCommentsPublic_200_response_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -244,14 +245,12 @@ protected:
     std::vector<std::shared_ptr<PublicComment>> m_Comments;
     bool m_CommentsIsSet;
 
-    std::shared_ptr<UserSessionInfo> m_User;
-    bool m_UserIsSet;
+    boost::optional<std::shared_ptr<UserSessionInfo>> m_User;
 
     utility::string_t m_UrlIdClean;
     bool m_UrlIdCleanIsSet;
 
-    int64_t m_LastGenDate;
-    bool m_LastGenDateIsSet;
+    boost::optional<int64_t> m_LastGenDate;
 
     bool m_IncludesPastPages;
     bool m_IncludesPastPagesIsSet;

@@ -40,17 +40,17 @@ web::json::value UserNotificationWriteResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_MatchedCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("matchedCount"))] = ModelBase::toJson(m_MatchedCount);
     }
     if(m_ModifiedCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("modifiedCount"))] = ModelBase::toJson(m_ModifiedCount);
     }

@@ -22,6 +22,7 @@ CreateUserBadge_200_response::CreateUserBadge_200_response()
 {
     m_StatusIsSet = false;
     m_UserBadgeIsSet = false;
+    m_NotesIsSet = false;
     m_Reason = utility::conversions::to_string_t("");
     m_ReasonIsSet = false;
     m_Code = utility::conversions::to_string_t("");
@@ -50,47 +51,52 @@ web::json::value CreateUserBadge_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_UserBadgeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userBadge"))] = ModelBase::toJson(m_UserBadge);
     }
+    if(m_NotesIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("notes"))] = ModelBase::toJson(m_Notes);
+    }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
@@ -120,6 +126,17 @@ bool CreateUserBadge_200_response::fromJson(const web::json::value& val)
             std::shared_ptr<UserBadge> refVal_setUserBadge;
             ok &= ModelBase::fromJson(fieldValue, refVal_setUserBadge);
             setUserBadge(refVal_setUserBadge);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("notes"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("notes")));
+        if(!fieldValue.is_null())
+        {
+            std::vector<utility::string_t> refVal_setNotes;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNotes);
+            setNotes(refVal_setNotes);
             
         }
     }
@@ -218,6 +235,10 @@ void CreateUserBadge_200_response::toMultipart(std::shared_ptr<MultipartFormData
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userBadge")), m_UserBadge));
     }
+    if(m_NotesIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notes")), m_Notes));
+    }
     if(m_ReasonIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
@@ -268,6 +289,12 @@ bool CreateUserBadge_200_response::fromMultiPart(std::shared_ptr<MultipartFormDa
         std::shared_ptr<UserBadge> refVal_setUserBadge;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("userBadge"))), refVal_setUserBadge );
         setUserBadge(refVal_setUserBadge);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("notes"))))
+    {
+        std::vector<utility::string_t> refVal_setNotes;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("notes"))), refVal_setNotes );
+        setNotes(refVal_setNotes);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
     {
@@ -356,6 +383,27 @@ bool CreateUserBadge_200_response::userBadgeIsSet() const
 void CreateUserBadge_200_response::unsetUserBadge()
 {
     m_UserBadgeIsSet = false;
+}
+std::vector<utility::string_t> CreateUserBadge_200_response::getNotes() const
+{
+    return m_Notes;
+}
+
+
+void CreateUserBadge_200_response::setNotes(const std::vector<utility::string_t>& value)
+{
+    m_Notes = value;
+    m_NotesIsSet = true;
+}
+
+bool CreateUserBadge_200_response::notesIsSet() const
+{
+    return m_NotesIsSet;
+}
+
+void CreateUserBadge_200_response::unsetNotes()
+{
+    m_NotesIsSet = false;
 }
 utility::string_t CreateUserBadge_200_response::getReason() const
 {

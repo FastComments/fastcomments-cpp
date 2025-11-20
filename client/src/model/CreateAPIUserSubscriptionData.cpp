@@ -45,27 +45,27 @@ web::json::value CreateAPIUserSubscriptionData::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_PageTitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_AnonUserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }

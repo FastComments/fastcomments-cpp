@@ -38,12 +38,12 @@ web::json::value MetaItem::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_NameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("name"))] = ModelBase::toJson(m_Name);
     }
     if(m_ValuesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("values"))] = ModelBase::toJson(m_Values);
     }

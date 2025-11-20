@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_GetPublicFeedPostsResponse_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -82,8 +83,7 @@ protected:
     std::vector<std::shared_ptr<FeedPost>> m_FeedPosts;
     bool m_FeedPostsIsSet;
 
-    std::shared_ptr<UserSessionInfo> m_User;
-    bool m_UserIsSet;
+    boost::optional<std::shared_ptr<UserSessionInfo>> m_User;
 
 };
 

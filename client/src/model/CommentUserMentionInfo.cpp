@@ -44,29 +44,29 @@ web::json::value CommentUserMentionInfo::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }
     if(m_TagIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tag"))] = ModelBase::toJson(m_Tag);
     }
     if(m_RawTagIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("rawTag"))] = ModelBase::toJson(m_RawTag);
     }
     if(m_TypeIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromTypeEnum(m_Type);
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(refVal);
         
     }
     if(m_SentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("sent"))] = ModelBase::toJson(m_Sent);
     }

@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_Record_string__before_string_or_null__after_string_or_null___value_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_Record_string__before_string_or_null__after_string_or_null___value_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 

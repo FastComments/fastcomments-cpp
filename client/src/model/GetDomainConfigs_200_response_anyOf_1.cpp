@@ -24,7 +24,6 @@ GetDomainConfigs_200_response_anyOf_1::GetDomainConfigs_200_response_anyOf_1()
     m_ReasonIsSet = false;
     m_Code = utility::conversions::to_string_t("");
     m_CodeIsSet = false;
-    m_StatusIsSet = false;
 }
 
 GetDomainConfigs_200_response_anyOf_1::~GetDomainConfigs_200_response_anyOf_1()
@@ -40,19 +39,19 @@ web::json::value GetDomainConfigs_200_response_anyOf_1::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
-    if(m_StatusIsSet)
-    {   
+    if(m_Status.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status.get());
     }
 
     return val;
@@ -112,9 +111,9 @@ void GetDomainConfigs_200_response_anyOf_1::toMultipart(std::shared_ptr<Multipar
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
     }
-    if(m_StatusIsSet)
+    if(m_Status.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status.get()));
     }
 }
 
@@ -193,24 +192,23 @@ void GetDomainConfigs_200_response_anyOf_1::unsetCode()
 }
 std::shared_ptr<AnyType> GetDomainConfigs_200_response_anyOf_1::getStatus() const
 {
-    return m_Status;
+    return m_Status.get();
 }
 
 
 void GetDomainConfigs_200_response_anyOf_1::setStatus(const std::shared_ptr<AnyType>& value)
 {
     m_Status = value;
-    m_StatusIsSet = true;
 }
 
 bool GetDomainConfigs_200_response_anyOf_1::statusIsSet() const
 {
-    return m_StatusIsSet;
+    return m_Status.has_value();
 }
 
 void GetDomainConfigs_200_response_anyOf_1::unsetStatus()
 {
-    m_StatusIsSet = false;
+    m_Status.reset();
 }
 
 }

@@ -37,12 +37,12 @@ web::json::value GetAuditLogsResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_AuditLogsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("auditLogs"))] = ModelBase::toJson(m_AuditLogs);
     }
@@ -69,7 +69,7 @@ bool GetAuditLogsResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("auditLogs")));
         if(!fieldValue.is_null())
         {
-            std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> refVal_setAuditLogs;
+            std::vector<std::shared_ptr<APIAuditLog>> refVal_setAuditLogs;
             ok &= ModelBase::fromJson(fieldValue, refVal_setAuditLogs);
             setAuditLogs(refVal_setAuditLogs);
             
@@ -112,7 +112,7 @@ bool GetAuditLogsResponse::fromMultiPart(std::shared_ptr<MultipartFormData> mult
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("auditLogs"))))
     {
-        std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> refVal_setAuditLogs;
+        std::vector<std::shared_ptr<APIAuditLog>> refVal_setAuditLogs;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("auditLogs"))), refVal_setAuditLogs );
         setAuditLogs(refVal_setAuditLogs);
     }
@@ -141,13 +141,13 @@ void GetAuditLogsResponse::unsetStatus()
 {
     m_StatusIsSet = false;
 }
-std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>> GetAuditLogsResponse::getAuditLogs() const
+std::vector<std::shared_ptr<APIAuditLog>> GetAuditLogsResponse::getAuditLogs() const
 {
     return m_AuditLogs;
 }
 
 
-void GetAuditLogsResponse::setAuditLogs(const std::vector<std::shared_ptr<Pick_TenantAuditLog_TenantAuditLogKeys_>>& value)
+void GetAuditLogsResponse::setAuditLogs(const std::vector<std::shared_ptr<APIAuditLog>>& value)
 {
     m_AuditLogs = value;
     m_AuditLogsIsSet = true;

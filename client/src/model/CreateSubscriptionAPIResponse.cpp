@@ -42,22 +42,22 @@ web::json::value CreateSubscriptionAPIResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SubscriptionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("subscription"))] = ModelBase::toJson(m_Subscription);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }

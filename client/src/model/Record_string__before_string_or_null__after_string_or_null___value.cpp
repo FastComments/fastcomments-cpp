@@ -39,12 +39,12 @@ web::json::value Record_string__before_string_or_null__after_string_or_null___va
 {
     web::json::value val = web::json::value::object();
     if(m_AfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("after"))] = ModelBase::toJson(m_After);
     }
     if(m_BeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("before"))] = ModelBase::toJson(m_Before);
     }

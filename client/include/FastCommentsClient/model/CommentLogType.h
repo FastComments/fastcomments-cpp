@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_CommentLogType_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_CommentLogType_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -103,6 +104,12 @@ public:
         _46,
         _47,
         _48,
+        _49,
+        _50,
+        _51,
+        _52,
+        _53,
+        _54,
     };
 
     eCommentLogType getValue() const;
@@ -159,7 +166,13 @@ public:
         { eCommentLogType::_45, _XPLATSTR("_45") },
         { eCommentLogType::_46, _XPLATSTR("_46") },
         { eCommentLogType::_47, _XPLATSTR("_47") },
-        { eCommentLogType::_48, _XPLATSTR("_48") }
+        { eCommentLogType::_48, _XPLATSTR("_48") },
+        { eCommentLogType::_49, _XPLATSTR("_49") },
+        { eCommentLogType::_50, _XPLATSTR("_50") },
+        { eCommentLogType::_51, _XPLATSTR("_51") },
+        { eCommentLogType::_52, _XPLATSTR("_52") },
+        { eCommentLogType::_53, _XPLATSTR("_53") },
+        { eCommentLogType::_54, _XPLATSTR("_54") }
 };
         std::map<utility::string_t,eCommentLogType> strToEnumMap = {
         { _XPLATSTR("_0"), eCommentLogType::_0 },
@@ -210,7 +223,13 @@ public:
         { _XPLATSTR("_45"), eCommentLogType::_45 },
         { _XPLATSTR("_46"), eCommentLogType::_46 },
         { _XPLATSTR("_47"), eCommentLogType::_47 },
-        { _XPLATSTR("_48"), eCommentLogType::_48 }
+        { _XPLATSTR("_48"), eCommentLogType::_48 },
+        { _XPLATSTR("_49"), eCommentLogType::_49 },
+        { _XPLATSTR("_50"), eCommentLogType::_50 },
+        { _XPLATSTR("_51"), eCommentLogType::_51 },
+        { _XPLATSTR("_52"), eCommentLogType::_52 },
+        { _XPLATSTR("_53"), eCommentLogType::_53 },
+        { _XPLATSTR("_54"), eCommentLogType::_54 }
 };
 
 };

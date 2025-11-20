@@ -53,52 +53,52 @@ web::json::value GetCommentText_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CommentTextIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentText"))] = ModelBase::toJson(m_CommentText);
     }
     if(m_SanitizedCommentTextIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("sanitizedCommentText"))] = ModelBase::toJson(m_SanitizedCommentText);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }

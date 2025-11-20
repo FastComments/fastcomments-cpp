@@ -38,14 +38,14 @@ web::json::value AggregationRequest_sort::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_DirIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromDirEnum(m_Dir);
         val[utility::conversions::to_string_t(_XPLATSTR("dir"))] = ModelBase::toJson(refVal);
         
     }
     if(m_FieldIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("field"))] = ModelBase::toJson(m_Field);
     }

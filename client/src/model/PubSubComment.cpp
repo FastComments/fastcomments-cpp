@@ -20,89 +20,51 @@ namespace model {
 
 PubSubComment::PubSubComment()
 {
-    m_date = utility::conversions::to_string_t("");
-    m_dateIsSet = false;
     m__id = utility::conversions::to_string_t("");
     m__idIsSet = false;
     m_TenantId = utility::conversions::to_string_t("");
     m_TenantIdIsSet = false;
     m_UrlId = utility::conversions::to_string_t("");
     m_UrlIdIsSet = false;
-    m_Url = utility::conversions::to_string_t("");
-    m_UrlIsSet = false;
-    m_PageTitle = utility::conversions::to_string_t("");
-    m_PageTitleIsSet = false;
-    m_UserId = utility::conversions::to_string_t("");
-    m_UserIdIsSet = false;
-    m_AnonUserId = utility::conversions::to_string_t("");
-    m_AnonUserIdIsSet = false;
     m_CommenterName = utility::conversions::to_string_t("");
     m_CommenterNameIsSet = false;
-    m_CommenterLink = utility::conversions::to_string_t("");
-    m_CommenterLinkIsSet = false;
-    m_Comment = utility::conversions::to_string_t("");
-    m_CommentIsSet = false;
     m_CommentHTML = utility::conversions::to_string_t("");
     m_CommentHTMLIsSet = false;
-    m_ParentId = utility::conversions::to_string_t("");
-    m_ParentIdIsSet = false;
-    m_Votes = 0;
-    m_VotesIsSet = false;
-    m_VotesUp = 0;
-    m_VotesUpIsSet = false;
-    m_VotesDown = 0;
-    m_VotesDownIsSet = false;
-    m_ExpireAt = utility::datetime();
-    m_ExpireAtIsSet = false;
+    m_Comment = utility::conversions::to_string_t("");
+    m_CommentIsSet = false;
     m_Verified = false;
     m_VerifiedIsSet = false;
-    m_Reviewed = false;
-    m_ReviewedIsSet = false;
-    m_AvatarSrc = utility::conversions::to_string_t("");
-    m_AvatarSrcIsSet = false;
-    m_IsSpam = false;
-    m_IsSpamIsSet = false;
     m_HasImages = false;
     m_HasImagesIsSet = false;
     m_HasLinks = false;
     m_HasLinksIsSet = false;
-    m_HasCode = false;
-    m_HasCodeIsSet = false;
-    m_Approved = false;
-    m_ApprovedIsSet = false;
-    m_Locale = utility::conversions::to_string_t("");
-    m_LocaleIsSet = false;
-    m_IsDeleted = false;
-    m_IsDeletedIsSet = false;
-    m_IsDeletedUser = false;
-    m_IsDeletedUserIsSet = false;
-    m_IsBannedUser = false;
-    m_IsBannedUserIsSet = false;
     m_IsByAdmin = false;
     m_IsByAdminIsSet = false;
     m_IsByModerator = false;
     m_IsByModeratorIsSet = false;
-    m_IsPinned = false;
-    m_IsPinnedIsSet = false;
-    m_IsLocked = false;
-    m_IsLockedIsSet = false;
-    m_FlagCount = 0;
-    m_FlagCountIsSet = false;
-    m_Rating = 0.0;
-    m_RatingIsSet = false;
-    m_DisplayLabel = utility::conversions::to_string_t("");
-    m_DisplayLabelIsSet = false;
-    m_BadgesIsSet = false;
-    m_Domain = utility::conversions::to_string_t("");
-    m_DomainIsSet = false;
+    m_IsDeleted = false;
+    m_IsDeletedIsSet = false;
+    m_IsDeletedUser = false;
+    m_IsDeletedUserIsSet = false;
+    m_IsSpam = false;
+    m_IsSpamIsSet = false;
     m_FeedbackIdsIsSet = false;
-    m_GroupIdsIsSet = false;
-    m_ViewCount = 0L;
-    m_ViewCountIsSet = false;
+    m_Url = utility::conversions::to_string_t("");
+    m_UrlIsSet = false;
+    m_Reviewed = false;
+    m_ReviewedIsSet = false;
+    m_HasCode = false;
+    m_HasCodeIsSet = false;
+    m_Approved = false;
+    m_ApprovedIsSet = false;
+    m_IsBannedUser = false;
+    m_IsBannedUserIsSet = false;
     m_IsLive = false;
     m_IsLiveIsSet = false;
     m_Hidden = false;
     m_HiddenIsSet = false;
+    m_date = utility::conversions::to_string_t("");
+    m_dateIsSet = false;
 }
 
 PubSubComment::~PubSubComment()
@@ -117,220 +79,220 @@ void PubSubComment::validate()
 web::json::value PubSubComment::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_dateIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date);
-    }
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
+    if(m_UserId.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId.get());
+    }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
-    if(m_UrlIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
-    }
-    if(m_PageTitleIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle);
-    }
-    if(m_UserIdIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
-    }
-    if(m_AnonUserIdIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId);
-    }
     if(m_CommenterNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commenterName"))] = ModelBase::toJson(m_CommenterName);
     }
-    if(m_CommenterLinkIsSet)
-    {   
+    if(m_CommenterLink.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink);
-    }
-    if(m_CommentIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterLink"))] = ModelBase::toJson(m_CommenterLink.get());
     }
     if(m_CommentHTMLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentHTML"))] = ModelBase::toJson(m_CommentHTML);
     }
-    if(m_ParentIdIsSet)
-    {   
+    if(m_CommentIsSet)
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
-    if(m_VotesIsSet)
-    {   
+    if(m_ParentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes);
+        val[utility::conversions::to_string_t(_XPLATSTR("parentId"))] = ModelBase::toJson(m_ParentId.get());
     }
-    if(m_VotesUpIsSet)
-    {   
+    if(m_Votes.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp);
+        val[utility::conversions::to_string_t(_XPLATSTR("votes"))] = ModelBase::toJson(m_Votes.get());
     }
-    if(m_VotesDownIsSet)
-    {   
+    if(m_VotesUp.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesUp"))] = ModelBase::toJson(m_VotesUp.get());
     }
-    if(m_ExpireAtIsSet)
-    {   
+    if(m_VotesDown.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesDown"))] = ModelBase::toJson(m_VotesDown.get());
     }
     if(m_VerifiedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("verified"))] = ModelBase::toJson(m_Verified);
     }
-    if(m_ReviewedIsSet)
-    {   
+    if(m_AvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("reviewed"))] = ModelBase::toJson(m_Reviewed);
-    }
-    if(m_AvatarSrcIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
-    }
-    if(m_IsSpamIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("isSpam"))] = ModelBase::toJson(m_IsSpam);
+        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc.get());
     }
     if(m_HasImagesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasImages"))] = ModelBase::toJson(m_HasImages);
     }
     if(m_HasLinksIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasLinks"))] = ModelBase::toJson(m_HasLinks);
     }
-    if(m_HasCodeIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("hasCode"))] = ModelBase::toJson(m_HasCode);
-    }
-    if(m_ApprovedIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("approved"))] = ModelBase::toJson(m_Approved);
-    }
-    if(m_LocaleIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale);
-    }
-    if(m_IsDeletedIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("isDeleted"))] = ModelBase::toJson(m_IsDeleted);
-    }
-    if(m_IsDeletedUserIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))] = ModelBase::toJson(m_IsDeletedUser);
-    }
-    if(m_IsBannedUserIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))] = ModelBase::toJson(m_IsBannedUser);
-    }
     if(m_IsByAdminIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByAdmin"))] = ModelBase::toJson(m_IsByAdmin);
     }
     if(m_IsByModeratorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isByModerator"))] = ModelBase::toJson(m_IsByModerator);
     }
-    if(m_IsPinnedIsSet)
-    {   
+    if(m_IsPinned.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned);
+        val[utility::conversions::to_string_t(_XPLATSTR("isPinned"))] = ModelBase::toJson(m_IsPinned.get());
     }
-    if(m_IsLockedIsSet)
-    {   
+    if(m_IsLocked.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked);
+        val[utility::conversions::to_string_t(_XPLATSTR("isLocked"))] = ModelBase::toJson(m_IsLocked.get());
     }
-    if(m_FlagCountIsSet)
-    {   
+    if(m_DisplayLabel.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel.get());
     }
-    if(m_RatingIsSet)
-    {   
+    if(m_Rating.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("rating"))] = ModelBase::toJson(m_Rating);
+        val[utility::conversions::to_string_t(_XPLATSTR("rating"))] = ModelBase::toJson(m_Rating.get());
     }
-    if(m_DisplayLabelIsSet)
-    {   
+    if(m_Badges.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("displayLabel"))] = ModelBase::toJson(m_DisplayLabel);
+        val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges.get());
     }
-    if(m_BadgesIsSet)
-    {   
+    if(m_ViewCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("badges"))] = ModelBase::toJson(m_Badges);
+        val[utility::conversions::to_string_t(_XPLATSTR("viewCount"))] = ModelBase::toJson(m_ViewCount.get());
     }
-    if(m_DomainIsSet)
-    {   
+    if(m_IsDeletedIsSet)
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("domain"))] = ModelBase::toJson(m_Domain);
+        val[utility::conversions::to_string_t(_XPLATSTR("isDeleted"))] = ModelBase::toJson(m_IsDeleted);
+    }
+    if(m_IsDeletedUserIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))] = ModelBase::toJson(m_IsDeletedUser);
+    }
+    if(m_IsSpamIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isSpam"))] = ModelBase::toJson(m_IsSpam);
+    }
+    if(m_AnonUserId.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId.get());
     }
     if(m_FeedbackIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("feedbackIds"))] = ModelBase::toJson(m_FeedbackIds);
     }
-    if(m_GroupIdsIsSet)
-    {   
+    if(m_FlagCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds);
+        val[utility::conversions::to_string_t(_XPLATSTR("flagCount"))] = ModelBase::toJson(m_FlagCount.get());
     }
-    if(m_ViewCountIsSet)
-    {   
+    if(m_Domain.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("viewCount"))] = ModelBase::toJson(m_ViewCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("domain"))] = ModelBase::toJson(m_Domain.get());
+    }
+    if(m_UrlIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
+    }
+    if(m_PageTitle.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle.get());
+    }
+    if(m_ExpireAt.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("expireAt"))] = ModelBase::toJson(m_ExpireAt.get());
+    }
+    if(m_ReviewedIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("reviewed"))] = ModelBase::toJson(m_Reviewed);
+    }
+    if(m_HasCodeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("hasCode"))] = ModelBase::toJson(m_HasCode);
+    }
+    if(m_ApprovedIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("approved"))] = ModelBase::toJson(m_Approved);
+    }
+    if(m_Locale.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale.get());
+    }
+    if(m_IsBannedUserIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))] = ModelBase::toJson(m_IsBannedUser);
+    }
+    if(m_GroupIds.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("groupIds"))] = ModelBase::toJson(m_GroupIds.get());
     }
     if(m_IsLiveIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isLive"))] = ModelBase::toJson(m_IsLive);
     }
     if(m_HiddenIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hidden"))] = ModelBase::toJson(m_Hidden);
+    }
+    if(m_dateIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("date"))] = ModelBase::toJson(m_date);
     }
 
     return val;
@@ -339,17 +301,6 @@ web::json::value PubSubComment::toJson() const
 bool PubSubComment::fromJson(const web::json::value& val)
 {
     bool ok = true;
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("date"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("date")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setDate;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setDate);
-            setDate(refVal_setDate);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("_id"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("_id")));
@@ -372,39 +323,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("urlId")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setUrlId;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setUrlId);
-            setUrlId(refVal_setUrlId);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("url"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("url")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setUrl;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setUrl);
-            setUrl(refVal_setUrl);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("pageTitle")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setPageTitle;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setPageTitle);
-            setPageTitle(refVal_setPageTitle);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("userId"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("userId")));
@@ -416,14 +334,14 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))))
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
     {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("anonUserId")));
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("urlId")));
         if(!fieldValue.is_null())
         {
-            utility::string_t refVal_setAnonUserId;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setAnonUserId);
-            setAnonUserId(refVal_setAnonUserId);
+            utility::string_t refVal_setUrlId;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setUrlId);
+            setUrlId(refVal_setUrlId);
             
         }
     }
@@ -449,17 +367,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("comment"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("comment")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setComment;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setComment);
-            setComment(refVal_setComment);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("commentHTML"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("commentHTML")));
@@ -468,6 +375,17 @@ bool PubSubComment::fromJson(const web::json::value& val)
             utility::string_t refVal_setCommentHTML;
             ok &= ModelBase::fromJson(fieldValue, refVal_setCommentHTML);
             setCommentHTML(refVal_setCommentHTML);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("comment"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("comment")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setComment;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setComment);
+            setComment(refVal_setComment);
             
         }
     }
@@ -515,17 +433,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("expireAt"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("expireAt")));
-        if(!fieldValue.is_null())
-        {
-            utility::datetime refVal_setExpireAt;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setExpireAt);
-            setExpireAt(refVal_setExpireAt);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("verified"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("verified")));
@@ -537,17 +444,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reviewed"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reviewed")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setReviewed;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setReviewed);
-            setReviewed(refVal_setReviewed);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("avatarSrc")));
@@ -556,17 +452,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             utility::string_t refVal_setAvatarSrc;
             ok &= ModelBase::fromJson(fieldValue, refVal_setAvatarSrc);
             setAvatarSrc(refVal_setAvatarSrc);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isSpam"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isSpam")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setIsSpam;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setIsSpam);
-            setIsSpam(refVal_setIsSpam);
             
         }
     }
@@ -589,72 +474,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             bool refVal_setHasLinks;
             ok &= ModelBase::fromJson(fieldValue, refVal_setHasLinks);
             setHasLinks(refVal_setHasLinks);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("hasCode"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("hasCode")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setHasCode;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setHasCode);
-            setHasCode(refVal_setHasCode);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("approved"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("approved")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setApproved;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setApproved);
-            setApproved(refVal_setApproved);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("locale"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("locale")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setLocale;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setLocale);
-            setLocale(refVal_setLocale);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isDeleted")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setIsDeleted;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setIsDeleted);
-            setIsDeleted(refVal_setIsDeleted);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setIsDeletedUser;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setIsDeletedUser);
-            setIsDeletedUser(refVal_setIsDeletedUser);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isBannedUser")));
-        if(!fieldValue.is_null())
-        {
-            bool refVal_setIsBannedUser;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setIsBannedUser);
-            setIsBannedUser(refVal_setIsBannedUser);
             
         }
     }
@@ -702,14 +521,14 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("flagCount"))))
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))))
     {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("flagCount")));
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("displayLabel")));
         if(!fieldValue.is_null())
         {
-            int32_t refVal_setFlagCount;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setFlagCount);
-            setFlagCount(refVal_setFlagCount);
+            utility::string_t refVal_setDisplayLabel;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDisplayLabel);
+            setDisplayLabel(refVal_setDisplayLabel);
             
         }
     }
@@ -724,17 +543,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("displayLabel")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setDisplayLabel;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setDisplayLabel);
-            setDisplayLabel(refVal_setDisplayLabel);
-            
-        }
-    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("badges"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("badges")));
@@ -746,14 +554,58 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("domain"))))
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("viewCount"))))
     {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("domain")));
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("viewCount")));
         if(!fieldValue.is_null())
         {
-            utility::string_t refVal_setDomain;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setDomain);
-            setDomain(refVal_setDomain);
+            int64_t refVal_setViewCount;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setViewCount);
+            setViewCount(refVal_setViewCount);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isDeleted")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsDeleted;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsDeleted);
+            setIsDeleted(refVal_setIsDeleted);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsDeletedUser;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsDeletedUser);
+            setIsDeletedUser(refVal_setIsDeletedUser);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isSpam"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isSpam")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsSpam;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsSpam);
+            setIsSpam(refVal_setIsSpam);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("anonUserId")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setAnonUserId;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setAnonUserId);
+            setAnonUserId(refVal_setAnonUserId);
             
         }
     }
@@ -768,6 +620,116 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("flagCount"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("flagCount")));
+        if(!fieldValue.is_null())
+        {
+            int32_t refVal_setFlagCount;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setFlagCount);
+            setFlagCount(refVal_setFlagCount);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("domain"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("domain")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setDomain;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDomain);
+            setDomain(refVal_setDomain);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("url"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("url")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setUrl;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setUrl);
+            setUrl(refVal_setUrl);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("pageTitle")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setPageTitle;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setPageTitle);
+            setPageTitle(refVal_setPageTitle);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("expireAt"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("expireAt")));
+        if(!fieldValue.is_null())
+        {
+            utility::datetime refVal_setExpireAt;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setExpireAt);
+            setExpireAt(refVal_setExpireAt);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reviewed"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reviewed")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setReviewed;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setReviewed);
+            setReviewed(refVal_setReviewed);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("hasCode"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("hasCode")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setHasCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setHasCode);
+            setHasCode(refVal_setHasCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("approved"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("approved")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setApproved;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setApproved);
+            setApproved(refVal_setApproved);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("locale"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("locale")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setLocale;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setLocale);
+            setLocale(refVal_setLocale);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isBannedUser")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsBannedUser;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsBannedUser);
+            setIsBannedUser(refVal_setIsBannedUser);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("groupIds"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("groupIds")));
@@ -776,17 +738,6 @@ bool PubSubComment::fromJson(const web::json::value& val)
             std::vector<utility::string_t> refVal_setGroupIds;
             ok &= ModelBase::fromJson(fieldValue, refVal_setGroupIds);
             setGroupIds(refVal_setGroupIds);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("viewCount"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("viewCount")));
-        if(!fieldValue.is_null())
-        {
-            int64_t refVal_setViewCount;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setViewCount);
-            setViewCount(refVal_setViewCount);
             
         }
     }
@@ -812,6 +763,17 @@ bool PubSubComment::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("date"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("date")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setDate;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDate);
+            setDate(refVal_setDate);
+            
+        }
+    }
     return ok;
 }
 
@@ -822,10 +784,6 @@ void PubSubComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_dateIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date));
-    }
     if(m__idIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("_id")), m__id));
@@ -834,77 +792,53 @@ void PubSubComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tenantId")), m_TenantId));
     }
+    if(m_UserId.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId.get()));
+    }
     if(m_UrlIdIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("urlId")), m_UrlId));
-    }
-    if(m_UrlIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
-    }
-    if(m_PageTitleIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle));
-    }
-    if(m_UserIdIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId));
-    }
-    if(m_AnonUserIdIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId));
     }
     if(m_CommenterNameIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterName")), m_CommenterName));
     }
-    if(m_CommenterLinkIsSet)
+    if(m_CommenterLink.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink));
-    }
-    if(m_CommentIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterLink")), m_CommenterLink.get()));
     }
     if(m_CommentHTMLIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentHTML")), m_CommentHTML));
     }
-    if(m_ParentIdIsSet)
+    if(m_CommentIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("comment")), m_Comment));
     }
-    if(m_VotesIsSet)
+    if(m_ParentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("parentId")), m_ParentId.get()));
     }
-    if(m_VotesUpIsSet)
+    if(m_Votes.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votes")), m_Votes.get()));
     }
-    if(m_VotesDownIsSet)
+    if(m_VotesUp.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUp")), m_VotesUp.get()));
     }
-    if(m_ExpireAtIsSet)
+    if(m_VotesDown.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDown")), m_VotesDown.get()));
     }
     if(m_VerifiedIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verified")), m_Verified));
     }
-    if(m_ReviewedIsSet)
+    if(m_AvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reviewed")), m_Reviewed));
-    }
-    if(m_AvatarSrcIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc));
-    }
-    if(m_IsSpamIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isSpam")), m_IsSpam));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc.get()));
     }
     if(m_HasImagesIsSet)
     {
@@ -914,17 +848,37 @@ void PubSubComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasLinks")), m_HasLinks));
     }
-    if(m_HasCodeIsSet)
+    if(m_IsByAdminIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasCode")), m_HasCode));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByAdmin")), m_IsByAdmin));
     }
-    if(m_ApprovedIsSet)
+    if(m_IsByModeratorIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("approved")), m_Approved));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByModerator")), m_IsByModerator));
     }
-    if(m_LocaleIsSet)
+    if(m_IsPinned.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned.get()));
+    }
+    if(m_IsLocked.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked.get()));
+    }
+    if(m_DisplayLabel.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel.get()));
+    }
+    if(m_Rating.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("rating")), m_Rating.get()));
+    }
+    if(m_Badges.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("badges")), m_Badges.get()));
+    }
+    if(m_ViewCount.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("viewCount")), m_ViewCount.get()));
     }
     if(m_IsDeletedIsSet)
     {
@@ -934,57 +888,61 @@ void PubSubComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isDeletedUser")), m_IsDeletedUser));
     }
-    if(m_IsBannedUserIsSet)
+    if(m_IsSpamIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isBannedUser")), m_IsBannedUser));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isSpam")), m_IsSpam));
     }
-    if(m_IsByAdminIsSet)
+    if(m_AnonUserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByAdmin")), m_IsByAdmin));
-    }
-    if(m_IsByModeratorIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isByModerator")), m_IsByModerator));
-    }
-    if(m_IsPinnedIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isPinned")), m_IsPinned));
-    }
-    if(m_IsLockedIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isLocked")), m_IsLocked));
-    }
-    if(m_FlagCountIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount));
-    }
-    if(m_RatingIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("rating")), m_Rating));
-    }
-    if(m_DisplayLabelIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayLabel")), m_DisplayLabel));
-    }
-    if(m_BadgesIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("badges")), m_Badges));
-    }
-    if(m_DomainIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("domain")), m_Domain));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId.get()));
     }
     if(m_FeedbackIdsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("feedbackIds")), m_FeedbackIds));
     }
-    if(m_GroupIdsIsSet)
+    if(m_FlagCount.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("groupIds")), m_GroupIds));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCount")), m_FlagCount.get()));
     }
-    if(m_ViewCountIsSet)
+    if(m_Domain.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("viewCount")), m_ViewCount));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("domain")), m_Domain.get()));
+    }
+    if(m_UrlIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
+    }
+    if(m_PageTitle.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle.get()));
+    }
+    if(m_ExpireAt.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAt")), m_ExpireAt.get()));
+    }
+    if(m_ReviewedIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reviewed")), m_Reviewed));
+    }
+    if(m_HasCodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasCode")), m_HasCode));
+    }
+    if(m_ApprovedIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("approved")), m_Approved));
+    }
+    if(m_Locale.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale.get()));
+    }
+    if(m_IsBannedUserIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isBannedUser")), m_IsBannedUser));
+    }
+    if(m_GroupIds.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("groupIds")), m_GroupIds.get()));
     }
     if(m_IsLiveIsSet)
     {
@@ -993,6 +951,10 @@ void PubSubComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     if(m_HiddenIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hidden")), m_Hidden));
+    }
+    if(m_dateIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("date")), m_date));
     }
 }
 
@@ -1005,12 +967,6 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
 
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("date"))))
-    {
-        utility::string_t refVal_setDate;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("date"))), refVal_setDate );
-        setDate(refVal_setDate);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("_id"))))
     {
         utility::string_t refVal_setId;
@@ -1023,35 +979,17 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tenantId"))), refVal_setTenantId );
         setTenantId(refVal_setTenantId);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
-    {
-        utility::string_t refVal_setUrlId;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))), refVal_setUrlId );
-        setUrlId(refVal_setUrlId);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("url"))))
-    {
-        utility::string_t refVal_setUrl;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("url"))), refVal_setUrl );
-        setUrl(refVal_setUrl);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))))
-    {
-        utility::string_t refVal_setPageTitle;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))), refVal_setPageTitle );
-        setPageTitle(refVal_setPageTitle);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("userId"))))
     {
         utility::string_t refVal_setUserId;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("userId"))), refVal_setUserId );
         setUserId(refVal_setUserId);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))))
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
     {
-        utility::string_t refVal_setAnonUserId;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))), refVal_setAnonUserId );
-        setAnonUserId(refVal_setAnonUserId);
+        utility::string_t refVal_setUrlId;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))), refVal_setUrlId );
+        setUrlId(refVal_setUrlId);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("commenterName"))))
     {
@@ -1065,17 +1003,17 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("commenterLink"))), refVal_setCommenterLink );
         setCommenterLink(refVal_setCommenterLink);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
-    {
-        utility::string_t refVal_setComment;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comment"))), refVal_setComment );
-        setComment(refVal_setComment);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("commentHTML"))))
     {
         utility::string_t refVal_setCommentHTML;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("commentHTML"))), refVal_setCommentHTML );
         setCommentHTML(refVal_setCommentHTML);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
+    {
+        utility::string_t refVal_setComment;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comment"))), refVal_setComment );
+        setComment(refVal_setComment);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("parentId"))))
     {
@@ -1101,35 +1039,17 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("votesDown"))), refVal_setVotesDown );
         setVotesDown(refVal_setVotesDown);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("expireAt"))))
-    {
-        utility::datetime refVal_setExpireAt;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("expireAt"))), refVal_setExpireAt );
-        setExpireAt(refVal_setExpireAt);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("verified"))))
     {
         bool refVal_setVerified;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("verified"))), refVal_setVerified );
         setVerified(refVal_setVerified);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reviewed"))))
-    {
-        bool refVal_setReviewed;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reviewed"))), refVal_setReviewed );
-        setReviewed(refVal_setReviewed);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))))
     {
         utility::string_t refVal_setAvatarSrc;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))), refVal_setAvatarSrc );
         setAvatarSrc(refVal_setAvatarSrc);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isSpam"))))
-    {
-        bool refVal_setIsSpam;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isSpam"))), refVal_setIsSpam );
-        setIsSpam(refVal_setIsSpam);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasImages"))))
     {
@@ -1142,42 +1062,6 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         bool refVal_setHasLinks;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("hasLinks"))), refVal_setHasLinks );
         setHasLinks(refVal_setHasLinks);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasCode"))))
-    {
-        bool refVal_setHasCode;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("hasCode"))), refVal_setHasCode );
-        setHasCode(refVal_setHasCode);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("approved"))))
-    {
-        bool refVal_setApproved;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("approved"))), refVal_setApproved );
-        setApproved(refVal_setApproved);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("locale"))))
-    {
-        utility::string_t refVal_setLocale;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("locale"))), refVal_setLocale );
-        setLocale(refVal_setLocale);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))))
-    {
-        bool refVal_setIsDeleted;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))), refVal_setIsDeleted );
-        setIsDeleted(refVal_setIsDeleted);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))))
-    {
-        bool refVal_setIsDeletedUser;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))), refVal_setIsDeletedUser );
-        setIsDeletedUser(refVal_setIsDeletedUser);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))))
-    {
-        bool refVal_setIsBannedUser;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))), refVal_setIsBannedUser );
-        setIsBannedUser(refVal_setIsBannedUser);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isByAdmin"))))
     {
@@ -1203,11 +1087,11 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isLocked"))), refVal_setIsLocked );
         setIsLocked(refVal_setIsLocked);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("flagCount"))))
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))))
     {
-        int32_t refVal_setFlagCount;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("flagCount"))), refVal_setFlagCount );
-        setFlagCount(refVal_setFlagCount);
+        utility::string_t refVal_setDisplayLabel;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))), refVal_setDisplayLabel );
+        setDisplayLabel(refVal_setDisplayLabel);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("rating"))))
     {
@@ -1215,23 +1099,41 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("rating"))), refVal_setRating );
         setRating(refVal_setRating);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))))
-    {
-        utility::string_t refVal_setDisplayLabel;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("displayLabel"))), refVal_setDisplayLabel );
-        setDisplayLabel(refVal_setDisplayLabel);
-    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("badges"))))
     {
         std::vector<std::shared_ptr<CommentUserBadgeInfo>> refVal_setBadges;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("badges"))), refVal_setBadges );
         setBadges(refVal_setBadges);
     }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("domain"))))
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("viewCount"))))
     {
-        utility::string_t refVal_setDomain;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("domain"))), refVal_setDomain );
-        setDomain(refVal_setDomain);
+        int64_t refVal_setViewCount;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("viewCount"))), refVal_setViewCount );
+        setViewCount(refVal_setViewCount);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))))
+    {
+        bool refVal_setIsDeleted;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isDeleted"))), refVal_setIsDeleted );
+        setIsDeleted(refVal_setIsDeleted);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))))
+    {
+        bool refVal_setIsDeletedUser;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))), refVal_setIsDeletedUser );
+        setIsDeletedUser(refVal_setIsDeletedUser);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isSpam"))))
+    {
+        bool refVal_setIsSpam;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isSpam"))), refVal_setIsSpam );
+        setIsSpam(refVal_setIsSpam);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))))
+    {
+        utility::string_t refVal_setAnonUserId;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("anonUserId"))), refVal_setAnonUserId );
+        setAnonUserId(refVal_setAnonUserId);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("feedbackIds"))))
     {
@@ -1239,17 +1141,71 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("feedbackIds"))), refVal_setFeedbackIds );
         setFeedbackIds(refVal_setFeedbackIds);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("flagCount"))))
+    {
+        int32_t refVal_setFlagCount;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("flagCount"))), refVal_setFlagCount );
+        setFlagCount(refVal_setFlagCount);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("domain"))))
+    {
+        utility::string_t refVal_setDomain;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("domain"))), refVal_setDomain );
+        setDomain(refVal_setDomain);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("url"))))
+    {
+        utility::string_t refVal_setUrl;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("url"))), refVal_setUrl );
+        setUrl(refVal_setUrl);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))))
+    {
+        utility::string_t refVal_setPageTitle;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("pageTitle"))), refVal_setPageTitle );
+        setPageTitle(refVal_setPageTitle);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("expireAt"))))
+    {
+        utility::datetime refVal_setExpireAt;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("expireAt"))), refVal_setExpireAt );
+        setExpireAt(refVal_setExpireAt);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reviewed"))))
+    {
+        bool refVal_setReviewed;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reviewed"))), refVal_setReviewed );
+        setReviewed(refVal_setReviewed);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasCode"))))
+    {
+        bool refVal_setHasCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("hasCode"))), refVal_setHasCode );
+        setHasCode(refVal_setHasCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("approved"))))
+    {
+        bool refVal_setApproved;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("approved"))), refVal_setApproved );
+        setApproved(refVal_setApproved);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("locale"))))
+    {
+        utility::string_t refVal_setLocale;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("locale"))), refVal_setLocale );
+        setLocale(refVal_setLocale);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))))
+    {
+        bool refVal_setIsBannedUser;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isBannedUser"))), refVal_setIsBannedUser );
+        setIsBannedUser(refVal_setIsBannedUser);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("groupIds"))))
     {
         std::vector<utility::string_t> refVal_setGroupIds;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("groupIds"))), refVal_setGroupIds );
         setGroupIds(refVal_setGroupIds);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("viewCount"))))
-    {
-        int64_t refVal_setViewCount;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("viewCount"))), refVal_setViewCount );
-        setViewCount(refVal_setViewCount);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isLive"))))
     {
@@ -1263,31 +1219,16 @@ bool PubSubComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("hidden"))), refVal_setHidden );
         setHidden(refVal_setHidden);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("date"))))
+    {
+        utility::string_t refVal_setDate;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("date"))), refVal_setDate );
+        setDate(refVal_setDate);
+    }
     return ok;
 }
 
 
-utility::string_t PubSubComment::getDate() const
-{
-    return m_date;
-}
-
-
-void PubSubComment::setDate(const utility::string_t& value)
-{
-    m_date = value;
-    m_dateIsSet = true;
-}
-
-bool PubSubComment::dateIsSet() const
-{
-    return m_dateIsSet;
-}
-
-void PubSubComment::unsetdate()
-{
-    m_dateIsSet = false;
-}
 utility::string_t PubSubComment::getId() const
 {
     return m__id;
@@ -1330,6 +1271,26 @@ void PubSubComment::unsetTenantId()
 {
     m_TenantIdIsSet = false;
 }
+utility::string_t PubSubComment::getUserId() const
+{
+    return m_UserId.get();
+}
+
+
+void PubSubComment::setUserId(const utility::string_t& value)
+{
+    m_UserId = value;
+}
+
+bool PubSubComment::userIdIsSet() const
+{
+    return m_UserId.has_value();
+}
+
+void PubSubComment::unsetUserId()
+{
+    m_UserId.reset();
+}
 utility::string_t PubSubComment::getUrlId() const
 {
     return m_UrlId;
@@ -1350,90 +1311,6 @@ bool PubSubComment::urlIdIsSet() const
 void PubSubComment::unsetUrlId()
 {
     m_UrlIdIsSet = false;
-}
-utility::string_t PubSubComment::getUrl() const
-{
-    return m_Url;
-}
-
-
-void PubSubComment::setUrl(const utility::string_t& value)
-{
-    m_Url = value;
-    m_UrlIsSet = true;
-}
-
-bool PubSubComment::urlIsSet() const
-{
-    return m_UrlIsSet;
-}
-
-void PubSubComment::unsetUrl()
-{
-    m_UrlIsSet = false;
-}
-utility::string_t PubSubComment::getPageTitle() const
-{
-    return m_PageTitle;
-}
-
-
-void PubSubComment::setPageTitle(const utility::string_t& value)
-{
-    m_PageTitle = value;
-    m_PageTitleIsSet = true;
-}
-
-bool PubSubComment::pageTitleIsSet() const
-{
-    return m_PageTitleIsSet;
-}
-
-void PubSubComment::unsetPageTitle()
-{
-    m_PageTitleIsSet = false;
-}
-utility::string_t PubSubComment::getUserId() const
-{
-    return m_UserId;
-}
-
-
-void PubSubComment::setUserId(const utility::string_t& value)
-{
-    m_UserId = value;
-    m_UserIdIsSet = true;
-}
-
-bool PubSubComment::userIdIsSet() const
-{
-    return m_UserIdIsSet;
-}
-
-void PubSubComment::unsetUserId()
-{
-    m_UserIdIsSet = false;
-}
-utility::string_t PubSubComment::getAnonUserId() const
-{
-    return m_AnonUserId;
-}
-
-
-void PubSubComment::setAnonUserId(const utility::string_t& value)
-{
-    m_AnonUserId = value;
-    m_AnonUserIdIsSet = true;
-}
-
-bool PubSubComment::anonUserIdIsSet() const
-{
-    return m_AnonUserIdIsSet;
-}
-
-void PubSubComment::unsetAnonUserId()
-{
-    m_AnonUserIdIsSet = false;
 }
 utility::string_t PubSubComment::getCommenterName() const
 {
@@ -1458,45 +1335,23 @@ void PubSubComment::unsetCommenterName()
 }
 utility::string_t PubSubComment::getCommenterLink() const
 {
-    return m_CommenterLink;
+    return m_CommenterLink.get();
 }
 
 
 void PubSubComment::setCommenterLink(const utility::string_t& value)
 {
     m_CommenterLink = value;
-    m_CommenterLinkIsSet = true;
 }
 
 bool PubSubComment::commenterLinkIsSet() const
 {
-    return m_CommenterLinkIsSet;
+    return m_CommenterLink.has_value();
 }
 
 void PubSubComment::unsetCommenterLink()
 {
-    m_CommenterLinkIsSet = false;
-}
-utility::string_t PubSubComment::getComment() const
-{
-    return m_Comment;
-}
-
-
-void PubSubComment::setComment(const utility::string_t& value)
-{
-    m_Comment = value;
-    m_CommentIsSet = true;
-}
-
-bool PubSubComment::commentIsSet() const
-{
-    return m_CommentIsSet;
-}
-
-void PubSubComment::unsetComment()
-{
-    m_CommentIsSet = false;
+    m_CommenterLink.reset();
 }
 utility::string_t PubSubComment::getCommentHTML() const
 {
@@ -1519,107 +1374,103 @@ void PubSubComment::unsetCommentHTML()
 {
     m_CommentHTMLIsSet = false;
 }
+utility::string_t PubSubComment::getComment() const
+{
+    return m_Comment;
+}
+
+
+void PubSubComment::setComment(const utility::string_t& value)
+{
+    m_Comment = value;
+    m_CommentIsSet = true;
+}
+
+bool PubSubComment::commentIsSet() const
+{
+    return m_CommentIsSet;
+}
+
+void PubSubComment::unsetComment()
+{
+    m_CommentIsSet = false;
+}
 utility::string_t PubSubComment::getParentId() const
 {
-    return m_ParentId;
+    return m_ParentId.get();
 }
 
 
 void PubSubComment::setParentId(const utility::string_t& value)
 {
     m_ParentId = value;
-    m_ParentIdIsSet = true;
 }
 
 bool PubSubComment::parentIdIsSet() const
 {
-    return m_ParentIdIsSet;
+    return m_ParentId.has_value();
 }
 
 void PubSubComment::unsetParentId()
 {
-    m_ParentIdIsSet = false;
+    m_ParentId.reset();
 }
 int32_t PubSubComment::getVotes() const
 {
-    return m_Votes;
+    return m_Votes.get();
 }
 
 void PubSubComment::setVotes(int32_t value)
 {
     m_Votes = value;
-    m_VotesIsSet = true;
 }
 
 bool PubSubComment::votesIsSet() const
 {
-    return m_VotesIsSet;
+    return m_Votes.has_value();
 }
 
 void PubSubComment::unsetVotes()
 {
-    m_VotesIsSet = false;
+    m_Votes.reset();
 }
 int32_t PubSubComment::getVotesUp() const
 {
-    return m_VotesUp;
+    return m_VotesUp.get();
 }
 
 void PubSubComment::setVotesUp(int32_t value)
 {
     m_VotesUp = value;
-    m_VotesUpIsSet = true;
 }
 
 bool PubSubComment::votesUpIsSet() const
 {
-    return m_VotesUpIsSet;
+    return m_VotesUp.has_value();
 }
 
 void PubSubComment::unsetVotesUp()
 {
-    m_VotesUpIsSet = false;
+    m_VotesUp.reset();
 }
 int32_t PubSubComment::getVotesDown() const
 {
-    return m_VotesDown;
+    return m_VotesDown.get();
 }
 
 void PubSubComment::setVotesDown(int32_t value)
 {
     m_VotesDown = value;
-    m_VotesDownIsSet = true;
 }
 
 bool PubSubComment::votesDownIsSet() const
 {
-    return m_VotesDownIsSet;
+    return m_VotesDown.has_value();
 }
 
 void PubSubComment::unsetVotesDown()
 {
-    m_VotesDownIsSet = false;
-}
-utility::datetime PubSubComment::getExpireAt() const
-{
-    return m_ExpireAt;
-}
-
-
-void PubSubComment::setExpireAt(const utility::datetime& value)
-{
-    m_ExpireAt = value;
-    m_ExpireAtIsSet = true;
-}
-
-bool PubSubComment::expireAtIsSet() const
-{
-    return m_ExpireAtIsSet;
-}
-
-void PubSubComment::unsetExpireAt()
-{
-    m_ExpireAtIsSet = false;
+    m_VotesDown.reset();
 }
 bool PubSubComment::isVerified() const
 {
@@ -1641,66 +1492,25 @@ void PubSubComment::unsetVerified()
 {
     m_VerifiedIsSet = false;
 }
-bool PubSubComment::isReviewed() const
-{
-    return m_Reviewed;
-}
-
-void PubSubComment::setReviewed(bool value)
-{
-    m_Reviewed = value;
-    m_ReviewedIsSet = true;
-}
-
-bool PubSubComment::reviewedIsSet() const
-{
-    return m_ReviewedIsSet;
-}
-
-void PubSubComment::unsetReviewed()
-{
-    m_ReviewedIsSet = false;
-}
 utility::string_t PubSubComment::getAvatarSrc() const
 {
-    return m_AvatarSrc;
+    return m_AvatarSrc.get();
 }
 
 
 void PubSubComment::setAvatarSrc(const utility::string_t& value)
 {
     m_AvatarSrc = value;
-    m_AvatarSrcIsSet = true;
 }
 
 bool PubSubComment::avatarSrcIsSet() const
 {
-    return m_AvatarSrcIsSet;
+    return m_AvatarSrc.has_value();
 }
 
 void PubSubComment::unsetAvatarSrc()
 {
-    m_AvatarSrcIsSet = false;
-}
-bool PubSubComment::isIsSpam() const
-{
-    return m_IsSpam;
-}
-
-void PubSubComment::setIsSpam(bool value)
-{
-    m_IsSpam = value;
-    m_IsSpamIsSet = true;
-}
-
-bool PubSubComment::isSpamIsSet() const
-{
-    return m_IsSpamIsSet;
-}
-
-void PubSubComment::unsetIsSpam()
-{
-    m_IsSpamIsSet = false;
+    m_AvatarSrc.reset();
 }
 bool PubSubComment::isHasImages() const
 {
@@ -1741,127 +1551,6 @@ bool PubSubComment::hasLinksIsSet() const
 void PubSubComment::unsetHasLinks()
 {
     m_HasLinksIsSet = false;
-}
-bool PubSubComment::isHasCode() const
-{
-    return m_HasCode;
-}
-
-void PubSubComment::setHasCode(bool value)
-{
-    m_HasCode = value;
-    m_HasCodeIsSet = true;
-}
-
-bool PubSubComment::hasCodeIsSet() const
-{
-    return m_HasCodeIsSet;
-}
-
-void PubSubComment::unsetHasCode()
-{
-    m_HasCodeIsSet = false;
-}
-bool PubSubComment::isApproved() const
-{
-    return m_Approved;
-}
-
-void PubSubComment::setApproved(bool value)
-{
-    m_Approved = value;
-    m_ApprovedIsSet = true;
-}
-
-bool PubSubComment::approvedIsSet() const
-{
-    return m_ApprovedIsSet;
-}
-
-void PubSubComment::unsetApproved()
-{
-    m_ApprovedIsSet = false;
-}
-utility::string_t PubSubComment::getLocale() const
-{
-    return m_Locale;
-}
-
-
-void PubSubComment::setLocale(const utility::string_t& value)
-{
-    m_Locale = value;
-    m_LocaleIsSet = true;
-}
-
-bool PubSubComment::localeIsSet() const
-{
-    return m_LocaleIsSet;
-}
-
-void PubSubComment::unsetLocale()
-{
-    m_LocaleIsSet = false;
-}
-bool PubSubComment::isIsDeleted() const
-{
-    return m_IsDeleted;
-}
-
-void PubSubComment::setIsDeleted(bool value)
-{
-    m_IsDeleted = value;
-    m_IsDeletedIsSet = true;
-}
-
-bool PubSubComment::isDeletedIsSet() const
-{
-    return m_IsDeletedIsSet;
-}
-
-void PubSubComment::unsetIsDeleted()
-{
-    m_IsDeletedIsSet = false;
-}
-bool PubSubComment::isIsDeletedUser() const
-{
-    return m_IsDeletedUser;
-}
-
-void PubSubComment::setIsDeletedUser(bool value)
-{
-    m_IsDeletedUser = value;
-    m_IsDeletedUserIsSet = true;
-}
-
-bool PubSubComment::isDeletedUserIsSet() const
-{
-    return m_IsDeletedUserIsSet;
-}
-
-void PubSubComment::unsetIsDeletedUser()
-{
-    m_IsDeletedUserIsSet = false;
-}
-bool PubSubComment::isIsBannedUser() const
-{
-    return m_IsBannedUser;
-}
-
-void PubSubComment::setIsBannedUser(bool value)
-{
-    m_IsBannedUser = value;
-    m_IsBannedUserIsSet = true;
-}
-
-bool PubSubComment::isBannedUserIsSet() const
-{
-    return m_IsBannedUserIsSet;
-}
-
-void PubSubComment::unsetIsBannedUser()
-{
-    m_IsBannedUserIsSet = false;
 }
 bool PubSubComment::isIsByAdmin() const
 {
@@ -1905,146 +1594,199 @@ void PubSubComment::unsetIsByModerator()
 }
 bool PubSubComment::isIsPinned() const
 {
-    return m_IsPinned;
+    return m_IsPinned.get();
 }
 
 void PubSubComment::setIsPinned(bool value)
 {
     m_IsPinned = value;
-    m_IsPinnedIsSet = true;
 }
 
 bool PubSubComment::isPinnedIsSet() const
 {
-    return m_IsPinnedIsSet;
+    return m_IsPinned.has_value();
 }
 
 void PubSubComment::unsetIsPinned()
 {
-    m_IsPinnedIsSet = false;
+    m_IsPinned.reset();
 }
 bool PubSubComment::isIsLocked() const
 {
-    return m_IsLocked;
+    return m_IsLocked.get();
 }
 
 void PubSubComment::setIsLocked(bool value)
 {
     m_IsLocked = value;
-    m_IsLockedIsSet = true;
 }
 
 bool PubSubComment::isLockedIsSet() const
 {
-    return m_IsLockedIsSet;
+    return m_IsLocked.has_value();
 }
 
 void PubSubComment::unsetIsLocked()
 {
-    m_IsLockedIsSet = false;
-}
-int32_t PubSubComment::getFlagCount() const
-{
-    return m_FlagCount;
-}
-
-void PubSubComment::setFlagCount(int32_t value)
-{
-    m_FlagCount = value;
-    m_FlagCountIsSet = true;
-}
-
-bool PubSubComment::flagCountIsSet() const
-{
-    return m_FlagCountIsSet;
-}
-
-void PubSubComment::unsetFlagCount()
-{
-    m_FlagCountIsSet = false;
-}
-double PubSubComment::getRating() const
-{
-    return m_Rating;
-}
-
-void PubSubComment::setRating(double value)
-{
-    m_Rating = value;
-    m_RatingIsSet = true;
-}
-
-bool PubSubComment::ratingIsSet() const
-{
-    return m_RatingIsSet;
-}
-
-void PubSubComment::unsetRating()
-{
-    m_RatingIsSet = false;
+    m_IsLocked.reset();
 }
 utility::string_t PubSubComment::getDisplayLabel() const
 {
-    return m_DisplayLabel;
+    return m_DisplayLabel.get();
 }
 
 
 void PubSubComment::setDisplayLabel(const utility::string_t& value)
 {
     m_DisplayLabel = value;
-    m_DisplayLabelIsSet = true;
 }
 
 bool PubSubComment::displayLabelIsSet() const
 {
-    return m_DisplayLabelIsSet;
+    return m_DisplayLabel.has_value();
 }
 
 void PubSubComment::unsetDisplayLabel()
 {
-    m_DisplayLabelIsSet = false;
+    m_DisplayLabel.reset();
+}
+double PubSubComment::getRating() const
+{
+    return m_Rating.get();
+}
+
+void PubSubComment::setRating(double value)
+{
+    m_Rating = value;
+}
+
+bool PubSubComment::ratingIsSet() const
+{
+    return m_Rating.has_value();
+}
+
+void PubSubComment::unsetRating()
+{
+    m_Rating.reset();
 }
 std::vector<std::shared_ptr<CommentUserBadgeInfo>> PubSubComment::getBadges() const
 {
-    return m_Badges;
+    return m_Badges.get();
 }
 
 
 void PubSubComment::setBadges(const std::vector<std::shared_ptr<CommentUserBadgeInfo>>& value)
 {
     m_Badges = value;
-    m_BadgesIsSet = true;
 }
 
 bool PubSubComment::badgesIsSet() const
 {
-    return m_BadgesIsSet;
+    return m_Badges.has_value();
 }
 
 void PubSubComment::unsetBadges()
 {
-    m_BadgesIsSet = false;
+    m_Badges.reset();
 }
-utility::string_t PubSubComment::getDomain() const
+int64_t PubSubComment::getViewCount() const
 {
-    return m_Domain;
+    return m_ViewCount.get();
+}
+
+void PubSubComment::setViewCount(int64_t value)
+{
+    m_ViewCount = value;
+}
+
+bool PubSubComment::viewCountIsSet() const
+{
+    return m_ViewCount.has_value();
+}
+
+void PubSubComment::unsetViewCount()
+{
+    m_ViewCount.reset();
+}
+bool PubSubComment::isIsDeleted() const
+{
+    return m_IsDeleted;
+}
+
+void PubSubComment::setIsDeleted(bool value)
+{
+    m_IsDeleted = value;
+    m_IsDeletedIsSet = true;
+}
+
+bool PubSubComment::isDeletedIsSet() const
+{
+    return m_IsDeletedIsSet;
+}
+
+void PubSubComment::unsetIsDeleted()
+{
+    m_IsDeletedIsSet = false;
+}
+bool PubSubComment::isIsDeletedUser() const
+{
+    return m_IsDeletedUser;
+}
+
+void PubSubComment::setIsDeletedUser(bool value)
+{
+    m_IsDeletedUser = value;
+    m_IsDeletedUserIsSet = true;
+}
+
+bool PubSubComment::isDeletedUserIsSet() const
+{
+    return m_IsDeletedUserIsSet;
+}
+
+void PubSubComment::unsetIsDeletedUser()
+{
+    m_IsDeletedUserIsSet = false;
+}
+bool PubSubComment::isIsSpam() const
+{
+    return m_IsSpam;
+}
+
+void PubSubComment::setIsSpam(bool value)
+{
+    m_IsSpam = value;
+    m_IsSpamIsSet = true;
+}
+
+bool PubSubComment::isSpamIsSet() const
+{
+    return m_IsSpamIsSet;
+}
+
+void PubSubComment::unsetIsSpam()
+{
+    m_IsSpamIsSet = false;
+}
+utility::string_t PubSubComment::getAnonUserId() const
+{
+    return m_AnonUserId.get();
 }
 
 
-void PubSubComment::setDomain(const utility::string_t& value)
+void PubSubComment::setAnonUserId(const utility::string_t& value)
 {
-    m_Domain = value;
-    m_DomainIsSet = true;
+    m_AnonUserId = value;
 }
 
-bool PubSubComment::domainIsSet() const
+bool PubSubComment::anonUserIdIsSet() const
 {
-    return m_DomainIsSet;
+    return m_AnonUserId.has_value();
 }
 
-void PubSubComment::unsetDomain()
+void PubSubComment::unsetAnonUserId()
 {
-    m_DomainIsSet = false;
+    m_AnonUserId.reset();
 }
 std::vector<utility::string_t> PubSubComment::getFeedbackIds() const
 {
@@ -2067,46 +1809,225 @@ void PubSubComment::unsetFeedbackIds()
 {
     m_FeedbackIdsIsSet = false;
 }
+int32_t PubSubComment::getFlagCount() const
+{
+    return m_FlagCount.get();
+}
+
+void PubSubComment::setFlagCount(int32_t value)
+{
+    m_FlagCount = value;
+}
+
+bool PubSubComment::flagCountIsSet() const
+{
+    return m_FlagCount.has_value();
+}
+
+void PubSubComment::unsetFlagCount()
+{
+    m_FlagCount.reset();
+}
+utility::string_t PubSubComment::getDomain() const
+{
+    return m_Domain.get();
+}
+
+
+void PubSubComment::setDomain(const utility::string_t& value)
+{
+    m_Domain = value;
+}
+
+bool PubSubComment::domainIsSet() const
+{
+    return m_Domain.has_value();
+}
+
+void PubSubComment::unsetDomain()
+{
+    m_Domain.reset();
+}
+utility::string_t PubSubComment::getUrl() const
+{
+    return m_Url;
+}
+
+
+void PubSubComment::setUrl(const utility::string_t& value)
+{
+    m_Url = value;
+    m_UrlIsSet = true;
+}
+
+bool PubSubComment::urlIsSet() const
+{
+    return m_UrlIsSet;
+}
+
+void PubSubComment::unsetUrl()
+{
+    m_UrlIsSet = false;
+}
+utility::string_t PubSubComment::getPageTitle() const
+{
+    return m_PageTitle.get();
+}
+
+
+void PubSubComment::setPageTitle(const utility::string_t& value)
+{
+    m_PageTitle = value;
+}
+
+bool PubSubComment::pageTitleIsSet() const
+{
+    return m_PageTitle.has_value();
+}
+
+void PubSubComment::unsetPageTitle()
+{
+    m_PageTitle.reset();
+}
+utility::datetime PubSubComment::getExpireAt() const
+{
+    return m_ExpireAt.get();
+}
+
+
+void PubSubComment::setExpireAt(const utility::datetime& value)
+{
+    m_ExpireAt = value;
+}
+
+bool PubSubComment::expireAtIsSet() const
+{
+    return m_ExpireAt.has_value();
+}
+
+void PubSubComment::unsetExpireAt()
+{
+    m_ExpireAt.reset();
+}
+bool PubSubComment::isReviewed() const
+{
+    return m_Reviewed;
+}
+
+void PubSubComment::setReviewed(bool value)
+{
+    m_Reviewed = value;
+    m_ReviewedIsSet = true;
+}
+
+bool PubSubComment::reviewedIsSet() const
+{
+    return m_ReviewedIsSet;
+}
+
+void PubSubComment::unsetReviewed()
+{
+    m_ReviewedIsSet = false;
+}
+bool PubSubComment::isHasCode() const
+{
+    return m_HasCode;
+}
+
+void PubSubComment::setHasCode(bool value)
+{
+    m_HasCode = value;
+    m_HasCodeIsSet = true;
+}
+
+bool PubSubComment::hasCodeIsSet() const
+{
+    return m_HasCodeIsSet;
+}
+
+void PubSubComment::unsetHasCode()
+{
+    m_HasCodeIsSet = false;
+}
+bool PubSubComment::isApproved() const
+{
+    return m_Approved;
+}
+
+void PubSubComment::setApproved(bool value)
+{
+    m_Approved = value;
+    m_ApprovedIsSet = true;
+}
+
+bool PubSubComment::approvedIsSet() const
+{
+    return m_ApprovedIsSet;
+}
+
+void PubSubComment::unsetApproved()
+{
+    m_ApprovedIsSet = false;
+}
+utility::string_t PubSubComment::getLocale() const
+{
+    return m_Locale.get();
+}
+
+
+void PubSubComment::setLocale(const utility::string_t& value)
+{
+    m_Locale = value;
+}
+
+bool PubSubComment::localeIsSet() const
+{
+    return m_Locale.has_value();
+}
+
+void PubSubComment::unsetLocale()
+{
+    m_Locale.reset();
+}
+bool PubSubComment::isIsBannedUser() const
+{
+    return m_IsBannedUser;
+}
+
+void PubSubComment::setIsBannedUser(bool value)
+{
+    m_IsBannedUser = value;
+    m_IsBannedUserIsSet = true;
+}
+
+bool PubSubComment::isBannedUserIsSet() const
+{
+    return m_IsBannedUserIsSet;
+}
+
+void PubSubComment::unsetIsBannedUser()
+{
+    m_IsBannedUserIsSet = false;
+}
 std::vector<utility::string_t> PubSubComment::getGroupIds() const
 {
-    return m_GroupIds;
+    return m_GroupIds.get();
 }
 
 
 void PubSubComment::setGroupIds(const std::vector<utility::string_t>& value)
 {
     m_GroupIds = value;
-    m_GroupIdsIsSet = true;
 }
 
 bool PubSubComment::groupIdsIsSet() const
 {
-    return m_GroupIdsIsSet;
+    return m_GroupIds.has_value();
 }
 
 void PubSubComment::unsetGroupIds()
 {
-    m_GroupIdsIsSet = false;
-}
-int64_t PubSubComment::getViewCount() const
-{
-    return m_ViewCount;
-}
-
-void PubSubComment::setViewCount(int64_t value)
-{
-    m_ViewCount = value;
-    m_ViewCountIsSet = true;
-}
-
-bool PubSubComment::viewCountIsSet() const
-{
-    return m_ViewCountIsSet;
-}
-
-void PubSubComment::unsetViewCount()
-{
-    m_ViewCountIsSet = false;
+    m_GroupIds.reset();
 }
 bool PubSubComment::isIsLive() const
 {
@@ -2147,6 +2068,27 @@ bool PubSubComment::hiddenIsSet() const
 void PubSubComment::unsetHidden()
 {
     m_HiddenIsSet = false;
+}
+utility::string_t PubSubComment::getDate() const
+{
+    return m_date;
+}
+
+
+void PubSubComment::setDate(const utility::string_t& value)
+{
+    m_date = value;
+    m_dateIsSet = true;
+}
+
+bool PubSubComment::dateIsSet() const
+{
+    return m_dateIsSet;
+}
+
+void PubSubComment::unsetdate()
+{
+    m_dateIsSet = false;
 }
 
 }

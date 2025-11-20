@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PatchPageAPIResponse_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PatchPageAPIResponse_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -65,6 +66,11 @@ public:
     void unsetCode();
     void setCode(const utility::string_t& value);
 
+    int64_t getCommentsUpdated() const;
+    bool commentsUpdatedIsSet() const;
+    void unsetCommentsUpdated();
+    void setCommentsUpdated(int64_t value);
+
     std::shared_ptr<APIPage> getPage() const;
     bool pageIsSet() const;
     void unsetPage();
@@ -82,6 +88,9 @@ protected:
 
     utility::string_t m_Code;
     bool m_CodeIsSet;
+
+    int64_t m_CommentsUpdated;
+    bool m_CommentsUpdatedIsSet;
 
     std::shared_ptr<APIPage> m_Page;
     bool m_PageIsSet;

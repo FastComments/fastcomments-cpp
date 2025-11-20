@@ -52,47 +52,47 @@ web::json::value APIPage::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IsClosedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isClosed"))] = ModelBase::toJson(m_IsClosed);
     }
     if(m_AccessibleByGroupIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("accessibleByGroupIds"))] = ModelBase::toJson(m_AccessibleByGroupIds);
     }
     if(m_RootCommentCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("rootCommentCount"))] = ModelBase::toJson(m_RootCommentCount);
     }
     if(m_CommentCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentCount"))] = ModelBase::toJson(m_CommentCount);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_TitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("title"))] = ModelBase::toJson(m_Title);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }

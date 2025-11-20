@@ -37,12 +37,12 @@ web::json::value PublicAPISetCommentTextResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
@@ -58,7 +58,7 @@ bool PublicAPISetCommentTextResponse::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("comment")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<Pick_FComment_approved_or_commentHTML_> refVal_setComment;
+            std::shared_ptr<SetCommentTextResult> refVal_setComment;
             ok &= ModelBase::fromJson(fieldValue, refVal_setComment);
             setComment(refVal_setComment);
             
@@ -106,7 +106,7 @@ bool PublicAPISetCommentTextResponse::fromMultiPart(std::shared_ptr<MultipartFor
 
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("comment"))))
     {
-        std::shared_ptr<Pick_FComment_approved_or_commentHTML_> refVal_setComment;
+        std::shared_ptr<SetCommentTextResult> refVal_setComment;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("comment"))), refVal_setComment );
         setComment(refVal_setComment);
     }
@@ -120,13 +120,13 @@ bool PublicAPISetCommentTextResponse::fromMultiPart(std::shared_ptr<MultipartFor
 }
 
 
-std::shared_ptr<Pick_FComment_approved_or_commentHTML_> PublicAPISetCommentTextResponse::getComment() const
+std::shared_ptr<SetCommentTextResult> PublicAPISetCommentTextResponse::getComment() const
 {
     return m_Comment;
 }
 
 
-void PublicAPISetCommentTextResponse::setComment(const std::shared_ptr<Pick_FComment_approved_or_commentHTML_>& value)
+void PublicAPISetCommentTextResponse::setComment(const std::shared_ptr<SetCommentTextResult>& value)
 {
     m_Comment = value;
     m_CommentIsSet = true;

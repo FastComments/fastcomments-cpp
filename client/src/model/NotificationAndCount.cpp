@@ -38,12 +38,12 @@ web::json::value NotificationAndCount::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(m_Type);
     }
     if(m_CountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("count"))] = ModelBase::toJson(m_Count);
     }

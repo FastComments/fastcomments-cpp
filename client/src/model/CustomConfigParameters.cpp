@@ -30,23 +30,11 @@ CustomConfigParameters::CustomConfigParameters()
     m_AllowAnonFlagIsSet = false;
     m_AllowAnonVotes = false;
     m_AllowAnonVotesIsSet = false;
-    m_AllowedLanguagesIsSet = false;
     m_CollapseReplies = false;
     m_CollapseRepliesIsSet = false;
-    m_CommentCountFormat = utility::conversions::to_string_t("");
-    m_CommentCountFormatIsSet = false;
     m_CommentHTMLRenderingModeIsSet = false;
-    m_CommentThreadDeleteModeIsSet = false;
-    m_CommenterNameFormatIsSet = false;
     m_CountAboveToggle = 0;
     m_CountAboveToggleIsSet = false;
-    m_CustomCSS = utility::conversions::to_string_t("");
-    m_CustomCSSIsSet = false;
-    m_DefaultAvatarSrc = utility::conversions::to_string_t("");
-    m_DefaultAvatarSrcIsSet = false;
-    m_DefaultSortDirectionIsSet = false;
-    m_DefaultUsername = utility::conversions::to_string_t("");
-    m_DefaultUsernameIsSet = false;
     m_DisableAutoAdminMigration = false;
     m_DisableAutoAdminMigrationIsSet = false;
     m_DisableAutoHashTagCreation = false;
@@ -90,38 +78,27 @@ CustomConfigParameters::CustomConfigParameters()
     m_GifRatingIsSet = false;
     m_HasDarkBackground = false;
     m_HasDarkBackgroundIsSet = false;
-    m_HeaderHTML = utility::conversions::to_string_t("");
-    m_HeaderHTMLIsSet = false;
     m_HideAvatars = false;
     m_HideAvatarsIsSet = false;
-    m_HideCommentsUnderCountTextFormat = utility::conversions::to_string_t("");
-    m_HideCommentsUnderCountTextFormatIsSet = false;
     m_ImageContentProfanityLevelIsSet = false;
     m_InputAfterComments = false;
     m_InputAfterCommentsIsSet = false;
     m_LimitCommentsByGroups = false;
     m_LimitCommentsByGroupsIsSet = false;
-    m_Locale = utility::conversions::to_string_t("");
-    m_LocaleIsSet = false;
-    m_MaxCommentCharacterLength = 0;
-    m_MaxCommentCharacterLengthIsSet = false;
-    m_MaxCommentCreatedCountPUPM = 0;
-    m_MaxCommentCreatedCountPUPMIsSet = false;
     m_NoCustomConfig = false;
     m_NoCustomConfigIsSet = false;
     m_NoImageUploads = false;
     m_NoImageUploadsIsSet = false;
     m_NoStyles = false;
     m_NoStylesIsSet = false;
-    m_PageSize = 0;
-    m_PageSizeIsSet = false;
     m_Readonly = false;
     m_ReadonlyIsSet = false;
+    m_NoNewRootComments = false;
+    m_NoNewRootCommentsIsSet = false;
     m_RequireSSO = false;
     m_RequireSSOIsSet = false;
     m_EnableResizeHandle = false;
     m_EnableResizeHandleIsSet = false;
-    m_RestrictedLinkDomainsIsSet = false;
     m_ShowBadgesInTopBar = false;
     m_ShowBadgesInTopBarIsSet = false;
     m_ShowCommentSaveSuccess = false;
@@ -132,7 +109,6 @@ CustomConfigParameters::CustomConfigParameters()
     m_ShowQuestionIsSet = false;
     m_SpamRulesIsSet = false;
     m_SsoSecLvlIsSet = false;
-    m_TranslationsIsSet = false;
     m_UseShowCommentsToggle = false;
     m_UseShowCommentsToggleIsSet = false;
     m_UseSingleLineCommentInput = false;
@@ -162,362 +138,367 @@ web::json::value CustomConfigParameters::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_AbsoluteAndRelativeDatesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("absoluteAndRelativeDates"))] = ModelBase::toJson(m_AbsoluteAndRelativeDates);
     }
     if(m_AbsoluteDatesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("absoluteDates"))] = ModelBase::toJson(m_AbsoluteDates);
     }
     if(m_AllowAnonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("allowAnon"))] = ModelBase::toJson(m_AllowAnon);
     }
     if(m_AllowAnonFlagIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("allowAnonFlag"))] = ModelBase::toJson(m_AllowAnonFlag);
     }
     if(m_AllowAnonVotesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("allowAnonVotes"))] = ModelBase::toJson(m_AllowAnonVotes);
     }
-    if(m_AllowedLanguagesIsSet)
-    {   
+    if(m_AllowedLanguages.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("allowedLanguages"))] = ModelBase::toJson(m_AllowedLanguages);
+        val[utility::conversions::to_string_t(_XPLATSTR("allowedLanguages"))] = ModelBase::toJson(m_AllowedLanguages.get());
     }
     if(m_CollapseRepliesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("collapseReplies"))] = ModelBase::toJson(m_CollapseReplies);
     }
-    if(m_CommentCountFormatIsSet)
-    {   
+    if(m_CommentCountFormat.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commentCountFormat"))] = ModelBase::toJson(m_CommentCountFormat);
+        val[utility::conversions::to_string_t(_XPLATSTR("commentCountFormat"))] = ModelBase::toJson(m_CommentCountFormat.get());
     }
     if(m_CommentHTMLRenderingModeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentHTMLRenderingMode"))] = ModelBase::toJson(m_CommentHTMLRenderingMode);
     }
-    if(m_CommentThreadDeleteModeIsSet)
-    {   
+    if(m_CommentThreadDeleteMode.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commentThreadDeleteMode"))] = ModelBase::toJson(m_CommentThreadDeleteMode);
+        val[utility::conversions::to_string_t(_XPLATSTR("commentThreadDeleteMode"))] = ModelBase::toJson(m_CommentThreadDeleteMode.get());
     }
-    if(m_CommenterNameFormatIsSet)
-    {   
+    if(m_CommenterNameFormat.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterNameFormat"))] = ModelBase::toJson(m_CommenterNameFormat);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterNameFormat"))] = ModelBase::toJson(m_CommenterNameFormat.get());
     }
     if(m_CountAboveToggleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("countAboveToggle"))] = ModelBase::toJson(m_CountAboveToggle);
     }
-    if(m_CustomCSSIsSet)
-    {   
+    if(m_CustomCSS.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("customCSS"))] = ModelBase::toJson(m_CustomCSS);
+        val[utility::conversions::to_string_t(_XPLATSTR("customCSS"))] = ModelBase::toJson(m_CustomCSS.get());
     }
-    if(m_DefaultAvatarSrcIsSet)
-    {   
+    if(m_DefaultAvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("defaultAvatarSrc"))] = ModelBase::toJson(m_DefaultAvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("defaultAvatarSrc"))] = ModelBase::toJson(m_DefaultAvatarSrc.get());
     }
-    if(m_DefaultSortDirectionIsSet)
-    {   
+    if(m_DefaultSortDirection.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("defaultSortDirection"))] = ModelBase::toJson(m_DefaultSortDirection);
+        val[utility::conversions::to_string_t(_XPLATSTR("defaultSortDirection"))] = ModelBase::toJson(m_DefaultSortDirection.get());
     }
-    if(m_DefaultUsernameIsSet)
-    {   
+    if(m_DefaultUsername.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("defaultUsername"))] = ModelBase::toJson(m_DefaultUsername);
+        val[utility::conversions::to_string_t(_XPLATSTR("defaultUsername"))] = ModelBase::toJson(m_DefaultUsername.get());
     }
     if(m_DisableAutoAdminMigrationIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableAutoAdminMigration"))] = ModelBase::toJson(m_DisableAutoAdminMigration);
     }
     if(m_DisableAutoHashTagCreationIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableAutoHashTagCreation"))] = ModelBase::toJson(m_DisableAutoHashTagCreation);
     }
     if(m_DisableBlockingIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableBlocking"))] = ModelBase::toJson(m_DisableBlocking);
     }
     if(m_DisableCommenterCommentDeleteIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableCommenterCommentDelete"))] = ModelBase::toJson(m_DisableCommenterCommentDelete);
     }
     if(m_DisableCommenterCommentEditIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableCommenterCommentEdit"))] = ModelBase::toJson(m_DisableCommenterCommentEdit);
     }
     if(m_DisableEmailInputsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableEmailInputs"))] = ModelBase::toJson(m_DisableEmailInputs);
     }
     if(m_DisableLiveCommentingIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableLiveCommenting"))] = ModelBase::toJson(m_DisableLiveCommenting);
     }
     if(m_DisableNotificationBellIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableNotificationBell"))] = ModelBase::toJson(m_DisableNotificationBell);
     }
     if(m_DisableProfilesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableProfiles"))] = ModelBase::toJson(m_DisableProfiles);
     }
     if(m_DisableSuccessMessageIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableSuccessMessage"))] = ModelBase::toJson(m_DisableSuccessMessage);
     }
     if(m_DisableToolbarIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableToolbar"))] = ModelBase::toJson(m_DisableToolbar);
     }
     if(m_DisableUnverifiedLabelIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableUnverifiedLabel"))] = ModelBase::toJson(m_DisableUnverifiedLabel);
     }
     if(m_DisableVotingIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableVoting"))] = ModelBase::toJson(m_DisableVoting);
     }
     if(m_EnableCommenterLinksIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableCommenterLinks"))] = ModelBase::toJson(m_EnableCommenterLinks);
     }
     if(m_EnableSearchIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableSearch"))] = ModelBase::toJson(m_EnableSearch);
     }
     if(m_EnableSpoilersIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableSpoilers"))] = ModelBase::toJson(m_EnableSpoilers);
     }
     if(m_EnableThirdPartyCookieBypassIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableThirdPartyCookieBypass"))] = ModelBase::toJson(m_EnableThirdPartyCookieBypass);
     }
     if(m_EnableViewCountsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableViewCounts"))] = ModelBase::toJson(m_EnableViewCounts);
     }
     if(m_EnableVoteListIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableVoteList"))] = ModelBase::toJson(m_EnableVoteList);
     }
     if(m_EnableWYSIWYGIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableWYSIWYG"))] = ModelBase::toJson(m_EnableWYSIWYG);
     }
     if(m_GifRatingIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("gifRating"))] = ModelBase::toJson(m_GifRating);
     }
     if(m_HasDarkBackgroundIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasDarkBackground"))] = ModelBase::toJson(m_HasDarkBackground);
     }
-    if(m_HeaderHTMLIsSet)
-    {   
+    if(m_HeaderHTML.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("headerHTML"))] = ModelBase::toJson(m_HeaderHTML);
+        val[utility::conversions::to_string_t(_XPLATSTR("headerHTML"))] = ModelBase::toJson(m_HeaderHTML.get());
     }
     if(m_HideAvatarsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hideAvatars"))] = ModelBase::toJson(m_HideAvatars);
     }
-    if(m_HideCommentsUnderCountTextFormatIsSet)
-    {   
+    if(m_HideCommentsUnderCountTextFormat.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("hideCommentsUnderCountTextFormat"))] = ModelBase::toJson(m_HideCommentsUnderCountTextFormat);
+        val[utility::conversions::to_string_t(_XPLATSTR("hideCommentsUnderCountTextFormat"))] = ModelBase::toJson(m_HideCommentsUnderCountTextFormat.get());
     }
     if(m_ImageContentProfanityLevelIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("imageContentProfanityLevel"))] = ModelBase::toJson(m_ImageContentProfanityLevel);
     }
     if(m_InputAfterCommentsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("inputAfterComments"))] = ModelBase::toJson(m_InputAfterComments);
     }
     if(m_LimitCommentsByGroupsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("limitCommentsByGroups"))] = ModelBase::toJson(m_LimitCommentsByGroups);
     }
-    if(m_LocaleIsSet)
-    {   
+    if(m_Locale.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale);
+        val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale.get());
     }
-    if(m_MaxCommentCharacterLengthIsSet)
-    {   
+    if(m_MaxCommentCharacterLength.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("maxCommentCharacterLength"))] = ModelBase::toJson(m_MaxCommentCharacterLength);
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCommentCharacterLength"))] = ModelBase::toJson(m_MaxCommentCharacterLength.get());
     }
-    if(m_MaxCommentCreatedCountPUPMIsSet)
-    {   
+    if(m_MaxCommentCreatedCountPUPM.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("maxCommentCreatedCountPUPM"))] = ModelBase::toJson(m_MaxCommentCreatedCountPUPM);
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCommentCreatedCountPUPM"))] = ModelBase::toJson(m_MaxCommentCreatedCountPUPM.get());
     }
     if(m_NoCustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("noCustomConfig"))] = ModelBase::toJson(m_NoCustomConfig);
     }
     if(m_NoImageUploadsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("noImageUploads"))] = ModelBase::toJson(m_NoImageUploads);
     }
     if(m_NoStylesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("noStyles"))] = ModelBase::toJson(m_NoStyles);
     }
-    if(m_PageSizeIsSet)
-    {   
+    if(m_PageSize.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageSize"))] = ModelBase::toJson(m_PageSize);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageSize"))] = ModelBase::toJson(m_PageSize.get());
     }
     if(m_ReadonlyIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("readonly"))] = ModelBase::toJson(m_Readonly);
     }
+    if(m_NoNewRootCommentsIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("noNewRootComments"))] = ModelBase::toJson(m_NoNewRootComments);
+    }
     if(m_RequireSSOIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("requireSSO"))] = ModelBase::toJson(m_RequireSSO);
     }
     if(m_EnableResizeHandleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableResizeHandle"))] = ModelBase::toJson(m_EnableResizeHandle);
     }
-    if(m_RestrictedLinkDomainsIsSet)
-    {   
+    if(m_RestrictedLinkDomains.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("restrictedLinkDomains"))] = ModelBase::toJson(m_RestrictedLinkDomains);
+        val[utility::conversions::to_string_t(_XPLATSTR("restrictedLinkDomains"))] = ModelBase::toJson(m_RestrictedLinkDomains.get());
     }
     if(m_ShowBadgesInTopBarIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("showBadgesInTopBar"))] = ModelBase::toJson(m_ShowBadgesInTopBar);
     }
     if(m_ShowCommentSaveSuccessIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("showCommentSaveSuccess"))] = ModelBase::toJson(m_ShowCommentSaveSuccess);
     }
     if(m_ShowLiveRightAwayIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("showLiveRightAway"))] = ModelBase::toJson(m_ShowLiveRightAway);
     }
     if(m_ShowQuestionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("showQuestion"))] = ModelBase::toJson(m_ShowQuestion);
     }
     if(m_SpamRulesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("spamRules"))] = ModelBase::toJson(m_SpamRules);
     }
     if(m_SsoSecLvlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("ssoSecLvl"))] = ModelBase::toJson(m_SsoSecLvl);
     }
-    if(m_TranslationsIsSet)
-    {   
+    if(m_Translations.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("translations"))] = ModelBase::toJson(m_Translations);
+        val[utility::conversions::to_string_t(_XPLATSTR("translations"))] = ModelBase::toJson(m_Translations.get());
     }
     if(m_UseShowCommentsToggleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("useShowCommentsToggle"))] = ModelBase::toJson(m_UseShowCommentsToggle);
     }
     if(m_UseSingleLineCommentInputIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("useSingleLineCommentInput"))] = ModelBase::toJson(m_UseSingleLineCommentInput);
     }
     if(m_VoteStyleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("voteStyle"))] = ModelBase::toJson(m_VoteStyle);
     }
     if(m_WidgetQuestionIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionId"))] = ModelBase::toJson(m_WidgetQuestionId);
     }
     if(m_WidgetQuestionResultsStyleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionResultsStyle"))] = ModelBase::toJson(m_WidgetQuestionResultsStyle);
     }
     if(m_WidgetQuestionStyleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionStyle"))] = ModelBase::toJson(m_WidgetQuestionStyle);
     }
     if(m_WidgetQuestionWhenToSaveIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionWhenToSave"))] = ModelBase::toJson(m_WidgetQuestionWhenToSave);
     }
     if(m_WidgetQuestionsRequiredIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionsRequired"))] = ModelBase::toJson(m_WidgetQuestionsRequired);
     }
     if(m_WidgetSubQuestionVisibilityIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetSubQuestionVisibility"))] = ModelBase::toJson(m_WidgetSubQuestionVisibility);
     }
     if(m_WrapIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wrap"))] = ModelBase::toJson(m_Wrap);
     }
@@ -1100,6 +1081,17 @@ bool CustomConfigParameters::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("noNewRootComments"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("noNewRootComments")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setNoNewRootComments;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNoNewRootComments);
+            setNoNewRootComments(refVal_setNoNewRootComments);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("requireSSO"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("requireSSO")));
@@ -1350,49 +1342,49 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("allowAnonVotes")), m_AllowAnonVotes));
     }
-    if(m_AllowedLanguagesIsSet)
+    if(m_AllowedLanguages.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("allowedLanguages")), m_AllowedLanguages));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("allowedLanguages")), m_AllowedLanguages.get()));
     }
     if(m_CollapseRepliesIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("collapseReplies")), m_CollapseReplies));
     }
-    if(m_CommentCountFormatIsSet)
+    if(m_CommentCountFormat.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentCountFormat")), m_CommentCountFormat));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentCountFormat")), m_CommentCountFormat.get()));
     }
     if(m_CommentHTMLRenderingModeIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentHTMLRenderingMode")), m_CommentHTMLRenderingMode));
     }
-    if(m_CommentThreadDeleteModeIsSet)
+    if(m_CommentThreadDeleteMode.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentThreadDeleteMode")), m_CommentThreadDeleteMode));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentThreadDeleteMode")), m_CommentThreadDeleteMode.get()));
     }
-    if(m_CommenterNameFormatIsSet)
+    if(m_CommenterNameFormat.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterNameFormat")), m_CommenterNameFormat));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterNameFormat")), m_CommenterNameFormat.get()));
     }
     if(m_CountAboveToggleIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("countAboveToggle")), m_CountAboveToggle));
     }
-    if(m_CustomCSSIsSet)
+    if(m_CustomCSS.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("customCSS")), m_CustomCSS));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("customCSS")), m_CustomCSS.get()));
     }
-    if(m_DefaultAvatarSrcIsSet)
+    if(m_DefaultAvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultAvatarSrc")), m_DefaultAvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultAvatarSrc")), m_DefaultAvatarSrc.get()));
     }
-    if(m_DefaultSortDirectionIsSet)
+    if(m_DefaultSortDirection.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultSortDirection")), m_DefaultSortDirection));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultSortDirection")), m_DefaultSortDirection.get()));
     }
-    if(m_DefaultUsernameIsSet)
+    if(m_DefaultUsername.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultUsername")), m_DefaultUsername));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("defaultUsername")), m_DefaultUsername.get()));
     }
     if(m_DisableAutoAdminMigrationIsSet)
     {
@@ -1482,17 +1474,17 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasDarkBackground")), m_HasDarkBackground));
     }
-    if(m_HeaderHTMLIsSet)
+    if(m_HeaderHTML.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("headerHTML")), m_HeaderHTML));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("headerHTML")), m_HeaderHTML.get()));
     }
     if(m_HideAvatarsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hideAvatars")), m_HideAvatars));
     }
-    if(m_HideCommentsUnderCountTextFormatIsSet)
+    if(m_HideCommentsUnderCountTextFormat.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hideCommentsUnderCountTextFormat")), m_HideCommentsUnderCountTextFormat));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hideCommentsUnderCountTextFormat")), m_HideCommentsUnderCountTextFormat.get()));
     }
     if(m_ImageContentProfanityLevelIsSet)
     {
@@ -1506,17 +1498,17 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("limitCommentsByGroups")), m_LimitCommentsByGroups));
     }
-    if(m_LocaleIsSet)
+    if(m_Locale.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("locale")), m_Locale.get()));
     }
-    if(m_MaxCommentCharacterLengthIsSet)
+    if(m_MaxCommentCharacterLength.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCommentCharacterLength")), m_MaxCommentCharacterLength));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCommentCharacterLength")), m_MaxCommentCharacterLength.get()));
     }
-    if(m_MaxCommentCreatedCountPUPMIsSet)
+    if(m_MaxCommentCreatedCountPUPM.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCommentCreatedCountPUPM")), m_MaxCommentCreatedCountPUPM));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCommentCreatedCountPUPM")), m_MaxCommentCreatedCountPUPM.get()));
     }
     if(m_NoCustomConfigIsSet)
     {
@@ -1530,13 +1522,17 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("noStyles")), m_NoStyles));
     }
-    if(m_PageSizeIsSet)
+    if(m_PageSize.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageSize")), m_PageSize));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageSize")), m_PageSize.get()));
     }
     if(m_ReadonlyIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("readonly")), m_Readonly));
+    }
+    if(m_NoNewRootCommentsIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("noNewRootComments")), m_NoNewRootComments));
     }
     if(m_RequireSSOIsSet)
     {
@@ -1546,9 +1542,9 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("enableResizeHandle")), m_EnableResizeHandle));
     }
-    if(m_RestrictedLinkDomainsIsSet)
+    if(m_RestrictedLinkDomains.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("restrictedLinkDomains")), m_RestrictedLinkDomains));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("restrictedLinkDomains")), m_RestrictedLinkDomains.get()));
     }
     if(m_ShowBadgesInTopBarIsSet)
     {
@@ -1574,9 +1570,9 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ssoSecLvl")), m_SsoSecLvl));
     }
-    if(m_TranslationsIsSet)
+    if(m_Translations.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("translations")), m_Translations));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("translations")), m_Translations.get()));
     }
     if(m_UseShowCommentsToggleIsSet)
     {
@@ -1941,6 +1937,12 @@ bool CustomConfigParameters::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("readonly"))), refVal_setReadonly );
         setReadonly(refVal_setReadonly);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("noNewRootComments"))))
+    {
+        bool refVal_setNoNewRootComments;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("noNewRootComments"))), refVal_setNoNewRootComments );
+        setNoNewRootComments(refVal_setNoNewRootComments);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("requireSSO"))))
     {
         bool refVal_setRequireSSO;
@@ -2167,24 +2169,23 @@ void CustomConfigParameters::unsetAllowAnonVotes()
 }
 std::vector<utility::string_t> CustomConfigParameters::getAllowedLanguages() const
 {
-    return m_AllowedLanguages;
+    return m_AllowedLanguages.get();
 }
 
 
 void CustomConfigParameters::setAllowedLanguages(const std::vector<utility::string_t>& value)
 {
     m_AllowedLanguages = value;
-    m_AllowedLanguagesIsSet = true;
 }
 
 bool CustomConfigParameters::allowedLanguagesIsSet() const
 {
-    return m_AllowedLanguagesIsSet;
+    return m_AllowedLanguages.has_value();
 }
 
 void CustomConfigParameters::unsetAllowedLanguages()
 {
-    m_AllowedLanguagesIsSet = false;
+    m_AllowedLanguages.reset();
 }
 bool CustomConfigParameters::isCollapseReplies() const
 {
@@ -2208,24 +2209,23 @@ void CustomConfigParameters::unsetCollapseReplies()
 }
 utility::string_t CustomConfigParameters::getCommentCountFormat() const
 {
-    return m_CommentCountFormat;
+    return m_CommentCountFormat.get();
 }
 
 
 void CustomConfigParameters::setCommentCountFormat(const utility::string_t& value)
 {
     m_CommentCountFormat = value;
-    m_CommentCountFormatIsSet = true;
 }
 
 bool CustomConfigParameters::commentCountFormatIsSet() const
 {
-    return m_CommentCountFormatIsSet;
+    return m_CommentCountFormat.has_value();
 }
 
 void CustomConfigParameters::unsetCommentCountFormat()
 {
-    m_CommentCountFormatIsSet = false;
+    m_CommentCountFormat.reset();
 }
 std::shared_ptr<CommentHTMLRenderingMode> CustomConfigParameters::getCommentHTMLRenderingMode() const
 {
@@ -2250,45 +2250,43 @@ void CustomConfigParameters::unsetCommentHTMLRenderingMode()
 }
 std::shared_ptr<CommentThreadDeletionMode> CustomConfigParameters::getCommentThreadDeleteMode() const
 {
-    return m_CommentThreadDeleteMode;
+    return m_CommentThreadDeleteMode.get();
 }
 
 
 void CustomConfigParameters::setCommentThreadDeleteMode(const std::shared_ptr<CommentThreadDeletionMode>& value)
 {
     m_CommentThreadDeleteMode = value;
-    m_CommentThreadDeleteModeIsSet = true;
 }
 
 bool CustomConfigParameters::commentThreadDeleteModeIsSet() const
 {
-    return m_CommentThreadDeleteModeIsSet;
+    return m_CommentThreadDeleteMode.has_value();
 }
 
 void CustomConfigParameters::unsetCommentThreadDeleteMode()
 {
-    m_CommentThreadDeleteModeIsSet = false;
+    m_CommentThreadDeleteMode.reset();
 }
 std::shared_ptr<CommenterNameFormats> CustomConfigParameters::getCommenterNameFormat() const
 {
-    return m_CommenterNameFormat;
+    return m_CommenterNameFormat.get();
 }
 
 
 void CustomConfigParameters::setCommenterNameFormat(const std::shared_ptr<CommenterNameFormats>& value)
 {
     m_CommenterNameFormat = value;
-    m_CommenterNameFormatIsSet = true;
 }
 
 bool CustomConfigParameters::commenterNameFormatIsSet() const
 {
-    return m_CommenterNameFormatIsSet;
+    return m_CommenterNameFormat.has_value();
 }
 
 void CustomConfigParameters::unsetCommenterNameFormat()
 {
-    m_CommenterNameFormatIsSet = false;
+    m_CommenterNameFormat.reset();
 }
 int32_t CustomConfigParameters::getCountAboveToggle() const
 {
@@ -2312,87 +2310,83 @@ void CustomConfigParameters::unsetCountAboveToggle()
 }
 utility::string_t CustomConfigParameters::getCustomCSS() const
 {
-    return m_CustomCSS;
+    return m_CustomCSS.get();
 }
 
 
 void CustomConfigParameters::setCustomCSS(const utility::string_t& value)
 {
     m_CustomCSS = value;
-    m_CustomCSSIsSet = true;
 }
 
 bool CustomConfigParameters::customCSSIsSet() const
 {
-    return m_CustomCSSIsSet;
+    return m_CustomCSS.has_value();
 }
 
 void CustomConfigParameters::unsetCustomCSS()
 {
-    m_CustomCSSIsSet = false;
+    m_CustomCSS.reset();
 }
 utility::string_t CustomConfigParameters::getDefaultAvatarSrc() const
 {
-    return m_DefaultAvatarSrc;
+    return m_DefaultAvatarSrc.get();
 }
 
 
 void CustomConfigParameters::setDefaultAvatarSrc(const utility::string_t& value)
 {
     m_DefaultAvatarSrc = value;
-    m_DefaultAvatarSrcIsSet = true;
 }
 
 bool CustomConfigParameters::defaultAvatarSrcIsSet() const
 {
-    return m_DefaultAvatarSrcIsSet;
+    return m_DefaultAvatarSrc.has_value();
 }
 
 void CustomConfigParameters::unsetDefaultAvatarSrc()
 {
-    m_DefaultAvatarSrcIsSet = false;
+    m_DefaultAvatarSrc.reset();
 }
 std::shared_ptr<SortDirections> CustomConfigParameters::getDefaultSortDirection() const
 {
-    return m_DefaultSortDirection;
+    return m_DefaultSortDirection.get();
 }
 
 
 void CustomConfigParameters::setDefaultSortDirection(const std::shared_ptr<SortDirections>& value)
 {
     m_DefaultSortDirection = value;
-    m_DefaultSortDirectionIsSet = true;
 }
 
 bool CustomConfigParameters::defaultSortDirectionIsSet() const
 {
-    return m_DefaultSortDirectionIsSet;
+    return m_DefaultSortDirection.has_value();
 }
 
 void CustomConfigParameters::unsetDefaultSortDirection()
 {
-    m_DefaultSortDirectionIsSet = false;
+    m_DefaultSortDirection.reset();
 }
 utility::string_t CustomConfigParameters::getDefaultUsername() const
 {
-    return m_DefaultUsername;
+    return m_DefaultUsername.get();
 }
 
 
 void CustomConfigParameters::setDefaultUsername(const utility::string_t& value)
 {
     m_DefaultUsername = value;
-    m_DefaultUsernameIsSet = true;
 }
 
 bool CustomConfigParameters::defaultUsernameIsSet() const
 {
-    return m_DefaultUsernameIsSet;
+    return m_DefaultUsername.has_value();
 }
 
 void CustomConfigParameters::unsetDefaultUsername()
 {
-    m_DefaultUsernameIsSet = false;
+    m_DefaultUsername.reset();
 }
 bool CustomConfigParameters::isDisableAutoAdminMigration() const
 {
@@ -2837,24 +2831,23 @@ void CustomConfigParameters::unsetHasDarkBackground()
 }
 utility::string_t CustomConfigParameters::getHeaderHTML() const
 {
-    return m_HeaderHTML;
+    return m_HeaderHTML.get();
 }
 
 
 void CustomConfigParameters::setHeaderHTML(const utility::string_t& value)
 {
     m_HeaderHTML = value;
-    m_HeaderHTMLIsSet = true;
 }
 
 bool CustomConfigParameters::headerHTMLIsSet() const
 {
-    return m_HeaderHTMLIsSet;
+    return m_HeaderHTML.has_value();
 }
 
 void CustomConfigParameters::unsetHeaderHTML()
 {
-    m_HeaderHTMLIsSet = false;
+    m_HeaderHTML.reset();
 }
 bool CustomConfigParameters::isHideAvatars() const
 {
@@ -2878,24 +2871,23 @@ void CustomConfigParameters::unsetHideAvatars()
 }
 utility::string_t CustomConfigParameters::getHideCommentsUnderCountTextFormat() const
 {
-    return m_HideCommentsUnderCountTextFormat;
+    return m_HideCommentsUnderCountTextFormat.get();
 }
 
 
 void CustomConfigParameters::setHideCommentsUnderCountTextFormat(const utility::string_t& value)
 {
     m_HideCommentsUnderCountTextFormat = value;
-    m_HideCommentsUnderCountTextFormatIsSet = true;
 }
 
 bool CustomConfigParameters::hideCommentsUnderCountTextFormatIsSet() const
 {
-    return m_HideCommentsUnderCountTextFormatIsSet;
+    return m_HideCommentsUnderCountTextFormat.has_value();
 }
 
 void CustomConfigParameters::unsetHideCommentsUnderCountTextFormat()
 {
-    m_HideCommentsUnderCountTextFormatIsSet = false;
+    m_HideCommentsUnderCountTextFormat.reset();
 }
 std::shared_ptr<ImageContentProfanityLevel> CustomConfigParameters::getImageContentProfanityLevel() const
 {
@@ -2960,64 +2952,61 @@ void CustomConfigParameters::unsetLimitCommentsByGroups()
 }
 utility::string_t CustomConfigParameters::getLocale() const
 {
-    return m_Locale;
+    return m_Locale.get();
 }
 
 
 void CustomConfigParameters::setLocale(const utility::string_t& value)
 {
     m_Locale = value;
-    m_LocaleIsSet = true;
 }
 
 bool CustomConfigParameters::localeIsSet() const
 {
-    return m_LocaleIsSet;
+    return m_Locale.has_value();
 }
 
 void CustomConfigParameters::unsetLocale()
 {
-    m_LocaleIsSet = false;
+    m_Locale.reset();
 }
 int32_t CustomConfigParameters::getMaxCommentCharacterLength() const
 {
-    return m_MaxCommentCharacterLength;
+    return m_MaxCommentCharacterLength.get();
 }
 
 void CustomConfigParameters::setMaxCommentCharacterLength(int32_t value)
 {
     m_MaxCommentCharacterLength = value;
-    m_MaxCommentCharacterLengthIsSet = true;
 }
 
 bool CustomConfigParameters::maxCommentCharacterLengthIsSet() const
 {
-    return m_MaxCommentCharacterLengthIsSet;
+    return m_MaxCommentCharacterLength.has_value();
 }
 
 void CustomConfigParameters::unsetMaxCommentCharacterLength()
 {
-    m_MaxCommentCharacterLengthIsSet = false;
+    m_MaxCommentCharacterLength.reset();
 }
 int32_t CustomConfigParameters::getMaxCommentCreatedCountPUPM() const
 {
-    return m_MaxCommentCreatedCountPUPM;
+    return m_MaxCommentCreatedCountPUPM.get();
 }
 
 void CustomConfigParameters::setMaxCommentCreatedCountPUPM(int32_t value)
 {
     m_MaxCommentCreatedCountPUPM = value;
-    m_MaxCommentCreatedCountPUPMIsSet = true;
 }
 
 bool CustomConfigParameters::maxCommentCreatedCountPUPMIsSet() const
 {
-    return m_MaxCommentCreatedCountPUPMIsSet;
+    return m_MaxCommentCreatedCountPUPM.has_value();
 }
 
 void CustomConfigParameters::unsetMaxCommentCreatedCountPUPM()
 {
-    m_MaxCommentCreatedCountPUPMIsSet = false;
+    m_MaxCommentCreatedCountPUPM.reset();
 }
 bool CustomConfigParameters::isNoCustomConfig() const
 {
@@ -3081,23 +3070,22 @@ void CustomConfigParameters::unsetNoStyles()
 }
 int32_t CustomConfigParameters::getPageSize() const
 {
-    return m_PageSize;
+    return m_PageSize.get();
 }
 
 void CustomConfigParameters::setPageSize(int32_t value)
 {
     m_PageSize = value;
-    m_PageSizeIsSet = true;
 }
 
 bool CustomConfigParameters::pageSizeIsSet() const
 {
-    return m_PageSizeIsSet;
+    return m_PageSize.has_value();
 }
 
 void CustomConfigParameters::unsetPageSize()
 {
-    m_PageSizeIsSet = false;
+    m_PageSize.reset();
 }
 bool CustomConfigParameters::isReadonly() const
 {
@@ -3118,6 +3106,26 @@ bool CustomConfigParameters::readonlyIsSet() const
 void CustomConfigParameters::unsetReadonly()
 {
     m_ReadonlyIsSet = false;
+}
+bool CustomConfigParameters::isNoNewRootComments() const
+{
+    return m_NoNewRootComments;
+}
+
+void CustomConfigParameters::setNoNewRootComments(bool value)
+{
+    m_NoNewRootComments = value;
+    m_NoNewRootCommentsIsSet = true;
+}
+
+bool CustomConfigParameters::noNewRootCommentsIsSet() const
+{
+    return m_NoNewRootCommentsIsSet;
+}
+
+void CustomConfigParameters::unsetNoNewRootComments()
+{
+    m_NoNewRootCommentsIsSet = false;
 }
 bool CustomConfigParameters::isRequireSSO() const
 {
@@ -3161,24 +3169,23 @@ void CustomConfigParameters::unsetEnableResizeHandle()
 }
 std::vector<utility::string_t> CustomConfigParameters::getRestrictedLinkDomains() const
 {
-    return m_RestrictedLinkDomains;
+    return m_RestrictedLinkDomains.get();
 }
 
 
 void CustomConfigParameters::setRestrictedLinkDomains(const std::vector<utility::string_t>& value)
 {
     m_RestrictedLinkDomains = value;
-    m_RestrictedLinkDomainsIsSet = true;
 }
 
 bool CustomConfigParameters::restrictedLinkDomainsIsSet() const
 {
-    return m_RestrictedLinkDomainsIsSet;
+    return m_RestrictedLinkDomains.has_value();
 }
 
 void CustomConfigParameters::unsetRestrictedLinkDomains()
 {
-    m_RestrictedLinkDomainsIsSet = false;
+    m_RestrictedLinkDomains.reset();
 }
 bool CustomConfigParameters::isShowBadgesInTopBar() const
 {
@@ -3304,24 +3311,23 @@ void CustomConfigParameters::unsetSsoSecLvl()
 }
 std::map<utility::string_t, utility::string_t> CustomConfigParameters::getTranslations() const
 {
-    return m_Translations;
+    return m_Translations.get();
 }
 
 
 void CustomConfigParameters::setTranslations(const std::map<utility::string_t, utility::string_t>& value)
 {
     m_Translations = value;
-    m_TranslationsIsSet = true;
 }
 
 bool CustomConfigParameters::translationsIsSet() const
 {
-    return m_TranslationsIsSet;
+    return m_Translations.has_value();
 }
 
 void CustomConfigParameters::unsetTranslations()
 {
-    m_TranslationsIsSet = false;
+    m_Translations.reset();
 }
 bool CustomConfigParameters::isUseShowCommentsToggle() const
 {

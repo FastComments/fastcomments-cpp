@@ -42,27 +42,27 @@ web::json::value GetMyNotificationsResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TranslationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translations"))] = ModelBase::toJson(m_Translations);
     }
     if(m_IsSubscribedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isSubscribed"))] = ModelBase::toJson(m_IsSubscribed);
     }
     if(m_HasMoreIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasMore"))] = ModelBase::toJson(m_HasMore);
     }
     if(m_NotificationsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notifications"))] = ModelBase::toJson(m_Notifications);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }

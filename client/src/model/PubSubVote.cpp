@@ -30,14 +30,10 @@ PubSubVote::PubSubVote()
     m_UrlIdRawIsSet = false;
     m_CommentId = utility::conversions::to_string_t("");
     m_CommentIdIsSet = false;
-    m_UserId = utility::conversions::to_string_t("");
-    m_UserIdIsSet = false;
     m_Direction = 0;
     m_DirectionIsSet = false;
     m_CreatedAt = 0L;
     m_CreatedAtIsSet = false;
-    m_VerificationId = utility::conversions::to_string_t("");
-    m_VerificationIdIsSet = false;
 }
 
 PubSubVote::~PubSubVote()
@@ -53,49 +49,49 @@ web::json::value PubSubVote::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_UrlIdRawIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdRaw"))] = ModelBase::toJson(m_UrlIdRaw);
     }
     if(m_CommentIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentId"))] = ModelBase::toJson(m_CommentId);
     }
-    if(m_UserIdIsSet)
-    {   
+    if(m_UserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId.get());
     }
     if(m_DirectionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("direction"))] = ModelBase::toJson(m_Direction);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
-    if(m_VerificationIdIsSet)
-    {   
+    if(m_VerificationId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("verificationId"))] = ModelBase::toJson(m_VerificationId);
+        val[utility::conversions::to_string_t(_XPLATSTR("verificationId"))] = ModelBase::toJson(m_VerificationId.get());
     }
 
     return val;
@@ -233,9 +229,9 @@ void PubSubVote::toMultipart(std::shared_ptr<MultipartFormData> multipart, const
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentId")), m_CommentId));
     }
-    if(m_UserIdIsSet)
+    if(m_UserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId.get()));
     }
     if(m_DirectionIsSet)
     {
@@ -245,9 +241,9 @@ void PubSubVote::toMultipart(std::shared_ptr<MultipartFormData> multipart, const
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("createdAt")), m_CreatedAt));
     }
-    if(m_VerificationIdIsSet)
+    if(m_VerificationId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verificationId")), m_VerificationId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("verificationId")), m_VerificationId.get()));
     }
 }
 
@@ -425,24 +421,23 @@ void PubSubVote::unsetCommentId()
 }
 utility::string_t PubSubVote::getUserId() const
 {
-    return m_UserId;
+    return m_UserId.get();
 }
 
 
 void PubSubVote::setUserId(const utility::string_t& value)
 {
     m_UserId = value;
-    m_UserIdIsSet = true;
 }
 
 bool PubSubVote::userIdIsSet() const
 {
-    return m_UserIdIsSet;
+    return m_UserId.has_value();
 }
 
 void PubSubVote::unsetUserId()
 {
-    m_UserIdIsSet = false;
+    m_UserId.reset();
 }
 int32_t PubSubVote::getDirection() const
 {
@@ -486,24 +481,23 @@ void PubSubVote::unsetCreatedAt()
 }
 utility::string_t PubSubVote::getVerificationId() const
 {
-    return m_VerificationId;
+    return m_VerificationId.get();
 }
 
 
 void PubSubVote::setVerificationId(const utility::string_t& value)
 {
     m_VerificationId = value;
-    m_VerificationIdIsSet = true;
 }
 
 bool PubSubVote::verificationIdIsSet() const
 {
-    return m_VerificationIdIsSet;
+    return m_VerificationId.has_value();
 }
 
 void PubSubVote::unsetVerificationId()
 {
-    m_VerificationIdIsSet = false;
+    m_VerificationId.reset();
 }
 
 }

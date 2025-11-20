@@ -11,19 +11,17 @@
 
 
 
-#include "FastCommentsClient/model/Pick_TenantAuditLog_TenantAuditLogKeys_.h"
+#include "FastCommentsClient/model/APIAuditLog.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-Pick_TenantAuditLog_TenantAuditLogKeys_::Pick_TenantAuditLog_TenantAuditLogKeys_()
+APIAuditLog::APIAuditLog()
 {
     m__id = utility::conversions::to_string_t("");
     m__idIsSet = false;
-    m_Url = utility::conversions::to_string_t("");
-    m_UrlIsSet = false;
     m_UserId = utility::conversions::to_string_t("");
     m_UserIdIsSet = false;
     m_Username = utility::conversions::to_string_t("");
@@ -32,98 +30,95 @@ Pick_TenantAuditLog_TenantAuditLogKeys_::Pick_TenantAuditLog_TenantAuditLogKeys_
     m_ResourceNameIsSet = false;
     m_CrudTypeIsSet = false;
     m_FromIsSet = false;
-    m_Ip = utility::conversions::to_string_t("");
-    m_IpIsSet = false;
     m_When = utility::datetime();
     m_WhenIsSet = false;
     m_Description = utility::conversions::to_string_t("");
     m_DescriptionIsSet = false;
     m_ServerStartDate = utility::datetime();
     m_ServerStartDateIsSet = false;
-    m_ObjectDetailsIsSet = false;
 }
 
-Pick_TenantAuditLog_TenantAuditLogKeys_::~Pick_TenantAuditLog_TenantAuditLogKeys_()
+APIAuditLog::~APIAuditLog()
 {
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::validate()
+void APIAuditLog::validate()
 {
     // TODO: implement validation
 }
 
-web::json::value Pick_TenantAuditLog_TenantAuditLogKeys_::toJson() const
+web::json::value APIAuditLog::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
-    if(m_UrlIsSet)
-    {   
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
-    }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_UsernameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("username"))] = ModelBase::toJson(m_Username);
     }
     if(m_ResourceNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("resourceName"))] = ModelBase::toJson(m_ResourceName);
     }
     if(m_CrudTypeIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromCrudTypeEnum(m_CrudType);
         val[utility::conversions::to_string_t(_XPLATSTR("crudType"))] = ModelBase::toJson(refVal);
         
     }
     if(m_FromIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromFromEnum(m_From);
         val[utility::conversions::to_string_t(_XPLATSTR("from"))] = ModelBase::toJson(refVal);
         
     }
-    if(m_IpIsSet)
-    {   
+    if(m_Url.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("ip"))] = ModelBase::toJson(m_Ip);
+        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url.get());
+    }
+    if(m_Ip.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ip"))] = ModelBase::toJson(m_Ip.get());
     }
     if(m_WhenIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("when"))] = ModelBase::toJson(m_When);
     }
     if(m_DescriptionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("description"))] = ModelBase::toJson(m_Description);
     }
     if(m_ServerStartDateIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("serverStartDate"))] = ModelBase::toJson(m_ServerStartDate);
     }
-    if(m_ObjectDetailsIsSet)
-    {   
+    if(m_ObjectDetails.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("objectDetails"))] = ModelBase::toJson(m_ObjectDetails);
+        val[utility::conversions::to_string_t(_XPLATSTR("objectDetails"))] = ModelBase::toJson(m_ObjectDetails.get());
     }
 
     return val;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromJson(const web::json::value& val)
+bool APIAuditLog::fromJson(const web::json::value& val)
 {
     bool ok = true;
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("_id"))))
@@ -134,17 +129,6 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromJson(const web::json::value& v
             utility::string_t refVal_setId;
             ok &= ModelBase::fromJson(fieldValue, refVal_setId);
             setId(refVal_setId);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("url"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("url")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setUrl;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setUrl);
-            setUrl(refVal_setUrl);
             
         }
     }
@@ -202,6 +186,17 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromJson(const web::json::value& v
             ok &= ModelBase::fromJson(fieldValue, refVal_setFrom);
             
             setFrom(toFromEnum(refVal_setFrom));
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("url"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("url")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setUrl;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setUrl);
+            setUrl(refVal_setUrl);
             
         }
     }
@@ -263,7 +258,7 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromJson(const web::json::value& v
     return ok;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
+void APIAuditLog::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
 {
     utility::string_t namePrefix = prefix;
     if(namePrefix.size() > 0 && namePrefix.substr(namePrefix.size() - 1) != utility::conversions::to_string_t(_XPLATSTR(".")))
@@ -273,10 +268,6 @@ void Pick_TenantAuditLog_TenantAuditLogKeys_::toMultipart(std::shared_ptr<Multip
     if(m__idIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("_id")), m__id));
-    }
-    if(m_UrlIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
     }
     if(m_UserIdIsSet)
     {
@@ -298,9 +289,13 @@ void Pick_TenantAuditLog_TenantAuditLogKeys_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("from")), fromFromEnum(m_From)));
     }
-    if(m_IpIsSet)
+    if(m_Url.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ip")), m_Ip));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url.get()));
+    }
+    if(m_Ip.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ip")), m_Ip.get()));
     }
     if(m_WhenIsSet)
     {
@@ -314,13 +309,13 @@ void Pick_TenantAuditLog_TenantAuditLogKeys_::toMultipart(std::shared_ptr<Multip
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("serverStartDate")), m_ServerStartDate));
     }
-    if(m_ObjectDetailsIsSet)
+    if(m_ObjectDetails.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("objectDetails")), m_ObjectDetails));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("objectDetails")), m_ObjectDetails.get()));
     }
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
+bool APIAuditLog::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
 {
     bool ok = true;
     utility::string_t namePrefix = prefix;
@@ -334,12 +329,6 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromMultiPart(std::shared_ptr<Mult
         utility::string_t refVal_setId;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("_id"))), refVal_setId );
         setId(refVal_setId);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("url"))))
-    {
-        utility::string_t refVal_setUrl;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("url"))), refVal_setUrl );
-        setUrl(refVal_setUrl);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("userId"))))
     {
@@ -370,6 +359,12 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromMultiPart(std::shared_ptr<Mult
         utility::string_t refVal_setFrom;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("from"))), refVal_setFrom );
         setFrom(toFromEnum(refVal_setFrom));
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("url"))))
+    {
+        utility::string_t refVal_setUrl;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("url"))), refVal_setUrl );
+        setUrl(refVal_setUrl);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ip"))))
     {
@@ -404,7 +399,7 @@ bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromMultiPart(std::shared_ptr<Mult
     return ok;
 }
 
-Pick_TenantAuditLog_TenantAuditLogKeys_::CrudTypeEnum Pick_TenantAuditLog_TenantAuditLogKeys_::toCrudTypeEnum(const utility::string_t& value) const
+APIAuditLog::CrudTypeEnum APIAuditLog::toCrudTypeEnum(const utility::string_t& value) const
 {
     
     if (value == utility::conversions::to_string_t("c")) {
@@ -431,7 +426,7 @@ Pick_TenantAuditLog_TenantAuditLogKeys_::CrudTypeEnum Pick_TenantAuditLog_Tenant
 }
 
 
-const utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::fromCrudTypeEnum(const CrudTypeEnum value) const
+const utility::string_t APIAuditLog::fromCrudTypeEnum(const CrudTypeEnum value) const
 {
     switch(value)
     {
@@ -449,7 +444,7 @@ const utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::fromCrudTypeEnu
     }
 }
 
-Pick_TenantAuditLog_TenantAuditLogKeys_::FromEnum Pick_TenantAuditLog_TenantAuditLogKeys_::toFromEnum(const utility::string_t& value) const
+APIAuditLog::FromEnum APIAuditLog::toFromEnum(const utility::string_t& value) const
 {
     
     if (value == utility::conversions::to_string_t("ui")) {
@@ -468,7 +463,7 @@ Pick_TenantAuditLog_TenantAuditLogKeys_::FromEnum Pick_TenantAuditLog_TenantAudi
 }
 
 
-const utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::fromFromEnum(const FromEnum value) const
+const utility::string_t APIAuditLog::fromFromEnum(const FromEnum value) const
 {
     switch(value)
     {
@@ -483,257 +478,254 @@ const utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::fromFromEnum(co
 }
 
 
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getId() const
+utility::string_t APIAuditLog::getId() const
 {
     return m__id;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setId(const utility::string_t& value)
+void APIAuditLog::setId(const utility::string_t& value)
 {
     m__id = value;
     m__idIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::idIsSet() const
+bool APIAuditLog::idIsSet() const
 {
     return m__idIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unset_id()
+void APIAuditLog::unset_id()
 {
     m__idIsSet = false;
 }
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getUrl() const
-{
-    return m_Url;
-}
-
-
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setUrl(const utility::string_t& value)
-{
-    m_Url = value;
-    m_UrlIsSet = true;
-}
-
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::urlIsSet() const
-{
-    return m_UrlIsSet;
-}
-
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetUrl()
-{
-    m_UrlIsSet = false;
-}
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getUserId() const
+utility::string_t APIAuditLog::getUserId() const
 {
     return m_UserId;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setUserId(const utility::string_t& value)
+void APIAuditLog::setUserId(const utility::string_t& value)
 {
     m_UserId = value;
     m_UserIdIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::userIdIsSet() const
+bool APIAuditLog::userIdIsSet() const
 {
     return m_UserIdIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetUserId()
+void APIAuditLog::unsetUserId()
 {
     m_UserIdIsSet = false;
 }
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getUsername() const
+utility::string_t APIAuditLog::getUsername() const
 {
     return m_Username;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setUsername(const utility::string_t& value)
+void APIAuditLog::setUsername(const utility::string_t& value)
 {
     m_Username = value;
     m_UsernameIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::usernameIsSet() const
+bool APIAuditLog::usernameIsSet() const
 {
     return m_UsernameIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetUsername()
+void APIAuditLog::unsetUsername()
 {
     m_UsernameIsSet = false;
 }
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getResourceName() const
+utility::string_t APIAuditLog::getResourceName() const
 {
     return m_ResourceName;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setResourceName(const utility::string_t& value)
+void APIAuditLog::setResourceName(const utility::string_t& value)
 {
     m_ResourceName = value;
     m_ResourceNameIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::resourceNameIsSet() const
+bool APIAuditLog::resourceNameIsSet() const
 {
     return m_ResourceNameIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetResourceName()
+void APIAuditLog::unsetResourceName()
 {
     m_ResourceNameIsSet = false;
 }
-Pick_TenantAuditLog_TenantAuditLogKeys_::CrudTypeEnum Pick_TenantAuditLog_TenantAuditLogKeys_::getCrudType() const
+APIAuditLog::CrudTypeEnum APIAuditLog::getCrudType() const
 {
     return m_CrudType;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setCrudType(const CrudTypeEnum value)
+void APIAuditLog::setCrudType(const CrudTypeEnum value)
 {
     m_CrudType = value;
     m_CrudTypeIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::crudTypeIsSet() const
+bool APIAuditLog::crudTypeIsSet() const
 {
     return m_CrudTypeIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetCrudType()
+void APIAuditLog::unsetCrudType()
 {
     m_CrudTypeIsSet = false;
 }
-Pick_TenantAuditLog_TenantAuditLogKeys_::FromEnum Pick_TenantAuditLog_TenantAuditLogKeys_::getFrom() const
+APIAuditLog::FromEnum APIAuditLog::getFrom() const
 {
     return m_From;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setFrom(const FromEnum value)
+void APIAuditLog::setFrom(const FromEnum value)
 {
     m_From = value;
     m_FromIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::fromIsSet() const
+bool APIAuditLog::fromIsSet() const
 {
     return m_FromIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetFrom()
+void APIAuditLog::unsetFrom()
 {
     m_FromIsSet = false;
 }
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getIp() const
+utility::string_t APIAuditLog::getUrl() const
 {
-    return m_Ip;
+    return m_Url.get();
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setIp(const utility::string_t& value)
+void APIAuditLog::setUrl(const utility::string_t& value)
+{
+    m_Url = value;
+}
+
+bool APIAuditLog::urlIsSet() const
+{
+    return m_Url.has_value();
+}
+
+void APIAuditLog::unsetUrl()
+{
+    m_Url.reset();
+}
+utility::string_t APIAuditLog::getIp() const
+{
+    return m_Ip.get();
+}
+
+
+void APIAuditLog::setIp(const utility::string_t& value)
 {
     m_Ip = value;
-    m_IpIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::ipIsSet() const
+bool APIAuditLog::ipIsSet() const
 {
-    return m_IpIsSet;
+    return m_Ip.has_value();
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetIp()
+void APIAuditLog::unsetIp()
 {
-    m_IpIsSet = false;
+    m_Ip.reset();
 }
-utility::datetime Pick_TenantAuditLog_TenantAuditLogKeys_::getWhen() const
+utility::datetime APIAuditLog::getWhen() const
 {
     return m_When;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setWhen(const utility::datetime& value)
+void APIAuditLog::setWhen(const utility::datetime& value)
 {
     m_When = value;
     m_WhenIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::whenIsSet() const
+bool APIAuditLog::whenIsSet() const
 {
     return m_WhenIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetWhen()
+void APIAuditLog::unsetWhen()
 {
     m_WhenIsSet = false;
 }
-utility::string_t Pick_TenantAuditLog_TenantAuditLogKeys_::getDescription() const
+utility::string_t APIAuditLog::getDescription() const
 {
     return m_Description;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setDescription(const utility::string_t& value)
+void APIAuditLog::setDescription(const utility::string_t& value)
 {
     m_Description = value;
     m_DescriptionIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::descriptionIsSet() const
+bool APIAuditLog::descriptionIsSet() const
 {
     return m_DescriptionIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetDescription()
+void APIAuditLog::unsetDescription()
 {
     m_DescriptionIsSet = false;
 }
-utility::datetime Pick_TenantAuditLog_TenantAuditLogKeys_::getServerStartDate() const
+utility::datetime APIAuditLog::getServerStartDate() const
 {
     return m_ServerStartDate;
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setServerStartDate(const utility::datetime& value)
+void APIAuditLog::setServerStartDate(const utility::datetime& value)
 {
     m_ServerStartDate = value;
     m_ServerStartDateIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::serverStartDateIsSet() const
+bool APIAuditLog::serverStartDateIsSet() const
 {
     return m_ServerStartDateIsSet;
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetServerStartDate()
+void APIAuditLog::unsetServerStartDate()
 {
     m_ServerStartDateIsSet = false;
 }
-std::map<utility::string_t, std::shared_ptr<AnyType>> Pick_TenantAuditLog_TenantAuditLogKeys_::getObjectDetails() const
+std::map<utility::string_t, std::shared_ptr<AnyType>> APIAuditLog::getObjectDetails() const
 {
-    return m_ObjectDetails;
+    return m_ObjectDetails.get();
 }
 
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::setObjectDetails(const std::map<utility::string_t, std::shared_ptr<AnyType>>& value)
+void APIAuditLog::setObjectDetails(const std::map<utility::string_t, std::shared_ptr<AnyType>>& value)
 {
     m_ObjectDetails = value;
-    m_ObjectDetailsIsSet = true;
 }
 
-bool Pick_TenantAuditLog_TenantAuditLogKeys_::objectDetailsIsSet() const
+bool APIAuditLog::objectDetailsIsSet() const
 {
-    return m_ObjectDetailsIsSet;
+    return m_ObjectDetails.has_value();
 }
 
-void Pick_TenantAuditLog_TenantAuditLogKeys_::unsetObjectDetails()
+void APIAuditLog::unsetObjectDetails()
 {
-    m_ObjectDetailsIsSet = false;
+    m_ObjectDetails.reset();
 }
 
 }

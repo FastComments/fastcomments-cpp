@@ -41,17 +41,17 @@ web::json::value UserPresenceData::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_UrlIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdWS"))] = ModelBase::toJson(m_UrlIdWS);
     }
     if(m_UserIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userIdWS"))] = ModelBase::toJson(m_UserIdWS);
     }
     if(m_TenantIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantIdWS"))] = ModelBase::toJson(m_TenantIdWS);
     }

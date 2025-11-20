@@ -37,7 +37,7 @@ web::json::value UpdateUserBadgeParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_DisplayedOnCommentsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayedOnComments"))] = ModelBase::toJson(m_DisplayedOnComments);
     }

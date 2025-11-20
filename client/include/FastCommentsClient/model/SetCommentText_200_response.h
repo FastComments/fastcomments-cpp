@@ -19,13 +19,14 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_SetCommentText_200_response_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
 #include "FastCommentsClient/model/CustomConfigParameters.h"
 #include "FastCommentsClient/model/PublicAPISetCommentTextResponse.h"
+#include "FastCommentsClient/model/SetCommentTextResult.h"
 #include <cpprest/details/basic_types.h>
-#include "FastCommentsClient/model/Pick_FComment_approved_or_commentHTML_.h"
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/APIStatus.h"
 
@@ -34,7 +35,7 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class Pick_FComment_approved_or_commentHTML_;
+class SetCommentTextResult;
 class CustomConfigParameters;
 
 
@@ -61,10 +62,10 @@ public:
     /// SetCommentText_200_response members
 
 
-    std::shared_ptr<Pick_FComment_approved_or_commentHTML_> getComment() const;
+    std::shared_ptr<SetCommentTextResult> getComment() const;
     bool commentIsSet() const;
     void unsetComment();
-    void setComment(const std::shared_ptr<Pick_FComment_approved_or_commentHTML_>& value);
+    void setComment(const std::shared_ptr<SetCommentTextResult>& value);
 
     std::shared_ptr<APIStatus> getStatus() const;
     bool statusIsSet() const;
@@ -108,7 +109,7 @@ public:
 
 
 protected:
-    std::shared_ptr<Pick_FComment_approved_or_commentHTML_> m_Comment;
+    std::shared_ptr<SetCommentTextResult> m_Comment;
     bool m_CommentIsSet;
 
     std::shared_ptr<APIStatus> m_Status;

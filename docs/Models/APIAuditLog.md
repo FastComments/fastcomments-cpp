@@ -1,15 +1,15 @@
-# Pick_TenantAuditLog.TenantAuditLogKeys_
+# APIAuditLog
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **\_id** | **String** |  | [default to null] |
-| **url** | **String** |  | [optional] [default to null] |
 | **userId** | **String** |  | [optional] [default to null] |
 | **username** | **String** |  | [optional] [default to null] |
 | **resourceName** | **String** |  | [default to null] |
 | **crudType** | **String** |  | [default to null] |
 | **from** | **String** |  | [optional] [default to null] |
+| **url** | **String** |  | [optional] [default to null] |
 | **ip** | **String** |  | [optional] [default to null] |
 | **when** | **Date** |  | [optional] [default to null] |
 | **description** | **String** |  | [optional] [default to null] |

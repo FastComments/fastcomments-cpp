@@ -20,7 +20,6 @@ namespace model {
 
 PublicBlockFromCommentParams::PublicBlockFromCommentParams()
 {
-    m_CommentIdsIsSet = false;
 }
 
 PublicBlockFromCommentParams::~PublicBlockFromCommentParams()
@@ -35,10 +34,10 @@ void PublicBlockFromCommentParams::validate()
 web::json::value PublicBlockFromCommentParams::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_CommentIdsIsSet)
-    {   
+    if(m_CommentIds.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commentIds"))] = ModelBase::toJson(m_CommentIds);
+        val[utility::conversions::to_string_t(_XPLATSTR("commentIds"))] = ModelBase::toJson(m_CommentIds.get());
     }
 
     return val;
@@ -68,9 +67,9 @@ void PublicBlockFromCommentParams::toMultipart(std::shared_ptr<MultipartFormData
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_CommentIdsIsSet)
+    if(m_CommentIds.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentIds")), m_CommentIds));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentIds")), m_CommentIds.get()));
     }
 }
 
@@ -95,24 +94,23 @@ bool PublicBlockFromCommentParams::fromMultiPart(std::shared_ptr<MultipartFormDa
 
 std::vector<utility::string_t> PublicBlockFromCommentParams::getCommentIds() const
 {
-    return m_CommentIds;
+    return m_CommentIds.get();
 }
 
 
 void PublicBlockFromCommentParams::setCommentIds(const std::vector<utility::string_t>& value)
 {
     m_CommentIds = value;
-    m_CommentIdsIsSet = true;
 }
 
 bool PublicBlockFromCommentParams::commentIdsIsSet() const
 {
-    return m_CommentIdsIsSet;
+    return m_CommentIds.has_value();
 }
 
 void PublicBlockFromCommentParams::unsetCommentIds()
 {
-    m_CommentIdsIsSet = false;
+    m_CommentIds.reset();
 }
 
 }

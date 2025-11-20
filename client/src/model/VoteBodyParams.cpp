@@ -20,13 +20,7 @@ namespace model {
 
 VoteBodyParams::VoteBodyParams()
 {
-    m_CommenterEmail = utility::conversions::to_string_t("");
-    m_CommenterEmailIsSet = false;
-    m_CommenterName = utility::conversions::to_string_t("");
-    m_CommenterNameIsSet = false;
     m_VoteDirIsSet = false;
-    m_Url = utility::conversions::to_string_t("");
-    m_UrlIsSet = false;
 }
 
 VoteBodyParams::~VoteBodyParams()
@@ -41,27 +35,27 @@ void VoteBodyParams::validate()
 web::json::value VoteBodyParams::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_CommenterEmailIsSet)
-    {   
+    if(m_CommenterEmail.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterEmail"))] = ModelBase::toJson(m_CommenterEmail.get());
     }
-    if(m_CommenterNameIsSet)
-    {   
+    if(m_CommenterName.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commenterName"))] = ModelBase::toJson(m_CommenterName);
+        val[utility::conversions::to_string_t(_XPLATSTR("commenterName"))] = ModelBase::toJson(m_CommenterName.get());
     }
     if(m_VoteDirIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromVoteDirEnum(m_VoteDir);
         val[utility::conversions::to_string_t(_XPLATSTR("voteDir"))] = ModelBase::toJson(refVal);
         
     }
-    if(m_UrlIsSet)
-    {   
+    if(m_Url.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
+        val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url.get());
     }
 
     return val;
@@ -125,21 +119,21 @@ void VoteBodyParams::toMultipart(std::shared_ptr<MultipartFormData> multipart, c
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_CommenterEmailIsSet)
+    if(m_CommenterEmail.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterEmail")), m_CommenterEmail.get()));
     }
-    if(m_CommenterNameIsSet)
+    if(m_CommenterName.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterName")), m_CommenterName));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commenterName")), m_CommenterName.get()));
     }
     if(m_VoteDirIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("voteDir")), fromVoteDirEnum(m_VoteDir)));
     }
-    if(m_UrlIsSet)
+    if(m_Url.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url.get()));
     }
 }
 
@@ -209,45 +203,43 @@ const utility::string_t VoteBodyParams::fromVoteDirEnum(const VoteDirEnum value)
 
 utility::string_t VoteBodyParams::getCommenterEmail() const
 {
-    return m_CommenterEmail;
+    return m_CommenterEmail.get();
 }
 
 
 void VoteBodyParams::setCommenterEmail(const utility::string_t& value)
 {
     m_CommenterEmail = value;
-    m_CommenterEmailIsSet = true;
 }
 
 bool VoteBodyParams::commenterEmailIsSet() const
 {
-    return m_CommenterEmailIsSet;
+    return m_CommenterEmail.has_value();
 }
 
 void VoteBodyParams::unsetCommenterEmail()
 {
-    m_CommenterEmailIsSet = false;
+    m_CommenterEmail.reset();
 }
 utility::string_t VoteBodyParams::getCommenterName() const
 {
-    return m_CommenterName;
+    return m_CommenterName.get();
 }
 
 
 void VoteBodyParams::setCommenterName(const utility::string_t& value)
 {
     m_CommenterName = value;
-    m_CommenterNameIsSet = true;
 }
 
 bool VoteBodyParams::commenterNameIsSet() const
 {
-    return m_CommenterNameIsSet;
+    return m_CommenterName.has_value();
 }
 
 void VoteBodyParams::unsetCommenterName()
 {
-    m_CommenterNameIsSet = false;
+    m_CommenterName.reset();
 }
 VoteBodyParams::VoteDirEnum VoteBodyParams::getVoteDir() const
 {
@@ -272,24 +264,23 @@ void VoteBodyParams::unsetVoteDir()
 }
 utility::string_t VoteBodyParams::getUrl() const
 {
-    return m_Url;
+    return m_Url.get();
 }
 
 
 void VoteBodyParams::setUrl(const utility::string_t& value)
 {
     m_Url = value;
-    m_UrlIsSet = true;
 }
 
 bool VoteBodyParams::urlIsSet() const
 {
-    return m_UrlIsSet;
+    return m_Url.has_value();
 }
 
 void VoteBodyParams::unsetUrl()
 {
-    m_UrlIsSet = false;
+    m_Url.reset();
 }
 
 }

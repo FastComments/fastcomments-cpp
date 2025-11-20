@@ -26,8 +26,6 @@ UserSearchResult::UserSearchResult()
     m_NameIsSet = false;
     m_DisplayName = utility::conversions::to_string_t("");
     m_DisplayNameIsSet = false;
-    m_AvatarSrc = utility::conversions::to_string_t("");
-    m_AvatarSrcIsSet = false;
     m_TypeIsSet = false;
 }
 
@@ -44,27 +42,27 @@ web::json::value UserSearchResult::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_IdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("id"))] = ModelBase::toJson(m_Id);
     }
     if(m_NameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("name"))] = ModelBase::toJson(m_Name);
     }
     if(m_DisplayNameIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("displayName"))] = ModelBase::toJson(m_DisplayName);
     }
-    if(m_AvatarSrcIsSet)
-    {   
+    if(m_AvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("avatarSrc"))] = ModelBase::toJson(m_AvatarSrc.get());
     }
     if(m_TypeIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromTypeEnum(m_Type);
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(refVal);
@@ -155,9 +153,9 @@ void UserSearchResult::toMultipart(std::shared_ptr<MultipartFormData> multipart,
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("displayName")), m_DisplayName));
     }
-    if(m_AvatarSrcIsSet)
+    if(m_AvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("avatarSrc")), m_AvatarSrc.get()));
     }
     if(m_TypeIsSet)
     {
@@ -300,24 +298,23 @@ void UserSearchResult::unsetDisplayName()
 }
 utility::string_t UserSearchResult::getAvatarSrc() const
 {
-    return m_AvatarSrc;
+    return m_AvatarSrc.get();
 }
 
 
 void UserSearchResult::setAvatarSrc(const utility::string_t& value)
 {
     m_AvatarSrc = value;
-    m_AvatarSrcIsSet = true;
 }
 
 bool UserSearchResult::avatarSrcIsSet() const
 {
-    return m_AvatarSrcIsSet;
+    return m_AvatarSrc.has_value();
 }
 
 void UserSearchResult::unsetAvatarSrc()
 {
-    m_AvatarSrcIsSet = false;
+    m_AvatarSrc.reset();
 }
 UserSearchResult::TypeEnum UserSearchResult::getType() const
 {

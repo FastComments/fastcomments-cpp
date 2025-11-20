@@ -23,7 +23,6 @@ GetFeedPostsPublic_200_response::GetFeedPostsPublic_200_response()
     m_MyReactsIsSet = false;
     m_StatusIsSet = false;
     m_FeedPostsIsSet = false;
-    m_UserIsSet = false;
     m_UrlIdWS = utility::conversions::to_string_t("");
     m_UrlIdWSIsSet = false;
     m_UserIdWS = utility::conversions::to_string_t("");
@@ -58,72 +57,72 @@ web::json::value GetFeedPostsPublic_200_response::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_MyReactsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("myReacts"))] = ModelBase::toJson(m_MyReacts);
     }
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_FeedPostsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("feedPosts"))] = ModelBase::toJson(m_FeedPosts);
     }
-    if(m_UserIsSet)
-    {   
+    if(m_User.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
+        val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User.get());
     }
     if(m_UrlIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlIdWS"))] = ModelBase::toJson(m_UrlIdWS);
     }
     if(m_UserIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userIdWS"))] = ModelBase::toJson(m_UserIdWS);
     }
     if(m_TenantIdWSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantIdWS"))] = ModelBase::toJson(m_TenantIdWS);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
     if(m_CodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
     }
     if(m_SecondaryCodeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
     }
     if(m_BannedUntilIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
     }
     if(m_MaxCharacterLengthIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
     }
     if(m_TranslatedErrorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
     }
     if(m_CustomConfigIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
@@ -310,9 +309,9 @@ void GetFeedPostsPublic_200_response::toMultipart(std::shared_ptr<MultipartFormD
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("feedPosts")), m_FeedPosts));
     }
-    if(m_UserIsSet)
+    if(m_User.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("user")), m_User.get()));
     }
     if(m_UrlIdWSIsSet)
     {
@@ -518,24 +517,23 @@ void GetFeedPostsPublic_200_response::unsetFeedPosts()
 }
 std::shared_ptr<UserSessionInfo> GetFeedPostsPublic_200_response::getUser() const
 {
-    return m_User;
+    return m_User.get();
 }
 
 
 void GetFeedPostsPublic_200_response::setUser(const std::shared_ptr<UserSessionInfo>& value)
 {
     m_User = value;
-    m_UserIsSet = true;
 }
 
 bool GetFeedPostsPublic_200_response::userIsSet() const
 {
-    return m_UserIsSet;
+    return m_User.has_value();
 }
 
 void GetFeedPostsPublic_200_response::unsetUser()
 {
-    m_UserIsSet = false;
+    m_User.reset();
 }
 utility::string_t GetFeedPostsPublic_200_response::getUrlIdWS() const
 {

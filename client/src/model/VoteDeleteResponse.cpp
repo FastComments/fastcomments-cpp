@@ -38,12 +38,12 @@ web::json::value VoteDeleteResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_WasPendingVoteIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wasPendingVote"))] = ModelBase::toJson(m_WasPendingVote);
     }

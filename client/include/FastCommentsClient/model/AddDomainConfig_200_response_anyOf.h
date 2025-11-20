@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_AddDomainConfig_200_response_anyOf_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_AddDomainConfig_200_response_anyOf_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -65,11 +66,9 @@ public:
 
 
 protected:
-    std::shared_ptr<AnyType> m_Configuration;
-    bool m_ConfigurationIsSet;
+    boost::optional<std::shared_ptr<AnyType>> m_Configuration;
 
-    std::shared_ptr<AnyType> m_Status;
-    bool m_StatusIsSet;
+    boost::optional<std::shared_ptr<AnyType>> m_Status;
 
 };
 

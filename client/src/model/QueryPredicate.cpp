@@ -39,17 +39,17 @@ web::json::value QueryPredicate::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_KeyIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("key"))] = ModelBase::toJson(m_Key);
     }
     if(m_ValueIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("value"))] = ModelBase::toJson(m_Value);
     }
     if(m_r_operatorIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromR_operatorEnum(m_r_operator);
         val[utility::conversions::to_string_t(_XPLATSTR("operator"))] = ModelBase::toJson(refVal);

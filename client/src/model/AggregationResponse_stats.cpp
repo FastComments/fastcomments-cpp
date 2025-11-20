@@ -39,12 +39,12 @@ web::json::value AggregationResponse_stats::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TimeMSIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("timeMS"))] = ModelBase::toJson(m_TimeMS);
     }
     if(m_ScannedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("scanned"))] = ModelBase::toJson(m_Scanned);
     }

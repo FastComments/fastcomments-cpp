@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PublicBlockFromCommentParams_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PublicBlockFromCommentParams_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -64,8 +65,7 @@ public:
 
 
 protected:
-    std::vector<utility::string_t> m_CommentIds;
-    bool m_CommentIdsIsSet;
+    boost::optional<std::vector<utility::string_t>> m_CommentIds;
 
 };
 

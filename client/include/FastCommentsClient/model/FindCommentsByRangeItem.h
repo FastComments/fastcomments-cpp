@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_FindCommentsByRangeItem_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_FindCommentsByRangeItem_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -68,8 +69,7 @@ public:
 
 
 protected:
-    std::shared_ptr<FComment> m_Comment;
-    bool m_CommentIsSet;
+    boost::optional<std::shared_ptr<FComment>> m_Comment;
 
     std::shared_ptr<QuestionResult> m_Result;
     bool m_ResultIsSet;

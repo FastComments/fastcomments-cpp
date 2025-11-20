@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PubSubVote_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_PubSubVote_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -115,8 +116,7 @@ protected:
     utility::string_t m_CommentId;
     bool m_CommentIdIsSet;
 
-    utility::string_t m_UserId;
-    bool m_UserIdIsSet;
+    boost::optional<utility::string_t> m_UserId;
 
     int32_t m_Direction;
     bool m_DirectionIsSet;
@@ -124,8 +124,7 @@ protected:
     int64_t m_CreatedAt;
     bool m_CreatedAtIsSet;
 
-    utility::string_t m_VerificationId;
-    bool m_VerificationIdIsSet;
+    boost::optional<utility::string_t> m_VerificationId;
 
 };
 

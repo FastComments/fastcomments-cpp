@@ -43,29 +43,29 @@ web::json::value VoteResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromStatusEnum(m_Status);
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(refVal);
         
     }
     if(m_VoteIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("voteId"))] = ModelBase::toJson(m_VoteId);
     }
     if(m_IsVerifiedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isVerified"))] = ModelBase::toJson(m_IsVerified);
     }
     if(m_UserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("user"))] = ModelBase::toJson(m_User);
     }
     if(m_EditKeyIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("editKey"))] = ModelBase::toJson(m_EditKey);
     }

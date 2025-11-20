@@ -19,6 +19,7 @@
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_UserSearchResult_H_
 
 #include <stdexcept>
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -99,8 +100,7 @@ protected:
     utility::string_t m_DisplayName;
     bool m_DisplayNameIsSet;
 
-    utility::string_t m_AvatarSrc;
-    bool m_AvatarSrcIsSet;
+    boost::optional<utility::string_t> m_AvatarSrc;
 
     TypeEnum m_Type;
     bool m_TypeIsSet;

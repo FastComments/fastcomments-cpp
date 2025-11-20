@@ -20,8 +20,6 @@ namespace model {
 
 GetDomainConfigs_200_response_anyOf::GetDomainConfigs_200_response_anyOf()
 {
-    m_ConfigurationsIsSet = false;
-    m_StatusIsSet = false;
 }
 
 GetDomainConfigs_200_response_anyOf::~GetDomainConfigs_200_response_anyOf()
@@ -36,15 +34,15 @@ void GetDomainConfigs_200_response_anyOf::validate()
 web::json::value GetDomainConfigs_200_response_anyOf::toJson() const
 {
     web::json::value val = web::json::value::object();
-    if(m_ConfigurationsIsSet)
-    {   
+    if(m_Configurations.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("configurations"))] = ModelBase::toJson(m_Configurations);
+        val[utility::conversions::to_string_t(_XPLATSTR("configurations"))] = ModelBase::toJson(m_Configurations.get());
     }
-    if(m_StatusIsSet)
-    {   
+    if(m_Status.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+        val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status.get());
     }
 
     return val;
@@ -85,13 +83,13 @@ void GetDomainConfigs_200_response_anyOf::toMultipart(std::shared_ptr<MultipartF
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
-    if(m_ConfigurationsIsSet)
+    if(m_Configurations.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("configurations")), m_Configurations));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("configurations")), m_Configurations.get()));
     }
-    if(m_StatusIsSet)
+    if(m_Status.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status.get()));
     }
 }
 
@@ -122,45 +120,43 @@ bool GetDomainConfigs_200_response_anyOf::fromMultiPart(std::shared_ptr<Multipar
 
 std::shared_ptr<AnyType> GetDomainConfigs_200_response_anyOf::getConfigurations() const
 {
-    return m_Configurations;
+    return m_Configurations.get();
 }
 
 
 void GetDomainConfigs_200_response_anyOf::setConfigurations(const std::shared_ptr<AnyType>& value)
 {
     m_Configurations = value;
-    m_ConfigurationsIsSet = true;
 }
 
 bool GetDomainConfigs_200_response_anyOf::configurationsIsSet() const
 {
-    return m_ConfigurationsIsSet;
+    return m_Configurations.has_value();
 }
 
 void GetDomainConfigs_200_response_anyOf::unsetConfigurations()
 {
-    m_ConfigurationsIsSet = false;
+    m_Configurations.reset();
 }
 std::shared_ptr<AnyType> GetDomainConfigs_200_response_anyOf::getStatus() const
 {
-    return m_Status;
+    return m_Status.get();
 }
 
 
 void GetDomainConfigs_200_response_anyOf::setStatus(const std::shared_ptr<AnyType>& value)
 {
     m_Status = value;
-    m_StatusIsSet = true;
 }
 
 bool GetDomainConfigs_200_response_anyOf::statusIsSet() const
 {
-    return m_StatusIsSet;
+    return m_Status.has_value();
 }
 
 void GetDomainConfigs_200_response_anyOf::unsetStatus()
 {
-    m_StatusIsSet = false;
+    m_Status.reset();
 }
 
 }

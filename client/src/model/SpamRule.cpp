@@ -38,14 +38,14 @@ web::json::value SpamRule::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ActionsIsSet)
-    {   
+    {
         
         std::vector<utility::string_t> refVal = fromActionsEnum(m_Actions);
         val[utility::conversions::to_string_t(_XPLATSTR("actions"))] = ModelBase::toJson(refVal);
         
     }
     if(m_CommentContainsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentContains"))] = ModelBase::toJson(m_CommentContains);
     }

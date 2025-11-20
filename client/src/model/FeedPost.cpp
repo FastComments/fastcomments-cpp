@@ -28,10 +28,6 @@ FeedPost::FeedPost()
     m_TitleIsSet = false;
     m_FromUserId = utility::conversions::to_string_t("");
     m_FromUserIdIsSet = false;
-    m_FromUserDisplayName = utility::conversions::to_string_t("");
-    m_FromUserDisplayNameIsSet = false;
-    m_FromUserAvatar = utility::conversions::to_string_t("");
-    m_FromUserAvatarIsSet = false;
     m_FromIpHash = utility::conversions::to_string_t("");
     m_FromIpHashIsSet = false;
     m_TagsIsSet = false;
@@ -45,8 +41,6 @@ FeedPost::FeedPost()
     m_CreatedAt = utility::datetime();
     m_CreatedAtIsSet = false;
     m_ReactsIsSet = false;
-    m_CommentCount = 0;
-    m_CommentCountIsSet = false;
 }
 
 FeedPost::~FeedPost()
@@ -62,84 +56,84 @@ web::json::value FeedPost::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
     if(m_TitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("title"))] = ModelBase::toJson(m_Title);
     }
     if(m_FromUserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromUserId"))] = ModelBase::toJson(m_FromUserId);
     }
-    if(m_FromUserDisplayNameIsSet)
-    {   
+    if(m_FromUserDisplayName.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromUserDisplayName"))] = ModelBase::toJson(m_FromUserDisplayName);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromUserDisplayName"))] = ModelBase::toJson(m_FromUserDisplayName.get());
     }
-    if(m_FromUserAvatarIsSet)
-    {   
+    if(m_FromUserAvatar.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromUserAvatar"))] = ModelBase::toJson(m_FromUserAvatar);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromUserAvatar"))] = ModelBase::toJson(m_FromUserAvatar.get());
     }
     if(m_FromIpHashIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromIpHash"))] = ModelBase::toJson(m_FromIpHash);
     }
     if(m_TagsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tags"))] = ModelBase::toJson(m_Tags);
     }
     if(m_WeightIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("weight"))] = ModelBase::toJson(m_Weight);
     }
     if(m_MetaIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("meta"))] = ModelBase::toJson(m_Meta);
     }
     if(m_ContentHTMLIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("contentHTML"))] = ModelBase::toJson(m_ContentHTML);
     }
     if(m_MediaIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("media"))] = ModelBase::toJson(m_Media);
     }
     if(m_LinksIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("links"))] = ModelBase::toJson(m_Links);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_ReactsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reacts"))] = ModelBase::toJson(m_Reacts);
     }
-    if(m_CommentCountIsSet)
-    {   
+    if(m_CommentCount.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("commentCount"))] = ModelBase::toJson(m_CommentCount);
+        val[utility::conversions::to_string_t(_XPLATSTR("commentCount"))] = ModelBase::toJson(m_CommentCount.get());
     }
 
     return val;
@@ -350,13 +344,13 @@ void FeedPost::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserId")), m_FromUserId));
     }
-    if(m_FromUserDisplayNameIsSet)
+    if(m_FromUserDisplayName.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserDisplayName")), m_FromUserDisplayName));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserDisplayName")), m_FromUserDisplayName.get()));
     }
-    if(m_FromUserAvatarIsSet)
+    if(m_FromUserAvatar.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserAvatar")), m_FromUserAvatar));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserAvatar")), m_FromUserAvatar.get()));
     }
     if(m_FromIpHashIsSet)
     {
@@ -394,9 +388,9 @@ void FeedPost::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reacts")), m_Reacts));
     }
-    if(m_CommentCountIsSet)
+    if(m_CommentCount.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentCount")), m_CommentCount));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("commentCount")), m_CommentCount.get()));
     }
 }
 
@@ -595,45 +589,43 @@ void FeedPost::unsetFromUserId()
 }
 utility::string_t FeedPost::getFromUserDisplayName() const
 {
-    return m_FromUserDisplayName;
+    return m_FromUserDisplayName.get();
 }
 
 
 void FeedPost::setFromUserDisplayName(const utility::string_t& value)
 {
     m_FromUserDisplayName = value;
-    m_FromUserDisplayNameIsSet = true;
 }
 
 bool FeedPost::fromUserDisplayNameIsSet() const
 {
-    return m_FromUserDisplayNameIsSet;
+    return m_FromUserDisplayName.has_value();
 }
 
 void FeedPost::unsetFromUserDisplayName()
 {
-    m_FromUserDisplayNameIsSet = false;
+    m_FromUserDisplayName.reset();
 }
 utility::string_t FeedPost::getFromUserAvatar() const
 {
-    return m_FromUserAvatar;
+    return m_FromUserAvatar.get();
 }
 
 
 void FeedPost::setFromUserAvatar(const utility::string_t& value)
 {
     m_FromUserAvatar = value;
-    m_FromUserAvatarIsSet = true;
 }
 
 bool FeedPost::fromUserAvatarIsSet() const
 {
-    return m_FromUserAvatarIsSet;
+    return m_FromUserAvatar.has_value();
 }
 
 void FeedPost::unsetFromUserAvatar()
 {
-    m_FromUserAvatarIsSet = false;
+    m_FromUserAvatar.reset();
 }
 utility::string_t FeedPost::getFromIpHash() const
 {
@@ -824,23 +816,22 @@ void FeedPost::unsetReacts()
 }
 int32_t FeedPost::getCommentCount() const
 {
-    return m_CommentCount;
+    return m_CommentCount.get();
 }
 
 void FeedPost::setCommentCount(int32_t value)
 {
     m_CommentCount = value;
-    m_CommentCountIsSet = true;
 }
 
 bool FeedPost::commentCountIsSet() const
 {
-    return m_CommentCountIsSet;
+    return m_CommentCount.has_value();
 }
 
 void FeedPost::unsetCommentCount()
 {
-    m_CommentCountIsSet = false;
+    m_CommentCount.reset();
 }
 
 }

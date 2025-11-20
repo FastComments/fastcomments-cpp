@@ -36,7 +36,7 @@ web::json::value BlockFromCommentParams::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentIdsToCheckIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("commentIdsToCheck"))] = ModelBase::toJson(m_CommentIdsToCheck);
     }

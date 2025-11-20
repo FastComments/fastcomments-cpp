@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_FeedPost_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_FeedPost_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 
@@ -156,11 +157,9 @@ protected:
     utility::string_t m_FromUserId;
     bool m_FromUserIdIsSet;
 
-    utility::string_t m_FromUserDisplayName;
-    bool m_FromUserDisplayNameIsSet;
+    boost::optional<utility::string_t> m_FromUserDisplayName;
 
-    utility::string_t m_FromUserAvatar;
-    bool m_FromUserAvatarIsSet;
+    boost::optional<utility::string_t> m_FromUserAvatar;
 
     utility::string_t m_FromIpHash;
     bool m_FromIpHashIsSet;
@@ -189,8 +188,7 @@ protected:
     std::map<utility::string_t, int32_t> m_Reacts;
     bool m_ReactsIsSet;
 
-    int32_t m_CommentCount;
-    bool m_CommentCountIsSet;
+    boost::optional<int32_t> m_CommentCount;
 
 };
 

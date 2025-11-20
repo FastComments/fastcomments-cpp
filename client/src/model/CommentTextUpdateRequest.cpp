@@ -39,17 +39,17 @@ web::json::value CommentTextUpdateRequest::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_CommentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("comment"))] = ModelBase::toJson(m_Comment);
     }
     if(m_MentionsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("mentions"))] = ModelBase::toJson(m_Mentions);
     }
     if(m_HashTagsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("hashTags"))] = ModelBase::toJson(m_HashTags);
     }

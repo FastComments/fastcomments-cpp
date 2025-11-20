@@ -57,21 +57,8 @@ CommentLogData::CommentLogData()
     m_SubscribersIsSet = false;
     m_NotificationCount = 0.0;
     m_NotificationCountIsSet = false;
-    m_VotesBefore = 0.0;
-    m_VotesBeforeIsSet = false;
-    m_VotesUpBefore = 0.0;
-    m_VotesUpBeforeIsSet = false;
-    m_VotesDownBefore = 0.0;
-    m_VotesDownBeforeIsSet = false;
-    m_VotesAfter = 0.0;
-    m_VotesAfterIsSet = false;
-    m_VotesUpAfter = 0.0;
-    m_VotesUpAfterIsSet = false;
-    m_VotesDownAfter = 0.0;
-    m_VotesDownAfterIsSet = false;
     m_RepeatActionIsSet = false;
     m_ReasonIsSet = false;
-    m_OtherDataIsSet = false;
     m_SpamBefore = false;
     m_SpamBeforeIsSet = false;
     m_SpamAfter = false;
@@ -89,12 +76,6 @@ CommentLogData::CommentLogData()
     m_TextBeforeIsSet = false;
     m_TextAfter = utility::conversions::to_string_t("");
     m_TextAfterIsSet = false;
-    m_ExpireBefore = utility::datetime();
-    m_ExpireBeforeIsSet = false;
-    m_ExpireAfter = utility::datetime();
-    m_ExpireAfterIsSet = false;
-    m_FlagCountBefore = 0.0;
-    m_FlagCountBeforeIsSet = false;
     m_TrustFactorBefore = 0.0;
     m_TrustFactorBeforeIsSet = false;
     m_TrustFactorAfter = 0.0;
@@ -116,219 +97,219 @@ web::json::value CommentLogData::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ClearContentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("clearContent"))] = ModelBase::toJson(m_ClearContent);
     }
     if(m_IsDeletedUserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isDeletedUser"))] = ModelBase::toJson(m_IsDeletedUser);
     }
     if(m_PhraseIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("phrase"))] = ModelBase::toJson(m_Phrase);
     }
     if(m_BadWordIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badWord"))] = ModelBase::toJson(m_BadWord);
     }
     if(m_WordIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("word"))] = ModelBase::toJson(m_Word);
     }
     if(m_LocaleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("locale"))] = ModelBase::toJson(m_Locale);
     }
     if(m_TenantBadgeIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantBadgeId"))] = ModelBase::toJson(m_TenantBadgeId);
     }
     if(m_BadgeIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("badgeId"))] = ModelBase::toJson(m_BadgeId);
     }
     if(m_WasLoggedInIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wasLoggedIn"))] = ModelBase::toJson(m_WasLoggedIn);
     }
     if(m_FoundUserIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("foundUser"))] = ModelBase::toJson(m_FoundUser);
     }
     if(m_VerifiedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("verified"))] = ModelBase::toJson(m_Verified);
     }
     if(m_EngineIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("engine"))] = ModelBase::toJson(m_Engine);
     }
     if(m_EngineResponseIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("engineResponse"))] = ModelBase::toJson(m_EngineResponse);
     }
     if(m_EngineTokensIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("engineTokens"))] = ModelBase::toJson(m_EngineTokens);
     }
     if(m_TrustFactorIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("trustFactor"))] = ModelBase::toJson(m_TrustFactor);
     }
     if(m_RuleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("rule"))] = ModelBase::toJson(m_Rule);
     }
     if(m_UserIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
     }
     if(m_SubscribersIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("subscribers"))] = ModelBase::toJson(m_Subscribers);
     }
     if(m_NotificationCountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationCount"))] = ModelBase::toJson(m_NotificationCount);
     }
-    if(m_VotesBeforeIsSet)
-    {   
+    if(m_VotesBefore.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesBefore"))] = ModelBase::toJson(m_VotesBefore);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesBefore"))] = ModelBase::toJson(m_VotesBefore.get());
     }
-    if(m_VotesUpBeforeIsSet)
-    {   
+    if(m_VotesUpBefore.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesUpBefore"))] = ModelBase::toJson(m_VotesUpBefore);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesUpBefore"))] = ModelBase::toJson(m_VotesUpBefore.get());
     }
-    if(m_VotesDownBeforeIsSet)
-    {   
+    if(m_VotesDownBefore.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesDownBefore"))] = ModelBase::toJson(m_VotesDownBefore);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesDownBefore"))] = ModelBase::toJson(m_VotesDownBefore.get());
     }
-    if(m_VotesAfterIsSet)
-    {   
+    if(m_VotesAfter.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesAfter"))] = ModelBase::toJson(m_VotesAfter);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesAfter"))] = ModelBase::toJson(m_VotesAfter.get());
     }
-    if(m_VotesUpAfterIsSet)
-    {   
+    if(m_VotesUpAfter.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesUpAfter"))] = ModelBase::toJson(m_VotesUpAfter);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesUpAfter"))] = ModelBase::toJson(m_VotesUpAfter.get());
     }
-    if(m_VotesDownAfterIsSet)
-    {   
+    if(m_VotesDownAfter.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("votesDownAfter"))] = ModelBase::toJson(m_VotesDownAfter);
+        val[utility::conversions::to_string_t(_XPLATSTR("votesDownAfter"))] = ModelBase::toJson(m_VotesDownAfter.get());
     }
     if(m_RepeatActionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("repeatAction"))] = ModelBase::toJson(m_RepeatAction);
     }
     if(m_ReasonIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
     }
-    if(m_OtherDataIsSet)
-    {   
+    if(m_OtherData.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("otherData"))] = ModelBase::toJson(m_OtherData);
+        val[utility::conversions::to_string_t(_XPLATSTR("otherData"))] = ModelBase::toJson(m_OtherData.get());
     }
     if(m_SpamBeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("spamBefore"))] = ModelBase::toJson(m_SpamBefore);
     }
     if(m_SpamAfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("spamAfter"))] = ModelBase::toJson(m_SpamAfter);
     }
     if(m_PermanentFlagIsSet)
-    {   
+    {
         
         utility::string_t refVal = fromPermanentFlagEnum(m_PermanentFlag);
         val[utility::conversions::to_string_t(_XPLATSTR("permanentFlag"))] = ModelBase::toJson(refVal);
         
     }
     if(m_ApprovedBeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("approvedBefore"))] = ModelBase::toJson(m_ApprovedBefore);
     }
     if(m_ApprovedAfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("approvedAfter"))] = ModelBase::toJson(m_ApprovedAfter);
     }
     if(m_ReviewedBeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reviewedBefore"))] = ModelBase::toJson(m_ReviewedBefore);
     }
     if(m_ReviewedAfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("reviewedAfter"))] = ModelBase::toJson(m_ReviewedAfter);
     }
     if(m_TextBeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("textBefore"))] = ModelBase::toJson(m_TextBefore);
     }
     if(m_TextAfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("textAfter"))] = ModelBase::toJson(m_TextAfter);
     }
-    if(m_ExpireBeforeIsSet)
-    {   
+    if(m_ExpireBefore.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("expireBefore"))] = ModelBase::toJson(m_ExpireBefore);
+        val[utility::conversions::to_string_t(_XPLATSTR("expireBefore"))] = ModelBase::toJson(m_ExpireBefore.get());
     }
-    if(m_ExpireAfterIsSet)
-    {   
+    if(m_ExpireAfter.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("expireAfter"))] = ModelBase::toJson(m_ExpireAfter);
+        val[utility::conversions::to_string_t(_XPLATSTR("expireAfter"))] = ModelBase::toJson(m_ExpireAfter.get());
     }
-    if(m_FlagCountBeforeIsSet)
-    {   
+    if(m_FlagCountBefore.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("flagCountBefore"))] = ModelBase::toJson(m_FlagCountBefore);
+        val[utility::conversions::to_string_t(_XPLATSTR("flagCountBefore"))] = ModelBase::toJson(m_FlagCountBefore.get());
     }
     if(m_TrustFactorBeforeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("trustFactorBefore"))] = ModelBase::toJson(m_TrustFactorBefore);
     }
     if(m_TrustFactorAfterIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("trustFactorAfter"))] = ModelBase::toJson(m_TrustFactorAfter);
     }
     if(m_ReferencedCommentIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("referencedCommentId"))] = ModelBase::toJson(m_ReferencedCommentId);
     }
@@ -899,29 +880,29 @@ void CommentLogData::toMultipart(std::shared_ptr<MultipartFormData> multipart, c
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notificationCount")), m_NotificationCount));
     }
-    if(m_VotesBeforeIsSet)
+    if(m_VotesBefore.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesBefore")), m_VotesBefore));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesBefore")), m_VotesBefore.get()));
     }
-    if(m_VotesUpBeforeIsSet)
+    if(m_VotesUpBefore.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUpBefore")), m_VotesUpBefore));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUpBefore")), m_VotesUpBefore.get()));
     }
-    if(m_VotesDownBeforeIsSet)
+    if(m_VotesDownBefore.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDownBefore")), m_VotesDownBefore));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDownBefore")), m_VotesDownBefore.get()));
     }
-    if(m_VotesAfterIsSet)
+    if(m_VotesAfter.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesAfter")), m_VotesAfter));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesAfter")), m_VotesAfter.get()));
     }
-    if(m_VotesUpAfterIsSet)
+    if(m_VotesUpAfter.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUpAfter")), m_VotesUpAfter));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesUpAfter")), m_VotesUpAfter.get()));
     }
-    if(m_VotesDownAfterIsSet)
+    if(m_VotesDownAfter.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDownAfter")), m_VotesDownAfter));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("votesDownAfter")), m_VotesDownAfter.get()));
     }
     if(m_RepeatActionIsSet)
     {
@@ -931,9 +912,9 @@ void CommentLogData::toMultipart(std::shared_ptr<MultipartFormData> multipart, c
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
     }
-    if(m_OtherDataIsSet)
+    if(m_OtherData.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("otherData")), m_OtherData));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("otherData")), m_OtherData.get()));
     }
     if(m_SpamBeforeIsSet)
     {
@@ -971,17 +952,17 @@ void CommentLogData::toMultipart(std::shared_ptr<MultipartFormData> multipart, c
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("textAfter")), m_TextAfter));
     }
-    if(m_ExpireBeforeIsSet)
+    if(m_ExpireBefore.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireBefore")), m_ExpireBefore));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireBefore")), m_ExpireBefore.get()));
     }
-    if(m_ExpireAfterIsSet)
+    if(m_ExpireAfter.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAfter")), m_ExpireAfter));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("expireAfter")), m_ExpireAfter.get()));
     }
-    if(m_FlagCountBeforeIsSet)
+    if(m_FlagCountBefore.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCountBefore")), m_FlagCountBefore));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("flagCountBefore")), m_FlagCountBefore.get()));
     }
     if(m_TrustFactorBeforeIsSet)
     {
@@ -1681,123 +1662,117 @@ void CommentLogData::unsetNotificationCount()
 }
 double CommentLogData::getVotesBefore() const
 {
-    return m_VotesBefore;
+    return m_VotesBefore.get();
 }
 
 void CommentLogData::setVotesBefore(double value)
 {
     m_VotesBefore = value;
-    m_VotesBeforeIsSet = true;
 }
 
 bool CommentLogData::votesBeforeIsSet() const
 {
-    return m_VotesBeforeIsSet;
+    return m_VotesBefore.has_value();
 }
 
 void CommentLogData::unsetVotesBefore()
 {
-    m_VotesBeforeIsSet = false;
+    m_VotesBefore.reset();
 }
 double CommentLogData::getVotesUpBefore() const
 {
-    return m_VotesUpBefore;
+    return m_VotesUpBefore.get();
 }
 
 void CommentLogData::setVotesUpBefore(double value)
 {
     m_VotesUpBefore = value;
-    m_VotesUpBeforeIsSet = true;
 }
 
 bool CommentLogData::votesUpBeforeIsSet() const
 {
-    return m_VotesUpBeforeIsSet;
+    return m_VotesUpBefore.has_value();
 }
 
 void CommentLogData::unsetVotesUpBefore()
 {
-    m_VotesUpBeforeIsSet = false;
+    m_VotesUpBefore.reset();
 }
 double CommentLogData::getVotesDownBefore() const
 {
-    return m_VotesDownBefore;
+    return m_VotesDownBefore.get();
 }
 
 void CommentLogData::setVotesDownBefore(double value)
 {
     m_VotesDownBefore = value;
-    m_VotesDownBeforeIsSet = true;
 }
 
 bool CommentLogData::votesDownBeforeIsSet() const
 {
-    return m_VotesDownBeforeIsSet;
+    return m_VotesDownBefore.has_value();
 }
 
 void CommentLogData::unsetVotesDownBefore()
 {
-    m_VotesDownBeforeIsSet = false;
+    m_VotesDownBefore.reset();
 }
 double CommentLogData::getVotesAfter() const
 {
-    return m_VotesAfter;
+    return m_VotesAfter.get();
 }
 
 void CommentLogData::setVotesAfter(double value)
 {
     m_VotesAfter = value;
-    m_VotesAfterIsSet = true;
 }
 
 bool CommentLogData::votesAfterIsSet() const
 {
-    return m_VotesAfterIsSet;
+    return m_VotesAfter.has_value();
 }
 
 void CommentLogData::unsetVotesAfter()
 {
-    m_VotesAfterIsSet = false;
+    m_VotesAfter.reset();
 }
 double CommentLogData::getVotesUpAfter() const
 {
-    return m_VotesUpAfter;
+    return m_VotesUpAfter.get();
 }
 
 void CommentLogData::setVotesUpAfter(double value)
 {
     m_VotesUpAfter = value;
-    m_VotesUpAfterIsSet = true;
 }
 
 bool CommentLogData::votesUpAfterIsSet() const
 {
-    return m_VotesUpAfterIsSet;
+    return m_VotesUpAfter.has_value();
 }
 
 void CommentLogData::unsetVotesUpAfter()
 {
-    m_VotesUpAfterIsSet = false;
+    m_VotesUpAfter.reset();
 }
 double CommentLogData::getVotesDownAfter() const
 {
-    return m_VotesDownAfter;
+    return m_VotesDownAfter.get();
 }
 
 void CommentLogData::setVotesDownAfter(double value)
 {
     m_VotesDownAfter = value;
-    m_VotesDownAfterIsSet = true;
 }
 
 bool CommentLogData::votesDownAfterIsSet() const
 {
-    return m_VotesDownAfterIsSet;
+    return m_VotesDownAfter.has_value();
 }
 
 void CommentLogData::unsetVotesDownAfter()
 {
-    m_VotesDownAfterIsSet = false;
+    m_VotesDownAfter.reset();
 }
 std::shared_ptr<RepeatCommentHandlingAction> CommentLogData::getRepeatAction() const
 {
@@ -1843,24 +1818,23 @@ void CommentLogData::unsetReason()
 }
 std::shared_ptr<AnyType> CommentLogData::getOtherData() const
 {
-    return m_OtherData;
+    return m_OtherData.get();
 }
 
 
 void CommentLogData::setOtherData(const std::shared_ptr<AnyType>& value)
 {
     m_OtherData = value;
-    m_OtherDataIsSet = true;
 }
 
 bool CommentLogData::otherDataIsSet() const
 {
-    return m_OtherDataIsSet;
+    return m_OtherData.has_value();
 }
 
 void CommentLogData::unsetOtherData()
 {
-    m_OtherDataIsSet = false;
+    m_OtherData.reset();
 }
 bool CommentLogData::isSpamBefore() const
 {
@@ -2047,65 +2021,62 @@ void CommentLogData::unsetTextAfter()
 }
 utility::datetime CommentLogData::getExpireBefore() const
 {
-    return m_ExpireBefore;
+    return m_ExpireBefore.get();
 }
 
 
 void CommentLogData::setExpireBefore(const utility::datetime& value)
 {
     m_ExpireBefore = value;
-    m_ExpireBeforeIsSet = true;
 }
 
 bool CommentLogData::expireBeforeIsSet() const
 {
-    return m_ExpireBeforeIsSet;
+    return m_ExpireBefore.has_value();
 }
 
 void CommentLogData::unsetExpireBefore()
 {
-    m_ExpireBeforeIsSet = false;
+    m_ExpireBefore.reset();
 }
 utility::datetime CommentLogData::getExpireAfter() const
 {
-    return m_ExpireAfter;
+    return m_ExpireAfter.get();
 }
 
 
 void CommentLogData::setExpireAfter(const utility::datetime& value)
 {
     m_ExpireAfter = value;
-    m_ExpireAfterIsSet = true;
 }
 
 bool CommentLogData::expireAfterIsSet() const
 {
-    return m_ExpireAfterIsSet;
+    return m_ExpireAfter.has_value();
 }
 
 void CommentLogData::unsetExpireAfter()
 {
-    m_ExpireAfterIsSet = false;
+    m_ExpireAfter.reset();
 }
 double CommentLogData::getFlagCountBefore() const
 {
-    return m_FlagCountBefore;
+    return m_FlagCountBefore.get();
 }
 
 void CommentLogData::setFlagCountBefore(double value)
 {
     m_FlagCountBefore = value;
-    m_FlagCountBeforeIsSet = true;
 }
 
 bool CommentLogData::flagCountBeforeIsSet() const
 {
-    return m_FlagCountBeforeIsSet;
+    return m_FlagCountBefore.has_value();
 }
 
 void CommentLogData::unsetFlagCountBefore()
 {
-    m_FlagCountBeforeIsSet = false;
+    m_FlagCountBefore.reset();
 }
 double CommentLogData::getTrustFactorBefore() const
 {

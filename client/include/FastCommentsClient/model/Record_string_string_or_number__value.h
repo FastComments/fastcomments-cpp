@@ -18,6 +18,7 @@
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_Record_string_string_or_number__value_H_
 #define ORG_OPENAPITOOLS_CLIENT_MODEL_Record_string_string_or_number__value_H_
 
+#include <boost/optional.hpp>
 
 #include "FastCommentsClient/ModelBase.h"
 

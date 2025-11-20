@@ -43,22 +43,22 @@ web::json::value FeedPostLink::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_TextIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("text"))] = ModelBase::toJson(m_Text);
     }
     if(m_TitleIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("title"))] = ModelBase::toJson(m_Title);
     }
     if(m_DescriptionIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("description"))] = ModelBase::toJson(m_Description);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }

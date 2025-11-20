@@ -24,16 +24,10 @@ UserNotification::UserNotification()
     m__idIsSet = false;
     m_TenantId = utility::conversions::to_string_t("");
     m_TenantIdIsSet = false;
-    m_UserId = utility::conversions::to_string_t("");
-    m_UserIdIsSet = false;
-    m_AnonUserId = utility::conversions::to_string_t("");
-    m_AnonUserIdIsSet = false;
     m_UrlId = utility::conversions::to_string_t("");
     m_UrlIdIsSet = false;
     m_Url = utility::conversions::to_string_t("");
     m_UrlIsSet = false;
-    m_PageTitle = utility::conversions::to_string_t("");
-    m_PageTitleIsSet = false;
     m_RelatedObjectTypeIsSet = false;
     m_RelatedObjectId = utility::conversions::to_string_t("");
     m_RelatedObjectIdIsSet = false;
@@ -46,16 +40,6 @@ UserNotification::UserNotification()
     m_CreatedAt = utility::datetime();
     m_CreatedAtIsSet = false;
     m_TypeIsSet = false;
-    m_FromCommentId = utility::conversions::to_string_t("");
-    m_FromCommentIdIsSet = false;
-    m_FromVoteId = utility::conversions::to_string_t("");
-    m_FromVoteIdIsSet = false;
-    m_FromUserName = utility::conversions::to_string_t("");
-    m_FromUserNameIsSet = false;
-    m_FromUserId = utility::conversions::to_string_t("");
-    m_FromUserIdIsSet = false;
-    m_FromUserAvatarSrc = utility::conversions::to_string_t("");
-    m_FromUserAvatarSrcIsSet = false;
     m_OptedOut = false;
     m_OptedOutIsSet = false;
     m_Count = 0L;
@@ -78,122 +62,122 @@ web::json::value UserNotification::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m__idIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("_id"))] = ModelBase::toJson(m__id);
     }
     if(m_TenantIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("tenantId"))] = ModelBase::toJson(m_TenantId);
     }
-    if(m_UserIdIsSet)
-    {   
+    if(m_UserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("userId"))] = ModelBase::toJson(m_UserId.get());
     }
-    if(m_AnonUserIdIsSet)
-    {   
+    if(m_AnonUserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("anonUserId"))] = ModelBase::toJson(m_AnonUserId.get());
     }
     if(m_UrlIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId);
     }
     if(m_UrlIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("url"))] = ModelBase::toJson(m_Url);
     }
-    if(m_PageTitleIsSet)
-    {   
+    if(m_PageTitle.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle);
+        val[utility::conversions::to_string_t(_XPLATSTR("pageTitle"))] = ModelBase::toJson(m_PageTitle.get());
     }
     if(m_RelatedObjectTypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("relatedObjectType"))] = ModelBase::toJson(m_RelatedObjectType);
     }
     if(m_RelatedObjectIdIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("relatedObjectId"))] = ModelBase::toJson(m_RelatedObjectId);
     }
     if(m_ViewedIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("viewed"))] = ModelBase::toJson(m_Viewed);
     }
     if(m_IsUnreadMessageIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isUnreadMessage"))] = ModelBase::toJson(m_IsUnreadMessage);
     }
     if(m_SentIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("sent"))] = ModelBase::toJson(m_Sent);
     }
     if(m_CreatedAtIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("createdAt"))] = ModelBase::toJson(m_CreatedAt);
     }
     if(m_TypeIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("type"))] = ModelBase::toJson(m_Type);
     }
-    if(m_FromCommentIdIsSet)
-    {   
+    if(m_FromCommentId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromCommentId"))] = ModelBase::toJson(m_FromCommentId);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromCommentId"))] = ModelBase::toJson(m_FromCommentId.get());
     }
-    if(m_FromVoteIdIsSet)
-    {   
+    if(m_FromVoteId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromVoteId"))] = ModelBase::toJson(m_FromVoteId);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromVoteId"))] = ModelBase::toJson(m_FromVoteId.get());
     }
-    if(m_FromUserNameIsSet)
-    {   
+    if(m_FromUserName.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromUserName"))] = ModelBase::toJson(m_FromUserName);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromUserName"))] = ModelBase::toJson(m_FromUserName.get());
     }
-    if(m_FromUserIdIsSet)
-    {   
+    if(m_FromUserId.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromUserId"))] = ModelBase::toJson(m_FromUserId);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromUserId"))] = ModelBase::toJson(m_FromUserId.get());
     }
-    if(m_FromUserAvatarSrcIsSet)
-    {   
+    if(m_FromUserAvatarSrc.has_value())
+    {
         
-        val[utility::conversions::to_string_t(_XPLATSTR("fromUserAvatarSrc"))] = ModelBase::toJson(m_FromUserAvatarSrc);
+        val[utility::conversions::to_string_t(_XPLATSTR("fromUserAvatarSrc"))] = ModelBase::toJson(m_FromUserAvatarSrc.get());
     }
     if(m_OptedOutIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("optedOut"))] = ModelBase::toJson(m_OptedOut);
     }
     if(m_CountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("count"))] = ModelBase::toJson(m_Count);
     }
     if(m_RelatedIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("relatedIds"))] = ModelBase::toJson(m_RelatedIds);
     }
     if(m_FromUserIdsIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromUserIds"))] = ModelBase::toJson(m_FromUserIds);
     }
     if(m_FromUserNamesIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("fromUserNames"))] = ModelBase::toJson(m_FromUserNames);
     }
@@ -486,13 +470,13 @@ void UserNotification::toMultipart(std::shared_ptr<MultipartFormData> multipart,
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tenantId")), m_TenantId));
     }
-    if(m_UserIdIsSet)
+    if(m_UserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("userId")), m_UserId.get()));
     }
-    if(m_AnonUserIdIsSet)
+    if(m_AnonUserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("anonUserId")), m_AnonUserId.get()));
     }
     if(m_UrlIdIsSet)
     {
@@ -502,9 +486,9 @@ void UserNotification::toMultipart(std::shared_ptr<MultipartFormData> multipart,
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("url")), m_Url));
     }
-    if(m_PageTitleIsSet)
+    if(m_PageTitle.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pageTitle")), m_PageTitle.get()));
     }
     if(m_RelatedObjectTypeIsSet)
     {
@@ -534,25 +518,25 @@ void UserNotification::toMultipart(std::shared_ptr<MultipartFormData> multipart,
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("type")), m_Type));
     }
-    if(m_FromCommentIdIsSet)
+    if(m_FromCommentId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromCommentId")), m_FromCommentId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromCommentId")), m_FromCommentId.get()));
     }
-    if(m_FromVoteIdIsSet)
+    if(m_FromVoteId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromVoteId")), m_FromVoteId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromVoteId")), m_FromVoteId.get()));
     }
-    if(m_FromUserNameIsSet)
+    if(m_FromUserName.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserName")), m_FromUserName));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserName")), m_FromUserName.get()));
     }
-    if(m_FromUserIdIsSet)
+    if(m_FromUserId.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserId")), m_FromUserId));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserId")), m_FromUserId.get()));
     }
-    if(m_FromUserAvatarSrcIsSet)
+    if(m_FromUserAvatarSrc.has_value())
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserAvatarSrc")), m_FromUserAvatarSrc));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("fromUserAvatarSrc")), m_FromUserAvatarSrc.get()));
     }
     if(m_OptedOutIsSet)
     {
@@ -777,45 +761,43 @@ void UserNotification::unsetTenantId()
 }
 utility::string_t UserNotification::getUserId() const
 {
-    return m_UserId;
+    return m_UserId.get();
 }
 
 
 void UserNotification::setUserId(const utility::string_t& value)
 {
     m_UserId = value;
-    m_UserIdIsSet = true;
 }
 
 bool UserNotification::userIdIsSet() const
 {
-    return m_UserIdIsSet;
+    return m_UserId.has_value();
 }
 
 void UserNotification::unsetUserId()
 {
-    m_UserIdIsSet = false;
+    m_UserId.reset();
 }
 utility::string_t UserNotification::getAnonUserId() const
 {
-    return m_AnonUserId;
+    return m_AnonUserId.get();
 }
 
 
 void UserNotification::setAnonUserId(const utility::string_t& value)
 {
     m_AnonUserId = value;
-    m_AnonUserIdIsSet = true;
 }
 
 bool UserNotification::anonUserIdIsSet() const
 {
-    return m_AnonUserIdIsSet;
+    return m_AnonUserId.has_value();
 }
 
 void UserNotification::unsetAnonUserId()
 {
-    m_AnonUserIdIsSet = false;
+    m_AnonUserId.reset();
 }
 utility::string_t UserNotification::getUrlId() const
 {
@@ -861,24 +843,23 @@ void UserNotification::unsetUrl()
 }
 utility::string_t UserNotification::getPageTitle() const
 {
-    return m_PageTitle;
+    return m_PageTitle.get();
 }
 
 
 void UserNotification::setPageTitle(const utility::string_t& value)
 {
     m_PageTitle = value;
-    m_PageTitleIsSet = true;
 }
 
 bool UserNotification::pageTitleIsSet() const
 {
-    return m_PageTitleIsSet;
+    return m_PageTitle.has_value();
 }
 
 void UserNotification::unsetPageTitle()
 {
-    m_PageTitleIsSet = false;
+    m_PageTitle.reset();
 }
 std::shared_ptr<NotificationObjectType> UserNotification::getRelatedObjectType() const
 {
@@ -1026,108 +1007,103 @@ void UserNotification::unsetType()
 }
 utility::string_t UserNotification::getFromCommentId() const
 {
-    return m_FromCommentId;
+    return m_FromCommentId.get();
 }
 
 
 void UserNotification::setFromCommentId(const utility::string_t& value)
 {
     m_FromCommentId = value;
-    m_FromCommentIdIsSet = true;
 }
 
 bool UserNotification::fromCommentIdIsSet() const
 {
-    return m_FromCommentIdIsSet;
+    return m_FromCommentId.has_value();
 }
 
 void UserNotification::unsetFromCommentId()
 {
-    m_FromCommentIdIsSet = false;
+    m_FromCommentId.reset();
 }
 utility::string_t UserNotification::getFromVoteId() const
 {
-    return m_FromVoteId;
+    return m_FromVoteId.get();
 }
 
 
 void UserNotification::setFromVoteId(const utility::string_t& value)
 {
     m_FromVoteId = value;
-    m_FromVoteIdIsSet = true;
 }
 
 bool UserNotification::fromVoteIdIsSet() const
 {
-    return m_FromVoteIdIsSet;
+    return m_FromVoteId.has_value();
 }
 
 void UserNotification::unsetFromVoteId()
 {
-    m_FromVoteIdIsSet = false;
+    m_FromVoteId.reset();
 }
 utility::string_t UserNotification::getFromUserName() const
 {
-    return m_FromUserName;
+    return m_FromUserName.get();
 }
 
 
 void UserNotification::setFromUserName(const utility::string_t& value)
 {
     m_FromUserName = value;
-    m_FromUserNameIsSet = true;
 }
 
 bool UserNotification::fromUserNameIsSet() const
 {
-    return m_FromUserNameIsSet;
+    return m_FromUserName.has_value();
 }
 
 void UserNotification::unsetFromUserName()
 {
-    m_FromUserNameIsSet = false;
+    m_FromUserName.reset();
 }
 utility::string_t UserNotification::getFromUserId() const
 {
-    return m_FromUserId;
+    return m_FromUserId.get();
 }
 
 
 void UserNotification::setFromUserId(const utility::string_t& value)
 {
     m_FromUserId = value;
-    m_FromUserIdIsSet = true;
 }
 
 bool UserNotification::fromUserIdIsSet() const
 {
-    return m_FromUserIdIsSet;
+    return m_FromUserId.has_value();
 }
 
 void UserNotification::unsetFromUserId()
 {
-    m_FromUserIdIsSet = false;
+    m_FromUserId.reset();
 }
 utility::string_t UserNotification::getFromUserAvatarSrc() const
 {
-    return m_FromUserAvatarSrc;
+    return m_FromUserAvatarSrc.get();
 }
 
 
 void UserNotification::setFromUserAvatarSrc(const utility::string_t& value)
 {
     m_FromUserAvatarSrc = value;
-    m_FromUserAvatarSrcIsSet = true;
 }
 
 bool UserNotification::fromUserAvatarSrcIsSet() const
 {
-    return m_FromUserAvatarSrcIsSet;
+    return m_FromUserAvatarSrc.has_value();
 }
 
 void UserNotification::unsetFromUserAvatarSrc()
 {
-    m_FromUserAvatarSrcIsSet = false;
+    m_FromUserAvatarSrc.reset();
 }
 bool UserNotification::isOptedOut() const
 {

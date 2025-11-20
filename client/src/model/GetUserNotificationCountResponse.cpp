@@ -38,12 +38,12 @@ web::json::value GetUserNotificationCountResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_StatusIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
     }
     if(m_CountIsSet)
-    {   
+    {
         
         val[utility::conversions::to_string_t(_XPLATSTR("count"))] = ModelBase::toJson(m_Count);
     }
