@@ -46,6 +46,9 @@
 | **trustFactorBefore** | **Double** |  | [optional] [default to null] |
 | **trustFactorAfter** | **Double** |  | [optional] [default to null] |
 | **referencedCommentId** | **String** |  | [optional] [default to null] |
+| **invalidLocale** | **String** |  | [optional] [default to null] |
+| **detectedLocale** | **String** |  | [optional] [default to null] |
+| **detectedLanguage** | **String** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
