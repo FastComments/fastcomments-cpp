@@ -3521,30 +3521,6 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"CreateVoteResponse": {
-				"properties": {
-					"status": {
-						"$ref": "#/components/schemas/APIStatus"
-					}
-				},
-				"required": [
-					"status"
-				],
-				"type": "object",
-				"additionalProperties": {}
-			},
-			"DeleteVoteResponse": {
-				"properties": {
-					"status": {
-						"$ref": "#/components/schemas/APIStatus"
-					}
-				},
-				"required": [
-					"status"
-				],
-				"type": "object",
-				"additionalProperties": {}
-			},
 			"DigestEmailFrequency": {
 				"enum": [
 					-1,
@@ -12399,7 +12375,7 @@
 								"schema": {
 									"anyOf": [
 										{
-											"$ref": "#/components/schemas/CreateVoteResponse"
+											"$ref": "#/components/schemas/VoteResponse"
 										},
 										{
 											"$ref": "#/components/schemas/APIError"
@@ -12537,7 +12513,7 @@
 								"schema": {
 									"anyOf": [
 										{
-											"$ref": "#/components/schemas/DeleteVoteResponse"
+											"$ref": "#/components/schemas/VoteDeleteResponse"
 										},
 										{
 											"$ref": "#/components/schemas/APIError"

@@ -119,8 +119,6 @@ include/FastCommentsClient/model/CreateTenantUser_200_response.h
 include/FastCommentsClient/model/CreateTenant_200_response.h
 include/FastCommentsClient/model/CreateUserBadgeParams.h
 include/FastCommentsClient/model/CreateUserBadge_200_response.h
-include/FastCommentsClient/model/CreateVoteResponse.h
-include/FastCommentsClient/model/CreateVote_200_response.h
 include/FastCommentsClient/model/CustomConfigParameters.h
 include/FastCommentsClient/model/CustomEmailTemplate.h
 include/FastCommentsClient/model/DeleteCommentAction.h
@@ -135,8 +133,6 @@ include/FastCommentsClient/model/DeleteHashTag_request.h
 include/FastCommentsClient/model/DeletePageAPIResponse.h
 include/FastCommentsClient/model/DeleteSSOUserAPIResponse.h
 include/FastCommentsClient/model/DeleteSubscriptionAPIResponse.h
-include/FastCommentsClient/model/DeleteVoteResponse.h
-include/FastCommentsClient/model/DeleteVote_200_response.h
 include/FastCommentsClient/model/DeletedCommentResultComment.h
 include/FastCommentsClient/model/DigestEmailFrequency.h
 include/FastCommentsClient/model/EmailTemplateDefinition.h
@@ -470,8 +466,6 @@ src/model/CreateTenantUser_200_response.cpp
 src/model/CreateTenant_200_response.cpp
 src/model/CreateUserBadgeParams.cpp
 src/model/CreateUserBadge_200_response.cpp
-src/model/CreateVoteResponse.cpp
-src/model/CreateVote_200_response.cpp
 src/model/CustomConfigParameters.cpp
 src/model/CustomEmailTemplate.cpp
 src/model/DeleteCommentAction.cpp
@@ -486,8 +480,6 @@ src/model/DeleteHashTag_request.cpp
 src/model/DeletePageAPIResponse.cpp
 src/model/DeleteSSOUserAPIResponse.cpp
 src/model/DeleteSubscriptionAPIResponse.cpp
-src/model/DeleteVoteResponse.cpp
-src/model/DeleteVote_200_response.cpp
 src/model/DeletedCommentResultComment.cpp
 src/model/DigestEmailFrequency.cpp
 src/model/EmailTemplateDefinition.cpp

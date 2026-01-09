@@ -661,7 +661,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createVote"></a>
 # **createVote**
-> CreateVote_200_response createVote(tenantId, commentId, direction, userId, anonUserId)
+> VoteComment_200_response createVote(tenantId, commentId, direction, userId, anonUserId)
 
 
 
@@ -677,7 +677,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateVote_200_response**](../Models/CreateVote_200_response.md)
+[**VoteComment_200_response**](../Models/VoteComment_200_response.md)
 
 ### Authorization
 
@@ -1143,7 +1143,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteVote"></a>
 # **deleteVote**
-> DeleteVote_200_response deleteVote(tenantId, id, editKey)
+> DeleteCommentVote_200_response deleteVote(tenantId, id, editKey)
 
 
 
@@ -1157,7 +1157,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteVote_200_response**](../Models/DeleteVote_200_response.md)
+[**DeleteCommentVote_200_response**](../Models/DeleteCommentVote_200_response.md)
 
 ### Authorization
 
