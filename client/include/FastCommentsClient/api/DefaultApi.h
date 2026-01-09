@@ -62,14 +62,13 @@
 #include "FastCommentsClient/model/CreateTenant_200_response.h"
 #include "FastCommentsClient/model/CreateUserBadgeParams.h"
 #include "FastCommentsClient/model/CreateUserBadge_200_response.h"
-#include "FastCommentsClient/model/CreateVote_200_response.h"
+#include "FastCommentsClient/model/DeleteCommentVote_200_response.h"
 #include "FastCommentsClient/model/DeleteComment_200_response.h"
 #include "FastCommentsClient/model/DeleteDomainConfig_200_response.h"
 #include "FastCommentsClient/model/DeleteHashTag_request.h"
 #include "FastCommentsClient/model/DeletePageAPIResponse.h"
 #include "FastCommentsClient/model/DeleteSSOUserAPIResponse.h"
 #include "FastCommentsClient/model/DeleteSubscriptionAPIResponse.h"
-#include "FastCommentsClient/model/DeleteVote_200_response.h"
 #include "FastCommentsClient/model/FeedPost.h"
 #include "FastCommentsClient/model/FlagCommentPublic_200_response.h"
 #include "FastCommentsClient/model/FlagComment_200_response.h"
@@ -144,6 +143,7 @@
 #include "FastCommentsClient/model/UpdateTenantUserBody.h"
 #include "FastCommentsClient/model/UpdateUserBadgeParams.h"
 #include "FastCommentsClient/model/UpdateUserBadge_200_response.h"
+#include "FastCommentsClient/model/VoteComment_200_response.h"
 #include <vector>
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
@@ -460,7 +460,7 @@ public:
     /// <param name="direction"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateVote_200_response>> createVote(
+    pplx::task<std::shared_ptr<VoteComment_200_response>> createVote(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t direction,
@@ -702,7 +702,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteVote_200_response>> deleteVote(
+    pplx::task<std::shared_ptr<DeleteCommentVote_200_response>> deleteVote(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> editKey

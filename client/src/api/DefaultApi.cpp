@@ -3192,7 +3192,7 @@ pplx::task<std::shared_ptr<CreateUserBadge_200_response>> DefaultApi::createUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateVote_200_response>> DefaultApi::createVote(utility::string_t tenantId, utility::string_t commentId, utility::string_t direction, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<VoteComment_200_response>> DefaultApi::createVote(utility::string_t tenantId, utility::string_t commentId, utility::string_t direction, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
 
@@ -3318,7 +3318,7 @@ pplx::task<std::shared_ptr<CreateVote_200_response>> DefaultApi::createVote(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateVote_200_response> localVarResult(new CreateVote_200_response());
+        std::shared_ptr<VoteComment_200_response> localVarResult(new VoteComment_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5672,7 +5672,7 @@ pplx::task<std::shared_ptr<UpdateUserBadge_200_response>> DefaultApi::deleteUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteVote_200_response>> DefaultApi::deleteVote(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> editKey) const
+pplx::task<std::shared_ptr<DeleteCommentVote_200_response>> DefaultApi::deleteVote(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> editKey) const
 {
 
 
@@ -5789,7 +5789,7 @@ pplx::task<std::shared_ptr<DeleteVote_200_response>> DefaultApi::deleteVote(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<DeleteVote_200_response> localVarResult(new DeleteVote_200_response());
+        std::shared_ptr<DeleteCommentVote_200_response> localVarResult(new DeleteCommentVote_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
