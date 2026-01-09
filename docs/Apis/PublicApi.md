@@ -771,7 +771,7 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **tenantId** | **String**|  | [default to null] |
 | **urlId** | **String**|  | [default to null] |
-| **usernameStartsWith** | **String**|  | [default to null] |
+| **usernameStartsWith** | **String**|  | [optional] [default to null] |
 | **mentionGroupIds** | [**List**](../Models/String.md)|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 

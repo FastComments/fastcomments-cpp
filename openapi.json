@@ -3422,6 +3422,344 @@
 				],
 				"type": "object"
 			},
+			"PublicVote": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"urlId": {
+						"type": "string"
+					},
+					"commentId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"direction": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"id",
+					"urlId",
+					"commentId",
+					"userId",
+					"direction",
+					"createdAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetVotesResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"appliedAuthorizedVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					},
+					"appliedAnonymousVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					},
+					"pendingVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"appliedAuthorizedVotes",
+					"appliedAnonymousVotes",
+					"pendingVotes"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetVotesForUserResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"appliedAuthorizedVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					},
+					"appliedAnonymousVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					},
+					"pendingVotes": {
+						"items": {
+							"$ref": "#/components/schemas/PublicVote"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"appliedAuthorizedVotes",
+					"appliedAnonymousVotes",
+					"pendingVotes"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateVoteResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					}
+				},
+				"required": [
+					"status"
+				],
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"DeleteVoteResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					}
+				},
+				"required": [
+					"status"
+				],
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"DigestEmailFrequency": {
+				"enum": [
+					-1,
+					0,
+					1,
+					2
+				],
+				"type": "number"
+			},
+			"User": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string",
+						"nullable": true
+					},
+					"username": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"websiteUrl": {
+						"type": "string",
+						"nullable": true
+					},
+					"email": {
+						"type": "string",
+						"nullable": true
+					},
+					"pendingEmail": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"createdFromUrlId": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdFromTenantId": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdFromIpHashed": {
+						"type": "string"
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"loginId": {
+						"type": "string"
+					},
+					"loginIdDate": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"loginCount": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"optedInNotifications": {
+						"type": "boolean"
+					},
+					"optedInTenantNotifications": {
+						"type": "boolean"
+					},
+					"hideAccountCode": {
+						"type": "boolean"
+					},
+					"avatarSrc": {
+						"type": "string",
+						"nullable": true
+					},
+					"isFastCommentsHelpRequestAdmin": {
+						"type": "boolean"
+					},
+					"isHelpRequestAdmin": {
+						"type": "boolean"
+					},
+					"isAccountOwner": {
+						"type": "boolean"
+					},
+					"isAdminAdmin": {
+						"type": "boolean"
+					},
+					"isBillingAdmin": {
+						"type": "boolean"
+					},
+					"isAnalyticsAdmin": {
+						"type": "boolean"
+					},
+					"isCustomizationAdmin": {
+						"type": "boolean"
+					},
+					"isManageDataAdmin": {
+						"type": "boolean"
+					},
+					"isCommentModeratorAdmin": {
+						"type": "boolean"
+					},
+					"isAPIAdmin": {
+						"type": "boolean"
+					},
+					"moderatorIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"isImpersonator": {
+						"type": "boolean"
+					},
+					"isCouponManager": {
+						"type": "boolean"
+					},
+					"locale": {
+						"type": "string"
+					},
+					"digestEmailFrequency": {
+						"$ref": "#/components/schemas/DigestEmailFrequency"
+					},
+					"ignoredAddToMySiteMessages": {
+						"type": "boolean"
+					},
+					"lastLoginDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"displayLabel": {
+						"type": "string"
+					},
+					"isProfileActivityPrivate": {
+						"type": "boolean"
+					},
+					"isProfileCommentsPrivate": {
+						"type": "boolean"
+					},
+					"isProfileDMDisabled": {
+						"type": "boolean"
+					},
+					"profileCommentApprovalMode": {
+						"type": "number",
+						"format": "double"
+					},
+					"karma": {
+						"type": "number",
+						"format": "double"
+					},
+					"passwordHash": {
+						"type": "string"
+					},
+					"averageTicketAckTimeMS": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"hasBlockedUsers": {
+						"type": "boolean"
+					},
+					"bio": {
+						"type": "string"
+					},
+					"headerBackgroundSrc": {
+						"type": "string"
+					},
+					"countryCode": {
+						"type": "string"
+					},
+					"countryFlag": {
+						"type": "string"
+					},
+					"socialLinks": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"hasTwoFactor": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"_id",
+					"username",
+					"email",
+					"signUpDate",
+					"createdFromTenantId",
+					"createdFromIpHashed",
+					"verified",
+					"loginId",
+					"loginIdDate"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetUserResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"user": {
+						"$ref": "#/components/schemas/User"
+					}
+				},
+				"required": [
+					"status",
+					"user"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
 			"UserBadge": {
 				"properties": {
 					"_id": {
@@ -3689,6 +4027,1858 @@
 				"type": "object",
 				"additionalProperties": false
 			},
+			"ImportedSiteType": {
+				"enum": [
+					0,
+					1
+				],
+				"type": "number"
+			},
+			"SiteType": {
+				"$ref": "#/components/schemas/ImportedSiteType"
+			},
+			"APIDomainConfiguration": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"emailFromName": {
+						"type": "string",
+						"nullable": true
+					},
+					"emailFromEmail": {
+						"type": "string",
+						"nullable": true
+					},
+					"emailHeaders": {
+						"$ref": "#/components/schemas/Record_string.string_"
+					},
+					"wpSyncToken": {
+						"type": "string",
+						"nullable": true
+					},
+					"wpSynced": {
+						"type": "boolean"
+					},
+					"wpURL": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"autoAddedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"siteType": {
+						"$ref": "#/components/schemas/SiteType"
+					},
+					"logoSrc": {
+						"type": "string",
+						"nullable": true
+					},
+					"logoSrc100px": {
+						"type": "string",
+						"nullable": true
+					},
+					"footerUnsubscribeURL": {
+						"type": "string"
+					},
+					"disableUnsubscribeLinks": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"id",
+					"domain",
+					"createdAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BillingInfo": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"address": {
+						"type": "string"
+					},
+					"city": {
+						"type": "string"
+					},
+					"state": {
+						"type": "string"
+					},
+					"zip": {
+						"type": "string"
+					},
+					"country": {
+						"type": "string"
+					},
+					"currency": {
+						"type": "string",
+						"nullable": true,
+						"description": "Currency for invoices."
+					},
+					"email": {
+						"type": "string",
+						"description": "Email for invoices."
+					}
+				},
+				"required": [
+					"name",
+					"address",
+					"city",
+					"state",
+					"zip",
+					"country"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"APITenant": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"packageId": {
+						"type": "string"
+					},
+					"paymentFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"billingInfoValid": {
+						"type": "boolean"
+					},
+					"billingHandledExternally": {
+						"type": "boolean"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"isSetup": {
+						"type": "boolean"
+					},
+					"domainConfiguration": {
+						"items": {
+							"$ref": "#/components/schemas/APIDomainConfiguration"
+						},
+						"type": "array"
+					},
+					"billingInfo": {
+						"$ref": "#/components/schemas/BillingInfo"
+					},
+					"stripeCustomerId": {
+						"type": "string"
+					},
+					"stripeSubscriptionId": {
+						"type": "string"
+					},
+					"stripePlanId": {
+						"type": "string"
+					},
+					"enableProfanityFilter": {
+						"type": "boolean"
+					},
+					"enableSpamFilter": {
+						"type": "boolean"
+					},
+					"lastBillingIssueReminderDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"removeUnverifiedComments": {
+						"type": "boolean"
+					},
+					"unverifiedCommentsTTLms": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"commentsRequireApproval": {
+						"type": "boolean"
+					},
+					"autoApproveCommentOnVerification": {
+						"type": "boolean"
+					},
+					"sendProfaneToSpam": {
+						"type": "boolean"
+					},
+					"hasFlexPricing": {
+						"type": "boolean"
+					},
+					"hasAuditing": {
+						"type": "boolean"
+					},
+					"flexLastBilledAmount": {
+						"type": "number",
+						"format": "double"
+					},
+					"deAnonIpAddr": {
+						"type": "number",
+						"format": "double"
+					},
+					"meta": {
+						"$ref": "#/components/schemas/Record_string.string_"
+					}
+				},
+				"required": [
+					"id",
+					"name",
+					"signUpDate",
+					"packageId",
+					"paymentFrequency",
+					"billingInfoValid",
+					"createdBy",
+					"isSetup",
+					"domainConfiguration",
+					"enableProfanityFilter",
+					"enableSpamFilter"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenant": {
+						"$ref": "#/components/schemas/APITenant"
+					}
+				},
+				"required": [
+					"status",
+					"tenant"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenants": {
+						"items": {
+							"$ref": "#/components/schemas/APITenant"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"tenants"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenant": {
+						"$ref": "#/components/schemas/APITenant"
+					}
+				},
+				"required": [
+					"status",
+					"tenant"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"domainConfiguration": {
+						"items": {
+							"$ref": "#/components/schemas/APIDomainConfiguration"
+						},
+						"type": "array"
+					},
+					"email": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"packageId": {
+						"type": "string"
+					},
+					"paymentFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"billingInfoValid": {
+						"type": "boolean"
+					},
+					"billingHandledExternally": {
+						"type": "boolean"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"isSetup": {
+						"type": "boolean"
+					},
+					"billingInfo": {
+						"$ref": "#/components/schemas/BillingInfo"
+					},
+					"stripeCustomerId": {
+						"type": "string"
+					},
+					"stripeSubscriptionId": {
+						"type": "string"
+					},
+					"stripePlanId": {
+						"type": "string"
+					},
+					"enableProfanityFilter": {
+						"type": "boolean"
+					},
+					"enableSpamFilter": {
+						"type": "boolean"
+					},
+					"removeUnverifiedComments": {
+						"type": "boolean"
+					},
+					"unverifiedCommentsTTLms": {
+						"type": "number",
+						"format": "double"
+					},
+					"commentsRequireApproval": {
+						"type": "boolean"
+					},
+					"autoApproveCommentOnVerification": {
+						"type": "boolean"
+					},
+					"sendProfaneToSpam": {
+						"type": "boolean"
+					},
+					"deAnonIpAddr": {
+						"type": "number",
+						"format": "double"
+					},
+					"meta": {
+						"$ref": "#/components/schemas/Record_string.string_"
+					}
+				},
+				"required": [
+					"name",
+					"domainConfiguration"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateTenantBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"packageId": {
+						"type": "string"
+					},
+					"paymentFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"billingInfoValid": {
+						"type": "boolean"
+					},
+					"billingHandledExternally": {
+						"type": "boolean"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"isSetup": {
+						"type": "boolean"
+					},
+					"domainConfiguration": {
+						"items": {
+							"$ref": "#/components/schemas/APIDomainConfiguration"
+						},
+						"type": "array"
+					},
+					"billingInfo": {
+						"$ref": "#/components/schemas/BillingInfo"
+					},
+					"stripeCustomerId": {
+						"type": "string"
+					},
+					"stripeSubscriptionId": {
+						"type": "string"
+					},
+					"stripePlanId": {
+						"type": "string"
+					},
+					"enableProfanityFilter": {
+						"type": "boolean"
+					},
+					"enableSpamFilter": {
+						"type": "boolean"
+					},
+					"removeUnverifiedComments": {
+						"type": "boolean"
+					},
+					"unverifiedCommentsTTLms": {
+						"type": "number",
+						"format": "double"
+					},
+					"commentsRequireApproval": {
+						"type": "boolean"
+					},
+					"autoApproveCommentOnVerification": {
+						"type": "boolean"
+					},
+					"sendProfaneToSpam": {
+						"type": "boolean"
+					},
+					"deAnonIpAddr": {
+						"type": "number",
+						"format": "double"
+					},
+					"meta": {
+						"$ref": "#/components/schemas/Record_string.string_"
+					},
+					"managedByTenantId": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantUserResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantUser": {
+						"$ref": "#/components/schemas/User"
+					}
+				},
+				"required": [
+					"status",
+					"tenantUser"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantUsersResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantUsers": {
+						"items": {
+							"$ref": "#/components/schemas/User"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"tenantUsers"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantUserResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantUser": {
+						"$ref": "#/components/schemas/User"
+					}
+				},
+				"required": [
+					"status",
+					"tenantUser"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantUserBody": {
+				"properties": {
+					"username": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"websiteUrl": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"locale": {
+						"type": "string"
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"loginCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"optedInNotifications": {
+						"type": "boolean"
+					},
+					"optedInTenantNotifications": {
+						"type": "boolean"
+					},
+					"hideAccountCode": {
+						"type": "boolean"
+					},
+					"avatarSrc": {
+						"type": "string"
+					},
+					"isHelpRequestAdmin": {
+						"type": "boolean"
+					},
+					"isAccountOwner": {
+						"type": "boolean"
+					},
+					"isAdminAdmin": {
+						"type": "boolean"
+					},
+					"isBillingAdmin": {
+						"type": "boolean"
+					},
+					"isAnalyticsAdmin": {
+						"type": "boolean"
+					},
+					"isCustomizationAdmin": {
+						"type": "boolean"
+					},
+					"isManageDataAdmin": {
+						"type": "boolean"
+					},
+					"isCommentModeratorAdmin": {
+						"type": "boolean"
+					},
+					"isAPIAdmin": {
+						"type": "boolean"
+					},
+					"moderatorIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"digestEmailFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"displayLabel": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"username",
+					"email"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ReplaceTenantUserBody": {
+				"properties": {
+					"username": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"websiteUrl": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"locale": {
+						"type": "string"
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"loginCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"optedInNotifications": {
+						"type": "boolean"
+					},
+					"optedInTenantNotifications": {
+						"type": "boolean"
+					},
+					"hideAccountCode": {
+						"type": "boolean"
+					},
+					"avatarSrc": {
+						"type": "string"
+					},
+					"isHelpRequestAdmin": {
+						"type": "boolean"
+					},
+					"isAccountOwner": {
+						"type": "boolean"
+					},
+					"isAdminAdmin": {
+						"type": "boolean"
+					},
+					"isBillingAdmin": {
+						"type": "boolean"
+					},
+					"isAnalyticsAdmin": {
+						"type": "boolean"
+					},
+					"isCustomizationAdmin": {
+						"type": "boolean"
+					},
+					"isManageDataAdmin": {
+						"type": "boolean"
+					},
+					"isCommentModeratorAdmin": {
+						"type": "boolean"
+					},
+					"isAPIAdmin": {
+						"type": "boolean"
+					},
+					"moderatorIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"digestEmailFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"displayLabel": {
+						"type": "string"
+					},
+					"createdFromUrlId": {
+						"type": "string"
+					},
+					"createdFromTenantId": {
+						"type": "string"
+					},
+					"lastLoginDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"karma": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"username",
+					"email"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateTenantUserBody": {
+				"properties": {
+					"username": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"websiteUrl": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"signUpDate": {
+						"type": "number",
+						"format": "double"
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"loginCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"optedInNotifications": {
+						"type": "boolean"
+					},
+					"optedInTenantNotifications": {
+						"type": "boolean"
+					},
+					"hideAccountCode": {
+						"type": "boolean"
+					},
+					"avatarSrc": {
+						"type": "string"
+					},
+					"isHelpRequestAdmin": {
+						"type": "boolean"
+					},
+					"isAccountOwner": {
+						"type": "boolean"
+					},
+					"isAdminAdmin": {
+						"type": "boolean"
+					},
+					"isBillingAdmin": {
+						"type": "boolean"
+					},
+					"isAnalyticsAdmin": {
+						"type": "boolean"
+					},
+					"isCustomizationAdmin": {
+						"type": "boolean"
+					},
+					"isManageDataAdmin": {
+						"type": "boolean"
+					},
+					"isCommentModeratorAdmin": {
+						"type": "boolean"
+					},
+					"isAPIAdmin": {
+						"type": "boolean"
+					},
+					"moderatorIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"locale": {
+						"type": "string"
+					},
+					"digestEmailFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"displayLabel": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TenantPackage": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"monthlyCostUSD": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"yearlyCostUSD": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"monthlyStripePlanId": {
+						"type": "string",
+						"nullable": true
+					},
+					"yearlyStripePlanId": {
+						"type": "string",
+						"nullable": true
+					},
+					"maxMonthlyPageLoads": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyAPICredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlySmallWidgetsCredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyComments": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxConcurrentUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxTenantUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxSSOUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxModerators": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxDomains": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxWhiteLabeledTenants": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyEventLogRequests": {
+						"type": "number",
+						"format": "double"
+					},
+					"hasWhiteLabeling": {
+						"type": "boolean"
+					},
+					"hasDebranding": {
+						"type": "boolean"
+					},
+					"hasLLMSpamDetection": {
+						"type": "boolean"
+					},
+					"forWhoText": {
+						"type": "string"
+					},
+					"featureTaglines": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"hasAuditing": {
+						"type": "boolean"
+					},
+					"hasFlexPricing": {
+						"type": "boolean"
+					},
+					"enableSAML": {
+						"type": "boolean"
+					},
+					"flexPageLoadCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexPageLoadUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSmallWidgetsCreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSmallWidgetsCreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexChatGPTCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexChatGPTUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexMinimumCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexManagedTenantCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"isSSOBillingMonthlyActiveUsers": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"_id",
+					"name",
+					"tenantId",
+					"createdAt",
+					"monthlyCostUSD",
+					"yearlyCostUSD",
+					"monthlyStripePlanId",
+					"yearlyStripePlanId",
+					"maxMonthlyPageLoads",
+					"maxMonthlyAPICredits",
+					"maxMonthlySmallWidgetsCredits",
+					"maxMonthlyComments",
+					"maxConcurrentUsers",
+					"maxTenantUsers",
+					"maxSSOUsers",
+					"maxModerators",
+					"maxDomains",
+					"maxWhiteLabeledTenants",
+					"maxMonthlyEventLogRequests",
+					"hasWhiteLabeling",
+					"hasDebranding",
+					"hasLLMSpamDetection",
+					"forWhoText",
+					"featureTaglines",
+					"hasAuditing",
+					"hasFlexPricing"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantPackageResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantPackage": {
+						"$ref": "#/components/schemas/TenantPackage"
+					}
+				},
+				"required": [
+					"status",
+					"tenantPackage"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantPackagesResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantPackages": {
+						"items": {
+							"$ref": "#/components/schemas/TenantPackage"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"tenantPackages"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantPackageResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantPackage": {
+						"$ref": "#/components/schemas/TenantPackage"
+					}
+				},
+				"required": [
+					"status",
+					"tenantPackage"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTenantPackageBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"monthlyCostUSD": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"yearlyCostUSD": {
+						"type": "number",
+						"format": "double",
+						"nullable": true
+					},
+					"monthlyStripePlanId": {
+						"type": "string",
+						"nullable": true
+					},
+					"yearlyStripePlanId": {
+						"type": "string",
+						"nullable": true
+					},
+					"maxMonthlyPageLoads": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyAPICredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlySmallWidgetsCredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyComments": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxConcurrentUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxTenantUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxSSOUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxModerators": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxDomains": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxWhiteLabeledTenants": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyEventLogRequests": {
+						"type": "number",
+						"format": "double"
+					},
+					"hasWhiteLabeling": {
+						"type": "boolean"
+					},
+					"hasDebranding": {
+						"type": "boolean"
+					},
+					"hasLLMSpamDetection": {
+						"type": "boolean"
+					},
+					"forWhoText": {
+						"type": "string"
+					},
+					"featureTaglines": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"hasAuditing": {
+						"type": "boolean"
+					},
+					"hasFlexPricing": {
+						"type": "boolean"
+					},
+					"enableSAML": {
+						"type": "boolean"
+					},
+					"flexPageLoadCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexPageLoadUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSmallWidgetsCreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSmallWidgetsCreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexChatGPTCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexChatGPTUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexMinimumCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexManagedTenantCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"name",
+					"maxMonthlyPageLoads",
+					"maxMonthlyAPICredits",
+					"maxMonthlyComments",
+					"maxConcurrentUsers",
+					"maxTenantUsers",
+					"maxSSOUsers",
+					"maxModerators",
+					"maxDomains",
+					"hasDebranding",
+					"forWhoText",
+					"featureTaglines",
+					"hasFlexPricing"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ReplaceTenantPackageBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"monthlyCostUSD": {
+						"type": "number",
+						"format": "double"
+					},
+					"yearlyCostUSD": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyPageLoads": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyAPICredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyComments": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxConcurrentUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxTenantUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxSSOUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxModerators": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxDomains": {
+						"type": "number",
+						"format": "double"
+					},
+					"hasDebranding": {
+						"type": "boolean"
+					},
+					"forWhoText": {
+						"type": "string"
+					},
+					"featureTaglines": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"hasFlexPricing": {
+						"type": "boolean"
+					},
+					"flexPageLoadCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexPageLoadUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexMinimumCostCents": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"name",
+					"monthlyCostUSD",
+					"yearlyCostUSD",
+					"maxMonthlyPageLoads",
+					"maxMonthlyAPICredits",
+					"maxMonthlyComments",
+					"maxConcurrentUsers",
+					"maxTenantUsers",
+					"maxSSOUsers",
+					"maxModerators",
+					"maxDomains",
+					"hasDebranding",
+					"forWhoText",
+					"featureTaglines",
+					"hasFlexPricing"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateTenantPackageBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"monthlyCostUSD": {
+						"type": "number",
+						"format": "double"
+					},
+					"yearlyCostUSD": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyPageLoads": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyAPICredits": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxMonthlyComments": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxConcurrentUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxTenantUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxSSOUsers": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxModerators": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxDomains": {
+						"type": "number",
+						"format": "double"
+					},
+					"hasDebranding": {
+						"type": "boolean"
+					},
+					"hasWhiteLabeling": {
+						"type": "boolean"
+					},
+					"forWhoText": {
+						"type": "string"
+					},
+					"featureTaglines": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"hasFlexPricing": {
+						"type": "boolean"
+					},
+					"flexPageLoadCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexPageLoadUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexCommentUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexSSOUserUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAPICreditUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexModeratorUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexAdminUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainCostCents": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexDomainUnit": {
+						"type": "number",
+						"format": "double"
+					},
+					"flexMinimumCostCents": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"APITenantDailyUsage": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"yearNumber": {
+						"type": "number",
+						"format": "double"
+					},
+					"monthNumber": {
+						"type": "number",
+						"format": "double"
+					},
+					"dayNumber": {
+						"type": "number",
+						"format": "double"
+					},
+					"commentFetchCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"commentCreateCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"conversationCreateCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"voteCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"accountCreatedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"userMentionSearch": {
+						"type": "number",
+						"format": "double"
+					},
+					"hashTagSearch": {
+						"type": "number",
+						"format": "double"
+					},
+					"gifSearchTrending": {
+						"type": "number",
+						"format": "double"
+					},
+					"gifSearch": {
+						"type": "number",
+						"format": "double"
+					},
+					"apiCreditsUsed": {
+						"type": "number",
+						"format": "double"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"billed": {
+						"type": "boolean"
+					},
+					"ignored": {
+						"type": "boolean"
+					},
+					"apiErrorCount": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"id",
+					"tenantId",
+					"yearNumber",
+					"monthNumber",
+					"dayNumber",
+					"commentFetchCount",
+					"commentCreateCount",
+					"conversationCreateCount",
+					"voteCount",
+					"accountCreatedCount",
+					"userMentionSearch",
+					"hashTagSearch",
+					"gifSearchTrending",
+					"gifSearch",
+					"apiCreditsUsed",
+					"createdAt",
+					"billed",
+					"ignored",
+					"apiErrorCount"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTenantDailyUsagesResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tenantDailyUsages": {
+						"items": {
+							"$ref": "#/components/schemas/APITenantDailyUsage"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"tenantDailyUsages"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"MetaItem": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"values": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"name",
+					"values"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"QuestionResult": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"urlId": {
+						"type": "string"
+					},
+					"anonUserId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"value": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"commentId": {
+						"type": "string",
+						"nullable": true
+					},
+					"questionId": {
+						"type": "string"
+					},
+					"meta": {
+						"items": {
+							"$ref": "#/components/schemas/MetaItem"
+						},
+						"type": "array",
+						"nullable": true
+					},
+					"ipHash": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"tenantId",
+					"urlId",
+					"anonUserId",
+					"userId",
+					"createdAt",
+					"value",
+					"questionId",
+					"ipHash"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetQuestionResultResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionResult": {
+						"$ref": "#/components/schemas/QuestionResult"
+					}
+				},
+				"required": [
+					"status",
+					"questionResult"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetQuestionResultsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionResults": {
+						"items": {
+							"$ref": "#/components/schemas/QuestionResult"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"questionResults"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateQuestionResultResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionResult": {
+						"$ref": "#/components/schemas/QuestionResult"
+					}
+				},
+				"required": [
+					"status",
+					"questionResult"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateQuestionResultBody": {
+				"properties": {
+					"urlId": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"questionId": {
+						"type": "string"
+					},
+					"anonUserId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"commentId": {
+						"type": "string"
+					},
+					"meta": {
+						"items": {
+							"$ref": "#/components/schemas/MetaItem"
+						},
+						"type": "array",
+						"nullable": true
+					}
+				},
+				"required": [
+					"urlId",
+					"value",
+					"questionId"
+				],
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"UpdateQuestionResultBody": {
+				"properties": {
+					"urlId": {
+						"type": "string"
+					},
+					"anonUserId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"commentId": {
+						"type": "string"
+					},
+					"questionId": {
+						"type": "string"
+					},
+					"meta": {
+						"items": {
+							"$ref": "#/components/schemas/MetaItem"
+						},
+						"type": "array",
+						"nullable": true
+					}
+				},
+				"type": "object",
+				"additionalProperties": {}
+			},
 			"Record_number.number_": {
 				"properties": {},
 				"additionalProperties": {
@@ -3904,7 +6094,8 @@
 					51,
 					52,
 					53,
-					54
+					54,
+					55
 				],
 				"type": "number"
 			},
@@ -4083,6 +6274,15 @@
 						"format": "double"
 					},
 					"referencedCommentId": {
+						"type": "string"
+					},
+					"invalidLocale": {
+						"type": "string"
+					},
+					"detectedLocale": {
+						"type": "string"
+					},
+					"detectedLanguage": {
 						"type": "string"
 					}
 				},
@@ -4427,82 +6627,6 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"MetaItem": {
-				"properties": {
-					"name": {
-						"type": "string"
-					},
-					"values": {
-						"items": {
-							"type": "string"
-						},
-						"type": "array"
-					}
-				},
-				"required": [
-					"name",
-					"values"
-				],
-				"type": "object",
-				"additionalProperties": false
-			},
-			"QuestionResult": {
-				"properties": {
-					"_id": {
-						"type": "string"
-					},
-					"tenantId": {
-						"type": "string"
-					},
-					"urlId": {
-						"type": "string"
-					},
-					"anonUserId": {
-						"type": "string"
-					},
-					"userId": {
-						"type": "string"
-					},
-					"createdAt": {
-						"type": "string",
-						"format": "date-time"
-					},
-					"value": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"commentId": {
-						"type": "string",
-						"nullable": true
-					},
-					"questionId": {
-						"type": "string"
-					},
-					"meta": {
-						"items": {
-							"$ref": "#/components/schemas/MetaItem"
-						},
-						"type": "array",
-						"nullable": true
-					},
-					"ipHash": {
-						"type": "string"
-					}
-				},
-				"required": [
-					"_id",
-					"tenantId",
-					"urlId",
-					"anonUserId",
-					"userId",
-					"createdAt",
-					"value",
-					"questionId",
-					"ipHash"
-				],
-				"type": "object",
-				"additionalProperties": false
-			},
 			"FindCommentsByRangeItem": {
 				"properties": {
 					"comment": {
@@ -4560,6 +6684,876 @@
 				"type": "object",
 				"additionalProperties": false
 			},
+			"QuestionConfig": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"question": {
+						"type": "string"
+					},
+					"summaryLabel": {
+						"type": "string"
+					},
+					"helpText": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"usedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"lastUsed": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"type": {
+						"type": "string"
+					},
+					"numStars": {
+						"type": "number",
+						"format": "double"
+					},
+					"min": {
+						"type": "number",
+						"format": "double"
+					},
+					"max": {
+						"type": "number",
+						"format": "double"
+					},
+					"defaultValue": {
+						"type": "number",
+						"format": "double"
+					},
+					"labelNegative": {
+						"type": "string"
+					},
+					"labelPositive": {
+						"type": "string"
+					},
+					"customOptions": {
+						"items": {
+							"properties": {
+								"imageSrc": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"imageSrc",
+								"name"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"subQuestionIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"alwaysShowSubQuestions": {
+						"type": "boolean"
+					},
+					"reportingOrder": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"_id",
+					"tenantId",
+					"name",
+					"question",
+					"helpText",
+					"createdAt",
+					"createdBy",
+					"usedCount",
+					"lastUsed",
+					"type",
+					"numStars",
+					"min",
+					"max",
+					"defaultValue",
+					"labelNegative",
+					"labelPositive",
+					"customOptions",
+					"subQuestionIds",
+					"alwaysShowSubQuestions",
+					"reportingOrder"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetQuestionConfigResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionConfig": {
+						"$ref": "#/components/schemas/QuestionConfig"
+					}
+				},
+				"required": [
+					"status",
+					"questionConfig"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetQuestionConfigsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionConfigs": {
+						"items": {
+							"$ref": "#/components/schemas/QuestionConfig"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"questionConfigs"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateQuestionConfigResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"questionConfig": {
+						"$ref": "#/components/schemas/QuestionConfig"
+					}
+				},
+				"required": [
+					"status",
+					"questionConfig"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateQuestionConfigBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"question": {
+						"type": "string"
+					},
+					"helpText": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"numStars": {
+						"type": "number",
+						"format": "double"
+					},
+					"min": {
+						"type": "number",
+						"format": "double"
+					},
+					"max": {
+						"type": "number",
+						"format": "double"
+					},
+					"defaultValue": {
+						"type": "number",
+						"format": "double"
+					},
+					"labelNegative": {
+						"type": "string"
+					},
+					"labelPositive": {
+						"type": "string"
+					},
+					"customOptions": {
+						"items": {
+							"properties": {
+								"imageSrc": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"imageSrc",
+								"name"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"subQuestionIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"alwaysShowSubQuestions": {
+						"type": "boolean"
+					},
+					"reportingOrder": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"name",
+					"question",
+					"type",
+					"reportingOrder"
+				],
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"UpdateQuestionConfigBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"question": {
+						"type": "string"
+					},
+					"helpText": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"numStars": {
+						"type": "number",
+						"format": "double"
+					},
+					"min": {
+						"type": "number",
+						"format": "double"
+					},
+					"max": {
+						"type": "number",
+						"format": "double"
+					},
+					"defaultValue": {
+						"type": "number",
+						"format": "double"
+					},
+					"labelNegative": {
+						"type": "string"
+					},
+					"labelPositive": {
+						"type": "string"
+					},
+					"customOptions": {
+						"items": {
+							"properties": {
+								"imageSrc": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"imageSrc",
+								"name"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"subQuestionIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"alwaysShowSubQuestions": {
+						"type": "boolean"
+					},
+					"reportingOrder": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"PendingCommentToSyncOutbound": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"commentId": {
+						"type": "string"
+					},
+					"comment": {
+						"$ref": "#/components/schemas/FComment"
+					},
+					"externalId": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"attemptCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"nextAttemptAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"eventType": {
+						"type": "number",
+						"format": "double"
+					},
+					"type": {
+						"type": "number",
+						"format": "double"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"lastError": {
+						"additionalProperties": false,
+						"type": "object"
+					},
+					"webhookId": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"commentId",
+					"externalId",
+					"createdAt",
+					"tenantId",
+					"attemptCount",
+					"nextAttemptAt",
+					"eventType",
+					"type",
+					"domain",
+					"lastError"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetPendingWebhookEventsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"pendingWebhookEvents": {
+						"items": {
+							"$ref": "#/components/schemas/PendingCommentToSyncOutbound"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"pendingWebhookEvents"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetPendingWebhookEventCountResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"count": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"status",
+					"count"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetNotificationsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"notifications": {
+						"items": {
+							"$ref": "#/components/schemas/UserNotification"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"notifications"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetNotificationCountResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"count": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"status",
+					"count"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateNotificationBody": {
+				"properties": {
+					"viewed": {
+						"type": "boolean"
+					},
+					"optedOut": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"UserNotificationCount": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"count": {
+						"type": "number",
+						"format": "double"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"expireAt": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"_id",
+					"count",
+					"createdAt",
+					"expireAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetCachedNotificationCountResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"data": {
+						"$ref": "#/components/schemas/UserNotificationCount"
+					}
+				},
+				"required": [
+					"status",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Moderator": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string",
+						"nullable": true
+					},
+					"userId": {
+						"type": "string",
+						"nullable": true
+					},
+					"acceptedInvite": {
+						"type": "boolean"
+					},
+					"email": {
+						"type": "string",
+						"nullable": true
+					},
+					"markReviewedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"deletedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"markedSpamCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"markedNotSpamCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"approvedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"unApprovedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"editedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"bannedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"unFlaggedCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"verificationId": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"moderationGroupIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"nullable": true
+					}
+				},
+				"required": [
+					"_id",
+					"tenantId",
+					"name",
+					"userId",
+					"acceptedInvite",
+					"email",
+					"markReviewedCount",
+					"deletedCount",
+					"markedSpamCount",
+					"markedNotSpamCount",
+					"approvedCount",
+					"unApprovedCount",
+					"editedCount",
+					"bannedCount",
+					"unFlaggedCount",
+					"verificationId",
+					"createdAt",
+					"moderationGroupIds"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetModeratorResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"moderator": {
+						"$ref": "#/components/schemas/Moderator"
+					}
+				},
+				"required": [
+					"status",
+					"moderator"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetModeratorsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"moderators": {
+						"items": {
+							"$ref": "#/components/schemas/Moderator"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"moderators"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateModeratorResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"moderator": {
+						"$ref": "#/components/schemas/Moderator"
+					}
+				},
+				"required": [
+					"status",
+					"moderator"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateModeratorBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"moderationGroupIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"name",
+					"email"
+				],
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"UpdateModeratorBody": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"moderationGroupIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object",
+				"additionalProperties": {}
+			},
+			"TenantHashTag": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"createdAt",
+					"tenantId",
+					"tag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetHashTagsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"hashTags": {
+						"items": {
+							"$ref": "#/components/schemas/TenantHashTag"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"hashTags"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateHashTagResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"hashTag": {
+						"$ref": "#/components/schemas/TenantHashTag"
+					}
+				},
+				"required": [
+					"status",
+					"hashTag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateHashTagBody": {
+				"properties": {
+					"tenantId": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"tag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BulkCreateHashTagsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"results": {
+						"items": {
+							"anyOf": [
+								{
+									"$ref": "#/components/schemas/CreateHashTagResponse"
+								},
+								{
+									"$ref": "#/components/schemas/APIError"
+								}
+							]
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"results"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BulkCreateHashTagsBody": {
+				"properties": {
+					"tenantId": {
+						"type": "string"
+					},
+					"tags": {
+						"items": {
+							"properties": {
+								"url": {
+									"type": "string"
+								},
+								"tag": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"tag"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"tags"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateHashTagResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"hashTag": {
+						"$ref": "#/components/schemas/TenantHashTag"
+					}
+				},
+				"required": [
+					"status",
+					"hashTag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateHashTagBody": {
+				"properties": {
+					"tenantId": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
 			"GetFeedPostsResponse": {
 				"properties": {
 					"status": {
@@ -4591,6 +7585,317 @@
 				"required": [
 					"status",
 					"feedPost"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Record_string.unknown_": {
+				"properties": {},
+				"additionalProperties": {},
+				"type": "object",
+				"description": "Construct a type with a set of properties K of type T"
+			},
+			"Record_string.Record_string.string__": {
+				"properties": {},
+				"additionalProperties": {
+					"$ref": "#/components/schemas/Record_string.string_"
+				},
+				"type": "object",
+				"description": "Construct a type with a set of properties K of type T"
+			},
+			"EmailTemplateDefinition": {
+				"properties": {
+					"emailTemplateId": {
+						"type": "string"
+					},
+					"defaultTestData": {
+						"$ref": "#/components/schemas/Record_string.unknown_"
+					},
+					"defaultTranslationsByLocale": {
+						"$ref": "#/components/schemas/Record_string.Record_string.string__"
+					},
+					"defaultEJS": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"emailTemplateId",
+					"defaultTestData",
+					"defaultTranslationsByLocale",
+					"defaultEJS"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetEmailTemplateDefinitionsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"definitions": {
+						"items": {
+							"$ref": "#/components/schemas/EmailTemplateDefinition"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"definitions"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EmailTemplateRenderErrorResponse": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"customTemplateId": {
+						"type": "string"
+					},
+					"error": {
+						"type": "string"
+					},
+					"count": {
+						"type": "number",
+						"format": "double"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastOccurredAt": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"id",
+					"tenantId",
+					"customTemplateId",
+					"error",
+					"count",
+					"createdAt",
+					"lastOccurredAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetEmailTemplateRenderErrorsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"renderErrors": {
+						"items": {
+							"$ref": "#/components/schemas/EmailTemplateRenderErrorResponse"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"renderErrors"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CustomEmailTemplate": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"emailTemplateId": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedAt": {
+						"type": "string",
+						"format": "date-time",
+						"nullable": true
+					},
+					"updatedByUserId": {
+						"type": "string",
+						"nullable": true
+					},
+					"domain": {
+						"type": "string",
+						"nullable": true
+					},
+					"ejs": {
+						"type": "string"
+					},
+					"translationOverridesByLocale": {
+						"$ref": "#/components/schemas/Record_string.Record_string.string__"
+					},
+					"testData": {}
+				},
+				"required": [
+					"_id",
+					"tenantId",
+					"emailTemplateId",
+					"displayName",
+					"createdAt",
+					"updatedAt",
+					"updatedByUserId",
+					"ejs",
+					"translationOverridesByLocale",
+					"testData"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetEmailTemplateResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"emailTemplate": {
+						"$ref": "#/components/schemas/CustomEmailTemplate"
+					}
+				},
+				"required": [
+					"status",
+					"emailTemplate"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetEmailTemplatesResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"emailTemplates": {
+						"items": {
+							"$ref": "#/components/schemas/CustomEmailTemplate"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"emailTemplates"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateEmailTemplateResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"emailTemplate": {
+						"$ref": "#/components/schemas/CustomEmailTemplate"
+					}
+				},
+				"required": [
+					"status",
+					"emailTemplate"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateEmailTemplateBody": {
+				"properties": {
+					"emailTemplateId": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"ejs": {
+						"type": "string"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"translationOverridesByLocale": {
+						"$ref": "#/components/schemas/Record_string.Record_string.string__"
+					},
+					"testData": {
+						"$ref": "#/components/schemas/Record_string.unknown_"
+					}
+				},
+				"required": [
+					"emailTemplateId",
+					"displayName",
+					"ejs"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateEmailTemplateBody": {
+				"properties": {
+					"emailTemplateId": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"ejs": {
+						"type": "string"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"translationOverridesByLocale": {
+						"$ref": "#/components/schemas/Record_string.Record_string.string__"
+					},
+					"testData": {
+						"$ref": "#/components/schemas/Record_string.unknown_"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"RenderEmailTemplateResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"html": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"status",
+					"html"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"RenderEmailTemplateBody": {
+				"properties": {
+					"emailTemplateId": {
+						"type": "string"
+					},
+					"ejs": {
+						"type": "string"
+					},
+					"testData": {
+						"$ref": "#/components/schemas/Record_string.unknown_"
+					},
+					"translationOverridesByLocale": {
+						"$ref": "#/components/schemas/Record_string.Record_string.string__"
+					}
+				},
+				"required": [
+					"emailTemplateId",
+					"ejs"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -5767,7 +9072,7 @@
 					{
 						"in": "query",
 						"name": "usernameStartsWith",
-						"required": true,
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -9038,6 +12343,291 @@
 				]
 			}
 		},
+		"/api/v1/votes": {
+			"get": {
+				"operationId": "GetVotes",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetVotesResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "urlId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateVote",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateVoteResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "commentId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "direction",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"enum": [
+								"up",
+								"down"
+							]
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "anonUserId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/votes/for-user": {
+			"get": {
+				"operationId": "GetVotesForUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetVotesForUserResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "urlId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "anonUserId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/votes/{id}": {
+			"delete": {
+				"operationId": "DeleteVote",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/DeleteVoteResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "editKey",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/users/{id}": {
+			"get": {
+				"operationId": "GetUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetUserResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
 		"/api/v1/user-badges/{id}": {
 			"get": {
 				"operationId": "GetUserBadge",
@@ -9481,6 +13071,1302 @@
 				]
 			}
 		},
+		"/api/v1/tenants/{id}": {
+			"get": {
+				"operationId": "GetTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateTenantBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "sure",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenants": {
+			"get": {
+				"operationId": "GetTenants",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "meta",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateTenantResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTenantBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/tenant-users/{id}": {
+			"get": {
+				"operationId": "GetTenantUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantUserResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "ReplaceTenantUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "updateComments",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReplaceTenantUserBody"
+							}
+						}
+					}
+				}
+			},
+			"patch": {
+				"operationId": "UpdateTenantUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "updateComments",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateTenantUserBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteTenantUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "deleteComments",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "commentDeleteMode",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenant-users": {
+			"get": {
+				"operationId": "GetTenantUsers",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantUsersResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateTenantUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateTenantUserResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTenantUserBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/tenant-users/{id}/send-login-link": {
+			"post": {
+				"operationId": "SendLoginLink",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "redirectURL",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenant-packages/{id}": {
+			"get": {
+				"operationId": "GetTenantPackage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantPackageResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "ReplaceTenantPackage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReplaceTenantPackageBody"
+							}
+						}
+					}
+				}
+			},
+			"patch": {
+				"operationId": "UpdateTenantPackage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateTenantPackageBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteTenantPackage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenant-packages": {
+			"get": {
+				"operationId": "GetTenantPackages",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantPackagesResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateTenantPackage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateTenantPackageResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTenantPackageBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/tenant-daily-usage": {
+			"get": {
+				"operationId": "GetTenantDailyUsages",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTenantDailyUsagesResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "yearNumber",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "monthNumber",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "dayNumber",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/question-results/{id}": {
+			"get": {
+				"operationId": "GetQuestionResult",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetQuestionResultResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateQuestionResult",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateQuestionResultBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteQuestionResult",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/question-results": {
+			"get": {
+				"operationId": "GetQuestionResults",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetQuestionResultsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "urlId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "startDate",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "questionId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "questionIds",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateQuestionResult",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateQuestionResultResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateQuestionResultBody"
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/v1/question-results-aggregation": {
 			"get": {
 				"operationId": "AggregateQuestionResults",
@@ -9739,6 +14625,1370 @@
 				]
 			}
 		},
+		"/api/v1/question-configs/{id}": {
+			"get": {
+				"operationId": "GetQuestionConfig",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetQuestionConfigResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateQuestionConfig",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateQuestionConfigBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteQuestionConfig",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/question-configs": {
+			"get": {
+				"operationId": "GetQuestionConfigs",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetQuestionConfigsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateQuestionConfig",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateQuestionConfigResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateQuestionConfigBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/pending-webhook-events": {
+			"get": {
+				"operationId": "GetPendingWebhookEvents",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetPendingWebhookEventsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "commentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "externalId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "eventType",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "domain",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "attemptCountGT",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/pending-webhook-events/count": {
+			"get": {
+				"operationId": "GetPendingWebhookEventCount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetPendingWebhookEventCountResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "commentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "externalId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "eventType",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "domain",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "attemptCountGT",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/pending-webhook-events/{id}": {
+			"delete": {
+				"operationId": "DeletePendingWebhookEvent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/notifications": {
+			"get": {
+				"operationId": "GetNotifications",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetNotificationsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "urlId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fromCommentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "viewed",
+						"required": false,
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/notifications/count": {
+			"get": {
+				"operationId": "GetNotificationCount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetNotificationCountResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "urlId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fromCommentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "viewed",
+						"required": false,
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/notifications/{id}": {
+			"patch": {
+				"operationId": "UpdateNotification",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateNotificationBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/notification-count/{id}": {
+			"get": {
+				"operationId": "GetCachedNotificationCount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetCachedNotificationCountResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "DeleteNotificationCount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/moderators/{id}": {
+			"get": {
+				"operationId": "GetModerator",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetModeratorResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateModerator",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateModeratorBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteModerator",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "sendEmail",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/moderators": {
+			"get": {
+				"operationId": "GetModerators",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetModeratorsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateModerator",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateModeratorResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateModeratorBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/moderators/{id}/send-invite": {
+			"post": {
+				"operationId": "SendInvite",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fromName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/hash-tags": {
+			"get": {
+				"operationId": "GetHashTags",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetHashTagsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "page",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "AddHashTag",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateHashTagResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": false,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateHashTagBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/hash-tags/bulk": {
+			"post": {
+				"operationId": "AddHashTagsBulk",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/BulkCreateHashTagsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": false,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BulkCreateHashTagsBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/hash-tags/{tag}": {
+			"patch": {
+				"operationId": "PatchHashTag",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/UpdateHashTagResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tag",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": false,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateHashTagBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteHashTag",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tag",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": false,
+					"content": {
+						"application/json": {
+							"schema": {
+								"properties": {
+									"tenantId": {
+										"type": "string"
+									}
+								},
+								"type": "object"
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/v1/feed-posts": {
 			"get": {
 				"operationId": "GetFeedPosts",
@@ -9937,6 +16187,455 @@
 						"application/json": {
 							"schema": {
 								"$ref": "#/components/schemas/FeedPost"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/email-templates/definitions": {
+			"get": {
+				"operationId": "GetEmailTemplateDefinitions",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetEmailTemplateDefinitionsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/email-templates/{id}/render-errors": {
+			"get": {
+				"operationId": "GetEmailTemplateRenderErrors",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetEmailTemplateRenderErrorsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/email-templates/{id}/render-errors/{errorId}": {
+			"delete": {
+				"operationId": "DeleteEmailTemplateRenderError",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "errorId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/email-templates/{id}": {
+			"get": {
+				"operationId": "GetEmailTemplate",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetEmailTemplateResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateEmailTemplate",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateEmailTemplateBody"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteEmailTemplate",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/APIEmptyResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/email-templates": {
+			"get": {
+				"operationId": "GetEmailTemplates",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetEmailTemplatesResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateEmailTemplate",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateEmailTemplateResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateEmailTemplateBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/email-templates/render": {
+			"post": {
+				"operationId": "RenderEmailTemplate",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/RenderEmailTemplateResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "locale",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/RenderEmailTemplateBody"
 							}
 						}
 					}
