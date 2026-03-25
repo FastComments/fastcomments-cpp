@@ -24,6 +24,7 @@
 #include "FastCommentsClient/ModelBase.h"
 
 #include <cpprest/details/basic_types.h>
+#include "FastCommentsClient/model/HeaderAccountNotification.h"
 #include "FastCommentsClient/Object.h"
 #include <vector>
 #include "FastCommentsClient/model/NotificationAndCount.h"
@@ -35,6 +36,7 @@ namespace client {
 namespace model {
 
 class NotificationAndCount;
+class HeaderAccountNotification;
 
 
 class  HeaderState
@@ -85,6 +87,11 @@ public:
     void unsetNotificationCounts();
     void setNotificationCounts(const std::vector<std::shared_ptr<NotificationAndCount>>& value);
 
+    std::vector<std::shared_ptr<HeaderAccountNotification>> getAccountNotifications() const;
+    bool accountNotificationsIsSet() const;
+    void unsetAccountNotifications();
+    void setAccountNotifications(const std::vector<std::shared_ptr<HeaderAccountNotification>>& value);
+
 
 protected:
     std::shared_ptr<APIStatus> m_Status;
@@ -101,6 +108,9 @@ protected:
 
     std::vector<std::shared_ptr<NotificationAndCount>> m_NotificationCounts;
     bool m_NotificationCountsIsSet;
+
+    std::vector<std::shared_ptr<HeaderAccountNotification>> m_AccountNotifications;
+    bool m_AccountNotificationsIsSet;
 
 };
 

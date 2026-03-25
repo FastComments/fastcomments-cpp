@@ -110,6 +110,11 @@ public:
     void unsetMaxDomains();
     void setMaxDomains(double value);
 
+    double getMaxCustomCollectionSize() const;
+    bool maxCustomCollectionSizeIsSet() const;
+    void unsetMaxCustomCollectionSize();
+    void setMaxCustomCollectionSize(double value);
+
     bool isHasDebranding() const;
     bool hasDebrandingIsSet() const;
     void unsetHasDebranding();
@@ -244,6 +249,9 @@ protected:
 
     double m_MaxDomains;
     bool m_MaxDomainsIsSet;
+
+    double m_MaxCustomCollectionSize;
+    bool m_MaxCustomCollectionSizeIsSet;
 
     bool m_HasDebranding;
     bool m_HasDebrandingIsSet;

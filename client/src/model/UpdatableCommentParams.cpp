@@ -672,7 +672,7 @@ bool UpdatableCommentParams::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("meta")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<FComment_meta> refVal_setMeta;
+            std::shared_ptr<APICommentBase_meta> refVal_setMeta;
             ok &= ModelBase::fromJson(fieldValue, refVal_setMeta);
             setMeta(refVal_setMeta);
             
@@ -1095,7 +1095,7 @@ bool UpdatableCommentParams::fromMultiPart(std::shared_ptr<MultipartFormData> mu
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("meta"))))
     {
-        std::shared_ptr<FComment_meta> refVal_setMeta;
+        std::shared_ptr<APICommentBase_meta> refVal_setMeta;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("meta"))), refVal_setMeta );
         setMeta(refVal_setMeta);
     }
@@ -1834,13 +1834,13 @@ void UpdatableCommentParams::unsetDisplayLabel()
 {
     m_DisplayLabel.reset();
 }
-std::shared_ptr<FComment_meta> UpdatableCommentParams::getMeta() const
+std::shared_ptr<APICommentBase_meta> UpdatableCommentParams::getMeta() const
 {
     return m_Meta.get();
 }
 
 
-void UpdatableCommentParams::setMeta(const std::shared_ptr<FComment_meta>& value)
+void UpdatableCommentParams::setMeta(const std::shared_ptr<APICommentBase_meta>& value)
 {
     m_Meta = value;
 }

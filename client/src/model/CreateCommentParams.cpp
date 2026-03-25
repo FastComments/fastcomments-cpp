@@ -52,6 +52,8 @@ CreateCommentParams::CreateCommentParams()
     m_AutoplayDelayMSIsSet = false;
     m_FeedbackIdsIsSet = false;
     m_QuestionValuesIsSet = false;
+    m_Tos = false;
+    m_TosIsSet = false;
     m_Approved = false;
     m_ApprovedIsSet = false;
     m_Domain = utility::conversions::to_string_t("");
@@ -205,6 +207,11 @@ web::json::value CreateCommentParams::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("questionValues"))] = ModelBase::toJson(m_QuestionValues);
+    }
+    if(m_TosIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("tos"))] = ModelBase::toJson(m_Tos);
     }
     if(m_ApprovedIsSet)
     {
@@ -527,6 +534,17 @@ bool CreateCommentParams::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("tos")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setTos;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTos);
+            setTos(refVal_setTos);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("approved"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("approved")));
@@ -743,6 +761,10 @@ void CreateCommentParams::toMultipart(std::shared_ptr<MultipartFormData> multipa
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("questionValues")), m_QuestionValues));
     }
+    if(m_TosIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tos")), m_Tos));
+    }
     if(m_ApprovedIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("approved")), m_Approved));
@@ -937,6 +959,12 @@ bool CreateCommentParams::fromMultiPart(std::shared_ptr<MultipartFormData> multi
         std::map<utility::string_t, std::shared_ptr<Record_string_string_or_number__value>> refVal_setQuestionValues;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("questionValues"))), refVal_setQuestionValues );
         setQuestionValues(refVal_setQuestionValues);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        bool refVal_setTos;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tos"))), refVal_setTos );
+        setTos(refVal_setTos);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("approved"))))
     {
@@ -1493,6 +1521,26 @@ bool CreateCommentParams::questionValuesIsSet() const
 void CreateCommentParams::unsetQuestionValues()
 {
     m_QuestionValuesIsSet = false;
+}
+bool CreateCommentParams::isTos() const
+{
+    return m_Tos;
+}
+
+void CreateCommentParams::setTos(bool value)
+{
+    m_Tos = value;
+    m_TosIsSet = true;
+}
+
+bool CreateCommentParams::tosIsSet() const
+{
+    return m_TosIsSet;
+}
+
+void CreateCommentParams::unsetTos()
+{
+    m_TosIsSet = false;
 }
 bool CreateCommentParams::isApproved() const
 {

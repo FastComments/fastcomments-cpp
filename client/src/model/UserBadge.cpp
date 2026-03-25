@@ -150,6 +150,11 @@ web::json::value UserBadge::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("order"))] = ModelBase::toJson(m_Order);
     }
+    if(m_UrlId.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("urlId"))] = ModelBase::toJson(m_UrlId.get());
+    }
 
     return val;
 }
@@ -355,6 +360,17 @@ bool UserBadge::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("urlId")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setUrlId;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setUrlId);
+            setUrlId(refVal_setUrlId);
+            
+        }
+    }
     return ok;
 }
 
@@ -436,6 +452,10 @@ void UserBadge::toMultipart(std::shared_ptr<MultipartFormData> multipart, const 
     if(m_OrderIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("order")), m_Order));
+    }
+    if(m_UrlId.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("urlId")), m_UrlId.get()));
     }
 }
 
@@ -555,6 +575,12 @@ bool UserBadge::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, cons
         int32_t refVal_setOrder;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("order"))), refVal_setOrder );
         setOrder(refVal_setOrder);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))))
+    {
+        utility::string_t refVal_setUrlId;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("urlId"))), refVal_setUrlId );
+        setUrlId(refVal_setUrlId);
     }
     return ok;
 }
@@ -927,6 +953,26 @@ bool UserBadge::orderIsSet() const
 void UserBadge::unsetOrder()
 {
     m_OrderIsSet = false;
+}
+utility::string_t UserBadge::getUrlId() const
+{
+    return m_UrlId.get();
+}
+
+
+void UserBadge::setUrlId(const utility::string_t& value)
+{
+    m_UrlId = value;
+}
+
+bool UserBadge::urlIdIsSet() const
+{
+    return m_UrlId.has_value();
+}
+
+void UserBadge::unsetUrlId()
+{
+    m_UrlId.reset();
 }
 
 }

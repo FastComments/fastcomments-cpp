@@ -3,6 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+| **wpId** | **String** |  | [optional] [default to null] |
 | **wpUserId** | **String** |  | [optional] [default to null] |
 | **wpPostId** | **String** |  | [optional] [default to null] |
 

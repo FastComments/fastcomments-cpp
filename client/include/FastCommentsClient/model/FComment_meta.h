@@ -57,6 +57,11 @@ public:
     /// FComment_meta members
 
 
+    utility::string_t getWpId() const;
+    bool wpIdIsSet() const;
+    void unsetWpId();
+    void setWpId(const utility::string_t& value);
+
     utility::string_t getWpUserId() const;
     bool wpUserIdIsSet() const;
     void unsetWpUserId();
@@ -84,6 +89,9 @@ public:
     void addAdditionalProperty(const utility::string_t& key, const web::json::value& value);
 
 protected:
+    utility::string_t m_WpId;
+    bool m_WpIdIsSet;
+
     utility::string_t m_WpUserId;
     bool m_WpUserIdIsSet;
 

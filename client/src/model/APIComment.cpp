@@ -747,7 +747,7 @@ bool APIComment::fromJson(const web::json::value& val)
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("meta")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<FComment_meta> refVal_setMeta;
+            std::shared_ptr<APICommentBase_meta> refVal_setMeta;
             ok &= ModelBase::fromJson(fieldValue, refVal_setMeta);
             setMeta(refVal_setMeta);
             
@@ -1385,7 +1385,7 @@ bool APIComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, con
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("meta"))))
     {
-        std::shared_ptr<FComment_meta> refVal_setMeta;
+        std::shared_ptr<APICommentBase_meta> refVal_setMeta;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("meta"))), refVal_setMeta );
         setMeta(refVal_setMeta);
     }
@@ -2198,13 +2198,13 @@ void APIComment::unsetMentions()
 {
     m_MentionsIsSet = false;
 }
-std::shared_ptr<FComment_meta> APIComment::getMeta() const
+std::shared_ptr<APICommentBase_meta> APIComment::getMeta() const
 {
     return m_Meta.get();
 }
 
 
-void APIComment::setMeta(const std::shared_ptr<FComment_meta>& value)
+void APIComment::setMeta(const std::shared_ptr<APICommentBase_meta>& value)
 {
     m_Meta = value;
 }

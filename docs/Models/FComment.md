@@ -74,6 +74,7 @@
 | **viewCount** | **Long** |  | [optional] [default to null] |
 | **requiresVerification** | **Boolean** |  | [optional] [default to null] |
 | **editKey** | **String** |  | [optional] [default to null] |
+| **tosAcceptedAt** | **Date** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

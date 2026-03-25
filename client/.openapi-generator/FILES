@@ -19,6 +19,7 @@ include/FastCommentsClient/api/PublicApi.h
 include/FastCommentsClient/model/APIAuditLog.h
 include/FastCommentsClient/model/APIComment.h
 include/FastCommentsClient/model/APICommentBase.h
+include/FastCommentsClient/model/APICommentBase_meta.h
 include/FastCommentsClient/model/APICreateUserBadgeResponse.h
 include/FastCommentsClient/model/APIDomainConfiguration.h
 include/FastCommentsClient/model/APIEmptyResponse.h
@@ -35,6 +36,9 @@ include/FastCommentsClient/model/APISSOUser.h
 include/FastCommentsClient/model/APIStatus.h
 include/FastCommentsClient/model/APITenant.h
 include/FastCommentsClient/model/APITenantDailyUsage.h
+include/FastCommentsClient/model/APITicket.h
+include/FastCommentsClient/model/APITicketDetail.h
+include/FastCommentsClient/model/APITicketFile.h
 include/FastCommentsClient/model/APIUserSubscription.h
 include/FastCommentsClient/model/AddDomainConfigParams.h
 include/FastCommentsClient/model/AddDomainConfig_200_response.h
@@ -66,6 +70,9 @@ include/FastCommentsClient/model/BulkCreateHashTagsBody.h
 include/FastCommentsClient/model/BulkCreateHashTagsBody_tags_inner.h
 include/FastCommentsClient/model/BulkCreateHashTagsResponse.h
 include/FastCommentsClient/model/ChangeCommentPinStatusResponse.h
+include/FastCommentsClient/model/ChangeTicketStateBody.h
+include/FastCommentsClient/model/ChangeTicketStateResponse.h
+include/FastCommentsClient/model/ChangeTicketState_200_response.h
 include/FastCommentsClient/model/CheckBlockedCommentsResponse.h
 include/FastCommentsClient/model/CheckedCommentsForBlocked_200_response.h
 include/FastCommentsClient/model/CombineCommentsWithQuestionResults_200_response.h
@@ -117,6 +124,9 @@ include/FastCommentsClient/model/CreateTenantUserBody.h
 include/FastCommentsClient/model/CreateTenantUserResponse.h
 include/FastCommentsClient/model/CreateTenantUser_200_response.h
 include/FastCommentsClient/model/CreateTenant_200_response.h
+include/FastCommentsClient/model/CreateTicketBody.h
+include/FastCommentsClient/model/CreateTicketResponse.h
+include/FastCommentsClient/model/CreateTicket_200_response.h
 include/FastCommentsClient/model/CreateUserBadgeParams.h
 include/FastCommentsClient/model/CreateUserBadge_200_response.h
 include/FastCommentsClient/model/CustomConfigParameters.h
@@ -225,6 +235,10 @@ include/FastCommentsClient/model/GetTenantUsers_200_response.h
 include/FastCommentsClient/model/GetTenant_200_response.h
 include/FastCommentsClient/model/GetTenantsResponse.h
 include/FastCommentsClient/model/GetTenants_200_response.h
+include/FastCommentsClient/model/GetTicketResponse.h
+include/FastCommentsClient/model/GetTicket_200_response.h
+include/FastCommentsClient/model/GetTicketsResponse.h
+include/FastCommentsClient/model/GetTickets_200_response.h
 include/FastCommentsClient/model/GetUserBadgeProgressById_200_response.h
 include/FastCommentsClient/model/GetUserBadgeProgressList_200_response.h
 include/FastCommentsClient/model/GetUserBadge_200_response.h
@@ -242,6 +256,7 @@ include/FastCommentsClient/model/GetVotesForUser_200_response.h
 include/FastCommentsClient/model/GetVotesResponse.h
 include/FastCommentsClient/model/GetVotes_200_response.h
 include/FastCommentsClient/model/GifRating.h
+include/FastCommentsClient/model/HeaderAccountNotification.h
 include/FastCommentsClient/model/HeaderState.h
 include/FastCommentsClient/model/IgnoredResponse.h
 include/FastCommentsClient/model/ImageContentProfanityLevel.h
@@ -251,6 +266,7 @@ include/FastCommentsClient/model/LiveEventType.h
 include/FastCommentsClient/model/LiveEvent_extraInfo.h
 include/FastCommentsClient/model/LockComment_200_response.h
 include/FastCommentsClient/model/MediaAsset.h
+include/FastCommentsClient/model/MentionAutoCompleteMode.h
 include/FastCommentsClient/model/MetaItem.h
 include/FastCommentsClient/model/Moderator.h
 include/FastCommentsClient/model/NotificationAndCount.h
@@ -306,12 +322,14 @@ include/FastCommentsClient/model/SaveCommentResponseOptimized.h
 include/FastCommentsClient/model/SaveComment_200_response.h
 include/FastCommentsClient/model/SaveCommentsResponseWithPresence.h
 include/FastCommentsClient/model/SearchUsersResponse.h
+include/FastCommentsClient/model/SearchUsersSectionedResponse.h
 include/FastCommentsClient/model/SearchUsers_200_response.h
 include/FastCommentsClient/model/SetCommentTextResult.h
 include/FastCommentsClient/model/SetCommentText_200_response.h
 include/FastCommentsClient/model/SizePreset.h
 include/FastCommentsClient/model/SortDirections.h
 include/FastCommentsClient/model/SpamRule.h
+include/FastCommentsClient/model/TOSConfig.h
 include/FastCommentsClient/model/TenantHashTag.h
 include/FastCommentsClient/model/TenantPackage.h
 include/FastCommentsClient/model/UnBlockCommentPublic_200_response.h
@@ -320,6 +338,7 @@ include/FastCommentsClient/model/UnblockSuccess.h
 include/FastCommentsClient/model/UpdatableCommentParams.h
 include/FastCommentsClient/model/UpdateAPIPageData.h
 include/FastCommentsClient/model/UpdateAPISSOUserData.h
+include/FastCommentsClient/model/UpdateAPIUserSubscriptionData.h
 include/FastCommentsClient/model/UpdateDomainConfigParams.h
 include/FastCommentsClient/model/UpdateEmailTemplateBody.h
 include/FastCommentsClient/model/UpdateFeedPostParams.h
@@ -329,6 +348,7 @@ include/FastCommentsClient/model/UpdateModeratorBody.h
 include/FastCommentsClient/model/UpdateNotificationBody.h
 include/FastCommentsClient/model/UpdateQuestionConfigBody.h
 include/FastCommentsClient/model/UpdateQuestionResultBody.h
+include/FastCommentsClient/model/UpdateSubscriptionAPIResponse.h
 include/FastCommentsClient/model/UpdateTenantBody.h
 include/FastCommentsClient/model/UpdateTenantPackageBody.h
 include/FastCommentsClient/model/UpdateTenantUserBody.h
@@ -345,6 +365,8 @@ include/FastCommentsClient/model/UserNotificationWriteResponse.h
 include/FastCommentsClient/model/UserPresenceData.h
 include/FastCommentsClient/model/UserReactsResponse.h
 include/FastCommentsClient/model/UserSearchResult.h
+include/FastCommentsClient/model/UserSearchSection.h
+include/FastCommentsClient/model/UserSearchSectionResult.h
 include/FastCommentsClient/model/UserSessionInfo.h
 include/FastCommentsClient/model/VoteBodyParams.h
 include/FastCommentsClient/model/VoteComment_200_response.h
@@ -366,6 +388,7 @@ src/api/PublicApi.cpp
 src/model/APIAuditLog.cpp
 src/model/APIComment.cpp
 src/model/APICommentBase.cpp
+src/model/APICommentBase_meta.cpp
 src/model/APICreateUserBadgeResponse.cpp
 src/model/APIDomainConfiguration.cpp
 src/model/APIEmptyResponse.cpp
@@ -382,6 +405,9 @@ src/model/APISSOUser.cpp
 src/model/APIStatus.cpp
 src/model/APITenant.cpp
 src/model/APITenantDailyUsage.cpp
+src/model/APITicket.cpp
+src/model/APITicketDetail.cpp
+src/model/APITicketFile.cpp
 src/model/APIUserSubscription.cpp
 src/model/AddDomainConfigParams.cpp
 src/model/AddDomainConfig_200_response.cpp
@@ -413,6 +439,9 @@ src/model/BulkCreateHashTagsBody.cpp
 src/model/BulkCreateHashTagsBody_tags_inner.cpp
 src/model/BulkCreateHashTagsResponse.cpp
 src/model/ChangeCommentPinStatusResponse.cpp
+src/model/ChangeTicketStateBody.cpp
+src/model/ChangeTicketStateResponse.cpp
+src/model/ChangeTicketState_200_response.cpp
 src/model/CheckBlockedCommentsResponse.cpp
 src/model/CheckedCommentsForBlocked_200_response.cpp
 src/model/CombineCommentsWithQuestionResults_200_response.cpp
@@ -464,6 +493,9 @@ src/model/CreateTenantUserBody.cpp
 src/model/CreateTenantUserResponse.cpp
 src/model/CreateTenantUser_200_response.cpp
 src/model/CreateTenant_200_response.cpp
+src/model/CreateTicketBody.cpp
+src/model/CreateTicketResponse.cpp
+src/model/CreateTicket_200_response.cpp
 src/model/CreateUserBadgeParams.cpp
 src/model/CreateUserBadge_200_response.cpp
 src/model/CustomConfigParameters.cpp
@@ -572,6 +604,10 @@ src/model/GetTenantUsers_200_response.cpp
 src/model/GetTenant_200_response.cpp
 src/model/GetTenantsResponse.cpp
 src/model/GetTenants_200_response.cpp
+src/model/GetTicketResponse.cpp
+src/model/GetTicket_200_response.cpp
+src/model/GetTicketsResponse.cpp
+src/model/GetTickets_200_response.cpp
 src/model/GetUserBadgeProgressById_200_response.cpp
 src/model/GetUserBadgeProgressList_200_response.cpp
 src/model/GetUserBadge_200_response.cpp
@@ -589,6 +625,7 @@ src/model/GetVotesForUser_200_response.cpp
 src/model/GetVotesResponse.cpp
 src/model/GetVotes_200_response.cpp
 src/model/GifRating.cpp
+src/model/HeaderAccountNotification.cpp
 src/model/HeaderState.cpp
 src/model/IgnoredResponse.cpp
 src/model/ImageContentProfanityLevel.cpp
@@ -598,6 +635,7 @@ src/model/LiveEventType.cpp
 src/model/LiveEvent_extraInfo.cpp
 src/model/LockComment_200_response.cpp
 src/model/MediaAsset.cpp
+src/model/MentionAutoCompleteMode.cpp
 src/model/MetaItem.cpp
 src/model/Moderator.cpp
 src/model/NotificationAndCount.cpp
@@ -653,12 +691,14 @@ src/model/SaveCommentResponseOptimized.cpp
 src/model/SaveComment_200_response.cpp
 src/model/SaveCommentsResponseWithPresence.cpp
 src/model/SearchUsersResponse.cpp
+src/model/SearchUsersSectionedResponse.cpp
 src/model/SearchUsers_200_response.cpp
 src/model/SetCommentTextResult.cpp
 src/model/SetCommentText_200_response.cpp
 src/model/SizePreset.cpp
 src/model/SortDirections.cpp
 src/model/SpamRule.cpp
+src/model/TOSConfig.cpp
 src/model/TenantHashTag.cpp
 src/model/TenantPackage.cpp
 src/model/UnBlockCommentPublic_200_response.cpp
@@ -667,6 +707,7 @@ src/model/UnblockSuccess.cpp
 src/model/UpdatableCommentParams.cpp
 src/model/UpdateAPIPageData.cpp
 src/model/UpdateAPISSOUserData.cpp
+src/model/UpdateAPIUserSubscriptionData.cpp
 src/model/UpdateDomainConfigParams.cpp
 src/model/UpdateEmailTemplateBody.cpp
 src/model/UpdateFeedPostParams.cpp
@@ -676,6 +717,7 @@ src/model/UpdateModeratorBody.cpp
 src/model/UpdateNotificationBody.cpp
 src/model/UpdateQuestionConfigBody.cpp
 src/model/UpdateQuestionResultBody.cpp
+src/model/UpdateSubscriptionAPIResponse.cpp
 src/model/UpdateTenantBody.cpp
 src/model/UpdateTenantPackageBody.cpp
 src/model/UpdateTenantUserBody.cpp
@@ -692,6 +734,8 @@ src/model/UserNotificationWriteResponse.cpp
 src/model/UserPresenceData.cpp
 src/model/UserReactsResponse.cpp
 src/model/UserSearchResult.cpp
+src/model/UserSearchSection.cpp
+src/model/UserSearchSectionResult.cpp
 src/model/UserSessionInfo.cpp
 src/model/VoteBodyParams.cpp
 src/model/VoteComment_200_response.cpp

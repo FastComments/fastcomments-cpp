@@ -44,6 +44,8 @@ CreateTenantPackageBody::CreateTenantPackageBody()
     m_MaxWhiteLabeledTenantsIsSet = false;
     m_MaxMonthlyEventLogRequests = 0.0;
     m_MaxMonthlyEventLogRequestsIsSet = false;
+    m_MaxCustomCollectionSize = 0.0;
+    m_MaxCustomCollectionSizeIsSet = false;
     m_HasWhiteLabeling = false;
     m_HasWhiteLabelingIsSet = false;
     m_HasDebranding = false;
@@ -200,6 +202,11 @@ web::json::value CreateTenantPackageBody::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests"))] = ModelBase::toJson(m_MaxMonthlyEventLogRequests);
+    }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))] = ModelBase::toJson(m_MaxCustomCollectionSize);
     }
     if(m_HasWhiteLabelingIsSet)
     {
@@ -541,6 +548,17 @@ bool CreateTenantPackageBody::fromJson(const web::json::value& val)
             double refVal_setMaxMonthlyEventLogRequests;
             ok &= ModelBase::fromJson(fieldValue, refVal_setMaxMonthlyEventLogRequests);
             setMaxMonthlyEventLogRequests(refVal_setMaxMonthlyEventLogRequests);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setMaxCustomCollectionSize;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setMaxCustomCollectionSize);
+            setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
             
         }
     }
@@ -970,6 +988,10 @@ void CreateTenantPackageBody::toMultipart(std::shared_ptr<MultipartFormData> mul
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests")), m_MaxMonthlyEventLogRequests));
     }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")), m_MaxCustomCollectionSize));
+    }
     if(m_HasWhiteLabelingIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling")), m_HasWhiteLabeling));
@@ -1204,6 +1226,12 @@ bool CreateTenantPackageBody::fromMultiPart(std::shared_ptr<MultipartFormData> m
         double refVal_setMaxMonthlyEventLogRequests;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests"))), refVal_setMaxMonthlyEventLogRequests );
         setMaxMonthlyEventLogRequests(refVal_setMaxMonthlyEventLogRequests);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        double refVal_setMaxCustomCollectionSize;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))), refVal_setMaxCustomCollectionSize );
+        setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling"))))
     {
@@ -1719,6 +1747,26 @@ bool CreateTenantPackageBody::maxMonthlyEventLogRequestsIsSet() const
 void CreateTenantPackageBody::unsetMaxMonthlyEventLogRequests()
 {
     m_MaxMonthlyEventLogRequestsIsSet = false;
+}
+double CreateTenantPackageBody::getMaxCustomCollectionSize() const
+{
+    return m_MaxCustomCollectionSize;
+}
+
+void CreateTenantPackageBody::setMaxCustomCollectionSize(double value)
+{
+    m_MaxCustomCollectionSize = value;
+    m_MaxCustomCollectionSizeIsSet = true;
+}
+
+bool CreateTenantPackageBody::maxCustomCollectionSizeIsSet() const
+{
+    return m_MaxCustomCollectionSizeIsSet;
+}
+
+void CreateTenantPackageBody::unsetMaxCustomCollectionSize()
+{
+    m_MaxCustomCollectionSizeIsSet = false;
 }
 bool CreateTenantPackageBody::isHasWhiteLabeling() const
 {

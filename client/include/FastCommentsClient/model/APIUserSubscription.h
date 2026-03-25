@@ -54,6 +54,11 @@ public:
     /// APIUserSubscription members
 
 
+    double getNotificationFrequency() const;
+    bool notificationFrequencyIsSet() const;
+    void unsetNotificationFrequency();
+    void setNotificationFrequency(double value);
+
     utility::datetime getCreatedAt() const;
     bool createdAtIsSet() const;
     void unsetCreatedAt();
@@ -91,6 +96,9 @@ public:
 
 
 protected:
+    double m_NotificationFrequency;
+    bool m_NotificationFrequencyIsSet;
+
     utility::datetime m_CreatedAt;
     bool m_CreatedAtIsSet;
 

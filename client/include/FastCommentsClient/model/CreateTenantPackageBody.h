@@ -135,6 +135,11 @@ public:
     void unsetMaxMonthlyEventLogRequests();
     void setMaxMonthlyEventLogRequests(double value);
 
+    double getMaxCustomCollectionSize() const;
+    bool maxCustomCollectionSizeIsSet() const;
+    void unsetMaxCustomCollectionSize();
+    void setMaxCustomCollectionSize(double value);
+
     bool isHasWhiteLabeling() const;
     bool hasWhiteLabelingIsSet() const;
     void unsetHasWhiteLabeling();
@@ -340,6 +345,9 @@ protected:
 
     double m_MaxMonthlyEventLogRequests;
     bool m_MaxMonthlyEventLogRequestsIsSet;
+
+    double m_MaxCustomCollectionSize;
+    bool m_MaxCustomCollectionSizeIsSet;
 
     bool m_HasWhiteLabeling;
     bool m_HasWhiteLabelingIsSet;

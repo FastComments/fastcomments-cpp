@@ -23,6 +23,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
+#include "FastCommentsClient/model/MentionAutoCompleteMode.h"
 #include "FastCommentsClient/model/QuestionWhenSave.h"
 #include "FastCommentsClient/model/GifRating.h"
 #include "FastCommentsClient/model/CommenterNameFormats.h"
@@ -36,6 +37,7 @@
 #include "FastCommentsClient/model/CommentQuestionsRequired.h"
 #include "FastCommentsClient/model/SSOSecurityLevel.h"
 #include <cpprest/details/basic_types.h>
+#include "FastCommentsClient/model/TOSConfig.h"
 #include "FastCommentsClient/model/CommentHTMLRenderingMode.h"
 #include <map>
 #include "FastCommentsClient/model/CommentThreadDeletionMode.h"
@@ -47,6 +49,7 @@ namespace client {
 namespace model {
 
 class SpamRule;
+class TOSConfig;
 
 
 class  CustomConfigParameters
@@ -192,6 +195,16 @@ public:
     void unsetDisableNotificationBell();
     void setDisableNotificationBell(bool value);
 
+    bool isDisableProfileComments() const;
+    bool disableProfileCommentsIsSet() const;
+    void unsetDisableProfileComments();
+    void setDisableProfileComments(bool value);
+
+    bool isDisableProfileDirectMessages() const;
+    bool disableProfileDirectMessagesIsSet() const;
+    void unsetDisableProfileDirectMessages();
+    void setDisableProfileDirectMessages(bool value);
+
     bool isDisableProfiles() const;
     bool disableProfilesIsSet() const;
     void unsetDisableProfiles();
@@ -312,6 +325,11 @@ public:
     void unsetNoCustomConfig();
     void setNoCustomConfig(bool value);
 
+    std::shared_ptr<MentionAutoCompleteMode> getMentionAutoCompleteMode() const;
+    bool mentionAutoCompleteModeIsSet() const;
+    void unsetMentionAutoCompleteMode();
+    void setMentionAutoCompleteMode(const std::shared_ptr<MentionAutoCompleteMode>& value);
+
     bool isNoImageUploads() const;
     bool noImageUploadsIsSet() const;
     void unsetNoImageUploads();
@@ -415,6 +433,11 @@ public:
     void unsetWidgetQuestionResultsStyle();
     void setWidgetQuestionResultsStyle(const std::shared_ptr<CommentQuestionResultsRenderingType>& value);
 
+    bool isWidgetQuestionShowBreakdown() const;
+    bool widgetQuestionShowBreakdownIsSet() const;
+    void unsetWidgetQuestionShowBreakdown();
+    void setWidgetQuestionShowBreakdown(bool value);
+
     std::shared_ptr<QuestionRenderingType> getWidgetQuestionStyle() const;
     bool widgetQuestionStyleIsSet() const;
     void unsetWidgetQuestionStyle();
@@ -439,6 +462,36 @@ public:
     bool wrapIsSet() const;
     void unsetWrap();
     void setWrap(bool value);
+
+    utility::string_t getTicketBaseUrl() const;
+    bool ticketBaseUrlIsSet() const;
+    void unsetTicketBaseUrl();
+    void setTicketBaseUrl(const utility::string_t& value);
+
+    utility::string_t getTicketKBSearchEndpoint() const;
+    bool ticketKBSearchEndpointIsSet() const;
+    void unsetTicketKBSearchEndpoint();
+    void setTicketKBSearchEndpoint(const utility::string_t& value);
+
+    bool isTicketFileUploadsEnabled() const;
+    bool ticketFileUploadsEnabledIsSet() const;
+    void unsetTicketFileUploadsEnabled();
+    void setTicketFileUploadsEnabled(bool value);
+
+    int32_t getTicketMaxFileSize() const;
+    bool ticketMaxFileSizeIsSet() const;
+    void unsetTicketMaxFileSize();
+    void setTicketMaxFileSize(int32_t value);
+
+    std::vector<utility::string_t> getTicketAutoAssignUserIds() const;
+    bool ticketAutoAssignUserIdsIsSet() const;
+    void unsetTicketAutoAssignUserIds();
+    void setTicketAutoAssignUserIds(const std::vector<utility::string_t>& value);
+
+    std::shared_ptr<TOSConfig> getTos() const;
+    bool tosIsSet() const;
+    void unsetTos();
+    void setTos(const std::shared_ptr<TOSConfig>& value);
 
 
 protected:
@@ -505,6 +558,12 @@ protected:
 
     bool m_DisableNotificationBell;
     bool m_DisableNotificationBellIsSet;
+
+    bool m_DisableProfileComments;
+    bool m_DisableProfileCommentsIsSet;
+
+    bool m_DisableProfileDirectMessages;
+    bool m_DisableProfileDirectMessagesIsSet;
 
     bool m_DisableProfiles;
     bool m_DisableProfilesIsSet;
@@ -573,6 +632,8 @@ protected:
     bool m_NoCustomConfig;
     bool m_NoCustomConfigIsSet;
 
+    boost::optional<std::shared_ptr<MentionAutoCompleteMode>> m_MentionAutoCompleteMode;
+
     bool m_NoImageUploads;
     bool m_NoImageUploadsIsSet;
 
@@ -630,6 +691,9 @@ protected:
     std::shared_ptr<CommentQuestionResultsRenderingType> m_WidgetQuestionResultsStyle;
     bool m_WidgetQuestionResultsStyleIsSet;
 
+    bool m_WidgetQuestionShowBreakdown;
+    bool m_WidgetQuestionShowBreakdownIsSet;
+
     std::shared_ptr<QuestionRenderingType> m_WidgetQuestionStyle;
     bool m_WidgetQuestionStyleIsSet;
 
@@ -644,6 +708,24 @@ protected:
 
     bool m_Wrap;
     bool m_WrapIsSet;
+
+    utility::string_t m_TicketBaseUrl;
+    bool m_TicketBaseUrlIsSet;
+
+    utility::string_t m_TicketKBSearchEndpoint;
+    bool m_TicketKBSearchEndpointIsSet;
+
+    bool m_TicketFileUploadsEnabled;
+    bool m_TicketFileUploadsEnabledIsSet;
+
+    int32_t m_TicketMaxFileSize;
+    bool m_TicketMaxFileSizeIsSet;
+
+    std::vector<utility::string_t> m_TicketAutoAssignUserIds;
+    bool m_TicketAutoAssignUserIdsIsSet;
+
+    std::shared_ptr<TOSConfig> m_Tos;
+    bool m_TosIsSet;
 
 };
 

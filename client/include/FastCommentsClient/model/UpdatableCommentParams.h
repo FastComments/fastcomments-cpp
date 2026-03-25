@@ -22,7 +22,7 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/FComment_meta.h"
+#include "FastCommentsClient/model/APICommentBase_meta.h"
 #include <cpprest/details/basic_types.h>
 #include <vector>
 
@@ -236,10 +236,10 @@ public:
     void unsetDisplayLabel();
     void setDisplayLabel(const utility::string_t& value);
 
-    std::shared_ptr<FComment_meta> getMeta() const;
+    std::shared_ptr<APICommentBase_meta> getMeta() const;
     bool metaIsSet() const;
     void unsetMeta();
-    void setMeta(const std::shared_ptr<FComment_meta>& value);
+    void setMeta(const std::shared_ptr<APICommentBase_meta>& value);
 
     std::vector<utility::string_t> getModerationGroupIds() const;
     bool moderationGroupIdsIsSet() const;
@@ -342,7 +342,7 @@ protected:
 
     boost::optional<utility::string_t> m_DisplayLabel;
 
-    boost::optional<std::shared_ptr<FComment_meta>> m_Meta;
+    boost::optional<std::shared_ptr<APICommentBase_meta>> m_Meta;
 
     boost::optional<std::vector<utility::string_t>> m_ModerationGroupIds;
 

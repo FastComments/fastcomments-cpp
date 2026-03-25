@@ -20,6 +20,8 @@ namespace model {
 
 APIUserSubscription::APIUserSubscription()
 {
+    m_NotificationFrequency = 0.0;
+    m_NotificationFrequencyIsSet = false;
     m_CreatedAt = utility::datetime();
     m_CreatedAtIsSet = false;
     m_PageTitle = utility::conversions::to_string_t("");
@@ -48,6 +50,11 @@ void APIUserSubscription::validate()
 web::json::value APIUserSubscription::toJson() const
 {
     web::json::value val = web::json::value::object();
+    if(m_NotificationFrequencyIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))] = ModelBase::toJson(m_NotificationFrequency);
+    }
     if(m_CreatedAtIsSet)
     {
         
@@ -90,6 +97,17 @@ web::json::value APIUserSubscription::toJson() const
 bool APIUserSubscription::fromJson(const web::json::value& val)
 {
     bool ok = true;
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setNotificationFrequency;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNotificationFrequency);
+            setNotificationFrequency(refVal_setNotificationFrequency);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("createdAt"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("createdAt")));
@@ -177,6 +195,10 @@ void APIUserSubscription::toMultipart(std::shared_ptr<MultipartFormData> multipa
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
+    if(m_NotificationFrequencyIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notificationFrequency")), m_NotificationFrequency));
+    }
     if(m_CreatedAtIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("createdAt")), m_CreatedAt));
@@ -216,6 +238,12 @@ bool APIUserSubscription::fromMultiPart(std::shared_ptr<MultipartFormData> multi
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
 
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))))
+    {
+        double refVal_setNotificationFrequency;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))), refVal_setNotificationFrequency );
+        setNotificationFrequency(refVal_setNotificationFrequency);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("createdAt"))))
     {
         utility::datetime refVal_setCreatedAt;
@@ -262,6 +290,26 @@ bool APIUserSubscription::fromMultiPart(std::shared_ptr<MultipartFormData> multi
 }
 
 
+double APIUserSubscription::getNotificationFrequency() const
+{
+    return m_NotificationFrequency;
+}
+
+void APIUserSubscription::setNotificationFrequency(double value)
+{
+    m_NotificationFrequency = value;
+    m_NotificationFrequencyIsSet = true;
+}
+
+bool APIUserSubscription::notificationFrequencyIsSet() const
+{
+    return m_NotificationFrequencyIsSet;
+}
+
+void APIUserSubscription::unsetNotificationFrequency()
+{
+    m_NotificationFrequencyIsSet = false;
+}
 utility::datetime APIUserSubscription::getCreatedAt() const
 {
     return m_CreatedAt;

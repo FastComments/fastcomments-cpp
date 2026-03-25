@@ -419,6 +419,11 @@ public:
     void unsetEditKey();
     void setEditKey(const utility::string_t& value);
 
+    utility::datetime getTosAcceptedAt() const;
+    bool tosAcceptedAtIsSet() const;
+    void unsetTosAcceptedAt();
+    void setTosAcceptedAt(const utility::datetime& value);
+
 
 protected:
     utility::string_t m__id;
@@ -600,6 +605,9 @@ protected:
 
     utility::string_t m_EditKey;
     bool m_EditKeyIsSet;
+
+    utility::datetime m_TosAcceptedAt;
+    bool m_TosAcceptedAtIsSet;
 
 };
 

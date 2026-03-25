@@ -39,7 +39,7 @@
 | **isLocked** | **Boolean** |  | [optional] [default to null] |
 | **flagCount** | **Integer** |  | [optional] [default to null] |
 | **displayLabel** | **String** |  | [optional] [default to null] |
-| **meta** | [**FComment_meta**](FComment_meta.md) |  | [optional] [default to null] |
+| **meta** | [**APICommentBase_meta**](APICommentBase_meta.md) |  | [optional] [default to null] |
 | **moderationGroupIds** | **List** |  | [optional] [default to null] |
 | **feedbackIds** | **List** |  | [optional] [default to null] |
 

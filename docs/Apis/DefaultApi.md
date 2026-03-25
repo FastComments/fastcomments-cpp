@@ -13,6 +13,7 @@ All URIs are relative to *https://fastcomments.com*
 | [**aggregateQuestionResults**](DefaultApi.md#aggregateQuestionResults) | **GET** /api/v1/question-results-aggregation |  |
 | [**blockUserFromComment**](DefaultApi.md#blockUserFromComment) | **POST** /api/v1/comments/{id}/block |  |
 | [**bulkAggregateQuestionResults**](DefaultApi.md#bulkAggregateQuestionResults) | **POST** /api/v1/question-results-aggregation/bulk |  |
+| [**changeTicketState**](DefaultApi.md#changeTicketState) | **PATCH** /api/v1/tickets/{id}/state |  |
 | [**combineCommentsWithQuestionResults**](DefaultApi.md#combineCommentsWithQuestionResults) | **GET** /api/v1/question-results-aggregation/combine/comments |  |
 | [**createEmailTemplate**](DefaultApi.md#createEmailTemplate) | **POST** /api/v1/email-templates |  |
 | [**createFeedPost**](DefaultApi.md#createFeedPost) | **POST** /api/v1/feed-posts |  |
@@ -23,6 +24,7 @@ All URIs are relative to *https://fastcomments.com*
 | [**createTenant**](DefaultApi.md#createTenant) | **POST** /api/v1/tenants |  |
 | [**createTenantPackage**](DefaultApi.md#createTenantPackage) | **POST** /api/v1/tenant-packages |  |
 | [**createTenantUser**](DefaultApi.md#createTenantUser) | **POST** /api/v1/tenant-users |  |
+| [**createTicket**](DefaultApi.md#createTicket) | **POST** /api/v1/tickets |  |
 | [**createUserBadge**](DefaultApi.md#createUserBadge) | **POST** /api/v1/user-badges |  |
 | [**createVote**](DefaultApi.md#createVote) | **POST** /api/v1/votes |  |
 | [**deleteComment**](DefaultApi.md#deleteComment) | **DELETE** /api/v1/comments/{id} |  |
@@ -79,6 +81,8 @@ All URIs are relative to *https://fastcomments.com*
 | [**getTenantUser**](DefaultApi.md#getTenantUser) | **GET** /api/v1/tenant-users/{id} |  |
 | [**getTenantUsers**](DefaultApi.md#getTenantUsers) | **GET** /api/v1/tenant-users |  |
 | [**getTenants**](DefaultApi.md#getTenants) | **GET** /api/v1/tenants |  |
+| [**getTicket**](DefaultApi.md#getTicket) | **GET** /api/v1/tickets/{id} |  |
+| [**getTickets**](DefaultApi.md#getTickets) | **GET** /api/v1/tickets |  |
 | [**getUser**](DefaultApi.md#getUser) | **GET** /api/v1/users/{id} |  |
 | [**getUserBadge**](DefaultApi.md#getUserBadge) | **GET** /api/v1/user-badges/{id} |  |
 | [**getUserBadgeProgressById**](DefaultApi.md#getUserBadgeProgressById) | **GET** /api/v1/user-badge-progress/{id} |  |
@@ -109,6 +113,7 @@ All URIs are relative to *https://fastcomments.com*
 | [**updateNotification**](DefaultApi.md#updateNotification) | **PATCH** /api/v1/notifications/{id} |  |
 | [**updateQuestionConfig**](DefaultApi.md#updateQuestionConfig) | **PATCH** /api/v1/question-configs/{id} |  |
 | [**updateQuestionResult**](DefaultApi.md#updateQuestionResult) | **PATCH** /api/v1/question-results/{id} |  |
+| [**updateSubscription**](DefaultApi.md#updateSubscription) | **PATCH** /api/v1/subscriptions/{id} |  |
 | [**updateTenant**](DefaultApi.md#updateTenant) | **PATCH** /api/v1/tenants/{id} |  |
 | [**updateTenantPackage**](DefaultApi.md#updateTenantPackage) | **PATCH** /api/v1/tenant-packages/{id} |  |
 | [**updateTenantUser**](DefaultApi.md#updateTenantUser) | **PATCH** /api/v1/tenant-users/{id} |  |
@@ -352,6 +357,34 @@ All URIs are relative to *https://fastcomments.com*
 ### Return type
 
 [**BulkAggregateQuestionResults_200_response**](../Models/BulkAggregateQuestionResults_200_response.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="changeTicketState"></a>
+# **changeTicketState**
+> ChangeTicketState_200_response changeTicketState(tenantId, userId, id, ChangeTicketStateBody)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
+| **userId** | **String**|  | [default to null] |
+| **id** | **String**|  | [default to null] |
+| **ChangeTicketStateBody** | [**ChangeTicketStateBody**](../Models/ChangeTicketStateBody.md)|  | |
+
+### Return type
+
+[**ChangeTicketState_200_response**](../Models/ChangeTicketState_200_response.md)
 
 ### Authorization
 
@@ -623,6 +656,33 @@ All URIs are relative to *https://fastcomments.com*
 ### Return type
 
 [**CreateTenantUser_200_response**](../Models/CreateTenantUser_200_response.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="createTicket"></a>
+# **createTicket**
+> CreateTicket_200_response createTicket(tenantId, userId, CreateTicketBody)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
+| **userId** | **String**|  | [default to null] |
+| **CreateTicketBody** | [**CreateTicketBody**](../Models/CreateTicketBody.md)|  | |
+
+### Return type
+
+[**CreateTicket_200_response**](../Models/CreateTicket_200_response.md)
 
 ### Authorization
 
@@ -2154,6 +2214,62 @@ All URIs are relative to *https://fastcomments.com*
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+<a name="getTicket"></a>
+# **getTicket**
+> GetTicket_200_response getTicket(tenantId, id, userId)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
+| **id** | **String**|  | [default to null] |
+| **userId** | **String**|  | [optional] [default to null] |
+
+### Return type
+
+[**GetTicket_200_response**](../Models/GetTicket_200_response.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="getTickets"></a>
+# **getTickets**
+> GetTickets_200_response getTickets(tenantId, userId, state, skip, limit)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
+| **userId** | **String**|  | [optional] [default to null] |
+| **state** | **Double**|  | [optional] [default to null] |
+| **skip** | **Double**|  | [optional] [default to null] |
+| **limit** | **Double**|  | [optional] [default to null] |
+
+### Return type
+
+[**GetTickets_200_response**](../Models/GetTickets_200_response.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 <a name="getUser"></a>
 # **getUser**
 > GetUser_200_response getUser(tenantId, id)
@@ -2971,6 +3087,34 @@ All URIs are relative to *https://fastcomments.com*
 ### Return type
 
 [**FlagCommentPublic_200_response**](../Models/FlagCommentPublic_200_response.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="updateSubscription"></a>
+# **updateSubscription**
+> UpdateSubscriptionAPIResponse updateSubscription(tenantId, id, UpdateAPIUserSubscriptionData, userId)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
+| **id** | **String**|  | [default to null] |
+| **UpdateAPIUserSubscriptionData** | [**UpdateAPIUserSubscriptionData**](../Models/UpdateAPIUserSubscriptionData.md)|  | |
+| **userId** | **String**|  | [optional] [default to null] |
+
+### Return type
+
+[**UpdateSubscriptionAPIResponse**](../Models/UpdateSubscriptionAPIResponse.md)
 
 ### Authorization
 

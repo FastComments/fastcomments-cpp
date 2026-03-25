@@ -52,6 +52,8 @@ CommentData::CommentData()
     m_AutoplayDelayMSIsSet = false;
     m_FeedbackIdsIsSet = false;
     m_QuestionValuesIsSet = false;
+    m_Tos = false;
+    m_TosIsSet = false;
 }
 
 CommentData::~CommentData()
@@ -185,6 +187,11 @@ web::json::value CommentData::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("questionValues"))] = ModelBase::toJson(m_QuestionValues);
+    }
+    if(m_TosIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("tos"))] = ModelBase::toJson(m_Tos);
     }
 
     return val;
@@ -457,6 +464,17 @@ bool CommentData::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("tos")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setTos;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTos);
+            setTos(refVal_setTos);
+            
+        }
+    }
     return ok;
 }
 
@@ -562,6 +580,10 @@ void CommentData::toMultipart(std::shared_ptr<MultipartFormData> multipart, cons
     if(m_QuestionValuesIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("questionValues")), m_QuestionValues));
+    }
+    if(m_TosIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tos")), m_Tos));
     }
 }
 
@@ -717,6 +739,12 @@ bool CommentData::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, co
         std::map<utility::string_t, std::shared_ptr<Record_string_string_or_number__value>> refVal_setQuestionValues;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("questionValues"))), refVal_setQuestionValues );
         setQuestionValues(refVal_setQuestionValues);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        bool refVal_setTos;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tos"))), refVal_setTos );
+        setTos(refVal_setTos);
     }
     return ok;
 }
@@ -1213,6 +1241,26 @@ bool CommentData::questionValuesIsSet() const
 void CommentData::unsetQuestionValues()
 {
     m_QuestionValuesIsSet = false;
+}
+bool CommentData::isTos() const
+{
+    return m_Tos;
+}
+
+void CommentData::setTos(bool value)
+{
+    m_Tos = value;
+    m_TosIsSet = true;
+}
+
+bool CommentData::tosIsSet() const
+{
+    return m_TosIsSet;
+}
+
+void CommentData::unsetTos()
+{
+    m_TosIsSet = false;
 }
 
 }

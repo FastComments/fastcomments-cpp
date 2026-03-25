@@ -10,6 +10,8 @@
 | **websiteUrl** | **String** |  | [optional] [default to null] |
 | **email** | **String** |  | [default to null] |
 | **pendingEmail** | **String** |  | [optional] [default to null] |
+| **backupEmail** | **String** |  | [optional] [default to null] |
+| **pendingBackupEmail** | **String** |  | [optional] [default to null] |
 | **signUpDate** | **Long** |  | [default to null] |
 | **createdFromUrlId** | **String** |  | [optional] [default to null] |
 | **createdFromTenantId** | **String** |  | [default to null] |
@@ -32,11 +34,16 @@
 | **isManageDataAdmin** | **Boolean** |  | [optional] [default to null] |
 | **isCommentModeratorAdmin** | **Boolean** |  | [optional] [default to null] |
 | **isAPIAdmin** | **Boolean** |  | [optional] [default to null] |
+| **isSiteAdmin** | **Boolean** |  | [optional] [default to null] |
 | **moderatorIds** | **List** |  | [optional] [default to null] |
 | **isImpersonator** | **Boolean** |  | [optional] [default to null] |
 | **isCouponManager** | **Boolean** |  | [optional] [default to null] |
 | **locale** | **String** |  | [optional] [default to null] |
 | **digestEmailFrequency** | [**DigestEmailFrequency**](DigestEmailFrequency.md) |  | [optional] [default to null] |
+| **notificationFrequency** | **Double** |  | [optional] [default to null] |
+| **adminNotificationFrequency** | **Double** |  | [optional] [default to null] |
+| **lastTenantNotificationSentDate** | **Date** |  | [optional] [default to null] |
+| **lastReplyNotificationSentDate** | **Date** |  | [optional] [default to null] |
 | **ignoredAddToMySiteMessages** | **Boolean** |  | [optional] [default to null] |
 | **lastLoginDate** | **Date** |  | [optional] [default to null] |
 | **displayLabel** | **String** |  | [optional] [default to null] |
@@ -54,6 +61,7 @@
 | **countryFlag** | **String** |  | [optional] [default to null] |
 | **socialLinks** | **List** |  | [optional] [default to null] |
 | **hasTwoFactor** | **Boolean** |  | [optional] [default to null] |
+| **isEmailSuppressed** | **Boolean** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

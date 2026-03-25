@@ -20,6 +20,8 @@ namespace model {
 
 FComment_meta::FComment_meta()
 {
+    m_WpId = utility::conversions::to_string_t("");
+    m_WpIdIsSet = false;
     m_WpUserId = utility::conversions::to_string_t("");
     m_WpUserIdIsSet = false;
     m_WpPostId = utility::conversions::to_string_t("");
@@ -39,6 +41,11 @@ void FComment_meta::validate()
 web::json::value FComment_meta::toJson() const
 {
     web::json::value val = web::json::value::object();
+    if(m_WpIdIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("wpId"))] = ModelBase::toJson(m_WpId);
+    }
     if(m_WpUserIdIsSet)
     {
         
@@ -64,6 +71,17 @@ web::json::value FComment_meta::toJson() const
 bool FComment_meta::fromJson(const web::json::value& val)
 {
     bool ok = true;
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("wpId"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("wpId")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setWpId;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setWpId);
+            setWpId(refVal_setWpId);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("wpUserId"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("wpUserId")));
@@ -92,6 +110,7 @@ bool FComment_meta::fromJson(const web::json::value& val)
         for(const auto& item : val.as_object())
         {
             // Skip known properties
+            if(item.first == utility::conversions::to_string_t(_XPLATSTR("wpId"))) continue;
             if(item.first == utility::conversions::to_string_t(_XPLATSTR("wpUserId"))) continue;
             if(item.first == utility::conversions::to_string_t(_XPLATSTR("wpPostId"))) continue;
             // This is an additional property
@@ -108,6 +127,10 @@ void FComment_meta::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     if(namePrefix.size() > 0 && namePrefix.substr(namePrefix.size() - 1) != utility::conversions::to_string_t(_XPLATSTR(".")))
     {
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
+    }
+    if(m_WpIdIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("wpId")), m_WpId));
     }
     if(m_WpUserIdIsSet)
     {
@@ -128,6 +151,12 @@ bool FComment_meta::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         namePrefix += utility::conversions::to_string_t(_XPLATSTR("."));
     }
 
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("wpId"))))
+    {
+        utility::string_t refVal_setWpId;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("wpId"))), refVal_setWpId );
+        setWpId(refVal_setWpId);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("wpUserId"))))
     {
         utility::string_t refVal_setWpUserId;
@@ -144,6 +173,27 @@ bool FComment_meta::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
 }
 
 
+utility::string_t FComment_meta::getWpId() const
+{
+    return m_WpId;
+}
+
+
+void FComment_meta::setWpId(const utility::string_t& value)
+{
+    m_WpId = value;
+    m_WpIdIsSet = true;
+}
+
+bool FComment_meta::wpIdIsSet() const
+{
+    return m_WpIdIsSet;
+}
+
+void FComment_meta::unsetWpId()
+{
+    m_WpIdIsSet = false;
+}
 utility::string_t FComment_meta::getWpUserId() const
 {
     return m_WpUserId;

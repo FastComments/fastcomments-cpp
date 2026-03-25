@@ -35,6 +35,8 @@ UserBadgeProgress::UserBadgeProgress()
     m_ManualTrustFactor = 0.0;
     m_ManualTrustFactorIsSet = false;
     m_ProgressIsSet = false;
+    m_TosAcceptedAt = utility::datetime();
+    m_TosAcceptedAtIsSet = false;
 }
 
 UserBadgeProgress::~UserBadgeProgress()
@@ -88,6 +90,11 @@ web::json::value UserBadgeProgress::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("progress"))] = ModelBase::toJson(m_Progress);
+    }
+    if(m_TosAcceptedAtIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))] = ModelBase::toJson(m_TosAcceptedAt);
     }
 
     return val;
@@ -184,6 +191,17 @@ bool UserBadgeProgress::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt")));
+        if(!fieldValue.is_null())
+        {
+            utility::datetime refVal_setTosAcceptedAt;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTosAcceptedAt);
+            setTosAcceptedAt(refVal_setTosAcceptedAt);
+            
+        }
+    }
     return ok;
 }
 
@@ -225,6 +243,10 @@ void UserBadgeProgress::toMultipart(std::shared_ptr<MultipartFormData> multipart
     if(m_ProgressIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("progress")), m_Progress));
+    }
+    if(m_TosAcceptedAtIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt")), m_TosAcceptedAt));
     }
 }
 
@@ -284,6 +306,12 @@ bool UserBadgeProgress::fromMultiPart(std::shared_ptr<MultipartFormData> multipa
         std::map<utility::string_t, double> refVal_setProgress;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("progress"))), refVal_setProgress );
         setProgress(refVal_setProgress);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))))
+    {
+        utility::datetime refVal_setTosAcceptedAt;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))), refVal_setTosAcceptedAt );
+        setTosAcceptedAt(refVal_setTosAcceptedAt);
     }
     return ok;
 }
@@ -453,6 +481,27 @@ bool UserBadgeProgress::progressIsSet() const
 void UserBadgeProgress::unsetProgress()
 {
     m_ProgressIsSet = false;
+}
+utility::datetime UserBadgeProgress::getTosAcceptedAt() const
+{
+    return m_TosAcceptedAt;
+}
+
+
+void UserBadgeProgress::setTosAcceptedAt(const utility::datetime& value)
+{
+    m_TosAcceptedAt = value;
+    m_TosAcceptedAtIsSet = true;
+}
+
+bool UserBadgeProgress::tosAcceptedAtIsSet() const
+{
+    return m_TosAcceptedAtIsSet;
+}
+
+void UserBadgeProgress::unsetTosAcceptedAt()
+{
+    m_TosAcceptedAtIsSet = false;
 }
 
 }

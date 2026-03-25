@@ -107,6 +107,11 @@ public:
     void unsetIsAnonSession();
     void setIsAnonSession(bool value);
 
+    bool isNeedsTOS() const;
+    bool needsTOSIsSet() const;
+    void unsetNeedsTOS();
+    void setNeedsTOS(bool value);
+
     utility::string_t getSessionId() const;
     bool sessionIdIsSet() const;
     void unsetSessionId();
@@ -151,6 +156,9 @@ protected:
 
     bool m_IsAnonSession;
     bool m_IsAnonSessionIsSet;
+
+    bool m_NeedsTOS;
+    bool m_NeedsTOSIsSet;
 
     boost::optional<utility::string_t> m_SessionId;
 

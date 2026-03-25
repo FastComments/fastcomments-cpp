@@ -145,6 +145,11 @@ public:
     void unsetModerationGroupIds();
     void setModerationGroupIds(const std::vector<utility::string_t>& value);
 
+    bool isIsEmailSuppressed() const;
+    bool isEmailSuppressedIsSet() const;
+    void unsetIsEmailSuppressed();
+    void setIsEmailSuppressed(bool value);
+
 
 protected:
     utility::string_t m__id;
@@ -195,6 +200,9 @@ protected:
     bool m_CreatedAtIsSet;
 
     boost::optional<std::vector<utility::string_t>> m_ModerationGroupIds;
+
+    bool m_IsEmailSuppressed;
+    bool m_IsEmailSuppressedIsSet;
 
 };
 

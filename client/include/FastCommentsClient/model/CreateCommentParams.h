@@ -185,6 +185,11 @@ public:
     void unsetQuestionValues();
     void setQuestionValues(const std::map<utility::string_t, std::shared_ptr<Record_string_string_or_number__value>>& value);
 
+    bool isTos() const;
+    bool tosIsSet() const;
+    void unsetTos();
+    void setTos(bool value);
+
     bool isApproved() const;
     bool approvedIsSet() const;
     void unsetApproved();
@@ -306,6 +311,9 @@ protected:
 
     std::map<utility::string_t, std::shared_ptr<Record_string_string_or_number__value>> m_QuestionValues;
     bool m_QuestionValuesIsSet;
+
+    bool m_Tos;
+    bool m_TosIsSet;
 
     bool m_Approved;
     bool m_ApprovedIsSet;

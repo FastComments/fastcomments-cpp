@@ -27,6 +27,8 @@
 | **disableEmailInputs** | **Boolean** |  | [optional] [default to null] |
 | **disableLiveCommenting** | **Boolean** |  | [optional] [default to null] |
 | **disableNotificationBell** | **Boolean** |  | [optional] [default to null] |
+| **disableProfileComments** | **Boolean** |  | [optional] [default to null] |
+| **disableProfileDirectMessages** | **Boolean** |  | [optional] [default to null] |
 | **disableProfiles** | **Boolean** |  | [optional] [default to null] |
 | **disableSuccessMessage** | **Boolean** |  | [optional] [default to null] |
 | **disableToolbar** | **Boolean** |  | [optional] [default to null] |
@@ -51,6 +53,7 @@
 | **maxCommentCharacterLength** | **Integer** |  | [optional] [default to null] |
 | **maxCommentCreatedCountPUPM** | **Integer** |  | [optional] [default to null] |
 | **noCustomConfig** | **Boolean** |  | [optional] [default to null] |
+| **mentionAutoCompleteMode** | [**MentionAutoCompleteMode**](MentionAutoCompleteMode.md) |  | [optional] [default to null] |
 | **noImageUploads** | **Boolean** |  | [optional] [default to null] |
 | **noStyles** | **Boolean** |  | [optional] [default to null] |
 | **pageSize** | **Integer** |  | [optional] [default to null] |
@@ -71,11 +74,18 @@
 | **voteStyle** | [**VoteStyle**](VoteStyle.md) |  | [optional] [default to null] |
 | **widgetQuestionId** | **String** |  | [optional] [default to null] |
 | **widgetQuestionResultsStyle** | [**CommentQuestionResultsRenderingType**](CommentQuestionResultsRenderingType.md) |  | [optional] [default to null] |
+| **widgetQuestionShowBreakdown** | **Boolean** |  | [optional] [default to null] |
 | **widgetQuestionStyle** | [**QuestionRenderingType**](QuestionRenderingType.md) |  | [optional] [default to null] |
 | **widgetQuestionWhenToSave** | [**QuestionWhenSave**](QuestionWhenSave.md) |  | [optional] [default to null] |
 | **widgetQuestionsRequired** | [**CommentQuestionsRequired**](CommentQuestionsRequired.md) |  | [optional] [default to null] |
 | **widgetSubQuestionVisibility** | [**QuestionSubQuestionVisibility**](QuestionSubQuestionVisibility.md) |  | [optional] [default to null] |
 | **wrap** | **Boolean** |  | [optional] [default to null] |
+| **ticketBaseUrl** | **String** |  | [optional] [default to null] |
+| **ticketKBSearchEndpoint** | **String** |  | [optional] [default to null] |
+| **ticketFileUploadsEnabled** | **Boolean** |  | [optional] [default to null] |
+| **ticketMaxFileSize** | **Integer** |  | [optional] [default to null] |
+| **ticketAutoAssignUserIds** | **List** |  | [optional] [default to null] |
+| **tos** | [**TOSConfig**](TOSConfig.md) |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@
 #include "FastCommentsClient/ModelBase.h"
 
 #include "FastCommentsClient/model/CommentUserBadgeInfo.h"
-#include "FastCommentsClient/model/FComment_meta.h"
+#include "FastCommentsClient/model/APICommentBase_meta.h"
 #include "FastCommentsClient/model/CommentUserHashTagInfo.h"
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/model/CommentUserMentionInfo.h"
@@ -237,10 +237,10 @@ public:
     void unsetMentions();
     void setMentions(const std::vector<std::shared_ptr<CommentUserMentionInfo>>& value);
 
-    std::shared_ptr<FComment_meta> getMeta() const;
+    std::shared_ptr<APICommentBase_meta> getMeta() const;
     bool metaIsSet() const;
     void unsetMeta();
-    void setMeta(const std::shared_ptr<FComment_meta>& value);
+    void setMeta(const std::shared_ptr<APICommentBase_meta>& value);
 
     std::vector<utility::string_t> getModerationGroupIds() const;
     bool moderationGroupIdsIsSet() const;
@@ -418,7 +418,7 @@ protected:
     std::vector<std::shared_ptr<CommentUserMentionInfo>> m_Mentions;
     bool m_MentionsIsSet;
 
-    boost::optional<std::shared_ptr<FComment_meta>> m_Meta;
+    boost::optional<std::shared_ptr<APICommentBase_meta>> m_Meta;
 
     boost::optional<std::vector<utility::string_t>> m_ModerationGroupIds;
 

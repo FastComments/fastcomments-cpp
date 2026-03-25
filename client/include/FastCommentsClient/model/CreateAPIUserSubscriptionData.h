@@ -54,6 +54,11 @@ public:
     /// CreateAPIUserSubscriptionData members
 
 
+    double getNotificationFrequency() const;
+    bool notificationFrequencyIsSet() const;
+    void unsetNotificationFrequency();
+    void setNotificationFrequency(double value);
+
     utility::string_t getPageTitle() const;
     bool pageTitleIsSet() const;
     void unsetPageTitle();
@@ -81,6 +86,9 @@ public:
 
 
 protected:
+    double m_NotificationFrequency;
+    bool m_NotificationFrequencyIsSet;
+
     utility::string_t m_PageTitle;
     bool m_PageTitleIsSet;
 

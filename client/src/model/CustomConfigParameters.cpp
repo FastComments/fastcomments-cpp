@@ -51,6 +51,10 @@ CustomConfigParameters::CustomConfigParameters()
     m_DisableLiveCommentingIsSet = false;
     m_DisableNotificationBell = false;
     m_DisableNotificationBellIsSet = false;
+    m_DisableProfileComments = false;
+    m_DisableProfileCommentsIsSet = false;
+    m_DisableProfileDirectMessages = false;
+    m_DisableProfileDirectMessagesIsSet = false;
     m_DisableProfiles = false;
     m_DisableProfilesIsSet = false;
     m_DisableSuccessMessage = false;
@@ -117,12 +121,24 @@ CustomConfigParameters::CustomConfigParameters()
     m_WidgetQuestionId = utility::conversions::to_string_t("");
     m_WidgetQuestionIdIsSet = false;
     m_WidgetQuestionResultsStyleIsSet = false;
+    m_WidgetQuestionShowBreakdown = false;
+    m_WidgetQuestionShowBreakdownIsSet = false;
     m_WidgetQuestionStyleIsSet = false;
     m_WidgetQuestionWhenToSaveIsSet = false;
     m_WidgetQuestionsRequiredIsSet = false;
     m_WidgetSubQuestionVisibilityIsSet = false;
     m_Wrap = false;
     m_WrapIsSet = false;
+    m_TicketBaseUrl = utility::conversions::to_string_t("");
+    m_TicketBaseUrlIsSet = false;
+    m_TicketKBSearchEndpoint = utility::conversions::to_string_t("");
+    m_TicketKBSearchEndpointIsSet = false;
+    m_TicketFileUploadsEnabled = false;
+    m_TicketFileUploadsEnabledIsSet = false;
+    m_TicketMaxFileSize = 0;
+    m_TicketMaxFileSizeIsSet = false;
+    m_TicketAutoAssignUserIdsIsSet = false;
+    m_TosIsSet = false;
 }
 
 CustomConfigParameters::~CustomConfigParameters()
@@ -257,6 +273,16 @@ web::json::value CustomConfigParameters::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("disableNotificationBell"))] = ModelBase::toJson(m_DisableNotificationBell);
     }
+    if(m_DisableProfileCommentsIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("disableProfileComments"))] = ModelBase::toJson(m_DisableProfileComments);
+    }
+    if(m_DisableProfileDirectMessagesIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages"))] = ModelBase::toJson(m_DisableProfileDirectMessages);
+    }
     if(m_DisableProfilesIsSet)
     {
         
@@ -377,6 +403,11 @@ web::json::value CustomConfigParameters::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("noCustomConfig"))] = ModelBase::toJson(m_NoCustomConfig);
     }
+    if(m_MentionAutoCompleteMode.has_value())
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode"))] = ModelBase::toJson(m_MentionAutoCompleteMode.get());
+    }
     if(m_NoImageUploadsIsSet)
     {
         
@@ -477,6 +508,11 @@ web::json::value CustomConfigParameters::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionResultsStyle"))] = ModelBase::toJson(m_WidgetQuestionResultsStyle);
     }
+    if(m_WidgetQuestionShowBreakdownIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown"))] = ModelBase::toJson(m_WidgetQuestionShowBreakdown);
+    }
     if(m_WidgetQuestionStyleIsSet)
     {
         
@@ -501,6 +537,36 @@ web::json::value CustomConfigParameters::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("wrap"))] = ModelBase::toJson(m_Wrap);
+    }
+    if(m_TicketBaseUrlIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl"))] = ModelBase::toJson(m_TicketBaseUrl);
+    }
+    if(m_TicketKBSearchEndpointIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint"))] = ModelBase::toJson(m_TicketKBSearchEndpoint);
+    }
+    if(m_TicketFileUploadsEnabledIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled"))] = ModelBase::toJson(m_TicketFileUploadsEnabled);
+    }
+    if(m_TicketMaxFileSizeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize"))] = ModelBase::toJson(m_TicketMaxFileSize);
+    }
+    if(m_TicketAutoAssignUserIdsIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds"))] = ModelBase::toJson(m_TicketAutoAssignUserIds);
+    }
+    if(m_TosIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("tos"))] = ModelBase::toJson(m_Tos);
     }
 
     return val;
@@ -773,6 +839,28 @@ bool CustomConfigParameters::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("disableProfileComments"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("disableProfileComments")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setDisableProfileComments;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDisableProfileComments);
+            setDisableProfileComments(refVal_setDisableProfileComments);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setDisableProfileDirectMessages;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setDisableProfileDirectMessages);
+            setDisableProfileDirectMessages(refVal_setDisableProfileDirectMessages);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("disableProfiles"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("disableProfiles")));
@@ -1037,6 +1125,17 @@ bool CustomConfigParameters::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode")));
+        if(!fieldValue.is_null())
+        {
+            std::shared_ptr<MentionAutoCompleteMode> refVal_setMentionAutoCompleteMode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setMentionAutoCompleteMode);
+            setMentionAutoCompleteMode(refVal_setMentionAutoCompleteMode);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("noImageUploads"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("noImageUploads")));
@@ -1257,6 +1356,17 @@ bool CustomConfigParameters::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setWidgetQuestionShowBreakdown;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setWidgetQuestionShowBreakdown);
+            setWidgetQuestionShowBreakdown(refVal_setWidgetQuestionShowBreakdown);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionStyle"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionStyle")));
@@ -1309,6 +1419,72 @@ bool CustomConfigParameters::fromJson(const web::json::value& val)
             bool refVal_setWrap;
             ok &= ModelBase::fromJson(fieldValue, refVal_setWrap);
             setWrap(refVal_setWrap);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setTicketBaseUrl;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTicketBaseUrl);
+            setTicketBaseUrl(refVal_setTicketBaseUrl);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setTicketKBSearchEndpoint;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTicketKBSearchEndpoint);
+            setTicketKBSearchEndpoint(refVal_setTicketKBSearchEndpoint);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setTicketFileUploadsEnabled;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTicketFileUploadsEnabled);
+            setTicketFileUploadsEnabled(refVal_setTicketFileUploadsEnabled);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize")));
+        if(!fieldValue.is_null())
+        {
+            int32_t refVal_setTicketMaxFileSize;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTicketMaxFileSize);
+            setTicketMaxFileSize(refVal_setTicketMaxFileSize);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds")));
+        if(!fieldValue.is_null())
+        {
+            std::vector<utility::string_t> refVal_setTicketAutoAssignUserIds;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTicketAutoAssignUserIds);
+            setTicketAutoAssignUserIds(refVal_setTicketAutoAssignUserIds);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("tos")));
+        if(!fieldValue.is_null())
+        {
+            std::shared_ptr<TOSConfig> refVal_setTos;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTos);
+            setTos(refVal_setTos);
             
         }
     }
@@ -1418,6 +1594,14 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("disableNotificationBell")), m_DisableNotificationBell));
     }
+    if(m_DisableProfileCommentsIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("disableProfileComments")), m_DisableProfileComments));
+    }
+    if(m_DisableProfileDirectMessagesIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages")), m_DisableProfileDirectMessages));
+    }
     if(m_DisableProfilesIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("disableProfiles")), m_DisableProfiles));
@@ -1514,6 +1698,10 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("noCustomConfig")), m_NoCustomConfig));
     }
+    if(m_MentionAutoCompleteMode.has_value())
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode")), m_MentionAutoCompleteMode.get()));
+    }
     if(m_NoImageUploadsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("noImageUploads")), m_NoImageUploads));
@@ -1594,6 +1782,10 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("widgetQuestionResultsStyle")), m_WidgetQuestionResultsStyle));
     }
+    if(m_WidgetQuestionShowBreakdownIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown")), m_WidgetQuestionShowBreakdown));
+    }
     if(m_WidgetQuestionStyleIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("widgetQuestionStyle")), m_WidgetQuestionStyle));
@@ -1613,6 +1805,30 @@ void CustomConfigParameters::toMultipart(std::shared_ptr<MultipartFormData> mult
     if(m_WrapIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("wrap")), m_Wrap));
+    }
+    if(m_TicketBaseUrlIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl")), m_TicketBaseUrl));
+    }
+    if(m_TicketKBSearchEndpointIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint")), m_TicketKBSearchEndpoint));
+    }
+    if(m_TicketFileUploadsEnabledIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled")), m_TicketFileUploadsEnabled));
+    }
+    if(m_TicketMaxFileSizeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize")), m_TicketMaxFileSize));
+    }
+    if(m_TicketAutoAssignUserIdsIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds")), m_TicketAutoAssignUserIds));
+    }
+    if(m_TosIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tos")), m_Tos));
     }
 }
 
@@ -1769,6 +1985,18 @@ bool CustomConfigParameters::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("disableNotificationBell"))), refVal_setDisableNotificationBell );
         setDisableNotificationBell(refVal_setDisableNotificationBell);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("disableProfileComments"))))
+    {
+        bool refVal_setDisableProfileComments;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("disableProfileComments"))), refVal_setDisableProfileComments );
+        setDisableProfileComments(refVal_setDisableProfileComments);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages"))))
+    {
+        bool refVal_setDisableProfileDirectMessages;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("disableProfileDirectMessages"))), refVal_setDisableProfileDirectMessages );
+        setDisableProfileDirectMessages(refVal_setDisableProfileDirectMessages);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("disableProfiles"))))
     {
         bool refVal_setDisableProfiles;
@@ -1913,6 +2141,12 @@ bool CustomConfigParameters::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("noCustomConfig"))), refVal_setNoCustomConfig );
         setNoCustomConfig(refVal_setNoCustomConfig);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode"))))
+    {
+        std::shared_ptr<MentionAutoCompleteMode> refVal_setMentionAutoCompleteMode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("mentionAutoCompleteMode"))), refVal_setMentionAutoCompleteMode );
+        setMentionAutoCompleteMode(refVal_setMentionAutoCompleteMode);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("noImageUploads"))))
     {
         bool refVal_setNoImageUploads;
@@ -2033,6 +2267,12 @@ bool CustomConfigParameters::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionResultsStyle"))), refVal_setWidgetQuestionResultsStyle );
         setWidgetQuestionResultsStyle(refVal_setWidgetQuestionResultsStyle);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown"))))
+    {
+        bool refVal_setWidgetQuestionShowBreakdown;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionShowBreakdown"))), refVal_setWidgetQuestionShowBreakdown );
+        setWidgetQuestionShowBreakdown(refVal_setWidgetQuestionShowBreakdown);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("widgetQuestionStyle"))))
     {
         std::shared_ptr<QuestionRenderingType> refVal_setWidgetQuestionStyle;
@@ -2062,6 +2302,42 @@ bool CustomConfigParameters::fromMultiPart(std::shared_ptr<MultipartFormData> mu
         bool refVal_setWrap;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("wrap"))), refVal_setWrap );
         setWrap(refVal_setWrap);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl"))))
+    {
+        utility::string_t refVal_setTicketBaseUrl;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("ticketBaseUrl"))), refVal_setTicketBaseUrl );
+        setTicketBaseUrl(refVal_setTicketBaseUrl);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint"))))
+    {
+        utility::string_t refVal_setTicketKBSearchEndpoint;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("ticketKBSearchEndpoint"))), refVal_setTicketKBSearchEndpoint );
+        setTicketKBSearchEndpoint(refVal_setTicketKBSearchEndpoint);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled"))))
+    {
+        bool refVal_setTicketFileUploadsEnabled;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("ticketFileUploadsEnabled"))), refVal_setTicketFileUploadsEnabled );
+        setTicketFileUploadsEnabled(refVal_setTicketFileUploadsEnabled);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize"))))
+    {
+        int32_t refVal_setTicketMaxFileSize;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("ticketMaxFileSize"))), refVal_setTicketMaxFileSize );
+        setTicketMaxFileSize(refVal_setTicketMaxFileSize);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds"))))
+    {
+        std::vector<utility::string_t> refVal_setTicketAutoAssignUserIds;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("ticketAutoAssignUserIds"))), refVal_setTicketAutoAssignUserIds );
+        setTicketAutoAssignUserIds(refVal_setTicketAutoAssignUserIds);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("tos"))))
+    {
+        std::shared_ptr<TOSConfig> refVal_setTos;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tos"))), refVal_setTos );
+        setTos(refVal_setTos);
     }
     return ok;
 }
@@ -2548,6 +2824,46 @@ void CustomConfigParameters::unsetDisableNotificationBell()
 {
     m_DisableNotificationBellIsSet = false;
 }
+bool CustomConfigParameters::isDisableProfileComments() const
+{
+    return m_DisableProfileComments;
+}
+
+void CustomConfigParameters::setDisableProfileComments(bool value)
+{
+    m_DisableProfileComments = value;
+    m_DisableProfileCommentsIsSet = true;
+}
+
+bool CustomConfigParameters::disableProfileCommentsIsSet() const
+{
+    return m_DisableProfileCommentsIsSet;
+}
+
+void CustomConfigParameters::unsetDisableProfileComments()
+{
+    m_DisableProfileCommentsIsSet = false;
+}
+bool CustomConfigParameters::isDisableProfileDirectMessages() const
+{
+    return m_DisableProfileDirectMessages;
+}
+
+void CustomConfigParameters::setDisableProfileDirectMessages(bool value)
+{
+    m_DisableProfileDirectMessages = value;
+    m_DisableProfileDirectMessagesIsSet = true;
+}
+
+bool CustomConfigParameters::disableProfileDirectMessagesIsSet() const
+{
+    return m_DisableProfileDirectMessagesIsSet;
+}
+
+void CustomConfigParameters::unsetDisableProfileDirectMessages()
+{
+    m_DisableProfileDirectMessagesIsSet = false;
+}
 bool CustomConfigParameters::isDisableProfiles() const
 {
     return m_DisableProfiles;
@@ -3028,6 +3344,26 @@ void CustomConfigParameters::unsetNoCustomConfig()
 {
     m_NoCustomConfigIsSet = false;
 }
+std::shared_ptr<MentionAutoCompleteMode> CustomConfigParameters::getMentionAutoCompleteMode() const
+{
+    return m_MentionAutoCompleteMode.get();
+}
+
+
+void CustomConfigParameters::setMentionAutoCompleteMode(const std::shared_ptr<MentionAutoCompleteMode>& value)
+{
+    m_MentionAutoCompleteMode = value;
+}
+
+bool CustomConfigParameters::mentionAutoCompleteModeIsSet() const
+{
+    return m_MentionAutoCompleteMode.has_value();
+}
+
+void CustomConfigParameters::unsetMentionAutoCompleteMode()
+{
+    m_MentionAutoCompleteMode.reset();
+}
 bool CustomConfigParameters::isNoImageUploads() const
 {
     return m_NoImageUploads;
@@ -3432,6 +3768,26 @@ void CustomConfigParameters::unsetWidgetQuestionResultsStyle()
 {
     m_WidgetQuestionResultsStyleIsSet = false;
 }
+bool CustomConfigParameters::isWidgetQuestionShowBreakdown() const
+{
+    return m_WidgetQuestionShowBreakdown;
+}
+
+void CustomConfigParameters::setWidgetQuestionShowBreakdown(bool value)
+{
+    m_WidgetQuestionShowBreakdown = value;
+    m_WidgetQuestionShowBreakdownIsSet = true;
+}
+
+bool CustomConfigParameters::widgetQuestionShowBreakdownIsSet() const
+{
+    return m_WidgetQuestionShowBreakdownIsSet;
+}
+
+void CustomConfigParameters::unsetWidgetQuestionShowBreakdown()
+{
+    m_WidgetQuestionShowBreakdownIsSet = false;
+}
 std::shared_ptr<QuestionRenderingType> CustomConfigParameters::getWidgetQuestionStyle() const
 {
     return m_WidgetQuestionStyle;
@@ -3535,6 +3891,130 @@ bool CustomConfigParameters::wrapIsSet() const
 void CustomConfigParameters::unsetWrap()
 {
     m_WrapIsSet = false;
+}
+utility::string_t CustomConfigParameters::getTicketBaseUrl() const
+{
+    return m_TicketBaseUrl;
+}
+
+
+void CustomConfigParameters::setTicketBaseUrl(const utility::string_t& value)
+{
+    m_TicketBaseUrl = value;
+    m_TicketBaseUrlIsSet = true;
+}
+
+bool CustomConfigParameters::ticketBaseUrlIsSet() const
+{
+    return m_TicketBaseUrlIsSet;
+}
+
+void CustomConfigParameters::unsetTicketBaseUrl()
+{
+    m_TicketBaseUrlIsSet = false;
+}
+utility::string_t CustomConfigParameters::getTicketKBSearchEndpoint() const
+{
+    return m_TicketKBSearchEndpoint;
+}
+
+
+void CustomConfigParameters::setTicketKBSearchEndpoint(const utility::string_t& value)
+{
+    m_TicketKBSearchEndpoint = value;
+    m_TicketKBSearchEndpointIsSet = true;
+}
+
+bool CustomConfigParameters::ticketKBSearchEndpointIsSet() const
+{
+    return m_TicketKBSearchEndpointIsSet;
+}
+
+void CustomConfigParameters::unsetTicketKBSearchEndpoint()
+{
+    m_TicketKBSearchEndpointIsSet = false;
+}
+bool CustomConfigParameters::isTicketFileUploadsEnabled() const
+{
+    return m_TicketFileUploadsEnabled;
+}
+
+void CustomConfigParameters::setTicketFileUploadsEnabled(bool value)
+{
+    m_TicketFileUploadsEnabled = value;
+    m_TicketFileUploadsEnabledIsSet = true;
+}
+
+bool CustomConfigParameters::ticketFileUploadsEnabledIsSet() const
+{
+    return m_TicketFileUploadsEnabledIsSet;
+}
+
+void CustomConfigParameters::unsetTicketFileUploadsEnabled()
+{
+    m_TicketFileUploadsEnabledIsSet = false;
+}
+int32_t CustomConfigParameters::getTicketMaxFileSize() const
+{
+    return m_TicketMaxFileSize;
+}
+
+void CustomConfigParameters::setTicketMaxFileSize(int32_t value)
+{
+    m_TicketMaxFileSize = value;
+    m_TicketMaxFileSizeIsSet = true;
+}
+
+bool CustomConfigParameters::ticketMaxFileSizeIsSet() const
+{
+    return m_TicketMaxFileSizeIsSet;
+}
+
+void CustomConfigParameters::unsetTicketMaxFileSize()
+{
+    m_TicketMaxFileSizeIsSet = false;
+}
+std::vector<utility::string_t> CustomConfigParameters::getTicketAutoAssignUserIds() const
+{
+    return m_TicketAutoAssignUserIds;
+}
+
+
+void CustomConfigParameters::setTicketAutoAssignUserIds(const std::vector<utility::string_t>& value)
+{
+    m_TicketAutoAssignUserIds = value;
+    m_TicketAutoAssignUserIdsIsSet = true;
+}
+
+bool CustomConfigParameters::ticketAutoAssignUserIdsIsSet() const
+{
+    return m_TicketAutoAssignUserIdsIsSet;
+}
+
+void CustomConfigParameters::unsetTicketAutoAssignUserIds()
+{
+    m_TicketAutoAssignUserIdsIsSet = false;
+}
+std::shared_ptr<TOSConfig> CustomConfigParameters::getTos() const
+{
+    return m_Tos;
+}
+
+
+void CustomConfigParameters::setTos(const std::shared_ptr<TOSConfig>& value)
+{
+    m_Tos = value;
+    m_TosIsSet = true;
+}
+
+bool CustomConfigParameters::tosIsSet() const
+{
+    return m_TosIsSet;
+}
+
+void CustomConfigParameters::unsetTos()
+{
+    m_TosIsSet = false;
 }
 
 }

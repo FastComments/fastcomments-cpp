@@ -14,6 +14,7 @@
 | **maxSSOUsers** | **Double** |  | [default to null] |
 | **maxModerators** | **Double** |  | [default to null] |
 | **maxDomains** | **Double** |  | [default to null] |
+| **maxCustomCollectionSize** | **Double** |  | [optional] [default to null] |
 | **hasDebranding** | **Boolean** |  | [default to null] |
 | **forWhoText** | **String** |  | [default to null] |
 | **featureTaglines** | **List** |  | [default to null] |

@@ -27,6 +27,7 @@
 | **autoplayDelayMS** | **Long** |  | [optional] [default to null] |
 | **feedbackIds** | **List** |  | [optional] [default to null] |
 | **questionValues** | [**Map**](Record_string_string_or_number__value.md) | Construct a type with a set of properties K of type T | [optional] [default to null] |
+| **tos** | **Boolean** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

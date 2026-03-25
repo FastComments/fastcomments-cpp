@@ -25,17 +25,20 @@
 
 #include "FastCommentsClient/model/SearchUsersResponse.h"
 #include "FastCommentsClient/model/CustomConfigParameters.h"
+#include "FastCommentsClient/model/UserSearchSectionResult.h"
 #include <cpprest/details/basic_types.h>
 #include "FastCommentsClient/model/UserSearchResult.h"
 #include <vector>
 #include "FastCommentsClient/model/APIError.h"
 #include "FastCommentsClient/model/APIStatus.h"
+#include "FastCommentsClient/model/SearchUsersSectionedResponse.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
+class UserSearchSectionResult;
 class UserSearchResult;
 class CustomConfigParameters;
 
@@ -67,6 +70,11 @@ public:
     bool statusIsSet() const;
     void unsetStatus();
     void setStatus(const std::shared_ptr<APIStatus>& value);
+
+    std::vector<std::shared_ptr<UserSearchSectionResult>> getSections() const;
+    bool sectionsIsSet() const;
+    void unsetSections();
+    void setSections(const std::vector<std::shared_ptr<UserSearchSectionResult>>& value);
 
     std::vector<std::shared_ptr<UserSearchResult>> getUsers() const;
     bool usersIsSet() const;
@@ -112,6 +120,9 @@ public:
 protected:
     std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
+
+    std::vector<std::shared_ptr<UserSearchSectionResult>> m_Sections;
+    bool m_SectionsIsSet;
 
     std::vector<std::shared_ptr<UserSearchResult>> m_Users;
     bool m_UsersIsSet;

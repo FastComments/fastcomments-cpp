@@ -38,7 +38,7 @@
 | **localDateString** | **String** |  | [optional] [default to null] |
 | **locale** | **String** |  | [default to null] |
 | **mentions** | [**List**](CommentUserMentionInfo.md) |  | [optional] [default to null] |
-| **meta** | [**FComment_meta**](FComment_meta.md) |  | [optional] [default to null] |
+| **meta** | [**APICommentBase_meta**](APICommentBase_meta.md) |  | [optional] [default to null] |
 | **moderationGroupIds** | **List** |  | [optional] [default to null] |
 | **notificationSentForParent** | **Boolean** |  | [optional] [default to null] |
 | **notificationSentForParentTenant** | **Boolean** |  | [optional] [default to null] |

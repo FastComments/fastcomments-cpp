@@ -21,6 +21,7 @@ namespace model {
 SearchUsers_200_response::SearchUsers_200_response()
 {
     m_StatusIsSet = false;
+    m_SectionsIsSet = false;
     m_UsersIsSet = false;
     m_Reason = utility::conversions::to_string_t("");
     m_ReasonIsSet = false;
@@ -53,6 +54,11 @@ web::json::value SearchUsers_200_response::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("status"))] = ModelBase::toJson(m_Status);
+    }
+    if(m_SectionsIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("sections"))] = ModelBase::toJson(m_Sections);
     }
     if(m_UsersIsSet)
     {
@@ -109,6 +115,17 @@ bool SearchUsers_200_response::fromJson(const web::json::value& val)
             std::shared_ptr<APIStatus> refVal_setStatus;
             ok &= ModelBase::fromJson(fieldValue, refVal_setStatus);
             setStatus(refVal_setStatus);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("sections"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("sections")));
+        if(!fieldValue.is_null())
+        {
+            std::vector<std::shared_ptr<UserSearchSectionResult>> refVal_setSections;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setSections);
+            setSections(refVal_setSections);
             
         }
     }
@@ -214,6 +231,10 @@ void SearchUsers_200_response::toMultipart(std::shared_ptr<MultipartFormData> mu
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("status")), m_Status));
     }
+    if(m_SectionsIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sections")), m_Sections));
+    }
     if(m_UsersIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("users")), m_Users));
@@ -262,6 +283,12 @@ bool SearchUsers_200_response::fromMultiPart(std::shared_ptr<MultipartFormData> 
         std::shared_ptr<APIStatus> refVal_setStatus;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("status"))), refVal_setStatus );
         setStatus(refVal_setStatus);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("sections"))))
+    {
+        std::vector<std::shared_ptr<UserSearchSectionResult>> refVal_setSections;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("sections"))), refVal_setSections );
+        setSections(refVal_setSections);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("users"))))
     {
@@ -335,6 +362,27 @@ bool SearchUsers_200_response::statusIsSet() const
 void SearchUsers_200_response::unsetStatus()
 {
     m_StatusIsSet = false;
+}
+std::vector<std::shared_ptr<UserSearchSectionResult>> SearchUsers_200_response::getSections() const
+{
+    return m_Sections;
+}
+
+
+void SearchUsers_200_response::setSections(const std::vector<std::shared_ptr<UserSearchSectionResult>>& value)
+{
+    m_Sections = value;
+    m_SectionsIsSet = true;
+}
+
+bool SearchUsers_200_response::sectionsIsSet() const
+{
+    return m_SectionsIsSet;
+}
+
+void SearchUsers_200_response::unsetSections()
+{
+    m_SectionsIsSet = false;
 }
 std::vector<std::shared_ptr<UserSearchResult>> SearchUsers_200_response::getUsers() const
 {

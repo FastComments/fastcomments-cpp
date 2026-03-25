@@ -553,12 +553,14 @@ public:
     /// <param name="usernameStartsWith"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="mentionGroupIds"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="searchSection"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<SearchUsers_200_response>> searchUsers(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> usernameStartsWith,
         boost::optional<std::vector<utility::string_t>> mentionGroupIds,
-        boost::optional<utility::string_t> sso
+        boost::optional<utility::string_t> sso,
+        boost::optional<utility::string_t> searchSection
     ) const;
     /// <summary>
     /// 

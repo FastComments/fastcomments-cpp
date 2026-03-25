@@ -28,6 +28,10 @@ User::User()
     m_DisplayNameIsSet = false;
     m_PendingEmail = utility::conversions::to_string_t("");
     m_PendingEmailIsSet = false;
+    m_BackupEmail = utility::conversions::to_string_t("");
+    m_BackupEmailIsSet = false;
+    m_PendingBackupEmail = utility::conversions::to_string_t("");
+    m_PendingBackupEmailIsSet = false;
     m_SignUpDate = 0L;
     m_SignUpDateIsSet = false;
     m_CreatedFromIpHashed = utility::conversions::to_string_t("");
@@ -66,6 +70,8 @@ User::User()
     m_IsCommentModeratorAdminIsSet = false;
     m_IsAPIAdmin = false;
     m_IsAPIAdminIsSet = false;
+    m_IsSiteAdmin = false;
+    m_IsSiteAdminIsSet = false;
     m_ModeratorIdsIsSet = false;
     m_IsImpersonator = false;
     m_IsImpersonatorIsSet = false;
@@ -74,6 +80,14 @@ User::User()
     m_Locale = utility::conversions::to_string_t("");
     m_LocaleIsSet = false;
     m_DigestEmailFrequencyIsSet = false;
+    m_NotificationFrequency = 0.0;
+    m_NotificationFrequencyIsSet = false;
+    m_AdminNotificationFrequency = 0.0;
+    m_AdminNotificationFrequencyIsSet = false;
+    m_LastTenantNotificationSentDate = utility::datetime();
+    m_LastTenantNotificationSentDateIsSet = false;
+    m_LastReplyNotificationSentDate = utility::datetime();
+    m_LastReplyNotificationSentDateIsSet = false;
     m_IgnoredAddToMySiteMessages = false;
     m_IgnoredAddToMySiteMessagesIsSet = false;
     m_LastLoginDate = utility::datetime();
@@ -105,6 +119,8 @@ User::User()
     m_SocialLinksIsSet = false;
     m_HasTwoFactor = false;
     m_HasTwoFactorIsSet = false;
+    m_IsEmailSuppressed = false;
+    m_IsEmailSuppressedIsSet = false;
 }
 
 User::~User()
@@ -153,6 +169,16 @@ web::json::value User::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("pendingEmail"))] = ModelBase::toJson(m_PendingEmail);
+    }
+    if(m_BackupEmailIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("backupEmail"))] = ModelBase::toJson(m_BackupEmail);
+    }
+    if(m_PendingBackupEmailIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail"))] = ModelBase::toJson(m_PendingBackupEmail);
     }
     if(m_SignUpDateIsSet)
     {
@@ -264,6 +290,11 @@ web::json::value User::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("isAPIAdmin"))] = ModelBase::toJson(m_IsAPIAdmin);
     }
+    if(m_IsSiteAdminIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin"))] = ModelBase::toJson(m_IsSiteAdmin);
+    }
     if(m_ModeratorIdsIsSet)
     {
         
@@ -288,6 +319,26 @@ web::json::value User::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("digestEmailFrequency"))] = ModelBase::toJson(m_DigestEmailFrequency);
+    }
+    if(m_NotificationFrequencyIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))] = ModelBase::toJson(m_NotificationFrequency);
+    }
+    if(m_AdminNotificationFrequencyIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency"))] = ModelBase::toJson(m_AdminNotificationFrequency);
+    }
+    if(m_LastTenantNotificationSentDateIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate"))] = ModelBase::toJson(m_LastTenantNotificationSentDate);
+    }
+    if(m_LastReplyNotificationSentDateIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate"))] = ModelBase::toJson(m_LastReplyNotificationSentDate);
     }
     if(m_IgnoredAddToMySiteMessagesIsSet)
     {
@@ -374,6 +425,11 @@ web::json::value User::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("hasTwoFactor"))] = ModelBase::toJson(m_HasTwoFactor);
     }
+    if(m_IsEmailSuppressedIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))] = ModelBase::toJson(m_IsEmailSuppressed);
+    }
 
     return val;
 }
@@ -455,6 +511,28 @@ bool User::fromJson(const web::json::value& val)
             utility::string_t refVal_setPendingEmail;
             ok &= ModelBase::fromJson(fieldValue, refVal_setPendingEmail);
             setPendingEmail(refVal_setPendingEmail);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("backupEmail"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("backupEmail")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setBackupEmail;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setBackupEmail);
+            setBackupEmail(refVal_setBackupEmail);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setPendingBackupEmail;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setPendingBackupEmail);
+            setPendingBackupEmail(refVal_setPendingBackupEmail);
             
         }
     }
@@ -700,6 +778,17 @@ bool User::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsSiteAdmin;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsSiteAdmin);
+            setIsSiteAdmin(refVal_setIsSiteAdmin);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("moderatorIds"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("moderatorIds")));
@@ -752,6 +841,50 @@ bool User::fromJson(const web::json::value& val)
             std::shared_ptr<DigestEmailFrequency> refVal_setDigestEmailFrequency;
             ok &= ModelBase::fromJson(fieldValue, refVal_setDigestEmailFrequency);
             setDigestEmailFrequency(refVal_setDigestEmailFrequency);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setNotificationFrequency;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNotificationFrequency);
+            setNotificationFrequency(refVal_setNotificationFrequency);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setAdminNotificationFrequency;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setAdminNotificationFrequency);
+            setAdminNotificationFrequency(refVal_setAdminNotificationFrequency);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate")));
+        if(!fieldValue.is_null())
+        {
+            utility::datetime refVal_setLastTenantNotificationSentDate;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setLastTenantNotificationSentDate);
+            setLastTenantNotificationSentDate(refVal_setLastTenantNotificationSentDate);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate")));
+        if(!fieldValue.is_null())
+        {
+            utility::datetime refVal_setLastReplyNotificationSentDate;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setLastReplyNotificationSentDate);
+            setLastReplyNotificationSentDate(refVal_setLastReplyNotificationSentDate);
             
         }
     }
@@ -942,6 +1075,17 @@ bool User::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsEmailSuppressed;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsEmailSuppressed);
+            setIsEmailSuppressed(refVal_setIsEmailSuppressed);
+            
+        }
+    }
     return ok;
 }
 
@@ -979,6 +1123,14 @@ void User::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utili
     if(m_PendingEmailIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pendingEmail")), m_PendingEmail));
+    }
+    if(m_BackupEmailIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("backupEmail")), m_BackupEmail));
+    }
+    if(m_PendingBackupEmailIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail")), m_PendingBackupEmail));
     }
     if(m_SignUpDateIsSet)
     {
@@ -1068,6 +1220,10 @@ void User::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utili
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isAPIAdmin")), m_IsAPIAdmin));
     }
+    if(m_IsSiteAdminIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin")), m_IsSiteAdmin));
+    }
     if(m_ModeratorIdsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderatorIds")), m_ModeratorIds));
@@ -1087,6 +1243,22 @@ void User::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utili
     if(m_DigestEmailFrequencyIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("digestEmailFrequency")), m_DigestEmailFrequency));
+    }
+    if(m_NotificationFrequencyIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notificationFrequency")), m_NotificationFrequency));
+    }
+    if(m_AdminNotificationFrequencyIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency")), m_AdminNotificationFrequency));
+    }
+    if(m_LastTenantNotificationSentDateIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate")), m_LastTenantNotificationSentDate));
+    }
+    if(m_LastReplyNotificationSentDateIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate")), m_LastReplyNotificationSentDate));
     }
     if(m_IgnoredAddToMySiteMessagesIsSet)
     {
@@ -1156,6 +1328,10 @@ void User::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utili
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasTwoFactor")), m_HasTwoFactor));
     }
+    if(m_IsEmailSuppressedIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed")), m_IsEmailSuppressed));
+    }
 }
 
 bool User::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
@@ -1208,6 +1384,18 @@ bool User::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const uti
         utility::string_t refVal_setPendingEmail;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("pendingEmail"))), refVal_setPendingEmail );
         setPendingEmail(refVal_setPendingEmail);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("backupEmail"))))
+    {
+        utility::string_t refVal_setBackupEmail;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("backupEmail"))), refVal_setBackupEmail );
+        setBackupEmail(refVal_setBackupEmail);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail"))))
+    {
+        utility::string_t refVal_setPendingBackupEmail;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("pendingBackupEmail"))), refVal_setPendingBackupEmail );
+        setPendingBackupEmail(refVal_setPendingBackupEmail);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("signUpDate"))))
     {
@@ -1341,6 +1529,12 @@ bool User::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const uti
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isAPIAdmin"))), refVal_setIsAPIAdmin );
         setIsAPIAdmin(refVal_setIsAPIAdmin);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin"))))
+    {
+        bool refVal_setIsSiteAdmin;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isSiteAdmin"))), refVal_setIsSiteAdmin );
+        setIsSiteAdmin(refVal_setIsSiteAdmin);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("moderatorIds"))))
     {
         std::vector<utility::string_t> refVal_setModeratorIds;
@@ -1370,6 +1564,30 @@ bool User::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const uti
         std::shared_ptr<DigestEmailFrequency> refVal_setDigestEmailFrequency;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("digestEmailFrequency"))), refVal_setDigestEmailFrequency );
         setDigestEmailFrequency(refVal_setDigestEmailFrequency);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))))
+    {
+        double refVal_setNotificationFrequency;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("notificationFrequency"))), refVal_setNotificationFrequency );
+        setNotificationFrequency(refVal_setNotificationFrequency);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency"))))
+    {
+        double refVal_setAdminNotificationFrequency;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("adminNotificationFrequency"))), refVal_setAdminNotificationFrequency );
+        setAdminNotificationFrequency(refVal_setAdminNotificationFrequency);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate"))))
+    {
+        utility::datetime refVal_setLastTenantNotificationSentDate;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("lastTenantNotificationSentDate"))), refVal_setLastTenantNotificationSentDate );
+        setLastTenantNotificationSentDate(refVal_setLastTenantNotificationSentDate);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate"))))
+    {
+        utility::datetime refVal_setLastReplyNotificationSentDate;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("lastReplyNotificationSentDate"))), refVal_setLastReplyNotificationSentDate );
+        setLastReplyNotificationSentDate(refVal_setLastReplyNotificationSentDate);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("ignoredAddToMySiteMessages"))))
     {
@@ -1472,6 +1690,12 @@ bool User::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const uti
         bool refVal_setHasTwoFactor;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("hasTwoFactor"))), refVal_setHasTwoFactor );
         setHasTwoFactor(refVal_setHasTwoFactor);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))))
+    {
+        bool refVal_setIsEmailSuppressed;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))), refVal_setIsEmailSuppressed );
+        setIsEmailSuppressed(refVal_setIsEmailSuppressed);
     }
     return ok;
 }
@@ -1620,6 +1844,48 @@ bool User::pendingEmailIsSet() const
 void User::unsetPendingEmail()
 {
     m_PendingEmailIsSet = false;
+}
+utility::string_t User::getBackupEmail() const
+{
+    return m_BackupEmail;
+}
+
+
+void User::setBackupEmail(const utility::string_t& value)
+{
+    m_BackupEmail = value;
+    m_BackupEmailIsSet = true;
+}
+
+bool User::backupEmailIsSet() const
+{
+    return m_BackupEmailIsSet;
+}
+
+void User::unsetBackupEmail()
+{
+    m_BackupEmailIsSet = false;
+}
+utility::string_t User::getPendingBackupEmail() const
+{
+    return m_PendingBackupEmail;
+}
+
+
+void User::setPendingBackupEmail(const utility::string_t& value)
+{
+    m_PendingBackupEmail = value;
+    m_PendingBackupEmailIsSet = true;
+}
+
+bool User::pendingBackupEmailIsSet() const
+{
+    return m_PendingBackupEmailIsSet;
+}
+
+void User::unsetPendingBackupEmail()
+{
+    m_PendingBackupEmailIsSet = false;
 }
 int64_t User::getSignUpDate() const
 {
@@ -2063,6 +2329,26 @@ void User::unsetIsAPIAdmin()
 {
     m_IsAPIAdminIsSet = false;
 }
+bool User::isIsSiteAdmin() const
+{
+    return m_IsSiteAdmin;
+}
+
+void User::setIsSiteAdmin(bool value)
+{
+    m_IsSiteAdmin = value;
+    m_IsSiteAdminIsSet = true;
+}
+
+bool User::isSiteAdminIsSet() const
+{
+    return m_IsSiteAdminIsSet;
+}
+
+void User::unsetIsSiteAdmin()
+{
+    m_IsSiteAdminIsSet = false;
+}
 std::vector<utility::string_t> User::getModeratorIds() const
 {
     return m_ModeratorIds;
@@ -2165,6 +2451,88 @@ bool User::digestEmailFrequencyIsSet() const
 void User::unsetDigestEmailFrequency()
 {
     m_DigestEmailFrequencyIsSet = false;
+}
+double User::getNotificationFrequency() const
+{
+    return m_NotificationFrequency;
+}
+
+void User::setNotificationFrequency(double value)
+{
+    m_NotificationFrequency = value;
+    m_NotificationFrequencyIsSet = true;
+}
+
+bool User::notificationFrequencyIsSet() const
+{
+    return m_NotificationFrequencyIsSet;
+}
+
+void User::unsetNotificationFrequency()
+{
+    m_NotificationFrequencyIsSet = false;
+}
+double User::getAdminNotificationFrequency() const
+{
+    return m_AdminNotificationFrequency;
+}
+
+void User::setAdminNotificationFrequency(double value)
+{
+    m_AdminNotificationFrequency = value;
+    m_AdminNotificationFrequencyIsSet = true;
+}
+
+bool User::adminNotificationFrequencyIsSet() const
+{
+    return m_AdminNotificationFrequencyIsSet;
+}
+
+void User::unsetAdminNotificationFrequency()
+{
+    m_AdminNotificationFrequencyIsSet = false;
+}
+utility::datetime User::getLastTenantNotificationSentDate() const
+{
+    return m_LastTenantNotificationSentDate;
+}
+
+
+void User::setLastTenantNotificationSentDate(const utility::datetime& value)
+{
+    m_LastTenantNotificationSentDate = value;
+    m_LastTenantNotificationSentDateIsSet = true;
+}
+
+bool User::lastTenantNotificationSentDateIsSet() const
+{
+    return m_LastTenantNotificationSentDateIsSet;
+}
+
+void User::unsetLastTenantNotificationSentDate()
+{
+    m_LastTenantNotificationSentDateIsSet = false;
+}
+utility::datetime User::getLastReplyNotificationSentDate() const
+{
+    return m_LastReplyNotificationSentDate;
+}
+
+
+void User::setLastReplyNotificationSentDate(const utility::datetime& value)
+{
+    m_LastReplyNotificationSentDate = value;
+    m_LastReplyNotificationSentDateIsSet = true;
+}
+
+bool User::lastReplyNotificationSentDateIsSet() const
+{
+    return m_LastReplyNotificationSentDateIsSet;
+}
+
+void User::unsetLastReplyNotificationSentDate()
+{
+    m_LastReplyNotificationSentDateIsSet = false;
 }
 bool User::isIgnoredAddToMySiteMessages() const
 {
@@ -2512,6 +2880,26 @@ bool User::hasTwoFactorIsSet() const
 void User::unsetHasTwoFactor()
 {
     m_HasTwoFactorIsSet = false;
+}
+bool User::isIsEmailSuppressed() const
+{
+    return m_IsEmailSuppressed;
+}
+
+void User::setIsEmailSuppressed(bool value)
+{
+    m_IsEmailSuppressed = value;
+    m_IsEmailSuppressedIsSet = true;
+}
+
+bool User::isEmailSuppressedIsSet() const
+{
+    return m_IsEmailSuppressedIsSet;
+}
+
+void User::unsetIsEmailSuppressed()
+{
+    m_IsEmailSuppressedIsSet = false;
 }
 
 }

@@ -761,7 +761,7 @@ No authorization required
 
 <a name="searchUsers"></a>
 # **searchUsers**
-> SearchUsers_200_response searchUsers(tenantId, urlId, usernameStartsWith, mentionGroupIds, sso)
+> SearchUsers_200_response searchUsers(tenantId, urlId, usernameStartsWith, mentionGroupIds, sso, searchSection)
 
 
 
@@ -774,6 +774,7 @@ No authorization required
 | **usernameStartsWith** | **String**|  | [optional] [default to null] |
 | **mentionGroupIds** | [**List**](../Models/String.md)|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
+| **searchSection** | **String**|  | [optional] [default to null] [enum: fast, site] |
 
 ### Return type
 

@@ -92,6 +92,16 @@ public:
     void unsetPendingEmail();
     void setPendingEmail(const utility::string_t& value);
 
+    utility::string_t getBackupEmail() const;
+    bool backupEmailIsSet() const;
+    void unsetBackupEmail();
+    void setBackupEmail(const utility::string_t& value);
+
+    utility::string_t getPendingBackupEmail() const;
+    bool pendingBackupEmailIsSet() const;
+    void unsetPendingBackupEmail();
+    void setPendingBackupEmail(const utility::string_t& value);
+
     int64_t getSignUpDate() const;
     bool signUpDateIsSet() const;
     void unsetSignUpDate();
@@ -202,6 +212,11 @@ public:
     void unsetIsAPIAdmin();
     void setIsAPIAdmin(bool value);
 
+    bool isIsSiteAdmin() const;
+    bool isSiteAdminIsSet() const;
+    void unsetIsSiteAdmin();
+    void setIsSiteAdmin(bool value);
+
     std::vector<utility::string_t> getModeratorIds() const;
     bool moderatorIdsIsSet() const;
     void unsetModeratorIds();
@@ -226,6 +241,26 @@ public:
     bool digestEmailFrequencyIsSet() const;
     void unsetDigestEmailFrequency();
     void setDigestEmailFrequency(const std::shared_ptr<DigestEmailFrequency>& value);
+
+    double getNotificationFrequency() const;
+    bool notificationFrequencyIsSet() const;
+    void unsetNotificationFrequency();
+    void setNotificationFrequency(double value);
+
+    double getAdminNotificationFrequency() const;
+    bool adminNotificationFrequencyIsSet() const;
+    void unsetAdminNotificationFrequency();
+    void setAdminNotificationFrequency(double value);
+
+    utility::datetime getLastTenantNotificationSentDate() const;
+    bool lastTenantNotificationSentDateIsSet() const;
+    void unsetLastTenantNotificationSentDate();
+    void setLastTenantNotificationSentDate(const utility::datetime& value);
+
+    utility::datetime getLastReplyNotificationSentDate() const;
+    bool lastReplyNotificationSentDateIsSet() const;
+    void unsetLastReplyNotificationSentDate();
+    void setLastReplyNotificationSentDate(const utility::datetime& value);
 
     bool isIgnoredAddToMySiteMessages() const;
     bool ignoredAddToMySiteMessagesIsSet() const;
@@ -312,6 +347,11 @@ public:
     void unsetHasTwoFactor();
     void setHasTwoFactor(bool value);
 
+    bool isIsEmailSuppressed() const;
+    bool isEmailSuppressedIsSet() const;
+    void unsetIsEmailSuppressed();
+    void setIsEmailSuppressed(bool value);
+
 
 protected:
     utility::string_t m__id;
@@ -331,6 +371,12 @@ protected:
 
     utility::string_t m_PendingEmail;
     bool m_PendingEmailIsSet;
+
+    utility::string_t m_BackupEmail;
+    bool m_BackupEmailIsSet;
+
+    utility::string_t m_PendingBackupEmail;
+    bool m_PendingBackupEmailIsSet;
 
     int64_t m_SignUpDate;
     bool m_SignUpDateIsSet;
@@ -395,6 +441,9 @@ protected:
     bool m_IsAPIAdmin;
     bool m_IsAPIAdminIsSet;
 
+    bool m_IsSiteAdmin;
+    bool m_IsSiteAdminIsSet;
+
     std::vector<utility::string_t> m_ModeratorIds;
     bool m_ModeratorIdsIsSet;
 
@@ -409,6 +458,18 @@ protected:
 
     std::shared_ptr<DigestEmailFrequency> m_DigestEmailFrequency;
     bool m_DigestEmailFrequencyIsSet;
+
+    double m_NotificationFrequency;
+    bool m_NotificationFrequencyIsSet;
+
+    double m_AdminNotificationFrequency;
+    bool m_AdminNotificationFrequencyIsSet;
+
+    utility::datetime m_LastTenantNotificationSentDate;
+    bool m_LastTenantNotificationSentDateIsSet;
+
+    utility::datetime m_LastReplyNotificationSentDate;
+    bool m_LastReplyNotificationSentDateIsSet;
 
     bool m_IgnoredAddToMySiteMessages;
     bool m_IgnoredAddToMySiteMessagesIsSet;
@@ -459,6 +520,9 @@ protected:
 
     bool m_HasTwoFactor;
     bool m_HasTwoFactorIsSet;
+
+    bool m_IsEmailSuppressed;
+    bool m_IsEmailSuppressedIsSet;
 
 };
 

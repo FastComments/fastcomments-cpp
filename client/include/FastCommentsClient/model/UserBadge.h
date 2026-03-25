@@ -144,6 +144,11 @@ public:
     void unsetOrder();
     void setOrder(int32_t value);
 
+    utility::string_t getUrlId() const;
+    bool urlIdIsSet() const;
+    void unsetUrlId();
+    void setUrlId(const utility::string_t& value);
+
 
 protected:
     utility::string_t m__id;
@@ -194,6 +199,8 @@ protected:
 
     int32_t m_Order;
     bool m_OrderIsSet;
+
+    boost::optional<utility::string_t> m_UrlId;
 
 };
 

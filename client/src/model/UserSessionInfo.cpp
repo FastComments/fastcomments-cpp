@@ -34,6 +34,8 @@ UserSessionInfo::UserSessionInfo()
     m_HasBlockedUsersIsSet = false;
     m_IsAnonSession = false;
     m_IsAnonSessionIsSet = false;
+    m_NeedsTOS = false;
+    m_NeedsTOSIsSet = false;
     m_Username = utility::conversions::to_string_t("");
     m_UsernameIsSet = false;
     m_WebsiteUrl = utility::conversions::to_string_t("");
@@ -101,6 +103,11 @@ web::json::value UserSessionInfo::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("isAnonSession"))] = ModelBase::toJson(m_IsAnonSession);
+    }
+    if(m_NeedsTOSIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("needsTOS"))] = ModelBase::toJson(m_NeedsTOS);
     }
     if(m_SessionId.has_value())
     {
@@ -234,6 +241,17 @@ bool UserSessionInfo::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("needsTOS"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("needsTOS")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setNeedsTOS;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNeedsTOS);
+            setNeedsTOS(refVal_setNeedsTOS);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("sessionId"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("sessionId")));
@@ -317,6 +335,10 @@ void UserSessionInfo::toMultipart(std::shared_ptr<MultipartFormData> multipart, 
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isAnonSession")), m_IsAnonSession));
     }
+    if(m_NeedsTOSIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("needsTOS")), m_NeedsTOS));
+    }
     if(m_SessionId.has_value())
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("sessionId")), m_SessionId.get()));
@@ -399,6 +421,12 @@ bool UserSessionInfo::fromMultiPart(std::shared_ptr<MultipartFormData> multipart
         bool refVal_setIsAnonSession;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isAnonSession"))), refVal_setIsAnonSession );
         setIsAnonSession(refVal_setIsAnonSession);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("needsTOS"))))
+    {
+        bool refVal_setNeedsTOS;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("needsTOS"))), refVal_setNeedsTOS );
+        setNeedsTOS(refVal_setNeedsTOS);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("sessionId"))))
     {
@@ -626,6 +654,26 @@ bool UserSessionInfo::isAnonSessionIsSet() const
 void UserSessionInfo::unsetIsAnonSession()
 {
     m_IsAnonSessionIsSet = false;
+}
+bool UserSessionInfo::isNeedsTOS() const
+{
+    return m_NeedsTOS;
+}
+
+void UserSessionInfo::setNeedsTOS(bool value)
+{
+    m_NeedsTOS = value;
+    m_NeedsTOSIsSet = true;
+}
+
+bool UserSessionInfo::needsTOSIsSet() const
+{
+    return m_NeedsTOSIsSet;
+}
+
+void UserSessionInfo::unsetNeedsTOS()
+{
+    m_NeedsTOSIsSet = false;
 }
 utility::string_t UserSessionInfo::getSessionId() const
 {

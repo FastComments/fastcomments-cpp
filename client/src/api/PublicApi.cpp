@@ -3464,7 +3464,7 @@ pplx::task<std::shared_ptr<ResetUserNotifications_200_response>> PublicApi::rese
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SearchUsers_200_response>> PublicApi::searchUsers(utility::string_t tenantId, utility::string_t urlId, boost::optional<utility::string_t> usernameStartsWith, boost::optional<std::vector<utility::string_t>> mentionGroupIds, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SearchUsers_200_response>> PublicApi::searchUsers(utility::string_t tenantId, utility::string_t urlId, boost::optional<utility::string_t> usernameStartsWith, boost::optional<std::vector<utility::string_t>> mentionGroupIds, boost::optional<utility::string_t> sso, boost::optional<utility::string_t> searchSection) const
 {
 
 
@@ -3520,6 +3520,10 @@ pplx::task<std::shared_ptr<SearchUsers_200_response>> PublicApi::searchUsers(uti
     if (sso)
     {
         localVarQueryParams[utility::conversions::to_string_t("sso")] = ApiClient::parameterToString(*sso);
+    }
+    if (searchSection)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("searchSection")] = ApiClient::parameterToString(*searchSection);
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;

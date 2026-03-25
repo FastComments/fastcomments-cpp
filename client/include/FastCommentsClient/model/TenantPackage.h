@@ -150,6 +150,11 @@ public:
     void unsetMaxMonthlyEventLogRequests();
     void setMaxMonthlyEventLogRequests(double value);
 
+    double getMaxCustomCollectionSize() const;
+    bool maxCustomCollectionSizeIsSet() const;
+    void unsetMaxCustomCollectionSize();
+    void setMaxCustomCollectionSize(double value);
+
     bool isHasWhiteLabeling() const;
     bool hasWhiteLabelingIsSet() const;
     void unsetHasWhiteLabeling();
@@ -189,6 +194,11 @@ public:
     bool enableSAMLIsSet() const;
     void unsetEnableSAML();
     void setEnableSAML(bool value);
+
+    bool isEnableCanvasLTI() const;
+    bool enableCanvasLTIIsSet() const;
+    void unsetEnableCanvasLTI();
+    void setEnableCanvasLTI(bool value);
 
     double getFlexPageLoadCostCents() const;
     bool flexPageLoadCostCentsIsSet() const;
@@ -370,6 +380,9 @@ protected:
     double m_MaxMonthlyEventLogRequests;
     bool m_MaxMonthlyEventLogRequestsIsSet;
 
+    double m_MaxCustomCollectionSize;
+    bool m_MaxCustomCollectionSizeIsSet;
+
     bool m_HasWhiteLabeling;
     bool m_HasWhiteLabelingIsSet;
 
@@ -393,6 +406,9 @@ protected:
 
     bool m_EnableSAML;
     bool m_EnableSAMLIsSet;
+
+    bool m_EnableCanvasLTI;
+    bool m_EnableCanvasLTIIsSet;
 
     double m_FlexPageLoadCostCents;
     bool m_FlexPageLoadCostCentsIsSet;

@@ -3,6 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+| **notificationFrequency** | **Double** |  | [optional] [default to null] |
 | **pageTitle** | **String** |  | [optional] [default to null] |
 | **url** | **String** |  | [optional] [default to null] |
 | **urlId** | **String** |  | [default to null] |

@@ -98,6 +98,11 @@ public:
     void unsetProgress();
     void setProgress(std::map<utility::string_t, double> value);
 
+    utility::datetime getTosAcceptedAt() const;
+    bool tosAcceptedAtIsSet() const;
+    void unsetTosAcceptedAt();
+    void setTosAcceptedAt(const utility::datetime& value);
+
 
 protected:
     utility::string_t m__id;
@@ -123,6 +128,9 @@ protected:
 
     std::map<utility::string_t, double> m_Progress;
     bool m_ProgressIsSet;
+
+    utility::datetime m_TosAcceptedAt;
+    bool m_TosAcceptedAtIsSet;
 
 };
 

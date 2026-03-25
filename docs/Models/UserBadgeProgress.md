@@ -11,6 +11,7 @@
 | **autoTrustFactor** | **Double** |  | [optional] [default to null] |
 | **manualTrustFactor** | **Double** |  | [optional] [default to null] |
 | **progress** | **Map** | Construct a type with a set of properties K of type T | [default to null] |
+| **tosAcceptedAt** | **Date** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

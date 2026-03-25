@@ -13,6 +13,7 @@
 | **groupIds** | **List** |  | [optional] [default to null] |
 | **hasBlockedUsers** | **Boolean** |  | [optional] [default to null] |
 | **isAnonSession** | **Boolean** |  | [optional] [default to null] |
+| **needsTOS** | **Boolean** |  | [optional] [default to null] |
 | **sessionId** | **String** |  | [optional] [default to null] |
 | **username** | **String** |  | [optional] [default to null] |
 | **websiteUrl** | **String** |  | [optional] [default to null] |

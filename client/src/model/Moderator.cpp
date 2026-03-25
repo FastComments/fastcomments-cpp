@@ -46,6 +46,8 @@ Moderator::Moderator()
     m_UnFlaggedCountIsSet = false;
     m_CreatedAt = utility::datetime();
     m_CreatedAtIsSet = false;
+    m_IsEmailSuppressed = false;
+    m_IsEmailSuppressedIsSet = false;
 }
 
 Moderator::~Moderator()
@@ -149,6 +151,11 @@ web::json::value Moderator::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))] = ModelBase::toJson(m_ModerationGroupIds.get());
+    }
+    if(m_IsEmailSuppressedIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))] = ModelBase::toJson(m_IsEmailSuppressed);
     }
 
     return val;
@@ -355,6 +362,17 @@ bool Moderator::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setIsEmailSuppressed;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setIsEmailSuppressed);
+            setIsEmailSuppressed(refVal_setIsEmailSuppressed);
+            
+        }
+    }
     return ok;
 }
 
@@ -436,6 +454,10 @@ void Moderator::toMultipart(std::shared_ptr<MultipartFormData> multipart, const 
     if(m_ModerationGroupIds.has_value())
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds")), m_ModerationGroupIds.get()));
+    }
+    if(m_IsEmailSuppressedIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed")), m_IsEmailSuppressed));
     }
 }
 
@@ -555,6 +577,12 @@ bool Moderator::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, cons
         std::vector<utility::string_t> refVal_setModerationGroupIds;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("moderationGroupIds"))), refVal_setModerationGroupIds );
         setModerationGroupIds(refVal_setModerationGroupIds);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))))
+    {
+        bool refVal_setIsEmailSuppressed;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("isEmailSuppressed"))), refVal_setIsEmailSuppressed );
+        setIsEmailSuppressed(refVal_setIsEmailSuppressed);
     }
     return ok;
 }
@@ -922,6 +950,26 @@ bool Moderator::moderationGroupIdsIsSet() const
 void Moderator::unsetModerationGroupIds()
 {
     m_ModerationGroupIds.reset();
+}
+bool Moderator::isIsEmailSuppressed() const
+{
+    return m_IsEmailSuppressed;
+}
+
+void Moderator::setIsEmailSuppressed(bool value)
+{
+    m_IsEmailSuppressed = value;
+    m_IsEmailSuppressedIsSet = true;
+}
+
+bool Moderator::isEmailSuppressedIsSet() const
+{
+    return m_IsEmailSuppressedIsSet;
+}
+
+void Moderator::unsetIsEmailSuppressed()
+{
+    m_IsEmailSuppressedIsSet = false;
 }
 
 }

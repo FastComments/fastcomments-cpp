@@ -22,6 +22,7 @@
 | **maxDomains** | **Double** |  | [default to null] |
 | **maxWhiteLabeledTenants** | **Double** |  | [default to null] |
 | **maxMonthlyEventLogRequests** | **Double** |  | [default to null] |
+| **maxCustomCollectionSize** | **Double** |  | [default to null] |
 | **hasWhiteLabeling** | **Boolean** |  | [default to null] |
 | **hasDebranding** | **Boolean** |  | [default to null] |
 | **hasLLMSpamDetection** | **Boolean** |  | [default to null] |
@@ -30,6 +31,7 @@
 | **hasAuditing** | **Boolean** |  | [default to null] |
 | **hasFlexPricing** | **Boolean** |  | [default to null] |
 | **enableSAML** | **Boolean** |  | [optional] [default to null] |
+| **enableCanvasLTI** | **Boolean** |  | [optional] [default to null] |
 | **flexPageLoadCostCents** | **Double** |  | [optional] [default to null] |
 | **flexPageLoadUnit** | **Double** |  | [optional] [default to null] |
 | **flexCommentCostCents** | **Double** |  | [optional] [default to null] |

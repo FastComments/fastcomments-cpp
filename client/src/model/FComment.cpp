@@ -93,6 +93,8 @@ FComment::FComment()
     m_RequiresVerificationIsSet = false;
     m_EditKey = utility::conversions::to_string_t("");
     m_EditKeyIsSet = false;
+    m_TosAcceptedAt = utility::datetime();
+    m_TosAcceptedAtIsSet = false;
 }
 
 FComment::~FComment()
@@ -461,6 +463,11 @@ web::json::value FComment::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("editKey"))] = ModelBase::toJson(m_EditKey);
+    }
+    if(m_TosAcceptedAtIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))] = ModelBase::toJson(m_TosAcceptedAt);
     }
 
     return val;
@@ -1250,6 +1257,17 @@ bool FComment::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt")));
+        if(!fieldValue.is_null())
+        {
+            utility::datetime refVal_setTosAcceptedAt;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTosAcceptedAt);
+            setTosAcceptedAt(refVal_setTosAcceptedAt);
+            
+        }
+    }
     return ok;
 }
 
@@ -1543,6 +1561,10 @@ void FComment::toMultipart(std::shared_ptr<MultipartFormData> multipart, const u
     if(m_EditKeyIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("editKey")), m_EditKey));
+    }
+    if(m_TosAcceptedAtIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt")), m_TosAcceptedAt));
     }
 }
 
@@ -1980,6 +2002,12 @@ bool FComment::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const
         utility::string_t refVal_setEditKey;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("editKey"))), refVal_setEditKey );
         setEditKey(refVal_setEditKey);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))))
+    {
+        utility::datetime refVal_setTosAcceptedAt;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("tosAcceptedAt"))), refVal_setTosAcceptedAt );
+        setTosAcceptedAt(refVal_setTosAcceptedAt);
     }
     return ok;
 }
@@ -3408,6 +3436,27 @@ bool FComment::editKeyIsSet() const
 void FComment::unsetEditKey()
 {
     m_EditKeyIsSet = false;
+}
+utility::datetime FComment::getTosAcceptedAt() const
+{
+    return m_TosAcceptedAt;
+}
+
+
+void FComment::setTosAcceptedAt(const utility::datetime& value)
+{
+    m_TosAcceptedAt = value;
+    m_TosAcceptedAtIsSet = true;
+}
+
+bool FComment::tosAcceptedAtIsSet() const
+{
+    return m_TosAcceptedAtIsSet;
+}
+
+void FComment::unsetTosAcceptedAt()
+{
+    m_TosAcceptedAtIsSet = false;
 }
 
 }

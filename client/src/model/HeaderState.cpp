@@ -27,6 +27,7 @@ HeaderState::HeaderState()
     m_UserIdWS = utility::conversions::to_string_t("");
     m_UserIdWSIsSet = false;
     m_NotificationCountsIsSet = false;
+    m_AccountNotificationsIsSet = false;
 }
 
 HeaderState::~HeaderState()
@@ -65,6 +66,11 @@ web::json::value HeaderState::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("notificationCounts"))] = ModelBase::toJson(m_NotificationCounts);
+    }
+    if(m_AccountNotificationsIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("accountNotifications"))] = ModelBase::toJson(m_AccountNotifications);
     }
 
     return val;
@@ -128,6 +134,17 @@ bool HeaderState::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("accountNotifications"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("accountNotifications")));
+        if(!fieldValue.is_null())
+        {
+            std::vector<std::shared_ptr<HeaderAccountNotification>> refVal_setAccountNotifications;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setAccountNotifications);
+            setAccountNotifications(refVal_setAccountNotifications);
+            
+        }
+    }
     return ok;
 }
 
@@ -157,6 +174,10 @@ void HeaderState::toMultipart(std::shared_ptr<MultipartFormData> multipart, cons
     if(m_NotificationCountsIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("notificationCounts")), m_NotificationCounts));
+    }
+    if(m_AccountNotificationsIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("accountNotifications")), m_AccountNotifications));
     }
 }
 
@@ -198,6 +219,12 @@ bool HeaderState::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, co
         std::vector<std::shared_ptr<NotificationAndCount>> refVal_setNotificationCounts;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("notificationCounts"))), refVal_setNotificationCounts );
         setNotificationCounts(refVal_setNotificationCounts);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("accountNotifications"))))
+    {
+        std::vector<std::shared_ptr<HeaderAccountNotification>> refVal_setAccountNotifications;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("accountNotifications"))), refVal_setAccountNotifications );
+        setAccountNotifications(refVal_setAccountNotifications);
     }
     return ok;
 }
@@ -307,6 +334,27 @@ bool HeaderState::notificationCountsIsSet() const
 void HeaderState::unsetNotificationCounts()
 {
     m_NotificationCountsIsSet = false;
+}
+std::vector<std::shared_ptr<HeaderAccountNotification>> HeaderState::getAccountNotifications() const
+{
+    return m_AccountNotifications;
+}
+
+
+void HeaderState::setAccountNotifications(const std::vector<std::shared_ptr<HeaderAccountNotification>>& value)
+{
+    m_AccountNotifications = value;
+    m_AccountNotificationsIsSet = true;
+}
+
+bool HeaderState::accountNotificationsIsSet() const
+{
+    return m_AccountNotificationsIsSet;
+}
+
+void HeaderState::unsetAccountNotifications()
+{
+    m_AccountNotificationsIsSet = false;
 }
 
 }

@@ -50,6 +50,8 @@ TenantPackage::TenantPackage()
     m_MaxWhiteLabeledTenantsIsSet = false;
     m_MaxMonthlyEventLogRequests = 0.0;
     m_MaxMonthlyEventLogRequestsIsSet = false;
+    m_MaxCustomCollectionSize = 0.0;
+    m_MaxCustomCollectionSizeIsSet = false;
     m_HasWhiteLabeling = false;
     m_HasWhiteLabelingIsSet = false;
     m_HasDebranding = false;
@@ -65,6 +67,8 @@ TenantPackage::TenantPackage()
     m_HasFlexPricingIsSet = false;
     m_EnableSAML = false;
     m_EnableSAMLIsSet = false;
+    m_EnableCanvasLTI = false;
+    m_EnableCanvasLTIIsSet = false;
     m_FlexPageLoadCostCents = 0.0;
     m_FlexPageLoadCostCentsIsSet = false;
     m_FlexPageLoadUnit = 0.0;
@@ -224,6 +228,11 @@ web::json::value TenantPackage::toJson() const
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests"))] = ModelBase::toJson(m_MaxMonthlyEventLogRequests);
     }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))] = ModelBase::toJson(m_MaxCustomCollectionSize);
+    }
     if(m_HasWhiteLabelingIsSet)
     {
         
@@ -263,6 +272,11 @@ web::json::value TenantPackage::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("enableSAML"))] = ModelBase::toJson(m_EnableSAML);
+    }
+    if(m_EnableCanvasLTIIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI"))] = ModelBase::toJson(m_EnableCanvasLTI);
     }
     if(m_FlexPageLoadCostCentsIsSet)
     {
@@ -605,6 +619,17 @@ bool TenantPackage::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setMaxCustomCollectionSize;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setMaxCustomCollectionSize);
+            setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
+            
+        }
+    }
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling"))))
     {
         const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling")));
@@ -690,6 +715,17 @@ bool TenantPackage::fromJson(const web::json::value& val)
             bool refVal_setEnableSAML;
             ok &= ModelBase::fromJson(fieldValue, refVal_setEnableSAML);
             setEnableSAML(refVal_setEnableSAML);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setEnableCanvasLTI;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setEnableCanvasLTI);
+            setEnableCanvasLTI(refVal_setEnableCanvasLTI);
             
         }
     }
@@ -1054,6 +1090,10 @@ void TenantPackage::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests")), m_MaxMonthlyEventLogRequests));
     }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")), m_MaxCustomCollectionSize));
+    }
     if(m_HasWhiteLabelingIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling")), m_HasWhiteLabeling));
@@ -1085,6 +1125,10 @@ void TenantPackage::toMultipart(std::shared_ptr<MultipartFormData> multipart, co
     if(m_EnableSAMLIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("enableSAML")), m_EnableSAML));
+    }
+    if(m_EnableCanvasLTIIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI")), m_EnableCanvasLTI));
     }
     if(m_FlexPageLoadCostCentsIsSet)
     {
@@ -1311,6 +1355,12 @@ bool TenantPackage::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxMonthlyEventLogRequests"))), refVal_setMaxMonthlyEventLogRequests );
         setMaxMonthlyEventLogRequests(refVal_setMaxMonthlyEventLogRequests);
     }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        double refVal_setMaxCustomCollectionSize;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))), refVal_setMaxCustomCollectionSize );
+        setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
+    }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasWhiteLabeling"))))
     {
         bool refVal_setHasWhiteLabeling;
@@ -1358,6 +1408,12 @@ bool TenantPackage::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, 
         bool refVal_setEnableSAML;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("enableSAML"))), refVal_setEnableSAML );
         setEnableSAML(refVal_setEnableSAML);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI"))))
+    {
+        bool refVal_setEnableCanvasLTI;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("enableCanvasLTI"))), refVal_setEnableCanvasLTI );
+        setEnableCanvasLTI(refVal_setEnableCanvasLTI);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("flexPageLoadCostCents"))))
     {
@@ -1895,6 +1951,26 @@ void TenantPackage::unsetMaxMonthlyEventLogRequests()
 {
     m_MaxMonthlyEventLogRequestsIsSet = false;
 }
+double TenantPackage::getMaxCustomCollectionSize() const
+{
+    return m_MaxCustomCollectionSize;
+}
+
+void TenantPackage::setMaxCustomCollectionSize(double value)
+{
+    m_MaxCustomCollectionSize = value;
+    m_MaxCustomCollectionSizeIsSet = true;
+}
+
+bool TenantPackage::maxCustomCollectionSizeIsSet() const
+{
+    return m_MaxCustomCollectionSizeIsSet;
+}
+
+void TenantPackage::unsetMaxCustomCollectionSize()
+{
+    m_MaxCustomCollectionSizeIsSet = false;
+}
 bool TenantPackage::isHasWhiteLabeling() const
 {
     return m_HasWhiteLabeling;
@@ -2056,6 +2132,26 @@ bool TenantPackage::enableSAMLIsSet() const
 void TenantPackage::unsetEnableSAML()
 {
     m_EnableSAMLIsSet = false;
+}
+bool TenantPackage::isEnableCanvasLTI() const
+{
+    return m_EnableCanvasLTI;
+}
+
+void TenantPackage::setEnableCanvasLTI(bool value)
+{
+    m_EnableCanvasLTI = value;
+    m_EnableCanvasLTIIsSet = true;
+}
+
+bool TenantPackage::enableCanvasLTIIsSet() const
+{
+    return m_EnableCanvasLTIIsSet;
+}
+
+void TenantPackage::unsetEnableCanvasLTI()
+{
+    m_EnableCanvasLTIIsSet = false;
 }
 double TenantPackage::getFlexPageLoadCostCents() const
 {

@@ -42,6 +42,8 @@ ReplaceTenantPackageBody::ReplaceTenantPackageBody()
     m_MaxModeratorsIsSet = false;
     m_MaxDomains = 0.0;
     m_MaxDomainsIsSet = false;
+    m_MaxCustomCollectionSize = 0.0;
+    m_MaxCustomCollectionSizeIsSet = false;
     m_HasDebranding = false;
     m_HasDebrandingIsSet = false;
     m_ForWhoText = utility::conversions::to_string_t("");
@@ -147,6 +149,11 @@ web::json::value ReplaceTenantPackageBody::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("maxDomains"))] = ModelBase::toJson(m_MaxDomains);
+    }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))] = ModelBase::toJson(m_MaxCustomCollectionSize);
     }
     if(m_HasDebrandingIsSet)
     {
@@ -368,6 +375,17 @@ bool ReplaceTenantPackageBody::fromJson(const web::json::value& val)
             double refVal_setMaxDomains;
             ok &= ModelBase::fromJson(fieldValue, refVal_setMaxDomains);
             setMaxDomains(refVal_setMaxDomains);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")));
+        if(!fieldValue.is_null())
+        {
+            double refVal_setMaxCustomCollectionSize;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setMaxCustomCollectionSize);
+            setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
             
         }
     }
@@ -634,6 +652,10 @@ void ReplaceTenantPackageBody::toMultipart(std::shared_ptr<MultipartFormData> mu
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxDomains")), m_MaxDomains));
     }
+    if(m_MaxCustomCollectionSizeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize")), m_MaxCustomCollectionSize));
+    }
     if(m_HasDebrandingIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("hasDebranding")), m_HasDebranding));
@@ -786,6 +808,12 @@ bool ReplaceTenantPackageBody::fromMultiPart(std::shared_ptr<MultipartFormData> 
         double refVal_setMaxDomains;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxDomains"))), refVal_setMaxDomains );
         setMaxDomains(refVal_setMaxDomains);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))))
+    {
+        double refVal_setMaxCustomCollectionSize;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxCustomCollectionSize"))), refVal_setMaxCustomCollectionSize );
+        setMaxCustomCollectionSize(refVal_setMaxCustomCollectionSize);
     }
     if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("hasDebranding"))))
     {
@@ -1125,6 +1153,26 @@ bool ReplaceTenantPackageBody::maxDomainsIsSet() const
 void ReplaceTenantPackageBody::unsetMaxDomains()
 {
     m_MaxDomainsIsSet = false;
+}
+double ReplaceTenantPackageBody::getMaxCustomCollectionSize() const
+{
+    return m_MaxCustomCollectionSize;
+}
+
+void ReplaceTenantPackageBody::setMaxCustomCollectionSize(double value)
+{
+    m_MaxCustomCollectionSize = value;
+    m_MaxCustomCollectionSizeIsSet = true;
+}
+
+bool ReplaceTenantPackageBody::maxCustomCollectionSizeIsSet() const
+{
+    return m_MaxCustomCollectionSizeIsSet;
+}
+
+void ReplaceTenantPackageBody::unsetMaxCustomCollectionSize()
+{
+    m_MaxCustomCollectionSizeIsSet = false;
 }
 bool ReplaceTenantPackageBody::isHasDebranding() const
 {

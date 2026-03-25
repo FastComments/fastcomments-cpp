@@ -37,6 +37,8 @@
 #include "FastCommentsClient/model/BulkAggregateQuestionResultsRequest.h"
 #include "FastCommentsClient/model/BulkAggregateQuestionResults_200_response.h"
 #include "FastCommentsClient/model/BulkCreateHashTagsBody.h"
+#include "FastCommentsClient/model/ChangeTicketStateBody.h"
+#include "FastCommentsClient/model/ChangeTicketState_200_response.h"
 #include "FastCommentsClient/model/CombineCommentsWithQuestionResults_200_response.h"
 #include "FastCommentsClient/model/CreateAPIPageData.h"
 #include "FastCommentsClient/model/CreateAPISSOUserData.h"
@@ -60,6 +62,8 @@
 #include "FastCommentsClient/model/CreateTenantUserBody.h"
 #include "FastCommentsClient/model/CreateTenantUser_200_response.h"
 #include "FastCommentsClient/model/CreateTenant_200_response.h"
+#include "FastCommentsClient/model/CreateTicketBody.h"
+#include "FastCommentsClient/model/CreateTicket_200_response.h"
 #include "FastCommentsClient/model/CreateUserBadgeParams.h"
 #include "FastCommentsClient/model/CreateUserBadge_200_response.h"
 #include "FastCommentsClient/model/DeleteCommentVote_200_response.h"
@@ -107,6 +111,8 @@
 #include "FastCommentsClient/model/GetTenantUsers_200_response.h"
 #include "FastCommentsClient/model/GetTenant_200_response.h"
 #include "FastCommentsClient/model/GetTenants_200_response.h"
+#include "FastCommentsClient/model/GetTicket_200_response.h"
+#include "FastCommentsClient/model/GetTickets_200_response.h"
 #include "FastCommentsClient/model/GetUserBadgeProgressById_200_response.h"
 #include "FastCommentsClient/model/GetUserBadgeProgressList_200_response.h"
 #include "FastCommentsClient/model/GetUserBadge_200_response.h"
@@ -131,6 +137,7 @@
 #include "FastCommentsClient/model/UpdatableCommentParams.h"
 #include "FastCommentsClient/model/UpdateAPIPageData.h"
 #include "FastCommentsClient/model/UpdateAPISSOUserData.h"
+#include "FastCommentsClient/model/UpdateAPIUserSubscriptionData.h"
 #include "FastCommentsClient/model/UpdateDomainConfigParams.h"
 #include "FastCommentsClient/model/UpdateEmailTemplateBody.h"
 #include "FastCommentsClient/model/UpdateHashTagBody.h"
@@ -138,6 +145,7 @@
 #include "FastCommentsClient/model/UpdateNotificationBody.h"
 #include "FastCommentsClient/model/UpdateQuestionConfigBody.h"
 #include "FastCommentsClient/model/UpdateQuestionResultBody.h"
+#include "FastCommentsClient/model/UpdateSubscriptionAPIResponse.h"
 #include "FastCommentsClient/model/UpdateTenantBody.h"
 #include "FastCommentsClient/model/UpdateTenantPackageBody.h"
 #include "FastCommentsClient/model/UpdateTenantUserBody.h"
@@ -302,6 +310,22 @@ public:
     /// 
     /// </remarks>
     /// <param name="tenantId"></param>
+    /// <param name="userId"></param>
+    /// <param name="id"></param>
+    /// <param name="changeTicketStateBody"></param>
+    pplx::task<std::shared_ptr<ChangeTicketState_200_response>> changeTicketState(
+        utility::string_t tenantId,
+        utility::string_t userId,
+        utility::string_t id,
+        std::shared_ptr<ChangeTicketStateBody> changeTicketStateBody
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="tenantId"></param>
     /// <param name="questionId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="questionIds"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
     /// <param name="urlId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
@@ -436,6 +460,20 @@ public:
     pplx::task<std::shared_ptr<CreateTenantUser_200_response>> createTenantUser(
         utility::string_t tenantId,
         std::shared_ptr<CreateTenantUserBody> createTenantUserBody
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="tenantId"></param>
+    /// <param name="userId"></param>
+    /// <param name="createTicketBody"></param>
+    pplx::task<std::shared_ptr<CreateTicket_200_response>> createTicket(
+        utility::string_t tenantId,
+        utility::string_t userId,
+        std::shared_ptr<CreateTicketBody> createTicketBody
     ) const;
     /// <summary>
     /// 
@@ -1243,6 +1281,38 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
+    /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::shared_ptr<GetTicket_200_response>> getTicket(
+        utility::string_t tenantId,
+        utility::string_t id,
+        boost::optional<utility::string_t> userId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="tenantId"></param>
+    /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="state"> (optional, default to 0.0)</param>
+    /// <param name="skip"> (optional, default to 0.0)</param>
+    /// <param name="limit"> (optional, default to 0.0)</param>
+    pplx::task<std::shared_ptr<GetTickets_200_response>> getTickets(
+        utility::string_t tenantId,
+        boost::optional<utility::string_t> userId,
+        boost::optional<double> state,
+        boost::optional<double> skip,
+        boost::optional<double> limit
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="tenantId"></param>
+    /// <param name="id"></param>
     pplx::task<std::shared_ptr<GetUser_200_response>> getUser(
         utility::string_t tenantId,
         utility::string_t id
@@ -1688,6 +1758,22 @@ public:
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateQuestionResultBody> updateQuestionResultBody
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="tenantId"></param>
+    /// <param name="id"></param>
+    /// <param name="updateAPIUserSubscriptionData"></param>
+    /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::shared_ptr<UpdateSubscriptionAPIResponse>> updateSubscription(
+        utility::string_t tenantId,
+        utility::string_t id,
+        std::shared_ptr<UpdateAPIUserSubscriptionData> updateAPIUserSubscriptionData,
+        boost::optional<utility::string_t> userId
     ) const;
     /// <summary>
     /// 

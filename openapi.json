@@ -14,6 +14,14 @@
 				],
 				"type": "string"
 			},
+			"UserSearchSection": {
+				"type": "string",
+				"enum": [
+					"moderators",
+					"onThisPage",
+					"onThisSite"
+				]
+			},
 			"UserSearchResult": {
 				"properties": {
 					"id": {
@@ -45,6 +53,43 @@
 				"type": "object",
 				"additionalProperties": false
 			},
+			"UserSearchSectionResult": {
+				"properties": {
+					"section": {
+						"$ref": "#/components/schemas/UserSearchSection"
+					},
+					"users": {
+						"items": {
+							"$ref": "#/components/schemas/UserSearchResult"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"section",
+					"users"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SearchUsersSectionedResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"sections": {
+						"items": {
+							"$ref": "#/components/schemas/UserSearchSectionResult"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"sections"
+				],
+				"type": "object"
+			},
 			"SearchUsersResponse": {
 				"properties": {
 					"status": {
@@ -68,7 +113,7 @@
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"CommentThreadDeletionMode": {
 				"enum": [
@@ -77,7 +122,7 @@
 					2,
 					3
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"CommenterNameFormats": {
 				"enum": [
@@ -87,7 +132,7 @@
 					3,
 					4
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"SortDirections": {
 				"enum": [
@@ -114,6 +159,14 @@
 					"high"
 				],
 				"type": "string"
+			},
+			"MentionAutoCompleteMode": {
+				"enum": [
+					0,
+					1,
+					2
+				],
+				"type": "integer"
 			},
 			"SpamRule": {
 				"properties": {
@@ -143,7 +196,7 @@
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"Record_string.string_": {
 				"properties": {},
@@ -158,7 +211,7 @@
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"CommentQuestionResultsRenderingType": {
 				"enum": [
@@ -166,35 +219,51 @@
 					1,
 					2
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"QuestionRenderingType": {
 				"enum": [
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"QuestionWhenSave": {
 				"enum": [
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"CommentQuestionsRequired": {
 				"enum": [
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"QuestionSubQuestionVisibility": {
 				"enum": [
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
+			},
+			"TOSConfig": {
+				"properties": {
+					"enabled": {
+						"type": "boolean"
+					},
+					"textByLocale": {
+						"$ref": "#/components/schemas/Record_string.string_"
+					},
+					"lastUpdated": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
 			},
 			"CustomConfigParameters": {
 				"properties": {
@@ -294,6 +363,12 @@
 					"disableNotificationBell": {
 						"type": "boolean"
 					},
+					"disableProfileComments": {
+						"type": "boolean"
+					},
+					"disableProfileDirectMessages": {
+						"type": "boolean"
+					},
 					"disableProfiles": {
 						"type": "boolean"
 					},
@@ -373,6 +448,14 @@
 					"noCustomConfig": {
 						"type": "boolean"
 					},
+					"mentionAutoCompleteMode": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/MentionAutoCompleteMode"
+							}
+						],
+						"nullable": true
+					},
 					"noImageUploads": {
 						"type": "boolean"
 					},
@@ -447,6 +530,9 @@
 					"widgetQuestionResultsStyle": {
 						"$ref": "#/components/schemas/CommentQuestionResultsRenderingType"
 					},
+					"widgetQuestionShowBreakdown": {
+						"type": "boolean"
+					},
 					"widgetQuestionStyle": {
 						"$ref": "#/components/schemas/QuestionRenderingType"
 					},
@@ -461,6 +547,28 @@
 					},
 					"wrap": {
 						"type": "boolean"
+					},
+					"ticketBaseUrl": {
+						"type": "string"
+					},
+					"ticketKBSearchEndpoint": {
+						"type": "string"
+					},
+					"ticketFileUploadsEnabled": {
+						"type": "boolean"
+					},
+					"ticketMaxFileSize": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"ticketAutoAssignUserIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"tos": {
+						"$ref": "#/components/schemas/TOSConfig"
 					}
 				},
 				"type": "object",
@@ -532,7 +640,7 @@
 					1,
 					2
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"NotificationType": {
 				"enum": [
@@ -550,7 +658,7 @@
 					9,
 					10
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"RenderableUserNotification": {
 				"properties": {
@@ -733,6 +841,63 @@
 				"type": "object",
 				"additionalProperties": false
 			},
+			"HeaderAccountNotification": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"title": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"messagesByLocale": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/Record_string.string_"
+							}
+						],
+						"nullable": true
+					},
+					"dates": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/Record_string.string_"
+							}
+						],
+						"nullable": true
+					},
+					"severity": {
+						"type": "string"
+					},
+					"linkUrl": {
+						"type": "string",
+						"nullable": true
+					},
+					"linkText": {
+						"type": "string",
+						"nullable": true
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"_id",
+					"title",
+					"message",
+					"messagesByLocale",
+					"dates",
+					"severity",
+					"linkUrl",
+					"linkText",
+					"createdAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
 			"HeaderState": {
 				"properties": {
 					"status": {
@@ -752,6 +917,12 @@
 							"$ref": "#/components/schemas/NotificationAndCount"
 						},
 						"type": "array"
+					},
+					"accountNotifications": {
+						"items": {
+							"$ref": "#/components/schemas/HeaderAccountNotification"
+						},
+						"type": "array"
 					}
 				},
 				"required": [
@@ -759,7 +930,8 @@
 					"NotificationType",
 					"userId",
 					"userIdWS",
-					"notificationCounts"
+					"notificationCounts",
+					"accountNotifications"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -1099,6 +1271,9 @@
 						"type": "boolean"
 					},
 					"isAnonSession": {
+						"type": "boolean"
+					},
+					"needsTOS": {
 						"type": "boolean"
 					},
 					"sessionId": {
@@ -2502,6 +2677,9 @@
 					},
 					"questionValues": {
 						"$ref": "#/components/schemas/Record_string.string-or-number_"
+					},
+					"tos": {
+						"type": "boolean"
 					}
 				},
 				"required": [
@@ -2748,6 +2926,10 @@
 			},
 			"APIUserSubscription": {
 				"properties": {
+					"notificationFrequency": {
+						"type": "number",
+						"format": "double"
+					},
 					"createdAt": {
 						"type": "string",
 						"format": "date-time"
@@ -2823,6 +3005,10 @@
 			},
 			"CreateAPIUserSubscriptionData": {
 				"properties": {
+					"notificationFrequency": {
+						"type": "number",
+						"format": "double"
+					},
 					"pageTitle": {
 						"type": "string"
 					},
@@ -2842,6 +3028,35 @@
 				"required": [
 					"urlId"
 				],
+				"type": "object"
+			},
+			"UpdateSubscriptionAPIResponse": {
+				"properties": {
+					"reason": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
+					"subscription": {
+						"$ref": "#/components/schemas/APIUserSubscription"
+					},
+					"status": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"status"
+				],
+				"type": "object"
+			},
+			"UpdateAPIUserSubscriptionData": {
+				"properties": {
+					"notificationFrequency": {
+						"type": "number",
+						"format": "double"
+					}
+				},
 				"type": "object"
 			},
 			"DeleteSubscriptionAPIResponse": {
@@ -3528,7 +3743,7 @@
 					1,
 					2
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"User": {
 				"properties": {
@@ -3554,6 +3769,12 @@
 						"nullable": true
 					},
 					"pendingEmail": {
+						"type": "string"
+					},
+					"backupEmail": {
+						"type": "string"
+					},
+					"pendingBackupEmail": {
 						"type": "string"
 					},
 					"signUpDate": {
@@ -3628,6 +3849,9 @@
 					"isAPIAdmin": {
 						"type": "boolean"
 					},
+					"isSiteAdmin": {
+						"type": "boolean"
+					},
 					"moderatorIds": {
 						"items": {
 							"type": "string"
@@ -3645,6 +3869,22 @@
 					},
 					"digestEmailFrequency": {
 						"$ref": "#/components/schemas/DigestEmailFrequency"
+					},
+					"notificationFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"adminNotificationFrequency": {
+						"type": "number",
+						"format": "double"
+					},
+					"lastTenantNotificationSentDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastReplyNotificationSentDate": {
+						"type": "string",
+						"format": "date-time"
 					},
 					"ignoredAddToMySiteMessages": {
 						"type": "boolean"
@@ -3703,6 +3943,9 @@
 						"type": "array"
 					},
 					"hasTwoFactor": {
+						"type": "boolean"
+					},
+					"isEmailSuppressed": {
 						"type": "boolean"
 					}
 				},
@@ -3802,6 +4045,10 @@
 					"order": {
 						"type": "integer",
 						"format": "int32"
+					},
+					"urlId": {
+						"type": "string",
+						"nullable": true
 					}
 				},
 				"required": [
@@ -3955,6 +4202,10 @@
 					},
 					"progress": {
 						"$ref": "#/components/schemas/Record_string.number_"
+					},
+					"tosAcceptedAt": {
+						"type": "string",
+						"format": "date-time"
 					}
 				},
 				"required": [
@@ -4003,12 +4254,277 @@
 				"type": "object",
 				"additionalProperties": false
 			},
+			"APITicket": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"urlId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"managedByTenantId": {
+						"type": "string"
+					},
+					"assignedUserIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"subject": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"state": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"fileCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"required": [
+					"_id",
+					"urlId",
+					"userId",
+					"managedByTenantId",
+					"assignedUserIds",
+					"subject",
+					"createdAt",
+					"state",
+					"fileCount"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTicketsResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"tickets": {
+						"items": {
+							"$ref": "#/components/schemas/APITicket"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"tickets"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTicketResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"ticket": {
+						"$ref": "#/components/schemas/APITicket"
+					}
+				},
+				"required": [
+					"status",
+					"ticket"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateTicketBody": {
+				"properties": {
+					"subject": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"subject"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"APITicketFile": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"s3Key": {
+						"type": "string"
+					},
+					"originalFileName": {
+						"type": "string"
+					},
+					"sizeBytes": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"contentType": {
+						"type": "string"
+					},
+					"uploadedByUserId": {
+						"type": "string"
+					},
+					"uploadedAt": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					},
+					"expiresAt": {
+						"type": "string"
+					},
+					"expired": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"id",
+					"s3Key",
+					"originalFileName",
+					"sizeBytes",
+					"contentType",
+					"uploadedByUserId",
+					"uploadedAt",
+					"url",
+					"expiresAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"APITicketDetail": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"urlId": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					},
+					"managedByTenantId": {
+						"type": "string"
+					},
+					"assignedUserIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"subject": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"state": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"fileCount": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"files": {
+						"items": {
+							"$ref": "#/components/schemas/APITicketFile"
+						},
+						"type": "array"
+					},
+					"reopenedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"resolvedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"ackAt": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"required": [
+					"_id",
+					"urlId",
+					"userId",
+					"managedByTenantId",
+					"assignedUserIds",
+					"subject",
+					"createdAt",
+					"state",
+					"fileCount",
+					"files"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetTicketResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"ticket": {
+						"$ref": "#/components/schemas/APITicketDetail"
+					},
+					"availableStates": {
+						"items": {
+							"type": "number",
+							"format": "double"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"status",
+					"ticket",
+					"availableStates"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ChangeTicketStateResponse": {
+				"properties": {
+					"status": {
+						"$ref": "#/components/schemas/APIStatus"
+					},
+					"ticket": {
+						"$ref": "#/components/schemas/APITicket"
+					}
+				},
+				"required": [
+					"status",
+					"ticket"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ChangeTicketStateBody": {
+				"properties": {
+					"state": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"required": [
+					"state"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
 			"ImportedSiteType": {
 				"enum": [
 					0,
 					1
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"SiteType": {
 				"$ref": "#/components/schemas/ImportedSiteType"
@@ -4855,6 +5371,10 @@
 						"type": "number",
 						"format": "double"
 					},
+					"maxCustomCollectionSize": {
+						"type": "number",
+						"format": "double"
+					},
 					"hasWhiteLabeling": {
 						"type": "boolean"
 					},
@@ -4880,6 +5400,9 @@
 						"type": "boolean"
 					},
 					"enableSAML": {
+						"type": "boolean"
+					},
+					"enableCanvasLTI": {
 						"type": "boolean"
 					},
 					"flexPageLoadCostCents": {
@@ -5002,6 +5525,7 @@
 					"maxDomains",
 					"maxWhiteLabeledTenants",
 					"maxMonthlyEventLogRequests",
+					"maxCustomCollectionSize",
 					"hasWhiteLabeling",
 					"hasDebranding",
 					"hasLLMSpamDetection",
@@ -5128,6 +5652,10 @@
 						"format": "double"
 					},
 					"maxMonthlyEventLogRequests": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxCustomCollectionSize": {
 						"type": "number",
 						"format": "double"
 					},
@@ -5318,6 +5846,10 @@
 						"type": "number",
 						"format": "double"
 					},
+					"maxCustomCollectionSize": {
+						"type": "number",
+						"format": "double"
+					},
 					"hasDebranding": {
 						"type": "boolean"
 					},
@@ -5456,6 +5988,10 @@
 						"format": "double"
 					},
 					"maxDomains": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxCustomCollectionSize": {
 						"type": "number",
 						"format": "double"
 					},
@@ -6073,7 +6609,7 @@
 					54,
 					55
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"RepeatCommentHandlingAction": {
 				"enum": [
@@ -6081,7 +6617,7 @@
 					1,
 					2
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"RepeatCommentCheckIgnoredReason": {
 				"enum": [
@@ -6093,7 +6629,7 @@
 					5,
 					6
 				],
-				"type": "number"
+				"type": "integer"
 			},
 			"CommentLogData": {
 				"properties": {
@@ -6491,6 +7027,9 @@
 					},
 					"meta": {
 						"properties": {
+							"wpId": {
+								"type": "string"
+							},
 							"wpUserId": {
 								"type": "string"
 							},
@@ -6585,6 +7124,10 @@
 					},
 					"editKey": {
 						"type": "string"
+					},
+					"tosAcceptedAt": {
+						"type": "string",
+						"format": "date-time"
 					}
 				},
 				"required": [
@@ -7241,6 +7784,9 @@
 						},
 						"type": "array",
 						"nullable": true
+					},
+					"isEmailSuppressed": {
+						"type": "boolean"
 					}
 				},
 				"required": [
@@ -8583,6 +9129,9 @@
 					"questionValues": {
 						"$ref": "#/components/schemas/Record_string.string-or-number_"
 					},
+					"tos": {
+						"type": "boolean"
+					},
 					"approved": {
 						"type": "boolean"
 					},
@@ -9013,6 +9562,9 @@
 								"schema": {
 									"anyOf": [
 										{
+											"$ref": "#/components/schemas/SearchUsersSectionedResponse"
+										},
+										{
 											"$ref": "#/components/schemas/SearchUsersResponse"
 										},
 										{
@@ -9070,6 +9622,18 @@
 						"required": false,
 						"schema": {
 							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "searchSection",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"enum": [
+								"fast",
+								"site"
+							]
 						}
 					}
 				]
@@ -11728,6 +12292,62 @@
 			}
 		},
 		"/api/v1/subscriptions/{id}": {
+			"patch": {
+				"operationId": "UpdateSubscription",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/UpdateSubscriptionAPIResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateAPIUserSubscriptionData"
+							}
+						}
+					}
+				}
+			},
 			"delete": {
 				"operationId": "DeleteSubscription",
 				"responses": {
@@ -13045,6 +13665,255 @@
 						}
 					}
 				]
+			}
+		},
+		"/api/v1/tickets": {
+			"get": {
+				"operationId": "GetTickets",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTicketsResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "state",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "skip",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateTicket",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/CreateTicketResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTicketBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/tickets/{id}": {
+			"get": {
+				"operationId": "GetTicket",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/GetTicketResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tickets/{id}/state": {
+			"patch": {
+				"operationId": "ChangeTicketState",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"$ref": "#/components/schemas/ChangeTicketStateResponse"
+										},
+										{
+											"$ref": "#/components/schemas/APIError"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "userId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ChangeTicketStateBody"
+							}
+						}
+					}
+				}
 			}
 		},
 		"/api/v1/tenants/{id}": {

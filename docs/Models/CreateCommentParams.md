@@ -27,6 +27,7 @@
 | **autoplayDelayMS** | **Long** |  | [optional] [default to null] |
 | **feedbackIds** | **List** |  | [optional] [default to null] |
 | **questionValues** | [**Map**](Record_string_string_or_number__value.md) | Construct a type with a set of properties K of type T | [optional] [default to null] |
+| **tos** | **Boolean** |  | [optional] [default to null] |
 | **approved** | **Boolean** |  | [optional] [default to null] |
 | **domain** | **String** |  | [optional] [default to null] |
 | **ip** | **String** |  | [optional] [default to null] |
