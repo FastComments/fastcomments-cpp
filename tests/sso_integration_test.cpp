@@ -192,7 +192,9 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
             boost::none,  // contextUserId
             boost::none,  // hashTag
             boost::none,  // parentId
-            boost::none   // direction
+            boost::none,  // direction
+            boost::none,  // fromDate
+            boost::none   // toDate
         ).get();
 
         ASSERT_NE(getResponse, nullptr);
