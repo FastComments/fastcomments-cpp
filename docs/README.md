@@ -7,215 +7,215 @@ All URIs are relative to *https://fastcomments.com*
 
 | Class | Method | HTTP request | Description |
 |------------ | ------------- | ------------- | -------------|
-| *DefaultApi* | [**addDomainConfig**](Apis/DefaultApi.md#adddomainconfig) | **POST** /api/v1/domain-configs |  |
-*DefaultApi* | [**addHashTag**](Apis/DefaultApi.md#addhashtag) | **POST** /api/v1/hash-tags |  |
-*DefaultApi* | [**addHashTagsBulk**](Apis/DefaultApi.md#addhashtagsbulk) | **POST** /api/v1/hash-tags/bulk |  |
-*DefaultApi* | [**addPage**](Apis/DefaultApi.md#addpage) | **POST** /api/v1/pages |  |
-*DefaultApi* | [**addSSOUser**](Apis/DefaultApi.md#addssouser) | **POST** /api/v1/sso-users |  |
+| *DefaultApi* | [**addDomainConfig**](Apis/DefaultApi.md#addDomainConfig) | **POST** /api/v1/domain-configs |  |
+*DefaultApi* | [**addHashTag**](Apis/DefaultApi.md#addHashTag) | **POST** /api/v1/hash-tags |  |
+*DefaultApi* | [**addHashTagsBulk**](Apis/DefaultApi.md#addHashTagsBulk) | **POST** /api/v1/hash-tags/bulk |  |
+*DefaultApi* | [**addPage**](Apis/DefaultApi.md#addPage) | **POST** /api/v1/pages |  |
+*DefaultApi* | [**addSSOUser**](Apis/DefaultApi.md#addSSOUser) | **POST** /api/v1/sso-users |  |
 *DefaultApi* | [**aggregate**](Apis/DefaultApi.md#aggregate) | **POST** /api/v1/aggregate | Aggregates documents by grouping them (if groupBy is provided) and applying multiple operations. Different operations (e.g. sum, countDistinct, avg, etc.) are supported. |
-*DefaultApi* | [**aggregateQuestionResults**](Apis/DefaultApi.md#aggregatequestionresults) | **GET** /api/v1/question-results-aggregation |  |
-*DefaultApi* | [**blockUserFromComment**](Apis/DefaultApi.md#blockuserfromcomment) | **POST** /api/v1/comments/{id}/block |  |
-*DefaultApi* | [**bulkAggregateQuestionResults**](Apis/DefaultApi.md#bulkaggregatequestionresults) | **POST** /api/v1/question-results-aggregation/bulk |  |
-*DefaultApi* | [**changeTicketState**](Apis/DefaultApi.md#changeticketstate) | **PATCH** /api/v1/tickets/{id}/state |  |
-*DefaultApi* | [**combineCommentsWithQuestionResults**](Apis/DefaultApi.md#combinecommentswithquestionresults) | **GET** /api/v1/question-results-aggregation/combine/comments |  |
-*DefaultApi* | [**createEmailTemplate**](Apis/DefaultApi.md#createemailtemplate) | **POST** /api/v1/email-templates |  |
-*DefaultApi* | [**createFeedPost**](Apis/DefaultApi.md#createfeedpost) | **POST** /api/v1/feed-posts |  |
-*DefaultApi* | [**createModerator**](Apis/DefaultApi.md#createmoderator) | **POST** /api/v1/moderators |  |
-*DefaultApi* | [**createQuestionConfig**](Apis/DefaultApi.md#createquestionconfig) | **POST** /api/v1/question-configs |  |
-*DefaultApi* | [**createQuestionResult**](Apis/DefaultApi.md#createquestionresult) | **POST** /api/v1/question-results |  |
-*DefaultApi* | [**createSubscription**](Apis/DefaultApi.md#createsubscription) | **POST** /api/v1/subscriptions |  |
-*DefaultApi* | [**createTenant**](Apis/DefaultApi.md#createtenant) | **POST** /api/v1/tenants |  |
-*DefaultApi* | [**createTenantPackage**](Apis/DefaultApi.md#createtenantpackage) | **POST** /api/v1/tenant-packages |  |
-*DefaultApi* | [**createTenantUser**](Apis/DefaultApi.md#createtenantuser) | **POST** /api/v1/tenant-users |  |
-*DefaultApi* | [**createTicket**](Apis/DefaultApi.md#createticket) | **POST** /api/v1/tickets |  |
-*DefaultApi* | [**createUserBadge**](Apis/DefaultApi.md#createuserbadge) | **POST** /api/v1/user-badges |  |
-*DefaultApi* | [**createVote**](Apis/DefaultApi.md#createvote) | **POST** /api/v1/votes |  |
-*DefaultApi* | [**deleteComment**](Apis/DefaultApi.md#deletecomment) | **DELETE** /api/v1/comments/{id} |  |
-*DefaultApi* | [**deleteDomainConfig**](Apis/DefaultApi.md#deletedomainconfig) | **DELETE** /api/v1/domain-configs/{domain} |  |
-*DefaultApi* | [**deleteEmailTemplate**](Apis/DefaultApi.md#deleteemailtemplate) | **DELETE** /api/v1/email-templates/{id} |  |
-*DefaultApi* | [**deleteEmailTemplateRenderError**](Apis/DefaultApi.md#deleteemailtemplaterendererror) | **DELETE** /api/v1/email-templates/{id}/render-errors/{errorId} |  |
-*DefaultApi* | [**deleteHashTag**](Apis/DefaultApi.md#deletehashtag) | **DELETE** /api/v1/hash-tags/{tag} |  |
-*DefaultApi* | [**deleteModerator**](Apis/DefaultApi.md#deletemoderator) | **DELETE** /api/v1/moderators/{id} |  |
-*DefaultApi* | [**deleteNotificationCount**](Apis/DefaultApi.md#deletenotificationcount) | **DELETE** /api/v1/notification-count/{id} |  |
-*DefaultApi* | [**deletePage**](Apis/DefaultApi.md#deletepage) | **DELETE** /api/v1/pages/{id} |  |
-*DefaultApi* | [**deletePendingWebhookEvent**](Apis/DefaultApi.md#deletependingwebhookevent) | **DELETE** /api/v1/pending-webhook-events/{id} |  |
-*DefaultApi* | [**deleteQuestionConfig**](Apis/DefaultApi.md#deletequestionconfig) | **DELETE** /api/v1/question-configs/{id} |  |
-*DefaultApi* | [**deleteQuestionResult**](Apis/DefaultApi.md#deletequestionresult) | **DELETE** /api/v1/question-results/{id} |  |
-*DefaultApi* | [**deleteSSOUser**](Apis/DefaultApi.md#deletessouser) | **DELETE** /api/v1/sso-users/{id} |  |
-*DefaultApi* | [**deleteSubscription**](Apis/DefaultApi.md#deletesubscription) | **DELETE** /api/v1/subscriptions/{id} |  |
-*DefaultApi* | [**deleteTenant**](Apis/DefaultApi.md#deletetenant) | **DELETE** /api/v1/tenants/{id} |  |
-*DefaultApi* | [**deleteTenantPackage**](Apis/DefaultApi.md#deletetenantpackage) | **DELETE** /api/v1/tenant-packages/{id} |  |
-*DefaultApi* | [**deleteTenantUser**](Apis/DefaultApi.md#deletetenantuser) | **DELETE** /api/v1/tenant-users/{id} |  |
-*DefaultApi* | [**deleteUserBadge**](Apis/DefaultApi.md#deleteuserbadge) | **DELETE** /api/v1/user-badges/{id} |  |
-*DefaultApi* | [**deleteVote**](Apis/DefaultApi.md#deletevote) | **DELETE** /api/v1/votes/{id} |  |
-*DefaultApi* | [**flagComment**](Apis/DefaultApi.md#flagcomment) | **POST** /api/v1/comments/{id}/flag |  |
-*DefaultApi* | [**getAuditLogs**](Apis/DefaultApi.md#getauditlogs) | **GET** /api/v1/audit-logs |  |
-*DefaultApi* | [**getCachedNotificationCount**](Apis/DefaultApi.md#getcachednotificationcount) | **GET** /api/v1/notification-count/{id} |  |
-*DefaultApi* | [**getComment**](Apis/DefaultApi.md#getcomment) | **GET** /api/v1/comments/{id} |  |
-*DefaultApi* | [**getComments**](Apis/DefaultApi.md#getcomments) | **GET** /api/v1/comments |  |
-*DefaultApi* | [**getDomainConfig**](Apis/DefaultApi.md#getdomainconfig) | **GET** /api/v1/domain-configs/{domain} |  |
-*DefaultApi* | [**getDomainConfigs**](Apis/DefaultApi.md#getdomainconfigs) | **GET** /api/v1/domain-configs |  |
-*DefaultApi* | [**getEmailTemplate**](Apis/DefaultApi.md#getemailtemplate) | **GET** /api/v1/email-templates/{id} |  |
-*DefaultApi* | [**getEmailTemplateDefinitions**](Apis/DefaultApi.md#getemailtemplatedefinitions) | **GET** /api/v1/email-templates/definitions |  |
-*DefaultApi* | [**getEmailTemplateRenderErrors**](Apis/DefaultApi.md#getemailtemplaterendererrors) | **GET** /api/v1/email-templates/{id}/render-errors |  |
-*DefaultApi* | [**getEmailTemplates**](Apis/DefaultApi.md#getemailtemplates) | **GET** /api/v1/email-templates |  |
-*DefaultApi* | [**getFeedPosts**](Apis/DefaultApi.md#getfeedposts) | **GET** /api/v1/feed-posts |  req tenantId afterId |
-*DefaultApi* | [**getHashTags**](Apis/DefaultApi.md#gethashtags) | **GET** /api/v1/hash-tags |  |
-*DefaultApi* | [**getModerator**](Apis/DefaultApi.md#getmoderator) | **GET** /api/v1/moderators/{id} |  |
-*DefaultApi* | [**getModerators**](Apis/DefaultApi.md#getmoderators) | **GET** /api/v1/moderators |  |
-*DefaultApi* | [**getNotificationCount**](Apis/DefaultApi.md#getnotificationcount) | **GET** /api/v1/notifications/count |  |
-*DefaultApi* | [**getNotifications**](Apis/DefaultApi.md#getnotifications) | **GET** /api/v1/notifications |  |
-*DefaultApi* | [**getPageByURLId**](Apis/DefaultApi.md#getpagebyurlid) | **GET** /api/v1/pages/by-url-id |  |
-*DefaultApi* | [**getPages**](Apis/DefaultApi.md#getpages) | **GET** /api/v1/pages |  |
-*DefaultApi* | [**getPendingWebhookEventCount**](Apis/DefaultApi.md#getpendingwebhookeventcount) | **GET** /api/v1/pending-webhook-events/count |  |
-*DefaultApi* | [**getPendingWebhookEvents**](Apis/DefaultApi.md#getpendingwebhookevents) | **GET** /api/v1/pending-webhook-events |  |
-*DefaultApi* | [**getQuestionConfig**](Apis/DefaultApi.md#getquestionconfig) | **GET** /api/v1/question-configs/{id} |  |
-*DefaultApi* | [**getQuestionConfigs**](Apis/DefaultApi.md#getquestionconfigs) | **GET** /api/v1/question-configs |  |
-*DefaultApi* | [**getQuestionResult**](Apis/DefaultApi.md#getquestionresult) | **GET** /api/v1/question-results/{id} |  |
-*DefaultApi* | [**getQuestionResults**](Apis/DefaultApi.md#getquestionresults) | **GET** /api/v1/question-results |  |
-*DefaultApi* | [**getSSOUserByEmail**](Apis/DefaultApi.md#getssouserbyemail) | **GET** /api/v1/sso-users/by-email/{email} |  |
-*DefaultApi* | [**getSSOUserById**](Apis/DefaultApi.md#getssouserbyid) | **GET** /api/v1/sso-users/by-id/{id} |  |
-*DefaultApi* | [**getSSOUsers**](Apis/DefaultApi.md#getssousers) | **GET** /api/v1/sso-users |  |
-*DefaultApi* | [**getSubscriptions**](Apis/DefaultApi.md#getsubscriptions) | **GET** /api/v1/subscriptions |  |
-*DefaultApi* | [**getTenant**](Apis/DefaultApi.md#gettenant) | **GET** /api/v1/tenants/{id} |  |
-*DefaultApi* | [**getTenantDailyUsages**](Apis/DefaultApi.md#gettenantdailyusages) | **GET** /api/v1/tenant-daily-usage |  |
-*DefaultApi* | [**getTenantPackage**](Apis/DefaultApi.md#gettenantpackage) | **GET** /api/v1/tenant-packages/{id} |  |
-*DefaultApi* | [**getTenantPackages**](Apis/DefaultApi.md#gettenantpackages) | **GET** /api/v1/tenant-packages |  |
-*DefaultApi* | [**getTenantUser**](Apis/DefaultApi.md#gettenantuser) | **GET** /api/v1/tenant-users/{id} |  |
-*DefaultApi* | [**getTenantUsers**](Apis/DefaultApi.md#gettenantusers) | **GET** /api/v1/tenant-users |  |
-*DefaultApi* | [**getTenants**](Apis/DefaultApi.md#gettenants) | **GET** /api/v1/tenants |  |
-*DefaultApi* | [**getTicket**](Apis/DefaultApi.md#getticket) | **GET** /api/v1/tickets/{id} |  |
-*DefaultApi* | [**getTickets**](Apis/DefaultApi.md#gettickets) | **GET** /api/v1/tickets |  |
-*DefaultApi* | [**getUser**](Apis/DefaultApi.md#getuser) | **GET** /api/v1/users/{id} |  |
-*DefaultApi* | [**getUserBadge**](Apis/DefaultApi.md#getuserbadge) | **GET** /api/v1/user-badges/{id} |  |
-*DefaultApi* | [**getUserBadgeProgressById**](Apis/DefaultApi.md#getuserbadgeprogressbyid) | **GET** /api/v1/user-badge-progress/{id} |  |
-*DefaultApi* | [**getUserBadgeProgressByUserId**](Apis/DefaultApi.md#getuserbadgeprogressbyuserid) | **GET** /api/v1/user-badge-progress/user/{userId} |  |
-*DefaultApi* | [**getUserBadgeProgressList**](Apis/DefaultApi.md#getuserbadgeprogresslist) | **GET** /api/v1/user-badge-progress |  |
-*DefaultApi* | [**getUserBadges**](Apis/DefaultApi.md#getuserbadges) | **GET** /api/v1/user-badges |  |
-*DefaultApi* | [**getVotes**](Apis/DefaultApi.md#getvotes) | **GET** /api/v1/votes |  |
-*DefaultApi* | [**getVotesForUser**](Apis/DefaultApi.md#getvotesforuser) | **GET** /api/v1/votes/for-user |  |
-*DefaultApi* | [**patchDomainConfig**](Apis/DefaultApi.md#patchdomainconfig) | **PATCH** /api/v1/domain-configs/{domainToUpdate} |  |
-*DefaultApi* | [**patchHashTag**](Apis/DefaultApi.md#patchhashtag) | **PATCH** /api/v1/hash-tags/{tag} |  |
-*DefaultApi* | [**patchPage**](Apis/DefaultApi.md#patchpage) | **PATCH** /api/v1/pages/{id} |  |
-*DefaultApi* | [**patchSSOUser**](Apis/DefaultApi.md#patchssouser) | **PATCH** /api/v1/sso-users/{id} |  |
-*DefaultApi* | [**putDomainConfig**](Apis/DefaultApi.md#putdomainconfig) | **PUT** /api/v1/domain-configs/{domainToUpdate} |  |
-*DefaultApi* | [**putSSOUser**](Apis/DefaultApi.md#putssouser) | **PUT** /api/v1/sso-users/{id} |  |
-*DefaultApi* | [**renderEmailTemplate**](Apis/DefaultApi.md#renderemailtemplate) | **POST** /api/v1/email-templates/render |  |
-*DefaultApi* | [**replaceTenantPackage**](Apis/DefaultApi.md#replacetenantpackage) | **PUT** /api/v1/tenant-packages/{id} |  |
-*DefaultApi* | [**replaceTenantUser**](Apis/DefaultApi.md#replacetenantuser) | **PUT** /api/v1/tenant-users/{id} |  |
-*DefaultApi* | [**saveComment**](Apis/DefaultApi.md#savecomment) | **POST** /api/v1/comments |  |
-*DefaultApi* | [**saveCommentsBulk**](Apis/DefaultApi.md#savecommentsbulk) | **POST** /api/v1/comments/bulk |  |
-*DefaultApi* | [**sendInvite**](Apis/DefaultApi.md#sendinvite) | **POST** /api/v1/moderators/{id}/send-invite |  |
-*DefaultApi* | [**sendLoginLink**](Apis/DefaultApi.md#sendloginlink) | **POST** /api/v1/tenant-users/{id}/send-login-link |  |
-*DefaultApi* | [**unBlockUserFromComment**](Apis/DefaultApi.md#unblockuserfromcomment) | **POST** /api/v1/comments/{id}/un-block |  |
-*DefaultApi* | [**unFlagComment**](Apis/DefaultApi.md#unflagcomment) | **POST** /api/v1/comments/{id}/un-flag |  |
-*DefaultApi* | [**updateComment**](Apis/DefaultApi.md#updatecomment) | **PATCH** /api/v1/comments/{id} |  |
-*DefaultApi* | [**updateEmailTemplate**](Apis/DefaultApi.md#updateemailtemplate) | **PATCH** /api/v1/email-templates/{id} |  |
-*DefaultApi* | [**updateFeedPost**](Apis/DefaultApi.md#updatefeedpost) | **PATCH** /api/v1/feed-posts/{id} |  |
-*DefaultApi* | [**updateModerator**](Apis/DefaultApi.md#updatemoderator) | **PATCH** /api/v1/moderators/{id} |  |
-*DefaultApi* | [**updateNotification**](Apis/DefaultApi.md#updatenotification) | **PATCH** /api/v1/notifications/{id} |  |
-*DefaultApi* | [**updateQuestionConfig**](Apis/DefaultApi.md#updatequestionconfig) | **PATCH** /api/v1/question-configs/{id} |  |
-*DefaultApi* | [**updateQuestionResult**](Apis/DefaultApi.md#updatequestionresult) | **PATCH** /api/v1/question-results/{id} |  |
-*DefaultApi* | [**updateSubscription**](Apis/DefaultApi.md#updatesubscription) | **PATCH** /api/v1/subscriptions/{id} |  |
-*DefaultApi* | [**updateTenant**](Apis/DefaultApi.md#updatetenant) | **PATCH** /api/v1/tenants/{id} |  |
-*DefaultApi* | [**updateTenantPackage**](Apis/DefaultApi.md#updatetenantpackage) | **PATCH** /api/v1/tenant-packages/{id} |  |
-*DefaultApi* | [**updateTenantUser**](Apis/DefaultApi.md#updatetenantuser) | **PATCH** /api/v1/tenant-users/{id} |  |
-*DefaultApi* | [**updateUserBadge**](Apis/DefaultApi.md#updateuserbadge) | **PUT** /api/v1/user-badges/{id} |  |
-| *ModerationApi* | [**deleteModerationVote**](Apis/ModerationApi.md#deletemoderationvote) | **DELETE** /auth/my-account/moderate-comments/vote/{commentId}/{voteId} |  |
-*ModerationApi* | [**getApiComments**](Apis/ModerationApi.md#getapicomments) | **GET** /auth/my-account/moderate-comments/api/comments |  |
-*ModerationApi* | [**getApiExportStatus**](Apis/ModerationApi.md#getapiexportstatus) | **GET** /auth/my-account/moderate-comments/api/export/status |  |
-*ModerationApi* | [**getApiIds**](Apis/ModerationApi.md#getapiids) | **GET** /auth/my-account/moderate-comments/api/ids |  |
-*ModerationApi* | [**getBanUsersFromComment**](Apis/ModerationApi.md#getbanusersfromcomment) | **GET** /auth/my-account/moderate-comments/ban-users/from-comment/{commentId} |  |
-*ModerationApi* | [**getCommentBanStatus**](Apis/ModerationApi.md#getcommentbanstatus) | **GET** /auth/my-account/moderate-comments/get-comment-ban-status/{commentId} |  |
-*ModerationApi* | [**getCommentChildren**](Apis/ModerationApi.md#getcommentchildren) | **GET** /auth/my-account/moderate-comments/comment-children/{commentId} |  |
-*ModerationApi* | [**getCount**](Apis/ModerationApi.md#getcount) | **GET** /auth/my-account/moderate-comments/count |  |
-*ModerationApi* | [**getCounts**](Apis/ModerationApi.md#getcounts) | **GET** /auth/my-account/moderate-comments/banned-users/counts |  |
-*ModerationApi* | [**getLogs**](Apis/ModerationApi.md#getlogs) | **GET** /auth/my-account/moderate-comments/logs/{commentId} |  |
-*ModerationApi* | [**getManualBadges**](Apis/ModerationApi.md#getmanualbadges) | **GET** /auth/my-account/moderate-comments/get-manual-badges |  |
-*ModerationApi* | [**getManualBadgesForUser**](Apis/ModerationApi.md#getmanualbadgesforuser) | **GET** /auth/my-account/moderate-comments/get-manual-badges-for-user |  |
-*ModerationApi* | [**getModerationComment**](Apis/ModerationApi.md#getmoderationcomment) | **GET** /auth/my-account/moderate-comments/comment/{commentId} |  |
-*ModerationApi* | [**getModerationCommentText**](Apis/ModerationApi.md#getmoderationcommenttext) | **GET** /auth/my-account/moderate-comments/get-comment-text/{commentId} |  |
-*ModerationApi* | [**getPreBanSummary**](Apis/ModerationApi.md#getprebansummary) | **GET** /auth/my-account/moderate-comments/pre-ban-summary/{commentId} |  |
-*ModerationApi* | [**getSearchCommentsSummary**](Apis/ModerationApi.md#getsearchcommentssummary) | **GET** /auth/my-account/moderate-comments/search/comments/summary |  |
-*ModerationApi* | [**getSearchPages**](Apis/ModerationApi.md#getsearchpages) | **GET** /auth/my-account/moderate-comments/search/pages |  |
-*ModerationApi* | [**getSearchSites**](Apis/ModerationApi.md#getsearchsites) | **GET** /auth/my-account/moderate-comments/search/sites |  |
-*ModerationApi* | [**getSearchSuggest**](Apis/ModerationApi.md#getsearchsuggest) | **GET** /auth/my-account/moderate-comments/search/suggest |  |
-*ModerationApi* | [**getSearchUsers**](Apis/ModerationApi.md#getsearchusers) | **GET** /auth/my-account/moderate-comments/search/users |  |
-*ModerationApi* | [**getTrustFactor**](Apis/ModerationApi.md#gettrustfactor) | **GET** /auth/my-account/moderate-comments/get-trust-factor |  |
-*ModerationApi* | [**getUserBanPreference**](Apis/ModerationApi.md#getuserbanpreference) | **GET** /auth/my-account/moderate-comments/user-ban-preference |  |
-*ModerationApi* | [**getUserInternalProfile**](Apis/ModerationApi.md#getuserinternalprofile) | **GET** /auth/my-account/moderate-comments/get-user-internal-profile |  |
-*ModerationApi* | [**postAdjustCommentVotes**](Apis/ModerationApi.md#postadjustcommentvotes) | **POST** /auth/my-account/moderate-comments/adjust-comment-votes/{commentId} |  |
-*ModerationApi* | [**postApiExport**](Apis/ModerationApi.md#postapiexport) | **POST** /auth/my-account/moderate-comments/api/export |  |
-*ModerationApi* | [**postBanUserFromComment**](Apis/ModerationApi.md#postbanuserfromcomment) | **POST** /auth/my-account/moderate-comments/ban-user/from-comment/{commentId} |  |
-*ModerationApi* | [**postBanUserUndo**](Apis/ModerationApi.md#postbanuserundo) | **POST** /auth/my-account/moderate-comments/ban-user/undo |  |
-*ModerationApi* | [**postBulkPreBanSummary**](Apis/ModerationApi.md#postbulkprebansummary) | **POST** /auth/my-account/moderate-comments/bulk-pre-ban-summary |  |
-*ModerationApi* | [**postCommentsByIds**](Apis/ModerationApi.md#postcommentsbyids) | **POST** /auth/my-account/moderate-comments/comments-by-ids |  |
-*ModerationApi* | [**postFlagComment**](Apis/ModerationApi.md#postflagcomment) | **POST** /auth/my-account/moderate-comments/flag-comment/{commentId} |  |
-*ModerationApi* | [**postRemoveComment**](Apis/ModerationApi.md#postremovecomment) | **POST** /auth/my-account/moderate-comments/remove-comment/{commentId} |  |
-*ModerationApi* | [**postRestoreDeletedComment**](Apis/ModerationApi.md#postrestoredeletedcomment) | **POST** /auth/my-account/moderate-comments/restore-deleted-comment/{commentId} |  |
-*ModerationApi* | [**postSetCommentApprovalStatus**](Apis/ModerationApi.md#postsetcommentapprovalstatus) | **POST** /auth/my-account/moderate-comments/set-comment-approval-status/{commentId} |  |
-*ModerationApi* | [**postSetCommentReviewStatus**](Apis/ModerationApi.md#postsetcommentreviewstatus) | **POST** /auth/my-account/moderate-comments/set-comment-review-status/{commentId} |  |
-*ModerationApi* | [**postSetCommentSpamStatus**](Apis/ModerationApi.md#postsetcommentspamstatus) | **POST** /auth/my-account/moderate-comments/set-comment-spam-status/{commentId} |  |
-*ModerationApi* | [**postSetCommentText**](Apis/ModerationApi.md#postsetcommenttext) | **POST** /auth/my-account/moderate-comments/set-comment-text/{commentId} |  |
-*ModerationApi* | [**postUnFlagComment**](Apis/ModerationApi.md#postunflagcomment) | **POST** /auth/my-account/moderate-comments/un-flag-comment/{commentId} |  |
-*ModerationApi* | [**postVote**](Apis/ModerationApi.md#postvote) | **POST** /auth/my-account/moderate-comments/vote/{commentId} |  |
-*ModerationApi* | [**putAwardBadge**](Apis/ModerationApi.md#putawardbadge) | **PUT** /auth/my-account/moderate-comments/award-badge |  |
-*ModerationApi* | [**putCloseThread**](Apis/ModerationApi.md#putclosethread) | **PUT** /auth/my-account/moderate-comments/close-thread |  |
-*ModerationApi* | [**putRemoveBadge**](Apis/ModerationApi.md#putremovebadge) | **PUT** /auth/my-account/moderate-comments/remove-badge |  |
-*ModerationApi* | [**putReopenThread**](Apis/ModerationApi.md#putreopenthread) | **PUT** /auth/my-account/moderate-comments/reopen-thread |  |
-*ModerationApi* | [**setTrustFactor**](Apis/ModerationApi.md#settrustfactor) | **PUT** /auth/my-account/moderate-comments/set-trust-factor |  |
-| *PublicApi* | [**blockFromCommentPublic**](Apis/PublicApi.md#blockfromcommentpublic) | **POST** /block-from-comment/{commentId} |  |
-*PublicApi* | [**checkedCommentsForBlocked**](Apis/PublicApi.md#checkedcommentsforblocked) | **GET** /check-blocked-comments |  |
-*PublicApi* | [**createCommentPublic**](Apis/PublicApi.md#createcommentpublic) | **POST** /comments/{tenantId} |  |
-*PublicApi* | [**createFeedPostPublic**](Apis/PublicApi.md#createfeedpostpublic) | **POST** /feed-posts/{tenantId} |  |
-*PublicApi* | [**createV1PageReact**](Apis/PublicApi.md#createv1pagereact) | **POST** /page-reacts/v1/likes/{tenantId} |  |
-*PublicApi* | [**createV2PageReact**](Apis/PublicApi.md#createv2pagereact) | **POST** /page-reacts/v2/{tenantId} |  |
-*PublicApi* | [**deleteCommentPublic**](Apis/PublicApi.md#deletecommentpublic) | **DELETE** /comments/{tenantId}/{commentId} |  |
-*PublicApi* | [**deleteCommentVote**](Apis/PublicApi.md#deletecommentvote) | **DELETE** /comments/{tenantId}/{commentId}/vote/{voteId} |  |
-*PublicApi* | [**deleteFeedPostPublic**](Apis/PublicApi.md#deletefeedpostpublic) | **DELETE** /feed-posts/{tenantId}/{postId} |  |
-*PublicApi* | [**deleteV1PageReact**](Apis/PublicApi.md#deletev1pagereact) | **DELETE** /page-reacts/v1/likes/{tenantId} |  |
-*PublicApi* | [**deleteV2PageReact**](Apis/PublicApi.md#deletev2pagereact) | **DELETE** /page-reacts/v2/{tenantId} |  |
-*PublicApi* | [**flagCommentPublic**](Apis/PublicApi.md#flagcommentpublic) | **POST** /flag-comment/{commentId} |  |
-*PublicApi* | [**getCommentText**](Apis/PublicApi.md#getcommenttext) | **GET** /comments/{tenantId}/{commentId}/text |  |
-*PublicApi* | [**getCommentVoteUserNames**](Apis/PublicApi.md#getcommentvoteusernames) | **GET** /comments/{tenantId}/{commentId}/votes |  |
-*PublicApi* | [**getCommentsForUser**](Apis/PublicApi.md#getcommentsforuser) | **GET** /comments-for-user |  |
-*PublicApi* | [**getCommentsPublic**](Apis/PublicApi.md#getcommentspublic) | **GET** /comments/{tenantId} |  req tenantId urlId |
-*PublicApi* | [**getEventLog**](Apis/PublicApi.md#geteventlog) | **GET** /event-log/{tenantId} |  req tenantId urlId userIdWS |
-*PublicApi* | [**getFeedPostsPublic**](Apis/PublicApi.md#getfeedpostspublic) | **GET** /feed-posts/{tenantId} |  req tenantId afterId |
-*PublicApi* | [**getFeedPostsStats**](Apis/PublicApi.md#getfeedpostsstats) | **GET** /feed-posts/{tenantId}/stats |  |
-*PublicApi* | [**getGifLarge**](Apis/PublicApi.md#getgiflarge) | **GET** /gifs/get-large/{tenantId} |  |
-*PublicApi* | [**getGifsSearch**](Apis/PublicApi.md#getgifssearch) | **GET** /gifs/search/{tenantId} |  |
-*PublicApi* | [**getGifsTrending**](Apis/PublicApi.md#getgifstrending) | **GET** /gifs/trending/{tenantId} |  |
-*PublicApi* | [**getGlobalEventLog**](Apis/PublicApi.md#getglobaleventlog) | **GET** /event-log/global/{tenantId} |  req tenantId urlId userIdWS |
-*PublicApi* | [**getOfflineUsers**](Apis/PublicApi.md#getofflineusers) | **GET** /pages/{tenantId}/users/offline | Past commenters on the page who are NOT currently online. Sorted by displayName. Use this after exhausting /users/online to render a \"Members\" section. Cursor pagination on commenterName: server walks the partial {tenantId, urlId, commenterName} index from afterName forward via $gt, no $skip cost. |
-*PublicApi* | [**getOnlineUsers**](Apis/PublicApi.md#getonlineusers) | **GET** /pages/{tenantId}/users/online | Currently-online viewers of a page: people whose websocket session is subscribed to the page right now. Returns anonCount + totalCount (room-wide subscribers, including anon viewers we don't enumerate). |
-*PublicApi* | [**getPagesPublic**](Apis/PublicApi.md#getpagespublic) | **GET** /pages/{tenantId} | List pages for a tenant. Used by the FChat desktop client to populate its room list. Requires `enableFChat` to be true on the resolved custom config for each page. Pages that require SSO are filtered against the requesting user's group access. |
-*PublicApi* | [**getTranslations**](Apis/PublicApi.md#gettranslations) | **GET** /translations/{namespace}/{component} |  |
-*PublicApi* | [**getUserNotificationCount**](Apis/PublicApi.md#getusernotificationcount) | **GET** /user-notifications/get-count |  |
-*PublicApi* | [**getUserNotifications**](Apis/PublicApi.md#getusernotifications) | **GET** /user-notifications |  |
-*PublicApi* | [**getUserPresenceStatuses**](Apis/PublicApi.md#getuserpresencestatuses) | **GET** /user-presence-status |  |
-*PublicApi* | [**getUserReactsPublic**](Apis/PublicApi.md#getuserreactspublic) | **GET** /feed-posts/{tenantId}/user-reacts |  |
-*PublicApi* | [**getUsersInfo**](Apis/PublicApi.md#getusersinfo) | **GET** /pages/{tenantId}/users/info | Bulk user info for a tenant. Given userIds, return display info from User / SSOUser. Used by the comment widget to enrich users that just appeared via a presence event. No page context: privacy is enforced uniformly (private profiles are masked). |
-*PublicApi* | [**getV1PageLikes**](Apis/PublicApi.md#getv1pagelikes) | **GET** /page-reacts/v1/likes/{tenantId} |  |
-*PublicApi* | [**getV2PageReactUsers**](Apis/PublicApi.md#getv2pagereactusers) | **GET** /page-reacts/v2/{tenantId}/list |  |
-*PublicApi* | [**getV2PageReacts**](Apis/PublicApi.md#getv2pagereacts) | **GET** /page-reacts/v2/{tenantId} |  |
-*PublicApi* | [**lockComment**](Apis/PublicApi.md#lockcomment) | **POST** /comments/{tenantId}/{commentId}/lock |  |
-*PublicApi* | [**logoutPublic**](Apis/PublicApi.md#logoutpublic) | **PUT** /auth/logout |  |
-*PublicApi* | [**pinComment**](Apis/PublicApi.md#pincomment) | **POST** /comments/{tenantId}/{commentId}/pin |  |
-*PublicApi* | [**reactFeedPostPublic**](Apis/PublicApi.md#reactfeedpostpublic) | **POST** /feed-posts/{tenantId}/react/{postId} |  |
-*PublicApi* | [**resetUserNotificationCount**](Apis/PublicApi.md#resetusernotificationcount) | **POST** /user-notifications/reset-count |  |
-*PublicApi* | [**resetUserNotifications**](Apis/PublicApi.md#resetusernotifications) | **POST** /user-notifications/reset |  |
-*PublicApi* | [**searchUsers**](Apis/PublicApi.md#searchusers) | **GET** /user-search/{tenantId} |  |
-*PublicApi* | [**setCommentText**](Apis/PublicApi.md#setcommenttext) | **POST** /comments/{tenantId}/{commentId}/update-text |  |
-*PublicApi* | [**unBlockCommentPublic**](Apis/PublicApi.md#unblockcommentpublic) | **DELETE** /block-from-comment/{commentId} |  |
-*PublicApi* | [**unLockComment**](Apis/PublicApi.md#unlockcomment) | **POST** /comments/{tenantId}/{commentId}/unlock |  |
-*PublicApi* | [**unPinComment**](Apis/PublicApi.md#unpincomment) | **POST** /comments/{tenantId}/{commentId}/unpin |  |
-*PublicApi* | [**updateFeedPostPublic**](Apis/PublicApi.md#updatefeedpostpublic) | **PUT** /feed-posts/{tenantId}/{postId} |  |
-*PublicApi* | [**updateUserNotificationCommentSubscriptionStatus**](Apis/PublicApi.md#updateusernotificationcommentsubscriptionstatus) | **POST** /user-notifications/{notificationId}/mark-opted/{optedInOrOut} | Enable or disable notifications for a specific comment. |
-*PublicApi* | [**updateUserNotificationPageSubscriptionStatus**](Apis/PublicApi.md#updateusernotificationpagesubscriptionstatus) | **POST** /user-notifications/set-subscription-state/{subscribedOrUnsubscribed} | Enable or disable notifications for a page. When users are subscribed to a page, notifications are created for new root comments, and also |
-*PublicApi* | [**updateUserNotificationStatus**](Apis/PublicApi.md#updateusernotificationstatus) | **POST** /user-notifications/{notificationId}/mark/{newStatus} |  |
-*PublicApi* | [**uploadImage**](Apis/PublicApi.md#uploadimage) | **POST** /upload-image/{tenantId} | Upload and resize an image |
-*PublicApi* | [**voteComment**](Apis/PublicApi.md#votecomment) | **POST** /comments/{tenantId}/{commentId}/vote |  |
+*DefaultApi* | [**aggregateQuestionResults**](Apis/DefaultApi.md#aggregateQuestionResults) | **GET** /api/v1/question-results-aggregation |  |
+*DefaultApi* | [**blockUserFromComment**](Apis/DefaultApi.md#blockUserFromComment) | **POST** /api/v1/comments/{id}/block |  |
+*DefaultApi* | [**bulkAggregateQuestionResults**](Apis/DefaultApi.md#bulkAggregateQuestionResults) | **POST** /api/v1/question-results-aggregation/bulk |  |
+*DefaultApi* | [**changeTicketState**](Apis/DefaultApi.md#changeTicketState) | **PATCH** /api/v1/tickets/{id}/state |  |
+*DefaultApi* | [**combineCommentsWithQuestionResults**](Apis/DefaultApi.md#combineCommentsWithQuestionResults) | **GET** /api/v1/question-results-aggregation/combine/comments |  |
+*DefaultApi* | [**createEmailTemplate**](Apis/DefaultApi.md#createEmailTemplate) | **POST** /api/v1/email-templates |  |
+*DefaultApi* | [**createFeedPost**](Apis/DefaultApi.md#createFeedPost) | **POST** /api/v1/feed-posts |  |
+*DefaultApi* | [**createModerator**](Apis/DefaultApi.md#createModerator) | **POST** /api/v1/moderators |  |
+*DefaultApi* | [**createQuestionConfig**](Apis/DefaultApi.md#createQuestionConfig) | **POST** /api/v1/question-configs |  |
+*DefaultApi* | [**createQuestionResult**](Apis/DefaultApi.md#createQuestionResult) | **POST** /api/v1/question-results |  |
+*DefaultApi* | [**createSubscription**](Apis/DefaultApi.md#createSubscription) | **POST** /api/v1/subscriptions |  |
+*DefaultApi* | [**createTenant**](Apis/DefaultApi.md#createTenant) | **POST** /api/v1/tenants |  |
+*DefaultApi* | [**createTenantPackage**](Apis/DefaultApi.md#createTenantPackage) | **POST** /api/v1/tenant-packages |  |
+*DefaultApi* | [**createTenantUser**](Apis/DefaultApi.md#createTenantUser) | **POST** /api/v1/tenant-users |  |
+*DefaultApi* | [**createTicket**](Apis/DefaultApi.md#createTicket) | **POST** /api/v1/tickets |  |
+*DefaultApi* | [**createUserBadge**](Apis/DefaultApi.md#createUserBadge) | **POST** /api/v1/user-badges |  |
+*DefaultApi* | [**createVote**](Apis/DefaultApi.md#createVote) | **POST** /api/v1/votes |  |
+*DefaultApi* | [**deleteComment**](Apis/DefaultApi.md#deleteComment) | **DELETE** /api/v1/comments/{id} |  |
+*DefaultApi* | [**deleteDomainConfig**](Apis/DefaultApi.md#deleteDomainConfig) | **DELETE** /api/v1/domain-configs/{domain} |  |
+*DefaultApi* | [**deleteEmailTemplate**](Apis/DefaultApi.md#deleteEmailTemplate) | **DELETE** /api/v1/email-templates/{id} |  |
+*DefaultApi* | [**deleteEmailTemplateRenderError**](Apis/DefaultApi.md#deleteEmailTemplateRenderError) | **DELETE** /api/v1/email-templates/{id}/render-errors/{errorId} |  |
+*DefaultApi* | [**deleteHashTag**](Apis/DefaultApi.md#deleteHashTag) | **DELETE** /api/v1/hash-tags/{tag} |  |
+*DefaultApi* | [**deleteModerator**](Apis/DefaultApi.md#deleteModerator) | **DELETE** /api/v1/moderators/{id} |  |
+*DefaultApi* | [**deleteNotificationCount**](Apis/DefaultApi.md#deleteNotificationCount) | **DELETE** /api/v1/notification-count/{id} |  |
+*DefaultApi* | [**deletePage**](Apis/DefaultApi.md#deletePage) | **DELETE** /api/v1/pages/{id} |  |
+*DefaultApi* | [**deletePendingWebhookEvent**](Apis/DefaultApi.md#deletePendingWebhookEvent) | **DELETE** /api/v1/pending-webhook-events/{id} |  |
+*DefaultApi* | [**deleteQuestionConfig**](Apis/DefaultApi.md#deleteQuestionConfig) | **DELETE** /api/v1/question-configs/{id} |  |
+*DefaultApi* | [**deleteQuestionResult**](Apis/DefaultApi.md#deleteQuestionResult) | **DELETE** /api/v1/question-results/{id} |  |
+*DefaultApi* | [**deleteSSOUser**](Apis/DefaultApi.md#deleteSSOUser) | **DELETE** /api/v1/sso-users/{id} |  |
+*DefaultApi* | [**deleteSubscription**](Apis/DefaultApi.md#deleteSubscription) | **DELETE** /api/v1/subscriptions/{id} |  |
+*DefaultApi* | [**deleteTenant**](Apis/DefaultApi.md#deleteTenant) | **DELETE** /api/v1/tenants/{id} |  |
+*DefaultApi* | [**deleteTenantPackage**](Apis/DefaultApi.md#deleteTenantPackage) | **DELETE** /api/v1/tenant-packages/{id} |  |
+*DefaultApi* | [**deleteTenantUser**](Apis/DefaultApi.md#deleteTenantUser) | **DELETE** /api/v1/tenant-users/{id} |  |
+*DefaultApi* | [**deleteUserBadge**](Apis/DefaultApi.md#deleteUserBadge) | **DELETE** /api/v1/user-badges/{id} |  |
+*DefaultApi* | [**deleteVote**](Apis/DefaultApi.md#deleteVote) | **DELETE** /api/v1/votes/{id} |  |
+*DefaultApi* | [**flagComment**](Apis/DefaultApi.md#flagComment) | **POST** /api/v1/comments/{id}/flag |  |
+*DefaultApi* | [**getAuditLogs**](Apis/DefaultApi.md#getAuditLogs) | **GET** /api/v1/audit-logs |  |
+*DefaultApi* | [**getCachedNotificationCount**](Apis/DefaultApi.md#getCachedNotificationCount) | **GET** /api/v1/notification-count/{id} |  |
+*DefaultApi* | [**getComment**](Apis/DefaultApi.md#getComment) | **GET** /api/v1/comments/{id} |  |
+*DefaultApi* | [**getComments**](Apis/DefaultApi.md#getComments) | **GET** /api/v1/comments |  |
+*DefaultApi* | [**getDomainConfig**](Apis/DefaultApi.md#getDomainConfig) | **GET** /api/v1/domain-configs/{domain} |  |
+*DefaultApi* | [**getDomainConfigs**](Apis/DefaultApi.md#getDomainConfigs) | **GET** /api/v1/domain-configs |  |
+*DefaultApi* | [**getEmailTemplate**](Apis/DefaultApi.md#getEmailTemplate) | **GET** /api/v1/email-templates/{id} |  |
+*DefaultApi* | [**getEmailTemplateDefinitions**](Apis/DefaultApi.md#getEmailTemplateDefinitions) | **GET** /api/v1/email-templates/definitions |  |
+*DefaultApi* | [**getEmailTemplateRenderErrors**](Apis/DefaultApi.md#getEmailTemplateRenderErrors) | **GET** /api/v1/email-templates/{id}/render-errors |  |
+*DefaultApi* | [**getEmailTemplates**](Apis/DefaultApi.md#getEmailTemplates) | **GET** /api/v1/email-templates |  |
+*DefaultApi* | [**getFeedPosts**](Apis/DefaultApi.md#getFeedPosts) | **GET** /api/v1/feed-posts |  req tenantId afterId |
+*DefaultApi* | [**getHashTags**](Apis/DefaultApi.md#getHashTags) | **GET** /api/v1/hash-tags |  |
+*DefaultApi* | [**getModerator**](Apis/DefaultApi.md#getModerator) | **GET** /api/v1/moderators/{id} |  |
+*DefaultApi* | [**getModerators**](Apis/DefaultApi.md#getModerators) | **GET** /api/v1/moderators |  |
+*DefaultApi* | [**getNotificationCount**](Apis/DefaultApi.md#getNotificationCount) | **GET** /api/v1/notifications/count |  |
+*DefaultApi* | [**getNotifications**](Apis/DefaultApi.md#getNotifications) | **GET** /api/v1/notifications |  |
+*DefaultApi* | [**getPageByURLId**](Apis/DefaultApi.md#getPageByURLId) | **GET** /api/v1/pages/by-url-id |  |
+*DefaultApi* | [**getPages**](Apis/DefaultApi.md#getPages) | **GET** /api/v1/pages |  |
+*DefaultApi* | [**getPendingWebhookEventCount**](Apis/DefaultApi.md#getPendingWebhookEventCount) | **GET** /api/v1/pending-webhook-events/count |  |
+*DefaultApi* | [**getPendingWebhookEvents**](Apis/DefaultApi.md#getPendingWebhookEvents) | **GET** /api/v1/pending-webhook-events |  |
+*DefaultApi* | [**getQuestionConfig**](Apis/DefaultApi.md#getQuestionConfig) | **GET** /api/v1/question-configs/{id} |  |
+*DefaultApi* | [**getQuestionConfigs**](Apis/DefaultApi.md#getQuestionConfigs) | **GET** /api/v1/question-configs |  |
+*DefaultApi* | [**getQuestionResult**](Apis/DefaultApi.md#getQuestionResult) | **GET** /api/v1/question-results/{id} |  |
+*DefaultApi* | [**getQuestionResults**](Apis/DefaultApi.md#getQuestionResults) | **GET** /api/v1/question-results |  |
+*DefaultApi* | [**getSSOUserByEmail**](Apis/DefaultApi.md#getSSOUserByEmail) | **GET** /api/v1/sso-users/by-email/{email} |  |
+*DefaultApi* | [**getSSOUserById**](Apis/DefaultApi.md#getSSOUserById) | **GET** /api/v1/sso-users/by-id/{id} |  |
+*DefaultApi* | [**getSSOUsers**](Apis/DefaultApi.md#getSSOUsers) | **GET** /api/v1/sso-users |  |
+*DefaultApi* | [**getSubscriptions**](Apis/DefaultApi.md#getSubscriptions) | **GET** /api/v1/subscriptions |  |
+*DefaultApi* | [**getTenant**](Apis/DefaultApi.md#getTenant) | **GET** /api/v1/tenants/{id} |  |
+*DefaultApi* | [**getTenantDailyUsages**](Apis/DefaultApi.md#getTenantDailyUsages) | **GET** /api/v1/tenant-daily-usage |  |
+*DefaultApi* | [**getTenantPackage**](Apis/DefaultApi.md#getTenantPackage) | **GET** /api/v1/tenant-packages/{id} |  |
+*DefaultApi* | [**getTenantPackages**](Apis/DefaultApi.md#getTenantPackages) | **GET** /api/v1/tenant-packages |  |
+*DefaultApi* | [**getTenantUser**](Apis/DefaultApi.md#getTenantUser) | **GET** /api/v1/tenant-users/{id} |  |
+*DefaultApi* | [**getTenantUsers**](Apis/DefaultApi.md#getTenantUsers) | **GET** /api/v1/tenant-users |  |
+*DefaultApi* | [**getTenants**](Apis/DefaultApi.md#getTenants) | **GET** /api/v1/tenants |  |
+*DefaultApi* | [**getTicket**](Apis/DefaultApi.md#getTicket) | **GET** /api/v1/tickets/{id} |  |
+*DefaultApi* | [**getTickets**](Apis/DefaultApi.md#getTickets) | **GET** /api/v1/tickets |  |
+*DefaultApi* | [**getUser**](Apis/DefaultApi.md#getUser) | **GET** /api/v1/users/{id} |  |
+*DefaultApi* | [**getUserBadge**](Apis/DefaultApi.md#getUserBadge) | **GET** /api/v1/user-badges/{id} |  |
+*DefaultApi* | [**getUserBadgeProgressById**](Apis/DefaultApi.md#getUserBadgeProgressById) | **GET** /api/v1/user-badge-progress/{id} |  |
+*DefaultApi* | [**getUserBadgeProgressByUserId**](Apis/DefaultApi.md#getUserBadgeProgressByUserId) | **GET** /api/v1/user-badge-progress/user/{userId} |  |
+*DefaultApi* | [**getUserBadgeProgressList**](Apis/DefaultApi.md#getUserBadgeProgressList) | **GET** /api/v1/user-badge-progress |  |
+*DefaultApi* | [**getUserBadges**](Apis/DefaultApi.md#getUserBadges) | **GET** /api/v1/user-badges |  |
+*DefaultApi* | [**getVotes**](Apis/DefaultApi.md#getVotes) | **GET** /api/v1/votes |  |
+*DefaultApi* | [**getVotesForUser**](Apis/DefaultApi.md#getVotesForUser) | **GET** /api/v1/votes/for-user |  |
+*DefaultApi* | [**patchDomainConfig**](Apis/DefaultApi.md#patchDomainConfig) | **PATCH** /api/v1/domain-configs/{domainToUpdate} |  |
+*DefaultApi* | [**patchHashTag**](Apis/DefaultApi.md#patchHashTag) | **PATCH** /api/v1/hash-tags/{tag} |  |
+*DefaultApi* | [**patchPage**](Apis/DefaultApi.md#patchPage) | **PATCH** /api/v1/pages/{id} |  |
+*DefaultApi* | [**patchSSOUser**](Apis/DefaultApi.md#patchSSOUser) | **PATCH** /api/v1/sso-users/{id} |  |
+*DefaultApi* | [**putDomainConfig**](Apis/DefaultApi.md#putDomainConfig) | **PUT** /api/v1/domain-configs/{domainToUpdate} |  |
+*DefaultApi* | [**putSSOUser**](Apis/DefaultApi.md#putSSOUser) | **PUT** /api/v1/sso-users/{id} |  |
+*DefaultApi* | [**renderEmailTemplate**](Apis/DefaultApi.md#renderEmailTemplate) | **POST** /api/v1/email-templates/render |  |
+*DefaultApi* | [**replaceTenantPackage**](Apis/DefaultApi.md#replaceTenantPackage) | **PUT** /api/v1/tenant-packages/{id} |  |
+*DefaultApi* | [**replaceTenantUser**](Apis/DefaultApi.md#replaceTenantUser) | **PUT** /api/v1/tenant-users/{id} |  |
+*DefaultApi* | [**saveComment**](Apis/DefaultApi.md#saveComment) | **POST** /api/v1/comments |  |
+*DefaultApi* | [**saveCommentsBulk**](Apis/DefaultApi.md#saveCommentsBulk) | **POST** /api/v1/comments/bulk |  |
+*DefaultApi* | [**sendInvite**](Apis/DefaultApi.md#sendInvite) | **POST** /api/v1/moderators/{id}/send-invite |  |
+*DefaultApi* | [**sendLoginLink**](Apis/DefaultApi.md#sendLoginLink) | **POST** /api/v1/tenant-users/{id}/send-login-link |  |
+*DefaultApi* | [**unBlockUserFromComment**](Apis/DefaultApi.md#unBlockUserFromComment) | **POST** /api/v1/comments/{id}/un-block |  |
+*DefaultApi* | [**unFlagComment**](Apis/DefaultApi.md#unFlagComment) | **POST** /api/v1/comments/{id}/un-flag |  |
+*DefaultApi* | [**updateComment**](Apis/DefaultApi.md#updateComment) | **PATCH** /api/v1/comments/{id} |  |
+*DefaultApi* | [**updateEmailTemplate**](Apis/DefaultApi.md#updateEmailTemplate) | **PATCH** /api/v1/email-templates/{id} |  |
+*DefaultApi* | [**updateFeedPost**](Apis/DefaultApi.md#updateFeedPost) | **PATCH** /api/v1/feed-posts/{id} |  |
+*DefaultApi* | [**updateModerator**](Apis/DefaultApi.md#updateModerator) | **PATCH** /api/v1/moderators/{id} |  |
+*DefaultApi* | [**updateNotification**](Apis/DefaultApi.md#updateNotification) | **PATCH** /api/v1/notifications/{id} |  |
+*DefaultApi* | [**updateQuestionConfig**](Apis/DefaultApi.md#updateQuestionConfig) | **PATCH** /api/v1/question-configs/{id} |  |
+*DefaultApi* | [**updateQuestionResult**](Apis/DefaultApi.md#updateQuestionResult) | **PATCH** /api/v1/question-results/{id} |  |
+*DefaultApi* | [**updateSubscription**](Apis/DefaultApi.md#updateSubscription) | **PATCH** /api/v1/subscriptions/{id} |  |
+*DefaultApi* | [**updateTenant**](Apis/DefaultApi.md#updateTenant) | **PATCH** /api/v1/tenants/{id} |  |
+*DefaultApi* | [**updateTenantPackage**](Apis/DefaultApi.md#updateTenantPackage) | **PATCH** /api/v1/tenant-packages/{id} |  |
+*DefaultApi* | [**updateTenantUser**](Apis/DefaultApi.md#updateTenantUser) | **PATCH** /api/v1/tenant-users/{id} |  |
+*DefaultApi* | [**updateUserBadge**](Apis/DefaultApi.md#updateUserBadge) | **PUT** /api/v1/user-badges/{id} |  |
+| *ModerationApi* | [**deleteModerationVote**](Apis/ModerationApi.md#deleteModerationVote) | **DELETE** /auth/my-account/moderate-comments/vote/{commentId}/{voteId} |  |
+*ModerationApi* | [**getApiComments**](Apis/ModerationApi.md#getApiComments) | **GET** /auth/my-account/moderate-comments/api/comments |  |
+*ModerationApi* | [**getApiExportStatus**](Apis/ModerationApi.md#getApiExportStatus) | **GET** /auth/my-account/moderate-comments/api/export/status |  |
+*ModerationApi* | [**getApiIds**](Apis/ModerationApi.md#getApiIds) | **GET** /auth/my-account/moderate-comments/api/ids |  |
+*ModerationApi* | [**getBanUsersFromComment**](Apis/ModerationApi.md#getBanUsersFromComment) | **GET** /auth/my-account/moderate-comments/ban-users/from-comment/{commentId} |  |
+*ModerationApi* | [**getCommentBanStatus**](Apis/ModerationApi.md#getCommentBanStatus) | **GET** /auth/my-account/moderate-comments/get-comment-ban-status/{commentId} |  |
+*ModerationApi* | [**getCommentChildren**](Apis/ModerationApi.md#getCommentChildren) | **GET** /auth/my-account/moderate-comments/comment-children/{commentId} |  |
+*ModerationApi* | [**getCount**](Apis/ModerationApi.md#getCount) | **GET** /auth/my-account/moderate-comments/count |  |
+*ModerationApi* | [**getCounts**](Apis/ModerationApi.md#getCounts) | **GET** /auth/my-account/moderate-comments/banned-users/counts |  |
+*ModerationApi* | [**getLogs**](Apis/ModerationApi.md#getLogs) | **GET** /auth/my-account/moderate-comments/logs/{commentId} |  |
+*ModerationApi* | [**getManualBadges**](Apis/ModerationApi.md#getManualBadges) | **GET** /auth/my-account/moderate-comments/get-manual-badges |  |
+*ModerationApi* | [**getManualBadgesForUser**](Apis/ModerationApi.md#getManualBadgesForUser) | **GET** /auth/my-account/moderate-comments/get-manual-badges-for-user |  |
+*ModerationApi* | [**getModerationComment**](Apis/ModerationApi.md#getModerationComment) | **GET** /auth/my-account/moderate-comments/comment/{commentId} |  |
+*ModerationApi* | [**getModerationCommentText**](Apis/ModerationApi.md#getModerationCommentText) | **GET** /auth/my-account/moderate-comments/get-comment-text/{commentId} |  |
+*ModerationApi* | [**getPreBanSummary**](Apis/ModerationApi.md#getPreBanSummary) | **GET** /auth/my-account/moderate-comments/pre-ban-summary/{commentId} |  |
+*ModerationApi* | [**getSearchCommentsSummary**](Apis/ModerationApi.md#getSearchCommentsSummary) | **GET** /auth/my-account/moderate-comments/search/comments/summary |  |
+*ModerationApi* | [**getSearchPages**](Apis/ModerationApi.md#getSearchPages) | **GET** /auth/my-account/moderate-comments/search/pages |  |
+*ModerationApi* | [**getSearchSites**](Apis/ModerationApi.md#getSearchSites) | **GET** /auth/my-account/moderate-comments/search/sites |  |
+*ModerationApi* | [**getSearchSuggest**](Apis/ModerationApi.md#getSearchSuggest) | **GET** /auth/my-account/moderate-comments/search/suggest |  |
+*ModerationApi* | [**getSearchUsers**](Apis/ModerationApi.md#getSearchUsers) | **GET** /auth/my-account/moderate-comments/search/users |  |
+*ModerationApi* | [**getTrustFactor**](Apis/ModerationApi.md#getTrustFactor) | **GET** /auth/my-account/moderate-comments/get-trust-factor |  |
+*ModerationApi* | [**getUserBanPreference**](Apis/ModerationApi.md#getUserBanPreference) | **GET** /auth/my-account/moderate-comments/user-ban-preference |  |
+*ModerationApi* | [**getUserInternalProfile**](Apis/ModerationApi.md#getUserInternalProfile) | **GET** /auth/my-account/moderate-comments/get-user-internal-profile |  |
+*ModerationApi* | [**postAdjustCommentVotes**](Apis/ModerationApi.md#postAdjustCommentVotes) | **POST** /auth/my-account/moderate-comments/adjust-comment-votes/{commentId} |  |
+*ModerationApi* | [**postApiExport**](Apis/ModerationApi.md#postApiExport) | **POST** /auth/my-account/moderate-comments/api/export |  |
+*ModerationApi* | [**postBanUserFromComment**](Apis/ModerationApi.md#postBanUserFromComment) | **POST** /auth/my-account/moderate-comments/ban-user/from-comment/{commentId} |  |
+*ModerationApi* | [**postBanUserUndo**](Apis/ModerationApi.md#postBanUserUndo) | **POST** /auth/my-account/moderate-comments/ban-user/undo |  |
+*ModerationApi* | [**postBulkPreBanSummary**](Apis/ModerationApi.md#postBulkPreBanSummary) | **POST** /auth/my-account/moderate-comments/bulk-pre-ban-summary |  |
+*ModerationApi* | [**postCommentsByIds**](Apis/ModerationApi.md#postCommentsByIds) | **POST** /auth/my-account/moderate-comments/comments-by-ids |  |
+*ModerationApi* | [**postFlagComment**](Apis/ModerationApi.md#postFlagComment) | **POST** /auth/my-account/moderate-comments/flag-comment/{commentId} |  |
+*ModerationApi* | [**postRemoveComment**](Apis/ModerationApi.md#postRemoveComment) | **POST** /auth/my-account/moderate-comments/remove-comment/{commentId} |  |
+*ModerationApi* | [**postRestoreDeletedComment**](Apis/ModerationApi.md#postRestoreDeletedComment) | **POST** /auth/my-account/moderate-comments/restore-deleted-comment/{commentId} |  |
+*ModerationApi* | [**postSetCommentApprovalStatus**](Apis/ModerationApi.md#postSetCommentApprovalStatus) | **POST** /auth/my-account/moderate-comments/set-comment-approval-status/{commentId} |  |
+*ModerationApi* | [**postSetCommentReviewStatus**](Apis/ModerationApi.md#postSetCommentReviewStatus) | **POST** /auth/my-account/moderate-comments/set-comment-review-status/{commentId} |  |
+*ModerationApi* | [**postSetCommentSpamStatus**](Apis/ModerationApi.md#postSetCommentSpamStatus) | **POST** /auth/my-account/moderate-comments/set-comment-spam-status/{commentId} |  |
+*ModerationApi* | [**postSetCommentText**](Apis/ModerationApi.md#postSetCommentText) | **POST** /auth/my-account/moderate-comments/set-comment-text/{commentId} |  |
+*ModerationApi* | [**postUnFlagComment**](Apis/ModerationApi.md#postUnFlagComment) | **POST** /auth/my-account/moderate-comments/un-flag-comment/{commentId} |  |
+*ModerationApi* | [**postVote**](Apis/ModerationApi.md#postVote) | **POST** /auth/my-account/moderate-comments/vote/{commentId} |  |
+*ModerationApi* | [**putAwardBadge**](Apis/ModerationApi.md#putAwardBadge) | **PUT** /auth/my-account/moderate-comments/award-badge |  |
+*ModerationApi* | [**putCloseThread**](Apis/ModerationApi.md#putCloseThread) | **PUT** /auth/my-account/moderate-comments/close-thread |  |
+*ModerationApi* | [**putRemoveBadge**](Apis/ModerationApi.md#putRemoveBadge) | **PUT** /auth/my-account/moderate-comments/remove-badge |  |
+*ModerationApi* | [**putReopenThread**](Apis/ModerationApi.md#putReopenThread) | **PUT** /auth/my-account/moderate-comments/reopen-thread |  |
+*ModerationApi* | [**setTrustFactor**](Apis/ModerationApi.md#setTrustFactor) | **PUT** /auth/my-account/moderate-comments/set-trust-factor |  |
+| *PublicApi* | [**blockFromCommentPublic**](Apis/PublicApi.md#blockFromCommentPublic) | **POST** /block-from-comment/{commentId} |  |
+*PublicApi* | [**checkedCommentsForBlocked**](Apis/PublicApi.md#checkedCommentsForBlocked) | **GET** /check-blocked-comments |  |
+*PublicApi* | [**createCommentPublic**](Apis/PublicApi.md#createCommentPublic) | **POST** /comments/{tenantId} |  |
+*PublicApi* | [**createFeedPostPublic**](Apis/PublicApi.md#createFeedPostPublic) | **POST** /feed-posts/{tenantId} |  |
+*PublicApi* | [**createV1PageReact**](Apis/PublicApi.md#createV1PageReact) | **POST** /page-reacts/v1/likes/{tenantId} |  |
+*PublicApi* | [**createV2PageReact**](Apis/PublicApi.md#createV2PageReact) | **POST** /page-reacts/v2/{tenantId} |  |
+*PublicApi* | [**deleteCommentPublic**](Apis/PublicApi.md#deleteCommentPublic) | **DELETE** /comments/{tenantId}/{commentId} |  |
+*PublicApi* | [**deleteCommentVote**](Apis/PublicApi.md#deleteCommentVote) | **DELETE** /comments/{tenantId}/{commentId}/vote/{voteId} |  |
+*PublicApi* | [**deleteFeedPostPublic**](Apis/PublicApi.md#deleteFeedPostPublic) | **DELETE** /feed-posts/{tenantId}/{postId} |  |
+*PublicApi* | [**deleteV1PageReact**](Apis/PublicApi.md#deleteV1PageReact) | **DELETE** /page-reacts/v1/likes/{tenantId} |  |
+*PublicApi* | [**deleteV2PageReact**](Apis/PublicApi.md#deleteV2PageReact) | **DELETE** /page-reacts/v2/{tenantId} |  |
+*PublicApi* | [**flagCommentPublic**](Apis/PublicApi.md#flagCommentPublic) | **POST** /flag-comment/{commentId} |  |
+*PublicApi* | [**getCommentText**](Apis/PublicApi.md#getCommentText) | **GET** /comments/{tenantId}/{commentId}/text |  |
+*PublicApi* | [**getCommentVoteUserNames**](Apis/PublicApi.md#getCommentVoteUserNames) | **GET** /comments/{tenantId}/{commentId}/votes |  |
+*PublicApi* | [**getCommentsForUser**](Apis/PublicApi.md#getCommentsForUser) | **GET** /comments-for-user |  |
+*PublicApi* | [**getCommentsPublic**](Apis/PublicApi.md#getCommentsPublic) | **GET** /comments/{tenantId} |  req tenantId urlId |
+*PublicApi* | [**getEventLog**](Apis/PublicApi.md#getEventLog) | **GET** /event-log/{tenantId} |  req tenantId urlId userIdWS |
+*PublicApi* | [**getFeedPostsPublic**](Apis/PublicApi.md#getFeedPostsPublic) | **GET** /feed-posts/{tenantId} |  req tenantId afterId |
+*PublicApi* | [**getFeedPostsStats**](Apis/PublicApi.md#getFeedPostsStats) | **GET** /feed-posts/{tenantId}/stats |  |
+*PublicApi* | [**getGifLarge**](Apis/PublicApi.md#getGifLarge) | **GET** /gifs/get-large/{tenantId} |  |
+*PublicApi* | [**getGifsSearch**](Apis/PublicApi.md#getGifsSearch) | **GET** /gifs/search/{tenantId} |  |
+*PublicApi* | [**getGifsTrending**](Apis/PublicApi.md#getGifsTrending) | **GET** /gifs/trending/{tenantId} |  |
+*PublicApi* | [**getGlobalEventLog**](Apis/PublicApi.md#getGlobalEventLog) | **GET** /event-log/global/{tenantId} |  req tenantId urlId userIdWS |
+*PublicApi* | [**getOfflineUsers**](Apis/PublicApi.md#getOfflineUsers) | **GET** /pages/{tenantId}/users/offline | Past commenters on the page who are NOT currently online. Sorted by displayName. Use this after exhausting /users/online to render a \"Members\" section. Cursor pagination on commenterName: server walks the partial {tenantId, urlId, commenterName} index from afterName forward via $gt, no $skip cost. |
+*PublicApi* | [**getOnlineUsers**](Apis/PublicApi.md#getOnlineUsers) | **GET** /pages/{tenantId}/users/online | Currently-online viewers of a page: people whose websocket session is subscribed to the page right now. Returns anonCount + totalCount (room-wide subscribers, including anon viewers we don't enumerate). |
+*PublicApi* | [**getPagesPublic**](Apis/PublicApi.md#getPagesPublic) | **GET** /pages/{tenantId} | List pages for a tenant. Used by the FChat desktop client to populate its room list. Requires `enableFChat` to be true on the resolved custom config for each page. Pages that require SSO are filtered against the requesting user's group access. |
+*PublicApi* | [**getTranslations**](Apis/PublicApi.md#getTranslations) | **GET** /translations/{namespace}/{component} |  |
+*PublicApi* | [**getUserNotificationCount**](Apis/PublicApi.md#getUserNotificationCount) | **GET** /user-notifications/get-count |  |
+*PublicApi* | [**getUserNotifications**](Apis/PublicApi.md#getUserNotifications) | **GET** /user-notifications |  |
+*PublicApi* | [**getUserPresenceStatuses**](Apis/PublicApi.md#getUserPresenceStatuses) | **GET** /user-presence-status |  |
+*PublicApi* | [**getUserReactsPublic**](Apis/PublicApi.md#getUserReactsPublic) | **GET** /feed-posts/{tenantId}/user-reacts |  |
+*PublicApi* | [**getUsersInfo**](Apis/PublicApi.md#getUsersInfo) | **GET** /pages/{tenantId}/users/info | Bulk user info for a tenant. Given userIds, return display info from User / SSOUser. Used by the comment widget to enrich users that just appeared via a presence event. No page context: privacy is enforced uniformly (private profiles are masked). |
+*PublicApi* | [**getV1PageLikes**](Apis/PublicApi.md#getV1PageLikes) | **GET** /page-reacts/v1/likes/{tenantId} |  |
+*PublicApi* | [**getV2PageReactUsers**](Apis/PublicApi.md#getV2PageReactUsers) | **GET** /page-reacts/v2/{tenantId}/list |  |
+*PublicApi* | [**getV2PageReacts**](Apis/PublicApi.md#getV2PageReacts) | **GET** /page-reacts/v2/{tenantId} |  |
+*PublicApi* | [**lockComment**](Apis/PublicApi.md#lockComment) | **POST** /comments/{tenantId}/{commentId}/lock |  |
+*PublicApi* | [**logoutPublic**](Apis/PublicApi.md#logoutPublic) | **PUT** /auth/logout |  |
+*PublicApi* | [**pinComment**](Apis/PublicApi.md#pinComment) | **POST** /comments/{tenantId}/{commentId}/pin |  |
+*PublicApi* | [**reactFeedPostPublic**](Apis/PublicApi.md#reactFeedPostPublic) | **POST** /feed-posts/{tenantId}/react/{postId} |  |
+*PublicApi* | [**resetUserNotificationCount**](Apis/PublicApi.md#resetUserNotificationCount) | **POST** /user-notifications/reset-count |  |
+*PublicApi* | [**resetUserNotifications**](Apis/PublicApi.md#resetUserNotifications) | **POST** /user-notifications/reset |  |
+*PublicApi* | [**searchUsers**](Apis/PublicApi.md#searchUsers) | **GET** /user-search/{tenantId} |  |
+*PublicApi* | [**setCommentText**](Apis/PublicApi.md#setCommentText) | **POST** /comments/{tenantId}/{commentId}/update-text |  |
+*PublicApi* | [**unBlockCommentPublic**](Apis/PublicApi.md#unBlockCommentPublic) | **DELETE** /block-from-comment/{commentId} |  |
+*PublicApi* | [**unLockComment**](Apis/PublicApi.md#unLockComment) | **POST** /comments/{tenantId}/{commentId}/unlock |  |
+*PublicApi* | [**unPinComment**](Apis/PublicApi.md#unPinComment) | **POST** /comments/{tenantId}/{commentId}/unpin |  |
+*PublicApi* | [**updateFeedPostPublic**](Apis/PublicApi.md#updateFeedPostPublic) | **PUT** /feed-posts/{tenantId}/{postId} |  |
+*PublicApi* | [**updateUserNotificationCommentSubscriptionStatus**](Apis/PublicApi.md#updateUserNotificationCommentSubscriptionStatus) | **POST** /user-notifications/{notificationId}/mark-opted/{optedInOrOut} | Enable or disable notifications for a specific comment. |
+*PublicApi* | [**updateUserNotificationPageSubscriptionStatus**](Apis/PublicApi.md#updateUserNotificationPageSubscriptionStatus) | **POST** /user-notifications/set-subscription-state/{subscribedOrUnsubscribed} | Enable or disable notifications for a page. When users are subscribed to a page, notifications are created for new root comments, and also |
+*PublicApi* | [**updateUserNotificationStatus**](Apis/PublicApi.md#updateUserNotificationStatus) | **POST** /user-notifications/{notificationId}/mark/{newStatus} |  |
+*PublicApi* | [**uploadImage**](Apis/PublicApi.md#uploadImage) | **POST** /upload-image/{tenantId} | Upload and resize an image |
+*PublicApi* | [**voteComment**](Apis/PublicApi.md#voteComment) | **POST** /comments/{tenantId}/{commentId}/vote |  |
 
 
 <a name="documentation-for-models"></a>
@@ -580,7 +580,6 @@ All URIs are relative to *https://fastcomments.com*
  - [VoteDeleteResponse](./Models/VoteDeleteResponse.md)
  - [VoteResponse](./Models/VoteResponse.md)
  - [VoteResponseUser](./Models/VoteResponseUser.md)
- - [VoteResponse_status](./Models/VoteResponse_status.md)
  - [VoteStyle](./Models/VoteStyle.md)
 
 

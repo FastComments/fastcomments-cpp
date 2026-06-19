@@ -10,7 +10,7 @@ else
     SPEC_FILE="./openapi.json"
 fi
 
-java -jar ../openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
+npx --yes @openapitools/openapi-generator-cli generate \
     -i "$SPEC_FILE" \
     -g cpp-restsdk \
     -o ./client \
@@ -21,7 +21,7 @@ echo "Generated C++ client in ./client"
 # Generate markdown documentation
 echo "Generating markdown documentation..."
 rm -rf ./docs
-java -jar ../openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
+npx --yes @openapitools/openapi-generator-cli generate \
     -i "$SPEC_FILE" \
     -g markdown \
     -o ./docs
