@@ -11,7 +11,7 @@
 #include "FastCommentsClient/ApiException.h"
 #include "FastCommentsClient/model/CommentData.h"
 #include "FastCommentsClient/model/CreateCommentParams.h"
-#include "FastCommentsClient/model/SaveComment_200_response.h"
+#include "FastCommentsClient/model/SaveCommentsResponseWithPresence.h"
 #include <chrono>
 #include <cstdlib>
 #include <string>
