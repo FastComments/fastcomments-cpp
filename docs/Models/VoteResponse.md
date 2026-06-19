@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **status** | **String** |  | [default to null] |
+| **status** | [**VoteResponse_status**](VoteResponse_status.md) |  | [default to null] |
 | **voteId** | **String** |  | [optional] [default to null] |
 | **isVerified** | **Boolean** |  | [optional] [default to null] |
 | **user** | [**VoteResponseUser**](VoteResponseUser.md) |  | [optional] [default to null] |

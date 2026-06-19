@@ -18,6 +18,7 @@
 | **isClosed** | **Boolean** |  | [optional] [default to null] |
 | **uj** | **List** |  | [optional] [default to null] |
 | **ul** | **List** |  | [optional] [default to null] |
+| **sc** | **Integer** |  | [optional] [default to null] |
 | **changes** | **Map** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

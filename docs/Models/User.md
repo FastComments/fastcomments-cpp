@@ -42,6 +42,7 @@
 | **digestEmailFrequency** | [**DigestEmailFrequency**](DigestEmailFrequency.md) |  | [optional] [default to null] |
 | **notificationFrequency** | **Double** |  | [optional] [default to null] |
 | **adminNotificationFrequency** | **Double** |  | [optional] [default to null] |
+| **agentApprovalNotificationFrequency** | [**ImportedAgentApprovalNotificationFrequency**](ImportedAgentApprovalNotificationFrequency.md) |  | [optional] [default to null] |
 | **lastTenantNotificationSentDate** | **Date** |  | [optional] [default to null] |
 | **lastReplyNotificationSentDate** | **Date** |  | [optional] [default to null] |
 | **ignoredAddToMySiteMessages** | **Boolean** |  | [optional] [default to null] |

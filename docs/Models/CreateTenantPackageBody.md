@@ -44,8 +44,8 @@
 | **flexAdminUnit** | **Double** |  | [optional] [default to null] |
 | **flexDomainCostCents** | **Double** |  | [optional] [default to null] |
 | **flexDomainUnit** | **Double** |  | [optional] [default to null] |
-| **flexChatGPTCostCents** | **Double** |  | [optional] [default to null] |
-| **flexChatGPTUnit** | **Double** |  | [optional] [default to null] |
+| **flexLLMCostCents** | **Double** |  | [optional] [default to null] |
+| **flexLLMUnit** | **Double** |  | [optional] [default to null] |
 | **flexMinimumCostCents** | **Double** |  | [optional] [default to null] |
 | **flexManagedTenantCostCents** | **Double** |  | [optional] [default to null] |
 | **flexSSOAdminCostCents** | **Double** |  | [optional] [default to null] |
