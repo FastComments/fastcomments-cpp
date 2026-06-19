@@ -4,9 +4,9 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **status** | [**APIStatus**](APIStatus.md) |  | [default to null] |
-| **matchedCount** | **Long** |  | [default to null] |
-| **modifiedCount** | **Long** |  | [default to null] |
-| **note** | **String** |  | [default to null] |
+| **matchedCount** | **Long** |  | [optional] [default to null] |
+| **modifiedCount** | **Long** |  | [optional] [default to null] |
+| **note** | **String** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

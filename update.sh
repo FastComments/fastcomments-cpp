@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# FastComments openapi-generator build. The released cpp-restsdk generator silently
+# drops operations whose response types it can't model (the entire Moderation API and
+# several Public API methods), so cpp must use this build, which also has the nested
+# map fix. Just a jar; downloaded on demand.
+JAR_URL="https://github.com/winrid/openapi-generator/releases/download/fastcomments-build-20260619/openapi-generator-cli.jar"
+JAR_FILE="./openapi-generator-cli.jar"
+
+[ -f "$JAR_FILE" ] || wget -q "$JAR_URL" -O "$JAR_FILE"
+
 rm -rf ./client
 
 if wget -q http://localhost:3001/js/swagger.json -O ./openapi.json; then
@@ -10,7 +19,7 @@ else
     SPEC_FILE="./openapi.json"
 fi
 
-npx --yes @openapitools/openapi-generator-cli generate \
+java -jar "$JAR_FILE" generate \
     -i "$SPEC_FILE" \
     -g cpp-restsdk \
     -o ./client \
@@ -21,7 +30,7 @@ echo "Generated C++ client in ./client"
 # Generate markdown documentation
 echo "Generating markdown documentation..."
 rm -rf ./docs
-npx --yes @openapitools/openapi-generator-cli generate \
+java -jar "$JAR_FILE" generate \
     -i "$SPEC_FILE" \
     -g markdown \
     -o ./docs

@@ -4,9 +4,9 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **status** | [**APIStatus**](APIStatus.md) |  | [default to null] |
-| **hashTag** | [**TenantHashTag**](TenantHashTag.md) |  | [default to null] |
-| **reason** | **String** |  | [default to null] |
-| **code** | **String** |  | [default to null] |
+| **hashTag** | [**TenantHashTag**](TenantHashTag.md) |  | [optional] [default to null] |
+| **reason** | **String** |  | [optional] [default to null] |
+| **code** | **String** |  | [optional] [default to null] |
 | **secondaryCode** | **String** |  | [optional] [default to null] |
 | **bannedUntil** | **Long** |  | [optional] [default to null] |
 | **maxCharacterLength** | **Integer** |  | [optional] [default to null] |
