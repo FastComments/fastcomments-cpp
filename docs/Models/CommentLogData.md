@@ -18,6 +18,7 @@
 | **engineResponse** | **String** |  | [optional] [default to null] |
 | **engineTokens** | **Double** |  | [optional] [default to null] |
 | **trustFactor** | **Double** |  | [optional] [default to null] |
+| **source** | **String** |  | [optional] [default to null] |
 | **rule** | [**SpamRule**](SpamRule.md) |  | [optional] [default to null] |
 | **userId** | **String** |  | [optional] [default to null] |
 | **subscribers** | **Double** |  | [optional] [default to null] |

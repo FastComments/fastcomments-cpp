@@ -11,7 +11,7 @@
 #include "FastCommentsClient/ApiException.h"
 #include "FastCommentsClient/model/CommentData.h"
 #include "FastCommentsClient/model/CreateCommentParams.h"
-#include "FastCommentsClient/model/SaveComment_200_response.h"
+#include "FastCommentsClient/model/SaveCommentsResponseWithPresence.h"
 #include <chrono>
 #include <cstdlib>
 #include <string>
@@ -192,7 +192,9 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
             boost::none,  // contextUserId
             boost::none,  // hashTag
             boost::none,  // parentId
-            boost::none   // direction
+            boost::none,  // direction
+            boost::none,  // fromDate
+            boost::none   // toDate
         ).get();
 
         ASSERT_NE(getResponse, nullptr);

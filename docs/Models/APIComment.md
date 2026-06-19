@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **\_id** | **String** |  | [default to null] |
+| **id** | **String** |  | [default to null] |
 | **aiDeterminedSpam** | **Boolean** |  | [optional] [default to null] |
 | **anonUserId** | **String** |  | [optional] [default to null] |
 | **approved** | **Boolean** |  | [default to null] |

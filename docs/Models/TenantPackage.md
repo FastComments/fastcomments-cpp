@@ -7,6 +7,7 @@
 | **name** | **String** |  | [default to null] |
 | **tenantId** | **String** |  | [default to null] |
 | **createdAt** | **Date** |  | [default to null] |
+| **templateId** | **String** |  | [optional] [default to null] |
 | **monthlyCostUSD** | **Double** |  | [default to null] |
 | **yearlyCostUSD** | **Double** |  | [default to null] |
 | **monthlyStripePlanId** | **String** |  | [default to null] |
@@ -50,6 +51,8 @@
 | **flexDomainUnit** | **Double** |  | [optional] [default to null] |
 | **flexChatGPTCostCents** | **Double** |  | [optional] [default to null] |
 | **flexChatGPTUnit** | **Double** |  | [optional] [default to null] |
+| **flexLLMCostCents** | **Double** |  | [optional] [default to null] |
+| **flexLLMUnit** | **Double** |  | [optional] [default to null] |
 | **flexMinimumCostCents** | **Double** |  | [optional] [default to null] |
 | **flexManagedTenantCostCents** | **Double** |  | [optional] [default to null] |
 | **flexSSOAdminCostCents** | **Double** |  | [optional] [default to null] |
@@ -57,6 +60,10 @@
 | **flexSSOModeratorCostCents** | **Double** |  | [optional] [default to null] |
 | **flexSSOModeratorUnit** | **Double** |  | [optional] [default to null] |
 | **isSSOBillingMonthlyActiveUsers** | **Boolean** |  | [optional] [default to null] |
+| **hasAIAgents** | **Boolean** |  | [optional] [default to null] |
+| **maxAIAgents** | **Double** |  | [optional] [default to null] |
+| **aiAgentDailyBudgetCents** | **Double** |  | [optional] [default to null] |
+| **aiAgentMonthlyBudgetCents** | **Double** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

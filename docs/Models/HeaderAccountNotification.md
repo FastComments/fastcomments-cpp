@@ -12,6 +12,7 @@
 | **linkUrl** | **String** |  | [default to null] |
 | **linkText** | **String** |  | [default to null] |
 | **createdAt** | **Date** |  | [default to null] |
+| **type** | **String** | Discriminator for notifications with a special layout/click handler (e.g. \&quot;feedback-offer\&quot;). | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
