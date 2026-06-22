@@ -24,17 +24,6 @@ GetGifsSearchResponse::GetGifsSearchResponse()
     m_StatusIsSet = false;
     m_Code = utility::conversions::to_string_t("");
     m_CodeIsSet = false;
-    m_Reason = utility::conversions::to_string_t("");
-    m_ReasonIsSet = false;
-    m_SecondaryCode = utility::conversions::to_string_t("");
-    m_SecondaryCodeIsSet = false;
-    m_BannedUntil = 0L;
-    m_BannedUntilIsSet = false;
-    m_MaxCharacterLength = 0;
-    m_MaxCharacterLengthIsSet = false;
-    m_TranslatedError = utility::conversions::to_string_t("");
-    m_TranslatedErrorIsSet = false;
-    m_CustomConfigIsSet = false;
 }
 
 GetGifsSearchResponse::~GetGifsSearchResponse()
@@ -63,36 +52,6 @@ web::json::value GetGifsSearchResponse::toJson() const
     {
         
         val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
-    }
-    if(m_ReasonIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
-    }
-    if(m_SecondaryCodeIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
-    }
-    if(m_BannedUntilIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
-    }
-    if(m_MaxCharacterLengthIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
-    }
-    if(m_TranslatedErrorIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
-    }
-    if(m_CustomConfigIsSet)
-    {
-        
-        val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
 
     return val;
@@ -134,72 +93,6 @@ bool GetGifsSearchResponse::fromJson(const web::json::value& val)
             
         }
     }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reason"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reason")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setReason;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setReason);
-            setReason(refVal_setReason);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("secondaryCode")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setSecondaryCode;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setSecondaryCode);
-            setSecondaryCode(refVal_setSecondaryCode);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("bannedUntil")));
-        if(!fieldValue.is_null())
-        {
-            int64_t refVal_setBannedUntil;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setBannedUntil);
-            setBannedUntil(refVal_setBannedUntil);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength")));
-        if(!fieldValue.is_null())
-        {
-            int32_t refVal_setMaxCharacterLength;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setMaxCharacterLength);
-            setMaxCharacterLength(refVal_setMaxCharacterLength);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("translatedError"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("translatedError")));
-        if(!fieldValue.is_null())
-        {
-            utility::string_t refVal_setTranslatedError;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setTranslatedError);
-            setTranslatedError(refVal_setTranslatedError);
-            
-        }
-    }
-    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("customConfig"))))
-    {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("customConfig")));
-        if(!fieldValue.is_null())
-        {
-            std::shared_ptr<CustomConfigParameters> refVal_setCustomConfig;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setCustomConfig);
-            setCustomConfig(refVal_setCustomConfig);
-            
-        }
-    }
     return ok;
 }
 
@@ -221,30 +114,6 @@ void GetGifsSearchResponse::toMultipart(std::shared_ptr<MultipartFormData> multi
     if(m_CodeIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
-    }
-    if(m_ReasonIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
-    }
-    if(m_SecondaryCodeIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("secondaryCode")), m_SecondaryCode));
-    }
-    if(m_BannedUntilIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("bannedUntil")), m_BannedUntil));
-    }
-    if(m_MaxCharacterLengthIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength")), m_MaxCharacterLength));
-    }
-    if(m_TranslatedErrorIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("translatedError")), m_TranslatedError));
-    }
-    if(m_CustomConfigIsSet)
-    {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("customConfig")), m_CustomConfig));
     }
 }
 
@@ -274,42 +143,6 @@ bool GetGifsSearchResponse::fromMultiPart(std::shared_ptr<MultipartFormData> mul
         utility::string_t refVal_setCode;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
         setCode(refVal_setCode);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
-    {
-        utility::string_t refVal_setReason;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reason"))), refVal_setReason );
-        setReason(refVal_setReason);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))))
-    {
-        utility::string_t refVal_setSecondaryCode;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))), refVal_setSecondaryCode );
-        setSecondaryCode(refVal_setSecondaryCode);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))))
-    {
-        int64_t refVal_setBannedUntil;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))), refVal_setBannedUntil );
-        setBannedUntil(refVal_setBannedUntil);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))))
-    {
-        int32_t refVal_setMaxCharacterLength;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))), refVal_setMaxCharacterLength );
-        setMaxCharacterLength(refVal_setMaxCharacterLength);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("translatedError"))))
-    {
-        utility::string_t refVal_setTranslatedError;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("translatedError"))), refVal_setTranslatedError );
-        setTranslatedError(refVal_setTranslatedError);
-    }
-    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("customConfig"))))
-    {
-        std::shared_ptr<CustomConfigParameters> refVal_setCustomConfig;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("customConfig"))), refVal_setCustomConfig );
-        setCustomConfig(refVal_setCustomConfig);
     }
     return ok;
 }
@@ -377,130 +210,6 @@ bool GetGifsSearchResponse::codeIsSet() const
 void GetGifsSearchResponse::unsetCode()
 {
     m_CodeIsSet = false;
-}
-utility::string_t GetGifsSearchResponse::getReason() const
-{
-    return m_Reason;
-}
-
-
-void GetGifsSearchResponse::setReason(const utility::string_t& value)
-{
-    m_Reason = value;
-    m_ReasonIsSet = true;
-}
-
-bool GetGifsSearchResponse::reasonIsSet() const
-{
-    return m_ReasonIsSet;
-}
-
-void GetGifsSearchResponse::unsetReason()
-{
-    m_ReasonIsSet = false;
-}
-utility::string_t GetGifsSearchResponse::getSecondaryCode() const
-{
-    return m_SecondaryCode;
-}
-
-
-void GetGifsSearchResponse::setSecondaryCode(const utility::string_t& value)
-{
-    m_SecondaryCode = value;
-    m_SecondaryCodeIsSet = true;
-}
-
-bool GetGifsSearchResponse::secondaryCodeIsSet() const
-{
-    return m_SecondaryCodeIsSet;
-}
-
-void GetGifsSearchResponse::unsetSecondaryCode()
-{
-    m_SecondaryCodeIsSet = false;
-}
-int64_t GetGifsSearchResponse::getBannedUntil() const
-{
-    return m_BannedUntil;
-}
-
-void GetGifsSearchResponse::setBannedUntil(int64_t value)
-{
-    m_BannedUntil = value;
-    m_BannedUntilIsSet = true;
-}
-
-bool GetGifsSearchResponse::bannedUntilIsSet() const
-{
-    return m_BannedUntilIsSet;
-}
-
-void GetGifsSearchResponse::unsetBannedUntil()
-{
-    m_BannedUntilIsSet = false;
-}
-int32_t GetGifsSearchResponse::getMaxCharacterLength() const
-{
-    return m_MaxCharacterLength;
-}
-
-void GetGifsSearchResponse::setMaxCharacterLength(int32_t value)
-{
-    m_MaxCharacterLength = value;
-    m_MaxCharacterLengthIsSet = true;
-}
-
-bool GetGifsSearchResponse::maxCharacterLengthIsSet() const
-{
-    return m_MaxCharacterLengthIsSet;
-}
-
-void GetGifsSearchResponse::unsetMaxCharacterLength()
-{
-    m_MaxCharacterLengthIsSet = false;
-}
-utility::string_t GetGifsSearchResponse::getTranslatedError() const
-{
-    return m_TranslatedError;
-}
-
-
-void GetGifsSearchResponse::setTranslatedError(const utility::string_t& value)
-{
-    m_TranslatedError = value;
-    m_TranslatedErrorIsSet = true;
-}
-
-bool GetGifsSearchResponse::translatedErrorIsSet() const
-{
-    return m_TranslatedErrorIsSet;
-}
-
-void GetGifsSearchResponse::unsetTranslatedError()
-{
-    m_TranslatedErrorIsSet = false;
-}
-std::shared_ptr<CustomConfigParameters> GetGifsSearchResponse::getCustomConfig() const
-{
-    return m_CustomConfig;
-}
-
-
-void GetGifsSearchResponse::setCustomConfig(const std::shared_ptr<CustomConfigParameters>& value)
-{
-    m_CustomConfig = value;
-    m_CustomConfigIsSet = true;
-}
-
-bool GetGifsSearchResponse::customConfigIsSet() const
-{
-    return m_CustomConfigIsSet;
-}
-
-void GetGifsSearchResponse::unsetCustomConfig()
-{
-    m_CustomConfigIsSet = false;
 }
 
 }

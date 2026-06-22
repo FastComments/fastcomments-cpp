@@ -23,10 +23,6 @@
 
 #include "FastCommentsClient/ModelBase.h"
 
-#include "FastCommentsClient/model/CustomConfigParameters.h"
-#include <cpprest/details/basic_types.h>
-#include "FastCommentsClient/model/APIError.h"
-#include "FastCommentsClient/model/DeleteFeedPostPublicResponse_anyOf.h"
 #include "FastCommentsClient/model/APIStatus.h"
 
 namespace org {
@@ -34,7 +30,6 @@ namespace openapitools {
 namespace client {
 namespace model {
 
-class CustomConfigParameters;
 
 
 class  DeleteFeedPostPublicResponse
@@ -65,66 +60,10 @@ public:
     void unsetStatus();
     void setStatus(const std::shared_ptr<APIStatus>& value);
 
-    utility::string_t getReason() const;
-    bool reasonIsSet() const;
-    void unsetReason();
-    void setReason(const utility::string_t& value);
-
-    utility::string_t getCode() const;
-    bool codeIsSet() const;
-    void unsetCode();
-    void setCode(const utility::string_t& value);
-
-    utility::string_t getSecondaryCode() const;
-    bool secondaryCodeIsSet() const;
-    void unsetSecondaryCode();
-    void setSecondaryCode(const utility::string_t& value);
-
-    int64_t getBannedUntil() const;
-    bool bannedUntilIsSet() const;
-    void unsetBannedUntil();
-    void setBannedUntil(int64_t value);
-
-    int32_t getMaxCharacterLength() const;
-    bool maxCharacterLengthIsSet() const;
-    void unsetMaxCharacterLength();
-    void setMaxCharacterLength(int32_t value);
-
-    utility::string_t getTranslatedError() const;
-    bool translatedErrorIsSet() const;
-    void unsetTranslatedError();
-    void setTranslatedError(const utility::string_t& value);
-
-    std::shared_ptr<CustomConfigParameters> getCustomConfig() const;
-    bool customConfigIsSet() const;
-    void unsetCustomConfig();
-    void setCustomConfig(const std::shared_ptr<CustomConfigParameters>& value);
-
 
 protected:
     std::shared_ptr<APIStatus> m_Status;
     bool m_StatusIsSet;
-
-    utility::string_t m_Reason;
-    bool m_ReasonIsSet;
-
-    utility::string_t m_Code;
-    bool m_CodeIsSet;
-
-    utility::string_t m_SecondaryCode;
-    bool m_SecondaryCodeIsSet;
-
-    int64_t m_BannedUntil;
-    bool m_BannedUntilIsSet;
-
-    int32_t m_MaxCharacterLength;
-    bool m_MaxCharacterLengthIsSet;
-
-    utility::string_t m_TranslatedError;
-    bool m_TranslatedErrorIsSet;
-
-    std::shared_ptr<CustomConfigParameters> m_CustomConfig;
-    bool m_CustomConfigIsSet;
 
 };
 

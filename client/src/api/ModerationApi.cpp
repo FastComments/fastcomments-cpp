@@ -35,7 +35,7 @@ ModerationApi::~ModerationApi()
 {
 }
 
-pplx::task<std::shared_ptr<DeleteModerationVoteResponse>> ModerationApi::deleteModerationVote(utility::string_t commentId, utility::string_t voteId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(utility::string_t commentId, utility::string_t voteId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -150,7 +150,7 @@ pplx::task<std::shared_ptr<DeleteModerationVoteResponse>> ModerationApi::deleteM
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<DeleteModerationVoteResponse> localVarResult(new DeleteModerationVoteResponse());
+        std::shared_ptr<VoteDeleteResponse> localVarResult(new VoteDeleteResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -171,7 +171,7 @@ pplx::task<std::shared_ptr<DeleteModerationVoteResponse>> ModerationApi::deleteM
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetApiCommentsResponse>> ModerationApi::getApiComments(boost::optional<double> page, boost::optional<double> count, boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(boost::optional<double> page, boost::optional<double> count, boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -312,7 +312,7 @@ pplx::task<std::shared_ptr<GetApiCommentsResponse>> ModerationApi::getApiComment
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetApiCommentsResponse> localVarResult(new GetApiCommentsResponse());
+        std::shared_ptr<ModerationAPIGetCommentsResponse> localVarResult(new ModerationAPIGetCommentsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -333,7 +333,7 @@ pplx::task<std::shared_ptr<GetApiCommentsResponse>> ModerationApi::getApiComment
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetApiExportStatusResponse>> ModerationApi::getApiExportStatus(boost::optional<utility::string_t> batchJobId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(boost::optional<utility::string_t> batchJobId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -446,7 +446,7 @@ pplx::task<std::shared_ptr<GetApiExportStatusResponse>> ModerationApi::getApiExp
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetApiExportStatusResponse> localVarResult(new GetApiExportStatusResponse());
+        std::shared_ptr<ModerationExportStatusResponse> localVarResult(new ModerationExportStatusResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -467,7 +467,7 @@ pplx::task<std::shared_ptr<GetApiExportStatusResponse>> ModerationApi::getApiExp
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetApiIdsResponse>> ModerationApi::getApiIds(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> afterId, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> afterId, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -600,7 +600,7 @@ pplx::task<std::shared_ptr<GetApiIdsResponse>> ModerationApi::getApiIds(boost::o
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetApiIdsResponse> localVarResult(new GetApiIdsResponse());
+        std::shared_ptr<ModerationAPIGetCommentIdsResponse> localVarResult(new ModerationAPIGetCommentIdsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -621,7 +621,7 @@ pplx::task<std::shared_ptr<GetApiIdsResponse>> ModerationApi::getApiIds(boost::o
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetBanUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -731,7 +731,7 @@ pplx::task<std::shared_ptr<GetBanUsersFromCommentResponse>> ModerationApi::getBa
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetBanUsersFromCommentResponse> localVarResult(new GetBanUsersFromCommentResponse());
+        std::shared_ptr<GetBannedUsersFromCommentResponse> localVarResult(new GetBannedUsersFromCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -752,7 +752,7 @@ pplx::task<std::shared_ptr<GetBanUsersFromCommentResponse>> ModerationApi::getBa
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentBanStatusResponse_1>> ModerationApi::getCommentBanStatus(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -862,7 +862,7 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse_1>> ModerationApi::getCom
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCommentBanStatusResponse_1> localVarResult(new GetCommentBanStatusResponse_1());
+        std::shared_ptr<GetCommentBanStatusResponse> localVarResult(new GetCommentBanStatusResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -883,7 +883,7 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse_1>> ModerationApi::getCom
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentChildrenResponse>> ModerationApi::getCommentChildren(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -993,7 +993,7 @@ pplx::task<std::shared_ptr<GetCommentChildrenResponse>> ModerationApi::getCommen
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCommentChildrenResponse> localVarResult(new GetCommentChildrenResponse());
+        std::shared_ptr<ModerationAPIChildCommentsResponse> localVarResult(new ModerationAPIChildCommentsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1014,7 +1014,7 @@ pplx::task<std::shared_ptr<GetCommentChildrenResponse>> ModerationApi::getCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCountResponse>> ModerationApi::getCount(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filter, boost::optional<utility::string_t> searchFilters, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filter, boost::optional<utility::string_t> searchFilters, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1143,7 +1143,7 @@ pplx::task<std::shared_ptr<GetCountResponse>> ModerationApi::getCount(boost::opt
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCountResponse> localVarResult(new GetCountResponse());
+        std::shared_ptr<ModerationAPICountCommentsResponse> localVarResult(new ModerationAPICountCommentsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1164,7 +1164,7 @@ pplx::task<std::shared_ptr<GetCountResponse>> ModerationApi::getCount(boost::opt
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCountsResponse>> ModerationApi::getCounts(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1273,7 +1273,7 @@ pplx::task<std::shared_ptr<GetCountsResponse>> ModerationApi::getCounts(boost::o
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCountsResponse> localVarResult(new GetCountsResponse());
+        std::shared_ptr<GetBannedUsersCountResponse> localVarResult(new GetBannedUsersCountResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1294,7 +1294,7 @@ pplx::task<std::shared_ptr<GetCountsResponse>> ModerationApi::getCounts(boost::o
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetLogsResponse>> ModerationApi::getLogs(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1404,7 +1404,7 @@ pplx::task<std::shared_ptr<GetLogsResponse>> ModerationApi::getLogs(utility::str
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetLogsResponse> localVarResult(new GetLogsResponse());
+        std::shared_ptr<ModerationAPIGetLogsResponse> localVarResult(new ModerationAPIGetLogsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1425,7 +1425,7 @@ pplx::task<std::shared_ptr<GetLogsResponse>> ModerationApi::getLogs(utility::str
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetManualBadgesResponse>> ModerationApi::getManualBadges(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1534,7 +1534,7 @@ pplx::task<std::shared_ptr<GetManualBadgesResponse>> ModerationApi::getManualBad
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetManualBadgesResponse> localVarResult(new GetManualBadgesResponse());
+        std::shared_ptr<GetTenantManualBadgesResponse> localVarResult(new GetTenantManualBadgesResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1555,7 +1555,7 @@ pplx::task<std::shared_ptr<GetManualBadgesResponse>> ModerationApi::getManualBad
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetManualBadgesForUserResponse>> ModerationApi::getManualBadgesForUser(boost::optional<utility::string_t> badgesUserId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(boost::optional<utility::string_t> badgesUserId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1672,7 +1672,7 @@ pplx::task<std::shared_ptr<GetManualBadgesForUserResponse>> ModerationApi::getMa
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetManualBadgesForUserResponse> localVarResult(new GetManualBadgesForUserResponse());
+        std::shared_ptr<GetUserManualBadgesResponse> localVarResult(new GetUserManualBadgesResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1693,7 +1693,7 @@ pplx::task<std::shared_ptr<GetManualBadgesForUserResponse>> ModerationApi::getMa
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModerationCommentResponse>> ModerationApi::getModerationComment(utility::string_t commentId, boost::optional<bool> includeEmail, boost::optional<bool> includeIP, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(utility::string_t commentId, boost::optional<bool> includeEmail, boost::optional<bool> includeIP, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1811,7 +1811,7 @@ pplx::task<std::shared_ptr<GetModerationCommentResponse>> ModerationApi::getMode
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetModerationCommentResponse> localVarResult(new GetModerationCommentResponse());
+        std::shared_ptr<ModerationAPICommentResponse> localVarResult(new ModerationAPICommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1832,7 +1832,7 @@ pplx::task<std::shared_ptr<GetModerationCommentResponse>> ModerationApi::getMode
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModerationCommentTextResponse>> ModerationApi::getModerationCommentText(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -1942,7 +1942,7 @@ pplx::task<std::shared_ptr<GetModerationCommentTextResponse>> ModerationApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetModerationCommentTextResponse> localVarResult(new GetModerationCommentTextResponse());
+        std::shared_ptr<GetCommentTextResponse> localVarResult(new GetCommentTextResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1963,7 +1963,7 @@ pplx::task<std::shared_ptr<GetModerationCommentTextResponse>> ModerationApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPreBanSummaryResponse>> ModerationApi::getPreBanSummary(utility::string_t commentId, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(utility::string_t commentId, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2085,7 +2085,7 @@ pplx::task<std::shared_ptr<GetPreBanSummaryResponse>> ModerationApi::getPreBanSu
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetPreBanSummaryResponse> localVarResult(new GetPreBanSummaryResponse());
+        std::shared_ptr<PreBanSummary> localVarResult(new PreBanSummary());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2106,7 +2106,7 @@ pplx::task<std::shared_ptr<GetPreBanSummaryResponse>> ModerationApi::getPreBanSu
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSearchCommentsSummaryResponse>> ModerationApi::getSearchCommentsSummary(boost::optional<utility::string_t> value, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(boost::optional<utility::string_t> value, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2227,7 +2227,7 @@ pplx::task<std::shared_ptr<GetSearchCommentsSummaryResponse>> ModerationApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetSearchCommentsSummaryResponse> localVarResult(new GetSearchCommentsSummaryResponse());
+        std::shared_ptr<ModerationCommentSearchResponse> localVarResult(new ModerationCommentSearchResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2248,7 +2248,7 @@ pplx::task<std::shared_ptr<GetSearchCommentsSummaryResponse>> ModerationApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSearchPagesResponse>> ModerationApi::getSearchPages(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2361,7 +2361,7 @@ pplx::task<std::shared_ptr<GetSearchPagesResponse>> ModerationApi::getSearchPage
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetSearchPagesResponse> localVarResult(new GetSearchPagesResponse());
+        std::shared_ptr<ModerationPageSearchResponse> localVarResult(new ModerationPageSearchResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2382,7 +2382,7 @@ pplx::task<std::shared_ptr<GetSearchPagesResponse>> ModerationApi::getSearchPage
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSearchSitesResponse>> ModerationApi::getSearchSites(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2495,7 +2495,7 @@ pplx::task<std::shared_ptr<GetSearchSitesResponse>> ModerationApi::getSearchSite
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetSearchSitesResponse> localVarResult(new GetSearchSitesResponse());
+        std::shared_ptr<ModerationSiteSearchResponse> localVarResult(new ModerationSiteSearchResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2516,7 +2516,7 @@ pplx::task<std::shared_ptr<GetSearchSitesResponse>> ModerationApi::getSearchSite
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSearchSuggestResponse>> ModerationApi::getSearchSuggest(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2629,7 +2629,7 @@ pplx::task<std::shared_ptr<GetSearchSuggestResponse>> ModerationApi::getSearchSu
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetSearchSuggestResponse> localVarResult(new GetSearchSuggestResponse());
+        std::shared_ptr<ModerationSuggestResponse> localVarResult(new ModerationSuggestResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2650,7 +2650,7 @@ pplx::task<std::shared_ptr<GetSearchSuggestResponse>> ModerationApi::getSearchSu
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSearchUsersResponse>> ModerationApi::getSearchUsers(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2763,7 +2763,7 @@ pplx::task<std::shared_ptr<GetSearchUsersResponse>> ModerationApi::getSearchUser
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetSearchUsersResponse> localVarResult(new GetSearchUsersResponse());
+        std::shared_ptr<ModerationUserSearchResponse> localVarResult(new ModerationUserSearchResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2784,7 +2784,7 @@ pplx::task<std::shared_ptr<GetSearchUsersResponse>> ModerationApi::getSearchUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTrustFactorResponse>> ModerationApi::getTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -2897,7 +2897,7 @@ pplx::task<std::shared_ptr<GetTrustFactorResponse>> ModerationApi::getTrustFacto
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTrustFactorResponse> localVarResult(new GetTrustFactorResponse());
+        std::shared_ptr<GetUserTrustFactorResponse> localVarResult(new GetUserTrustFactorResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2918,7 +2918,7 @@ pplx::task<std::shared_ptr<GetTrustFactorResponse>> ModerationApi::getTrustFacto
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserBanPreferenceResponse>> ModerationApi::getUserBanPreference(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -3027,7 +3027,7 @@ pplx::task<std::shared_ptr<GetUserBanPreferenceResponse>> ModerationApi::getUser
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetUserBanPreferenceResponse> localVarResult(new GetUserBanPreferenceResponse());
+        std::shared_ptr<APIModerateGetUserBanPreferencesResponse> localVarResult(new APIModerateGetUserBanPreferencesResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3048,7 +3048,7 @@ pplx::task<std::shared_ptr<GetUserBanPreferenceResponse>> ModerationApi::getUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserInternalProfileResponse_1>> ModerationApi::getUserInternalProfile(boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -3161,7 +3161,7 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse_1>> ModerationApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetUserInternalProfileResponse_1> localVarResult(new GetUserInternalProfileResponse_1());
+        std::shared_ptr<GetUserInternalProfileResponse> localVarResult(new GetUserInternalProfileResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3182,7 +3182,7 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse_1>> ModerationApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostAdjustCommentVotesResponse>> ModerationApi::postAdjustCommentVotes(utility::string_t commentId, std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(utility::string_t commentId, std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'adjustCommentVotesParams' is set
@@ -3319,7 +3319,7 @@ pplx::task<std::shared_ptr<PostAdjustCommentVotesResponse>> ModerationApi::postA
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostAdjustCommentVotesResponse> localVarResult(new PostAdjustCommentVotesResponse());
+        std::shared_ptr<AdjustVotesResponse> localVarResult(new AdjustVotesResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3340,7 +3340,7 @@ pplx::task<std::shared_ptr<PostAdjustCommentVotesResponse>> ModerationApi::postA
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostApiExportResponse>> ModerationApi::postApiExport(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -3469,7 +3469,7 @@ pplx::task<std::shared_ptr<PostApiExportResponse>> ModerationApi::postApiExport(
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostApiExportResponse> localVarResult(new PostApiExportResponse());
+        std::shared_ptr<ModerationExportResponse> localVarResult(new ModerationExportResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3490,7 +3490,7 @@ pplx::task<std::shared_ptr<PostApiExportResponse>> ModerationApi::postApiExport(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostBanUserFromCommentResponse>> ModerationApi::postBanUserFromComment(utility::string_t commentId, boost::optional<bool> banEmail, boost::optional<bool> banEmailDomain, boost::optional<bool> banIP, boost::optional<bool> deleteAllUsersComments, boost::optional<utility::string_t> bannedUntil, boost::optional<bool> isShadowBan, boost::optional<utility::string_t> updateId, boost::optional<utility::string_t> banReason, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(utility::string_t commentId, boost::optional<bool> banEmail, boost::optional<bool> banEmailDomain, boost::optional<bool> banIP, boost::optional<bool> deleteAllUsersComments, boost::optional<utility::string_t> bannedUntil, boost::optional<bool> isShadowBan, boost::optional<utility::string_t> updateId, boost::optional<utility::string_t> banReason, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -3632,7 +3632,7 @@ pplx::task<std::shared_ptr<PostBanUserFromCommentResponse>> ModerationApi::postB
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostBanUserFromCommentResponse> localVarResult(new PostBanUserFromCommentResponse());
+        std::shared_ptr<BanUserFromCommentResult> localVarResult(new BanUserFromCommentResult());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3653,7 +3653,7 @@ pplx::task<std::shared_ptr<PostBanUserFromCommentResponse>> ModerationApi::postB
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostBanUserUndoResponse>> ModerationApi::postBanUserUndo(std::shared_ptr<BanUserUndoParams> banUserUndoParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std::shared_ptr<BanUserUndoParams> banUserUndoParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'banUserUndoParams' is set
@@ -3785,7 +3785,7 @@ pplx::task<std::shared_ptr<PostBanUserUndoResponse>> ModerationApi::postBanUserU
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostBanUserUndoResponse> localVarResult(new PostBanUserUndoResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3806,7 +3806,7 @@ pplx::task<std::shared_ptr<PostBanUserUndoResponse>> ModerationApi::postBanUserU
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostBulkPreBanSummaryResponse>> ModerationApi::postBulkPreBanSummary(std::shared_ptr<BulkPreBanParams> bulkPreBanParams, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(std::shared_ptr<BulkPreBanParams> bulkPreBanParams, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'bulkPreBanParams' is set
@@ -3950,7 +3950,7 @@ pplx::task<std::shared_ptr<PostBulkPreBanSummaryResponse>> ModerationApi::postBu
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostBulkPreBanSummaryResponse> localVarResult(new PostBulkPreBanSummaryResponse());
+        std::shared_ptr<BulkPreBanSummary> localVarResult(new BulkPreBanSummary());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3971,7 +3971,7 @@ pplx::task<std::shared_ptr<PostBulkPreBanSummaryResponse>> ModerationApi::postBu
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostCommentsByIdsResponse>> ModerationApi::postCommentsByIds(std::shared_ptr<CommentsByIdsParams> commentsByIdsParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(std::shared_ptr<CommentsByIdsParams> commentsByIdsParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'commentsByIdsParams' is set
@@ -4103,7 +4103,7 @@ pplx::task<std::shared_ptr<PostCommentsByIdsResponse>> ModerationApi::postCommen
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostCommentsByIdsResponse> localVarResult(new PostCommentsByIdsResponse());
+        std::shared_ptr<ModerationAPIChildCommentsResponse> localVarResult(new ModerationAPIChildCommentsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4124,7 +4124,7 @@ pplx::task<std::shared_ptr<PostCommentsByIdsResponse>> ModerationApi::postCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostFlagCommentResponse>> ModerationApi::postFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -4238,7 +4238,7 @@ pplx::task<std::shared_ptr<PostFlagCommentResponse>> ModerationApi::postFlagComm
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostFlagCommentResponse> localVarResult(new PostFlagCommentResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4394,7 +4394,7 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostRestoreDeletedCommentResponse>> ModerationApi::postRestoreDeletedComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -4508,7 +4508,7 @@ pplx::task<std::shared_ptr<PostRestoreDeletedCommentResponse>> ModerationApi::po
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostRestoreDeletedCommentResponse> localVarResult(new PostRestoreDeletedCommentResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4529,7 +4529,7 @@ pplx::task<std::shared_ptr<PostRestoreDeletedCommentResponse>> ModerationApi::po
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostSetCommentApprovalStatusResponse>> ModerationApi::postSetCommentApprovalStatus(utility::string_t commentId, boost::optional<bool> approved, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(utility::string_t commentId, boost::optional<bool> approved, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -4647,7 +4647,7 @@ pplx::task<std::shared_ptr<PostSetCommentApprovalStatusResponse>> ModerationApi:
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostSetCommentApprovalStatusResponse> localVarResult(new PostSetCommentApprovalStatusResponse());
+        std::shared_ptr<SetCommentApprovedResponse> localVarResult(new SetCommentApprovedResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4668,7 +4668,7 @@ pplx::task<std::shared_ptr<PostSetCommentApprovalStatusResponse>> ModerationApi:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostSetCommentReviewStatusResponse>> ModerationApi::postSetCommentReviewStatus(utility::string_t commentId, boost::optional<bool> reviewed, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(utility::string_t commentId, boost::optional<bool> reviewed, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -4786,7 +4786,7 @@ pplx::task<std::shared_ptr<PostSetCommentReviewStatusResponse>> ModerationApi::p
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostSetCommentReviewStatusResponse> localVarResult(new PostSetCommentReviewStatusResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4807,7 +4807,7 @@ pplx::task<std::shared_ptr<PostSetCommentReviewStatusResponse>> ModerationApi::p
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostSetCommentSpamStatusResponse>> ModerationApi::postSetCommentSpamStatus(utility::string_t commentId, boost::optional<bool> spam, boost::optional<bool> permNotSpam, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(utility::string_t commentId, boost::optional<bool> spam, boost::optional<bool> permNotSpam, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -4929,7 +4929,7 @@ pplx::task<std::shared_ptr<PostSetCommentSpamStatusResponse>> ModerationApi::pos
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostSetCommentSpamStatusResponse> localVarResult(new PostSetCommentSpamStatusResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4950,7 +4950,7 @@ pplx::task<std::shared_ptr<PostSetCommentSpamStatusResponse>> ModerationApi::pos
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostSetCommentTextResponse>> ModerationApi::postSetCommentText(utility::string_t commentId, std::shared_ptr<SetCommentTextParams> setCommentTextParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(utility::string_t commentId, std::shared_ptr<SetCommentTextParams> setCommentTextParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
     // verify the required parameter 'setCommentTextParams' is set
@@ -5087,7 +5087,7 @@ pplx::task<std::shared_ptr<PostSetCommentTextResponse>> ModerationApi::postSetCo
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostSetCommentTextResponse> localVarResult(new PostSetCommentTextResponse());
+        std::shared_ptr<SetCommentTextResponse> localVarResult(new SetCommentTextResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5108,7 +5108,7 @@ pplx::task<std::shared_ptr<PostSetCommentTextResponse>> ModerationApi::postSetCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostUnFlagCommentResponse>> ModerationApi::postUnFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5222,7 +5222,7 @@ pplx::task<std::shared_ptr<PostUnFlagCommentResponse>> ModerationApi::postUnFlag
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostUnFlagCommentResponse> localVarResult(new PostUnFlagCommentResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5243,7 +5243,7 @@ pplx::task<std::shared_ptr<PostUnFlagCommentResponse>> ModerationApi::postUnFlag
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostVoteResponse>> ModerationApi::postVote(utility::string_t commentId, boost::optional<utility::string_t> direction, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(utility::string_t commentId, boost::optional<utility::string_t> direction, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5361,7 +5361,7 @@ pplx::task<std::shared_ptr<PostVoteResponse>> ModerationApi::postVote(utility::s
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostVoteResponse> localVarResult(new PostVoteResponse());
+        std::shared_ptr<VoteResponse> localVarResult(new VoteResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5382,7 +5382,7 @@ pplx::task<std::shared_ptr<PostVoteResponse>> ModerationApi::postVote(utility::s
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutAwardBadgeResponse>> ModerationApi::putAwardBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5506,7 +5506,7 @@ pplx::task<std::shared_ptr<PutAwardBadgeResponse>> ModerationApi::putAwardBadge(
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PutAwardBadgeResponse> localVarResult(new PutAwardBadgeResponse());
+        std::shared_ptr<AwardUserBadgeResponse> localVarResult(new AwardUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5527,7 +5527,7 @@ pplx::task<std::shared_ptr<PutAwardBadgeResponse>> ModerationApi::putAwardBadge(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutCloseThreadResponse>> ModerationApi::putCloseThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5639,7 +5639,7 @@ pplx::task<std::shared_ptr<PutCloseThreadResponse>> ModerationApi::putCloseThrea
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PutCloseThreadResponse> localVarResult(new PutCloseThreadResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5660,7 +5660,7 @@ pplx::task<std::shared_ptr<PutCloseThreadResponse>> ModerationApi::putCloseThrea
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutRemoveBadgeResponse>> ModerationApi::putRemoveBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5784,7 +5784,7 @@ pplx::task<std::shared_ptr<PutRemoveBadgeResponse>> ModerationApi::putRemoveBadg
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PutRemoveBadgeResponse> localVarResult(new PutRemoveBadgeResponse());
+        std::shared_ptr<RemoveUserBadgeResponse> localVarResult(new RemoveUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5805,7 +5805,7 @@ pplx::task<std::shared_ptr<PutRemoveBadgeResponse>> ModerationApi::putRemoveBadg
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutReopenThreadResponse>> ModerationApi::putReopenThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -5917,7 +5917,7 @@ pplx::task<std::shared_ptr<PutReopenThreadResponse>> ModerationApi::putReopenThr
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PutReopenThreadResponse> localVarResult(new PutReopenThreadResponse());
+        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5938,7 +5938,7 @@ pplx::task<std::shared_ptr<PutReopenThreadResponse>> ModerationApi::putReopenThr
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetTrustFactorResponse>> ModerationApi::setTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> trustFactor, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> trustFactor, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
 {
 
 
@@ -6055,7 +6055,7 @@ pplx::task<std::shared_ptr<SetTrustFactorResponse>> ModerationApi::setTrustFacto
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<SetTrustFactorResponse> localVarResult(new SetTrustFactorResponse());
+        std::shared_ptr<SetUserTrustFactorResponse> localVarResult(new SetUserTrustFactorResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

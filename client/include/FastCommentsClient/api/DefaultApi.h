@@ -22,166 +22,140 @@
 
 #include "FastCommentsClient/ApiClient.h"
 
+#include "FastCommentsClient/model/APICreateUserBadgeResponse.h"
+#include "FastCommentsClient/model/APIEmptyResponse.h"
+#include "FastCommentsClient/model/APIEmptySuccessResponse.h"
+#include "FastCommentsClient/model/APIError.h"
+#include "FastCommentsClient/model/APIGetCommentResponse.h"
+#include "FastCommentsClient/model/APIGetCommentsResponse.h"
+#include "FastCommentsClient/model/APIGetUserBadgeProgressListResponse.h"
+#include "FastCommentsClient/model/APIGetUserBadgeProgressResponse.h"
+#include "FastCommentsClient/model/APIGetUserBadgeResponse.h"
+#include "FastCommentsClient/model/APIGetUserBadgesResponse.h"
+#include "FastCommentsClient/model/APISaveCommentResponse.h"
 #include "FastCommentsClient/model/AddDomainConfigParams.h"
 #include "FastCommentsClient/model/AddDomainConfigResponse.h"
-#include "FastCommentsClient/model/AddHashTagResponse.h"
-#include "FastCommentsClient/model/AddHashTagsBulkResponse.h"
 #include "FastCommentsClient/model/AddPageAPIResponse.h"
 #include "FastCommentsClient/model/AddSSOUserAPIResponse.h"
-#include "FastCommentsClient/model/AggregateQuestionResultsResponse_1.h"
+#include "FastCommentsClient/model/AggregateQuestionResultsResponse.h"
 #include "FastCommentsClient/model/AggregateResponse.h"
 #include "FastCommentsClient/model/AggregateTimeBucket.h"
 #include "FastCommentsClient/model/AggregationRequest.h"
 #include "FastCommentsClient/model/BlockFromCommentParams.h"
-#include "FastCommentsClient/model/BlockUserFromCommentResponse.h"
+#include "FastCommentsClient/model/BlockSuccess.h"
 #include "FastCommentsClient/model/BulkAggregateQuestionResultsRequest.h"
-#include "FastCommentsClient/model/BulkAggregateQuestionResultsResponse_1.h"
+#include "FastCommentsClient/model/BulkAggregateQuestionResultsResponse.h"
 #include "FastCommentsClient/model/BulkCreateHashTagsBody.h"
+#include "FastCommentsClient/model/BulkCreateHashTagsResponse.h"
 #include "FastCommentsClient/model/ChangeTicketStateBody.h"
-#include "FastCommentsClient/model/ChangeTicketStateResponse_1.h"
-#include "FastCommentsClient/model/CombineCommentsWithQuestionResultsResponse.h"
+#include "FastCommentsClient/model/ChangeTicketStateResponse.h"
+#include "FastCommentsClient/model/CombineQuestionResultsWithCommentsResponse.h"
 #include "FastCommentsClient/model/CreateAPIPageData.h"
 #include "FastCommentsClient/model/CreateAPISSOUserData.h"
 #include "FastCommentsClient/model/CreateAPIUserSubscriptionData.h"
 #include "FastCommentsClient/model/CreateCommentParams.h"
 #include "FastCommentsClient/model/CreateEmailTemplateBody.h"
-#include "FastCommentsClient/model/CreateEmailTemplateResponse_1.h"
+#include "FastCommentsClient/model/CreateEmailTemplateResponse.h"
 #include "FastCommentsClient/model/CreateFeedPostParams.h"
-#include "FastCommentsClient/model/CreateFeedPostResponse_1.h"
+#include "FastCommentsClient/model/CreateFeedPostsResponse.h"
 #include "FastCommentsClient/model/CreateHashTagBody.h"
+#include "FastCommentsClient/model/CreateHashTagResponse.h"
 #include "FastCommentsClient/model/CreateModeratorBody.h"
-#include "FastCommentsClient/model/CreateModeratorResponse_1.h"
+#include "FastCommentsClient/model/CreateModeratorResponse.h"
 #include "FastCommentsClient/model/CreateQuestionConfigBody.h"
-#include "FastCommentsClient/model/CreateQuestionConfigResponse_1.h"
+#include "FastCommentsClient/model/CreateQuestionConfigResponse.h"
 #include "FastCommentsClient/model/CreateQuestionResultBody.h"
-#include "FastCommentsClient/model/CreateQuestionResultResponse_1.h"
+#include "FastCommentsClient/model/CreateQuestionResultResponse.h"
 #include "FastCommentsClient/model/CreateSubscriptionAPIResponse.h"
 #include "FastCommentsClient/model/CreateTenantBody.h"
 #include "FastCommentsClient/model/CreateTenantPackageBody.h"
-#include "FastCommentsClient/model/CreateTenantPackageResponse_1.h"
-#include "FastCommentsClient/model/CreateTenantResponse_1.h"
+#include "FastCommentsClient/model/CreateTenantPackageResponse.h"
+#include "FastCommentsClient/model/CreateTenantResponse.h"
 #include "FastCommentsClient/model/CreateTenantUserBody.h"
-#include "FastCommentsClient/model/CreateTenantUserResponse_1.h"
+#include "FastCommentsClient/model/CreateTenantUserResponse.h"
 #include "FastCommentsClient/model/CreateTicketBody.h"
-#include "FastCommentsClient/model/CreateTicketResponse_1.h"
+#include "FastCommentsClient/model/CreateTicketResponse.h"
 #include "FastCommentsClient/model/CreateUserBadgeParams.h"
-#include "FastCommentsClient/model/CreateUserBadgeResponse.h"
-#include "FastCommentsClient/model/CreateVoteResponse.h"
-#include "FastCommentsClient/model/DeleteCommentResponse.h"
+#include "FastCommentsClient/model/DeleteCommentResult.h"
 #include "FastCommentsClient/model/DeleteDomainConfigResponse.h"
-#include "FastCommentsClient/model/DeleteEmailTemplateRenderErrorResponse.h"
-#include "FastCommentsClient/model/DeleteEmailTemplateResponse.h"
 #include "FastCommentsClient/model/DeleteHashTagRequestBody.h"
-#include "FastCommentsClient/model/DeleteHashTagResponse.h"
-#include "FastCommentsClient/model/DeleteModeratorResponse.h"
-#include "FastCommentsClient/model/DeleteNotificationCountResponse.h"
 #include "FastCommentsClient/model/DeletePageAPIResponse.h"
-#include "FastCommentsClient/model/DeletePendingWebhookEventResponse.h"
-#include "FastCommentsClient/model/DeleteQuestionConfigResponse.h"
-#include "FastCommentsClient/model/DeleteQuestionResultResponse.h"
 #include "FastCommentsClient/model/DeleteSSOUserAPIResponse.h"
 #include "FastCommentsClient/model/DeleteSubscriptionAPIResponse.h"
-#include "FastCommentsClient/model/DeleteTenantPackageResponse.h"
-#include "FastCommentsClient/model/DeleteTenantResponse.h"
-#include "FastCommentsClient/model/DeleteTenantUserResponse.h"
-#include "FastCommentsClient/model/DeleteUserBadgeResponse.h"
-#include "FastCommentsClient/model/DeleteVoteResponse.h"
 #include "FastCommentsClient/model/FeedPost.h"
-#include "FastCommentsClient/model/FlagCommentResponse_1.h"
-#include "FastCommentsClient/model/GetAuditLogsResponse_1.h"
-#include "FastCommentsClient/model/GetCachedNotificationCountResponse_1.h"
-#include "FastCommentsClient/model/GetCommentResponse.h"
-#include "FastCommentsClient/model/GetCommentsResponse.h"
+#include "FastCommentsClient/model/FlagCommentResponse.h"
+#include "FastCommentsClient/model/GetAuditLogsResponse.h"
+#include "FastCommentsClient/model/GetCachedNotificationCountResponse.h"
 #include "FastCommentsClient/model/GetDomainConfigResponse.h"
 #include "FastCommentsClient/model/GetDomainConfigsResponse.h"
-#include "FastCommentsClient/model/GetEmailTemplateDefinitionsResponse_1.h"
-#include "FastCommentsClient/model/GetEmailTemplateRenderErrorsResponse_1.h"
-#include "FastCommentsClient/model/GetEmailTemplateResponse_1.h"
-#include "FastCommentsClient/model/GetEmailTemplatesResponse_1.h"
-#include "FastCommentsClient/model/GetFeedPostsResponse_1.h"
-#include "FastCommentsClient/model/GetHashTagsResponse_1.h"
-#include "FastCommentsClient/model/GetModeratorResponse_1.h"
-#include "FastCommentsClient/model/GetModeratorsResponse_1.h"
-#include "FastCommentsClient/model/GetNotificationCountResponse_1.h"
-#include "FastCommentsClient/model/GetNotificationsResponse_1.h"
+#include "FastCommentsClient/model/GetEmailTemplateDefinitionsResponse.h"
+#include "FastCommentsClient/model/GetEmailTemplateRenderErrorsResponse.h"
+#include "FastCommentsClient/model/GetEmailTemplateResponse.h"
+#include "FastCommentsClient/model/GetEmailTemplatesResponse.h"
+#include "FastCommentsClient/model/GetFeedPostsResponse.h"
+#include "FastCommentsClient/model/GetHashTagsResponse.h"
+#include "FastCommentsClient/model/GetModeratorResponse.h"
+#include "FastCommentsClient/model/GetModeratorsResponse.h"
+#include "FastCommentsClient/model/GetNotificationCountResponse.h"
+#include "FastCommentsClient/model/GetNotificationsResponse.h"
 #include "FastCommentsClient/model/GetPageByURLIdAPIResponse.h"
 #include "FastCommentsClient/model/GetPagesAPIResponse.h"
-#include "FastCommentsClient/model/GetPendingWebhookEventCountResponse_1.h"
-#include "FastCommentsClient/model/GetPendingWebhookEventsResponse_1.h"
-#include "FastCommentsClient/model/GetQuestionConfigResponse_1.h"
-#include "FastCommentsClient/model/GetQuestionConfigsResponse_1.h"
-#include "FastCommentsClient/model/GetQuestionResultResponse_1.h"
-#include "FastCommentsClient/model/GetQuestionResultsResponse_1.h"
+#include "FastCommentsClient/model/GetPendingWebhookEventCountResponse.h"
+#include "FastCommentsClient/model/GetPendingWebhookEventsResponse.h"
+#include "FastCommentsClient/model/GetQuestionConfigResponse.h"
+#include "FastCommentsClient/model/GetQuestionConfigsResponse.h"
+#include "FastCommentsClient/model/GetQuestionResultResponse.h"
+#include "FastCommentsClient/model/GetQuestionResultsResponse.h"
 #include "FastCommentsClient/model/GetSSOUserByEmailAPIResponse.h"
 #include "FastCommentsClient/model/GetSSOUserByIdAPIResponse.h"
 #include "FastCommentsClient/model/GetSSOUsersResponse.h"
 #include "FastCommentsClient/model/GetSubscriptionsAPIResponse.h"
-#include "FastCommentsClient/model/GetTenantDailyUsagesResponse_1.h"
-#include "FastCommentsClient/model/GetTenantPackageResponse_1.h"
-#include "FastCommentsClient/model/GetTenantPackagesResponse_1.h"
-#include "FastCommentsClient/model/GetTenantResponse_1.h"
-#include "FastCommentsClient/model/GetTenantUserResponse_1.h"
-#include "FastCommentsClient/model/GetTenantUsersResponse_1.h"
-#include "FastCommentsClient/model/GetTenantsResponse_1.h"
-#include "FastCommentsClient/model/GetTicketResponse_1.h"
-#include "FastCommentsClient/model/GetTicketsResponse_1.h"
-#include "FastCommentsClient/model/GetUserBadgeProgressByIdResponse.h"
-#include "FastCommentsClient/model/GetUserBadgeProgressByUserIdResponse.h"
-#include "FastCommentsClient/model/GetUserBadgeProgressListResponse.h"
-#include "FastCommentsClient/model/GetUserBadgeResponse.h"
-#include "FastCommentsClient/model/GetUserBadgesResponse.h"
-#include "FastCommentsClient/model/GetUserResponse_1.h"
-#include "FastCommentsClient/model/GetVotesForUserResponse_1.h"
-#include "FastCommentsClient/model/GetVotesResponse_1.h"
+#include "FastCommentsClient/model/GetTenantDailyUsagesResponse.h"
+#include "FastCommentsClient/model/GetTenantPackageResponse.h"
+#include "FastCommentsClient/model/GetTenantPackagesResponse.h"
+#include "FastCommentsClient/model/GetTenantResponse.h"
+#include "FastCommentsClient/model/GetTenantUserResponse.h"
+#include "FastCommentsClient/model/GetTenantUsersResponse.h"
+#include "FastCommentsClient/model/GetTenantsResponse.h"
+#include "FastCommentsClient/model/GetTicketResponse.h"
+#include "FastCommentsClient/model/GetTicketsResponse.h"
+#include "FastCommentsClient/model/GetUserResponse.h"
+#include "FastCommentsClient/model/GetVotesForUserResponse.h"
+#include "FastCommentsClient/model/GetVotesResponse.h"
 #include "FastCommentsClient/model/PatchDomainConfigParams.h"
 #include "FastCommentsClient/model/PatchDomainConfigResponse.h"
-#include "FastCommentsClient/model/PatchHashTagResponse.h"
 #include "FastCommentsClient/model/PatchPageAPIResponse.h"
 #include "FastCommentsClient/model/PatchSSOUserAPIResponse.h"
 #include "FastCommentsClient/model/PutDomainConfigResponse.h"
 #include "FastCommentsClient/model/PutSSOUserAPIResponse.h"
 #include "FastCommentsClient/model/RenderEmailTemplateBody.h"
-#include "FastCommentsClient/model/RenderEmailTemplateResponse_1.h"
+#include "FastCommentsClient/model/RenderEmailTemplateResponse.h"
 #include "FastCommentsClient/model/ReplaceTenantPackageBody.h"
-#include "FastCommentsClient/model/ReplaceTenantPackageResponse.h"
 #include "FastCommentsClient/model/ReplaceTenantUserBody.h"
-#include "FastCommentsClient/model/ReplaceTenantUserResponse.h"
 #include "FastCommentsClient/model/SORT_DIR.h"
-#include "FastCommentsClient/model/SaveCommentResponse.h"
 #include "FastCommentsClient/model/SaveCommentsBulkResponse.h"
-#include "FastCommentsClient/model/SendInviteResponse.h"
-#include "FastCommentsClient/model/SendLoginLinkResponse.h"
 #include "FastCommentsClient/model/SortDirections.h"
 #include "FastCommentsClient/model/UnBlockFromCommentParams.h"
-#include "FastCommentsClient/model/UnBlockUserFromCommentResponse.h"
-#include "FastCommentsClient/model/UnFlagCommentResponse.h"
+#include "FastCommentsClient/model/UnblockSuccess.h"
 #include "FastCommentsClient/model/UpdatableCommentParams.h"
 #include "FastCommentsClient/model/UpdateAPIPageData.h"
 #include "FastCommentsClient/model/UpdateAPISSOUserData.h"
 #include "FastCommentsClient/model/UpdateAPIUserSubscriptionData.h"
-#include "FastCommentsClient/model/UpdateCommentResponse.h"
 #include "FastCommentsClient/model/UpdateDomainConfigParams.h"
 #include "FastCommentsClient/model/UpdateEmailTemplateBody.h"
-#include "FastCommentsClient/model/UpdateEmailTemplateResponse.h"
-#include "FastCommentsClient/model/UpdateFeedPostResponse.h"
 #include "FastCommentsClient/model/UpdateHashTagBody.h"
+#include "FastCommentsClient/model/UpdateHashTagResponse.h"
 #include "FastCommentsClient/model/UpdateModeratorBody.h"
-#include "FastCommentsClient/model/UpdateModeratorResponse.h"
 #include "FastCommentsClient/model/UpdateNotificationBody.h"
-#include "FastCommentsClient/model/UpdateNotificationResponse.h"
 #include "FastCommentsClient/model/UpdateQuestionConfigBody.h"
-#include "FastCommentsClient/model/UpdateQuestionConfigResponse.h"
 #include "FastCommentsClient/model/UpdateQuestionResultBody.h"
-#include "FastCommentsClient/model/UpdateQuestionResultResponse.h"
 #include "FastCommentsClient/model/UpdateSubscriptionAPIResponse.h"
 #include "FastCommentsClient/model/UpdateTenantBody.h"
 #include "FastCommentsClient/model/UpdateTenantPackageBody.h"
-#include "FastCommentsClient/model/UpdateTenantPackageResponse.h"
-#include "FastCommentsClient/model/UpdateTenantResponse.h"
 #include "FastCommentsClient/model/UpdateTenantUserBody.h"
-#include "FastCommentsClient/model/UpdateTenantUserResponse.h"
 #include "FastCommentsClient/model/UpdateUserBadgeParams.h"
-#include "FastCommentsClient/model/UpdateUserBadgeResponse.h"
+#include "FastCommentsClient/model/VoteDeleteResponse.h"
+#include "FastCommentsClient/model/VoteResponse.h"
 #include <vector>
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
@@ -223,7 +197,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="createHashTagBody"> (optional)</param>
-    pplx::task<std::shared_ptr<AddHashTagResponse>> addHashTag(
+    pplx::task<std::shared_ptr<CreateHashTagResponse>> addHashTag(
         boost::optional<utility::string_t> tenantId,
         boost::optional<std::shared_ptr<CreateHashTagBody>> createHashTagBody
     ) const;
@@ -235,7 +209,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="bulkCreateHashTagsBody"> (optional)</param>
-    pplx::task<std::shared_ptr<AddHashTagsBulkResponse>> addHashTagsBulk(
+    pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> addHashTagsBulk(
         boost::optional<utility::string_t> tenantId,
         boost::optional<std::shared_ptr<BulkCreateHashTagsBody>> bulkCreateHashTagsBody
     ) const;
@@ -292,7 +266,7 @@ public:
     /// <param name="timeBucket"> (optional, default to new AggregateTimeBucket())</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="forceRecalculate"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<AggregateQuestionResultsResponse_1>> aggregateQuestionResults(
+    pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> aggregateQuestionResults(
         utility::string_t tenantId,
         boost::optional<utility::string_t> questionId,
         boost::optional<std::vector<utility::string_t>> questionIds,
@@ -312,7 +286,7 @@ public:
     /// <param name="blockFromCommentParams"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<BlockUserFromCommentResponse>> blockUserFromComment(
+    pplx::task<std::shared_ptr<BlockSuccess>> blockUserFromComment(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<BlockFromCommentParams> blockFromCommentParams,
@@ -328,7 +302,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="bulkAggregateQuestionResultsRequest"></param>
     /// <param name="forceRecalculate"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse_1>> bulkAggregateQuestionResults(
+    pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> bulkAggregateQuestionResults(
         utility::string_t tenantId,
         std::shared_ptr<BulkAggregateQuestionResultsRequest> bulkAggregateQuestionResultsRequest,
         boost::optional<bool> forceRecalculate
@@ -343,7 +317,7 @@ public:
     /// <param name="userId"></param>
     /// <param name="id"></param>
     /// <param name="changeTicketStateBody"></param>
-    pplx::task<std::shared_ptr<ChangeTicketStateResponse_1>> changeTicketState(
+    pplx::task<std::shared_ptr<ChangeTicketStateResponse>> changeTicketState(
         utility::string_t tenantId,
         utility::string_t userId,
         utility::string_t id,
@@ -364,7 +338,7 @@ public:
     /// <param name="minValue"> (optional, default to 0.0)</param>
     /// <param name="maxValue"> (optional, default to 0.0)</param>
     /// <param name="limit"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<CombineCommentsWithQuestionResultsResponse>> combineCommentsWithQuestionResults(
+    pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> combineCommentsWithQuestionResults(
         utility::string_t tenantId,
         boost::optional<utility::string_t> questionId,
         boost::optional<std::vector<utility::string_t>> questionIds,
@@ -383,7 +357,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createEmailTemplateBody"></param>
-    pplx::task<std::shared_ptr<CreateEmailTemplateResponse_1>> createEmailTemplate(
+    pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> createEmailTemplate(
         utility::string_t tenantId,
         std::shared_ptr<CreateEmailTemplateBody> createEmailTemplateBody
     ) const;
@@ -399,7 +373,7 @@ public:
     /// <param name="isLive"> (optional, default to false)</param>
     /// <param name="doSpamCheck"> (optional, default to false)</param>
     /// <param name="skipDupCheck"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<CreateFeedPostResponse_1>> createFeedPost(
+    pplx::task<std::shared_ptr<CreateFeedPostsResponse>> createFeedPost(
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams,
         boost::optional<utility::string_t> broadcastId,
@@ -415,7 +389,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createModeratorBody"></param>
-    pplx::task<std::shared_ptr<CreateModeratorResponse_1>> createModerator(
+    pplx::task<std::shared_ptr<CreateModeratorResponse>> createModerator(
         utility::string_t tenantId,
         std::shared_ptr<CreateModeratorBody> createModeratorBody
     ) const;
@@ -427,7 +401,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createQuestionConfigBody"></param>
-    pplx::task<std::shared_ptr<CreateQuestionConfigResponse_1>> createQuestionConfig(
+    pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> createQuestionConfig(
         utility::string_t tenantId,
         std::shared_ptr<CreateQuestionConfigBody> createQuestionConfigBody
     ) const;
@@ -439,7 +413,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createQuestionResultBody"></param>
-    pplx::task<std::shared_ptr<CreateQuestionResultResponse_1>> createQuestionResult(
+    pplx::task<std::shared_ptr<CreateQuestionResultResponse>> createQuestionResult(
         utility::string_t tenantId,
         std::shared_ptr<CreateQuestionResultBody> createQuestionResultBody
     ) const;
@@ -463,7 +437,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createTenantBody"></param>
-    pplx::task<std::shared_ptr<CreateTenantResponse_1>> createTenant(
+    pplx::task<std::shared_ptr<CreateTenantResponse>> createTenant(
         utility::string_t tenantId,
         std::shared_ptr<CreateTenantBody> createTenantBody
     ) const;
@@ -475,7 +449,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createTenantPackageBody"></param>
-    pplx::task<std::shared_ptr<CreateTenantPackageResponse_1>> createTenantPackage(
+    pplx::task<std::shared_ptr<CreateTenantPackageResponse>> createTenantPackage(
         utility::string_t tenantId,
         std::shared_ptr<CreateTenantPackageBody> createTenantPackageBody
     ) const;
@@ -487,7 +461,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createTenantUserBody"></param>
-    pplx::task<std::shared_ptr<CreateTenantUserResponse_1>> createTenantUser(
+    pplx::task<std::shared_ptr<CreateTenantUserResponse>> createTenantUser(
         utility::string_t tenantId,
         std::shared_ptr<CreateTenantUserBody> createTenantUserBody
     ) const;
@@ -500,7 +474,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="userId"></param>
     /// <param name="createTicketBody"></param>
-    pplx::task<std::shared_ptr<CreateTicketResponse_1>> createTicket(
+    pplx::task<std::shared_ptr<CreateTicketResponse>> createTicket(
         utility::string_t tenantId,
         utility::string_t userId,
         std::shared_ptr<CreateTicketBody> createTicketBody
@@ -513,7 +487,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="createUserBadgeParams"></param>
-    pplx::task<std::shared_ptr<CreateUserBadgeResponse>> createUserBadge(
+    pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> createUserBadge(
         utility::string_t tenantId,
         std::shared_ptr<CreateUserBadgeParams> createUserBadgeParams
     ) const;
@@ -528,7 +502,7 @@ public:
     /// <param name="direction"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateVoteResponse>> createVote(
+    pplx::task<std::shared_ptr<VoteResponse>> createVote(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t direction,
@@ -545,7 +519,7 @@ public:
     /// <param name="id"></param>
     /// <param name="contextUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="isLive"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<DeleteCommentResponse>> deleteComment(
+    pplx::task<std::shared_ptr<DeleteCommentResult>> deleteComment(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> contextUserId,
@@ -571,7 +545,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteEmailTemplateResponse>> deleteEmailTemplate(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteEmailTemplate(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -584,7 +558,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="errorId"></param>
-    pplx::task<std::shared_ptr<DeleteEmailTemplateRenderErrorResponse>> deleteEmailTemplateRenderError(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteEmailTemplateRenderError(
         utility::string_t tenantId,
         utility::string_t id,
         utility::string_t errorId
@@ -598,7 +572,7 @@ public:
     /// <param name="tag"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="deleteHashTagRequestBody"> (optional)</param>
-    pplx::task<std::shared_ptr<DeleteHashTagResponse>> deleteHashTag(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteHashTag(
         utility::string_t tag,
         boost::optional<utility::string_t> tenantId,
         boost::optional<std::shared_ptr<DeleteHashTagRequestBody>> deleteHashTagRequestBody
@@ -612,7 +586,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="sendEmail"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteModeratorResponse>> deleteModerator(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteModerator(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> sendEmail
@@ -625,7 +599,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteNotificationCountResponse>> deleteNotificationCount(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteNotificationCount(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -649,7 +623,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeletePendingWebhookEventResponse>> deletePendingWebhookEvent(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deletePendingWebhookEvent(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -661,7 +635,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteQuestionConfigResponse>> deleteQuestionConfig(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteQuestionConfig(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -673,7 +647,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteQuestionResultResponse>> deleteQuestionResult(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteQuestionResult(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -716,7 +690,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="sure"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteTenantResponse>> deleteTenant(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteTenant(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> sure
@@ -729,7 +703,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteTenantPackageResponse>> deleteTenantPackage(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteTenantPackage(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -743,7 +717,7 @@ public:
     /// <param name="id"></param>
     /// <param name="deleteComments"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="commentDeleteMode"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteTenantUserResponse>> deleteTenantUser(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> deleteTenantUser(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> deleteComments,
@@ -757,7 +731,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteUserBadgeResponse>> deleteUserBadge(
+    pplx::task<std::shared_ptr<APIEmptySuccessResponse>> deleteUserBadge(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -770,7 +744,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteVoteResponse>> deleteVote(
+    pplx::task<std::shared_ptr<VoteDeleteResponse>> deleteVote(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> editKey
@@ -785,7 +759,7 @@ public:
     /// <param name="id"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<FlagCommentResponse_1>> flagComment(
+    pplx::task<std::shared_ptr<FlagCommentResponse>> flagComment(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> userId,
@@ -803,7 +777,7 @@ public:
     /// <param name="order"> (optional, default to new SORT_DIR())</param>
     /// <param name="after"> (optional, default to 0.0)</param>
     /// <param name="before"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetAuditLogsResponse_1>> getAuditLogs(
+    pplx::task<std::shared_ptr<GetAuditLogsResponse>> getAuditLogs(
         utility::string_t tenantId,
         boost::optional<double> limit,
         boost::optional<double> skip,
@@ -819,7 +793,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetCachedNotificationCountResponse_1>> getCachedNotificationCount(
+    pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> getCachedNotificationCount(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -831,7 +805,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetCommentResponse>> getComment(
+    pplx::task<std::shared_ptr<APIGetCommentResponse>> getComment(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -858,7 +832,7 @@ public:
     /// <param name="direction"> (optional, default to new SortDirections())</param>
     /// <param name="fromDate"> (optional, default to 0L)</param>
     /// <param name="toDate"> (optional, default to 0L)</param>
-    pplx::task<std::shared_ptr<GetCommentsResponse>> getComments(
+    pplx::task<std::shared_ptr<APIGetCommentsResponse>> getComments(
         utility::string_t tenantId,
         boost::optional<int32_t> page,
         boost::optional<int32_t> limit,
@@ -907,7 +881,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetEmailTemplateResponse_1>> getEmailTemplate(
+    pplx::task<std::shared_ptr<GetEmailTemplateResponse>> getEmailTemplate(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -918,7 +892,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="tenantId"></param>
-    pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse_1>> getEmailTemplateDefinitions(
+    pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> getEmailTemplateDefinitions(
         utility::string_t tenantId
     ) const;
     /// <summary>
@@ -930,7 +904,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse_1>> getEmailTemplateRenderErrors(
+    pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> getEmailTemplateRenderErrors(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<double> skip
@@ -943,7 +917,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetEmailTemplatesResponse_1>> getEmailTemplates(
+    pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> getEmailTemplates(
         utility::string_t tenantId,
         boost::optional<double> skip
     ) const;
@@ -957,7 +931,7 @@ public:
     /// <param name="afterId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="limit"> (optional, default to 0)</param>
     /// <param name="tags"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
-    pplx::task<std::shared_ptr<GetFeedPostsResponse_1>> getFeedPosts(
+    pplx::task<std::shared_ptr<GetFeedPostsResponse>> getFeedPosts(
         utility::string_t tenantId,
         boost::optional<utility::string_t> afterId,
         boost::optional<int32_t> limit,
@@ -971,7 +945,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="page"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetHashTagsResponse_1>> getHashTags(
+    pplx::task<std::shared_ptr<GetHashTagsResponse>> getHashTags(
         utility::string_t tenantId,
         boost::optional<double> page
     ) const;
@@ -983,7 +957,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetModeratorResponse_1>> getModerator(
+    pplx::task<std::shared_ptr<GetModeratorResponse>> getModerator(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -995,7 +969,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetModeratorsResponse_1>> getModerators(
+    pplx::task<std::shared_ptr<GetModeratorsResponse>> getModerators(
         utility::string_t tenantId,
         boost::optional<double> skip
     ) const;
@@ -1011,7 +985,7 @@ public:
     /// <param name="fromCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="viewed"> (optional, default to false)</param>
     /// <param name="type"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetNotificationCountResponse_1>> getNotificationCount(
+    pplx::task<std::shared_ptr<GetNotificationCountResponse>> getNotificationCount(
         utility::string_t tenantId,
         boost::optional<utility::string_t> userId,
         boost::optional<utility::string_t> urlId,
@@ -1032,7 +1006,7 @@ public:
     /// <param name="viewed"> (optional, default to false)</param>
     /// <param name="type"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetNotificationsResponse_1>> getNotifications(
+    pplx::task<std::shared_ptr<GetNotificationsResponse>> getNotifications(
         utility::string_t tenantId,
         boost::optional<utility::string_t> userId,
         boost::optional<utility::string_t> urlId,
@@ -1076,7 +1050,7 @@ public:
     /// <param name="type"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="domain"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="attemptCountGT"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse_1>> getPendingWebhookEventCount(
+    pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> getPendingWebhookEventCount(
         utility::string_t tenantId,
         boost::optional<utility::string_t> commentId,
         boost::optional<utility::string_t> externalId,
@@ -1099,7 +1073,7 @@ public:
     /// <param name="domain"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="attemptCountGT"> (optional, default to 0.0)</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse_1>> getPendingWebhookEvents(
+    pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> getPendingWebhookEvents(
         utility::string_t tenantId,
         boost::optional<utility::string_t> commentId,
         boost::optional<utility::string_t> externalId,
@@ -1117,7 +1091,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetQuestionConfigResponse_1>> getQuestionConfig(
+    pplx::task<std::shared_ptr<GetQuestionConfigResponse>> getQuestionConfig(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1129,7 +1103,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetQuestionConfigsResponse_1>> getQuestionConfigs(
+    pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> getQuestionConfigs(
         utility::string_t tenantId,
         boost::optional<double> skip
     ) const;
@@ -1141,7 +1115,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetQuestionResultResponse_1>> getQuestionResult(
+    pplx::task<std::shared_ptr<GetQuestionResultResponse>> getQuestionResult(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1158,7 +1132,7 @@ public:
     /// <param name="questionId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="questionIds"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetQuestionResultsResponse_1>> getQuestionResults(
+    pplx::task<std::shared_ptr<GetQuestionResultsResponse>> getQuestionResults(
         utility::string_t tenantId,
         boost::optional<utility::string_t> urlId,
         boost::optional<utility::string_t> userId,
@@ -1223,7 +1197,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetTenantResponse_1>> getTenant(
+    pplx::task<std::shared_ptr<GetTenantResponse>> getTenant(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1238,7 +1212,7 @@ public:
     /// <param name="monthNumber"> (optional, default to 0.0)</param>
     /// <param name="dayNumber"> (optional, default to 0.0)</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse_1>> getTenantDailyUsages(
+    pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> getTenantDailyUsages(
         utility::string_t tenantId,
         boost::optional<double> yearNumber,
         boost::optional<double> monthNumber,
@@ -1253,7 +1227,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetTenantPackageResponse_1>> getTenantPackage(
+    pplx::task<std::shared_ptr<GetTenantPackageResponse>> getTenantPackage(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1265,7 +1239,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetTenantPackagesResponse_1>> getTenantPackages(
+    pplx::task<std::shared_ptr<GetTenantPackagesResponse>> getTenantPackages(
         utility::string_t tenantId,
         boost::optional<double> skip
     ) const;
@@ -1277,7 +1251,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetTenantUserResponse_1>> getTenantUser(
+    pplx::task<std::shared_ptr<GetTenantUserResponse>> getTenantUser(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1289,7 +1263,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetTenantUsersResponse_1>> getTenantUsers(
+    pplx::task<std::shared_ptr<GetTenantUsersResponse>> getTenantUsers(
         utility::string_t tenantId,
         boost::optional<double> skip
     ) const;
@@ -1302,7 +1276,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="meta"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetTenantsResponse_1>> getTenants(
+    pplx::task<std::shared_ptr<GetTenantsResponse>> getTenants(
         utility::string_t tenantId,
         boost::optional<utility::string_t> meta,
         boost::optional<double> skip
@@ -1316,7 +1290,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetTicketResponse_1>> getTicket(
+    pplx::task<std::shared_ptr<GetTicketResponse>> getTicket(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> userId
@@ -1332,7 +1306,7 @@ public:
     /// <param name="state"> (optional, default to 0.0)</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
     /// <param name="limit"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetTicketsResponse_1>> getTickets(
+    pplx::task<std::shared_ptr<GetTicketsResponse>> getTickets(
         utility::string_t tenantId,
         boost::optional<utility::string_t> userId,
         boost::optional<double> state,
@@ -1347,7 +1321,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetUserResponse_1>> getUser(
+    pplx::task<std::shared_ptr<GetUserResponse>> getUser(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1359,7 +1333,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetUserBadgeResponse>> getUserBadge(
+    pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> getUserBadge(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1371,7 +1345,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetUserBadgeProgressByIdResponse>> getUserBadgeProgressById(
+    pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> getUserBadgeProgressById(
         utility::string_t tenantId,
         utility::string_t id
     ) const;
@@ -1383,7 +1357,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="userId"></param>
-    pplx::task<std::shared_ptr<GetUserBadgeProgressByUserIdResponse>> getUserBadgeProgressByUserId(
+    pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> getUserBadgeProgressByUserId(
         utility::string_t tenantId,
         utility::string_t userId
     ) const;
@@ -1397,7 +1371,7 @@ public:
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="limit"> (optional, default to 0.0)</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetUserBadgeProgressListResponse>> getUserBadgeProgressList(
+    pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> getUserBadgeProgressList(
         utility::string_t tenantId,
         boost::optional<utility::string_t> userId,
         boost::optional<double> limit,
@@ -1416,7 +1390,7 @@ public:
     /// <param name="displayedOnComments"> (optional, default to false)</param>
     /// <param name="limit"> (optional, default to 0.0)</param>
     /// <param name="skip"> (optional, default to 0.0)</param>
-    pplx::task<std::shared_ptr<GetUserBadgesResponse>> getUserBadges(
+    pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> getUserBadges(
         utility::string_t tenantId,
         boost::optional<utility::string_t> userId,
         boost::optional<utility::string_t> badgeId,
@@ -1433,7 +1407,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
-    pplx::task<std::shared_ptr<GetVotesResponse_1>> getVotes(
+    pplx::task<std::shared_ptr<GetVotesResponse>> getVotes(
         utility::string_t tenantId,
         utility::string_t urlId
     ) const;
@@ -1447,7 +1421,7 @@ public:
     /// <param name="urlId"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetVotesForUserResponse_1>> getVotesForUser(
+    pplx::task<std::shared_ptr<GetVotesForUserResponse>> getVotesForUser(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> userId,
@@ -1476,7 +1450,7 @@ public:
     /// <param name="tag"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="updateHashTagBody"> (optional)</param>
-    pplx::task<std::shared_ptr<PatchHashTagResponse>> patchHashTag(
+    pplx::task<std::shared_ptr<UpdateHashTagResponse>> patchHashTag(
         utility::string_t tag,
         boost::optional<utility::string_t> tenantId,
         boost::optional<std::shared_ptr<UpdateHashTagBody>> updateHashTagBody
@@ -1550,7 +1524,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="renderEmailTemplateBody"></param>
     /// <param name="locale"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<RenderEmailTemplateResponse_1>> renderEmailTemplate(
+    pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> renderEmailTemplate(
         utility::string_t tenantId,
         std::shared_ptr<RenderEmailTemplateBody> renderEmailTemplateBody,
         boost::optional<utility::string_t> locale
@@ -1564,7 +1538,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="replaceTenantPackageBody"></param>
-    pplx::task<std::shared_ptr<ReplaceTenantPackageResponse>> replaceTenantPackage(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> replaceTenantPackage(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<ReplaceTenantPackageBody> replaceTenantPackageBody
@@ -1579,7 +1553,7 @@ public:
     /// <param name="id"></param>
     /// <param name="replaceTenantUserBody"></param>
     /// <param name="updateComments"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<ReplaceTenantUserResponse>> replaceTenantUser(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> replaceTenantUser(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<ReplaceTenantUserBody> replaceTenantUserBody,
@@ -1597,7 +1571,7 @@ public:
     /// <param name="doSpamCheck"> (optional, default to false)</param>
     /// <param name="sendEmails"> (optional, default to false)</param>
     /// <param name="populateNotifications"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<SaveCommentResponse>> saveComment(
+    pplx::task<std::shared_ptr<APISaveCommentResponse>> saveComment(
         utility::string_t tenantId,
         std::shared_ptr<CreateCommentParams> createCommentParams,
         boost::optional<bool> isLive,
@@ -1634,7 +1608,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="fromName"></param>
-    pplx::task<std::shared_ptr<SendInviteResponse>> sendInvite(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> sendInvite(
         utility::string_t tenantId,
         utility::string_t id,
         utility::string_t fromName
@@ -1648,7 +1622,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="redirectURL"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<SendLoginLinkResponse>> sendLoginLink(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> sendLoginLink(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> redirectURL
@@ -1664,7 +1638,7 @@ public:
     /// <param name="unBlockFromCommentParams"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UnBlockUserFromCommentResponse>> unBlockUserFromComment(
+    pplx::task<std::shared_ptr<UnblockSuccess>> unBlockUserFromComment(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams,
@@ -1681,7 +1655,7 @@ public:
     /// <param name="id"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="anonUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UnFlagCommentResponse>> unFlagComment(
+    pplx::task<std::shared_ptr<FlagCommentResponse>> unFlagComment(
         utility::string_t tenantId,
         utility::string_t id,
         boost::optional<utility::string_t> userId,
@@ -1699,7 +1673,7 @@ public:
     /// <param name="contextUserId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="doSpamCheck"> (optional, default to false)</param>
     /// <param name="isLive"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<UpdateCommentResponse>> updateComment(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateComment(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdatableCommentParams> updatableCommentParams,
@@ -1716,7 +1690,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateEmailTemplateBody"></param>
-    pplx::task<std::shared_ptr<UpdateEmailTemplateResponse>> updateEmailTemplate(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateEmailTemplate(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateEmailTemplateBody> updateEmailTemplateBody
@@ -1730,7 +1704,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="feedPost"></param>
-    pplx::task<std::shared_ptr<UpdateFeedPostResponse>> updateFeedPost(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateFeedPost(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<FeedPost> feedPost
@@ -1744,7 +1718,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateModeratorBody"></param>
-    pplx::task<std::shared_ptr<UpdateModeratorResponse>> updateModerator(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateModerator(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateModeratorBody> updateModeratorBody
@@ -1759,7 +1733,7 @@ public:
     /// <param name="id"></param>
     /// <param name="updateNotificationBody"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UpdateNotificationResponse>> updateNotification(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateNotification(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateNotificationBody> updateNotificationBody,
@@ -1774,7 +1748,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateQuestionConfigBody"></param>
-    pplx::task<std::shared_ptr<UpdateQuestionConfigResponse>> updateQuestionConfig(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateQuestionConfig(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateQuestionConfigBody> updateQuestionConfigBody
@@ -1788,7 +1762,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateQuestionResultBody"></param>
-    pplx::task<std::shared_ptr<UpdateQuestionResultResponse>> updateQuestionResult(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateQuestionResult(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateQuestionResultBody> updateQuestionResultBody
@@ -1818,7 +1792,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateTenantBody"></param>
-    pplx::task<std::shared_ptr<UpdateTenantResponse>> updateTenant(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateTenant(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateTenantBody> updateTenantBody
@@ -1832,7 +1806,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateTenantPackageBody"></param>
-    pplx::task<std::shared_ptr<UpdateTenantPackageResponse>> updateTenantPackage(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateTenantPackage(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateTenantPackageBody> updateTenantPackageBody
@@ -1847,7 +1821,7 @@ public:
     /// <param name="id"></param>
     /// <param name="updateTenantUserBody"></param>
     /// <param name="updateComments"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UpdateTenantUserResponse>> updateTenantUser(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> updateTenantUser(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateTenantUserBody> updateTenantUserBody,
@@ -1862,7 +1836,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="id"></param>
     /// <param name="updateUserBadgeParams"></param>
-    pplx::task<std::shared_ptr<UpdateUserBadgeResponse>> updateUserBadge(
+    pplx::task<std::shared_ptr<APIEmptySuccessResponse>> updateUserBadge(
         utility::string_t tenantId,
         utility::string_t id,
         std::shared_ptr<UpdateUserBadgeParams> updateUserBadgeParams

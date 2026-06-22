@@ -11528,15 +11528,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SearchUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SearchUsersResult"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SearchUsersResult"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -11614,21 +11616,23 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserPresenceStatusesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserPresenceStatusesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserPresenceStatusesResponse"
 								}
 							}
 						}
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -11679,15 +11683,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserNotificationsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetMyNotificationsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetMyNotificationsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -11809,15 +11815,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ResetUserNotificationsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ResetUserNotificationsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ResetUserNotificationsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -11897,15 +11905,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserNotificationCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserNotificationCountResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserNotificationCountResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -11944,15 +11954,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ResetUserNotificationCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ResetUserNotificationsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ResetUserNotificationsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -11998,11 +12010,18 @@
 										},
 										{
 											"$ref": "#/components/schemas/IgnoredResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
 										}
 									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12068,11 +12087,18 @@
 										},
 										{
 											"$ref": "#/components/schemas/IgnoredResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
 										}
 									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12147,11 +12173,18 @@
 										},
 										{
 											"$ref": "#/components/schemas/IgnoredResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
 										}
 									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12296,15 +12329,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTranslationsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTranslationsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTranslationsResponse"
 								}
 							}
 						}
@@ -12321,6 +12346,16 @@
 					},
 					"500": {
 						"description": "Internal",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -12379,15 +12414,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetPagesPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetPublicPagesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetPublicPagesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12465,15 +12502,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetOnlineUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PageUsersOnlineResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PageUsersOnlineResponse"
 								}
 							}
 						}
@@ -12490,6 +12519,16 @@
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -12552,15 +12591,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetOfflineUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PageUsersOfflineResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PageUsersOfflineResponse"
 								}
 							}
 						}
@@ -12577,6 +12608,16 @@
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -12639,21 +12680,23 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUsersInfoResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PageUsersInfoResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PageUsersInfoResponse"
 								}
 							}
 						}
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -12698,15 +12741,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetV1PageLikesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetV1PageLikes"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetV1PageLikes"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12743,15 +12788,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateV1PageReactResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateV1PageReact"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateV1PageReact"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12796,15 +12843,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteV1PageReactResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/DeleteV1PageReact"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/DeleteV1PageReact"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12843,15 +12892,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetV2PageReactUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetV2PageReactUsersResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetV2PageReactUsersResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12898,15 +12949,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetV2PageReactsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetV2PageReacts"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetV2PageReacts"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -12943,15 +12996,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateV2PageReactResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateV2PageReact"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateV2PageReact"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13004,15 +13059,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteV2PageReactResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/DeleteV2PageReact"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/DeleteV2PageReact"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13059,15 +13116,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPICountCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPICountCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13146,15 +13205,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetApiIdsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPIGetCommentIdsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPIGetCommentIdsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13241,15 +13302,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetApiCommentsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPIGetCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPIGetCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13354,15 +13417,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostApiExportResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationExportResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationExportResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13441,15 +13506,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetApiExportStatusResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationExportStatusResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationExportStatusResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13496,15 +13563,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetSearchUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationUserSearchResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationUserSearchResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13551,15 +13620,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetSearchPagesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationPageSearchResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationPageSearchResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13606,15 +13677,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetSearchSitesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationSiteSearchResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationSiteSearchResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13661,15 +13734,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetSearchCommentsSummaryResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationCommentSearchResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationCommentSearchResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13732,15 +13807,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetSearchSuggestResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationSuggestResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationSuggestResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13787,15 +13864,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetPreBanSummaryResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PreBanSummary"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PreBanSummary"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13866,15 +13945,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostBulkPreBanSummaryResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BulkPreBanSummary"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BulkPreBanSummary"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -13947,15 +14028,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostBanUserFromCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BanUserFromCommentResult"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BanUserFromCommentResult"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14066,15 +14149,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetBanUsersFromCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetBannedUsersFromCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetBannedUsersFromCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14121,15 +14206,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostBanUserUndoResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14185,11 +14272,18 @@
 										},
 										{
 											"$ref": "#/components/schemas/RemoveCommentActionResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
 										}
 									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14244,15 +14338,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostRestoreDeletedCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14307,15 +14403,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostFlagCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14370,15 +14468,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostUnFlagCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14433,15 +14533,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostSetCommentReviewStatusResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14504,15 +14606,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostSetCommentSpamStatusResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14583,15 +14687,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostSetCommentApprovalStatusResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SetCommentApprovedResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SetCommentApprovedResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14654,15 +14760,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetLogsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPIGetLogsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPIGetLogsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14709,15 +14817,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetModerationCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPICommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPICommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14780,15 +14890,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostCommentsByIdsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPIChildCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPIChildCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14837,15 +14949,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentChildrenResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ModerationAPIChildCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ModerationAPIChildCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14892,15 +15006,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetModerationCommentTextResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentTextResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentTextResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -14947,15 +15063,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostSetCommentTextResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SetCommentTextResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SetCommentTextResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15020,15 +15138,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostAdjustCommentVotesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/AdjustVotesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/AdjustVotesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15093,15 +15213,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostVoteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15164,15 +15286,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteModerationVoteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteDeleteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteDeleteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15235,15 +15359,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentBanStatusResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentBanStatusResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentBanStatusResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15290,15 +15416,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBanPreferenceResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIModerateGetUserBanPreferencesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIModerateGetUserBanPreferencesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15337,15 +15465,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetManualBadgesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantManualBadgesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantManualBadgesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15384,15 +15514,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetManualBadgesForUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserManualBadgesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserManualBadgesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15447,15 +15579,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PutAwardBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/AwardUserBadgeResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/AwardUserBadgeResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15526,15 +15660,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PutRemoveBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/RemoveUserBadgeResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/RemoveUserBadgeResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15605,15 +15741,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTrustFactorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserTrustFactorResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserTrustFactorResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15660,15 +15798,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SetTrustFactorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SetUserTrustFactorResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SetUserTrustFactorResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15723,15 +15863,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserInternalProfileResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserInternalProfileResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserInternalProfileResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15778,15 +15920,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PutReopenThreadResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15833,15 +15977,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PutCloseThreadResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -15888,15 +16034,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCountsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetBannedUsersCountResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetBannedUsersCountResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16006,9 +16154,6 @@
 										},
 										{
 											"$ref": "#/components/schemas/GifSearchInternalError"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
 										}
 									]
 								}
@@ -16017,6 +16162,16 @@
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -16084,21 +16239,23 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetGifLargeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GifGetLargeResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GifGetLargeResponse"
 								}
 							}
 						}
 					},
 					"422": {
 						"description": "Validation Failed",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -16141,15 +16298,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "FlagCommentPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16204,15 +16363,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetFeedPostsPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PublicFeedPostsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PublicFeedPostsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16294,15 +16455,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateFeedPostPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateFeedPostResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateFeedPostResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16359,15 +16522,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ReactFeedPostPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ReactFeedPostResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ReactFeedPostResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16440,15 +16605,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserReactsPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/UserReactsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/UserReactsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16498,15 +16665,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateFeedPostPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateFeedPostResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateFeedPostResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16570,22 +16739,25 @@
 							"application/json": {
 								"schema": {
 									"title": "DeleteFeedPostPublicResponse",
-									"anyOf": [
-										{
-											"properties": {
-												"status": {
-													"$ref": "#/components/schemas/APIStatus"
-												}
-											},
-											"required": [
-												"status"
-											],
-											"type": "object"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
+									"properties": {
+										"status": {
+											"$ref": "#/components/schemas/APIStatus"
 										}
-									]
+									},
+									"required": [
+										"status"
+									],
+									"type": "object"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16640,15 +16812,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetFeedPostsStatsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/FeedPostsStatsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/FeedPostsStatsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16698,15 +16872,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetEventLogResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEventLogResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEventLogResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16772,15 +16948,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetGlobalEventLogResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEventLogResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEventLogResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16846,15 +17024,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentTextResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PublicAPIGetCommentTextResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PublicAPIGetCommentTextResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16909,15 +17089,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SetCommentTextResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PublicAPISetCommentTextResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PublicAPISetCommentTextResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -16990,15 +17172,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentsForUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentsForUserResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentsForUserResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17078,15 +17262,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentsPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentsResponseWithPresence_PublicComment_"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17341,15 +17527,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateCommentPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/SaveCommentsResponseWithPresence"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17422,15 +17610,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteCommentPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/PublicAPIDeleteCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17493,15 +17683,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CheckedCommentsForBlockedResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CheckBlockedCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CheckBlockedCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17549,15 +17741,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "VoteCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17638,15 +17832,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteCommentVoteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteDeleteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteDeleteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17725,15 +17921,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentVoteUserNamesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCommentVoteUserNamesSuccessResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCommentVoteUserNamesSuccessResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17789,15 +17987,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PinCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ChangeCommentPinStatusResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ChangeCommentPinStatusResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17852,15 +18052,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UnPinCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ChangeCommentPinStatusResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ChangeCommentPinStatusResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17915,15 +18117,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "LockCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIError"
-										},
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -17978,15 +18182,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UnLockCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIError"
-										},
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -18041,15 +18247,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "BlockFromCommentPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BlockSuccess"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BlockSuccess"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -18104,15 +18312,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UnBlockCommentPublicResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/UnblockSuccess"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/UnblockSuccess"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -18920,15 +19130,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetVotesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetVotesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetVotesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -18966,15 +19178,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateVoteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19042,15 +19256,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetVotesForUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetVotesForUserResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetVotesForUserResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19106,15 +19322,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteVoteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/VoteDeleteResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/VoteDeleteResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19162,15 +19380,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetUserResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetUserResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19210,15 +19430,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetUserBadgeResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetUserBadgeResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19256,15 +19478,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateUserBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptySuccessResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptySuccessResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19312,15 +19536,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteUserBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptySuccessResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptySuccessResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19360,15 +19586,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBadgesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetUserBadgesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetUserBadgesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19449,15 +19677,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateUserBadgeResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APICreateUserBadgeResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APICreateUserBadgeResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19499,15 +19729,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBadgeProgressByIdResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetUserBadgeProgressResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetUserBadgeProgressResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19547,15 +19779,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBadgeProgressListResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetUserBadgeProgressListResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetUserBadgeProgressListResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19613,15 +19847,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetUserBadgeProgressByUserIdResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetUserBadgeProgressResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetUserBadgeProgressResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19661,15 +19897,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTicketsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTicketsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTicketsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19734,15 +19972,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateTicketResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateTicketResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateTicketResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19792,15 +20032,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTicketResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTicketResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTicketResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19848,15 +20090,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ChangeTicketStateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/ChangeTicketStateResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/ChangeTicketStateResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19914,15 +20158,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -19960,15 +20206,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateTenantResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20016,15 +20264,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteTenantResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20072,15 +20322,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20127,15 +20379,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateTenantResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateTenantResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateTenantResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20177,15 +20431,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantUserResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantUserResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20223,15 +20479,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ReplaceTenantUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20287,15 +20545,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateTenantUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20351,15 +20611,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteTenantUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20415,15 +20677,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantUsersResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantUsersResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantUsersResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20462,15 +20726,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateTenantUserResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateTenantUserResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateTenantUserResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20512,15 +20778,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SendLoginLinkResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20568,15 +20836,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantPackageResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantPackageResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantPackageResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20614,15 +20884,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "ReplaceTenantPackageResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20670,15 +20942,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateTenantPackageResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20726,15 +21000,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteTenantPackageResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20774,15 +21050,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantPackagesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantPackagesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantPackagesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20821,15 +21099,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateTenantPackageResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateTenantPackageResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateTenantPackageResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20871,15 +21151,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetTenantDailyUsagesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetTenantDailyUsagesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetTenantDailyUsagesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20947,15 +21229,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetQuestionResultResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetQuestionResultResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetQuestionResultResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -20993,15 +21277,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateQuestionResultResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21049,15 +21335,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteQuestionResultResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21097,15 +21385,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetQuestionResultsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetQuestionResultsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetQuestionResultsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21184,15 +21474,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateQuestionResultResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateQuestionResultResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateQuestionResultResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21234,15 +21526,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "AggregateQuestionResultsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/AggregateQuestionResultsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/AggregateQuestionResultsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21326,15 +21620,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "BulkAggregateQuestionResultsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BulkAggregateQuestionResultsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BulkAggregateQuestionResultsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21384,15 +21680,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CombineCommentsWithQuestionResultsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CombineQuestionResultsWithCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CombineQuestionResultsWithCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21495,15 +21793,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetQuestionConfigResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetQuestionConfigResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetQuestionConfigResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21541,15 +21841,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateQuestionConfigResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21597,15 +21899,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteQuestionConfigResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21645,15 +21949,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetQuestionConfigsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetQuestionConfigsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetQuestionConfigsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21692,15 +21998,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateQuestionConfigResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateQuestionConfigResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateQuestionConfigResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21742,15 +22050,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetPendingWebhookEventsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetPendingWebhookEventsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetPendingWebhookEventsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21840,15 +22150,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetPendingWebhookEventCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetPendingWebhookEventCountResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetPendingWebhookEventCountResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21929,15 +22241,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeletePendingWebhookEventResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -21977,15 +22291,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetNotificationsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetNotificationsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetNotificationsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22066,15 +22382,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetNotificationCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetNotificationCountResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetNotificationCountResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22146,15 +22464,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateNotificationResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22212,15 +22532,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCachedNotificationCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetCachedNotificationCountResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetCachedNotificationCountResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22258,15 +22580,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteNotificationCountResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22306,15 +22630,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetModeratorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetModeratorResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetModeratorResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22352,15 +22678,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateModeratorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22408,15 +22736,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteModeratorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22464,15 +22794,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetModeratorsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetModeratorsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetModeratorsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22511,15 +22843,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateModeratorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateModeratorResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateModeratorResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22561,15 +22895,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SendInviteResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22617,15 +22953,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetHashTagsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetHashTagsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetHashTagsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22664,15 +23002,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "AddHashTagResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateHashTagResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateHashTagResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22714,15 +23054,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "AddHashTagsBulkResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BulkCreateHashTagsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BulkCreateHashTagsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22764,15 +23106,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PatchHashTagResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/UpdateHashTagResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/UpdateHashTagResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22820,15 +23164,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteHashTagResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22884,15 +23230,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetFeedPostsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetFeedPostsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetFeedPostsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -22951,15 +23299,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateFeedPostResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateFeedPostsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateFeedPostsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23033,15 +23383,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateFeedPostResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23091,15 +23443,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetEmailTemplateDefinitionsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEmailTemplateDefinitionsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEmailTemplateDefinitionsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23131,15 +23485,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetEmailTemplateRenderErrorsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEmailTemplateRenderErrorsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEmailTemplateRenderErrorsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23188,15 +23544,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteEmailTemplateRenderErrorResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23244,15 +23602,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetEmailTemplateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEmailTemplateResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEmailTemplateResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23290,15 +23650,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateEmailTemplateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23346,15 +23708,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteEmailTemplateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23394,15 +23758,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetEmailTemplatesResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetEmailTemplatesResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetEmailTemplatesResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23441,15 +23807,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "CreateEmailTemplateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/CreateEmailTemplateResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/CreateEmailTemplateResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23491,15 +23859,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "RenderEmailTemplateResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/RenderEmailTemplateResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/RenderEmailTemplateResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -23954,15 +24324,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24000,15 +24372,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UpdateCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIEmptyResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIEmptyResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24080,15 +24454,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "DeleteCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/DeleteCommentResult"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/DeleteCommentResult"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24144,15 +24520,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetCommentsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APIGetCommentsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APIGetCommentsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24318,15 +24696,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "SaveCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/APISaveCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/APISaveCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24488,15 +24868,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "FlagCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/FlagCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/FlagCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24552,15 +24934,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UnFlagCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/FlagCommentResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/FlagCommentResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24616,15 +25000,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "BlockUserFromCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/BlockSuccess"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/BlockSuccess"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24690,15 +25076,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "UnBlockUserFromCommentResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/UnblockSuccess"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/UnblockSuccess"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}
@@ -24764,15 +25152,17 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "GetAuditLogsResponse",
-									"anyOf": [
-										{
-											"$ref": "#/components/schemas/GetAuditLogsResponse"
-										},
-										{
-											"$ref": "#/components/schemas/APIError"
-										}
-									]
+									"$ref": "#/components/schemas/GetAuditLogsResponse"
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/APIError"
 								}
 							}
 						}

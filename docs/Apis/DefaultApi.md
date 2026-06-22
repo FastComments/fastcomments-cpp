@@ -148,7 +148,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="addHashTag"></a>
 # **addHashTag**
-> AddHashTagResponse addHashTag(tenantId, CreateHashTagBody)
+> CreateHashTagResponse addHashTag(tenantId, CreateHashTagBody)
 
 
 
@@ -161,7 +161,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**AddHashTagResponse**](../Models/AddHashTagResponse.md)
+[**CreateHashTagResponse**](../Models/CreateHashTagResponse.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="addHashTagsBulk"></a>
 # **addHashTagsBulk**
-> AddHashTagsBulkResponse addHashTagsBulk(tenantId, BulkCreateHashTagsBody)
+> BulkCreateHashTagsResponse addHashTagsBulk(tenantId, BulkCreateHashTagsBody)
 
 
 
@@ -187,7 +187,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**AddHashTagsBulkResponse**](../Models/AddHashTagsBulkResponse.md)
+[**BulkCreateHashTagsResponse**](../Models/BulkCreateHashTagsResponse.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="aggregateQuestionResults"></a>
 # **aggregateQuestionResults**
-> AggregateQuestionResultsResponse_1 aggregateQuestionResults(tenantId, questionId, questionIds, urlId, timeBucket, startDate, forceRecalculate)
+> AggregateQuestionResultsResponse aggregateQuestionResults(tenantId, questionId, questionIds, urlId, timeBucket, startDate, forceRecalculate)
 
 
 
@@ -300,7 +300,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**AggregateQuestionResultsResponse_1**](../Models/AggregateQuestionResultsResponse_1.md)
+[**AggregateQuestionResultsResponse**](../Models/AggregateQuestionResultsResponse.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="blockUserFromComment"></a>
 # **blockUserFromComment**
-> BlockUserFromCommentResponse blockUserFromComment(tenantId, id, BlockFromCommentParams, userId, anonUserId)
+> BlockSuccess blockUserFromComment(tenantId, id, BlockFromCommentParams, userId, anonUserId)
 
 
 
@@ -329,7 +329,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**BlockUserFromCommentResponse**](../Models/BlockUserFromCommentResponse.md)
+[**BlockSuccess**](../Models/BlockSuccess.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="bulkAggregateQuestionResults"></a>
 # **bulkAggregateQuestionResults**
-> BulkAggregateQuestionResultsResponse_1 bulkAggregateQuestionResults(tenantId, BulkAggregateQuestionResultsRequest, forceRecalculate)
+> BulkAggregateQuestionResultsResponse bulkAggregateQuestionResults(tenantId, BulkAggregateQuestionResultsRequest, forceRecalculate)
 
 
 
@@ -356,7 +356,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**BulkAggregateQuestionResultsResponse_1**](../Models/BulkAggregateQuestionResultsResponse_1.md)
+[**BulkAggregateQuestionResultsResponse**](../Models/BulkAggregateQuestionResultsResponse.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="changeTicketState"></a>
 # **changeTicketState**
-> ChangeTicketStateResponse_1 changeTicketState(tenantId, userId, id, ChangeTicketStateBody)
+> ChangeTicketStateResponse changeTicketState(tenantId, userId, id, ChangeTicketStateBody)
 
 
 
@@ -384,7 +384,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**ChangeTicketStateResponse_1**](../Models/ChangeTicketStateResponse_1.md)
+[**ChangeTicketStateResponse**](../Models/ChangeTicketStateResponse.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="combineCommentsWithQuestionResults"></a>
 # **combineCommentsWithQuestionResults**
-> CombineCommentsWithQuestionResultsResponse combineCommentsWithQuestionResults(tenantId, questionId, questionIds, urlId, startDate, forceRecalculate, minValue, maxValue, limit)
+> CombineQuestionResultsWithCommentsResponse combineCommentsWithQuestionResults(tenantId, questionId, questionIds, urlId, startDate, forceRecalculate, minValue, maxValue, limit)
 
 
 
@@ -417,7 +417,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CombineCommentsWithQuestionResultsResponse**](../Models/CombineCommentsWithQuestionResultsResponse.md)
+[**CombineQuestionResultsWithCommentsResponse**](../Models/CombineQuestionResultsWithCommentsResponse.md)
 
 ### Authorization
 
@@ -430,7 +430,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createEmailTemplate"></a>
 # **createEmailTemplate**
-> CreateEmailTemplateResponse_1 createEmailTemplate(tenantId, CreateEmailTemplateBody)
+> CreateEmailTemplateResponse createEmailTemplate(tenantId, CreateEmailTemplateBody)
 
 
 
@@ -443,7 +443,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateEmailTemplateResponse_1**](../Models/CreateEmailTemplateResponse_1.md)
+[**CreateEmailTemplateResponse**](../Models/CreateEmailTemplateResponse.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createFeedPost"></a>
 # **createFeedPost**
-> CreateFeedPostResponse_1 createFeedPost(tenantId, CreateFeedPostParams, broadcastId, isLive, doSpamCheck, skipDupCheck)
+> CreateFeedPostsResponse createFeedPost(tenantId, CreateFeedPostParams, broadcastId, isLive, doSpamCheck, skipDupCheck)
 
 
 
@@ -473,7 +473,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateFeedPostResponse_1**](../Models/CreateFeedPostResponse_1.md)
+[**CreateFeedPostsResponse**](../Models/CreateFeedPostsResponse.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createModerator"></a>
 # **createModerator**
-> CreateModeratorResponse_1 createModerator(tenantId, CreateModeratorBody)
+> CreateModeratorResponse createModerator(tenantId, CreateModeratorBody)
 
 
 
@@ -499,7 +499,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateModeratorResponse_1**](../Models/CreateModeratorResponse_1.md)
+[**CreateModeratorResponse**](../Models/CreateModeratorResponse.md)
 
 ### Authorization
 
@@ -512,7 +512,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createQuestionConfig"></a>
 # **createQuestionConfig**
-> CreateQuestionConfigResponse_1 createQuestionConfig(tenantId, CreateQuestionConfigBody)
+> CreateQuestionConfigResponse createQuestionConfig(tenantId, CreateQuestionConfigBody)
 
 
 
@@ -525,7 +525,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateQuestionConfigResponse_1**](../Models/CreateQuestionConfigResponse_1.md)
+[**CreateQuestionConfigResponse**](../Models/CreateQuestionConfigResponse.md)
 
 ### Authorization
 
@@ -538,7 +538,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createQuestionResult"></a>
 # **createQuestionResult**
-> CreateQuestionResultResponse_1 createQuestionResult(tenantId, CreateQuestionResultBody)
+> CreateQuestionResultResponse createQuestionResult(tenantId, CreateQuestionResultBody)
 
 
 
@@ -551,7 +551,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateQuestionResultResponse_1**](../Models/CreateQuestionResultResponse_1.md)
+[**CreateQuestionResultResponse**](../Models/CreateQuestionResultResponse.md)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createTenant"></a>
 # **createTenant**
-> CreateTenantResponse_1 createTenant(tenantId, CreateTenantBody)
+> CreateTenantResponse createTenant(tenantId, CreateTenantBody)
 
 
 
@@ -603,7 +603,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateTenantResponse_1**](../Models/CreateTenantResponse_1.md)
+[**CreateTenantResponse**](../Models/CreateTenantResponse.md)
 
 ### Authorization
 
@@ -616,7 +616,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createTenantPackage"></a>
 # **createTenantPackage**
-> CreateTenantPackageResponse_1 createTenantPackage(tenantId, CreateTenantPackageBody)
+> CreateTenantPackageResponse createTenantPackage(tenantId, CreateTenantPackageBody)
 
 
 
@@ -629,7 +629,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateTenantPackageResponse_1**](../Models/CreateTenantPackageResponse_1.md)
+[**CreateTenantPackageResponse**](../Models/CreateTenantPackageResponse.md)
 
 ### Authorization
 
@@ -642,7 +642,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createTenantUser"></a>
 # **createTenantUser**
-> CreateTenantUserResponse_1 createTenantUser(tenantId, CreateTenantUserBody)
+> CreateTenantUserResponse createTenantUser(tenantId, CreateTenantUserBody)
 
 
 
@@ -655,7 +655,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateTenantUserResponse_1**](../Models/CreateTenantUserResponse_1.md)
+[**CreateTenantUserResponse**](../Models/CreateTenantUserResponse.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createTicket"></a>
 # **createTicket**
-> CreateTicketResponse_1 createTicket(tenantId, userId, CreateTicketBody)
+> CreateTicketResponse createTicket(tenantId, userId, CreateTicketBody)
 
 
 
@@ -682,7 +682,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateTicketResponse_1**](../Models/CreateTicketResponse_1.md)
+[**CreateTicketResponse**](../Models/CreateTicketResponse.md)
 
 ### Authorization
 
@@ -695,7 +695,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createUserBadge"></a>
 # **createUserBadge**
-> CreateUserBadgeResponse createUserBadge(tenantId, CreateUserBadgeParams)
+> APICreateUserBadgeResponse createUserBadge(tenantId, CreateUserBadgeParams)
 
 
 
@@ -708,7 +708,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateUserBadgeResponse**](../Models/CreateUserBadgeResponse.md)
+[**APICreateUserBadgeResponse**](../Models/APICreateUserBadgeResponse.md)
 
 ### Authorization
 
@@ -721,7 +721,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="createVote"></a>
 # **createVote**
-> CreateVoteResponse createVote(tenantId, commentId, direction, userId, anonUserId)
+> VoteResponse createVote(tenantId, commentId, direction, userId, anonUserId)
 
 
 
@@ -737,7 +737,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**CreateVoteResponse**](../Models/CreateVoteResponse.md)
+[**VoteResponse**](../Models/VoteResponse.md)
 
 ### Authorization
 
@@ -750,7 +750,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteComment"></a>
 # **deleteComment**
-> DeleteCommentResponse deleteComment(tenantId, id, contextUserId, isLive)
+> DeleteCommentResult deleteComment(tenantId, id, contextUserId, isLive)
 
 
 
@@ -765,7 +765,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteCommentResponse**](../Models/DeleteCommentResponse.md)
+[**DeleteCommentResult**](../Models/DeleteCommentResult.md)
 
 ### Authorization
 
@@ -804,7 +804,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteEmailTemplate"></a>
 # **deleteEmailTemplate**
-> DeleteEmailTemplateResponse deleteEmailTemplate(tenantId, id)
+> APIEmptyResponse deleteEmailTemplate(tenantId, id)
 
 
 
@@ -817,7 +817,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteEmailTemplateResponse**](../Models/DeleteEmailTemplateResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -830,7 +830,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteEmailTemplateRenderError"></a>
 # **deleteEmailTemplateRenderError**
-> DeleteEmailTemplateRenderErrorResponse deleteEmailTemplateRenderError(tenantId, id, errorId)
+> APIEmptyResponse deleteEmailTemplateRenderError(tenantId, id, errorId)
 
 
 
@@ -844,7 +844,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteEmailTemplateRenderErrorResponse**](../Models/DeleteEmailTemplateRenderErrorResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -857,7 +857,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteHashTag"></a>
 # **deleteHashTag**
-> DeleteHashTagResponse deleteHashTag(tag, tenantId, DeleteHashTagRequestBody)
+> APIEmptyResponse deleteHashTag(tag, tenantId, DeleteHashTagRequestBody)
 
 
 
@@ -871,7 +871,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteHashTagResponse**](../Models/DeleteHashTagResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -884,7 +884,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteModerator"></a>
 # **deleteModerator**
-> DeleteModeratorResponse deleteModerator(tenantId, id, sendEmail)
+> APIEmptyResponse deleteModerator(tenantId, id, sendEmail)
 
 
 
@@ -898,7 +898,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteModeratorResponse**](../Models/DeleteModeratorResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -911,7 +911,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteNotificationCount"></a>
 # **deleteNotificationCount**
-> DeleteNotificationCountResponse deleteNotificationCount(tenantId, id)
+> APIEmptyResponse deleteNotificationCount(tenantId, id)
 
 
 
@@ -924,7 +924,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteNotificationCountResponse**](../Models/DeleteNotificationCountResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -963,7 +963,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deletePendingWebhookEvent"></a>
 # **deletePendingWebhookEvent**
-> DeletePendingWebhookEventResponse deletePendingWebhookEvent(tenantId, id)
+> APIEmptyResponse deletePendingWebhookEvent(tenantId, id)
 
 
 
@@ -976,7 +976,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeletePendingWebhookEventResponse**](../Models/DeletePendingWebhookEventResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -989,7 +989,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteQuestionConfig"></a>
 # **deleteQuestionConfig**
-> DeleteQuestionConfigResponse deleteQuestionConfig(tenantId, id)
+> APIEmptyResponse deleteQuestionConfig(tenantId, id)
 
 
 
@@ -1002,7 +1002,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteQuestionConfigResponse**](../Models/DeleteQuestionConfigResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -1015,7 +1015,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteQuestionResult"></a>
 # **deleteQuestionResult**
-> DeleteQuestionResultResponse deleteQuestionResult(tenantId, id)
+> APIEmptyResponse deleteQuestionResult(tenantId, id)
 
 
 
@@ -1028,7 +1028,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteQuestionResultResponse**](../Models/DeleteQuestionResultResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -1096,7 +1096,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteTenant"></a>
 # **deleteTenant**
-> DeleteTenantResponse deleteTenant(tenantId, id, sure)
+> APIEmptyResponse deleteTenant(tenantId, id, sure)
 
 
 
@@ -1110,7 +1110,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteTenantResponse**](../Models/DeleteTenantResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -1123,7 +1123,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteTenantPackage"></a>
 # **deleteTenantPackage**
-> DeleteTenantPackageResponse deleteTenantPackage(tenantId, id)
+> APIEmptyResponse deleteTenantPackage(tenantId, id)
 
 
 
@@ -1136,7 +1136,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteTenantPackageResponse**](../Models/DeleteTenantPackageResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -1149,7 +1149,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteTenantUser"></a>
 # **deleteTenantUser**
-> DeleteTenantUserResponse deleteTenantUser(tenantId, id, deleteComments, commentDeleteMode)
+> APIEmptyResponse deleteTenantUser(tenantId, id, deleteComments, commentDeleteMode)
 
 
 
@@ -1164,7 +1164,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteTenantUserResponse**](../Models/DeleteTenantUserResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -1177,7 +1177,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteUserBadge"></a>
 # **deleteUserBadge**
-> DeleteUserBadgeResponse deleteUserBadge(tenantId, id)
+> APIEmptySuccessResponse deleteUserBadge(tenantId, id)
 
 
 
@@ -1190,7 +1190,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteUserBadgeResponse**](../Models/DeleteUserBadgeResponse.md)
+[**APIEmptySuccessResponse**](../Models/APIEmptySuccessResponse.md)
 
 ### Authorization
 
@@ -1203,7 +1203,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteVote"></a>
 # **deleteVote**
-> DeleteVoteResponse deleteVote(tenantId, id, editKey)
+> VoteDeleteResponse deleteVote(tenantId, id, editKey)
 
 
 
@@ -1217,7 +1217,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**DeleteVoteResponse**](../Models/DeleteVoteResponse.md)
+[**VoteDeleteResponse**](../Models/VoteDeleteResponse.md)
 
 ### Authorization
 
@@ -1230,7 +1230,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="flagComment"></a>
 # **flagComment**
-> FlagCommentResponse_1 flagComment(tenantId, id, userId, anonUserId)
+> FlagCommentResponse flagComment(tenantId, id, userId, anonUserId)
 
 
 
@@ -1245,7 +1245,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**FlagCommentResponse_1**](../Models/FlagCommentResponse_1.md)
+[**FlagCommentResponse**](../Models/FlagCommentResponse.md)
 
 ### Authorization
 
@@ -1258,7 +1258,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getAuditLogs"></a>
 # **getAuditLogs**
-> GetAuditLogsResponse_1 getAuditLogs(tenantId, limit, skip, order, after, before)
+> GetAuditLogsResponse getAuditLogs(tenantId, limit, skip, order, after, before)
 
 
 
@@ -1275,7 +1275,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetAuditLogsResponse_1**](../Models/GetAuditLogsResponse_1.md)
+[**GetAuditLogsResponse**](../Models/GetAuditLogsResponse.md)
 
 ### Authorization
 
@@ -1288,7 +1288,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getCachedNotificationCount"></a>
 # **getCachedNotificationCount**
-> GetCachedNotificationCountResponse_1 getCachedNotificationCount(tenantId, id)
+> GetCachedNotificationCountResponse getCachedNotificationCount(tenantId, id)
 
 
 
@@ -1301,7 +1301,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetCachedNotificationCountResponse_1**](../Models/GetCachedNotificationCountResponse_1.md)
+[**GetCachedNotificationCountResponse**](../Models/GetCachedNotificationCountResponse.md)
 
 ### Authorization
 
@@ -1314,7 +1314,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getComment"></a>
 # **getComment**
-> GetCommentResponse getComment(tenantId, id)
+> APIGetCommentResponse getComment(tenantId, id)
 
 
 
@@ -1327,7 +1327,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetCommentResponse**](../Models/GetCommentResponse.md)
+[**APIGetCommentResponse**](../Models/APIGetCommentResponse.md)
 
 ### Authorization
 
@@ -1340,7 +1340,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getComments"></a>
 # **getComments**
-> GetCommentsResponse getComments(tenantId, page, limit, skip, asTree, skipChildren, limitChildren, maxTreeDepth, urlId, userId, anonUserId, contextUserId, hashTag, parentId, direction, fromDate, toDate)
+> APIGetCommentsResponse getComments(tenantId, page, limit, skip, asTree, skipChildren, limitChildren, maxTreeDepth, urlId, userId, anonUserId, contextUserId, hashTag, parentId, direction, fromDate, toDate)
 
 
 
@@ -1368,7 +1368,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetCommentsResponse**](../Models/GetCommentsResponse.md)
+[**APIGetCommentsResponse**](../Models/APIGetCommentsResponse.md)
 
 ### Authorization
 
@@ -1432,7 +1432,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getEmailTemplate"></a>
 # **getEmailTemplate**
-> GetEmailTemplateResponse_1 getEmailTemplate(tenantId, id)
+> GetEmailTemplateResponse getEmailTemplate(tenantId, id)
 
 
 
@@ -1445,7 +1445,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetEmailTemplateResponse_1**](../Models/GetEmailTemplateResponse_1.md)
+[**GetEmailTemplateResponse**](../Models/GetEmailTemplateResponse.md)
 
 ### Authorization
 
@@ -1458,7 +1458,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getEmailTemplateDefinitions"></a>
 # **getEmailTemplateDefinitions**
-> GetEmailTemplateDefinitionsResponse_1 getEmailTemplateDefinitions(tenantId)
+> GetEmailTemplateDefinitionsResponse getEmailTemplateDefinitions(tenantId)
 
 
 
@@ -1470,7 +1470,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetEmailTemplateDefinitionsResponse_1**](../Models/GetEmailTemplateDefinitionsResponse_1.md)
+[**GetEmailTemplateDefinitionsResponse**](../Models/GetEmailTemplateDefinitionsResponse.md)
 
 ### Authorization
 
@@ -1483,7 +1483,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getEmailTemplateRenderErrors"></a>
 # **getEmailTemplateRenderErrors**
-> GetEmailTemplateRenderErrorsResponse_1 getEmailTemplateRenderErrors(tenantId, id, skip)
+> GetEmailTemplateRenderErrorsResponse getEmailTemplateRenderErrors(tenantId, id, skip)
 
 
 
@@ -1497,7 +1497,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetEmailTemplateRenderErrorsResponse_1**](../Models/GetEmailTemplateRenderErrorsResponse_1.md)
+[**GetEmailTemplateRenderErrorsResponse**](../Models/GetEmailTemplateRenderErrorsResponse.md)
 
 ### Authorization
 
@@ -1510,7 +1510,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getEmailTemplates"></a>
 # **getEmailTemplates**
-> GetEmailTemplatesResponse_1 getEmailTemplates(tenantId, skip)
+> GetEmailTemplatesResponse getEmailTemplates(tenantId, skip)
 
 
 
@@ -1523,7 +1523,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetEmailTemplatesResponse_1**](../Models/GetEmailTemplatesResponse_1.md)
+[**GetEmailTemplatesResponse**](../Models/GetEmailTemplatesResponse.md)
 
 ### Authorization
 
@@ -1536,7 +1536,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getFeedPosts"></a>
 # **getFeedPosts**
-> GetFeedPostsResponse_1 getFeedPosts(tenantId, afterId, limit, tags)
+> GetFeedPostsResponse getFeedPosts(tenantId, afterId, limit, tags)
 
 
 
@@ -1553,7 +1553,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetFeedPostsResponse_1**](../Models/GetFeedPostsResponse_1.md)
+[**GetFeedPostsResponse**](../Models/GetFeedPostsResponse.md)
 
 ### Authorization
 
@@ -1566,7 +1566,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getHashTags"></a>
 # **getHashTags**
-> GetHashTagsResponse_1 getHashTags(tenantId, page)
+> GetHashTagsResponse getHashTags(tenantId, page)
 
 
 
@@ -1579,7 +1579,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetHashTagsResponse_1**](../Models/GetHashTagsResponse_1.md)
+[**GetHashTagsResponse**](../Models/GetHashTagsResponse.md)
 
 ### Authorization
 
@@ -1592,7 +1592,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getModerator"></a>
 # **getModerator**
-> GetModeratorResponse_1 getModerator(tenantId, id)
+> GetModeratorResponse getModerator(tenantId, id)
 
 
 
@@ -1605,7 +1605,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetModeratorResponse_1**](../Models/GetModeratorResponse_1.md)
+[**GetModeratorResponse**](../Models/GetModeratorResponse.md)
 
 ### Authorization
 
@@ -1618,7 +1618,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getModerators"></a>
 # **getModerators**
-> GetModeratorsResponse_1 getModerators(tenantId, skip)
+> GetModeratorsResponse getModerators(tenantId, skip)
 
 
 
@@ -1631,7 +1631,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetModeratorsResponse_1**](../Models/GetModeratorsResponse_1.md)
+[**GetModeratorsResponse**](../Models/GetModeratorsResponse.md)
 
 ### Authorization
 
@@ -1644,7 +1644,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getNotificationCount"></a>
 # **getNotificationCount**
-> GetNotificationCountResponse_1 getNotificationCount(tenantId, userId, urlId, fromCommentId, viewed, type)
+> GetNotificationCountResponse getNotificationCount(tenantId, userId, urlId, fromCommentId, viewed, type)
 
 
 
@@ -1661,7 +1661,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetNotificationCountResponse_1**](../Models/GetNotificationCountResponse_1.md)
+[**GetNotificationCountResponse**](../Models/GetNotificationCountResponse.md)
 
 ### Authorization
 
@@ -1674,7 +1674,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getNotifications"></a>
 # **getNotifications**
-> GetNotificationsResponse_1 getNotifications(tenantId, userId, urlId, fromCommentId, viewed, type, skip)
+> GetNotificationsResponse getNotifications(tenantId, userId, urlId, fromCommentId, viewed, type, skip)
 
 
 
@@ -1692,7 +1692,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetNotificationsResponse_1**](../Models/GetNotificationsResponse_1.md)
+[**GetNotificationsResponse**](../Models/GetNotificationsResponse.md)
 
 ### Authorization
 
@@ -1756,7 +1756,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getPendingWebhookEventCount"></a>
 # **getPendingWebhookEventCount**
-> GetPendingWebhookEventCountResponse_1 getPendingWebhookEventCount(tenantId, commentId, externalId, eventType, type, domain, attemptCountGT)
+> GetPendingWebhookEventCountResponse getPendingWebhookEventCount(tenantId, commentId, externalId, eventType, type, domain, attemptCountGT)
 
 
 
@@ -1774,7 +1774,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetPendingWebhookEventCountResponse_1**](../Models/GetPendingWebhookEventCountResponse_1.md)
+[**GetPendingWebhookEventCountResponse**](../Models/GetPendingWebhookEventCountResponse.md)
 
 ### Authorization
 
@@ -1787,7 +1787,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getPendingWebhookEvents"></a>
 # **getPendingWebhookEvents**
-> GetPendingWebhookEventsResponse_1 getPendingWebhookEvents(tenantId, commentId, externalId, eventType, type, domain, attemptCountGT, skip)
+> GetPendingWebhookEventsResponse getPendingWebhookEvents(tenantId, commentId, externalId, eventType, type, domain, attemptCountGT, skip)
 
 
 
@@ -1806,7 +1806,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetPendingWebhookEventsResponse_1**](../Models/GetPendingWebhookEventsResponse_1.md)
+[**GetPendingWebhookEventsResponse**](../Models/GetPendingWebhookEventsResponse.md)
 
 ### Authorization
 
@@ -1819,7 +1819,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getQuestionConfig"></a>
 # **getQuestionConfig**
-> GetQuestionConfigResponse_1 getQuestionConfig(tenantId, id)
+> GetQuestionConfigResponse getQuestionConfig(tenantId, id)
 
 
 
@@ -1832,7 +1832,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetQuestionConfigResponse_1**](../Models/GetQuestionConfigResponse_1.md)
+[**GetQuestionConfigResponse**](../Models/GetQuestionConfigResponse.md)
 
 ### Authorization
 
@@ -1845,7 +1845,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getQuestionConfigs"></a>
 # **getQuestionConfigs**
-> GetQuestionConfigsResponse_1 getQuestionConfigs(tenantId, skip)
+> GetQuestionConfigsResponse getQuestionConfigs(tenantId, skip)
 
 
 
@@ -1858,7 +1858,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetQuestionConfigsResponse_1**](../Models/GetQuestionConfigsResponse_1.md)
+[**GetQuestionConfigsResponse**](../Models/GetQuestionConfigsResponse.md)
 
 ### Authorization
 
@@ -1871,7 +1871,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getQuestionResult"></a>
 # **getQuestionResult**
-> GetQuestionResultResponse_1 getQuestionResult(tenantId, id)
+> GetQuestionResultResponse getQuestionResult(tenantId, id)
 
 
 
@@ -1884,7 +1884,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetQuestionResultResponse_1**](../Models/GetQuestionResultResponse_1.md)
+[**GetQuestionResultResponse**](../Models/GetQuestionResultResponse.md)
 
 ### Authorization
 
@@ -1897,7 +1897,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getQuestionResults"></a>
 # **getQuestionResults**
-> GetQuestionResultsResponse_1 getQuestionResults(tenantId, urlId, userId, startDate, questionId, questionIds, skip)
+> GetQuestionResultsResponse getQuestionResults(tenantId, urlId, userId, startDate, questionId, questionIds, skip)
 
 
 
@@ -1915,7 +1915,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetQuestionResultsResponse_1**](../Models/GetQuestionResultsResponse_1.md)
+[**GetQuestionResultsResponse**](../Models/GetQuestionResultsResponse.md)
 
 ### Authorization
 
@@ -2032,7 +2032,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenant"></a>
 # **getTenant**
-> GetTenantResponse_1 getTenant(tenantId, id)
+> GetTenantResponse getTenant(tenantId, id)
 
 
 
@@ -2045,7 +2045,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantResponse_1**](../Models/GetTenantResponse_1.md)
+[**GetTenantResponse**](../Models/GetTenantResponse.md)
 
 ### Authorization
 
@@ -2058,7 +2058,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenantDailyUsages"></a>
 # **getTenantDailyUsages**
-> GetTenantDailyUsagesResponse_1 getTenantDailyUsages(tenantId, yearNumber, monthNumber, dayNumber, skip)
+> GetTenantDailyUsagesResponse getTenantDailyUsages(tenantId, yearNumber, monthNumber, dayNumber, skip)
 
 
 
@@ -2074,7 +2074,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantDailyUsagesResponse_1**](../Models/GetTenantDailyUsagesResponse_1.md)
+[**GetTenantDailyUsagesResponse**](../Models/GetTenantDailyUsagesResponse.md)
 
 ### Authorization
 
@@ -2087,7 +2087,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenantPackage"></a>
 # **getTenantPackage**
-> GetTenantPackageResponse_1 getTenantPackage(tenantId, id)
+> GetTenantPackageResponse getTenantPackage(tenantId, id)
 
 
 
@@ -2100,7 +2100,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantPackageResponse_1**](../Models/GetTenantPackageResponse_1.md)
+[**GetTenantPackageResponse**](../Models/GetTenantPackageResponse.md)
 
 ### Authorization
 
@@ -2113,7 +2113,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenantPackages"></a>
 # **getTenantPackages**
-> GetTenantPackagesResponse_1 getTenantPackages(tenantId, skip)
+> GetTenantPackagesResponse getTenantPackages(tenantId, skip)
 
 
 
@@ -2126,7 +2126,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantPackagesResponse_1**](../Models/GetTenantPackagesResponse_1.md)
+[**GetTenantPackagesResponse**](../Models/GetTenantPackagesResponse.md)
 
 ### Authorization
 
@@ -2139,7 +2139,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenantUser"></a>
 # **getTenantUser**
-> GetTenantUserResponse_1 getTenantUser(tenantId, id)
+> GetTenantUserResponse getTenantUser(tenantId, id)
 
 
 
@@ -2152,7 +2152,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantUserResponse_1**](../Models/GetTenantUserResponse_1.md)
+[**GetTenantUserResponse**](../Models/GetTenantUserResponse.md)
 
 ### Authorization
 
@@ -2165,7 +2165,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenantUsers"></a>
 # **getTenantUsers**
-> GetTenantUsersResponse_1 getTenantUsers(tenantId, skip)
+> GetTenantUsersResponse getTenantUsers(tenantId, skip)
 
 
 
@@ -2178,7 +2178,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantUsersResponse_1**](../Models/GetTenantUsersResponse_1.md)
+[**GetTenantUsersResponse**](../Models/GetTenantUsersResponse.md)
 
 ### Authorization
 
@@ -2191,7 +2191,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTenants"></a>
 # **getTenants**
-> GetTenantsResponse_1 getTenants(tenantId, meta, skip)
+> GetTenantsResponse getTenants(tenantId, meta, skip)
 
 
 
@@ -2205,7 +2205,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTenantsResponse_1**](../Models/GetTenantsResponse_1.md)
+[**GetTenantsResponse**](../Models/GetTenantsResponse.md)
 
 ### Authorization
 
@@ -2218,7 +2218,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTicket"></a>
 # **getTicket**
-> GetTicketResponse_1 getTicket(tenantId, id, userId)
+> GetTicketResponse getTicket(tenantId, id, userId)
 
 
 
@@ -2232,7 +2232,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTicketResponse_1**](../Models/GetTicketResponse_1.md)
+[**GetTicketResponse**](../Models/GetTicketResponse.md)
 
 ### Authorization
 
@@ -2245,7 +2245,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getTickets"></a>
 # **getTickets**
-> GetTicketsResponse_1 getTickets(tenantId, userId, state, skip, limit)
+> GetTicketsResponse getTickets(tenantId, userId, state, skip, limit)
 
 
 
@@ -2261,7 +2261,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetTicketsResponse_1**](../Models/GetTicketsResponse_1.md)
+[**GetTicketsResponse**](../Models/GetTicketsResponse.md)
 
 ### Authorization
 
@@ -2274,7 +2274,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUser"></a>
 # **getUser**
-> GetUserResponse_1 getUser(tenantId, id)
+> GetUserResponse getUser(tenantId, id)
 
 
 
@@ -2287,7 +2287,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserResponse_1**](../Models/GetUserResponse_1.md)
+[**GetUserResponse**](../Models/GetUserResponse.md)
 
 ### Authorization
 
@@ -2300,7 +2300,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUserBadge"></a>
 # **getUserBadge**
-> GetUserBadgeResponse getUserBadge(tenantId, id)
+> APIGetUserBadgeResponse getUserBadge(tenantId, id)
 
 
 
@@ -2313,7 +2313,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserBadgeResponse**](../Models/GetUserBadgeResponse.md)
+[**APIGetUserBadgeResponse**](../Models/APIGetUserBadgeResponse.md)
 
 ### Authorization
 
@@ -2326,7 +2326,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUserBadgeProgressById"></a>
 # **getUserBadgeProgressById**
-> GetUserBadgeProgressByIdResponse getUserBadgeProgressById(tenantId, id)
+> APIGetUserBadgeProgressResponse getUserBadgeProgressById(tenantId, id)
 
 
 
@@ -2339,7 +2339,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserBadgeProgressByIdResponse**](../Models/GetUserBadgeProgressByIdResponse.md)
+[**APIGetUserBadgeProgressResponse**](../Models/APIGetUserBadgeProgressResponse.md)
 
 ### Authorization
 
@@ -2352,7 +2352,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUserBadgeProgressByUserId"></a>
 # **getUserBadgeProgressByUserId**
-> GetUserBadgeProgressByUserIdResponse getUserBadgeProgressByUserId(tenantId, userId)
+> APIGetUserBadgeProgressResponse getUserBadgeProgressByUserId(tenantId, userId)
 
 
 
@@ -2365,7 +2365,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserBadgeProgressByUserIdResponse**](../Models/GetUserBadgeProgressByUserIdResponse.md)
+[**APIGetUserBadgeProgressResponse**](../Models/APIGetUserBadgeProgressResponse.md)
 
 ### Authorization
 
@@ -2378,7 +2378,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUserBadgeProgressList"></a>
 # **getUserBadgeProgressList**
-> GetUserBadgeProgressListResponse getUserBadgeProgressList(tenantId, userId, limit, skip)
+> APIGetUserBadgeProgressListResponse getUserBadgeProgressList(tenantId, userId, limit, skip)
 
 
 
@@ -2393,7 +2393,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserBadgeProgressListResponse**](../Models/GetUserBadgeProgressListResponse.md)
+[**APIGetUserBadgeProgressListResponse**](../Models/APIGetUserBadgeProgressListResponse.md)
 
 ### Authorization
 
@@ -2406,7 +2406,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getUserBadges"></a>
 # **getUserBadges**
-> GetUserBadgesResponse getUserBadges(tenantId, userId, badgeId, type, displayedOnComments, limit, skip)
+> APIGetUserBadgesResponse getUserBadges(tenantId, userId, badgeId, type, displayedOnComments, limit, skip)
 
 
 
@@ -2424,7 +2424,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetUserBadgesResponse**](../Models/GetUserBadgesResponse.md)
+[**APIGetUserBadgesResponse**](../Models/APIGetUserBadgesResponse.md)
 
 ### Authorization
 
@@ -2437,7 +2437,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getVotes"></a>
 # **getVotes**
-> GetVotesResponse_1 getVotes(tenantId, urlId)
+> GetVotesResponse getVotes(tenantId, urlId)
 
 
 
@@ -2450,7 +2450,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetVotesResponse_1**](../Models/GetVotesResponse_1.md)
+[**GetVotesResponse**](../Models/GetVotesResponse.md)
 
 ### Authorization
 
@@ -2463,7 +2463,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="getVotesForUser"></a>
 # **getVotesForUser**
-> GetVotesForUserResponse_1 getVotesForUser(tenantId, urlId, userId, anonUserId)
+> GetVotesForUserResponse getVotesForUser(tenantId, urlId, userId, anonUserId)
 
 
 
@@ -2478,7 +2478,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**GetVotesForUserResponse_1**](../Models/GetVotesForUserResponse_1.md)
+[**GetVotesForUserResponse**](../Models/GetVotesForUserResponse.md)
 
 ### Authorization
 
@@ -2518,7 +2518,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="patchHashTag"></a>
 # **patchHashTag**
-> PatchHashTagResponse patchHashTag(tag, tenantId, UpdateHashTagBody)
+> UpdateHashTagResponse patchHashTag(tag, tenantId, UpdateHashTagBody)
 
 
 
@@ -2532,7 +2532,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**PatchHashTagResponse**](../Models/PatchHashTagResponse.md)
+[**UpdateHashTagResponse**](../Models/UpdateHashTagResponse.md)
 
 ### Authorization
 
@@ -2655,7 +2655,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="renderEmailTemplate"></a>
 # **renderEmailTemplate**
-> RenderEmailTemplateResponse_1 renderEmailTemplate(tenantId, RenderEmailTemplateBody, locale)
+> RenderEmailTemplateResponse renderEmailTemplate(tenantId, RenderEmailTemplateBody, locale)
 
 
 
@@ -2669,7 +2669,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**RenderEmailTemplateResponse_1**](../Models/RenderEmailTemplateResponse_1.md)
+[**RenderEmailTemplateResponse**](../Models/RenderEmailTemplateResponse.md)
 
 ### Authorization
 
@@ -2682,7 +2682,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="replaceTenantPackage"></a>
 # **replaceTenantPackage**
-> ReplaceTenantPackageResponse replaceTenantPackage(tenantId, id, ReplaceTenantPackageBody)
+> APIEmptyResponse replaceTenantPackage(tenantId, id, ReplaceTenantPackageBody)
 
 
 
@@ -2696,7 +2696,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**ReplaceTenantPackageResponse**](../Models/ReplaceTenantPackageResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2709,7 +2709,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="replaceTenantUser"></a>
 # **replaceTenantUser**
-> ReplaceTenantUserResponse replaceTenantUser(tenantId, id, ReplaceTenantUserBody, updateComments)
+> APIEmptyResponse replaceTenantUser(tenantId, id, ReplaceTenantUserBody, updateComments)
 
 
 
@@ -2724,7 +2724,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**ReplaceTenantUserResponse**](../Models/ReplaceTenantUserResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2737,7 +2737,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="saveComment"></a>
 # **saveComment**
-> SaveCommentResponse saveComment(tenantId, CreateCommentParams, isLive, doSpamCheck, sendEmails, populateNotifications)
+> APISaveCommentResponse saveComment(tenantId, CreateCommentParams, isLive, doSpamCheck, sendEmails, populateNotifications)
 
 
 
@@ -2754,7 +2754,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**SaveCommentResponse**](../Models/SaveCommentResponse.md)
+[**APISaveCommentResponse**](../Models/APISaveCommentResponse.md)
 
 ### Authorization
 
@@ -2797,7 +2797,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="sendInvite"></a>
 # **sendInvite**
-> SendInviteResponse sendInvite(tenantId, id, fromName)
+> APIEmptyResponse sendInvite(tenantId, id, fromName)
 
 
 
@@ -2811,7 +2811,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**SendInviteResponse**](../Models/SendInviteResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2824,7 +2824,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="sendLoginLink"></a>
 # **sendLoginLink**
-> SendLoginLinkResponse sendLoginLink(tenantId, id, redirectURL)
+> APIEmptyResponse sendLoginLink(tenantId, id, redirectURL)
 
 
 
@@ -2838,7 +2838,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**SendLoginLinkResponse**](../Models/SendLoginLinkResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2851,7 +2851,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="unBlockUserFromComment"></a>
 # **unBlockUserFromComment**
-> UnBlockUserFromCommentResponse unBlockUserFromComment(tenantId, id, UnBlockFromCommentParams, userId, anonUserId)
+> UnblockSuccess unBlockUserFromComment(tenantId, id, UnBlockFromCommentParams, userId, anonUserId)
 
 
 
@@ -2867,7 +2867,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UnBlockUserFromCommentResponse**](../Models/UnBlockUserFromCommentResponse.md)
+[**UnblockSuccess**](../Models/UnblockSuccess.md)
 
 ### Authorization
 
@@ -2880,7 +2880,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="unFlagComment"></a>
 # **unFlagComment**
-> UnFlagCommentResponse unFlagComment(tenantId, id, userId, anonUserId)
+> FlagCommentResponse unFlagComment(tenantId, id, userId, anonUserId)
 
 
 
@@ -2895,7 +2895,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UnFlagCommentResponse**](../Models/UnFlagCommentResponse.md)
+[**FlagCommentResponse**](../Models/FlagCommentResponse.md)
 
 ### Authorization
 
@@ -2908,7 +2908,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateComment"></a>
 # **updateComment**
-> UpdateCommentResponse updateComment(tenantId, id, UpdatableCommentParams, contextUserId, doSpamCheck, isLive)
+> APIEmptyResponse updateComment(tenantId, id, UpdatableCommentParams, contextUserId, doSpamCheck, isLive)
 
 
 
@@ -2925,7 +2925,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateCommentResponse**](../Models/UpdateCommentResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2938,7 +2938,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateEmailTemplate"></a>
 # **updateEmailTemplate**
-> UpdateEmailTemplateResponse updateEmailTemplate(tenantId, id, UpdateEmailTemplateBody)
+> APIEmptyResponse updateEmailTemplate(tenantId, id, UpdateEmailTemplateBody)
 
 
 
@@ -2952,7 +2952,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateEmailTemplateResponse**](../Models/UpdateEmailTemplateResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2965,7 +2965,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateFeedPost"></a>
 # **updateFeedPost**
-> UpdateFeedPostResponse updateFeedPost(tenantId, id, FeedPost)
+> APIEmptyResponse updateFeedPost(tenantId, id, FeedPost)
 
 
 
@@ -2979,7 +2979,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateFeedPostResponse**](../Models/UpdateFeedPostResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -2992,7 +2992,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateModerator"></a>
 # **updateModerator**
-> UpdateModeratorResponse updateModerator(tenantId, id, UpdateModeratorBody)
+> APIEmptyResponse updateModerator(tenantId, id, UpdateModeratorBody)
 
 
 
@@ -3006,7 +3006,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateModeratorResponse**](../Models/UpdateModeratorResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3019,7 +3019,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateNotification"></a>
 # **updateNotification**
-> UpdateNotificationResponse updateNotification(tenantId, id, UpdateNotificationBody, userId)
+> APIEmptyResponse updateNotification(tenantId, id, UpdateNotificationBody, userId)
 
 
 
@@ -3034,7 +3034,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateNotificationResponse**](../Models/UpdateNotificationResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3047,7 +3047,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateQuestionConfig"></a>
 # **updateQuestionConfig**
-> UpdateQuestionConfigResponse updateQuestionConfig(tenantId, id, UpdateQuestionConfigBody)
+> APIEmptyResponse updateQuestionConfig(tenantId, id, UpdateQuestionConfigBody)
 
 
 
@@ -3061,7 +3061,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateQuestionConfigResponse**](../Models/UpdateQuestionConfigResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3074,7 +3074,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateQuestionResult"></a>
 # **updateQuestionResult**
-> UpdateQuestionResultResponse updateQuestionResult(tenantId, id, UpdateQuestionResultBody)
+> APIEmptyResponse updateQuestionResult(tenantId, id, UpdateQuestionResultBody)
 
 
 
@@ -3088,7 +3088,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateQuestionResultResponse**](../Models/UpdateQuestionResultResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3129,7 +3129,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateTenant"></a>
 # **updateTenant**
-> UpdateTenantResponse updateTenant(tenantId, id, UpdateTenantBody)
+> APIEmptyResponse updateTenant(tenantId, id, UpdateTenantBody)
 
 
 
@@ -3143,7 +3143,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateTenantResponse**](../Models/UpdateTenantResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3156,7 +3156,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateTenantPackage"></a>
 # **updateTenantPackage**
-> UpdateTenantPackageResponse updateTenantPackage(tenantId, id, UpdateTenantPackageBody)
+> APIEmptyResponse updateTenantPackage(tenantId, id, UpdateTenantPackageBody)
 
 
 
@@ -3170,7 +3170,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateTenantPackageResponse**](../Models/UpdateTenantPackageResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3183,7 +3183,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateTenantUser"></a>
 # **updateTenantUser**
-> UpdateTenantUserResponse updateTenantUser(tenantId, id, UpdateTenantUserBody, updateComments)
+> APIEmptyResponse updateTenantUser(tenantId, id, UpdateTenantUserBody, updateComments)
 
 
 
@@ -3198,7 +3198,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateTenantUserResponse**](../Models/UpdateTenantUserResponse.md)
+[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
 
 ### Authorization
 
@@ -3211,7 +3211,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="updateUserBadge"></a>
 # **updateUserBadge**
-> UpdateUserBadgeResponse updateUserBadge(tenantId, id, UpdateUserBadgeParams)
+> APIEmptySuccessResponse updateUserBadge(tenantId, id, UpdateUserBadgeParams)
 
 
 
@@ -3225,7 +3225,7 @@ All URIs are relative to *https://fastcomments.com*
 
 ### Return type
 
-[**UpdateUserBadgeResponse**](../Models/UpdateUserBadgeResponse.md)
+[**APIEmptySuccessResponse**](../Models/APIEmptySuccessResponse.md)
 
 ### Authorization
 

@@ -24,68 +24,58 @@
 
 #include "FastCommentsClient/model/APIEmptyResponse.h"
 #include "FastCommentsClient/model/APIError.h"
-#include "FastCommentsClient/model/BlockFromCommentPublicResponse.h"
-#include "FastCommentsClient/model/CheckedCommentsForBlockedResponse.h"
+#include "FastCommentsClient/model/BlockSuccess.h"
+#include "FastCommentsClient/model/ChangeCommentPinStatusResponse.h"
+#include "FastCommentsClient/model/CheckBlockedCommentsResponse.h"
 #include "FastCommentsClient/model/CommentData.h"
 #include "FastCommentsClient/model/CommentTextUpdateRequest.h"
-#include "FastCommentsClient/model/CreateCommentPublicResponse.h"
 #include "FastCommentsClient/model/CreateFeedPostParams.h"
-#include "FastCommentsClient/model/CreateFeedPostPublicResponse.h"
-#include "FastCommentsClient/model/CreateV1PageReactResponse.h"
-#include "FastCommentsClient/model/CreateV2PageReactResponse.h"
-#include "FastCommentsClient/model/DeleteCommentPublicResponse.h"
-#include "FastCommentsClient/model/DeleteCommentVoteResponse.h"
+#include "FastCommentsClient/model/CreateFeedPostResponse.h"
+#include "FastCommentsClient/model/CreateV1PageReact.h"
 #include "FastCommentsClient/model/DeleteFeedPostPublicResponse.h"
-#include "FastCommentsClient/model/DeleteV1PageReactResponse.h"
-#include "FastCommentsClient/model/DeleteV2PageReactResponse.h"
-#include "FastCommentsClient/model/FlagCommentPublicResponse.h"
-#include "FastCommentsClient/model/GetCommentTextResponse_1.h"
-#include "FastCommentsClient/model/GetCommentVoteUserNamesResponse.h"
-#include "FastCommentsClient/model/GetCommentsForUserResponse_1.h"
-#include "FastCommentsClient/model/GetCommentsPublicResponse.h"
-#include "FastCommentsClient/model/GetEventLogResponse_1.h"
-#include "FastCommentsClient/model/GetFeedPostsPublicResponse.h"
-#include "FastCommentsClient/model/GetFeedPostsStatsResponse.h"
-#include "FastCommentsClient/model/GetGifLargeResponse.h"
+#include "FastCommentsClient/model/FeedPostsStatsResponse.h"
+#include "FastCommentsClient/model/GetCommentVoteUserNamesSuccessResponse.h"
+#include "FastCommentsClient/model/GetCommentsForUserResponse.h"
+#include "FastCommentsClient/model/GetCommentsResponseWithPresence_PublicComment_.h"
+#include "FastCommentsClient/model/GetEventLogResponse.h"
 #include "FastCommentsClient/model/GetGifsSearchResponse.h"
 #include "FastCommentsClient/model/GetGifsTrendingResponse.h"
-#include "FastCommentsClient/model/GetGlobalEventLogResponse.h"
-#include "FastCommentsClient/model/GetOfflineUsersResponse.h"
-#include "FastCommentsClient/model/GetOnlineUsersResponse.h"
-#include "FastCommentsClient/model/GetPagesPublicResponse.h"
-#include "FastCommentsClient/model/GetTranslationsResponse_1.h"
-#include "FastCommentsClient/model/GetUserNotificationCountResponse_1.h"
-#include "FastCommentsClient/model/GetUserNotificationsResponse.h"
-#include "FastCommentsClient/model/GetUserPresenceStatusesResponse_1.h"
-#include "FastCommentsClient/model/GetUserReactsPublicResponse.h"
-#include "FastCommentsClient/model/GetUsersInfoResponse.h"
-#include "FastCommentsClient/model/GetV1PageLikesResponse.h"
-#include "FastCommentsClient/model/GetV2PageReactUsersResponse_1.h"
-#include "FastCommentsClient/model/GetV2PageReactsResponse.h"
+#include "FastCommentsClient/model/GetMyNotificationsResponse.h"
+#include "FastCommentsClient/model/GetPublicPagesResponse.h"
+#include "FastCommentsClient/model/GetTranslationsResponse.h"
+#include "FastCommentsClient/model/GetUserNotificationCountResponse.h"
+#include "FastCommentsClient/model/GetUserPresenceStatusesResponse.h"
+#include "FastCommentsClient/model/GetV1PageLikes.h"
+#include "FastCommentsClient/model/GetV2PageReactUsersResponse.h"
+#include "FastCommentsClient/model/GetV2PageReacts.h"
+#include "FastCommentsClient/model/GifGetLargeResponse.h"
 #include "FastCommentsClient/HttpContent.h"
-#include "FastCommentsClient/model/LockCommentResponse.h"
+#include "FastCommentsClient/model/PageUsersInfoResponse.h"
+#include "FastCommentsClient/model/PageUsersOfflineResponse.h"
+#include "FastCommentsClient/model/PageUsersOnlineResponse.h"
 #include "FastCommentsClient/model/PagesSortBy.h"
-#include "FastCommentsClient/model/PinCommentResponse.h"
+#include "FastCommentsClient/model/PublicAPIDeleteCommentResponse.h"
+#include "FastCommentsClient/model/PublicAPIGetCommentTextResponse.h"
+#include "FastCommentsClient/model/PublicAPISetCommentTextResponse.h"
 #include "FastCommentsClient/model/PublicBlockFromCommentParams.h"
+#include "FastCommentsClient/model/PublicFeedPostsResponse.h"
 #include "FastCommentsClient/model/ReactBodyParams.h"
-#include "FastCommentsClient/model/ReactFeedPostPublicResponse.h"
-#include "FastCommentsClient/model/ResetUserNotificationCountResponse.h"
-#include "FastCommentsClient/model/ResetUserNotificationsResponse_1.h"
-#include "FastCommentsClient/model/SearchUsersResponse_1.h"
-#include "FastCommentsClient/model/SetCommentTextResponse_1.h"
+#include "FastCommentsClient/model/ReactFeedPostResponse.h"
+#include "FastCommentsClient/model/ResetUserNotificationsResponse.h"
+#include "FastCommentsClient/model/SaveCommentsResponseWithPresence.h"
+#include "FastCommentsClient/model/SearchUsersResult.h"
 #include "FastCommentsClient/model/SizePreset.h"
 #include "FastCommentsClient/model/SortDirections.h"
-#include "FastCommentsClient/model/UnBlockCommentPublicResponse.h"
-#include "FastCommentsClient/model/UnLockCommentResponse.h"
-#include "FastCommentsClient/model/UnPinCommentResponse.h"
+#include "FastCommentsClient/model/UnblockSuccess.h"
 #include "FastCommentsClient/model/UpdateFeedPostParams.h"
-#include "FastCommentsClient/model/UpdateFeedPostPublicResponse.h"
 #include "FastCommentsClient/model/UpdateUserNotificationCommentSubscriptionStatusResponse.h"
 #include "FastCommentsClient/model/UpdateUserNotificationPageSubscriptionStatusResponse.h"
 #include "FastCommentsClient/model/UpdateUserNotificationStatusResponse.h"
 #include "FastCommentsClient/model/UploadImageResponse.h"
+#include "FastCommentsClient/model/UserReactsResponse.h"
 #include "FastCommentsClient/model/VoteBodyParams.h"
-#include "FastCommentsClient/model/VoteCommentResponse.h"
+#include "FastCommentsClient/model/VoteDeleteResponse.h"
+#include "FastCommentsClient/model/VoteResponse.h"
 #include <vector>
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
@@ -117,7 +107,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="publicBlockFromCommentParams"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<BlockFromCommentPublicResponse>> blockFromCommentPublic(
+    pplx::task<std::shared_ptr<BlockSuccess>> blockFromCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams,
@@ -132,7 +122,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="commentIds">A comma separated list of comment ids.</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CheckedCommentsForBlockedResponse>> checkedCommentsForBlocked(
+    pplx::task<std::shared_ptr<CheckBlockedCommentsResponse>> checkedCommentsForBlocked(
         utility::string_t tenantId,
         utility::string_t commentIds,
         boost::optional<utility::string_t> sso
@@ -149,7 +139,7 @@ public:
     /// <param name="commentData"></param>
     /// <param name="sessionId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateCommentPublicResponse>> createCommentPublic(
+    pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> createCommentPublic(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t broadcastId,
@@ -167,7 +157,7 @@ public:
     /// <param name="createFeedPostParams"></param>
     /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateFeedPostPublicResponse>> createFeedPostPublic(
+    pplx::task<std::shared_ptr<CreateFeedPostResponse>> createFeedPostPublic(
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams,
         boost::optional<utility::string_t> broadcastId,
@@ -182,7 +172,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
     /// <param name="title"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateV1PageReactResponse>> createV1PageReact(
+    pplx::task<std::shared_ptr<CreateV1PageReact>> createV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> title
@@ -197,7 +187,7 @@ public:
     /// <param name="urlId"></param>
     /// <param name="id"></param>
     /// <param name="title"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<CreateV2PageReactResponse>> createV2PageReact(
+    pplx::task<std::shared_ptr<CreateV1PageReact>> createV2PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id,
@@ -214,7 +204,7 @@ public:
     /// <param name="broadcastId"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteCommentPublicResponse>> deleteCommentPublic(
+    pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> deleteCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -234,7 +224,7 @@ public:
     /// <param name="broadcastId"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<DeleteCommentVoteResponse>> deleteCommentVote(
+    pplx::task<std::shared_ptr<VoteDeleteResponse>> deleteCommentVote(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t voteId,
@@ -267,7 +257,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
-    pplx::task<std::shared_ptr<DeleteV1PageReactResponse>> deleteV1PageReact(
+    pplx::task<std::shared_ptr<CreateV1PageReact>> deleteV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
     ) const;
@@ -280,7 +270,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<DeleteV2PageReactResponse>> deleteV2PageReact(
+    pplx::task<std::shared_ptr<CreateV1PageReact>> deleteV2PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
@@ -295,7 +285,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="isFlagged"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<FlagCommentPublicResponse>> flagCommentPublic(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> flagCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         bool isFlagged,
@@ -311,7 +301,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetCommentTextResponse_1>> getCommentText(
+    pplx::task<std::shared_ptr<PublicAPIGetCommentTextResponse>> getCommentText(
         utility::string_t tenantId,
         utility::string_t commentId,
         boost::optional<utility::string_t> editKey,
@@ -327,7 +317,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="dir"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetCommentVoteUserNamesResponse>> getCommentVoteUserNames(
+    pplx::task<std::shared_ptr<GetCommentVoteUserNamesSuccessResponse>> getCommentVoteUserNames(
         utility::string_t tenantId,
         utility::string_t commentId,
         int32_t dir,
@@ -346,7 +336,7 @@ public:
     /// <param name="includei10n"> (optional, default to false)</param>
     /// <param name="locale"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="isCrawler"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<GetCommentsForUserResponse_1>> getCommentsForUser(
+    pplx::task<std::shared_ptr<GetCommentsForUserResponse>> getCommentsForUser(
         boost::optional<utility::string_t> userId,
         boost::optional<std::shared_ptr<SortDirections>> direction,
         boost::optional<utility::string_t> repliesToUserId,
@@ -389,7 +379,7 @@ public:
     /// <param name="customConfigStr"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="afterCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="beforeCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetCommentsPublicResponse>> getCommentsPublic(
+    pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> getCommentsPublic(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<int32_t> page,
@@ -430,7 +420,7 @@ public:
     /// <param name="userIdWS"></param>
     /// <param name="startTime"></param>
     /// <param name="endTime"> (optional, default to 0L)</param>
-    pplx::task<std::shared_ptr<GetEventLogResponse_1>> getEventLog(
+    pplx::task<std::shared_ptr<GetEventLogResponse>> getEventLog(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t userIdWS,
@@ -450,7 +440,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="isCrawler"> (optional, default to false)</param>
     /// <param name="includeUserInfo"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<GetFeedPostsPublicResponse>> getFeedPostsPublic(
+    pplx::task<std::shared_ptr<PublicFeedPostsResponse>> getFeedPostsPublic(
         utility::string_t tenantId,
         boost::optional<utility::string_t> afterId,
         boost::optional<int32_t> limit,
@@ -468,7 +458,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="postIds"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetFeedPostsStatsResponse>> getFeedPostsStats(
+    pplx::task<std::shared_ptr<FeedPostsStatsResponse>> getFeedPostsStats(
         utility::string_t tenantId,
         std::vector<utility::string_t> postIds,
         boost::optional<utility::string_t> sso
@@ -481,7 +471,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="largeInternalURLSanitized"></param>
-    pplx::task<std::shared_ptr<GetGifLargeResponse>> getGifLarge(
+    pplx::task<std::shared_ptr<GifGetLargeResponse>> getGifLarge(
         utility::string_t tenantId,
         utility::string_t largeInternalURLSanitized
     ) const;
@@ -530,7 +520,7 @@ public:
     /// <param name="userIdWS"></param>
     /// <param name="startTime"></param>
     /// <param name="endTime"> (optional, default to 0L)</param>
-    pplx::task<std::shared_ptr<GetGlobalEventLogResponse>> getGlobalEventLog(
+    pplx::task<std::shared_ptr<GetEventLogResponse>> getGlobalEventLog(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t userIdWS,
@@ -547,7 +537,7 @@ public:
     /// <param name="urlId">Page URL identifier (cleaned server-side).</param>
     /// <param name="afterName">Cursor: pass nextAfterName from the previous response. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="afterUserId">Cursor tiebreaker: pass nextAfterUserId from the previous response. Required when afterName is set so name-ties don&#39;t drop entries. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetOfflineUsersResponse>> getOfflineUsers(
+    pplx::task<std::shared_ptr<PageUsersOfflineResponse>> getOfflineUsers(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> afterName,
@@ -563,7 +553,7 @@ public:
     /// <param name="urlId">Page URL identifier (cleaned server-side).</param>
     /// <param name="afterName">Cursor: pass nextAfterName from the previous response. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="afterUserId">Cursor tiebreaker: pass nextAfterUserId from the previous response. Required when afterName is set so name-ties don&#39;t drop entries. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetOnlineUsersResponse>> getOnlineUsers(
+    pplx::task<std::shared_ptr<PageUsersOnlineResponse>> getOnlineUsers(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> afterName,
@@ -581,7 +571,7 @@ public:
     /// <param name="q">Optional case-insensitive title prefix filter. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sortBy">Sort order. &#x60;updatedAt&#x60; (default, newest first), &#x60;commentCount&#x60; (most comments first), or &#x60;title&#x60; (alphabetical). (optional, default to new PagesSortBy())</param>
     /// <param name="hasComments">If true, only return pages with at least one comment. (optional, default to false)</param>
-    pplx::task<std::shared_ptr<GetPagesPublicResponse>> getPagesPublic(
+    pplx::task<std::shared_ptr<GetPublicPagesResponse>> getPagesPublic(
         utility::string_t tenantId,
         boost::optional<utility::string_t> cursor,
         boost::optional<int32_t> limit,
@@ -599,7 +589,7 @@ public:
     /// <param name="component"></param>
     /// <param name="locale"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="useFullTranslationIds"> (optional, default to false)</param>
-    pplx::task<std::shared_ptr<GetTranslationsResponse_1>> getTranslations(
+    pplx::task<std::shared_ptr<GetTranslationsResponse>> getTranslations(
         utility::string_t r_namespace,
         utility::string_t component,
         boost::optional<utility::string_t> locale,
@@ -613,7 +603,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetUserNotificationCountResponse_1>> getUserNotificationCount(
+    pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> getUserNotificationCount(
         utility::string_t tenantId,
         boost::optional<utility::string_t> sso
     ) const;
@@ -635,7 +625,7 @@ public:
     /// <param name="includeTranslations"> (optional, default to false)</param>
     /// <param name="includeTenantNotifications"> (optional, default to false)</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetUserNotificationsResponse>> getUserNotifications(
+    pplx::task<std::shared_ptr<GetMyNotificationsResponse>> getUserNotifications(
         utility::string_t tenantId,
         boost::optional<utility::string_t> urlId,
         boost::optional<int32_t> pageSize,
@@ -658,7 +648,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="urlIdWS"></param>
     /// <param name="userIds"></param>
-    pplx::task<std::shared_ptr<GetUserPresenceStatusesResponse_1>> getUserPresenceStatuses(
+    pplx::task<std::shared_ptr<GetUserPresenceStatusesResponse>> getUserPresenceStatuses(
         utility::string_t tenantId,
         utility::string_t urlIdWS,
         utility::string_t userIds
@@ -672,7 +662,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="postIds"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<GetUserReactsPublicResponse>> getUserReactsPublic(
+    pplx::task<std::shared_ptr<UserReactsResponse>> getUserReactsPublic(
         utility::string_t tenantId,
         boost::optional<std::vector<utility::string_t>> postIds,
         boost::optional<utility::string_t> sso
@@ -685,7 +675,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="ids">Comma-delimited userIds.</param>
-    pplx::task<std::shared_ptr<GetUsersInfoResponse>> getUsersInfo(
+    pplx::task<std::shared_ptr<PageUsersInfoResponse>> getUsersInfo(
         utility::string_t tenantId,
         utility::string_t ids
     ) const;
@@ -697,7 +687,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
-    pplx::task<std::shared_ptr<GetV1PageLikesResponse>> getV1PageLikes(
+    pplx::task<std::shared_ptr<GetV1PageLikes>> getV1PageLikes(
         utility::string_t tenantId,
         utility::string_t urlId
     ) const;
@@ -710,7 +700,7 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
     /// <param name="id"></param>
-    pplx::task<std::shared_ptr<GetV2PageReactUsersResponse_1>> getV2PageReactUsers(
+    pplx::task<std::shared_ptr<GetV2PageReactUsersResponse>> getV2PageReactUsers(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
@@ -723,7 +713,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="urlId"></param>
-    pplx::task<std::shared_ptr<GetV2PageReactsResponse>> getV2PageReacts(
+    pplx::task<std::shared_ptr<GetV2PageReacts>> getV2PageReacts(
         utility::string_t tenantId,
         utility::string_t urlId
     ) const;
@@ -737,7 +727,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="broadcastId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<LockCommentResponse>> lockComment(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> lockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -761,7 +751,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="broadcastId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<PinCommentResponse>> pinComment(
+    pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> pinComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -779,7 +769,7 @@ public:
     /// <param name="isUndo"> (optional, default to false)</param>
     /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<ReactFeedPostPublicResponse>> reactFeedPostPublic(
+    pplx::task<std::shared_ptr<ReactFeedPostResponse>> reactFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<ReactBodyParams> reactBodyParams,
@@ -795,7 +785,7 @@ public:
     /// </remarks>
     /// <param name="tenantId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<ResetUserNotificationCountResponse>> resetUserNotificationCount(
+    pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotificationCount(
         utility::string_t tenantId,
         boost::optional<utility::string_t> sso
     ) const;
@@ -812,7 +802,7 @@ public:
     /// <param name="dmOnly"> (optional, default to false)</param>
     /// <param name="noDm"> (optional, default to false)</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<ResetUserNotificationsResponse_1>> resetUserNotifications(
+    pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotifications(
         utility::string_t tenantId,
         boost::optional<utility::string_t> afterId,
         boost::optional<int64_t> afterCreatedAt,
@@ -833,7 +823,7 @@ public:
     /// <param name="mentionGroupIds"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="searchSection"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<SearchUsersResponse_1>> searchUsers(
+    pplx::task<std::shared_ptr<SearchUsersResult>> searchUsers(
         utility::string_t tenantId,
         utility::string_t urlId,
         boost::optional<utility::string_t> usernameStartsWith,
@@ -853,7 +843,7 @@ public:
     /// <param name="commentTextUpdateRequest"></param>
     /// <param name="editKey"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<SetCommentTextResponse_1>> setCommentText(
+    pplx::task<std::shared_ptr<PublicAPISetCommentTextResponse>> setCommentText(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -871,7 +861,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="publicBlockFromCommentParams"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UnBlockCommentPublicResponse>> unBlockCommentPublic(
+    pplx::task<std::shared_ptr<UnblockSuccess>> unBlockCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams,
@@ -887,7 +877,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="broadcastId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UnLockCommentResponse>> unLockComment(
+    pplx::task<std::shared_ptr<APIEmptyResponse>> unLockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -903,7 +893,7 @@ public:
     /// <param name="commentId"></param>
     /// <param name="broadcastId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UnPinCommentResponse>> unPinComment(
+    pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> unPinComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
@@ -920,7 +910,7 @@ public:
     /// <param name="updateFeedPostParams"></param>
     /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<UpdateFeedPostPublicResponse>> updateFeedPostPublic(
+    pplx::task<std::shared_ptr<CreateFeedPostResponse>> updateFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams,
@@ -1010,7 +1000,7 @@ public:
     /// <param name="voteBodyParams"></param>
     /// <param name="sessionId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<VoteCommentResponse>> voteComment(
+    pplx::task<std::shared_ptr<VoteResponse>> voteComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t urlId,
