@@ -191,7 +191,7 @@ pplx::task<std::shared_ptr<AddDomainConfigResponse>> DefaultApi::addDomainConfig
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<CreateHashTagBody>> createHashTagBody) const
+pplx::task<std::shared_ptr<AddHashTagResponse>> DefaultApi::addHashTag(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<CreateHashTagBody>> createHashTagBody) const
 {
 
 
@@ -321,7 +321,7 @@ pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(boost:
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateHashTagResponse> localVarResult(new CreateHashTagResponse());
+        std::shared_ptr<AddHashTagResponse> localVarResult(new AddHashTagResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -342,7 +342,7 @@ pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(boost:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsBulk(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<BulkCreateHashTagsBody>> bulkCreateHashTagsBody) const
+pplx::task<std::shared_ptr<AddHashTagsBulkResponse>> DefaultApi::addHashTagsBulk(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<BulkCreateHashTagsBody>> bulkCreateHashTagsBody) const
 {
 
 
@@ -472,7 +472,7 @@ pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsB
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<BulkCreateHashTagsResponse> localVarResult(new BulkCreateHashTagsResponse());
+        std::shared_ptr<AddHashTagsBulkResponse> localVarResult(new AddHashTagsBulkResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -969,7 +969,7 @@ pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggregateQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<std::shared_ptr<AggregateTimeBucket>> timeBucket, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate) const
+pplx::task<std::shared_ptr<AggregateQuestionResultsResponse_1>> DefaultApi::aggregateQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<std::shared_ptr<AggregateTimeBucket>> timeBucket, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate) const
 {
 
 
@@ -1105,7 +1105,7 @@ pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggreg
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<AggregateQuestionResultsResponse> localVarResult(new AggregateQuestionResultsResponse());
+        std::shared_ptr<AggregateQuestionResultsResponse_1> localVarResult(new AggregateQuestionResultsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1126,7 +1126,7 @@ pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggreg
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<BlockFromCommentParams> blockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<BlockUserFromCommentResponse>> DefaultApi::blockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<BlockFromCommentParams> blockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
     // verify the required parameter 'blockFromCommentParams' is set
@@ -1270,7 +1270,7 @@ pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<BlockSuccess> localVarResult(new BlockSuccess());
+        std::shared_ptr<BlockUserFromCommentResponse> localVarResult(new BlockUserFromCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1291,7 +1291,7 @@ pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bulkAggregateQuestionResults(utility::string_t tenantId, std::shared_ptr<BulkAggregateQuestionResultsRequest> bulkAggregateQuestionResultsRequest, boost::optional<bool> forceRecalculate) const
+pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse_1>> DefaultApi::bulkAggregateQuestionResults(utility::string_t tenantId, std::shared_ptr<BulkAggregateQuestionResultsRequest> bulkAggregateQuestionResultsRequest, boost::optional<bool> forceRecalculate) const
 {
 
     // verify the required parameter 'bulkAggregateQuestionResultsRequest' is set
@@ -1430,7 +1430,7 @@ pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bu
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<BulkAggregateQuestionResultsResponse> localVarResult(new BulkAggregateQuestionResultsResponse());
+        std::shared_ptr<BulkAggregateQuestionResultsResponse_1> localVarResult(new BulkAggregateQuestionResultsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1451,7 +1451,7 @@ pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bu
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketState(utility::string_t tenantId, utility::string_t userId, utility::string_t id, std::shared_ptr<ChangeTicketStateBody> changeTicketStateBody) const
+pplx::task<std::shared_ptr<ChangeTicketStateResponse_1>> DefaultApi::changeTicketState(utility::string_t tenantId, utility::string_t userId, utility::string_t id, std::shared_ptr<ChangeTicketStateBody> changeTicketStateBody) const
 {
 
     // verify the required parameter 'changeTicketStateBody' is set
@@ -1590,7 +1590,7 @@ pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketS
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<ChangeTicketStateResponse> localVarResult(new ChangeTicketStateResponse());
+        std::shared_ptr<ChangeTicketStateResponse_1> localVarResult(new ChangeTicketStateResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1611,7 +1611,7 @@ pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultApi::combineCommentsWithQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate, boost::optional<double> minValue, boost::optional<double> maxValue, boost::optional<double> limit) const
+pplx::task<std::shared_ptr<CombineCommentsWithQuestionResultsResponse>> DefaultApi::combineCommentsWithQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate, boost::optional<double> minValue, boost::optional<double> maxValue, boost::optional<double> limit) const
 {
 
 
@@ -1755,7 +1755,7 @@ pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultA
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CombineQuestionResultsWithCommentsResponse> localVarResult(new CombineQuestionResultsWithCommentsResponse());
+        std::shared_ptr<CombineCommentsWithQuestionResultsResponse> localVarResult(new CombineCommentsWithQuestionResultsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1776,7 +1776,7 @@ pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultA
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmailTemplate(utility::string_t tenantId, std::shared_ptr<CreateEmailTemplateBody> createEmailTemplateBody) const
+pplx::task<std::shared_ptr<CreateEmailTemplateResponse_1>> DefaultApi::createEmailTemplate(utility::string_t tenantId, std::shared_ptr<CreateEmailTemplateBody> createEmailTemplateBody) const
 {
 
     // verify the required parameter 'createEmailTemplateBody' is set
@@ -1911,7 +1911,7 @@ pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmail
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateEmailTemplateResponse> localVarResult(new CreateEmailTemplateResponse());
+        std::shared_ptr<CreateEmailTemplateResponse_1> localVarResult(new CreateEmailTemplateResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -1932,7 +1932,7 @@ pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmail
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(utility::string_t tenantId, std::shared_ptr<CreateFeedPostParams> createFeedPostParams, boost::optional<utility::string_t> broadcastId, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> skipDupCheck) const
+pplx::task<std::shared_ptr<CreateFeedPostResponse_1>> DefaultApi::createFeedPost(utility::string_t tenantId, std::shared_ptr<CreateFeedPostParams> createFeedPostParams, boost::optional<utility::string_t> broadcastId, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> skipDupCheck) const
 {
 
     // verify the required parameter 'createFeedPostParams' is set
@@ -2083,7 +2083,7 @@ pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateFeedPostsResponse> localVarResult(new CreateFeedPostsResponse());
+        std::shared_ptr<CreateFeedPostResponse_1> localVarResult(new CreateFeedPostResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2104,7 +2104,7 @@ pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator(utility::string_t tenantId, std::shared_ptr<CreateModeratorBody> createModeratorBody) const
+pplx::task<std::shared_ptr<CreateModeratorResponse_1>> DefaultApi::createModerator(utility::string_t tenantId, std::shared_ptr<CreateModeratorBody> createModeratorBody) const
 {
 
     // verify the required parameter 'createModeratorBody' is set
@@ -2239,7 +2239,7 @@ pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateModeratorResponse> localVarResult(new CreateModeratorResponse());
+        std::shared_ptr<CreateModeratorResponse_1> localVarResult(new CreateModeratorResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2260,7 +2260,7 @@ pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQuestionConfig(utility::string_t tenantId, std::shared_ptr<CreateQuestionConfigBody> createQuestionConfigBody) const
+pplx::task<std::shared_ptr<CreateQuestionConfigResponse_1>> DefaultApi::createQuestionConfig(utility::string_t tenantId, std::shared_ptr<CreateQuestionConfigBody> createQuestionConfigBody) const
 {
 
     // verify the required parameter 'createQuestionConfigBody' is set
@@ -2395,7 +2395,7 @@ pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQues
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateQuestionConfigResponse> localVarResult(new CreateQuestionConfigResponse());
+        std::shared_ptr<CreateQuestionConfigResponse_1> localVarResult(new CreateQuestionConfigResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2416,7 +2416,7 @@ pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQues
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateQuestionResultResponse>> DefaultApi::createQuestionResult(utility::string_t tenantId, std::shared_ptr<CreateQuestionResultBody> createQuestionResultBody) const
+pplx::task<std::shared_ptr<CreateQuestionResultResponse_1>> DefaultApi::createQuestionResult(utility::string_t tenantId, std::shared_ptr<CreateQuestionResultBody> createQuestionResultBody) const
 {
 
     // verify the required parameter 'createQuestionResultBody' is set
@@ -2551,7 +2551,7 @@ pplx::task<std::shared_ptr<CreateQuestionResultResponse>> DefaultApi::createQues
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateQuestionResultResponse> localVarResult(new CreateQuestionResultResponse());
+        std::shared_ptr<CreateQuestionResultResponse_1> localVarResult(new CreateQuestionResultResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2728,7 +2728,7 @@ pplx::task<std::shared_ptr<CreateSubscriptionAPIResponse>> DefaultApi::createSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(utility::string_t tenantId, std::shared_ptr<CreateTenantBody> createTenantBody) const
+pplx::task<std::shared_ptr<CreateTenantResponse_1>> DefaultApi::createTenant(utility::string_t tenantId, std::shared_ptr<CreateTenantBody> createTenantBody) const
 {
 
     // verify the required parameter 'createTenantBody' is set
@@ -2863,7 +2863,7 @@ pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateTenantResponse> localVarResult(new CreateTenantResponse());
+        std::shared_ptr<CreateTenantResponse_1> localVarResult(new CreateTenantResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -2884,7 +2884,7 @@ pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenantPackage(utility::string_t tenantId, std::shared_ptr<CreateTenantPackageBody> createTenantPackageBody) const
+pplx::task<std::shared_ptr<CreateTenantPackageResponse_1>> DefaultApi::createTenantPackage(utility::string_t tenantId, std::shared_ptr<CreateTenantPackageBody> createTenantPackageBody) const
 {
 
     // verify the required parameter 'createTenantPackageBody' is set
@@ -3019,7 +3019,7 @@ pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenan
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateTenantPackageResponse> localVarResult(new CreateTenantPackageResponse());
+        std::shared_ptr<CreateTenantPackageResponse_1> localVarResult(new CreateTenantPackageResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3040,7 +3040,7 @@ pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenan
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUser(utility::string_t tenantId, std::shared_ptr<CreateTenantUserBody> createTenantUserBody) const
+pplx::task<std::shared_ptr<CreateTenantUserResponse_1>> DefaultApi::createTenantUser(utility::string_t tenantId, std::shared_ptr<CreateTenantUserBody> createTenantUserBody) const
 {
 
     // verify the required parameter 'createTenantUserBody' is set
@@ -3175,7 +3175,7 @@ pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUs
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateTenantUserResponse> localVarResult(new CreateTenantUserResponse());
+        std::shared_ptr<CreateTenantUserResponse_1> localVarResult(new CreateTenantUserResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3196,7 +3196,7 @@ pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(utility::string_t tenantId, utility::string_t userId, std::shared_ptr<CreateTicketBody> createTicketBody) const
+pplx::task<std::shared_ptr<CreateTicketResponse_1>> DefaultApi::createTicket(utility::string_t tenantId, utility::string_t userId, std::shared_ptr<CreateTicketBody> createTicketBody) const
 {
 
     // verify the required parameter 'createTicketBody' is set
@@ -3334,7 +3334,7 @@ pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<CreateTicketResponse> localVarResult(new CreateTicketResponse());
+        std::shared_ptr<CreateTicketResponse_1> localVarResult(new CreateTicketResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3355,7 +3355,7 @@ pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBadge(utility::string_t tenantId, std::shared_ptr<CreateUserBadgeParams> createUserBadgeParams) const
+pplx::task<std::shared_ptr<CreateUserBadgeResponse>> DefaultApi::createUserBadge(utility::string_t tenantId, std::shared_ptr<CreateUserBadgeParams> createUserBadgeParams) const
 {
 
     // verify the required parameter 'createUserBadgeParams' is set
@@ -3490,7 +3490,7 @@ pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBa
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APICreateUserBadgeResponse> localVarResult(new APICreateUserBadgeResponse());
+        std::shared_ptr<CreateUserBadgeResponse> localVarResult(new CreateUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3511,7 +3511,7 @@ pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBa
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(utility::string_t tenantId, utility::string_t commentId, utility::string_t direction, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<CreateVoteResponse>> DefaultApi::createVote(utility::string_t tenantId, utility::string_t commentId, utility::string_t direction, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
 
@@ -3637,7 +3637,7 @@ pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(utility::string
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<VoteResponse> localVarResult(new VoteResponse());
+        std::shared_ptr<CreateVoteResponse> localVarResult(new CreateVoteResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3658,7 +3658,7 @@ pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(utility::string
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> contextUserId, boost::optional<bool> isLive) const
+pplx::task<std::shared_ptr<DeleteCommentResponse>> DefaultApi::deleteComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> contextUserId, boost::optional<bool> isLive) const
 {
 
 
@@ -3779,7 +3779,7 @@ pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<DeleteCommentResult> localVarResult(new DeleteCommentResult());
+        std::shared_ptr<DeleteCommentResponse> localVarResult(new DeleteCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -3934,7 +3934,7 @@ pplx::task<std::shared_ptr<DeleteDomainConfigResponse>> DefaultApi::deleteDomain
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteEmailTemplateResponse>> DefaultApi::deleteEmailTemplate(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -4047,7 +4047,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(ut
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteEmailTemplateResponse> localVarResult(new DeleteEmailTemplateResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4068,7 +4068,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRenderError(utility::string_t tenantId, utility::string_t id, utility::string_t errorId) const
+pplx::task<std::shared_ptr<DeleteEmailTemplateRenderErrorResponse>> DefaultApi::deleteEmailTemplateRenderError(utility::string_t tenantId, utility::string_t id, utility::string_t errorId) const
 {
 
 
@@ -4182,7 +4182,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRen
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteEmailTemplateRenderErrorResponse> localVarResult(new DeleteEmailTemplateRenderErrorResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4203,7 +4203,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<DeleteHashTagRequestBody>> deleteHashTagRequestBody) const
+pplx::task<std::shared_ptr<DeleteHashTagResponse>> DefaultApi::deleteHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<DeleteHashTagRequestBody>> deleteHashTagRequestBody) const
 {
 
 
@@ -4334,7 +4334,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(utility:
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteHashTagResponse> localVarResult(new DeleteHashTagResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4355,7 +4355,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sendEmail) const
+pplx::task<std::shared_ptr<DeleteModeratorResponse>> DefaultApi::deleteModerator(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sendEmail) const
 {
 
 
@@ -4472,7 +4472,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(utilit
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteModeratorResponse> localVarResult(new DeleteModeratorResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4493,7 +4493,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteNotificationCount(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteNotificationCountResponse>> DefaultApi::deleteNotificationCount(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -4606,7 +4606,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteNotificationCoun
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteNotificationCountResponse> localVarResult(new DeleteNotificationCountResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4761,7 +4761,7 @@ pplx::task<std::shared_ptr<DeletePageAPIResponse>> DefaultApi::deletePage(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEvent(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeletePendingWebhookEventResponse>> DefaultApi::deletePendingWebhookEvent(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -4874,7 +4874,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEv
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeletePendingWebhookEventResponse> localVarResult(new DeletePendingWebhookEventResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4895,7 +4895,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEv
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteQuestionConfigResponse>> DefaultApi::deleteQuestionConfig(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -5008,7 +5008,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteQuestionConfigResponse> localVarResult(new DeleteQuestionConfigResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5029,7 +5029,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionResult(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteQuestionResultResponse>> DefaultApi::deleteQuestionResult(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -5142,7 +5142,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionResult(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteQuestionResultResponse> localVarResult(new DeleteQuestionResultResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5443,7 +5443,7 @@ pplx::task<std::shared_ptr<DeleteSubscriptionAPIResponse>> DefaultApi::deleteSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sure) const
+pplx::task<std::shared_ptr<DeleteTenantResponse>> DefaultApi::deleteTenant(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sure) const
 {
 
 
@@ -5560,7 +5560,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(utility::
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteTenantResponse> localVarResult(new DeleteTenantResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5581,7 +5581,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteTenantPackageResponse>> DefaultApi::deleteTenantPackage(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -5694,7 +5694,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(ut
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteTenantPackageResponse> localVarResult(new DeleteTenantPackageResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5715,7 +5715,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> deleteComments, boost::optional<utility::string_t> commentDeleteMode) const
+pplx::task<std::shared_ptr<DeleteTenantUserResponse>> DefaultApi::deleteTenantUser(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> deleteComments, boost::optional<utility::string_t> commentDeleteMode) const
 {
 
 
@@ -5836,7 +5836,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<DeleteTenantUserResponse> localVarResult(new DeleteTenantUserResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5857,7 +5857,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeleteUserBadgeResponse>> DefaultApi::deleteUserBadge(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -5970,7 +5970,7 @@ pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptySuccessResponse> localVarResult(new APIEmptySuccessResponse());
+        std::shared_ptr<DeleteUserBadgeResponse> localVarResult(new DeleteUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -5991,7 +5991,7 @@ pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> editKey) const
+pplx::task<std::shared_ptr<DeleteVoteResponse>> DefaultApi::deleteVote(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> editKey) const
 {
 
 
@@ -6108,7 +6108,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(utility::
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<VoteDeleteResponse> localVarResult(new VoteDeleteResponse());
+        std::shared_ptr<DeleteVoteResponse> localVarResult(new DeleteVoteResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -6129,7 +6129,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<FlagCommentResponse_1>> DefaultApi::flagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
 
@@ -6250,7 +6250,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(utility
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<FlagCommentResponse> localVarResult(new FlagCommentResponse());
+        std::shared_ptr<FlagCommentResponse_1> localVarResult(new FlagCommentResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -6271,7 +6271,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(utility::string_t tenantId, boost::optional<double> limit, boost::optional<double> skip, boost::optional<std::shared_ptr<SORT_DIR>> order, boost::optional<double> after, boost::optional<double> before) const
+pplx::task<std::shared_ptr<GetAuditLogsResponse_1>> DefaultApi::getAuditLogs(utility::string_t tenantId, boost::optional<double> limit, boost::optional<double> skip, boost::optional<std::shared_ptr<SORT_DIR>> order, boost::optional<double> after, boost::optional<double> before) const
 {
 
 
@@ -6403,7 +6403,7 @@ pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetAuditLogsResponse> localVarResult(new GetAuditLogsResponse());
+        std::shared_ptr<GetAuditLogsResponse_1> localVarResult(new GetAuditLogsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -6424,7 +6424,7 @@ pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getCachedNotificationCount(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetCachedNotificationCountResponse_1>> DefaultApi::getCachedNotificationCount(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -6537,7 +6537,7 @@ pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getC
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetCachedNotificationCountResponse> localVarResult(new GetCachedNotificationCountResponse());
+        std::shared_ptr<GetCachedNotificationCountResponse_1> localVarResult(new GetCachedNotificationCountResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -6558,7 +6558,7 @@ pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetCommentResponse>> DefaultApi::getComment(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -6671,7 +6671,7 @@ pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(utilit
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetCommentResponse> localVarResult(new APIGetCommentResponse());
+        std::shared_ptr<GetCommentResponse> localVarResult(new GetCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -6692,7 +6692,7 @@ pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(utility::string_t tenantId, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<int32_t> skip, boost::optional<bool> asTree, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limitChildren, boost::optional<int32_t> maxTreeDepth, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId, boost::optional<utility::string_t> contextUserId, boost::optional<utility::string_t> hashTag, boost::optional<utility::string_t> parentId, boost::optional<std::shared_ptr<SortDirections>> direction, boost::optional<int64_t> fromDate, boost::optional<int64_t> toDate) const
+pplx::task<std::shared_ptr<GetCommentsResponse>> DefaultApi::getComments(utility::string_t tenantId, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<int32_t> skip, boost::optional<bool> asTree, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limitChildren, boost::optional<int32_t> maxTreeDepth, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId, boost::optional<utility::string_t> contextUserId, boost::optional<utility::string_t> hashTag, boost::optional<utility::string_t> parentId, boost::optional<std::shared_ptr<SortDirections>> direction, boost::optional<int64_t> fromDate, boost::optional<int64_t> toDate) const
 {
 
 
@@ -6868,7 +6868,7 @@ pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetCommentsResponse> localVarResult(new APIGetCommentsResponse());
+        std::shared_ptr<GetCommentsResponse> localVarResult(new GetCommentsResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7156,7 +7156,7 @@ pplx::task<std::shared_ptr<GetDomainConfigsResponse>> DefaultApi::getDomainConfi
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTemplate(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetEmailTemplateResponse_1>> DefaultApi::getEmailTemplate(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -7269,7 +7269,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTempla
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetEmailTemplateResponse> localVarResult(new GetEmailTemplateResponse());
+        std::shared_ptr<GetEmailTemplateResponse_1> localVarResult(new GetEmailTemplateResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7290,7 +7290,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTempla
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::getEmailTemplateDefinitions(utility::string_t tenantId) const
+pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse_1>> DefaultApi::getEmailTemplateDefinitions(utility::string_t tenantId) const
 {
 
 
@@ -7402,7 +7402,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetEmailTemplateDefinitionsResponse> localVarResult(new GetEmailTemplateDefinitionsResponse());
+        std::shared_ptr<GetEmailTemplateDefinitionsResponse_1> localVarResult(new GetEmailTemplateDefinitionsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7423,7 +7423,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::getEmailTemplateRenderErrors(utility::string_t tenantId, utility::string_t id, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse_1>> DefaultApi::getEmailTemplateRenderErrors(utility::string_t tenantId, utility::string_t id, boost::optional<double> skip) const
 {
 
 
@@ -7540,7 +7540,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::ge
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetEmailTemplateRenderErrorsResponse> localVarResult(new GetEmailTemplateRenderErrorsResponse());
+        std::shared_ptr<GetEmailTemplateRenderErrorsResponse_1> localVarResult(new GetEmailTemplateRenderErrorsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7561,7 +7561,7 @@ pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::ge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTemplates(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetEmailTemplatesResponse_1>> DefaultApi::getEmailTemplates(utility::string_t tenantId, boost::optional<double> skip) const
 {
 
 
@@ -7677,7 +7677,7 @@ pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTempl
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetEmailTemplatesResponse> localVarResult(new GetEmailTemplatesResponse());
+        std::shared_ptr<GetEmailTemplatesResponse_1> localVarResult(new GetEmailTemplatesResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7698,7 +7698,7 @@ pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTempl
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(utility::string_t tenantId, boost::optional<utility::string_t> afterId, boost::optional<int32_t> limit, boost::optional<std::vector<utility::string_t>> tags) const
+pplx::task<std::shared_ptr<GetFeedPostsResponse_1>> DefaultApi::getFeedPosts(utility::string_t tenantId, boost::optional<utility::string_t> afterId, boost::optional<int32_t> limit, boost::optional<std::vector<utility::string_t>> tags) const
 {
 
 
@@ -7822,7 +7822,7 @@ pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetFeedPostsResponse> localVarResult(new GetFeedPostsResponse());
+        std::shared_ptr<GetFeedPostsResponse_1> localVarResult(new GetFeedPostsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7843,7 +7843,7 @@ pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(utility::string_t tenantId, boost::optional<double> page) const
+pplx::task<std::shared_ptr<GetHashTagsResponse_1>> DefaultApi::getHashTags(utility::string_t tenantId, boost::optional<double> page) const
 {
 
 
@@ -7959,7 +7959,7 @@ pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(utility
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetHashTagsResponse> localVarResult(new GetHashTagsResponse());
+        std::shared_ptr<GetHashTagsResponse_1> localVarResult(new GetHashTagsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -7980,7 +7980,7 @@ pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetModeratorResponse_1>> DefaultApi::getModerator(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -8093,7 +8093,7 @@ pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetModeratorResponse> localVarResult(new GetModeratorResponse());
+        std::shared_ptr<GetModeratorResponse_1> localVarResult(new GetModeratorResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -8114,7 +8114,7 @@ pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetModeratorsResponse_1>> DefaultApi::getModerators(utility::string_t tenantId, boost::optional<double> skip) const
 {
 
 
@@ -8230,7 +8230,7 @@ pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(uti
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetModeratorsResponse> localVarResult(new GetModeratorsResponse());
+        std::shared_ptr<GetModeratorsResponse_1> localVarResult(new GetModeratorsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -8251,7 +8251,7 @@ pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotificationCount(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type) const
+pplx::task<std::shared_ptr<GetNotificationCountResponse_1>> DefaultApi::getNotificationCount(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type) const
 {
 
 
@@ -8383,7 +8383,7 @@ pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotific
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetNotificationCountResponse> localVarResult(new GetNotificationCountResponse());
+        std::shared_ptr<GetNotificationCountResponse_1> localVarResult(new GetNotificationCountResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -8404,7 +8404,7 @@ pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotific
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotifications(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetNotificationsResponse_1>> DefaultApi::getNotifications(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type, boost::optional<double> skip) const
 {
 
 
@@ -8540,7 +8540,7 @@ pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotificatio
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetNotificationsResponse> localVarResult(new GetNotificationsResponse());
+        std::shared_ptr<GetNotificationsResponse_1> localVarResult(new GetNotificationsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -8830,7 +8830,7 @@ pplx::task<std::shared_ptr<GetPagesAPIResponse>> DefaultApi::getPages(utility::s
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::getPendingWebhookEventCount(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT) const
+pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse_1>> DefaultApi::getPendingWebhookEventCount(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT) const
 {
 
 
@@ -8966,7 +8966,7 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetPendingWebhookEventCountResponse> localVarResult(new GetPendingWebhookEventCountResponse());
+        std::shared_ptr<GetPendingWebhookEventCountResponse_1> localVarResult(new GetPendingWebhookEventCountResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -8987,7 +8987,7 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPendingWebhookEvents(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse_1>> DefaultApi::getPendingWebhookEvents(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT, boost::optional<double> skip) const
 {
 
 
@@ -9127,7 +9127,7 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPend
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetPendingWebhookEventsResponse> localVarResult(new GetPendingWebhookEventsResponse());
+        std::shared_ptr<GetPendingWebhookEventsResponse_1> localVarResult(new GetPendingWebhookEventsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -9148,7 +9148,7 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPend
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionConfig(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetQuestionConfigResponse_1>> DefaultApi::getQuestionConfig(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -9261,7 +9261,7 @@ pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionCo
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetQuestionConfigResponse> localVarResult(new GetQuestionConfigResponse());
+        std::shared_ptr<GetQuestionConfigResponse_1> localVarResult(new GetQuestionConfigResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -9282,7 +9282,7 @@ pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionConfigs(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetQuestionConfigsResponse_1>> DefaultApi::getQuestionConfigs(utility::string_t tenantId, boost::optional<double> skip) const
 {
 
 
@@ -9398,7 +9398,7 @@ pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionC
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetQuestionConfigsResponse> localVarResult(new GetQuestionConfigsResponse());
+        std::shared_ptr<GetQuestionConfigsResponse_1> localVarResult(new GetQuestionConfigsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -9419,7 +9419,7 @@ pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionResult(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetQuestionResultResponse_1>> DefaultApi::getQuestionResult(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -9532,7 +9532,7 @@ pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionRe
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetQuestionResultResponse> localVarResult(new GetQuestionResultResponse());
+        std::shared_ptr<GetQuestionResultResponse_1> localVarResult(new GetQuestionResultResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -9553,7 +9553,7 @@ pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionRe
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> startDate, boost::optional<utility::string_t> questionId, boost::optional<utility::string_t> questionIds, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetQuestionResultsResponse_1>> DefaultApi::getQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> startDate, boost::optional<utility::string_t> questionId, boost::optional<utility::string_t> questionIds, boost::optional<double> skip) const
 {
 
 
@@ -9689,7 +9689,7 @@ pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionR
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetQuestionResultsResponse> localVarResult(new GetQuestionResultsResponse());
+        std::shared_ptr<GetQuestionResultsResponse_1> localVarResult(new GetQuestionResultsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10252,7 +10252,7 @@ pplx::task<std::shared_ptr<GetSubscriptionsAPIResponse>> DefaultApi::getSubscrip
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantResponse_1>> DefaultApi::getTenant(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -10365,7 +10365,7 @@ pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(utility::st
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantResponse> localVarResult(new GetTenantResponse());
+        std::shared_ptr<GetTenantResponse_1> localVarResult(new GetTenantResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10386,7 +10386,7 @@ pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantDailyUsages(utility::string_t tenantId, boost::optional<double> yearNumber, boost::optional<double> monthNumber, boost::optional<double> dayNumber, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse_1>> DefaultApi::getTenantDailyUsages(utility::string_t tenantId, boost::optional<double> yearNumber, boost::optional<double> monthNumber, boost::optional<double> dayNumber, boost::optional<double> skip) const
 {
 
 
@@ -10514,7 +10514,7 @@ pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantD
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantDailyUsagesResponse> localVarResult(new GetTenantDailyUsagesResponse());
+        std::shared_ptr<GetTenantDailyUsagesResponse_1> localVarResult(new GetTenantDailyUsagesResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10535,7 +10535,7 @@ pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantD
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPackage(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantPackageResponse_1>> DefaultApi::getTenantPackage(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -10648,7 +10648,7 @@ pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPacka
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantPackageResponse> localVarResult(new GetTenantPackageResponse());
+        std::shared_ptr<GetTenantPackageResponse_1> localVarResult(new GetTenantPackageResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10669,7 +10669,7 @@ pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPacka
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPackages(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantPackagesResponse_1>> DefaultApi::getTenantPackages(utility::string_t tenantId, boost::optional<double> skip) const
 {
 
 
@@ -10785,7 +10785,7 @@ pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPack
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantPackagesResponse> localVarResult(new GetTenantPackagesResponse());
+        std::shared_ptr<GetTenantPackagesResponse_1> localVarResult(new GetTenantPackagesResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10806,7 +10806,7 @@ pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPack
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantUserResponse_1>> DefaultApi::getTenantUser(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -10919,7 +10919,7 @@ pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(uti
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantUserResponse> localVarResult(new GetTenantUserResponse());
+        std::shared_ptr<GetTenantUserResponse_1> localVarResult(new GetTenantUserResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -10940,7 +10940,7 @@ pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantUsersResponse_1>> DefaultApi::getTenantUsers(utility::string_t tenantId, boost::optional<double> skip) const
 {
 
 
@@ -11056,7 +11056,7 @@ pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantUsersResponse> localVarResult(new GetTenantUsersResponse());
+        std::shared_ptr<GetTenantUsersResponse_1> localVarResult(new GetTenantUsersResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11077,7 +11077,7 @@ pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(utility::string_t tenantId, boost::optional<utility::string_t> meta, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantsResponse_1>> DefaultApi::getTenants(utility::string_t tenantId, boost::optional<utility::string_t> meta, boost::optional<double> skip) const
 {
 
 
@@ -11197,7 +11197,7 @@ pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(utility::
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTenantsResponse> localVarResult(new GetTenantsResponse());
+        std::shared_ptr<GetTenantsResponse_1> localVarResult(new GetTenantsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11218,7 +11218,7 @@ pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<GetTicketResponse_1>> DefaultApi::getTicket(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId) const
 {
 
 
@@ -11335,7 +11335,7 @@ pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(utility::st
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTicketResponse> localVarResult(new GetTicketResponse());
+        std::shared_ptr<GetTicketResponse_1> localVarResult(new GetTicketResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11356,7 +11356,7 @@ pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> state, boost::optional<double> skip, boost::optional<double> limit) const
+pplx::task<std::shared_ptr<GetTicketsResponse_1>> DefaultApi::getTickets(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> state, boost::optional<double> skip, boost::optional<double> limit) const
 {
 
 
@@ -11484,7 +11484,7 @@ pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(utility::
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetTicketsResponse> localVarResult(new GetTicketsResponse());
+        std::shared_ptr<GetTicketsResponse_1> localVarResult(new GetTicketsResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11505,7 +11505,7 @@ pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetUserResponse_1>> DefaultApi::getUser(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -11618,7 +11618,7 @@ pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(utility::string
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetUserResponse> localVarResult(new GetUserResponse());
+        std::shared_ptr<GetUserResponse_1> localVarResult(new GetUserResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11639,7 +11639,7 @@ pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(utility::string
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetUserBadgeResponse>> DefaultApi::getUserBadge(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -11752,7 +11752,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(ut
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetUserBadgeResponse> localVarResult(new APIGetUserBadgeResponse());
+        std::shared_ptr<GetUserBadgeResponse> localVarResult(new GetUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11773,7 +11773,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressById(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetUserBadgeProgressByIdResponse>> DefaultApi::getUserBadgeProgressById(utility::string_t tenantId, utility::string_t id) const
 {
 
 
@@ -11886,7 +11886,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetUserBadgeProgressResponse> localVarResult(new APIGetUserBadgeProgressResponse());
+        std::shared_ptr<GetUserBadgeProgressByIdResponse> localVarResult(new GetUserBadgeProgressByIdResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -11907,7 +11907,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressByUserId(utility::string_t tenantId, utility::string_t userId) const
+pplx::task<std::shared_ptr<GetUserBadgeProgressByUserIdResponse>> DefaultApi::getUserBadgeProgressByUserId(utility::string_t tenantId, utility::string_t userId) const
 {
 
 
@@ -12020,7 +12020,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetUserBadgeProgressResponse> localVarResult(new APIGetUserBadgeProgressResponse());
+        std::shared_ptr<GetUserBadgeProgressByUserIdResponse> localVarResult(new GetUserBadgeProgressByUserIdResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -12041,7 +12041,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::getUserBadgeProgressList(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> limit, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetUserBadgeProgressListResponse>> DefaultApi::getUserBadgeProgressList(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> limit, boost::optional<double> skip) const
 {
 
 
@@ -12165,7 +12165,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::get
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetUserBadgeProgressListResponse> localVarResult(new APIGetUserBadgeProgressListResponse());
+        std::shared_ptr<GetUserBadgeProgressListResponse> localVarResult(new GetUserBadgeProgressListResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -12186,7 +12186,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> badgeId, boost::optional<double> type, boost::optional<bool> displayedOnComments, boost::optional<double> limit, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetUserBadgesResponse>> DefaultApi::getUserBadges(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> badgeId, boost::optional<double> type, boost::optional<bool> displayedOnComments, boost::optional<double> limit, boost::optional<double> skip) const
 {
 
 
@@ -12322,7 +12322,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIGetUserBadgesResponse> localVarResult(new APIGetUserBadgesResponse());
+        std::shared_ptr<GetUserBadgesResponse> localVarResult(new GetUserBadgesResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -12343,7 +12343,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(utility::string_t tenantId, utility::string_t urlId) const
+pplx::task<std::shared_ptr<GetVotesResponse_1>> DefaultApi::getVotes(utility::string_t tenantId, utility::string_t urlId) const
 {
 
 
@@ -12458,7 +12458,7 @@ pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(utility::stri
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetVotesResponse> localVarResult(new GetVotesResponse());
+        std::shared_ptr<GetVotesResponse_1> localVarResult(new GetVotesResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -12479,7 +12479,7 @@ pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(utility::stri
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser(utility::string_t tenantId, utility::string_t urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<GetVotesForUserResponse_1>> DefaultApi::getVotesForUser(utility::string_t tenantId, utility::string_t urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
 
@@ -12602,7 +12602,7 @@ pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<GetVotesForUserResponse> localVarResult(new GetVotesForUserResponse());
+        std::shared_ptr<GetVotesForUserResponse_1> localVarResult(new GetVotesForUserResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -12780,7 +12780,7 @@ pplx::task<std::shared_ptr<PatchDomainConfigResponse>> DefaultApi::patchDomainCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<UpdateHashTagBody>> updateHashTagBody) const
+pplx::task<std::shared_ptr<PatchHashTagResponse>> DefaultApi::patchHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<UpdateHashTagBody>> updateHashTagBody) const
 {
 
 
@@ -12911,7 +12911,7 @@ pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<UpdateHashTagResponse> localVarResult(new UpdateHashTagResponse());
+        std::shared_ptr<PatchHashTagResponse> localVarResult(new PatchHashTagResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -13568,7 +13568,7 @@ pplx::task<std::shared_ptr<PutSSOUserAPIResponse>> DefaultApi::putSSOUser(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmailTemplate(utility::string_t tenantId, std::shared_ptr<RenderEmailTemplateBody> renderEmailTemplateBody, boost::optional<utility::string_t> locale) const
+pplx::task<std::shared_ptr<RenderEmailTemplateResponse_1>> DefaultApi::renderEmailTemplate(utility::string_t tenantId, std::shared_ptr<RenderEmailTemplateBody> renderEmailTemplateBody, boost::optional<utility::string_t> locale) const
 {
 
     // verify the required parameter 'renderEmailTemplateBody' is set
@@ -13707,7 +13707,7 @@ pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmail
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<RenderEmailTemplateResponse> localVarResult(new RenderEmailTemplateResponse());
+        std::shared_ptr<RenderEmailTemplateResponse_1> localVarResult(new RenderEmailTemplateResponse_1());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -13728,7 +13728,7 @@ pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmail
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantPackageBody> replaceTenantPackageBody) const
+pplx::task<std::shared_ptr<ReplaceTenantPackageResponse>> DefaultApi::replaceTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantPackageBody> replaceTenantPackageBody) const
 {
 
     // verify the required parameter 'replaceTenantPackageBody' is set
@@ -13864,7 +13864,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<ReplaceTenantPackageResponse> localVarResult(new ReplaceTenantPackageResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -13885,7 +13885,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantUserBody> replaceTenantUserBody, boost::optional<utility::string_t> updateComments) const
+pplx::task<std::shared_ptr<ReplaceTenantUserResponse>> DefaultApi::replaceTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantUserBody> replaceTenantUserBody, boost::optional<utility::string_t> updateComments) const
 {
 
     // verify the required parameter 'replaceTenantUserBody' is set
@@ -14025,7 +14025,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<ReplaceTenantUserResponse> localVarResult(new ReplaceTenantUserResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14046,7 +14046,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(utility::string_t tenantId, std::shared_ptr<CreateCommentParams> createCommentParams, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> sendEmails, boost::optional<bool> populateNotifications) const
+pplx::task<std::shared_ptr<SaveCommentResponse>> DefaultApi::saveComment(utility::string_t tenantId, std::shared_ptr<CreateCommentParams> createCommentParams, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> sendEmails, boost::optional<bool> populateNotifications) const
 {
 
     // verify the required parameter 'createCommentParams' is set
@@ -14197,7 +14197,7 @@ pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(util
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APISaveCommentResponse> localVarResult(new APISaveCommentResponse());
+        std::shared_ptr<SaveCommentResponse> localVarResult(new SaveCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14399,7 +14399,7 @@ pplx::task<std::vector<std::shared_ptr<SaveCommentsBulkResponse>>> DefaultApi::s
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(utility::string_t tenantId, utility::string_t id, utility::string_t fromName) const
+pplx::task<std::shared_ptr<SendInviteResponse>> DefaultApi::sendInvite(utility::string_t tenantId, utility::string_t id, utility::string_t fromName) const
 {
 
 
@@ -14515,7 +14515,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(utility::st
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<SendInviteResponse> localVarResult(new SendInviteResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14536,7 +14536,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> redirectURL) const
+pplx::task<std::shared_ptr<SendLoginLinkResponse>> DefaultApi::sendLoginLink(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> redirectURL) const
 {
 
 
@@ -14653,7 +14653,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(utility:
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<SendLoginLinkResponse> localVarResult(new SendLoginLinkResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14674,7 +14674,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<UnBlockUserFromCommentResponse>> DefaultApi::unBlockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
     // verify the required parameter 'unBlockFromCommentParams' is set
@@ -14818,7 +14818,7 @@ pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<UnblockSuccess> localVarResult(new UnblockSuccess());
+        std::shared_ptr<UnBlockUserFromCommentResponse> localVarResult(new UnBlockUserFromCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14839,7 +14839,7 @@ pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<UnFlagCommentResponse>> DefaultApi::unFlagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
 {
 
 
@@ -14960,7 +14960,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<FlagCommentResponse> localVarResult(new FlagCommentResponse());
+        std::shared_ptr<UnFlagCommentResponse> localVarResult(new UnFlagCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -14981,7 +14981,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdatableCommentParams> updatableCommentParams, boost::optional<utility::string_t> contextUserId, boost::optional<bool> doSpamCheck, boost::optional<bool> isLive) const
+pplx::task<std::shared_ptr<UpdateCommentResponse>> DefaultApi::updateComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdatableCommentParams> updatableCommentParams, boost::optional<utility::string_t> contextUserId, boost::optional<bool> doSpamCheck, boost::optional<bool> isLive) const
 {
 
     // verify the required parameter 'updatableCommentParams' is set
@@ -15129,7 +15129,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(utility:
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateCommentResponse> localVarResult(new UpdateCommentResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15150,7 +15150,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateEmailTemplateBody> updateEmailTemplateBody) const
+pplx::task<std::shared_ptr<UpdateEmailTemplateResponse>> DefaultApi::updateEmailTemplate(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateEmailTemplateBody> updateEmailTemplateBody) const
 {
 
     // verify the required parameter 'updateEmailTemplateBody' is set
@@ -15286,7 +15286,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(ut
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateEmailTemplateResponse> localVarResult(new UpdateEmailTemplateResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15307,7 +15307,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(utility::string_t tenantId, utility::string_t id, std::shared_ptr<FeedPost> feedPost) const
+pplx::task<std::shared_ptr<UpdateFeedPostResponse>> DefaultApi::updateFeedPost(utility::string_t tenantId, utility::string_t id, std::shared_ptr<FeedPost> feedPost) const
 {
 
     // verify the required parameter 'feedPost' is set
@@ -15443,7 +15443,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(utility
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateFeedPostResponse> localVarResult(new UpdateFeedPostResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15464,7 +15464,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateModeratorBody> updateModeratorBody) const
+pplx::task<std::shared_ptr<UpdateModeratorResponse>> DefaultApi::updateModerator(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateModeratorBody> updateModeratorBody) const
 {
 
     // verify the required parameter 'updateModeratorBody' is set
@@ -15600,7 +15600,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(utilit
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateModeratorResponse> localVarResult(new UpdateModeratorResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15621,7 +15621,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateNotificationBody> updateNotificationBody, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<UpdateNotificationResponse>> DefaultApi::updateNotification(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateNotificationBody> updateNotificationBody, boost::optional<utility::string_t> userId) const
 {
 
     // verify the required parameter 'updateNotificationBody' is set
@@ -15761,7 +15761,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(uti
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateNotificationResponse> localVarResult(new UpdateNotificationResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15782,7 +15782,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionConfigBody> updateQuestionConfigBody) const
+pplx::task<std::shared_ptr<UpdateQuestionConfigResponse>> DefaultApi::updateQuestionConfig(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionConfigBody> updateQuestionConfigBody) const
 {
 
     // verify the required parameter 'updateQuestionConfigBody' is set
@@ -15918,7 +15918,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateQuestionConfigResponse> localVarResult(new UpdateQuestionConfigResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -15939,7 +15939,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionResult(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionResultBody> updateQuestionResultBody) const
+pplx::task<std::shared_ptr<UpdateQuestionResultResponse>> DefaultApi::updateQuestionResult(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionResultBody> updateQuestionResultBody) const
 {
 
     // verify the required parameter 'updateQuestionResultBody' is set
@@ -16075,7 +16075,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionResult(u
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateQuestionResultResponse> localVarResult(new UpdateQuestionResultResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -16257,7 +16257,7 @@ pplx::task<std::shared_ptr<UpdateSubscriptionAPIResponse>> DefaultApi::updateSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantBody> updateTenantBody) const
+pplx::task<std::shared_ptr<UpdateTenantResponse>> DefaultApi::updateTenant(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantBody> updateTenantBody) const
 {
 
     // verify the required parameter 'updateTenantBody' is set
@@ -16393,7 +16393,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(utility::
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateTenantResponse> localVarResult(new UpdateTenantResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -16414,7 +16414,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantPackageBody> updateTenantPackageBody) const
+pplx::task<std::shared_ptr<UpdateTenantPackageResponse>> DefaultApi::updateTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantPackageBody> updateTenantPackageBody) const
 {
 
     // verify the required parameter 'updateTenantPackageBody' is set
@@ -16550,7 +16550,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(ut
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateTenantPackageResponse> localVarResult(new UpdateTenantPackageResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -16571,7 +16571,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantUserBody> updateTenantUserBody, boost::optional<utility::string_t> updateComments) const
+pplx::task<std::shared_ptr<UpdateTenantUserResponse>> DefaultApi::updateTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantUserBody> updateTenantUserBody, boost::optional<utility::string_t> updateComments) const
 {
 
     // verify the required parameter 'updateTenantUserBody' is set
@@ -16711,7 +16711,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(utili
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptyResponse> localVarResult(new APIEmptyResponse());
+        std::shared_ptr<UpdateTenantUserResponse> localVarResult(new UpdateTenantUserResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -16732,7 +16732,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::updateUserBadge(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateUserBadgeParams> updateUserBadgeParams) const
+pplx::task<std::shared_ptr<UpdateUserBadgeResponse>> DefaultApi::updateUserBadge(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateUserBadgeParams> updateUserBadgeParams) const
 {
 
     // verify the required parameter 'updateUserBadgeParams' is set
@@ -16868,7 +16868,7 @@ pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::updateUserBadge
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<APIEmptySuccessResponse> localVarResult(new APIEmptySuccessResponse());
+        std::shared_ptr<UpdateUserBadgeResponse> localVarResult(new UpdateUserBadgeResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

@@ -26,6 +26,19 @@ UpdateUserNotificationStatusResponse::UpdateUserNotificationStatusResponse()
     m_ModifiedCount = 0L;
     m_ModifiedCountIsSet = false;
     m_NoteIsSet = false;
+    m_Reason = utility::conversions::to_string_t("");
+    m_ReasonIsSet = false;
+    m_Code = utility::conversions::to_string_t("");
+    m_CodeIsSet = false;
+    m_SecondaryCode = utility::conversions::to_string_t("");
+    m_SecondaryCodeIsSet = false;
+    m_BannedUntil = 0L;
+    m_BannedUntilIsSet = false;
+    m_MaxCharacterLength = 0;
+    m_MaxCharacterLengthIsSet = false;
+    m_TranslatedError = utility::conversions::to_string_t("");
+    m_TranslatedErrorIsSet = false;
+    m_CustomConfigIsSet = false;
 }
 
 UpdateUserNotificationStatusResponse::~UpdateUserNotificationStatusResponse()
@@ -61,6 +74,41 @@ web::json::value UpdateUserNotificationStatusResponse::toJson() const
         utility::string_t refVal = fromNoteEnum(m_Note);
         val[utility::conversions::to_string_t(_XPLATSTR("note"))] = ModelBase::toJson(refVal);
         
+    }
+    if(m_ReasonIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("reason"))] = ModelBase::toJson(m_Reason);
+    }
+    if(m_CodeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("code"))] = ModelBase::toJson(m_Code);
+    }
+    if(m_SecondaryCodeIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))] = ModelBase::toJson(m_SecondaryCode);
+    }
+    if(m_BannedUntilIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))] = ModelBase::toJson(m_BannedUntil);
+    }
+    if(m_MaxCharacterLengthIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))] = ModelBase::toJson(m_MaxCharacterLength);
+    }
+    if(m_TranslatedErrorIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("translatedError"))] = ModelBase::toJson(m_TranslatedError);
+    }
+    if(m_CustomConfigIsSet)
+    {
+        
+        val[utility::conversions::to_string_t(_XPLATSTR("customConfig"))] = ModelBase::toJson(m_CustomConfig);
     }
 
     return val;
@@ -114,6 +162,83 @@ bool UpdateUserNotificationStatusResponse::fromJson(const web::json::value& val)
             
         }
     }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("reason")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setReason;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setReason);
+            setReason(refVal_setReason);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("code")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCode);
+            setCode(refVal_setCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("secondaryCode")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setSecondaryCode;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setSecondaryCode);
+            setSecondaryCode(refVal_setSecondaryCode);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("bannedUntil")));
+        if(!fieldValue.is_null())
+        {
+            int64_t refVal_setBannedUntil;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setBannedUntil);
+            setBannedUntil(refVal_setBannedUntil);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength")));
+        if(!fieldValue.is_null())
+        {
+            int32_t refVal_setMaxCharacterLength;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setMaxCharacterLength);
+            setMaxCharacterLength(refVal_setMaxCharacterLength);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("translatedError"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("translatedError")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setTranslatedError;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setTranslatedError);
+            setTranslatedError(refVal_setTranslatedError);
+            
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("customConfig"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(_XPLATSTR("customConfig")));
+        if(!fieldValue.is_null())
+        {
+            std::shared_ptr<CustomConfigParameters> refVal_setCustomConfig;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setCustomConfig);
+            setCustomConfig(refVal_setCustomConfig);
+            
+        }
+    }
     return ok;
 }
 
@@ -139,6 +264,34 @@ void UpdateUserNotificationStatusResponse::toMultipart(std::shared_ptr<Multipart
     if(m_NoteIsSet)
     {
         multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("note")), fromNoteEnum(m_Note)));
+    }
+    if(m_ReasonIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("reason")), m_Reason));
+    }
+    if(m_CodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("code")), m_Code));
+    }
+    if(m_SecondaryCodeIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("secondaryCode")), m_SecondaryCode));
+    }
+    if(m_BannedUntilIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("bannedUntil")), m_BannedUntil));
+    }
+    if(m_MaxCharacterLengthIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength")), m_MaxCharacterLength));
+    }
+    if(m_TranslatedErrorIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("translatedError")), m_TranslatedError));
+    }
+    if(m_CustomConfigIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(_XPLATSTR("customConfig")), m_CustomConfig));
     }
 }
 
@@ -174,6 +327,48 @@ bool UpdateUserNotificationStatusResponse::fromMultiPart(std::shared_ptr<Multipa
         utility::string_t refVal_setNote;
         ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("note"))), refVal_setNote );
         setNote(toNoteEnum(refVal_setNote));
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("reason"))))
+    {
+        utility::string_t refVal_setReason;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("reason"))), refVal_setReason );
+        setReason(refVal_setReason);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("code"))))
+    {
+        utility::string_t refVal_setCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("code"))), refVal_setCode );
+        setCode(refVal_setCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))))
+    {
+        utility::string_t refVal_setSecondaryCode;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("secondaryCode"))), refVal_setSecondaryCode );
+        setSecondaryCode(refVal_setSecondaryCode);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))))
+    {
+        int64_t refVal_setBannedUntil;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("bannedUntil"))), refVal_setBannedUntil );
+        setBannedUntil(refVal_setBannedUntil);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))))
+    {
+        int32_t refVal_setMaxCharacterLength;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("maxCharacterLength"))), refVal_setMaxCharacterLength );
+        setMaxCharacterLength(refVal_setMaxCharacterLength);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("translatedError"))))
+    {
+        utility::string_t refVal_setTranslatedError;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("translatedError"))), refVal_setTranslatedError );
+        setTranslatedError(refVal_setTranslatedError);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(_XPLATSTR("customConfig"))))
+    {
+        std::shared_ptr<CustomConfigParameters> refVal_setCustomConfig;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(_XPLATSTR("customConfig"))), refVal_setCustomConfig );
+        setCustomConfig(refVal_setCustomConfig);
     }
     return ok;
 }
@@ -287,6 +482,151 @@ bool UpdateUserNotificationStatusResponse::noteIsSet() const
 void UpdateUserNotificationStatusResponse::unsetNote()
 {
     m_NoteIsSet = false;
+}
+utility::string_t UpdateUserNotificationStatusResponse::getReason() const
+{
+    return m_Reason;
+}
+
+
+void UpdateUserNotificationStatusResponse::setReason(const utility::string_t& value)
+{
+    m_Reason = value;
+    m_ReasonIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::reasonIsSet() const
+{
+    return m_ReasonIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetReason()
+{
+    m_ReasonIsSet = false;
+}
+utility::string_t UpdateUserNotificationStatusResponse::getCode() const
+{
+    return m_Code;
+}
+
+
+void UpdateUserNotificationStatusResponse::setCode(const utility::string_t& value)
+{
+    m_Code = value;
+    m_CodeIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::codeIsSet() const
+{
+    return m_CodeIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetCode()
+{
+    m_CodeIsSet = false;
+}
+utility::string_t UpdateUserNotificationStatusResponse::getSecondaryCode() const
+{
+    return m_SecondaryCode;
+}
+
+
+void UpdateUserNotificationStatusResponse::setSecondaryCode(const utility::string_t& value)
+{
+    m_SecondaryCode = value;
+    m_SecondaryCodeIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::secondaryCodeIsSet() const
+{
+    return m_SecondaryCodeIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetSecondaryCode()
+{
+    m_SecondaryCodeIsSet = false;
+}
+int64_t UpdateUserNotificationStatusResponse::getBannedUntil() const
+{
+    return m_BannedUntil;
+}
+
+void UpdateUserNotificationStatusResponse::setBannedUntil(int64_t value)
+{
+    m_BannedUntil = value;
+    m_BannedUntilIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::bannedUntilIsSet() const
+{
+    return m_BannedUntilIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetBannedUntil()
+{
+    m_BannedUntilIsSet = false;
+}
+int32_t UpdateUserNotificationStatusResponse::getMaxCharacterLength() const
+{
+    return m_MaxCharacterLength;
+}
+
+void UpdateUserNotificationStatusResponse::setMaxCharacterLength(int32_t value)
+{
+    m_MaxCharacterLength = value;
+    m_MaxCharacterLengthIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::maxCharacterLengthIsSet() const
+{
+    return m_MaxCharacterLengthIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetMaxCharacterLength()
+{
+    m_MaxCharacterLengthIsSet = false;
+}
+utility::string_t UpdateUserNotificationStatusResponse::getTranslatedError() const
+{
+    return m_TranslatedError;
+}
+
+
+void UpdateUserNotificationStatusResponse::setTranslatedError(const utility::string_t& value)
+{
+    m_TranslatedError = value;
+    m_TranslatedErrorIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::translatedErrorIsSet() const
+{
+    return m_TranslatedErrorIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetTranslatedError()
+{
+    m_TranslatedErrorIsSet = false;
+}
+std::shared_ptr<CustomConfigParameters> UpdateUserNotificationStatusResponse::getCustomConfig() const
+{
+    return m_CustomConfig;
+}
+
+
+void UpdateUserNotificationStatusResponse::setCustomConfig(const std::shared_ptr<CustomConfigParameters>& value)
+{
+    m_CustomConfig = value;
+    m_CustomConfigIsSet = true;
+}
+
+bool UpdateUserNotificationStatusResponse::customConfigIsSet() const
+{
+    return m_CustomConfigIsSet;
+}
+
+void UpdateUserNotificationStatusResponse::unsetCustomConfig()
+{
+    m_CustomConfigIsSet = false;
 }
 
 }

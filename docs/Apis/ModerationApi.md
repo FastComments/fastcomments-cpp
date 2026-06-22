@@ -51,7 +51,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteModerationVote"></a>
 # **deleteModerationVote**
-> VoteDeleteResponse deleteModerationVote(commentId, voteId, sso)
+> DeleteModerationVoteResponse deleteModerationVote(commentId, voteId, broadcastId, tenantId, sso)
 
 
 
@@ -61,11 +61,13 @@ All URIs are relative to *https://fastcomments.com*
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **voteId** | **String**|  | [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**VoteDeleteResponse**](../Models/VoteDeleteResponse.md)
+[**DeleteModerationVoteResponse**](../Models/DeleteModerationVoteResponse.md)
 
 ### Authorization
 
@@ -78,7 +80,7 @@ No authorization required
 
 <a name="getApiComments"></a>
 # **getApiComments**
-> ModerationAPIGetCommentsResponse getApiComments(page, count, text-search, byIPFromComment, filters, searchFilters, sorts, demo, sso)
+> GetApiCommentsResponse getApiComments(page, count, text-search, byIPFromComment, filters, searchFilters, sorts, demo, tenantId, sso)
 
 
 
@@ -94,11 +96,12 @@ No authorization required
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **sorts** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPIGetCommentsResponse**](../Models/ModerationAPIGetCommentsResponse.md)
+[**GetApiCommentsResponse**](../Models/GetApiCommentsResponse.md)
 
 ### Authorization
 
@@ -111,7 +114,7 @@ No authorization required
 
 <a name="getApiExportStatus"></a>
 # **getApiExportStatus**
-> ModerationExportStatusResponse getApiExportStatus(batchJobId, sso)
+> GetApiExportStatusResponse getApiExportStatus(batchJobId, tenantId, sso)
 
 
 
@@ -120,11 +123,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **batchJobId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationExportStatusResponse**](../Models/ModerationExportStatusResponse.md)
+[**GetApiExportStatusResponse**](../Models/GetApiExportStatusResponse.md)
 
 ### Authorization
 
@@ -137,7 +141,7 @@ No authorization required
 
 <a name="getApiIds"></a>
 # **getApiIds**
-> ModerationAPIGetCommentIdsResponse getApiIds(text-search, byIPFromComment, filters, searchFilters, afterId, demo, sso)
+> GetApiIdsResponse getApiIds(text-search, byIPFromComment, filters, searchFilters, afterId, demo, tenantId, sso)
 
 
 
@@ -151,11 +155,12 @@ No authorization required
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **afterId** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPIGetCommentIdsResponse**](../Models/ModerationAPIGetCommentIdsResponse.md)
+[**GetApiIdsResponse**](../Models/GetApiIdsResponse.md)
 
 ### Authorization
 
@@ -168,7 +173,7 @@ No authorization required
 
 <a name="getBanUsersFromComment"></a>
 # **getBanUsersFromComment**
-> GetBannedUsersFromCommentResponse getBanUsersFromComment(commentId, sso)
+> GetBanUsersFromCommentResponse getBanUsersFromComment(commentId, tenantId, sso)
 
 
 
@@ -177,11 +182,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetBannedUsersFromCommentResponse**](../Models/GetBannedUsersFromCommentResponse.md)
+[**GetBanUsersFromCommentResponse**](../Models/GetBanUsersFromCommentResponse.md)
 
 ### Authorization
 
@@ -194,7 +200,7 @@ No authorization required
 
 <a name="getCommentBanStatus"></a>
 # **getCommentBanStatus**
-> GetCommentBanStatusResponse getCommentBanStatus(commentId, sso)
+> GetCommentBanStatusResponse_1 getCommentBanStatus(commentId, tenantId, sso)
 
 
 
@@ -203,11 +209,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetCommentBanStatusResponse**](../Models/GetCommentBanStatusResponse.md)
+[**GetCommentBanStatusResponse_1**](../Models/GetCommentBanStatusResponse_1.md)
 
 ### Authorization
 
@@ -220,7 +227,7 @@ No authorization required
 
 <a name="getCommentChildren"></a>
 # **getCommentChildren**
-> ModerationAPIChildCommentsResponse getCommentChildren(commentId, sso)
+> GetCommentChildrenResponse getCommentChildren(commentId, tenantId, sso)
 
 
 
@@ -229,11 +236,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPIChildCommentsResponse**](../Models/ModerationAPIChildCommentsResponse.md)
+[**GetCommentChildrenResponse**](../Models/GetCommentChildrenResponse.md)
 
 ### Authorization
 
@@ -246,7 +254,7 @@ No authorization required
 
 <a name="getCount"></a>
 # **getCount**
-> ModerationAPICountCommentsResponse getCount(text-search, byIPFromComment, filter, searchFilters, demo, sso)
+> GetCountResponse getCount(text-search, byIPFromComment, filter, searchFilters, demo, tenantId, sso)
 
 
 
@@ -259,11 +267,12 @@ No authorization required
 | **filter** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPICountCommentsResponse**](../Models/ModerationAPICountCommentsResponse.md)
+[**GetCountResponse**](../Models/GetCountResponse.md)
 
 ### Authorization
 
@@ -276,7 +285,7 @@ No authorization required
 
 <a name="getCounts"></a>
 # **getCounts**
-> GetBannedUsersCountResponse getCounts(sso)
+> GetCountsResponse getCounts(tenantId, sso)
 
 
 
@@ -284,11 +293,12 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetBannedUsersCountResponse**](../Models/GetBannedUsersCountResponse.md)
+[**GetCountsResponse**](../Models/GetCountsResponse.md)
 
 ### Authorization
 
@@ -301,7 +311,7 @@ No authorization required
 
 <a name="getLogs"></a>
 # **getLogs**
-> ModerationAPIGetLogsResponse getLogs(commentId, sso)
+> GetLogsResponse getLogs(commentId, tenantId, sso)
 
 
 
@@ -310,11 +320,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPIGetLogsResponse**](../Models/ModerationAPIGetLogsResponse.md)
+[**GetLogsResponse**](../Models/GetLogsResponse.md)
 
 ### Authorization
 
@@ -327,7 +338,7 @@ No authorization required
 
 <a name="getManualBadges"></a>
 # **getManualBadges**
-> GetTenantManualBadgesResponse getManualBadges(sso)
+> GetManualBadgesResponse getManualBadges(tenantId, sso)
 
 
 
@@ -335,11 +346,12 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetTenantManualBadgesResponse**](../Models/GetTenantManualBadgesResponse.md)
+[**GetManualBadgesResponse**](../Models/GetManualBadgesResponse.md)
 
 ### Authorization
 
@@ -352,7 +364,7 @@ No authorization required
 
 <a name="getManualBadgesForUser"></a>
 # **getManualBadgesForUser**
-> GetUserManualBadgesResponse getManualBadgesForUser(badgesUserId, commentId, sso)
+> GetManualBadgesForUserResponse getManualBadgesForUser(badgesUserId, commentId, tenantId, sso)
 
 
 
@@ -362,11 +374,12 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **badgesUserId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetUserManualBadgesResponse**](../Models/GetUserManualBadgesResponse.md)
+[**GetManualBadgesForUserResponse**](../Models/GetManualBadgesForUserResponse.md)
 
 ### Authorization
 
@@ -379,7 +392,7 @@ No authorization required
 
 <a name="getModerationComment"></a>
 # **getModerationComment**
-> ModerationAPICommentResponse getModerationComment(commentId, includeEmail, includeIP, sso)
+> GetModerationCommentResponse getModerationComment(commentId, includeEmail, includeIP, tenantId, sso)
 
 
 
@@ -390,11 +403,12 @@ No authorization required
 | **commentId** | **String**|  | [default to null] |
 | **includeEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeIP** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPICommentResponse**](../Models/ModerationAPICommentResponse.md)
+[**GetModerationCommentResponse**](../Models/GetModerationCommentResponse.md)
 
 ### Authorization
 
@@ -407,7 +421,7 @@ No authorization required
 
 <a name="getModerationCommentText"></a>
 # **getModerationCommentText**
-> GetCommentTextResponse getModerationCommentText(commentId, sso)
+> GetModerationCommentTextResponse getModerationCommentText(commentId, tenantId, sso)
 
 
 
@@ -416,11 +430,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetCommentTextResponse**](../Models/GetCommentTextResponse.md)
+[**GetModerationCommentTextResponse**](../Models/GetModerationCommentTextResponse.md)
 
 ### Authorization
 
@@ -433,7 +448,7 @@ No authorization required
 
 <a name="getPreBanSummary"></a>
 # **getPreBanSummary**
-> PreBanSummary getPreBanSummary(commentId, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, sso)
+> GetPreBanSummaryResponse getPreBanSummary(commentId, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, tenantId, sso)
 
 
 
@@ -445,11 +460,12 @@ No authorization required
 | **includeByUserIdAndEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeByIP** | **Boolean**|  | [optional] [default to null] |
 | **includeByEmailDomain** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**PreBanSummary**](../Models/PreBanSummary.md)
+[**GetPreBanSummaryResponse**](../Models/GetPreBanSummaryResponse.md)
 
 ### Authorization
 
@@ -462,7 +478,7 @@ No authorization required
 
 <a name="getSearchCommentsSummary"></a>
 # **getSearchCommentsSummary**
-> ModerationCommentSearchResponse getSearchCommentsSummary(value, filters, searchFilters, sso)
+> GetSearchCommentsSummaryResponse getSearchCommentsSummary(value, filters, searchFilters, tenantId, sso)
 
 
 
@@ -473,11 +489,12 @@ No authorization required
 | **value** | **String**|  | [optional] [default to null] |
 | **filters** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationCommentSearchResponse**](../Models/ModerationCommentSearchResponse.md)
+[**GetSearchCommentsSummaryResponse**](../Models/GetSearchCommentsSummaryResponse.md)
 
 ### Authorization
 
@@ -490,7 +507,7 @@ No authorization required
 
 <a name="getSearchPages"></a>
 # **getSearchPages**
-> ModerationPageSearchResponse getSearchPages(value, sso)
+> GetSearchPagesResponse getSearchPages(value, tenantId, sso)
 
 
 
@@ -499,11 +516,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **value** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationPageSearchResponse**](../Models/ModerationPageSearchResponse.md)
+[**GetSearchPagesResponse**](../Models/GetSearchPagesResponse.md)
 
 ### Authorization
 
@@ -516,7 +534,7 @@ No authorization required
 
 <a name="getSearchSites"></a>
 # **getSearchSites**
-> ModerationSiteSearchResponse getSearchSites(value, sso)
+> GetSearchSitesResponse getSearchSites(value, tenantId, sso)
 
 
 
@@ -525,11 +543,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **value** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationSiteSearchResponse**](../Models/ModerationSiteSearchResponse.md)
+[**GetSearchSitesResponse**](../Models/GetSearchSitesResponse.md)
 
 ### Authorization
 
@@ -542,7 +561,7 @@ No authorization required
 
 <a name="getSearchSuggest"></a>
 # **getSearchSuggest**
-> ModerationSuggestResponse getSearchSuggest(text-search, sso)
+> GetSearchSuggestResponse getSearchSuggest(text-search, tenantId, sso)
 
 
 
@@ -551,11 +570,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **text-search** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationSuggestResponse**](../Models/ModerationSuggestResponse.md)
+[**GetSearchSuggestResponse**](../Models/GetSearchSuggestResponse.md)
 
 ### Authorization
 
@@ -568,7 +588,7 @@ No authorization required
 
 <a name="getSearchUsers"></a>
 # **getSearchUsers**
-> ModerationUserSearchResponse getSearchUsers(value, sso)
+> GetSearchUsersResponse getSearchUsers(value, tenantId, sso)
 
 
 
@@ -577,11 +597,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **value** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationUserSearchResponse**](../Models/ModerationUserSearchResponse.md)
+[**GetSearchUsersResponse**](../Models/GetSearchUsersResponse.md)
 
 ### Authorization
 
@@ -594,7 +615,7 @@ No authorization required
 
 <a name="getTrustFactor"></a>
 # **getTrustFactor**
-> GetUserTrustFactorResponse getTrustFactor(userId, sso)
+> GetTrustFactorResponse getTrustFactor(userId, tenantId, sso)
 
 
 
@@ -603,11 +624,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetUserTrustFactorResponse**](../Models/GetUserTrustFactorResponse.md)
+[**GetTrustFactorResponse**](../Models/GetTrustFactorResponse.md)
 
 ### Authorization
 
@@ -620,7 +642,7 @@ No authorization required
 
 <a name="getUserBanPreference"></a>
 # **getUserBanPreference**
-> APIModerateGetUserBanPreferencesResponse getUserBanPreference(sso)
+> GetUserBanPreferenceResponse getUserBanPreference(tenantId, sso)
 
 
 
@@ -628,11 +650,12 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIModerateGetUserBanPreferencesResponse**](../Models/APIModerateGetUserBanPreferencesResponse.md)
+[**GetUserBanPreferenceResponse**](../Models/GetUserBanPreferenceResponse.md)
 
 ### Authorization
 
@@ -645,7 +668,7 @@ No authorization required
 
 <a name="getUserInternalProfile"></a>
 # **getUserInternalProfile**
-> GetUserInternalProfileResponse getUserInternalProfile(commentId, sso)
+> GetUserInternalProfileResponse_1 getUserInternalProfile(commentId, tenantId, sso)
 
 
 
@@ -654,11 +677,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**GetUserInternalProfileResponse**](../Models/GetUserInternalProfileResponse.md)
+[**GetUserInternalProfileResponse_1**](../Models/GetUserInternalProfileResponse_1.md)
 
 ### Authorization
 
@@ -671,7 +695,7 @@ No authorization required
 
 <a name="postAdjustCommentVotes"></a>
 # **postAdjustCommentVotes**
-> AdjustVotesResponse postAdjustCommentVotes(commentId, AdjustCommentVotesParams, sso)
+> PostAdjustCommentVotesResponse postAdjustCommentVotes(commentId, AdjustCommentVotesParams, broadcastId, tenantId, sso)
 
 
 
@@ -681,11 +705,13 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **AdjustCommentVotesParams** | [**AdjustCommentVotesParams**](../Models/AdjustCommentVotesParams.md)|  | |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**AdjustVotesResponse**](../Models/AdjustVotesResponse.md)
+[**PostAdjustCommentVotesResponse**](../Models/PostAdjustCommentVotesResponse.md)
 
 ### Authorization
 
@@ -698,7 +724,7 @@ No authorization required
 
 <a name="postApiExport"></a>
 # **postApiExport**
-> ModerationExportResponse postApiExport(text-search, byIPFromComment, filters, searchFilters, sorts, sso)
+> PostApiExportResponse postApiExport(text-search, byIPFromComment, filters, searchFilters, sorts, tenantId, sso)
 
 
 
@@ -711,11 +737,12 @@ No authorization required
 | **filters** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **sorts** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationExportResponse**](../Models/ModerationExportResponse.md)
+[**PostApiExportResponse**](../Models/PostApiExportResponse.md)
 
 ### Authorization
 
@@ -728,7 +755,7 @@ No authorization required
 
 <a name="postBanUserFromComment"></a>
 # **postBanUserFromComment**
-> BanUserFromCommentResult postBanUserFromComment(commentId, banEmail, banEmailDomain, banIP, deleteAllUsersComments, bannedUntil, isShadowBan, updateId, banReason, sso)
+> PostBanUserFromCommentResponse postBanUserFromComment(commentId, banEmail, banEmailDomain, banIP, deleteAllUsersComments, bannedUntil, isShadowBan, updateId, banReason, tenantId, sso)
 
 
 
@@ -745,11 +772,12 @@ No authorization required
 | **isShadowBan** | **Boolean**|  | [optional] [default to null] |
 | **updateId** | **String**|  | [optional] [default to null] |
 | **banReason** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**BanUserFromCommentResult**](../Models/BanUserFromCommentResult.md)
+[**PostBanUserFromCommentResponse**](../Models/PostBanUserFromCommentResponse.md)
 
 ### Authorization
 
@@ -762,7 +790,7 @@ No authorization required
 
 <a name="postBanUserUndo"></a>
 # **postBanUserUndo**
-> APIEmptyResponse postBanUserUndo(BanUserUndoParams, sso)
+> PostBanUserUndoResponse postBanUserUndo(BanUserUndoParams, tenantId, sso)
 
 
 
@@ -771,11 +799,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **BanUserUndoParams** | [**BanUserUndoParams**](../Models/BanUserUndoParams.md)|  | |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostBanUserUndoResponse**](../Models/PostBanUserUndoResponse.md)
 
 ### Authorization
 
@@ -788,7 +817,7 @@ No authorization required
 
 <a name="postBulkPreBanSummary"></a>
 # **postBulkPreBanSummary**
-> BulkPreBanSummary postBulkPreBanSummary(BulkPreBanParams, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, sso)
+> PostBulkPreBanSummaryResponse postBulkPreBanSummary(BulkPreBanParams, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, tenantId, sso)
 
 
 
@@ -800,11 +829,12 @@ No authorization required
 | **includeByUserIdAndEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeByIP** | **Boolean**|  | [optional] [default to null] |
 | **includeByEmailDomain** | **Boolean**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**BulkPreBanSummary**](../Models/BulkPreBanSummary.md)
+[**PostBulkPreBanSummaryResponse**](../Models/PostBulkPreBanSummaryResponse.md)
 
 ### Authorization
 
@@ -817,7 +847,7 @@ No authorization required
 
 <a name="postCommentsByIds"></a>
 # **postCommentsByIds**
-> ModerationAPIChildCommentsResponse postCommentsByIds(CommentsByIdsParams, sso)
+> PostCommentsByIdsResponse postCommentsByIds(CommentsByIdsParams, tenantId, sso)
 
 
 
@@ -826,11 +856,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **CommentsByIdsParams** | [**CommentsByIdsParams**](../Models/CommentsByIdsParams.md)|  | |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**ModerationAPIChildCommentsResponse**](../Models/ModerationAPIChildCommentsResponse.md)
+[**PostCommentsByIdsResponse**](../Models/PostCommentsByIdsResponse.md)
 
 ### Authorization
 
@@ -843,7 +874,7 @@ No authorization required
 
 <a name="postFlagComment"></a>
 # **postFlagComment**
-> APIEmptyResponse postFlagComment(commentId, sso)
+> PostFlagCommentResponse postFlagComment(commentId, broadcastId, tenantId, sso)
 
 
 
@@ -852,11 +883,13 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostFlagCommentResponse**](../Models/PostFlagCommentResponse.md)
 
 ### Authorization
 
@@ -869,7 +902,7 @@ No authorization required
 
 <a name="postRemoveComment"></a>
 # **postRemoveComment**
-> PostRemoveCommentResponse postRemoveComment(commentId, sso)
+> PostRemoveCommentResponse postRemoveComment(commentId, broadcastId, tenantId, sso)
 
 
 
@@ -878,6 +911,8 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -895,7 +930,7 @@ No authorization required
 
 <a name="postRestoreDeletedComment"></a>
 # **postRestoreDeletedComment**
-> APIEmptyResponse postRestoreDeletedComment(commentId, sso)
+> PostRestoreDeletedCommentResponse postRestoreDeletedComment(commentId, broadcastId, tenantId, sso)
 
 
 
@@ -904,11 +939,13 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostRestoreDeletedCommentResponse**](../Models/PostRestoreDeletedCommentResponse.md)
 
 ### Authorization
 
@@ -921,7 +958,7 @@ No authorization required
 
 <a name="postSetCommentApprovalStatus"></a>
 # **postSetCommentApprovalStatus**
-> SetCommentApprovedResponse postSetCommentApprovalStatus(commentId, approved, sso)
+> PostSetCommentApprovalStatusResponse postSetCommentApprovalStatus(commentId, approved, broadcastId, tenantId, sso)
 
 
 
@@ -931,11 +968,13 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **approved** | **Boolean**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**SetCommentApprovedResponse**](../Models/SetCommentApprovedResponse.md)
+[**PostSetCommentApprovalStatusResponse**](../Models/PostSetCommentApprovalStatusResponse.md)
 
 ### Authorization
 
@@ -948,7 +987,7 @@ No authorization required
 
 <a name="postSetCommentReviewStatus"></a>
 # **postSetCommentReviewStatus**
-> APIEmptyResponse postSetCommentReviewStatus(commentId, reviewed, sso)
+> PostSetCommentReviewStatusResponse postSetCommentReviewStatus(commentId, reviewed, broadcastId, tenantId, sso)
 
 
 
@@ -958,11 +997,13 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **reviewed** | **Boolean**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostSetCommentReviewStatusResponse**](../Models/PostSetCommentReviewStatusResponse.md)
 
 ### Authorization
 
@@ -975,7 +1016,7 @@ No authorization required
 
 <a name="postSetCommentSpamStatus"></a>
 # **postSetCommentSpamStatus**
-> APIEmptyResponse postSetCommentSpamStatus(commentId, spam, permNotSpam, sso)
+> PostSetCommentSpamStatusResponse postSetCommentSpamStatus(commentId, spam, permNotSpam, broadcastId, tenantId, sso)
 
 
 
@@ -986,11 +1027,13 @@ No authorization required
 | **commentId** | **String**|  | [default to null] |
 | **spam** | **Boolean**|  | [optional] [default to null] |
 | **permNotSpam** | **Boolean**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostSetCommentSpamStatusResponse**](../Models/PostSetCommentSpamStatusResponse.md)
 
 ### Authorization
 
@@ -1003,7 +1046,7 @@ No authorization required
 
 <a name="postSetCommentText"></a>
 # **postSetCommentText**
-> SetCommentTextResponse postSetCommentText(commentId, SetCommentTextParams, sso)
+> PostSetCommentTextResponse postSetCommentText(commentId, SetCommentTextParams, broadcastId, tenantId, sso)
 
 
 
@@ -1013,11 +1056,13 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **SetCommentTextParams** | [**SetCommentTextParams**](../Models/SetCommentTextParams.md)|  | |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**SetCommentTextResponse**](../Models/SetCommentTextResponse.md)
+[**PostSetCommentTextResponse**](../Models/PostSetCommentTextResponse.md)
 
 ### Authorization
 
@@ -1030,7 +1075,7 @@ No authorization required
 
 <a name="postUnFlagComment"></a>
 # **postUnFlagComment**
-> APIEmptyResponse postUnFlagComment(commentId, sso)
+> PostUnFlagCommentResponse postUnFlagComment(commentId, broadcastId, tenantId, sso)
 
 
 
@@ -1039,11 +1084,13 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PostUnFlagCommentResponse**](../Models/PostUnFlagCommentResponse.md)
 
 ### Authorization
 
@@ -1056,7 +1103,7 @@ No authorization required
 
 <a name="postVote"></a>
 # **postVote**
-> VoteResponse postVote(commentId, direction, sso)
+> PostVoteResponse postVote(commentId, direction, broadcastId, tenantId, sso)
 
 
 
@@ -1066,11 +1113,13 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **direction** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**VoteResponse**](../Models/VoteResponse.md)
+[**PostVoteResponse**](../Models/PostVoteResponse.md)
 
 ### Authorization
 
@@ -1083,7 +1132,7 @@ No authorization required
 
 <a name="putAwardBadge"></a>
 # **putAwardBadge**
-> AwardUserBadgeResponse putAwardBadge(badgeId, userId, commentId, broadcastId, sso)
+> PutAwardBadgeResponse putAwardBadge(badgeId, userId, commentId, broadcastId, tenantId, sso)
 
 
 
@@ -1095,11 +1144,12 @@ No authorization required
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**AwardUserBadgeResponse**](../Models/AwardUserBadgeResponse.md)
+[**PutAwardBadgeResponse**](../Models/PutAwardBadgeResponse.md)
 
 ### Authorization
 
@@ -1112,7 +1162,7 @@ No authorization required
 
 <a name="putCloseThread"></a>
 # **putCloseThread**
-> APIEmptyResponse putCloseThread(urlId, sso)
+> PutCloseThreadResponse putCloseThread(urlId, tenantId, sso)
 
 
 
@@ -1121,11 +1171,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **urlId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PutCloseThreadResponse**](../Models/PutCloseThreadResponse.md)
 
 ### Authorization
 
@@ -1138,7 +1189,7 @@ No authorization required
 
 <a name="putRemoveBadge"></a>
 # **putRemoveBadge**
-> RemoveUserBadgeResponse putRemoveBadge(badgeId, userId, commentId, broadcastId, sso)
+> PutRemoveBadgeResponse putRemoveBadge(badgeId, userId, commentId, broadcastId, tenantId, sso)
 
 
 
@@ -1150,11 +1201,12 @@ No authorization required
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**RemoveUserBadgeResponse**](../Models/RemoveUserBadgeResponse.md)
+[**PutRemoveBadgeResponse**](../Models/PutRemoveBadgeResponse.md)
 
 ### Authorization
 
@@ -1167,7 +1219,7 @@ No authorization required
 
 <a name="putReopenThread"></a>
 # **putReopenThread**
-> APIEmptyResponse putReopenThread(urlId, sso)
+> PutReopenThreadResponse putReopenThread(urlId, tenantId, sso)
 
 
 
@@ -1176,11 +1228,12 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **urlId** | **String**|  | [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**APIEmptyResponse**](../Models/APIEmptyResponse.md)
+[**PutReopenThreadResponse**](../Models/PutReopenThreadResponse.md)
 
 ### Authorization
 
@@ -1193,7 +1246,7 @@ No authorization required
 
 <a name="setTrustFactor"></a>
 # **setTrustFactor**
-> SetUserTrustFactorResponse setTrustFactor(userId, trustFactor, sso)
+> SetTrustFactorResponse setTrustFactor(userId, trustFactor, tenantId, sso)
 
 
 
@@ -1203,11 +1256,12 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**|  | [optional] [default to null] |
 | **trustFactor** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**SetUserTrustFactorResponse**](../Models/SetUserTrustFactorResponse.md)
+[**SetTrustFactorResponse**](../Models/SetTrustFactorResponse.md)
 
 ### Authorization
 
