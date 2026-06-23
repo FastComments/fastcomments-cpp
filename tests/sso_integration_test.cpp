@@ -59,12 +59,7 @@ TEST_F(SSOIntegrationTest, PublicAPINoSSO) {
 
     auto response = publicApi.getCommentsPublic(
         utility::conversions::to_string_t(tenantID),
-        utility::conversions::to_string_t("sdk-test-page"),
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none
+        utility::conversions::to_string_t("sdk-test-page")
     ).get();
 
     ASSERT_NE(response, nullptr);
@@ -98,26 +93,26 @@ TEST_F(SSOIntegrationTest, PublicAPIWithSecureSSO) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
+
     auto createResponse = publicApi.createCommentPublic(
         utility::conversions::to_string_t(tenantID),
         utility::conversions::to_string_t("sdk-test-cpp"),
         utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
         commentData,
-        boost::none,
-        utility::conversions::to_string_t(token)
+        createOpts
     ).get();
 
     ASSERT_NE(createResponse, nullptr);
 
+    ApiGetCommentsPublicOptions getOpts;
+    getOpts.sso = utility::conversions::to_string_t(token);
+
     auto getResponse = publicApi.getCommentsPublic(
         utility::conversions::to_string_t(tenantID),
         utility::conversions::to_string_t("sdk-test-cpp"),
-        boost::none, boost::none,
-        utility::conversions::to_string_t(token),
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none
+        getOpts
     ).get();
 
     ASSERT_NE(getResponse, nullptr);
@@ -155,13 +150,15 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
+
     auto createResponse = publicApi.createCommentPublic(
         utility::conversions::to_string_t(tenantID),
         utility::conversions::to_string_t(testUrlId),
         utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
         commentData,
-        boost::none,
-        utility::conversions::to_string_t(token)
+        createOpts
     ).get();
 
     ASSERT_NE(createResponse, nullptr);
@@ -177,24 +174,12 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
         auto defaultApiClient = std::make_shared<org::openapitools::client::api::ApiClient>(defaultConfig);
         DefaultApi defaultApi(defaultApiClient);
 
+        ApiGetCommentsOptions getOpts;
+        getOpts.urlId = utility::conversions::to_string_t(testUrlId);
+
         auto getResponse = defaultApi.getComments(
             utility::conversions::to_string_t(tenantID),
-            boost::none,  // page
-            boost::none,  // limit
-            boost::none,  // skip
-            boost::none,  // asTree
-            boost::none,  // skipChildren
-            boost::none,  // limitChildren
-            boost::none,  // maxTreeDepth
-            utility::conversions::to_string_t(testUrlId),  // urlId
-            boost::none,  // userId
-            boost::none,  // anonUserId
-            boost::none,  // contextUserId
-            boost::none,  // hashTag
-            boost::none,  // parentId
-            boost::none,  // direction
-            boost::none,  // fromDate
-            boost::none   // toDate
+            getOpts
         ).get();
 
         ASSERT_NE(getResponse, nullptr);
@@ -265,13 +250,15 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
+
     auto createResponse = publicApi.createCommentPublic(
         utility::conversions::to_string_t(tenantID),
         utility::conversions::to_string_t(testUrlId),
         utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
         commentData,
-        boost::none,
-        utility::conversions::to_string_t(token)
+        createOpts
     ).get();
 
     ASSERT_NE(createResponse, nullptr);
@@ -280,16 +267,13 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     // Step 2: Fetch the comment back using PUBLIC API with SSO
     std::cout << "Step 2: Fetching comments for page '" << testUrlId << "' with SSO..." << std::endl;
 
+    ApiGetCommentsPublicOptions getOpts;
+    getOpts.sso = utility::conversions::to_string_t(token);
+
     auto getResponse = publicApi.getCommentsPublic(
         utility::conversions::to_string_t(tenantID),
         utility::conversions::to_string_t(testUrlId),
-        boost::none,  // page
-        boost::none,  // limit
-        utility::conversions::to_string_t(token),  // ssoToken
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none, boost::none,
-        boost::none, boost::none, boost::none, boost::none, boost::none
+        getOpts
     ).get();
 
     ASSERT_NE(getResponse, nullptr);

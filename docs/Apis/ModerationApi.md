@@ -51,7 +51,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteModerationVote"></a>
 # **deleteModerationVote**
-> VoteDeleteResponse deleteModerationVote(commentId, voteId, broadcastId, tenantId, sso)
+> VoteDeleteResponse deleteModerationVote(commentId, voteId, tenantId, broadcastId, sso)
 
 
 
@@ -61,8 +61,8 @@ All URIs are relative to *https://fastcomments.com*
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **voteId** | **String**|  | [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -695,7 +695,7 @@ No authorization required
 
 <a name="postAdjustCommentVotes"></a>
 # **postAdjustCommentVotes**
-> AdjustVotesResponse postAdjustCommentVotes(commentId, AdjustCommentVotesParams, broadcastId, tenantId, sso)
+> AdjustVotesResponse postAdjustCommentVotes(commentId, AdjustCommentVotesParams, tenantId, broadcastId, sso)
 
 
 
@@ -705,8 +705,8 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **AdjustCommentVotesParams** | [**AdjustCommentVotesParams**](../Models/AdjustCommentVotesParams.md)|  | |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -874,7 +874,7 @@ No authorization required
 
 <a name="postFlagComment"></a>
 # **postFlagComment**
-> APIEmptyResponse postFlagComment(commentId, broadcastId, tenantId, sso)
+> APIEmptyResponse postFlagComment(commentId, tenantId, broadcastId, sso)
 
 
 
@@ -883,8 +883,8 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -902,7 +902,7 @@ No authorization required
 
 <a name="postRemoveComment"></a>
 # **postRemoveComment**
-> PostRemoveCommentResponse postRemoveComment(commentId, broadcastId, tenantId, sso)
+> PostRemoveCommentResponse postRemoveComment(commentId, tenantId, broadcastId, sso)
 
 
 
@@ -911,8 +911,8 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -930,7 +930,7 @@ No authorization required
 
 <a name="postRestoreDeletedComment"></a>
 # **postRestoreDeletedComment**
-> APIEmptyResponse postRestoreDeletedComment(commentId, broadcastId, tenantId, sso)
+> APIEmptyResponse postRestoreDeletedComment(commentId, tenantId, broadcastId, sso)
 
 
 
@@ -939,8 +939,8 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -958,7 +958,7 @@ No authorization required
 
 <a name="postSetCommentApprovalStatus"></a>
 # **postSetCommentApprovalStatus**
-> SetCommentApprovedResponse postSetCommentApprovalStatus(commentId, approved, broadcastId, tenantId, sso)
+> SetCommentApprovedResponse postSetCommentApprovalStatus(commentId, approved, tenantId, broadcastId, sso)
 
 
 
@@ -968,8 +968,8 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **approved** | **Boolean**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -987,7 +987,7 @@ No authorization required
 
 <a name="postSetCommentReviewStatus"></a>
 # **postSetCommentReviewStatus**
-> APIEmptyResponse postSetCommentReviewStatus(commentId, reviewed, broadcastId, tenantId, sso)
+> APIEmptyResponse postSetCommentReviewStatus(commentId, reviewed, tenantId, broadcastId, sso)
 
 
 
@@ -997,8 +997,8 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **reviewed** | **Boolean**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1016,7 +1016,7 @@ No authorization required
 
 <a name="postSetCommentSpamStatus"></a>
 # **postSetCommentSpamStatus**
-> APIEmptyResponse postSetCommentSpamStatus(commentId, spam, permNotSpam, broadcastId, tenantId, sso)
+> APIEmptyResponse postSetCommentSpamStatus(commentId, spam, permNotSpam, tenantId, broadcastId, sso)
 
 
 
@@ -1027,8 +1027,8 @@ No authorization required
 | **commentId** | **String**|  | [default to null] |
 | **spam** | **Boolean**|  | [optional] [default to null] |
 | **permNotSpam** | **Boolean**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1046,7 +1046,7 @@ No authorization required
 
 <a name="postSetCommentText"></a>
 # **postSetCommentText**
-> SetCommentTextResponse postSetCommentText(commentId, SetCommentTextParams, broadcastId, tenantId, sso)
+> SetCommentTextResponse postSetCommentText(commentId, SetCommentTextParams, tenantId, broadcastId, sso)
 
 
 
@@ -1056,8 +1056,8 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **SetCommentTextParams** | [**SetCommentTextParams**](../Models/SetCommentTextParams.md)|  | |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1075,7 +1075,7 @@ No authorization required
 
 <a name="postUnFlagComment"></a>
 # **postUnFlagComment**
-> APIEmptyResponse postUnFlagComment(commentId, broadcastId, tenantId, sso)
+> APIEmptyResponse postUnFlagComment(commentId, tenantId, broadcastId, sso)
 
 
 
@@ -1084,8 +1084,8 @@ No authorization required
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1103,7 +1103,7 @@ No authorization required
 
 <a name="postVote"></a>
 # **postVote**
-> VoteResponse postVote(commentId, direction, broadcastId, tenantId, sso)
+> VoteResponse postVote(commentId, direction, tenantId, broadcastId, sso)
 
 
 
@@ -1113,8 +1113,8 @@ No authorization required
 |------------- | ------------- | ------------- | -------------|
 | **commentId** | **String**|  | [default to null] |
 | **direction** | **String**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1132,7 +1132,7 @@ No authorization required
 
 <a name="putAwardBadge"></a>
 # **putAwardBadge**
-> AwardUserBadgeResponse putAwardBadge(badgeId, userId, commentId, broadcastId, tenantId, sso)
+> AwardUserBadgeResponse putAwardBadge(badgeId, userId, commentId, tenantId, broadcastId, sso)
 
 
 
@@ -1143,8 +1143,8 @@ No authorization required
 | **badgeId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1189,7 +1189,7 @@ No authorization required
 
 <a name="putRemoveBadge"></a>
 # **putRemoveBadge**
-> RemoveUserBadgeResponse putRemoveBadge(badgeId, userId, commentId, broadcastId, tenantId, sso)
+> RemoveUserBadgeResponse putRemoveBadge(badgeId, userId, commentId, tenantId, broadcastId, sso)
 
 
 
@@ -1200,8 +1200,8 @@ No authorization required
 | **badgeId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **broadcastId** | **String**|  | [optional] [default to null] |
 | **tenantId** | **String**|  | [optional] [default to null] |
+| **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type

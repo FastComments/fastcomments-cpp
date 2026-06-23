@@ -1,4 +1,5 @@
 {
   "packageName": "FastCommentsClient",
-  "packageVersion": "2.0.1"
+  "packageVersion": "2.0.1",
+  "useSingleRequestParameter": true
 }
