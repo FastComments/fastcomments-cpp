@@ -13179,6 +13179,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13264,6 +13272,14 @@
 						"required": false,
 						"schema": {
 							"type": "boolean"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
 						}
 					},
 					{
@@ -13375,6 +13391,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13456,6 +13480,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13498,6 +13530,14 @@
 					{
 						"in": "query",
 						"name": "batchJobId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13554,6 +13594,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13603,6 +13651,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13645,6 +13701,14 @@
 					{
 						"in": "query",
 						"name": "value",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13717,6 +13781,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13759,6 +13831,14 @@
 					{
 						"in": "query",
 						"name": "text-search",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13839,6 +13919,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13900,6 +13988,14 @@
 						"required": false,
 						"schema": {
 							"type": "boolean"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
 						}
 					},
 					{
@@ -14027,6 +14123,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14076,6 +14180,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14115,6 +14227,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "sso",
@@ -14184,6 +14304,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14227,6 +14363,22 @@
 						"in": "path",
 						"name": "commentId",
 						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -14282,6 +14434,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14325,6 +14493,22 @@
 						"in": "path",
 						"name": "commentId",
 						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -14384,6 +14568,22 @@
 						"required": false,
 						"schema": {
 							"type": "boolean"
+						}
+					},
+					{
+						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
 						}
 					},
 					{
@@ -14453,6 +14653,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14510,6 +14726,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14553,6 +14785,14 @@
 						"in": "path",
 						"name": "commentId",
 						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -14624,6 +14864,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14663,6 +14911,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "sso",
@@ -14724,6 +14980,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14773,6 +15037,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14816,6 +15088,22 @@
 						"in": "path",
 						"name": "commentId",
 						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -14875,6 +15163,22 @@
 						"in": "path",
 						"name": "commentId",
 						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -14948,6 +15252,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15005,6 +15325,22 @@
 					},
 					{
 						"in": "query",
+						"name": "broadcastId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15054,6 +15390,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15095,6 +15439,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15134,6 +15486,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "sso",
@@ -15186,6 +15546,14 @@
 					{
 						"in": "query",
 						"name": "commentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15266,6 +15634,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15339,6 +15715,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15381,6 +15765,14 @@
 					{
 						"in": "query",
 						"name": "userId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15445,6 +15837,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15487,6 +15887,14 @@
 					{
 						"in": "query",
 						"name": "commentId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15543,6 +15951,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15592,6 +16008,14 @@
 					},
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15631,6 +16055,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "sso",
