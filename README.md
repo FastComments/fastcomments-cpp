@@ -126,10 +126,10 @@ int main() {
     // Pass the moderator's SSO token to authenticate the call
     auto ssoToken = utility::conversions::to_string_t("YOUR_MODERATOR_SSO_TOKEN");
 
-    org::openapitools::client::api::ModerationApi::ApiGetCountRequest request;
-    request.sso = ssoToken;
+    org::openapitools::client::api::ApiGetCountOptions options;
+    options.sso = ssoToken;
 
-    auto response = moderationApi.getCount(request).get();
+    auto response = moderationApi.getCount(options).get();
 
     return 0;
 }
@@ -158,13 +158,15 @@ config->setApiKey(utility::conversions::to_string_t("api_key"),
 auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
 org::openapitools::client::api::DefaultApi api(apiClient);
 
-// Build the request struct (one field per parameter)
-org::openapitools::client::api::DefaultApi::ApiGetCommentsRequest request;
-request.tenantId = utility::conversions::to_string_t("your-tenant-id");
-request.urlId = utility::conversions::to_string_t("your-url-id");
+// Required parameters are positional; optional ones go in the options struct
+org::openapitools::client::api::ApiGetCommentsOptions options;
+options.urlId = utility::conversions::to_string_t("your-url-id");
 
 // Call .get() to block and get the result synchronously
-auto response = api.getComments(request).get();  // Blocks until the HTTP request completes
+auto response = api.getComments(
+    utility::conversions::to_string_t("your-tenant-id"),
+    options
+).get();  // Blocks until the HTTP request completes
 
 if (response && response->comments) {
     std::cout << "Found " << response->comments->size() << " comments" << std::endl;
@@ -184,13 +186,15 @@ config->setApiKey(utility::conversions::to_string_t("api_key"),
 auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
 org::openapitools::client::api::DefaultApi api(apiClient);
 
-// Build the request struct (one field per parameter)
-org::openapitools::client::api::DefaultApi::ApiGetCommentsRequest request;
-request.tenantId = utility::conversions::to_string_t("your-tenant-id");
-request.urlId = utility::conversions::to_string_t("your-url-id");
+// Required parameters are positional; optional ones go in the options struct
+org::openapitools::client::api::ApiGetCommentsOptions options;
+options.urlId = utility::conversions::to_string_t("your-url-id");
 
 // Use .then() for asynchronous callback-based execution
-api.getComments(request).then([](std::shared_ptr<GetComments_200_response> response) {
+api.getComments(
+    utility::conversions::to_string_t("your-tenant-id"),
+    options
+).then([](std::shared_ptr<GetComments_200_response> response) {
     // This runs asynchronously when the request completes
     if (response && response->comments) {
         std::cout << "Found " << response->comments->size() << " comments" << std::endl;

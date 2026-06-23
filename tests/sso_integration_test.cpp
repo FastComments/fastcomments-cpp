@@ -57,11 +57,10 @@ TEST_F(SSOIntegrationTest, PublicAPINoSSO) {
     auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
     PublicApi publicApi(apiClient);
 
-    PublicApi::ApiGetCommentsPublicRequest getReq;
-    getReq.tenantId = utility::conversions::to_string_t(tenantID);
-    getReq.urlId = utility::conversions::to_string_t("sdk-test-page");
-
-    auto response = publicApi.getCommentsPublic(getReq).get();
+    auto response = publicApi.getCommentsPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t("sdk-test-page")
+    ).get();
 
     ASSERT_NE(response, nullptr);
 }
@@ -94,23 +93,27 @@ TEST_F(SSOIntegrationTest, PublicAPIWithSecureSSO) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    PublicApi::ApiCreateCommentPublicRequest createReq;
-    createReq.tenantId = utility::conversions::to_string_t(tenantID);
-    createReq.urlId = utility::conversions::to_string_t("sdk-test-cpp");
-    createReq.broadcastId = utility::conversions::to_string_t("test-" + std::to_string(timestamp));
-    createReq.commentData = commentData;
-    createReq.sso = utility::conversions::to_string_t(token);
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
 
-    auto createResponse = publicApi.createCommentPublic(createReq).get();
+    auto createResponse = publicApi.createCommentPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t("sdk-test-cpp"),
+        utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
+        commentData,
+        createOpts
+    ).get();
 
     ASSERT_NE(createResponse, nullptr);
 
-    PublicApi::ApiGetCommentsPublicRequest getReq;
-    getReq.tenantId = utility::conversions::to_string_t(tenantID);
-    getReq.urlId = utility::conversions::to_string_t("sdk-test-cpp");
-    getReq.sso = utility::conversions::to_string_t(token);
+    ApiGetCommentsPublicOptions getOpts;
+    getOpts.sso = utility::conversions::to_string_t(token);
 
-    auto getResponse = publicApi.getCommentsPublic(getReq).get();
+    auto getResponse = publicApi.getCommentsPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t("sdk-test-cpp"),
+        getOpts
+    ).get();
 
     ASSERT_NE(getResponse, nullptr);
 }
@@ -147,14 +150,16 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    PublicApi::ApiCreateCommentPublicRequest createReq;
-    createReq.tenantId = utility::conversions::to_string_t(tenantID);
-    createReq.urlId = utility::conversions::to_string_t(testUrlId);
-    createReq.broadcastId = utility::conversions::to_string_t("test-" + std::to_string(timestamp));
-    createReq.commentData = commentData;
-    createReq.sso = utility::conversions::to_string_t(token);
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
 
-    auto createResponse = publicApi.createCommentPublic(createReq).get();
+    auto createResponse = publicApi.createCommentPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t(testUrlId),
+        utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
+        commentData,
+        createOpts
+    ).get();
 
     ASSERT_NE(createResponse, nullptr);
     std::cout << "✓ Comment created successfully" << std::endl;
@@ -169,11 +174,13 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
         auto defaultApiClient = std::make_shared<org::openapitools::client::api::ApiClient>(defaultConfig);
         DefaultApi defaultApi(defaultApiClient);
 
-        DefaultApi::ApiGetCommentsRequest getReq;
-        getReq.tenantId = utility::conversions::to_string_t(tenantID);
-        getReq.urlId = utility::conversions::to_string_t(testUrlId);
+        ApiGetCommentsOptions getOpts;
+        getOpts.urlId = utility::conversions::to_string_t(testUrlId);
 
-        auto getResponse = defaultApi.getComments(getReq).get();
+        auto getResponse = defaultApi.getComments(
+            utility::conversions::to_string_t(tenantID),
+            getOpts
+        ).get();
 
         ASSERT_NE(getResponse, nullptr);
 
@@ -243,14 +250,16 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    PublicApi::ApiCreateCommentPublicRequest createReq;
-    createReq.tenantId = utility::conversions::to_string_t(tenantID);
-    createReq.urlId = utility::conversions::to_string_t(testUrlId);
-    createReq.broadcastId = utility::conversions::to_string_t("test-" + std::to_string(timestamp));
-    createReq.commentData = commentData;
-    createReq.sso = utility::conversions::to_string_t(token);
+    ApiCreateCommentPublicOptions createOpts;
+    createOpts.sso = utility::conversions::to_string_t(token);
 
-    auto createResponse = publicApi.createCommentPublic(createReq).get();
+    auto createResponse = publicApi.createCommentPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t(testUrlId),
+        utility::conversions::to_string_t("test-" + std::to_string(timestamp)),
+        commentData,
+        createOpts
+    ).get();
 
     ASSERT_NE(createResponse, nullptr);
     std::cout << "✓ Comment created successfully" << std::endl;
@@ -258,12 +267,14 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     // Step 2: Fetch the comment back using PUBLIC API with SSO
     std::cout << "Step 2: Fetching comments for page '" << testUrlId << "' with SSO..." << std::endl;
 
-    PublicApi::ApiGetCommentsPublicRequest getReq;
-    getReq.tenantId = utility::conversions::to_string_t(tenantID);
-    getReq.urlId = utility::conversions::to_string_t(testUrlId);
-    getReq.sso = utility::conversions::to_string_t(token);
+    ApiGetCommentsPublicOptions getOpts;
+    getOpts.sso = utility::conversions::to_string_t(token);
 
-    auto getResponse = publicApi.getCommentsPublic(getReq).get();
+    auto getResponse = publicApi.getCommentsPublic(
+        utility::conversions::to_string_t(tenantID),
+        utility::conversions::to_string_t(testUrlId),
+        getOpts
+    ).get();
 
     ASSERT_NE(getResponse, nullptr);
 

@@ -35,13 +35,15 @@ ModerationApi::~ModerationApi()
 {
 }
 
-pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(const ModerationApi::ApiDeleteModerationVoteRequest& request) const
+pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(
+        utility::string_t commentId,
+        utility::string_t voteId
+        , const ApiDeleteModerationVoteOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto voteId = request.voteId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -176,18 +178,20 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationV
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(const ModerationApi::ApiGetApiCommentsRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(
+        const ApiGetApiCommentsOptions& options
+) const
 {
-    auto page = request.page;
-    auto count = request.count;
-    auto textSearch = request.textSearch;
-    auto byIPFromComment = request.byIPFromComment;
-    auto filters = request.filters;
-    auto searchFilters = request.searchFilters;
-    auto sorts = request.sorts;
-    auto demo = request.demo;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto page = options.page;
+    auto count = options.count;
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto sorts = options.sorts;
+    auto demo = options.demo;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -348,11 +352,13 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(const ModerationApi::ApiGetApiExportStatusRequest& request) const
+pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(
+        const ApiGetApiExportStatusOptions& options
+) const
 {
-    auto batchJobId = request.batchJobId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto batchJobId = options.batchJobId;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -485,16 +491,18 @@ pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getAp
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(const ModerationApi::ApiGetApiIdsRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(
+        const ApiGetApiIdsOptions& options
+) const
 {
-    auto textSearch = request.textSearch;
-    auto byIPFromComment = request.byIPFromComment;
-    auto filters = request.filters;
-    auto searchFilters = request.searchFilters;
-    auto afterId = request.afterId;
-    auto demo = request.demo;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto afterId = options.afterId;
+    auto demo = options.demo;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -647,11 +655,13 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(const ModerationApi::ApiGetBanUsersFromCommentRequest& request) const
+pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(
+        utility::string_t commentId
+        , const ApiGetBanUsersFromCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -781,11 +791,13 @@ pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::ge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(const ModerationApi::ApiGetCommentBanStatusRequest& request) const
+pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(
+        utility::string_t commentId
+        , const ApiGetCommentBanStatusOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -915,11 +927,13 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getComme
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(const ModerationApi::ApiGetCommentChildrenRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(
+        utility::string_t commentId
+        , const ApiGetCommentChildrenOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1049,15 +1063,17 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(const ModerationApi::ApiGetCountRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(
+        const ApiGetCountOptions& options
+) const
 {
-    auto textSearch = request.textSearch;
-    auto byIPFromComment = request.byIPFromComment;
-    auto filter = request.filter;
-    auto searchFilters = request.searchFilters;
-    auto demo = request.demo;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filter = options.filter;
+    auto searchFilters = options.searchFilters;
+    auto demo = options.demo;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1206,10 +1222,12 @@ pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(const ModerationApi::ApiGetCountsRequest& request) const
+pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(
+        const ApiGetCountsOptions& options
+) const
 {
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1338,11 +1356,13 @@ pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCount
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(const ModerationApi::ApiGetLogsRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(
+        utility::string_t commentId
+        , const ApiGetLogsOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1472,10 +1492,12 @@ pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(const ModerationApi::ApiGetManualBadgesRequest& request) const
+pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(
+        const ApiGetManualBadgesOptions& options
+) const
 {
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1604,12 +1626,14 @@ pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getMan
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(const ModerationApi::ApiGetManualBadgesForUserRequest& request) const
+pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(
+        const ApiGetManualBadgesForUserOptions& options
+) const
 {
-    auto badgesUserId = request.badgesUserId;
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto badgesUserId = options.badgesUserId;
+    auto commentId = options.commentId;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1746,13 +1770,15 @@ pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManua
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(const ModerationApi::ApiGetModerationCommentRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(
+        utility::string_t commentId
+        , const ApiGetModerationCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto includeEmail = request.includeEmail;
-    auto includeIP = request.includeIP;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto includeEmail = options.includeEmail;
+    auto includeIP = options.includeIP;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1890,11 +1916,13 @@ pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getMode
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(const ModerationApi::ApiGetModerationCommentTextRequest& request) const
+pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(
+        utility::string_t commentId
+        , const ApiGetModerationCommentTextOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2024,14 +2052,16 @@ pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModeration
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(const ModerationApi::ApiGetPreBanSummaryRequest& request) const
+pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(
+        utility::string_t commentId
+        , const ApiGetPreBanSummaryOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto includeByUserIdAndEmail = request.includeByUserIdAndEmail;
-    auto includeByIP = request.includeByIP;
-    auto includeByEmailDomain = request.includeByEmailDomain;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto includeByUserIdAndEmail = options.includeByUserIdAndEmail;
+    auto includeByIP = options.includeByIP;
+    auto includeByEmailDomain = options.includeByEmailDomain;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2173,13 +2203,15 @@ pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(const
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(const ModerationApi::ApiGetSearchCommentsSummaryRequest& request) const
+pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(
+        const ApiGetSearchCommentsSummaryOptions& options
+) const
 {
-    auto value = request.value;
-    auto filters = request.filters;
-    auto searchFilters = request.searchFilters;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto value = options.value;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2320,11 +2352,13 @@ pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(const ModerationApi::ApiGetSearchPagesRequest& request) const
+pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(
+        const ApiGetSearchPagesOptions& options
+) const
 {
-    auto value = request.value;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto value = options.value;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2457,11 +2491,13 @@ pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(const ModerationApi::ApiGetSearchSitesRequest& request) const
+pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(
+        const ApiGetSearchSitesOptions& options
+) const
 {
-    auto value = request.value;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto value = options.value;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2594,11 +2630,13 @@ pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(const ModerationApi::ApiGetSearchSuggestRequest& request) const
+pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(
+        const ApiGetSearchSuggestOptions& options
+) const
 {
-    auto textSearch = request.textSearch;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto textSearch = options.textSearch;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2731,11 +2769,13 @@ pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(const ModerationApi::ApiGetSearchUsersRequest& request) const
+pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(
+        const ApiGetSearchUsersOptions& options
+) const
 {
-    auto value = request.value;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto value = options.value;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2868,11 +2908,13 @@ pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(const ModerationApi::ApiGetTrustFactorRequest& request) const
+pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(
+        const ApiGetTrustFactorOptions& options
+) const
 {
-    auto userId = request.userId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto userId = options.userId;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3005,10 +3047,12 @@ pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustF
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(const ModerationApi::ApiGetUserBanPreferenceRequest& request) const
+pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(
+        const ApiGetUserBanPreferenceOptions& options
+) const
 {
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3137,11 +3181,13 @@ pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> Moderation
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(const ModerationApi::ApiGetUserInternalProfileRequest& request) const
+pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(
+        const ApiGetUserInternalProfileOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto commentId = options.commentId;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3274,13 +3320,15 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(const ModerationApi::ApiPostAdjustCommentVotesRequest& request) const
+pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(
+        utility::string_t commentId,
+        std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams
+        , const ApiPostAdjustCommentVotesOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto adjustCommentVotesParams = request.adjustCommentVotesParams;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
     // verify the required parameter 'adjustCommentVotesParams' is set
     if (adjustCommentVotesParams == nullptr)
@@ -3351,7 +3399,6 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(adjustCommentVotesParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -3437,15 +3484,17 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(const ModerationApi::ApiPostApiExportRequest& request) const
+pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(
+        const ApiPostApiExportOptions& options
+) const
 {
-    auto textSearch = request.textSearch;
-    auto byIPFromComment = request.byIPFromComment;
-    auto filters = request.filters;
-    auto searchFilters = request.searchFilters;
-    auto sorts = request.sorts;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto sorts = options.sorts;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3594,19 +3643,21 @@ pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExpo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(const ModerationApi::ApiPostBanUserFromCommentRequest& request) const
+pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(
+        utility::string_t commentId
+        , const ApiPostBanUserFromCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto banEmail = request.banEmail;
-    auto banEmailDomain = request.banEmailDomain;
-    auto banIP = request.banIP;
-    auto deleteAllUsersComments = request.deleteAllUsersComments;
-    auto bannedUntil = request.bannedUntil;
-    auto isShadowBan = request.isShadowBan;
-    auto updateId = request.updateId;
-    auto banReason = request.banReason;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto banEmail = options.banEmail;
+    auto banEmailDomain = options.banEmailDomain;
+    auto banIP = options.banIP;
+    auto deleteAllUsersComments = options.deleteAllUsersComments;
+    auto bannedUntil = options.bannedUntil;
+    auto isShadowBan = options.isShadowBan;
+    auto updateId = options.updateId;
+    auto banReason = options.banReason;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3768,11 +3819,13 @@ pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(const ModerationApi::ApiPostBanUserUndoRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(
+        std::shared_ptr<BanUserUndoParams> banUserUndoParams
+        , const ApiPostBanUserUndoOptions& options
+) const
 {
-    auto banUserUndoParams = request.banUserUndoParams;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
     // verify the required parameter 'banUserUndoParams' is set
     if (banUserUndoParams == nullptr)
@@ -3838,7 +3891,6 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(con
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(banUserUndoParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -3924,14 +3976,16 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(con
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(const ModerationApi::ApiPostBulkPreBanSummaryRequest& request) const
+pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(
+        std::shared_ptr<BulkPreBanParams> bulkPreBanParams
+        , const ApiPostBulkPreBanSummaryOptions& options
+) const
 {
-    auto bulkPreBanParams = request.bulkPreBanParams;
-    auto includeByUserIdAndEmail = request.includeByUserIdAndEmail;
-    auto includeByIP = request.includeByIP;
-    auto includeByEmailDomain = request.includeByEmailDomain;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto includeByUserIdAndEmail = options.includeByUserIdAndEmail;
+    auto includeByIP = options.includeByIP;
+    auto includeByEmailDomain = options.includeByEmailDomain;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
     // verify the required parameter 'bulkPreBanParams' is set
     if (bulkPreBanParams == nullptr)
@@ -4009,7 +4063,6 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(bulkPreBanParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -4095,11 +4148,13 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(const ModerationApi::ApiPostCommentsByIdsRequest& request) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(
+        std::shared_ptr<CommentsByIdsParams> commentsByIdsParams
+        , const ApiPostCommentsByIdsOptions& options
+) const
 {
-    auto commentsByIdsParams = request.commentsByIdsParams;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
     // verify the required parameter 'commentsByIdsParams' is set
     if (commentsByIdsParams == nullptr)
@@ -4165,7 +4220,6 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(commentsByIdsParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -4251,12 +4305,14 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(const ModerationApi::ApiPostFlagCommentRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(
+        utility::string_t commentId
+        , const ApiPostFlagCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4390,12 +4446,14 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(con
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemoveComment(const ModerationApi::ApiPostRemoveCommentRequest& request) const
+pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemoveComment(
+        utility::string_t commentId
+        , const ApiPostRemoveCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4529,12 +4587,14 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(const ModerationApi::ApiPostRestoreDeletedCommentRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(
+        utility::string_t commentId
+        , const ApiPostRestoreDeletedCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4668,13 +4728,15 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(const ModerationApi::ApiPostSetCommentApprovalStatusRequest& request) const
+pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(
+        utility::string_t commentId
+        , const ApiPostSetCommentApprovalStatusOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto approved = request.approved;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto approved = options.approved;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4812,13 +4874,15 @@ pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(const ModerationApi::ApiPostSetCommentReviewStatusRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(
+        utility::string_t commentId
+        , const ApiPostSetCommentReviewStatusOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto reviewed = request.reviewed;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto reviewed = options.reviewed;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4956,14 +5020,16 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentRevie
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(const ModerationApi::ApiPostSetCommentSpamStatusRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(
+        utility::string_t commentId
+        , const ApiPostSetCommentSpamStatusOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto spam = request.spam;
-    auto permNotSpam = request.permNotSpam;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto spam = options.spam;
+    auto permNotSpam = options.permNotSpam;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5105,13 +5171,15 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(const ModerationApi::ApiPostSetCommentTextRequest& request) const
+pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(
+        utility::string_t commentId,
+        std::shared_ptr<SetCommentTextParams> setCommentTextParams
+        , const ApiPostSetCommentTextOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto setCommentTextParams = request.setCommentTextParams;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
     // verify the required parameter 'setCommentTextParams' is set
     if (setCommentTextParams == nullptr)
@@ -5182,7 +5250,6 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(setCommentTextParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -5268,12 +5335,14 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(const ModerationApi::ApiPostUnFlagCommentRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(
+        utility::string_t commentId
+        , const ApiPostUnFlagCommentOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5407,13 +5476,15 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(c
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(const ModerationApi::ApiPostVoteRequest& request) const
+pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(
+        utility::string_t commentId
+        , const ApiPostVoteOptions& options
+) const
 {
-    auto commentId = request.commentId;
-    auto direction = request.direction;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto direction = options.direction;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5551,14 +5622,16 @@ pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(const Moderati
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(const ModerationApi::ApiPutAwardBadgeRequest& request) const
+pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(
+        utility::string_t badgeId
+        , const ApiPutAwardBadgeOptions& options
+) const
 {
-    auto badgeId = request.badgeId;
-    auto userId = request.userId;
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto userId = options.userId;
+    auto commentId = options.commentId;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5702,11 +5775,13 @@ pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(const ModerationApi::ApiPutCloseThreadRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(
+        utility::string_t urlId
+        , const ApiPutCloseThreadOptions& options
+) const
 {
-    auto urlId = request.urlId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5838,14 +5913,16 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(cons
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(const ModerationApi::ApiPutRemoveBadgeRequest& request) const
+pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(
+        utility::string_t badgeId
+        , const ApiPutRemoveBadgeOptions& options
+) const
 {
-    auto badgeId = request.badgeId;
-    auto userId = request.userId;
-    auto commentId = request.commentId;
-    auto tenantId = request.tenantId;
-    auto broadcastId = request.broadcastId;
-    auto sso = request.sso;
+    auto userId = options.userId;
+    auto commentId = options.commentId;
+    auto tenantId = options.tenantId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5989,11 +6066,13 @@ pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBad
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(const ModerationApi::ApiPutReopenThreadRequest& request) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(
+        utility::string_t urlId
+        , const ApiPutReopenThreadOptions& options
+) const
 {
-    auto urlId = request.urlId;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6125,12 +6204,14 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(con
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(const ModerationApi::ApiSetTrustFactorRequest& request) const
+pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(
+        const ApiSetTrustFactorOptions& options
+) const
 {
-    auto userId = request.userId;
-    auto trustFactor = request.trustFactor;
-    auto tenantId = request.tenantId;
-    auto sso = request.sso;
+    auto userId = options.userId;
+    auto trustFactor = options.trustFactor;
+    auto tenantId = options.tenantId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
