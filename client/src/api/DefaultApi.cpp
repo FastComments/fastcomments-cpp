@@ -35,8 +35,10 @@ DefaultApi::~DefaultApi()
 {
 }
 
-pplx::task<std::shared_ptr<AddDomainConfigResponse>> DefaultApi::addDomainConfig(utility::string_t tenantId, std::shared_ptr<AddDomainConfigParams> addDomainConfigParams) const
+pplx::task<std::shared_ptr<AddDomainConfigResponse>> DefaultApi::addDomainConfig(const DefaultApi::ApiAddDomainConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto addDomainConfigParams = request.addDomainConfigParams;
 
     // verify the required parameter 'addDomainConfigParams' is set
     if (addDomainConfigParams == nullptr)
@@ -191,8 +193,10 @@ pplx::task<std::shared_ptr<AddDomainConfigResponse>> DefaultApi::addDomainConfig
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<CreateHashTagBody>> createHashTagBody) const
+pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(const DefaultApi::ApiAddHashTagRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createHashTagBody = request.createHashTagBody;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -342,8 +346,10 @@ pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(boost:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsBulk(boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<BulkCreateHashTagsBody>> bulkCreateHashTagsBody) const
+pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsBulk(const DefaultApi::ApiAddHashTagsBulkRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto bulkCreateHashTagsBody = request.bulkCreateHashTagsBody;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -493,8 +499,10 @@ pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsB
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AddPageAPIResponse>> DefaultApi::addPage(utility::string_t tenantId, std::shared_ptr<CreateAPIPageData> createAPIPageData) const
+pplx::task<std::shared_ptr<AddPageAPIResponse>> DefaultApi::addPage(const DefaultApi::ApiAddPageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createAPIPageData = request.createAPIPageData;
 
     // verify the required parameter 'createAPIPageData' is set
     if (createAPIPageData == nullptr)
@@ -649,8 +657,10 @@ pplx::task<std::shared_ptr<AddPageAPIResponse>> DefaultApi::addPage(utility::str
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AddSSOUserAPIResponse>> DefaultApi::addSSOUser(utility::string_t tenantId, std::shared_ptr<CreateAPISSOUserData> createAPISSOUserData) const
+pplx::task<std::shared_ptr<AddSSOUserAPIResponse>> DefaultApi::addSSOUser(const DefaultApi::ApiAddSSOUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createAPISSOUserData = request.createAPISSOUserData;
 
     // verify the required parameter 'createAPISSOUserData' is set
     if (createAPISSOUserData == nullptr)
@@ -805,8 +815,12 @@ pplx::task<std::shared_ptr<AddSSOUserAPIResponse>> DefaultApi::addSSOUser(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(utility::string_t tenantId, std::shared_ptr<AggregationRequest> aggregationRequest, boost::optional<utility::string_t> parentTenantId, boost::optional<bool> includeStats) const
+pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(const DefaultApi::ApiAggregateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto aggregationRequest = request.aggregationRequest;
+    auto parentTenantId = request.parentTenantId;
+    auto includeStats = request.includeStats;
 
     // verify the required parameter 'aggregationRequest' is set
     if (aggregationRequest == nullptr)
@@ -969,8 +983,15 @@ pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggregateQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<std::shared_ptr<AggregateTimeBucket>> timeBucket, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate) const
+pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggregateQuestionResults(const DefaultApi::ApiAggregateQuestionResultsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto questionId = request.questionId;
+    auto questionIds = request.questionIds;
+    auto urlId = request.urlId;
+    auto timeBucket = request.timeBucket;
+    auto startDate = request.startDate;
+    auto forceRecalculate = request.forceRecalculate;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1126,8 +1147,13 @@ pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggreg
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<BlockFromCommentParams> blockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(const DefaultApi::ApiBlockUserFromCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto blockFromCommentParams = request.blockFromCommentParams;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
     // verify the required parameter 'blockFromCommentParams' is set
     if (blockFromCommentParams == nullptr)
@@ -1291,8 +1317,11 @@ pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bulkAggregateQuestionResults(utility::string_t tenantId, std::shared_ptr<BulkAggregateQuestionResultsRequest> bulkAggregateQuestionResultsRequest, boost::optional<bool> forceRecalculate) const
+pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bulkAggregateQuestionResults(const DefaultApi::ApiBulkAggregateQuestionResultsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto bulkAggregateQuestionResultsRequest = request.bulkAggregateQuestionResultsRequest;
+    auto forceRecalculate = request.forceRecalculate;
 
     // verify the required parameter 'bulkAggregateQuestionResultsRequest' is set
     if (bulkAggregateQuestionResultsRequest == nullptr)
@@ -1451,8 +1480,12 @@ pplx::task<std::shared_ptr<BulkAggregateQuestionResultsResponse>> DefaultApi::bu
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketState(utility::string_t tenantId, utility::string_t userId, utility::string_t id, std::shared_ptr<ChangeTicketStateBody> changeTicketStateBody) const
+pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketState(const DefaultApi::ApiChangeTicketStateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto id = request.id;
+    auto changeTicketStateBody = request.changeTicketStateBody;
 
     // verify the required parameter 'changeTicketStateBody' is set
     if (changeTicketStateBody == nullptr)
@@ -1611,8 +1644,17 @@ pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultApi::combineCommentsWithQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> questionId, boost::optional<std::vector<utility::string_t>> questionIds, boost::optional<utility::string_t> urlId, boost::optional<utility::datetime> startDate, boost::optional<bool> forceRecalculate, boost::optional<double> minValue, boost::optional<double> maxValue, boost::optional<double> limit) const
+pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultApi::combineCommentsWithQuestionResults(const DefaultApi::ApiCombineCommentsWithQuestionResultsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto questionId = request.questionId;
+    auto questionIds = request.questionIds;
+    auto urlId = request.urlId;
+    auto startDate = request.startDate;
+    auto forceRecalculate = request.forceRecalculate;
+    auto minValue = request.minValue;
+    auto maxValue = request.maxValue;
+    auto limit = request.limit;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1776,8 +1818,10 @@ pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultA
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmailTemplate(utility::string_t tenantId, std::shared_ptr<CreateEmailTemplateBody> createEmailTemplateBody) const
+pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmailTemplate(const DefaultApi::ApiCreateEmailTemplateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createEmailTemplateBody = request.createEmailTemplateBody;
 
     // verify the required parameter 'createEmailTemplateBody' is set
     if (createEmailTemplateBody == nullptr)
@@ -1932,8 +1976,14 @@ pplx::task<std::shared_ptr<CreateEmailTemplateResponse>> DefaultApi::createEmail
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(utility::string_t tenantId, std::shared_ptr<CreateFeedPostParams> createFeedPostParams, boost::optional<utility::string_t> broadcastId, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> skipDupCheck) const
+pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(const DefaultApi::ApiCreateFeedPostRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createFeedPostParams = request.createFeedPostParams;
+    auto broadcastId = request.broadcastId;
+    auto isLive = request.isLive;
+    auto doSpamCheck = request.doSpamCheck;
+    auto skipDupCheck = request.skipDupCheck;
 
     // verify the required parameter 'createFeedPostParams' is set
     if (createFeedPostParams == nullptr)
@@ -2104,8 +2154,10 @@ pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator(utility::string_t tenantId, std::shared_ptr<CreateModeratorBody> createModeratorBody) const
+pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator(const DefaultApi::ApiCreateModeratorRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createModeratorBody = request.createModeratorBody;
 
     // verify the required parameter 'createModeratorBody' is set
     if (createModeratorBody == nullptr)
@@ -2260,8 +2312,10 @@ pplx::task<std::shared_ptr<CreateModeratorResponse>> DefaultApi::createModerator
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQuestionConfig(utility::string_t tenantId, std::shared_ptr<CreateQuestionConfigBody> createQuestionConfigBody) const
+pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQuestionConfig(const DefaultApi::ApiCreateQuestionConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createQuestionConfigBody = request.createQuestionConfigBody;
 
     // verify the required parameter 'createQuestionConfigBody' is set
     if (createQuestionConfigBody == nullptr)
@@ -2416,8 +2470,10 @@ pplx::task<std::shared_ptr<CreateQuestionConfigResponse>> DefaultApi::createQues
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateQuestionResultResponse>> DefaultApi::createQuestionResult(utility::string_t tenantId, std::shared_ptr<CreateQuestionResultBody> createQuestionResultBody) const
+pplx::task<std::shared_ptr<CreateQuestionResultResponse>> DefaultApi::createQuestionResult(const DefaultApi::ApiCreateQuestionResultRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createQuestionResultBody = request.createQuestionResultBody;
 
     // verify the required parameter 'createQuestionResultBody' is set
     if (createQuestionResultBody == nullptr)
@@ -2572,8 +2628,10 @@ pplx::task<std::shared_ptr<CreateQuestionResultResponse>> DefaultApi::createQues
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateSubscriptionAPIResponse>> DefaultApi::createSubscription(utility::string_t tenantId, std::shared_ptr<CreateAPIUserSubscriptionData> createAPIUserSubscriptionData) const
+pplx::task<std::shared_ptr<CreateSubscriptionAPIResponse>> DefaultApi::createSubscription(const DefaultApi::ApiCreateSubscriptionRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createAPIUserSubscriptionData = request.createAPIUserSubscriptionData;
 
     // verify the required parameter 'createAPIUserSubscriptionData' is set
     if (createAPIUserSubscriptionData == nullptr)
@@ -2728,8 +2786,10 @@ pplx::task<std::shared_ptr<CreateSubscriptionAPIResponse>> DefaultApi::createSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(utility::string_t tenantId, std::shared_ptr<CreateTenantBody> createTenantBody) const
+pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(const DefaultApi::ApiCreateTenantRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createTenantBody = request.createTenantBody;
 
     // verify the required parameter 'createTenantBody' is set
     if (createTenantBody == nullptr)
@@ -2884,8 +2944,10 @@ pplx::task<std::shared_ptr<CreateTenantResponse>> DefaultApi::createTenant(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenantPackage(utility::string_t tenantId, std::shared_ptr<CreateTenantPackageBody> createTenantPackageBody) const
+pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenantPackage(const DefaultApi::ApiCreateTenantPackageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createTenantPackageBody = request.createTenantPackageBody;
 
     // verify the required parameter 'createTenantPackageBody' is set
     if (createTenantPackageBody == nullptr)
@@ -3040,8 +3102,10 @@ pplx::task<std::shared_ptr<CreateTenantPackageResponse>> DefaultApi::createTenan
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUser(utility::string_t tenantId, std::shared_ptr<CreateTenantUserBody> createTenantUserBody) const
+pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUser(const DefaultApi::ApiCreateTenantUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createTenantUserBody = request.createTenantUserBody;
 
     // verify the required parameter 'createTenantUserBody' is set
     if (createTenantUserBody == nullptr)
@@ -3196,8 +3260,11 @@ pplx::task<std::shared_ptr<CreateTenantUserResponse>> DefaultApi::createTenantUs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(utility::string_t tenantId, utility::string_t userId, std::shared_ptr<CreateTicketBody> createTicketBody) const
+pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(const DefaultApi::ApiCreateTicketRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto createTicketBody = request.createTicketBody;
 
     // verify the required parameter 'createTicketBody' is set
     if (createTicketBody == nullptr)
@@ -3355,8 +3422,10 @@ pplx::task<std::shared_ptr<CreateTicketResponse>> DefaultApi::createTicket(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBadge(utility::string_t tenantId, std::shared_ptr<CreateUserBadgeParams> createUserBadgeParams) const
+pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBadge(const DefaultApi::ApiCreateUserBadgeRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createUserBadgeParams = request.createUserBadgeParams;
 
     // verify the required parameter 'createUserBadgeParams' is set
     if (createUserBadgeParams == nullptr)
@@ -3511,8 +3580,13 @@ pplx::task<std::shared_ptr<APICreateUserBadgeResponse>> DefaultApi::createUserBa
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(utility::string_t tenantId, utility::string_t commentId, utility::string_t direction, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(const DefaultApi::ApiCreateVoteRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto commentId = request.commentId;
+    auto direction = request.direction;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3658,8 +3732,12 @@ pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(utility::string
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> contextUserId, boost::optional<bool> isLive) const
+pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(const DefaultApi::ApiDeleteCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto contextUserId = request.contextUserId;
+    auto isLive = request.isLive;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3800,8 +3878,10 @@ pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteDomainConfigResponse>> DefaultApi::deleteDomainConfig(utility::string_t tenantId, utility::string_t domain) const
+pplx::task<std::shared_ptr<DeleteDomainConfigResponse>> DefaultApi::deleteDomainConfig(const DefaultApi::ApiDeleteDomainConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto domain = request.domain;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3934,8 +4014,10 @@ pplx::task<std::shared_ptr<DeleteDomainConfigResponse>> DefaultApi::deleteDomain
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(const DefaultApi::ApiDeleteEmailTemplateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4068,8 +4150,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplate(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRenderError(utility::string_t tenantId, utility::string_t id, utility::string_t errorId) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRenderError(const DefaultApi::ApiDeleteEmailTemplateRenderErrorRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto errorId = request.errorId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4203,8 +4288,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<DeleteHashTagRequestBody>> deleteHashTagRequestBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(const DefaultApi::ApiDeleteHashTagRequest& request) const
 {
+    auto tag = request.tag;
+    auto tenantId = request.tenantId;
+    auto deleteHashTagRequestBody = request.deleteHashTagRequestBody;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4355,8 +4443,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sendEmail) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(const DefaultApi::ApiDeleteModeratorRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto sendEmail = request.sendEmail;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4493,8 +4584,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteModerator(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteNotificationCount(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteNotificationCount(const DefaultApi::ApiDeleteNotificationCountRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4627,8 +4720,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteNotificationCoun
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeletePageAPIResponse>> DefaultApi::deletePage(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<DeletePageAPIResponse>> DefaultApi::deletePage(const DefaultApi::ApiDeletePageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4761,8 +4856,10 @@ pplx::task<std::shared_ptr<DeletePageAPIResponse>> DefaultApi::deletePage(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEvent(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEvent(const DefaultApi::ApiDeletePendingWebhookEventRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4895,8 +4992,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deletePendingWebhookEv
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(const DefaultApi::ApiDeleteQuestionConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5029,8 +5128,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionConfig(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionResult(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionResult(const DefaultApi::ApiDeleteQuestionResultRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5163,8 +5264,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteQuestionResult(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteSSOUserAPIResponse>> DefaultApi::deleteSSOUser(utility::string_t tenantId, utility::string_t id, boost::optional<bool> deleteComments, boost::optional<utility::string_t> commentDeleteMode) const
+pplx::task<std::shared_ptr<DeleteSSOUserAPIResponse>> DefaultApi::deleteSSOUser(const DefaultApi::ApiDeleteSSOUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto deleteComments = request.deleteComments;
+    auto commentDeleteMode = request.commentDeleteMode;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5305,8 +5410,11 @@ pplx::task<std::shared_ptr<DeleteSSOUserAPIResponse>> DefaultApi::deleteSSOUser(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<DeleteSubscriptionAPIResponse>> DefaultApi::deleteSubscription(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<DeleteSubscriptionAPIResponse>> DefaultApi::deleteSubscription(const DefaultApi::ApiDeleteSubscriptionRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto userId = request.userId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5443,8 +5551,11 @@ pplx::task<std::shared_ptr<DeleteSubscriptionAPIResponse>> DefaultApi::deleteSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> sure) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(const DefaultApi::ApiDeleteTenantRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto sure = request.sure;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5581,8 +5692,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenant(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(const DefaultApi::ApiDeleteTenantPackageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5715,8 +5828,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantPackage(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> deleteComments, boost::optional<utility::string_t> commentDeleteMode) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(const DefaultApi::ApiDeleteTenantUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto deleteComments = request.deleteComments;
+    auto commentDeleteMode = request.commentDeleteMode;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5857,8 +5974,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge(const DefaultApi::ApiDeleteUserBadgeRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5991,8 +6110,11 @@ pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::deleteUserBadge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> editKey) const
+pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(const DefaultApi::ApiDeleteVoteRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto editKey = request.editKey;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6129,8 +6251,12 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> DefaultApi::deleteVote(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(const DefaultApi::ApiFlagCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6271,8 +6397,14 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(utility::string_t tenantId, boost::optional<double> limit, boost::optional<double> skip, boost::optional<std::shared_ptr<SORT_DIR>> order, boost::optional<double> after, boost::optional<double> before) const
+pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(const DefaultApi::ApiGetAuditLogsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto limit = request.limit;
+    auto skip = request.skip;
+    auto order = request.order;
+    auto after = request.after;
+    auto before = request.before;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6424,8 +6556,10 @@ pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getCachedNotificationCount(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getCachedNotificationCount(const DefaultApi::ApiGetCachedNotificationCountRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6558,8 +6692,10 @@ pplx::task<std::shared_ptr<GetCachedNotificationCountResponse>> DefaultApi::getC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(const DefaultApi::ApiGetCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6692,8 +6828,25 @@ pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(utility::string_t tenantId, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<int32_t> skip, boost::optional<bool> asTree, boost::optional<int32_t> skipChildren, boost::optional<int32_t> limitChildren, boost::optional<int32_t> maxTreeDepth, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId, boost::optional<utility::string_t> contextUserId, boost::optional<utility::string_t> hashTag, boost::optional<utility::string_t> parentId, boost::optional<std::shared_ptr<SortDirections>> direction, boost::optional<int64_t> fromDate, boost::optional<int64_t> toDate) const
+pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(const DefaultApi::ApiGetCommentsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto page = request.page;
+    auto limit = request.limit;
+    auto skip = request.skip;
+    auto asTree = request.asTree;
+    auto skipChildren = request.skipChildren;
+    auto limitChildren = request.limitChildren;
+    auto maxTreeDepth = request.maxTreeDepth;
+    auto urlId = request.urlId;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
+    auto contextUserId = request.contextUserId;
+    auto hashTag = request.hashTag;
+    auto parentId = request.parentId;
+    auto direction = request.direction;
+    auto fromDate = request.fromDate;
+    auto toDate = request.toDate;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6889,8 +7042,10 @@ pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetDomainConfigResponse>> DefaultApi::getDomainConfig(utility::string_t tenantId, utility::string_t domain) const
+pplx::task<std::shared_ptr<GetDomainConfigResponse>> DefaultApi::getDomainConfig(const DefaultApi::ApiGetDomainConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto domain = request.domain;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7023,8 +7178,9 @@ pplx::task<std::shared_ptr<GetDomainConfigResponse>> DefaultApi::getDomainConfig
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetDomainConfigsResponse>> DefaultApi::getDomainConfigs(utility::string_t tenantId) const
+pplx::task<std::shared_ptr<GetDomainConfigsResponse>> DefaultApi::getDomainConfigs(const DefaultApi::ApiGetDomainConfigsRequest& request) const
 {
+    auto tenantId = request.tenantId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7156,8 +7312,10 @@ pplx::task<std::shared_ptr<GetDomainConfigsResponse>> DefaultApi::getDomainConfi
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTemplate(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTemplate(const DefaultApi::ApiGetEmailTemplateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7290,8 +7448,9 @@ pplx::task<std::shared_ptr<GetEmailTemplateResponse>> DefaultApi::getEmailTempla
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::getEmailTemplateDefinitions(utility::string_t tenantId) const
+pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::getEmailTemplateDefinitions(const DefaultApi::ApiGetEmailTemplateDefinitionsRequest& request) const
 {
+    auto tenantId = request.tenantId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7423,8 +7582,11 @@ pplx::task<std::shared_ptr<GetEmailTemplateDefinitionsResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::getEmailTemplateRenderErrors(utility::string_t tenantId, utility::string_t id, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::getEmailTemplateRenderErrors(const DefaultApi::ApiGetEmailTemplateRenderErrorsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7561,8 +7723,10 @@ pplx::task<std::shared_ptr<GetEmailTemplateRenderErrorsResponse>> DefaultApi::ge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTemplates(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTemplates(const DefaultApi::ApiGetEmailTemplatesRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7698,8 +7862,12 @@ pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTempl
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(utility::string_t tenantId, boost::optional<utility::string_t> afterId, boost::optional<int32_t> limit, boost::optional<std::vector<utility::string_t>> tags) const
+pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(const DefaultApi::ApiGetFeedPostsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto afterId = request.afterId;
+    auto limit = request.limit;
+    auto tags = request.tags;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7843,8 +8011,10 @@ pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(utility::string_t tenantId, boost::optional<double> page) const
+pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(const DefaultApi::ApiGetHashTagsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto page = request.page;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7980,8 +8150,10 @@ pplx::task<std::shared_ptr<GetHashTagsResponse>> DefaultApi::getHashTags(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(const DefaultApi::ApiGetModeratorRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8114,8 +8286,10 @@ pplx::task<std::shared_ptr<GetModeratorResponse>> DefaultApi::getModerator(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(const DefaultApi::ApiGetModeratorsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8251,8 +8425,14 @@ pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotificationCount(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type) const
+pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotificationCount(const DefaultApi::ApiGetNotificationCountRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto urlId = request.urlId;
+    auto fromCommentId = request.fromCommentId;
+    auto viewed = request.viewed;
+    auto type = request.type;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8404,8 +8584,15 @@ pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotific
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotifications(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> fromCommentId, boost::optional<bool> viewed, boost::optional<utility::string_t> type, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotifications(const DefaultApi::ApiGetNotificationsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto urlId = request.urlId;
+    auto fromCommentId = request.fromCommentId;
+    auto viewed = request.viewed;
+    auto type = request.type;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8561,8 +8748,10 @@ pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotificatio
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPageByURLIdAPIResponse>> DefaultApi::getPageByURLId(utility::string_t tenantId, utility::string_t urlId) const
+pplx::task<std::shared_ptr<GetPageByURLIdAPIResponse>> DefaultApi::getPageByURLId(const DefaultApi::ApiGetPageByURLIdRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto urlId = request.urlId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8697,8 +8886,9 @@ pplx::task<std::shared_ptr<GetPageByURLIdAPIResponse>> DefaultApi::getPageByURLI
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPagesAPIResponse>> DefaultApi::getPages(utility::string_t tenantId) const
+pplx::task<std::shared_ptr<GetPagesAPIResponse>> DefaultApi::getPages(const DefaultApi::ApiGetPagesRequest& request) const
 {
+    auto tenantId = request.tenantId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8830,8 +9020,15 @@ pplx::task<std::shared_ptr<GetPagesAPIResponse>> DefaultApi::getPages(utility::s
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::getPendingWebhookEventCount(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT) const
+pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::getPendingWebhookEventCount(const DefaultApi::ApiGetPendingWebhookEventCountRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto commentId = request.commentId;
+    auto externalId = request.externalId;
+    auto eventType = request.eventType;
+    auto type = request.type;
+    auto domain = request.domain;
+    auto attemptCountGT = request.attemptCountGT;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -8987,8 +9184,16 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPendingWebhookEvents(utility::string_t tenantId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> externalId, boost::optional<utility::string_t> eventType, boost::optional<utility::string_t> type, boost::optional<utility::string_t> domain, boost::optional<double> attemptCountGT, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPendingWebhookEvents(const DefaultApi::ApiGetPendingWebhookEventsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto commentId = request.commentId;
+    auto externalId = request.externalId;
+    auto eventType = request.eventType;
+    auto type = request.type;
+    auto domain = request.domain;
+    auto attemptCountGT = request.attemptCountGT;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9148,8 +9353,10 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPend
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionConfig(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionConfig(const DefaultApi::ApiGetQuestionConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9282,8 +9489,10 @@ pplx::task<std::shared_ptr<GetQuestionConfigResponse>> DefaultApi::getQuestionCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionConfigs(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionConfigs(const DefaultApi::ApiGetQuestionConfigsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9419,8 +9628,10 @@ pplx::task<std::shared_ptr<GetQuestionConfigsResponse>> DefaultApi::getQuestionC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionResult(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionResult(const DefaultApi::ApiGetQuestionResultRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9553,8 +9764,15 @@ pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionRe
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionResults(utility::string_t tenantId, boost::optional<utility::string_t> urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> startDate, boost::optional<utility::string_t> questionId, boost::optional<utility::string_t> questionIds, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionResults(const DefaultApi::ApiGetQuestionResultsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto urlId = request.urlId;
+    auto userId = request.userId;
+    auto startDate = request.startDate;
+    auto questionId = request.questionId;
+    auto questionIds = request.questionIds;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9710,8 +9928,10 @@ pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionR
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSSOUserByEmailAPIResponse>> DefaultApi::getSSOUserByEmail(utility::string_t tenantId, utility::string_t email) const
+pplx::task<std::shared_ptr<GetSSOUserByEmailAPIResponse>> DefaultApi::getSSOUserByEmail(const DefaultApi::ApiGetSSOUserByEmailRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto email = request.email;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9844,8 +10064,10 @@ pplx::task<std::shared_ptr<GetSSOUserByEmailAPIResponse>> DefaultApi::getSSOUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSSOUserByIdAPIResponse>> DefaultApi::getSSOUserById(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetSSOUserByIdAPIResponse>> DefaultApi::getSSOUserById(const DefaultApi::ApiGetSSOUserByIdRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -9978,8 +10200,10 @@ pplx::task<std::shared_ptr<GetSSOUserByIdAPIResponse>> DefaultApi::getSSOUserByI
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSSOUsersResponse>> DefaultApi::getSSOUsers(utility::string_t tenantId, boost::optional<int32_t> skip) const
+pplx::task<std::shared_ptr<GetSSOUsersResponse>> DefaultApi::getSSOUsers(const DefaultApi::ApiGetSSOUsersRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10115,8 +10339,10 @@ pplx::task<std::shared_ptr<GetSSOUsersResponse>> DefaultApi::getSSOUsers(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetSubscriptionsAPIResponse>> DefaultApi::getSubscriptions(utility::string_t tenantId, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<GetSubscriptionsAPIResponse>> DefaultApi::getSubscriptions(const DefaultApi::ApiGetSubscriptionsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10252,8 +10478,10 @@ pplx::task<std::shared_ptr<GetSubscriptionsAPIResponse>> DefaultApi::getSubscrip
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(const DefaultApi::ApiGetTenantRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10386,8 +10614,13 @@ pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantDailyUsages(utility::string_t tenantId, boost::optional<double> yearNumber, boost::optional<double> monthNumber, boost::optional<double> dayNumber, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantDailyUsages(const DefaultApi::ApiGetTenantDailyUsagesRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto yearNumber = request.yearNumber;
+    auto monthNumber = request.monthNumber;
+    auto dayNumber = request.dayNumber;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10535,8 +10768,10 @@ pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantD
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPackage(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPackage(const DefaultApi::ApiGetTenantPackageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10669,8 +10904,10 @@ pplx::task<std::shared_ptr<GetTenantPackageResponse>> DefaultApi::getTenantPacka
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPackages(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPackages(const DefaultApi::ApiGetTenantPackagesRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10806,8 +11043,10 @@ pplx::task<std::shared_ptr<GetTenantPackagesResponse>> DefaultApi::getTenantPack
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(const DefaultApi::ApiGetTenantUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -10940,8 +11179,10 @@ pplx::task<std::shared_ptr<GetTenantUserResponse>> DefaultApi::getTenantUser(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(utility::string_t tenantId, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(const DefaultApi::ApiGetTenantUsersRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11077,8 +11318,11 @@ pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(utility::string_t tenantId, boost::optional<utility::string_t> meta, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(const DefaultApi::ApiGetTenantsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto meta = request.meta;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11218,8 +11462,11 @@ pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(const DefaultApi::ApiGetTicketRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto userId = request.userId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11356,8 +11603,13 @@ pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> state, boost::optional<double> skip, boost::optional<double> limit) const
+pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(const DefaultApi::ApiGetTicketsRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto state = request.state;
+    auto skip = request.skip;
+    auto limit = request.limit;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11505,8 +11757,10 @@ pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(const DefaultApi::ApiGetUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11639,8 +11893,10 @@ pplx::task<std::shared_ptr<GetUserResponse>> DefaultApi::getUser(utility::string
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(const DefaultApi::ApiGetUserBadgeRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11773,8 +12029,10 @@ pplx::task<std::shared_ptr<APIGetUserBadgeResponse>> DefaultApi::getUserBadge(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressById(utility::string_t tenantId, utility::string_t id) const
+pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressById(const DefaultApi::ApiGetUserBadgeProgressByIdRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -11907,8 +12165,10 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressByUserId(utility::string_t tenantId, utility::string_t userId) const
+pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUserBadgeProgressByUserId(const DefaultApi::ApiGetUserBadgeProgressByUserIdRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12041,8 +12301,12 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::getUserBadgeProgressList(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<double> limit, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::getUserBadgeProgressList(const DefaultApi::ApiGetUserBadgeProgressListRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto limit = request.limit;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12186,8 +12450,15 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(utility::string_t tenantId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> badgeId, boost::optional<double> type, boost::optional<bool> displayedOnComments, boost::optional<double> limit, boost::optional<double> skip) const
+pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(const DefaultApi::ApiGetUserBadgesRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto userId = request.userId;
+    auto badgeId = request.badgeId;
+    auto type = request.type;
+    auto displayedOnComments = request.displayedOnComments;
+    auto limit = request.limit;
+    auto skip = request.skip;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12343,8 +12614,10 @@ pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(utility::string_t tenantId, utility::string_t urlId) const
+pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(const DefaultApi::ApiGetVotesRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto urlId = request.urlId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12479,8 +12752,12 @@ pplx::task<std::shared_ptr<GetVotesResponse>> DefaultApi::getVotes(utility::stri
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser(utility::string_t tenantId, utility::string_t urlId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser(const DefaultApi::ApiGetVotesForUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto urlId = request.urlId;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12623,8 +12900,11 @@ pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PatchDomainConfigResponse>> DefaultApi::patchDomainConfig(utility::string_t tenantId, utility::string_t domainToUpdate, std::shared_ptr<PatchDomainConfigParams> patchDomainConfigParams) const
+pplx::task<std::shared_ptr<PatchDomainConfigResponse>> DefaultApi::patchDomainConfig(const DefaultApi::ApiPatchDomainConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto domainToUpdate = request.domainToUpdate;
+    auto patchDomainConfigParams = request.patchDomainConfigParams;
 
     // verify the required parameter 'patchDomainConfigParams' is set
     if (patchDomainConfigParams == nullptr)
@@ -12780,8 +13060,11 @@ pplx::task<std::shared_ptr<PatchDomainConfigResponse>> DefaultApi::patchDomainCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(utility::string_t tag, boost::optional<utility::string_t> tenantId, boost::optional<std::shared_ptr<UpdateHashTagBody>> updateHashTagBody) const
+pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(const DefaultApi::ApiPatchHashTagRequest& request) const
 {
+    auto tag = request.tag;
+    auto tenantId = request.tenantId;
+    auto updateHashTagBody = request.updateHashTagBody;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -12932,8 +13215,11 @@ pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PatchPageAPIResponse>> DefaultApi::patchPage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateAPIPageData> updateAPIPageData) const
+pplx::task<std::shared_ptr<PatchPageAPIResponse>> DefaultApi::patchPage(const DefaultApi::ApiPatchPageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateAPIPageData = request.updateAPIPageData;
 
     // verify the required parameter 'updateAPIPageData' is set
     if (updateAPIPageData == nullptr)
@@ -13089,8 +13375,12 @@ pplx::task<std::shared_ptr<PatchPageAPIResponse>> DefaultApi::patchPage(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PatchSSOUserAPIResponse>> DefaultApi::patchSSOUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateAPISSOUserData> updateAPISSOUserData, boost::optional<bool> updateComments) const
+pplx::task<std::shared_ptr<PatchSSOUserAPIResponse>> DefaultApi::patchSSOUser(const DefaultApi::ApiPatchSSOUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateAPISSOUserData = request.updateAPISSOUserData;
+    auto updateComments = request.updateComments;
 
     // verify the required parameter 'updateAPISSOUserData' is set
     if (updateAPISSOUserData == nullptr)
@@ -13250,8 +13540,11 @@ pplx::task<std::shared_ptr<PatchSSOUserAPIResponse>> DefaultApi::patchSSOUser(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutDomainConfigResponse>> DefaultApi::putDomainConfig(utility::string_t tenantId, utility::string_t domainToUpdate, std::shared_ptr<UpdateDomainConfigParams> updateDomainConfigParams) const
+pplx::task<std::shared_ptr<PutDomainConfigResponse>> DefaultApi::putDomainConfig(const DefaultApi::ApiPutDomainConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto domainToUpdate = request.domainToUpdate;
+    auto updateDomainConfigParams = request.updateDomainConfigParams;
 
     // verify the required parameter 'updateDomainConfigParams' is set
     if (updateDomainConfigParams == nullptr)
@@ -13407,8 +13700,12 @@ pplx::task<std::shared_ptr<PutDomainConfigResponse>> DefaultApi::putDomainConfig
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PutSSOUserAPIResponse>> DefaultApi::putSSOUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateAPISSOUserData> updateAPISSOUserData, boost::optional<bool> updateComments) const
+pplx::task<std::shared_ptr<PutSSOUserAPIResponse>> DefaultApi::putSSOUser(const DefaultApi::ApiPutSSOUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateAPISSOUserData = request.updateAPISSOUserData;
+    auto updateComments = request.updateComments;
 
     // verify the required parameter 'updateAPISSOUserData' is set
     if (updateAPISSOUserData == nullptr)
@@ -13568,8 +13865,11 @@ pplx::task<std::shared_ptr<PutSSOUserAPIResponse>> DefaultApi::putSSOUser(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmailTemplate(utility::string_t tenantId, std::shared_ptr<RenderEmailTemplateBody> renderEmailTemplateBody, boost::optional<utility::string_t> locale) const
+pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmailTemplate(const DefaultApi::ApiRenderEmailTemplateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto renderEmailTemplateBody = request.renderEmailTemplateBody;
+    auto locale = request.locale;
 
     // verify the required parameter 'renderEmailTemplateBody' is set
     if (renderEmailTemplateBody == nullptr)
@@ -13728,8 +14028,11 @@ pplx::task<std::shared_ptr<RenderEmailTemplateResponse>> DefaultApi::renderEmail
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantPackageBody> replaceTenantPackageBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(const DefaultApi::ApiReplaceTenantPackageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto replaceTenantPackageBody = request.replaceTenantPackageBody;
 
     // verify the required parameter 'replaceTenantPackageBody' is set
     if (replaceTenantPackageBody == nullptr)
@@ -13885,8 +14188,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantPackage(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<ReplaceTenantUserBody> replaceTenantUserBody, boost::optional<utility::string_t> updateComments) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(const DefaultApi::ApiReplaceTenantUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto replaceTenantUserBody = request.replaceTenantUserBody;
+    auto updateComments = request.updateComments;
 
     // verify the required parameter 'replaceTenantUserBody' is set
     if (replaceTenantUserBody == nullptr)
@@ -14046,8 +14353,14 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::replaceTenantUser(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(utility::string_t tenantId, std::shared_ptr<CreateCommentParams> createCommentParams, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> sendEmails, boost::optional<bool> populateNotifications) const
+pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(const DefaultApi::ApiSaveCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createCommentParams = request.createCommentParams;
+    auto isLive = request.isLive;
+    auto doSpamCheck = request.doSpamCheck;
+    auto sendEmails = request.sendEmails;
+    auto populateNotifications = request.populateNotifications;
 
     // verify the required parameter 'createCommentParams' is set
     if (createCommentParams == nullptr)
@@ -14218,8 +14531,14 @@ pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(util
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<SaveCommentsBulkResponse>>> DefaultApi::saveCommentsBulk(utility::string_t tenantId, std::vector<std::shared_ptr<CreateCommentParams>> createCommentParams, boost::optional<bool> isLive, boost::optional<bool> doSpamCheck, boost::optional<bool> sendEmails, boost::optional<bool> populateNotifications) const
+pplx::task<std::vector<std::shared_ptr<SaveCommentsBulkResponse>>> DefaultApi::saveCommentsBulk(const DefaultApi::ApiSaveCommentsBulkRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto createCommentParams = request.createCommentParams;
+    auto isLive = request.isLive;
+    auto doSpamCheck = request.doSpamCheck;
+    auto sendEmails = request.sendEmails;
+    auto populateNotifications = request.populateNotifications;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -14399,8 +14718,11 @@ pplx::task<std::vector<std::shared_ptr<SaveCommentsBulkResponse>>> DefaultApi::s
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(utility::string_t tenantId, utility::string_t id, utility::string_t fromName) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(const DefaultApi::ApiSendInviteRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto fromName = request.fromName;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -14536,8 +14858,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendInvite(utility::st
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> redirectURL) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(const DefaultApi::ApiSendLoginLinkRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto redirectURL = request.redirectURL;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -14674,8 +14999,13 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::sendLoginLink(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(const DefaultApi::ApiUnBlockUserFromCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto unBlockFromCommentParams = request.unBlockFromCommentParams;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
     // verify the required parameter 'unBlockFromCommentParams' is set
     if (unBlockFromCommentParams == nullptr)
@@ -14839,8 +15169,12 @@ pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(utility::string_t tenantId, utility::string_t id, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> anonUserId) const
+pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(const DefaultApi::ApiUnFlagCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto userId = request.userId;
+    auto anonUserId = request.anonUserId;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -14981,8 +15315,14 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdatableCommentParams> updatableCommentParams, boost::optional<utility::string_t> contextUserId, boost::optional<bool> doSpamCheck, boost::optional<bool> isLive) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(const DefaultApi::ApiUpdateCommentRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updatableCommentParams = request.updatableCommentParams;
+    auto contextUserId = request.contextUserId;
+    auto doSpamCheck = request.doSpamCheck;
+    auto isLive = request.isLive;
 
     // verify the required parameter 'updatableCommentParams' is set
     if (updatableCommentParams == nullptr)
@@ -15150,8 +15490,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(utility:
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateEmailTemplateBody> updateEmailTemplateBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(const DefaultApi::ApiUpdateEmailTemplateRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateEmailTemplateBody = request.updateEmailTemplateBody;
 
     // verify the required parameter 'updateEmailTemplateBody' is set
     if (updateEmailTemplateBody == nullptr)
@@ -15307,8 +15650,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateEmailTemplate(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(utility::string_t tenantId, utility::string_t id, std::shared_ptr<FeedPost> feedPost) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(const DefaultApi::ApiUpdateFeedPostRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto feedPost = request.feedPost;
 
     // verify the required parameter 'feedPost' is set
     if (feedPost == nullptr)
@@ -15464,8 +15810,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateFeedPost(utility
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateModeratorBody> updateModeratorBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(const DefaultApi::ApiUpdateModeratorRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateModeratorBody = request.updateModeratorBody;
 
     // verify the required parameter 'updateModeratorBody' is set
     if (updateModeratorBody == nullptr)
@@ -15621,8 +15970,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateModerator(utilit
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateNotificationBody> updateNotificationBody, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(const DefaultApi::ApiUpdateNotificationRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateNotificationBody = request.updateNotificationBody;
+    auto userId = request.userId;
 
     // verify the required parameter 'updateNotificationBody' is set
     if (updateNotificationBody == nullptr)
@@ -15782,8 +16135,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateNotification(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionConfigBody> updateQuestionConfigBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(const DefaultApi::ApiUpdateQuestionConfigRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateQuestionConfigBody = request.updateQuestionConfigBody;
 
     // verify the required parameter 'updateQuestionConfigBody' is set
     if (updateQuestionConfigBody == nullptr)
@@ -15939,8 +16295,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionConfig(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionResult(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateQuestionResultBody> updateQuestionResultBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionResult(const DefaultApi::ApiUpdateQuestionResultRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateQuestionResultBody = request.updateQuestionResultBody;
 
     // verify the required parameter 'updateQuestionResultBody' is set
     if (updateQuestionResultBody == nullptr)
@@ -16096,8 +16455,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateQuestionResult(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<UpdateSubscriptionAPIResponse>> DefaultApi::updateSubscription(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateAPIUserSubscriptionData> updateAPIUserSubscriptionData, boost::optional<utility::string_t> userId) const
+pplx::task<std::shared_ptr<UpdateSubscriptionAPIResponse>> DefaultApi::updateSubscription(const DefaultApi::ApiUpdateSubscriptionRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateAPIUserSubscriptionData = request.updateAPIUserSubscriptionData;
+    auto userId = request.userId;
 
     // verify the required parameter 'updateAPIUserSubscriptionData' is set
     if (updateAPIUserSubscriptionData == nullptr)
@@ -16257,8 +16620,11 @@ pplx::task<std::shared_ptr<UpdateSubscriptionAPIResponse>> DefaultApi::updateSub
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantBody> updateTenantBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(const DefaultApi::ApiUpdateTenantRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateTenantBody = request.updateTenantBody;
 
     // verify the required parameter 'updateTenantBody' is set
     if (updateTenantBody == nullptr)
@@ -16414,8 +16780,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenant(utility::
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantPackageBody> updateTenantPackageBody) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(const DefaultApi::ApiUpdateTenantPackageRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateTenantPackageBody = request.updateTenantPackageBody;
 
     // verify the required parameter 'updateTenantPackageBody' is set
     if (updateTenantPackageBody == nullptr)
@@ -16571,8 +16940,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantPackage(ut
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateTenantUserBody> updateTenantUserBody, boost::optional<utility::string_t> updateComments) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(const DefaultApi::ApiUpdateTenantUserRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateTenantUserBody = request.updateTenantUserBody;
+    auto updateComments = request.updateComments;
 
     // verify the required parameter 'updateTenantUserBody' is set
     if (updateTenantUserBody == nullptr)
@@ -16732,8 +17105,11 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateTenantUser(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::updateUserBadge(utility::string_t tenantId, utility::string_t id, std::shared_ptr<UpdateUserBadgeParams> updateUserBadgeParams) const
+pplx::task<std::shared_ptr<APIEmptySuccessResponse>> DefaultApi::updateUserBadge(const DefaultApi::ApiUpdateUserBadgeRequest& request) const
 {
+    auto tenantId = request.tenantId;
+    auto id = request.id;
+    auto updateUserBadgeParams = request.updateUserBadgeParams;
 
     // verify the required parameter 'updateUserBadgeParams' is set
     if (updateUserBadgeParams == nullptr)

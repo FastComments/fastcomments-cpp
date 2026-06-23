@@ -14304,7 +14304,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14312,7 +14312,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14369,7 +14369,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14377,7 +14377,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14434,7 +14434,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14442,7 +14442,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14499,7 +14499,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14507,7 +14507,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14572,7 +14572,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14580,7 +14580,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14653,7 +14653,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14661,7 +14661,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14726,7 +14726,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -14734,7 +14734,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15094,7 +15094,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15102,7 +15102,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15169,7 +15169,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15177,7 +15177,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15252,7 +15252,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15260,7 +15260,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15325,7 +15325,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15333,7 +15333,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15626,7 +15626,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15634,7 +15634,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15707,7 +15707,7 @@
 					},
 					{
 						"in": "query",
-						"name": "broadcastId",
+						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15715,7 +15715,7 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "broadcastId",
 						"required": false,
 						"schema": {
 							"type": "string"

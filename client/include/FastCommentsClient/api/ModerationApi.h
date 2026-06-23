@@ -91,15 +91,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="voteId"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiDeleteModerationVoteRequest
+    {
+        utility::string_t commentId;
+        utility::string_t voteId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<VoteDeleteResponse>> deleteModerationVote(
-        utility::string_t commentId,
-        utility::string_t voteId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiDeleteModerationVoteRequest& request
     ) const;
     /// <summary>
     /// 
@@ -117,17 +121,21 @@ public:
     /// <param name="demo"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetApiCommentsRequest
+    {
+        boost::optional<double> page;
+        boost::optional<double> count;
+        boost::optional<utility::string_t> textSearch;
+        boost::optional<utility::string_t> byIPFromComment;
+        boost::optional<utility::string_t> filters;
+        boost::optional<utility::string_t> searchFilters;
+        boost::optional<utility::string_t> sorts;
+        boost::optional<bool> demo;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> getApiComments(
-        boost::optional<double> page,
-        boost::optional<double> count,
-        boost::optional<utility::string_t> textSearch,
-        boost::optional<utility::string_t> byIPFromComment,
-        boost::optional<utility::string_t> filters,
-        boost::optional<utility::string_t> searchFilters,
-        boost::optional<utility::string_t> sorts,
-        boost::optional<bool> demo,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetApiCommentsRequest& request
     ) const;
     /// <summary>
     /// 
@@ -138,10 +146,14 @@ public:
     /// <param name="batchJobId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetApiExportStatusRequest
+    {
+        boost::optional<utility::string_t> batchJobId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationExportStatusResponse>> getApiExportStatus(
-        boost::optional<utility::string_t> batchJobId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetApiExportStatusRequest& request
     ) const;
     /// <summary>
     /// 
@@ -157,15 +169,19 @@ public:
     /// <param name="demo"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetApiIdsRequest
+    {
+        boost::optional<utility::string_t> textSearch;
+        boost::optional<utility::string_t> byIPFromComment;
+        boost::optional<utility::string_t> filters;
+        boost::optional<utility::string_t> searchFilters;
+        boost::optional<utility::string_t> afterId;
+        boost::optional<bool> demo;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> getApiIds(
-        boost::optional<utility::string_t> textSearch,
-        boost::optional<utility::string_t> byIPFromComment,
-        boost::optional<utility::string_t> filters,
-        boost::optional<utility::string_t> searchFilters,
-        boost::optional<utility::string_t> afterId,
-        boost::optional<bool> demo,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetApiIdsRequest& request
     ) const;
     /// <summary>
     /// 
@@ -176,10 +192,14 @@ public:
     /// <param name="commentId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetBanUsersFromCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> getBanUsersFromComment(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetBanUsersFromCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -190,10 +210,14 @@ public:
     /// <param name="commentId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetCommentBanStatusRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> getCommentBanStatus(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetCommentBanStatusRequest& request
     ) const;
     /// <summary>
     /// 
@@ -204,10 +228,14 @@ public:
     /// <param name="commentId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetCommentChildrenRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> getCommentChildren(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetCommentChildrenRequest& request
     ) const;
     /// <summary>
     /// 
@@ -222,14 +250,18 @@ public:
     /// <param name="demo"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetCountRequest
+    {
+        boost::optional<utility::string_t> textSearch;
+        boost::optional<utility::string_t> byIPFromComment;
+        boost::optional<utility::string_t> filter;
+        boost::optional<utility::string_t> searchFilters;
+        boost::optional<bool> demo;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> getCount(
-        boost::optional<utility::string_t> textSearch,
-        boost::optional<utility::string_t> byIPFromComment,
-        boost::optional<utility::string_t> filter,
-        boost::optional<utility::string_t> searchFilters,
-        boost::optional<bool> demo,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetCountRequest& request
     ) const;
     /// <summary>
     /// 
@@ -239,9 +271,13 @@ public:
     /// </remarks>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetCountsRequest
+    {
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> getCounts(
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetCountsRequest& request
     ) const;
     /// <summary>
     /// 
@@ -252,10 +288,14 @@ public:
     /// <param name="commentId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetLogsRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> getLogs(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetLogsRequest& request
     ) const;
     /// <summary>
     /// 
@@ -265,9 +305,13 @@ public:
     /// </remarks>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetManualBadgesRequest
+    {
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> getManualBadges(
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetManualBadgesRequest& request
     ) const;
     /// <summary>
     /// 
@@ -279,11 +323,15 @@ public:
     /// <param name="commentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetManualBadgesForUserRequest
+    {
+        boost::optional<utility::string_t> badgesUserId;
+        boost::optional<utility::string_t> commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> getManualBadgesForUser(
-        boost::optional<utility::string_t> badgesUserId,
-        boost::optional<utility::string_t> commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetManualBadgesForUserRequest& request
     ) const;
     /// <summary>
     /// 
@@ -296,12 +344,16 @@ public:
     /// <param name="includeIP"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetModerationCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> includeEmail;
+        boost::optional<bool> includeIP;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPICommentResponse>> getModerationComment(
-        utility::string_t commentId,
-        boost::optional<bool> includeEmail,
-        boost::optional<bool> includeIP,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetModerationCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -312,10 +364,14 @@ public:
     /// <param name="commentId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetModerationCommentTextRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetCommentTextResponse>> getModerationCommentText(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetModerationCommentTextRequest& request
     ) const;
     /// <summary>
     /// 
@@ -329,13 +385,17 @@ public:
     /// <param name="includeByEmailDomain"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetPreBanSummaryRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> includeByUserIdAndEmail;
+        boost::optional<bool> includeByIP;
+        boost::optional<bool> includeByEmailDomain;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<PreBanSummary>> getPreBanSummary(
-        utility::string_t commentId,
-        boost::optional<bool> includeByUserIdAndEmail,
-        boost::optional<bool> includeByIP,
-        boost::optional<bool> includeByEmailDomain,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetPreBanSummaryRequest& request
     ) const;
     /// <summary>
     /// 
@@ -348,12 +408,16 @@ public:
     /// <param name="searchFilters"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetSearchCommentsSummaryRequest
+    {
+        boost::optional<utility::string_t> value;
+        boost::optional<utility::string_t> filters;
+        boost::optional<utility::string_t> searchFilters;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> getSearchCommentsSummary(
-        boost::optional<utility::string_t> value,
-        boost::optional<utility::string_t> filters,
-        boost::optional<utility::string_t> searchFilters,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetSearchCommentsSummaryRequest& request
     ) const;
     /// <summary>
     /// 
@@ -364,10 +428,14 @@ public:
     /// <param name="value"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetSearchPagesRequest
+    {
+        boost::optional<utility::string_t> value;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationPageSearchResponse>> getSearchPages(
-        boost::optional<utility::string_t> value,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetSearchPagesRequest& request
     ) const;
     /// <summary>
     /// 
@@ -378,10 +446,14 @@ public:
     /// <param name="value"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetSearchSitesRequest
+    {
+        boost::optional<utility::string_t> value;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> getSearchSites(
-        boost::optional<utility::string_t> value,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetSearchSitesRequest& request
     ) const;
     /// <summary>
     /// 
@@ -392,10 +464,14 @@ public:
     /// <param name="textSearch"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetSearchSuggestRequest
+    {
+        boost::optional<utility::string_t> textSearch;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationSuggestResponse>> getSearchSuggest(
-        boost::optional<utility::string_t> textSearch,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetSearchSuggestRequest& request
     ) const;
     /// <summary>
     /// 
@@ -406,10 +482,14 @@ public:
     /// <param name="value"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetSearchUsersRequest
+    {
+        boost::optional<utility::string_t> value;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationUserSearchResponse>> getSearchUsers(
-        boost::optional<utility::string_t> value,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetSearchUsersRequest& request
     ) const;
     /// <summary>
     /// 
@@ -420,10 +500,14 @@ public:
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetTrustFactorRequest
+    {
+        boost::optional<utility::string_t> userId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> getTrustFactor(
-        boost::optional<utility::string_t> userId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetTrustFactorRequest& request
     ) const;
     /// <summary>
     /// 
@@ -433,9 +517,13 @@ public:
     /// </remarks>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetUserBanPreferenceRequest
+    {
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> getUserBanPreference(
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetUserBanPreferenceRequest& request
     ) const;
     /// <summary>
     /// 
@@ -446,10 +534,14 @@ public:
     /// <param name="commentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiGetUserInternalProfileRequest
+    {
+        boost::optional<utility::string_t> commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> getUserInternalProfile(
-        boost::optional<utility::string_t> commentId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiGetUserInternalProfileRequest& request
     ) const;
     /// <summary>
     /// 
@@ -459,15 +551,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="adjustCommentVotesParams"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostAdjustCommentVotesRequest
+    {
+        utility::string_t commentId;
+        std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<AdjustVotesResponse>> postAdjustCommentVotes(
-        utility::string_t commentId,
-        std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostAdjustCommentVotesRequest& request
     ) const;
     /// <summary>
     /// 
@@ -482,14 +578,18 @@ public:
     /// <param name="sorts"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostApiExportRequest
+    {
+        boost::optional<utility::string_t> textSearch;
+        boost::optional<utility::string_t> byIPFromComment;
+        boost::optional<utility::string_t> filters;
+        boost::optional<utility::string_t> searchFilters;
+        boost::optional<utility::string_t> sorts;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationExportResponse>> postApiExport(
-        boost::optional<utility::string_t> textSearch,
-        boost::optional<utility::string_t> byIPFromComment,
-        boost::optional<utility::string_t> filters,
-        boost::optional<utility::string_t> searchFilters,
-        boost::optional<utility::string_t> sorts,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostApiExportRequest& request
     ) const;
     /// <summary>
     /// 
@@ -508,18 +608,22 @@ public:
     /// <param name="banReason"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostBanUserFromCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> banEmail;
+        boost::optional<bool> banEmailDomain;
+        boost::optional<bool> banIP;
+        boost::optional<bool> deleteAllUsersComments;
+        boost::optional<utility::string_t> bannedUntil;
+        boost::optional<bool> isShadowBan;
+        boost::optional<utility::string_t> updateId;
+        boost::optional<utility::string_t> banReason;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<BanUserFromCommentResult>> postBanUserFromComment(
-        utility::string_t commentId,
-        boost::optional<bool> banEmail,
-        boost::optional<bool> banEmailDomain,
-        boost::optional<bool> banIP,
-        boost::optional<bool> deleteAllUsersComments,
-        boost::optional<utility::string_t> bannedUntil,
-        boost::optional<bool> isShadowBan,
-        boost::optional<utility::string_t> updateId,
-        boost::optional<utility::string_t> banReason,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostBanUserFromCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -530,10 +634,14 @@ public:
     /// <param name="banUserUndoParams"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostBanUserUndoRequest
+    {
+        std::shared_ptr<BanUserUndoParams> banUserUndoParams;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postBanUserUndo(
-        std::shared_ptr<BanUserUndoParams> banUserUndoParams,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostBanUserUndoRequest& request
     ) const;
     /// <summary>
     /// 
@@ -547,13 +655,17 @@ public:
     /// <param name="includeByEmailDomain"> (optional, default to false)</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostBulkPreBanSummaryRequest
+    {
+        std::shared_ptr<BulkPreBanParams> bulkPreBanParams;
+        boost::optional<bool> includeByUserIdAndEmail;
+        boost::optional<bool> includeByIP;
+        boost::optional<bool> includeByEmailDomain;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<BulkPreBanSummary>> postBulkPreBanSummary(
-        std::shared_ptr<BulkPreBanParams> bulkPreBanParams,
-        boost::optional<bool> includeByUserIdAndEmail,
-        boost::optional<bool> includeByIP,
-        boost::optional<bool> includeByEmailDomain,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostBulkPreBanSummaryRequest& request
     ) const;
     /// <summary>
     /// 
@@ -564,10 +676,14 @@ public:
     /// <param name="commentsByIdsParams"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostCommentsByIdsRequest
+    {
+        std::shared_ptr<CommentsByIdsParams> commentsByIdsParams;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> postCommentsByIds(
-        std::shared_ptr<CommentsByIdsParams> commentsByIdsParams,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostCommentsByIdsRequest& request
     ) const;
     /// <summary>
     /// 
@@ -576,14 +692,18 @@ public:
     /// 
     /// </remarks>
     /// <param name="commentId"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostFlagCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postFlagComment(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostFlagCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -592,14 +712,18 @@ public:
     /// 
     /// </remarks>
     /// <param name="commentId"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostRemoveCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<PostRemoveCommentResponse>> postRemoveComment(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostRemoveCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -608,14 +732,18 @@ public:
     /// 
     /// </remarks>
     /// <param name="commentId"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostRestoreDeletedCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postRestoreDeletedComment(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostRestoreDeletedCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -625,15 +753,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="approved"> (optional, default to false)</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostSetCommentApprovalStatusRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> approved;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<SetCommentApprovedResponse>> postSetCommentApprovalStatus(
-        utility::string_t commentId,
-        boost::optional<bool> approved,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostSetCommentApprovalStatusRequest& request
     ) const;
     /// <summary>
     /// 
@@ -643,15 +775,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="reviewed"> (optional, default to false)</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostSetCommentReviewStatusRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> reviewed;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postSetCommentReviewStatus(
-        utility::string_t commentId,
-        boost::optional<bool> reviewed,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostSetCommentReviewStatusRequest& request
     ) const;
     /// <summary>
     /// 
@@ -662,16 +798,20 @@ public:
     /// <param name="commentId"></param>
     /// <param name="spam"> (optional, default to false)</param>
     /// <param name="permNotSpam"> (optional, default to false)</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostSetCommentSpamStatusRequest
+    {
+        utility::string_t commentId;
+        boost::optional<bool> spam;
+        boost::optional<bool> permNotSpam;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postSetCommentSpamStatus(
-        utility::string_t commentId,
-        boost::optional<bool> spam,
-        boost::optional<bool> permNotSpam,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostSetCommentSpamStatusRequest& request
     ) const;
     /// <summary>
     /// 
@@ -681,15 +821,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="setCommentTextParams"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostSetCommentTextRequest
+    {
+        utility::string_t commentId;
+        std::shared_ptr<SetCommentTextParams> setCommentTextParams;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<SetCommentTextResponse>> postSetCommentText(
-        utility::string_t commentId,
-        std::shared_ptr<SetCommentTextParams> setCommentTextParams,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostSetCommentTextRequest& request
     ) const;
     /// <summary>
     /// 
@@ -698,14 +842,18 @@ public:
     /// 
     /// </remarks>
     /// <param name="commentId"></param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostUnFlagCommentRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> postUnFlagComment(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostUnFlagCommentRequest& request
     ) const;
     /// <summary>
     /// 
@@ -715,15 +863,19 @@ public:
     /// </remarks>
     /// <param name="commentId"></param>
     /// <param name="direction"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPostVoteRequest
+    {
+        utility::string_t commentId;
+        boost::optional<utility::string_t> direction;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<VoteResponse>> postVote(
-        utility::string_t commentId,
-        boost::optional<utility::string_t> direction,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPostVoteRequest& request
     ) const;
     /// <summary>
     /// 
@@ -734,16 +886,20 @@ public:
     /// <param name="badgeId"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="commentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPutAwardBadgeRequest
+    {
+        utility::string_t badgeId;
+        boost::optional<utility::string_t> userId;
+        boost::optional<utility::string_t> commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<AwardUserBadgeResponse>> putAwardBadge(
-        utility::string_t badgeId,
-        boost::optional<utility::string_t> userId,
-        boost::optional<utility::string_t> commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPutAwardBadgeRequest& request
     ) const;
     /// <summary>
     /// 
@@ -754,10 +910,14 @@ public:
     /// <param name="urlId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPutCloseThreadRequest
+    {
+        utility::string_t urlId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> putCloseThread(
-        utility::string_t urlId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPutCloseThreadRequest& request
     ) const;
     /// <summary>
     /// 
@@ -768,16 +928,20 @@ public:
     /// <param name="badgeId"></param>
     /// <param name="userId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="commentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="broadcastId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPutRemoveBadgeRequest
+    {
+        utility::string_t badgeId;
+        boost::optional<utility::string_t> userId;
+        boost::optional<utility::string_t> commentId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> broadcastId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> putRemoveBadge(
-        utility::string_t badgeId,
-        boost::optional<utility::string_t> userId,
-        boost::optional<utility::string_t> commentId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPutRemoveBadgeRequest& request
     ) const;
     /// <summary>
     /// 
@@ -788,10 +952,14 @@ public:
     /// <param name="urlId"></param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiPutReopenThreadRequest
+    {
+        utility::string_t urlId;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<APIEmptyResponse>> putReopenThread(
-        utility::string_t urlId,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiPutReopenThreadRequest& request
     ) const;
     /// <summary>
     /// 
@@ -803,11 +971,15 @@ public:
     /// <param name="trustFactor"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    struct ApiSetTrustFactorRequest
+    {
+        boost::optional<utility::string_t> userId;
+        boost::optional<utility::string_t> trustFactor;
+        boost::optional<utility::string_t> tenantId;
+        boost::optional<utility::string_t> sso;
+    };
     pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> setTrustFactor(
-        boost::optional<utility::string_t> userId,
-        boost::optional<utility::string_t> trustFactor,
-        boost::optional<utility::string_t> tenantId,
-        boost::optional<utility::string_t> sso
+        const ApiSetTrustFactorRequest& request
     ) const;
 
 protected:
