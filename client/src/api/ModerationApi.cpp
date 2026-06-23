@@ -38,6 +38,7 @@ ModerationApi::~ModerationApi()
 pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(
         utility::string_t commentId,
         utility::string_t voteId
+        
         , const ApiDeleteModerationVoteOptions& options
 ) const
 {
@@ -179,6 +180,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationV
     });
 }
 pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(
+        
         const ApiGetApiCommentsOptions& options
 ) const
 {
@@ -353,6 +355,7 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::get
     });
 }
 pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(
+        
         const ApiGetApiExportStatusOptions& options
 ) const
 {
@@ -492,6 +495,7 @@ pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getAp
     });
 }
 pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(
+        
         const ApiGetApiIdsOptions& options
 ) const
 {
@@ -657,6 +661,7 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::g
 }
 pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(
         utility::string_t commentId
+        
         , const ApiGetBanUsersFromCommentOptions& options
 ) const
 {
@@ -793,6 +798,7 @@ pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::ge
 }
 pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(
         utility::string_t commentId
+        
         , const ApiGetCommentBanStatusOptions& options
 ) const
 {
@@ -929,6 +935,7 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getComme
 }
 pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(
         utility::string_t commentId
+        
         , const ApiGetCommentChildrenOptions& options
 ) const
 {
@@ -1064,6 +1071,7 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::g
     });
 }
 pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(
+        
         const ApiGetCountOptions& options
 ) const
 {
@@ -1223,6 +1231,7 @@ pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::g
     });
 }
 pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(
+        
         const ApiGetCountsOptions& options
 ) const
 {
@@ -1358,6 +1367,7 @@ pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCount
 }
 pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(
         utility::string_t commentId
+        
         , const ApiGetLogsOptions& options
 ) const
 {
@@ -1493,6 +1503,7 @@ pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs
     });
 }
 pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(
+        
         const ApiGetManualBadgesOptions& options
 ) const
 {
@@ -1627,6 +1638,7 @@ pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getMan
     });
 }
 pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(
+        
         const ApiGetManualBadgesForUserOptions& options
 ) const
 {
@@ -1772,6 +1784,7 @@ pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManua
 }
 pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(
         utility::string_t commentId
+        
         , const ApiGetModerationCommentOptions& options
 ) const
 {
@@ -1918,6 +1931,7 @@ pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getMode
 }
 pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(
         utility::string_t commentId
+        
         , const ApiGetModerationCommentTextOptions& options
 ) const
 {
@@ -2054,6 +2068,7 @@ pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModeration
 }
 pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(
         utility::string_t commentId
+        
         , const ApiGetPreBanSummaryOptions& options
 ) const
 {
@@ -2204,6 +2219,7 @@ pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(
     });
 }
 pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(
+        
         const ApiGetSearchCommentsSummaryOptions& options
 ) const
 {
@@ -2353,6 +2369,7 @@ pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getS
     });
 }
 pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(
+        
         const ApiGetSearchPagesOptions& options
 ) const
 {
@@ -2492,6 +2509,7 @@ pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSear
     });
 }
 pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(
+        
         const ApiGetSearchSitesOptions& options
 ) const
 {
@@ -2631,6 +2649,7 @@ pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSear
     });
 }
 pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(
+        
         const ApiGetSearchSuggestOptions& options
 ) const
 {
@@ -2770,6 +2789,7 @@ pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchS
     });
 }
 pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(
+        
         const ApiGetSearchUsersOptions& options
 ) const
 {
@@ -2909,6 +2929,7 @@ pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSear
     });
 }
 pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(
+        
         const ApiGetTrustFactorOptions& options
 ) const
 {
@@ -3048,6 +3069,7 @@ pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustF
     });
 }
 pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(
+        
         const ApiGetUserBanPreferenceOptions& options
 ) const
 {
@@ -3182,6 +3204,7 @@ pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> Moderation
     });
 }
 pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(
+        
         const ApiGetUserInternalProfileOptions& options
 ) const
 {
@@ -3323,6 +3346,7 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUs
 pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(
         utility::string_t commentId,
         std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams
+        
         , const ApiPostAdjustCommentVotesOptions& options
 ) const
 {
@@ -3485,6 +3509,7 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
     });
 }
 pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(
+        
         const ApiPostApiExportOptions& options
 ) const
 {
@@ -3645,6 +3670,7 @@ pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExpo
 }
 pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(
         utility::string_t commentId
+        
         , const ApiPostBanUserFromCommentOptions& options
 ) const
 {
@@ -3821,6 +3847,7 @@ pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUser
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(
         std::shared_ptr<BanUserUndoParams> banUserUndoParams
+        
         , const ApiPostBanUserUndoOptions& options
 ) const
 {
@@ -3978,6 +4005,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(
 }
 pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(
         std::shared_ptr<BulkPreBanParams> bulkPreBanParams
+        
         , const ApiPostBulkPreBanSummaryOptions& options
 ) const
 {
@@ -4150,6 +4178,7 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
 }
 pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(
         std::shared_ptr<CommentsByIdsParams> commentsByIdsParams
+        
         , const ApiPostCommentsByIdsOptions& options
 ) const
 {
@@ -4307,6 +4336,7 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(
         utility::string_t commentId
+        
         , const ApiPostFlagCommentOptions& options
 ) const
 {
@@ -4448,6 +4478,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(
 }
 pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemoveComment(
         utility::string_t commentId
+        
         , const ApiPostRemoveCommentOptions& options
 ) const
 {
@@ -4589,6 +4620,7 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(
         utility::string_t commentId
+        
         , const ApiPostRestoreDeletedCommentOptions& options
 ) const
 {
@@ -4730,6 +4762,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedC
 }
 pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(
         utility::string_t commentId
+        
         , const ApiPostSetCommentApprovalStatusOptions& options
 ) const
 {
@@ -4876,6 +4909,7 @@ pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCo
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(
         utility::string_t commentId
+        
         , const ApiPostSetCommentReviewStatusOptions& options
 ) const
 {
@@ -5022,6 +5056,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentRevie
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(
         utility::string_t commentId
+        
         , const ApiPostSetCommentSpamStatusOptions& options
 ) const
 {
@@ -5174,6 +5209,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamS
 pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(
         utility::string_t commentId,
         std::shared_ptr<SetCommentTextParams> setCommentTextParams
+        
         , const ApiPostSetCommentTextOptions& options
 ) const
 {
@@ -5337,6 +5373,7 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(
         utility::string_t commentId
+        
         , const ApiPostUnFlagCommentOptions& options
 ) const
 {
@@ -5478,6 +5515,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(
 }
 pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(
         utility::string_t commentId
+        
         , const ApiPostVoteOptions& options
 ) const
 {
@@ -5624,6 +5662,7 @@ pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(
 }
 pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(
         utility::string_t badgeId
+        
         , const ApiPutAwardBadgeOptions& options
 ) const
 {
@@ -5777,6 +5816,7 @@ pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(
         utility::string_t urlId
+        
         , const ApiPutCloseThreadOptions& options
 ) const
 {
@@ -5915,6 +5955,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(
 }
 pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(
         utility::string_t badgeId
+        
         , const ApiPutRemoveBadgeOptions& options
 ) const
 {
@@ -6068,6 +6109,7 @@ pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBad
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(
         utility::string_t urlId
+        
         , const ApiPutReopenThreadOptions& options
 ) const
 {
@@ -6205,6 +6247,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(
     });
 }
 pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(
+        
         const ApiSetTrustFactorOptions& options
 ) const
 {

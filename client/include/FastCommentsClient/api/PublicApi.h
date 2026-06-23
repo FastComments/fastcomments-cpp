@@ -87,14 +87,6 @@ namespace api {
 
 using namespace org::openapitools::client::model;
 
-struct ApiBlockFromCommentPublicOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiCheckedCommentsForBlockedOptions
-{
-    boost::optional<utility::string_t> sso;
-};
 struct ApiCreateCommentPublicOptions
 {
     boost::optional<utility::string_t> sessionId;
@@ -104,14 +96,6 @@ struct ApiCreateFeedPostPublicOptions
 {
     boost::optional<utility::string_t> broadcastId;
     boost::optional<utility::string_t> sso;
-};
-struct ApiCreateV1PageReactOptions
-{
-    boost::optional<utility::string_t> title;
-};
-struct ApiCreateV2PageReactOptions
-{
-    boost::optional<utility::string_t> title;
 };
 struct ApiDeleteCommentPublicOptions
 {
@@ -128,17 +112,9 @@ struct ApiDeleteFeedPostPublicOptions
     boost::optional<utility::string_t> broadcastId;
     boost::optional<utility::string_t> sso;
 };
-struct ApiFlagCommentPublicOptions
-{
-    boost::optional<utility::string_t> sso;
-};
 struct ApiGetCommentTextOptions
 {
     boost::optional<utility::string_t> editKey;
-    boost::optional<utility::string_t> sso;
-};
-struct ApiGetCommentVoteUserNamesOptions
-{
     boost::optional<utility::string_t> sso;
 };
 struct ApiGetCommentsForUserOptions
@@ -180,10 +156,6 @@ struct ApiGetCommentsPublicOptions
     boost::optional<utility::string_t> afterCommentId;
     boost::optional<utility::string_t> beforeCommentId;
 };
-struct ApiGetEventLogOptions
-{
-    boost::optional<int64_t> endTime;
-};
 struct ApiGetFeedPostsPublicOptions
 {
     boost::optional<utility::string_t> afterId;
@@ -192,10 +164,6 @@ struct ApiGetFeedPostsPublicOptions
     boost::optional<utility::string_t> sso;
     boost::optional<bool> isCrawler;
     boost::optional<bool> includeUserInfo;
-};
-struct ApiGetFeedPostsStatsOptions
-{
-    boost::optional<utility::string_t> sso;
 };
 struct ApiGetGifsSearchOptions
 {
@@ -208,10 +176,6 @@ struct ApiGetGifsTrendingOptions
     boost::optional<utility::string_t> locale;
     boost::optional<utility::string_t> rating;
     boost::optional<double> page;
-};
-struct ApiGetGlobalEventLogOptions
-{
-    boost::optional<int64_t> endTime;
 };
 struct ApiGetOfflineUsersOptions
 {
@@ -236,10 +200,6 @@ struct ApiGetTranslationsOptions
     boost::optional<utility::string_t> locale;
     boost::optional<bool> useFullTranslationIds;
 };
-struct ApiGetUserNotificationCountOptions
-{
-    boost::optional<utility::string_t> sso;
-};
 struct ApiGetUserNotificationsOptions
 {
     boost::optional<utility::string_t> urlId;
@@ -259,22 +219,10 @@ struct ApiGetUserReactsPublicOptions
     boost::optional<std::vector<utility::string_t>> postIds;
     boost::optional<utility::string_t> sso;
 };
-struct ApiLockCommentOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiPinCommentOptions
-{
-    boost::optional<utility::string_t> sso;
-};
 struct ApiReactFeedPostPublicOptions
 {
     boost::optional<bool> isUndo;
     boost::optional<utility::string_t> broadcastId;
-    boost::optional<utility::string_t> sso;
-};
-struct ApiResetUserNotificationCountOptions
-{
     boost::optional<utility::string_t> sso;
 };
 struct ApiResetUserNotificationsOptions
@@ -298,33 +246,9 @@ struct ApiSetCommentTextOptions
     boost::optional<utility::string_t> editKey;
     boost::optional<utility::string_t> sso;
 };
-struct ApiUnBlockCommentPublicOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiUnLockCommentOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiUnPinCommentOptions
-{
-    boost::optional<utility::string_t> sso;
-};
 struct ApiUpdateFeedPostPublicOptions
 {
     boost::optional<utility::string_t> broadcastId;
-    boost::optional<utility::string_t> sso;
-};
-struct ApiUpdateUserNotificationCommentSubscriptionStatusOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiUpdateUserNotificationPageSubscriptionStatusOptions
-{
-    boost::optional<utility::string_t> sso;
-};
-struct ApiUpdateUserNotificationStatusOptions
-{
     boost::optional<utility::string_t> sso;
 };
 struct ApiUploadImageOptions
@@ -362,7 +286,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
-        , const ApiBlockFromCommentPublicOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -376,7 +300,7 @@ public:
     pplx::task<std::shared_ptr<CheckBlockedCommentsResponse>> checkedCommentsForBlocked(
         utility::string_t tenantId,
         utility::string_t commentIds
-        , const ApiCheckedCommentsForBlockedOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -395,6 +319,7 @@ public:
         utility::string_t urlId,
         utility::string_t broadcastId,
         std::shared_ptr<CommentData> commentData
+        
         , const ApiCreateCommentPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -410,6 +335,7 @@ public:
     pplx::task<std::shared_ptr<CreateFeedPostResponse>> createFeedPostPublic(
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams
+        
         , const ApiCreateFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -424,7 +350,7 @@ public:
     pplx::task<std::shared_ptr<CreateV1PageReact>> createV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
-        , const ApiCreateV1PageReactOptions& options = {}
+        , boost::optional<utility::string_t> title = boost::none
     ) const;
     /// <summary>
     /// 
@@ -440,7 +366,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
-        , const ApiCreateV2PageReactOptions& options = {}
+        , boost::optional<utility::string_t> title = boost::none
     ) const;
     /// <summary>
     /// 
@@ -457,6 +383,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
+        
         , const ApiDeleteCommentPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -478,6 +405,7 @@ public:
         utility::string_t voteId,
         utility::string_t urlId,
         utility::string_t broadcastId
+        
         , const ApiDeleteCommentVoteOptions& options = {}
     ) const;
     /// <summary>
@@ -493,6 +421,7 @@ public:
     pplx::task<std::shared_ptr<DeleteFeedPostPublicResponse>> deleteFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId
+        
         , const ApiDeleteFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -506,6 +435,7 @@ public:
     pplx::task<std::shared_ptr<CreateV1PageReact>> deleteV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -520,6 +450,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
     ) const;
     /// <summary>
     /// 
@@ -535,7 +466,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         bool isFlagged
-        , const ApiFlagCommentPublicOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -550,6 +481,7 @@ public:
     pplx::task<std::shared_ptr<PublicAPIGetCommentTextResponse>> getCommentText(
         utility::string_t tenantId,
         utility::string_t commentId
+        
         , const ApiGetCommentTextOptions& options = {}
     ) const;
     /// <summary>
@@ -566,7 +498,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         int32_t dir
-        , const ApiGetCommentVoteUserNamesOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -582,6 +514,7 @@ public:
     /// <param name="locale"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="isCrawler"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<GetCommentsForUserResponse>> getCommentsForUser(
+        
         const ApiGetCommentsForUserOptions& options = {}
     ) const;
     /// <summary>
@@ -621,6 +554,7 @@ public:
     pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> getCommentsPublic(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetCommentsPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -639,7 +573,7 @@ public:
         utility::string_t urlId,
         utility::string_t userIdWS,
         int64_t startTime
-        , const ApiGetEventLogOptions& options = {}
+        , boost::optional<int64_t> endTime = boost::none
     ) const;
     /// <summary>
     /// 
@@ -656,6 +590,7 @@ public:
     /// <param name="includeUserInfo"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<PublicFeedPostsResponse>> getFeedPostsPublic(
         utility::string_t tenantId
+        
         , const ApiGetFeedPostsPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -670,7 +605,7 @@ public:
     pplx::task<std::shared_ptr<FeedPostsStatsResponse>> getFeedPostsStats(
         utility::string_t tenantId,
         std::vector<utility::string_t> postIds
-        , const ApiGetFeedPostsStatsOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -683,6 +618,7 @@ public:
     pplx::task<std::shared_ptr<GifGetLargeResponse>> getGifLarge(
         utility::string_t tenantId,
         utility::string_t largeInternalURLSanitized
+        
     ) const;
     /// <summary>
     /// 
@@ -698,6 +634,7 @@ public:
     pplx::task<std::shared_ptr<GetGifsSearchResponse>> getGifsSearch(
         utility::string_t tenantId,
         utility::string_t search
+        
         , const ApiGetGifsSearchOptions& options = {}
     ) const;
     /// <summary>
@@ -712,6 +649,7 @@ public:
     /// <param name="page"> (optional, default to 0.0)</param>
     pplx::task<std::shared_ptr<GetGifsTrendingResponse>> getGifsTrending(
         utility::string_t tenantId
+        
         , const ApiGetGifsTrendingOptions& options = {}
     ) const;
     /// <summary>
@@ -730,7 +668,7 @@ public:
         utility::string_t urlId,
         utility::string_t userIdWS,
         int64_t startTime
-        , const ApiGetGlobalEventLogOptions& options = {}
+        , boost::optional<int64_t> endTime = boost::none
     ) const;
     /// <summary>
     /// 
@@ -745,6 +683,7 @@ public:
     pplx::task<std::shared_ptr<PageUsersOfflineResponse>> getOfflineUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetOfflineUsersOptions& options = {}
     ) const;
     /// <summary>
@@ -760,6 +699,7 @@ public:
     pplx::task<std::shared_ptr<PageUsersOnlineResponse>> getOnlineUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetOnlineUsersOptions& options = {}
     ) const;
     /// <summary>
@@ -776,6 +716,7 @@ public:
     /// <param name="hasComments">If true, only return pages with at least one comment. (optional, default to false)</param>
     pplx::task<std::shared_ptr<GetPublicPagesResponse>> getPagesPublic(
         utility::string_t tenantId
+        
         , const ApiGetPagesPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -791,6 +732,7 @@ public:
     pplx::task<std::shared_ptr<GetTranslationsResponse>> getTranslations(
         utility::string_t r_namespace,
         utility::string_t component
+        
         , const ApiGetTranslationsOptions& options = {}
     ) const;
     /// <summary>
@@ -803,7 +745,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> getUserNotificationCount(
         utility::string_t tenantId
-        , const ApiGetUserNotificationCountOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -825,6 +767,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<GetMyNotificationsResponse>> getUserNotifications(
         utility::string_t tenantId
+        
         , const ApiGetUserNotificationsOptions& options = {}
     ) const;
     /// <summary>
@@ -840,6 +783,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlIdWS,
         utility::string_t userIds
+        
     ) const;
     /// <summary>
     /// 
@@ -852,6 +796,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<UserReactsResponse>> getUserReactsPublic(
         utility::string_t tenantId
+        
         , const ApiGetUserReactsPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -865,6 +810,7 @@ public:
     pplx::task<std::shared_ptr<PageUsersInfoResponse>> getUsersInfo(
         utility::string_t tenantId,
         utility::string_t ids
+        
     ) const;
     /// <summary>
     /// 
@@ -877,6 +823,7 @@ public:
     pplx::task<std::shared_ptr<GetV1PageLikes>> getV1PageLikes(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -891,6 +838,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
     ) const;
     /// <summary>
     /// 
@@ -903,6 +851,7 @@ public:
     pplx::task<std::shared_ptr<GetV2PageReacts>> getV2PageReacts(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -918,7 +867,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiLockCommentOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -927,6 +876,7 @@ public:
     /// 
     /// </remarks>
     pplx::task<std::shared_ptr<APIEmptyResponse>> logoutPublic(
+        
     ) const;
     /// <summary>
     /// 
@@ -942,7 +892,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiPinCommentOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -960,6 +910,7 @@ public:
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<ReactBodyParams> reactBodyParams
+        
         , const ApiReactFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -972,7 +923,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotificationCount(
         utility::string_t tenantId
-        , const ApiResetUserNotificationCountOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -989,6 +940,7 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotifications(
         utility::string_t tenantId
+        
         , const ApiResetUserNotificationsOptions& options = {}
     ) const;
     /// <summary>
@@ -1006,6 +958,7 @@ public:
     pplx::task<std::shared_ptr<SearchUsersResult>> searchUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiSearchUsersOptions& options = {}
     ) const;
     /// <summary>
@@ -1025,6 +978,7 @@ public:
         utility::string_t commentId,
         utility::string_t broadcastId,
         std::shared_ptr<CommentTextUpdateRequest> commentTextUpdateRequest
+        
         , const ApiSetCommentTextOptions& options = {}
     ) const;
     /// <summary>
@@ -1041,7 +995,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
-        , const ApiUnBlockCommentPublicOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1057,7 +1011,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiUnLockCommentOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1073,7 +1027,7 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiUnPinCommentOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1090,6 +1044,7 @@ public:
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams
+        
         , const ApiUpdateFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
@@ -1108,7 +1063,7 @@ public:
         utility::string_t notificationId,
         utility::string_t optedInOrOut,
         utility::string_t commentId
-        , const ApiUpdateUserNotificationCommentSubscriptionStatusOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1128,7 +1083,7 @@ public:
         utility::string_t url,
         utility::string_t pageTitle,
         utility::string_t subscribedOrUnsubscribed
-        , const ApiUpdateUserNotificationPageSubscriptionStatusOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1144,7 +1099,7 @@ public:
         utility::string_t tenantId,
         utility::string_t notificationId,
         utility::string_t newStatus
-        , const ApiUpdateUserNotificationStatusOptions& options = {}
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -1159,6 +1114,7 @@ public:
     pplx::task<std::shared_ptr<UploadImageResponse>> uploadImage(
         utility::string_t tenantId,
         std::shared_ptr<HttpContent> file
+        
         , const ApiUploadImageOptions& options = {}
     ) const;
     /// <summary>
@@ -1180,6 +1136,7 @@ public:
         utility::string_t urlId,
         utility::string_t broadcastId,
         std::shared_ptr<VoteBodyParams> voteBodyParams
+        
         , const ApiVoteCommentOptions& options = {}
     ) const;
 

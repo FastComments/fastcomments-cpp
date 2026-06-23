@@ -39,10 +39,9 @@ pplx::task<std::shared_ptr<BlockSuccess>> PublicApi::blockFromCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
-        , const ApiBlockFromCommentPublicOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
     // verify the required parameter 'publicBlockFromCommentParams' is set
     if (publicBlockFromCommentParams == nullptr)
@@ -196,10 +195,9 @@ pplx::task<std::shared_ptr<BlockSuccess>> PublicApi::blockFromCommentPublic(
 pplx::task<std::shared_ptr<CheckBlockedCommentsResponse>> PublicApi::checkedCommentsForBlocked(
         utility::string_t tenantId,
         utility::string_t commentIds
-        , const ApiCheckedCommentsForBlockedOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -335,6 +333,7 @@ pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> PublicApi::createC
         utility::string_t urlId,
         utility::string_t broadcastId,
         std::shared_ptr<CommentData> commentData
+        
         , const ApiCreateCommentPublicOptions& options
 ) const
 {
@@ -500,6 +499,7 @@ pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> PublicApi::createC
 pplx::task<std::shared_ptr<CreateFeedPostResponse>> PublicApi::createFeedPostPublic(
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams
+        
         , const ApiCreateFeedPostPublicOptions& options
 ) const
 {
@@ -659,10 +659,9 @@ pplx::task<std::shared_ptr<CreateFeedPostResponse>> PublicApi::createFeedPostPub
 pplx::task<std::shared_ptr<CreateV1PageReact>> PublicApi::createV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
-        , const ApiCreateV1PageReactOptions& options
+        , boost::optional<utility::string_t> title
 ) const
 {
-    auto title = options.title;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -795,10 +794,9 @@ pplx::task<std::shared_ptr<CreateV1PageReact>> PublicApi::createV2PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
-        , const ApiCreateV2PageReactOptions& options
+        , boost::optional<utility::string_t> title
 ) const
 {
-    auto title = options.title;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -934,6 +932,7 @@ pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> PublicApi::deleteCom
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
+        
         , const ApiDeleteCommentPublicOptions& options
 ) const
 {
@@ -1078,6 +1077,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> PublicApi::deleteCommentVote(
         utility::string_t voteId,
         utility::string_t urlId,
         utility::string_t broadcastId
+        
         , const ApiDeleteCommentVoteOptions& options
 ) const
 {
@@ -1223,6 +1223,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> PublicApi::deleteCommentVote(
 pplx::task<std::shared_ptr<DeleteFeedPostPublicResponse>> PublicApi::deleteFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId
+        
         , const ApiDeleteFeedPostPublicOptions& options
 ) const
 {
@@ -1361,6 +1362,7 @@ pplx::task<std::shared_ptr<DeleteFeedPostPublicResponse>> PublicApi::deleteFeedP
 pplx::task<std::shared_ptr<CreateV1PageReact>> PublicApi::deleteV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
+        
 ) const
 {
 
@@ -1491,6 +1493,7 @@ pplx::task<std::shared_ptr<CreateV1PageReact>> PublicApi::deleteV2PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
 ) const
 {
 
@@ -1624,10 +1627,9 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::flagCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         bool isFlagged
-        , const ApiFlagCommentPublicOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -1762,6 +1764,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::flagCommentPublic(
 pplx::task<std::shared_ptr<PublicAPIGetCommentTextResponse>> PublicApi::getCommentText(
         utility::string_t tenantId,
         utility::string_t commentId
+        
         , const ApiGetCommentTextOptions& options
 ) const
 {
@@ -1901,10 +1904,9 @@ pplx::task<std::shared_ptr<GetCommentVoteUserNamesSuccessResponse>> PublicApi::g
         utility::string_t tenantId,
         utility::string_t commentId,
         int32_t dir
-        , const ApiGetCommentVoteUserNamesOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2035,6 +2037,7 @@ pplx::task<std::shared_ptr<GetCommentVoteUserNamesSuccessResponse>> PublicApi::g
     });
 }
 pplx::task<std::shared_ptr<GetCommentsForUserResponse>> PublicApi::getCommentsForUser(
+        
         const ApiGetCommentsForUserOptions& options
 ) const
 {
@@ -2196,6 +2199,7 @@ pplx::task<std::shared_ptr<GetCommentsForUserResponse>> PublicApi::getCommentsFo
 pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> PublicApi::getCommentsPublic(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetCommentsPublicOptions& options
 ) const
 {
@@ -2458,10 +2462,9 @@ pplx::task<std::shared_ptr<GetEventLogResponse>> PublicApi::getEventLog(
         utility::string_t urlId,
         utility::string_t userIdWS,
         int64_t startTime
-        , const ApiGetEventLogOptions& options
+        , boost::optional<int64_t> endTime
 ) const
 {
-    auto endTime = options.endTime;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2598,6 +2601,7 @@ pplx::task<std::shared_ptr<GetEventLogResponse>> PublicApi::getEventLog(
 }
 pplx::task<std::shared_ptr<PublicFeedPostsResponse>> PublicApi::getFeedPostsPublic(
         utility::string_t tenantId
+        
         , const ApiGetFeedPostsPublicOptions& options
 ) const
 {
@@ -2755,10 +2759,9 @@ pplx::task<std::shared_ptr<PublicFeedPostsResponse>> PublicApi::getFeedPostsPubl
 pplx::task<std::shared_ptr<FeedPostsStatsResponse>> PublicApi::getFeedPostsStats(
         utility::string_t tenantId,
         std::vector<utility::string_t> postIds
-        , const ApiGetFeedPostsStatsOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -2890,6 +2893,7 @@ pplx::task<std::shared_ptr<FeedPostsStatsResponse>> PublicApi::getFeedPostsStats
 pplx::task<std::shared_ptr<GifGetLargeResponse>> PublicApi::getGifLarge(
         utility::string_t tenantId,
         utility::string_t largeInternalURLSanitized
+        
 ) const
 {
 
@@ -3019,6 +3023,7 @@ pplx::task<std::shared_ptr<GifGetLargeResponse>> PublicApi::getGifLarge(
 pplx::task<std::shared_ptr<GetGifsSearchResponse>> PublicApi::getGifsSearch(
         utility::string_t tenantId,
         utility::string_t search
+        
         , const ApiGetGifsSearchOptions& options
 ) const
 {
@@ -3163,6 +3168,7 @@ pplx::task<std::shared_ptr<GetGifsSearchResponse>> PublicApi::getGifsSearch(
 }
 pplx::task<std::shared_ptr<GetGifsTrendingResponse>> PublicApi::getGifsTrending(
         utility::string_t tenantId
+        
         , const ApiGetGifsTrendingOptions& options
 ) const
 {
@@ -3307,10 +3313,9 @@ pplx::task<std::shared_ptr<GetEventLogResponse>> PublicApi::getGlobalEventLog(
         utility::string_t urlId,
         utility::string_t userIdWS,
         int64_t startTime
-        , const ApiGetGlobalEventLogOptions& options
+        , boost::optional<int64_t> endTime
 ) const
 {
-    auto endTime = options.endTime;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -3448,6 +3453,7 @@ pplx::task<std::shared_ptr<GetEventLogResponse>> PublicApi::getGlobalEventLog(
 pplx::task<std::shared_ptr<PageUsersOfflineResponse>> PublicApi::getOfflineUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetOfflineUsersOptions& options
 ) const
 {
@@ -3588,6 +3594,7 @@ pplx::task<std::shared_ptr<PageUsersOfflineResponse>> PublicApi::getOfflineUsers
 pplx::task<std::shared_ptr<PageUsersOnlineResponse>> PublicApi::getOnlineUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiGetOnlineUsersOptions& options
 ) const
 {
@@ -3727,6 +3734,7 @@ pplx::task<std::shared_ptr<PageUsersOnlineResponse>> PublicApi::getOnlineUsers(
 }
 pplx::task<std::shared_ptr<GetPublicPagesResponse>> PublicApi::getPagesPublic(
         utility::string_t tenantId
+        
         , const ApiGetPagesPublicOptions& options
 ) const
 {
@@ -3879,6 +3887,7 @@ pplx::task<std::shared_ptr<GetPublicPagesResponse>> PublicApi::getPagesPublic(
 pplx::task<std::shared_ptr<GetTranslationsResponse>> PublicApi::getTranslations(
         utility::string_t r_namespace,
         utility::string_t component
+        
         , const ApiGetTranslationsOptions& options
 ) const
 {
@@ -4016,10 +4025,9 @@ pplx::task<std::shared_ptr<GetTranslationsResponse>> PublicApi::getTranslations(
 }
 pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> PublicApi::getUserNotificationCount(
         utility::string_t tenantId
-        , const ApiGetUserNotificationCountOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -4149,6 +4157,7 @@ pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> PublicApi::getUser
 }
 pplx::task<std::shared_ptr<GetMyNotificationsResponse>> PublicApi::getUserNotifications(
         utility::string_t tenantId
+        
         , const ApiGetUserNotificationsOptions& options
 ) const
 {
@@ -4334,6 +4343,7 @@ pplx::task<std::shared_ptr<GetUserPresenceStatusesResponse>> PublicApi::getUserP
         utility::string_t tenantId,
         utility::string_t urlIdWS,
         utility::string_t userIds
+        
 ) const
 {
 
@@ -4467,6 +4477,7 @@ pplx::task<std::shared_ptr<GetUserPresenceStatusesResponse>> PublicApi::getUserP
 }
 pplx::task<std::shared_ptr<UserReactsResponse>> PublicApi::getUserReactsPublic(
         utility::string_t tenantId
+        
         , const ApiGetUserReactsPublicOptions& options
 ) const
 {
@@ -4604,6 +4615,7 @@ pplx::task<std::shared_ptr<UserReactsResponse>> PublicApi::getUserReactsPublic(
 pplx::task<std::shared_ptr<PageUsersInfoResponse>> PublicApi::getUsersInfo(
         utility::string_t tenantId,
         utility::string_t ids
+        
 ) const
 {
 
@@ -4733,6 +4745,7 @@ pplx::task<std::shared_ptr<PageUsersInfoResponse>> PublicApi::getUsersInfo(
 pplx::task<std::shared_ptr<GetV1PageLikes>> PublicApi::getV1PageLikes(
         utility::string_t tenantId,
         utility::string_t urlId
+        
 ) const
 {
 
@@ -4863,6 +4876,7 @@ pplx::task<std::shared_ptr<GetV2PageReactUsersResponse>> PublicApi::getV2PageRea
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
 ) const
 {
 
@@ -4995,6 +5009,7 @@ pplx::task<std::shared_ptr<GetV2PageReactUsersResponse>> PublicApi::getV2PageRea
 pplx::task<std::shared_ptr<GetV2PageReacts>> PublicApi::getV2PageReacts(
         utility::string_t tenantId,
         utility::string_t urlId
+        
 ) const
 {
 
@@ -5125,10 +5140,9 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::lockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiLockCommentOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5259,6 +5273,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::lockComment(
     });
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::logoutPublic(
+        
 ) const
 {
 
@@ -5385,10 +5400,9 @@ pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> PublicApi::pinCommen
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiPinCommentOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5522,6 +5536,7 @@ pplx::task<std::shared_ptr<ReactFeedPostResponse>> PublicApi::reactFeedPostPubli
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<ReactBodyParams> reactBodyParams
+        
         , const ApiReactFeedPostPublicOptions& options
 ) const
 {
@@ -5686,10 +5701,9 @@ pplx::task<std::shared_ptr<ReactFeedPostResponse>> PublicApi::reactFeedPostPubli
 }
 pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUserNotificationCount(
         utility::string_t tenantId
-        , const ApiResetUserNotificationCountOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -5819,6 +5833,7 @@ pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUser
 }
 pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUserNotifications(
         utility::string_t tenantId
+        
         , const ApiResetUserNotificationsOptions& options
 ) const
 {
@@ -5978,6 +5993,7 @@ pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUser
 pplx::task<std::shared_ptr<SearchUsersResult>> PublicApi::searchUsers(
         utility::string_t tenantId,
         utility::string_t urlId
+        
         , const ApiSearchUsersOptions& options
 ) const
 {
@@ -6130,6 +6146,7 @@ pplx::task<std::shared_ptr<PublicAPISetCommentTextResponse>> PublicApi::setComme
         utility::string_t commentId,
         utility::string_t broadcastId,
         std::shared_ptr<CommentTextUpdateRequest> commentTextUpdateRequest
+        
         , const ApiSetCommentTextOptions& options
 ) const
 {
@@ -6294,10 +6311,9 @@ pplx::task<std::shared_ptr<UnblockSuccess>> PublicApi::unBlockCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
         std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
-        , const ApiUnBlockCommentPublicOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
     // verify the required parameter 'publicBlockFromCommentParams' is set
     if (publicBlockFromCommentParams == nullptr)
@@ -6452,10 +6468,9 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> PublicApi::unLockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiUnLockCommentOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6589,10 +6604,9 @@ pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> PublicApi::unPinComm
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId
-        , const ApiUnPinCommentOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -6726,6 +6740,7 @@ pplx::task<std::shared_ptr<CreateFeedPostResponse>> PublicApi::updateFeedPostPub
         utility::string_t tenantId,
         utility::string_t postId,
         std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams
+        
         , const ApiUpdateFeedPostPublicOptions& options
 ) const
 {
@@ -6888,10 +6903,9 @@ pplx::task<std::shared_ptr<UpdateUserNotificationCommentSubscriptionStatusRespon
         utility::string_t notificationId,
         utility::string_t optedInOrOut,
         utility::string_t commentId
-        , const ApiUpdateUserNotificationCommentSubscriptionStatusOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7030,10 +7044,9 @@ pplx::task<std::shared_ptr<UpdateUserNotificationPageSubscriptionStatusResponse>
         utility::string_t url,
         utility::string_t pageTitle,
         utility::string_t subscribedOrUnsubscribed
-        , const ApiUpdateUserNotificationPageSubscriptionStatusOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7175,10 +7188,9 @@ pplx::task<std::shared_ptr<UpdateUserNotificationStatusResponse>> PublicApi::upd
         utility::string_t tenantId,
         utility::string_t notificationId,
         utility::string_t newStatus
-        , const ApiUpdateUserNotificationStatusOptions& options
+        , boost::optional<utility::string_t> sso
 ) const
 {
-    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
@@ -7311,6 +7323,7 @@ pplx::task<std::shared_ptr<UpdateUserNotificationStatusResponse>> PublicApi::upd
 pplx::task<std::shared_ptr<UploadImageResponse>> PublicApi::uploadImage(
         utility::string_t tenantId,
         std::shared_ptr<HttpContent> file
+        
         , const ApiUploadImageOptions& options
 ) const
 {
@@ -7455,6 +7468,7 @@ pplx::task<std::shared_ptr<VoteResponse>> PublicApi::voteComment(
         utility::string_t urlId,
         utility::string_t broadcastId,
         std::shared_ptr<VoteBodyParams> voteBodyParams
+        
         , const ApiVoteCommentOptions& options
 ) const
 {
