@@ -195,8 +195,9 @@ pplx::task<std::shared_ptr<AddDomainConfigResponse>> DefaultApi::addDomainConfig
     });
 }
 pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(
+        utility::string_t tenantId,
         std::shared_ptr<CreateHashTagBody> createHashTagBody
-        , boost::optional<utility::string_t> tenantId
+        
 ) const
 {
 
@@ -239,9 +240,8 @@ pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
@@ -348,8 +348,9 @@ pplx::task<std::shared_ptr<CreateHashTagResponse>> DefaultApi::addHashTag(
     });
 }
 pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsBulk(
+        utility::string_t tenantId,
         std::shared_ptr<BulkCreateHashTagsBody> bulkCreateHashTagsBody
-        , boost::optional<utility::string_t> tenantId
+        
 ) const
 {
 
@@ -392,9 +393,8 @@ pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> DefaultApi::addHashTagsB
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
@@ -822,7 +822,7 @@ pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(
         utility::string_t tenantId,
         std::shared_ptr<AggregationRequest> aggregationRequest
         
-        , const ApiAggregateOptions& options
+        , const AggregateOptions& options
 ) const
 {
     auto parentTenantId = options.parentTenantId;
@@ -991,7 +991,7 @@ pplx::task<std::shared_ptr<AggregateResponse>> DefaultApi::aggregate(
 pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> DefaultApi::aggregateQuestionResults(
         utility::string_t tenantId
         
-        , const ApiAggregateQuestionResultsOptions& options
+        , const AggregateQuestionResultsOptions& options
 ) const
 {
     auto questionId = options.questionId;
@@ -1160,7 +1160,7 @@ pplx::task<std::shared_ptr<BlockSuccess>> DefaultApi::blockUserFromComment(
         utility::string_t id,
         std::shared_ptr<BlockFromCommentParams> blockFromCommentParams
         
-        , const ApiBlockUserFromCommentOptions& options
+        , const BlockUserFromCommentOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -1658,7 +1658,7 @@ pplx::task<std::shared_ptr<ChangeTicketStateResponse>> DefaultApi::changeTicketS
 pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> DefaultApi::combineCommentsWithQuestionResults(
         utility::string_t tenantId
         
-        , const ApiCombineCommentsWithQuestionResultsOptions& options
+        , const CombineCommentsWithQuestionResultsOptions& options
 ) const
 {
     auto questionId = options.questionId;
@@ -1995,7 +1995,7 @@ pplx::task<std::shared_ptr<CreateFeedPostsResponse>> DefaultApi::createFeedPost(
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams
         
-        , const ApiCreateFeedPostOptions& options
+        , const CreateFeedPostOptions& options
 ) const
 {
     auto broadcastId = options.broadcastId;
@@ -3611,7 +3611,7 @@ pplx::task<std::shared_ptr<VoteResponse>> DefaultApi::createVote(
         utility::string_t commentId,
         utility::string_t direction
         
-        , const ApiCreateVoteOptions& options
+        , const CreateVoteOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -3765,7 +3765,7 @@ pplx::task<std::shared_ptr<DeleteCommentResult>> DefaultApi::deleteComment(
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteCommentOptions& options
+        , const DeleteCommentOptions& options
 ) const
 {
     auto contextUserId = options.contextUserId;
@@ -4327,9 +4327,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteEmailTemplateRen
     });
 }
 pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(
+        utility::string_t tenantId,
         utility::string_t tag,
         std::shared_ptr<DeleteHashTagRequestBody> deleteHashTagRequestBody
-        , boost::optional<utility::string_t> tenantId
+        
 ) const
 {
 
@@ -4373,9 +4374,8 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteHashTag(
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
@@ -5317,7 +5317,7 @@ pplx::task<std::shared_ptr<DeleteSSOUserAPIResponse>> DefaultApi::deleteSSOUser(
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteSSOUserOptions& options
+        , const DeleteSSOUserOptions& options
 ) const
 {
     auto deleteComments = options.deleteComments;
@@ -5888,7 +5888,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::deleteTenantUser(
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteTenantUserOptions& options
+        , const DeleteTenantUserOptions& options
 ) const
 {
     auto deleteComments = options.deleteComments;
@@ -6317,7 +6317,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiFlagCommentOptions& options
+        , const FlagCommentOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -6465,7 +6465,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::flagComment(
 pplx::task<std::shared_ptr<GetAuditLogsResponse>> DefaultApi::getAuditLogs(
         utility::string_t tenantId
         
-        , const ApiGetAuditLogsOptions& options
+        , const GetAuditLogsOptions& options
 ) const
 {
     auto limit = options.limit;
@@ -6903,7 +6903,7 @@ pplx::task<std::shared_ptr<APIGetCommentResponse>> DefaultApi::getComment(
 pplx::task<std::shared_ptr<APIGetCommentsResponse>> DefaultApi::getComments(
         utility::string_t tenantId
         
-        , const ApiGetCommentsOptions& options
+        , const GetCommentsOptions& options
 ) const
 {
     auto page = options.page;
@@ -7950,7 +7950,7 @@ pplx::task<std::shared_ptr<GetEmailTemplatesResponse>> DefaultApi::getEmailTempl
 pplx::task<std::shared_ptr<GetFeedPostsResponse>> DefaultApi::getFeedPosts(
         utility::string_t tenantId
         
-        , const ApiGetFeedPostsOptions& options
+        , const GetFeedPostsOptions& options
 ) const
 {
     auto afterId = options.afterId;
@@ -8520,7 +8520,7 @@ pplx::task<std::shared_ptr<GetModeratorsResponse>> DefaultApi::getModerators(
 pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotificationCount(
         utility::string_t tenantId
         
-        , const ApiGetNotificationCountOptions& options
+        , const GetNotificationCountOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -8682,7 +8682,7 @@ pplx::task<std::shared_ptr<GetNotificationCountResponse>> DefaultApi::getNotific
 pplx::task<std::shared_ptr<GetNotificationsResponse>> DefaultApi::getNotifications(
         utility::string_t tenantId
         
-        , const ApiGetNotificationsOptions& options
+        , const GetNotificationsOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -9125,7 +9125,7 @@ pplx::task<std::shared_ptr<GetPagesAPIResponse>> DefaultApi::getPages(
 pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::getPendingWebhookEventCount(
         utility::string_t tenantId
         
-        , const ApiGetPendingWebhookEventCountOptions& options
+        , const GetPendingWebhookEventCountOptions& options
 ) const
 {
     auto commentId = options.commentId;
@@ -9292,7 +9292,7 @@ pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> DefaultApi::get
 pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> DefaultApi::getPendingWebhookEvents(
         utility::string_t tenantId
         
-        , const ApiGetPendingWebhookEventsOptions& options
+        , const GetPendingWebhookEventsOptions& options
 ) const
 {
     auto commentId = options.commentId;
@@ -9880,7 +9880,7 @@ pplx::task<std::shared_ptr<GetQuestionResultResponse>> DefaultApi::getQuestionRe
 pplx::task<std::shared_ptr<GetQuestionResultsResponse>> DefaultApi::getQuestionResults(
         utility::string_t tenantId
         
-        , const ApiGetQuestionResultsOptions& options
+        , const GetQuestionResultsOptions& options
 ) const
 {
     auto urlId = options.urlId;
@@ -10741,7 +10741,7 @@ pplx::task<std::shared_ptr<GetTenantResponse>> DefaultApi::getTenant(
 pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> DefaultApi::getTenantDailyUsages(
         utility::string_t tenantId
         
-        , const ApiGetTenantDailyUsagesOptions& options
+        , const GetTenantDailyUsagesOptions& options
 ) const
 {
     auto yearNumber = options.yearNumber;
@@ -11454,7 +11454,7 @@ pplx::task<std::shared_ptr<GetTenantUsersResponse>> DefaultApi::getTenantUsers(
 pplx::task<std::shared_ptr<GetTenantsResponse>> DefaultApi::getTenants(
         utility::string_t tenantId
         
-        , const ApiGetTenantsOptions& options
+        , const GetTenantsOptions& options
 ) const
 {
     auto meta = options.meta;
@@ -11743,7 +11743,7 @@ pplx::task<std::shared_ptr<GetTicketResponse>> DefaultApi::getTicket(
 pplx::task<std::shared_ptr<GetTicketsResponse>> DefaultApi::getTickets(
         utility::string_t tenantId
         
-        , const ApiGetTicketsOptions& options
+        , const GetTicketsOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -12452,7 +12452,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressResponse>> DefaultApi::getUser
 pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::getUserBadgeProgressList(
         utility::string_t tenantId
         
-        , const ApiGetUserBadgeProgressListOptions& options
+        , const GetUserBadgeProgressListOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -12604,7 +12604,7 @@ pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> DefaultApi::get
 pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> DefaultApi::getUserBadges(
         utility::string_t tenantId
         
-        , const ApiGetUserBadgesOptions& options
+        , const GetUserBadgesOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -12912,7 +12912,7 @@ pplx::task<std::shared_ptr<GetVotesForUserResponse>> DefaultApi::getVotesForUser
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiGetVotesForUserOptions& options
+        , const GetVotesForUserOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -13221,9 +13221,10 @@ pplx::task<std::shared_ptr<PatchDomainConfigResponse>> DefaultApi::patchDomainCo
     });
 }
 pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(
+        utility::string_t tenantId,
         utility::string_t tag,
         std::shared_ptr<UpdateHashTagBody> updateHashTagBody
-        , boost::optional<utility::string_t> tenantId
+        
 ) const
 {
 
@@ -13267,9 +13268,8 @@ pplx::task<std::shared_ptr<UpdateHashTagResponse>> DefaultApi::patchHashTag(
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;
@@ -14520,7 +14520,7 @@ pplx::task<std::shared_ptr<APISaveCommentResponse>> DefaultApi::saveComment(
         utility::string_t tenantId,
         std::shared_ptr<CreateCommentParams> createCommentParams
         
-        , const ApiSaveCommentOptions& options
+        , const SaveCommentOptions& options
 ) const
 {
     auto isLive = options.isLive;
@@ -14700,7 +14700,7 @@ pplx::task<std::vector<std::shared_ptr<SaveCommentsBulkResponse>>> DefaultApi::s
         utility::string_t tenantId,
         std::vector<std::shared_ptr<CreateCommentParams>> createCommentParams
         
-        , const ApiSaveCommentsBulkOptions& options
+        , const SaveCommentsBulkOptions& options
 ) const
 {
     auto isLive = options.isLive;
@@ -15175,7 +15175,7 @@ pplx::task<std::shared_ptr<UnblockSuccess>> DefaultApi::unBlockUserFromComment(
         utility::string_t id,
         std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams
         
-        , const ApiUnBlockUserFromCommentOptions& options
+        , const UnBlockUserFromCommentOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -15346,7 +15346,7 @@ pplx::task<std::shared_ptr<FlagCommentResponse>> DefaultApi::unFlagComment(
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiUnFlagCommentOptions& options
+        , const UnFlagCommentOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -15496,7 +15496,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> DefaultApi::updateComment(
         utility::string_t id,
         std::shared_ptr<UpdatableCommentParams> updatableCommentParams
         
-        , const ApiUpdateCommentOptions& options
+        , const UpdateCommentOptions& options
 ) const
 {
     auto contextUserId = options.contextUserId;

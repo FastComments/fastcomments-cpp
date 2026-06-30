@@ -4,54 +4,54 @@ All URIs are relative to *https://fastcomments.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**deleteModerationVote**](ModerationApi.md#deleteModerationVote) | **DELETE** /auth/my-account/moderate-comments/vote/{commentId}/{voteId} |  |
-| [**getApiComments**](ModerationApi.md#getApiComments) | **GET** /auth/my-account/moderate-comments/api/comments |  |
-| [**getApiExportStatus**](ModerationApi.md#getApiExportStatus) | **GET** /auth/my-account/moderate-comments/api/export/status |  |
-| [**getApiIds**](ModerationApi.md#getApiIds) | **GET** /auth/my-account/moderate-comments/api/ids |  |
-| [**getBanUsersFromComment**](ModerationApi.md#getBanUsersFromComment) | **GET** /auth/my-account/moderate-comments/ban-users/from-comment/{commentId} |  |
-| [**getCommentBanStatus**](ModerationApi.md#getCommentBanStatus) | **GET** /auth/my-account/moderate-comments/get-comment-ban-status/{commentId} |  |
-| [**getCommentChildren**](ModerationApi.md#getCommentChildren) | **GET** /auth/my-account/moderate-comments/comment-children/{commentId} |  |
-| [**getCount**](ModerationApi.md#getCount) | **GET** /auth/my-account/moderate-comments/count |  |
-| [**getCounts**](ModerationApi.md#getCounts) | **GET** /auth/my-account/moderate-comments/banned-users/counts |  |
-| [**getLogs**](ModerationApi.md#getLogs) | **GET** /auth/my-account/moderate-comments/logs/{commentId} |  |
-| [**getManualBadges**](ModerationApi.md#getManualBadges) | **GET** /auth/my-account/moderate-comments/get-manual-badges |  |
-| [**getManualBadgesForUser**](ModerationApi.md#getManualBadgesForUser) | **GET** /auth/my-account/moderate-comments/get-manual-badges-for-user |  |
-| [**getModerationComment**](ModerationApi.md#getModerationComment) | **GET** /auth/my-account/moderate-comments/comment/{commentId} |  |
-| [**getModerationCommentText**](ModerationApi.md#getModerationCommentText) | **GET** /auth/my-account/moderate-comments/get-comment-text/{commentId} |  |
-| [**getPreBanSummary**](ModerationApi.md#getPreBanSummary) | **GET** /auth/my-account/moderate-comments/pre-ban-summary/{commentId} |  |
-| [**getSearchCommentsSummary**](ModerationApi.md#getSearchCommentsSummary) | **GET** /auth/my-account/moderate-comments/search/comments/summary |  |
-| [**getSearchPages**](ModerationApi.md#getSearchPages) | **GET** /auth/my-account/moderate-comments/search/pages |  |
-| [**getSearchSites**](ModerationApi.md#getSearchSites) | **GET** /auth/my-account/moderate-comments/search/sites |  |
-| [**getSearchSuggest**](ModerationApi.md#getSearchSuggest) | **GET** /auth/my-account/moderate-comments/search/suggest |  |
-| [**getSearchUsers**](ModerationApi.md#getSearchUsers) | **GET** /auth/my-account/moderate-comments/search/users |  |
-| [**getTrustFactor**](ModerationApi.md#getTrustFactor) | **GET** /auth/my-account/moderate-comments/get-trust-factor |  |
-| [**getUserBanPreference**](ModerationApi.md#getUserBanPreference) | **GET** /auth/my-account/moderate-comments/user-ban-preference |  |
-| [**getUserInternalProfile**](ModerationApi.md#getUserInternalProfile) | **GET** /auth/my-account/moderate-comments/get-user-internal-profile |  |
-| [**postAdjustCommentVotes**](ModerationApi.md#postAdjustCommentVotes) | **POST** /auth/my-account/moderate-comments/adjust-comment-votes/{commentId} |  |
-| [**postApiExport**](ModerationApi.md#postApiExport) | **POST** /auth/my-account/moderate-comments/api/export |  |
-| [**postBanUserFromComment**](ModerationApi.md#postBanUserFromComment) | **POST** /auth/my-account/moderate-comments/ban-user/from-comment/{commentId} |  |
-| [**postBanUserUndo**](ModerationApi.md#postBanUserUndo) | **POST** /auth/my-account/moderate-comments/ban-user/undo |  |
-| [**postBulkPreBanSummary**](ModerationApi.md#postBulkPreBanSummary) | **POST** /auth/my-account/moderate-comments/bulk-pre-ban-summary |  |
-| [**postCommentsByIds**](ModerationApi.md#postCommentsByIds) | **POST** /auth/my-account/moderate-comments/comments-by-ids |  |
-| [**postFlagComment**](ModerationApi.md#postFlagComment) | **POST** /auth/my-account/moderate-comments/flag-comment/{commentId} |  |
-| [**postRemoveComment**](ModerationApi.md#postRemoveComment) | **POST** /auth/my-account/moderate-comments/remove-comment/{commentId} |  |
-| [**postRestoreDeletedComment**](ModerationApi.md#postRestoreDeletedComment) | **POST** /auth/my-account/moderate-comments/restore-deleted-comment/{commentId} |  |
-| [**postSetCommentApprovalStatus**](ModerationApi.md#postSetCommentApprovalStatus) | **POST** /auth/my-account/moderate-comments/set-comment-approval-status/{commentId} |  |
-| [**postSetCommentReviewStatus**](ModerationApi.md#postSetCommentReviewStatus) | **POST** /auth/my-account/moderate-comments/set-comment-review-status/{commentId} |  |
-| [**postSetCommentSpamStatus**](ModerationApi.md#postSetCommentSpamStatus) | **POST** /auth/my-account/moderate-comments/set-comment-spam-status/{commentId} |  |
-| [**postSetCommentText**](ModerationApi.md#postSetCommentText) | **POST** /auth/my-account/moderate-comments/set-comment-text/{commentId} |  |
-| [**postUnFlagComment**](ModerationApi.md#postUnFlagComment) | **POST** /auth/my-account/moderate-comments/un-flag-comment/{commentId} |  |
-| [**postVote**](ModerationApi.md#postVote) | **POST** /auth/my-account/moderate-comments/vote/{commentId} |  |
-| [**putAwardBadge**](ModerationApi.md#putAwardBadge) | **PUT** /auth/my-account/moderate-comments/award-badge |  |
-| [**putCloseThread**](ModerationApi.md#putCloseThread) | **PUT** /auth/my-account/moderate-comments/close-thread |  |
-| [**putRemoveBadge**](ModerationApi.md#putRemoveBadge) | **PUT** /auth/my-account/moderate-comments/remove-badge |  |
-| [**putReopenThread**](ModerationApi.md#putReopenThread) | **PUT** /auth/my-account/moderate-comments/reopen-thread |  |
-| [**setTrustFactor**](ModerationApi.md#setTrustFactor) | **PUT** /auth/my-account/moderate-comments/set-trust-factor |  |
+| [**deleteModerationVote**](ModerationApi.md#deleteModerationVote) | **DELETE** /auth/my-account/moderate-comments/mod_api/vote/{commentId}/{voteId} |  |
+| [**getApiComments**](ModerationApi.md#getApiComments) | **GET** /auth/my-account/moderate-comments/mod_api/api/comments |  |
+| [**getApiExportStatus**](ModerationApi.md#getApiExportStatus) | **GET** /auth/my-account/moderate-comments/mod_api/api/export/status |  |
+| [**getApiIds**](ModerationApi.md#getApiIds) | **GET** /auth/my-account/moderate-comments/mod_api/api/ids |  |
+| [**getBanUsersFromComment**](ModerationApi.md#getBanUsersFromComment) | **GET** /auth/my-account/moderate-comments/mod_api/ban-users/from-comment/{commentId} |  |
+| [**getCommentBanStatus**](ModerationApi.md#getCommentBanStatus) | **GET** /auth/my-account/moderate-comments/mod_api/get-comment-ban-status/{commentId} |  |
+| [**getCommentChildren**](ModerationApi.md#getCommentChildren) | **GET** /auth/my-account/moderate-comments/mod_api/comment-children/{commentId} |  |
+| [**getCount**](ModerationApi.md#getCount) | **GET** /auth/my-account/moderate-comments/mod_api/count |  |
+| [**getCounts**](ModerationApi.md#getCounts) | **GET** /auth/my-account/moderate-comments/banned-users/mod_api/counts |  |
+| [**getLogs**](ModerationApi.md#getLogs) | **GET** /auth/my-account/moderate-comments/mod_api/logs/{commentId} |  |
+| [**getManualBadges**](ModerationApi.md#getManualBadges) | **GET** /auth/my-account/moderate-comments/mod_api/get-manual-badges |  |
+| [**getManualBadgesForUser**](ModerationApi.md#getManualBadgesForUser) | **GET** /auth/my-account/moderate-comments/mod_api/get-manual-badges-for-user |  |
+| [**getModerationComment**](ModerationApi.md#getModerationComment) | **GET** /auth/my-account/moderate-comments/mod_api/comment/{commentId} |  |
+| [**getModerationCommentText**](ModerationApi.md#getModerationCommentText) | **GET** /auth/my-account/moderate-comments/mod_api/get-comment-text/{commentId} |  |
+| [**getPreBanSummary**](ModerationApi.md#getPreBanSummary) | **GET** /auth/my-account/moderate-comments/mod_api/pre-ban-summary/{commentId} |  |
+| [**getSearchCommentsSummary**](ModerationApi.md#getSearchCommentsSummary) | **GET** /auth/my-account/moderate-comments/mod_api/search/comments/summary |  |
+| [**getSearchPages**](ModerationApi.md#getSearchPages) | **GET** /auth/my-account/moderate-comments/mod_api/search/pages |  |
+| [**getSearchSites**](ModerationApi.md#getSearchSites) | **GET** /auth/my-account/moderate-comments/mod_api/search/sites |  |
+| [**getSearchSuggest**](ModerationApi.md#getSearchSuggest) | **GET** /auth/my-account/moderate-comments/mod_api/search/suggest |  |
+| [**getSearchUsers**](ModerationApi.md#getSearchUsers) | **GET** /auth/my-account/moderate-comments/mod_api/search/users |  |
+| [**getTrustFactor**](ModerationApi.md#getTrustFactor) | **GET** /auth/my-account/moderate-comments/mod_api/get-trust-factor |  |
+| [**getUserBanPreference**](ModerationApi.md#getUserBanPreference) | **GET** /auth/my-account/moderate-comments/mod_api/user-ban-preference |  |
+| [**getUserInternalProfile**](ModerationApi.md#getUserInternalProfile) | **GET** /auth/my-account/moderate-comments/mod_api/get-user-internal-profile |  |
+| [**postAdjustCommentVotes**](ModerationApi.md#postAdjustCommentVotes) | **POST** /auth/my-account/moderate-comments/mod_api/adjust-comment-votes/{commentId} |  |
+| [**postApiExport**](ModerationApi.md#postApiExport) | **POST** /auth/my-account/moderate-comments/mod_api/api/export |  |
+| [**postBanUserFromComment**](ModerationApi.md#postBanUserFromComment) | **POST** /auth/my-account/moderate-comments/mod_api/ban-user/from-comment/{commentId} |  |
+| [**postBanUserUndo**](ModerationApi.md#postBanUserUndo) | **POST** /auth/my-account/moderate-comments/mod_api/ban-user/undo |  |
+| [**postBulkPreBanSummary**](ModerationApi.md#postBulkPreBanSummary) | **POST** /auth/my-account/moderate-comments/mod_api/bulk-pre-ban-summary |  |
+| [**postCommentsByIds**](ModerationApi.md#postCommentsByIds) | **POST** /auth/my-account/moderate-comments/mod_api/comments-by-ids |  |
+| [**postFlagComment**](ModerationApi.md#postFlagComment) | **POST** /auth/my-account/moderate-comments/mod_api/flag-comment/{commentId} |  |
+| [**postRemoveComment**](ModerationApi.md#postRemoveComment) | **POST** /auth/my-account/moderate-comments/mod_api/remove-comment/{commentId} |  |
+| [**postRestoreDeletedComment**](ModerationApi.md#postRestoreDeletedComment) | **POST** /auth/my-account/moderate-comments/mod_api/restore-deleted-comment/{commentId} |  |
+| [**postSetCommentApprovalStatus**](ModerationApi.md#postSetCommentApprovalStatus) | **POST** /auth/my-account/moderate-comments/mod_api/set-comment-approval-status/{commentId} |  |
+| [**postSetCommentReviewStatus**](ModerationApi.md#postSetCommentReviewStatus) | **POST** /auth/my-account/moderate-comments/mod_api/set-comment-review-status/{commentId} |  |
+| [**postSetCommentSpamStatus**](ModerationApi.md#postSetCommentSpamStatus) | **POST** /auth/my-account/moderate-comments/mod_api/set-comment-spam-status/{commentId} |  |
+| [**postSetCommentText**](ModerationApi.md#postSetCommentText) | **POST** /auth/my-account/moderate-comments/mod_api/set-comment-text/{commentId} |  |
+| [**postUnFlagComment**](ModerationApi.md#postUnFlagComment) | **POST** /auth/my-account/moderate-comments/mod_api/un-flag-comment/{commentId} |  |
+| [**postVote**](ModerationApi.md#postVote) | **POST** /auth/my-account/moderate-comments/mod_api/vote/{commentId} |  |
+| [**putAwardBadge**](ModerationApi.md#putAwardBadge) | **PUT** /auth/my-account/moderate-comments/mod_api/award-badge |  |
+| [**putCloseThread**](ModerationApi.md#putCloseThread) | **PUT** /auth/my-account/moderate-comments/mod_api/close-thread |  |
+| [**putRemoveBadge**](ModerationApi.md#putRemoveBadge) | **PUT** /auth/my-account/moderate-comments/mod_api/remove-badge |  |
+| [**putReopenThread**](ModerationApi.md#putReopenThread) | **PUT** /auth/my-account/moderate-comments/mod_api/reopen-thread |  |
+| [**setTrustFactor**](ModerationApi.md#setTrustFactor) | **PUT** /auth/my-account/moderate-comments/mod_api/set-trust-factor |  |
 
 
 <a name="deleteModerationVote"></a>
 # **deleteModerationVote**
-> VoteDeleteResponse deleteModerationVote(commentId, voteId, tenantId, broadcastId, sso)
+> VoteDeleteResponse deleteModerationVote(tenantId, commentId, voteId, broadcastId, sso)
 
 
 
@@ -59,9 +59,9 @@ All URIs are relative to *https://fastcomments.com*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **voteId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -80,7 +80,7 @@ No authorization required
 
 <a name="getApiComments"></a>
 # **getApiComments**
-> ModerationAPIGetCommentsResponse getApiComments(page, count, text-search, byIPFromComment, filters, searchFilters, sorts, demo, tenantId, sso)
+> ModerationAPIGetCommentsResponse getApiComments(tenantId, page, count, text-search, byIPFromComment, filters, searchFilters, sorts, demo, sso)
 
 
 
@@ -88,6 +88,7 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **page** | **Double**|  | [optional] [default to null] |
 | **count** | **Double**|  | [optional] [default to null] |
 | **text-search** | **String**|  | [optional] [default to null] |
@@ -96,7 +97,6 @@ No authorization required
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **sorts** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -114,7 +114,7 @@ No authorization required
 
 <a name="getApiExportStatus"></a>
 # **getApiExportStatus**
-> ModerationExportStatusResponse getApiExportStatus(batchJobId, tenantId, sso)
+> ModerationExportStatusResponse getApiExportStatus(tenantId, batchJobId, sso)
 
 
 
@@ -122,8 +122,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **batchJobId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -141,7 +141,7 @@ No authorization required
 
 <a name="getApiIds"></a>
 # **getApiIds**
-> ModerationAPIGetCommentIdsResponse getApiIds(text-search, byIPFromComment, filters, searchFilters, afterId, demo, tenantId, sso)
+> ModerationAPIGetCommentIdsResponse getApiIds(tenantId, text-search, byIPFromComment, filters, searchFilters, afterId, demo, sso)
 
 
 
@@ -149,13 +149,13 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **text-search** | **String**|  | [optional] [default to null] |
 | **byIPFromComment** | **String**|  | [optional] [default to null] |
 | **filters** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **afterId** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -173,7 +173,7 @@ No authorization required
 
 <a name="getBanUsersFromComment"></a>
 # **getBanUsersFromComment**
-> GetBannedUsersFromCommentResponse getBanUsersFromComment(commentId, tenantId, sso)
+> GetBannedUsersFromCommentResponse getBanUsersFromComment(tenantId, commentId, sso)
 
 
 
@@ -181,8 +181,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -200,7 +200,7 @@ No authorization required
 
 <a name="getCommentBanStatus"></a>
 # **getCommentBanStatus**
-> GetCommentBanStatusResponse getCommentBanStatus(commentId, tenantId, sso)
+> GetCommentBanStatusResponse getCommentBanStatus(tenantId, commentId, sso)
 
 
 
@@ -208,8 +208,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -227,7 +227,7 @@ No authorization required
 
 <a name="getCommentChildren"></a>
 # **getCommentChildren**
-> ModerationAPIChildCommentsResponse getCommentChildren(commentId, tenantId, sso)
+> ModerationAPIChildCommentsResponse getCommentChildren(tenantId, commentId, sso)
 
 
 
@@ -235,8 +235,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -254,7 +254,7 @@ No authorization required
 
 <a name="getCount"></a>
 # **getCount**
-> ModerationAPICountCommentsResponse getCount(text-search, byIPFromComment, filter, searchFilters, demo, tenantId, sso)
+> ModerationAPICountCommentsResponse getCount(tenantId, text-search, byIPFromComment, filter, searchFilters, demo, sso)
 
 
 
@@ -262,12 +262,12 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **text-search** | **String**|  | [optional] [default to null] |
 | **byIPFromComment** | **String**|  | [optional] [default to null] |
 | **filter** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **demo** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -293,7 +293,7 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -311,7 +311,7 @@ No authorization required
 
 <a name="getLogs"></a>
 # **getLogs**
-> ModerationAPIGetLogsResponse getLogs(commentId, tenantId, sso)
+> ModerationAPIGetLogsResponse getLogs(tenantId, commentId, sso)
 
 
 
@@ -319,8 +319,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -346,7 +346,7 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -364,7 +364,7 @@ No authorization required
 
 <a name="getManualBadgesForUser"></a>
 # **getManualBadgesForUser**
-> GetUserManualBadgesResponse getManualBadgesForUser(badgesUserId, commentId, tenantId, sso)
+> GetUserManualBadgesResponse getManualBadgesForUser(tenantId, badgesUserId, commentId, sso)
 
 
 
@@ -372,9 +372,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **badgesUserId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -392,7 +392,7 @@ No authorization required
 
 <a name="getModerationComment"></a>
 # **getModerationComment**
-> ModerationAPICommentResponse getModerationComment(commentId, includeEmail, includeIP, tenantId, sso)
+> ModerationAPICommentResponse getModerationComment(tenantId, commentId, includeEmail, includeIP, sso)
 
 
 
@@ -400,10 +400,10 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **includeEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeIP** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -421,7 +421,7 @@ No authorization required
 
 <a name="getModerationCommentText"></a>
 # **getModerationCommentText**
-> GetCommentTextResponse getModerationCommentText(commentId, tenantId, sso)
+> GetCommentTextResponse getModerationCommentText(tenantId, commentId, sso)
 
 
 
@@ -429,8 +429,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -448,7 +448,7 @@ No authorization required
 
 <a name="getPreBanSummary"></a>
 # **getPreBanSummary**
-> PreBanSummary getPreBanSummary(commentId, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, tenantId, sso)
+> PreBanSummary getPreBanSummary(tenantId, commentId, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, sso)
 
 
 
@@ -456,11 +456,11 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **includeByUserIdAndEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeByIP** | **Boolean**|  | [optional] [default to null] |
 | **includeByEmailDomain** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -478,7 +478,7 @@ No authorization required
 
 <a name="getSearchCommentsSummary"></a>
 # **getSearchCommentsSummary**
-> ModerationCommentSearchResponse getSearchCommentsSummary(value, filters, searchFilters, tenantId, sso)
+> ModerationCommentSearchResponse getSearchCommentsSummary(tenantId, value, filters, searchFilters, sso)
 
 
 
@@ -486,10 +486,10 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **value** | **String**|  | [optional] [default to null] |
 | **filters** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -507,7 +507,7 @@ No authorization required
 
 <a name="getSearchPages"></a>
 # **getSearchPages**
-> ModerationPageSearchResponse getSearchPages(value, tenantId, sso)
+> ModerationPageSearchResponse getSearchPages(tenantId, value, sso)
 
 
 
@@ -515,8 +515,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **value** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -534,7 +534,7 @@ No authorization required
 
 <a name="getSearchSites"></a>
 # **getSearchSites**
-> ModerationSiteSearchResponse getSearchSites(value, tenantId, sso)
+> ModerationSiteSearchResponse getSearchSites(tenantId, value, sso)
 
 
 
@@ -542,8 +542,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **value** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -561,7 +561,7 @@ No authorization required
 
 <a name="getSearchSuggest"></a>
 # **getSearchSuggest**
-> ModerationSuggestResponse getSearchSuggest(text-search, tenantId, sso)
+> ModerationSuggestResponse getSearchSuggest(tenantId, text-search, sso)
 
 
 
@@ -569,8 +569,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **text-search** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -588,7 +588,7 @@ No authorization required
 
 <a name="getSearchUsers"></a>
 # **getSearchUsers**
-> ModerationUserSearchResponse getSearchUsers(value, tenantId, sso)
+> ModerationUserSearchResponse getSearchUsers(tenantId, value, sso)
 
 
 
@@ -596,8 +596,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **value** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -615,7 +615,7 @@ No authorization required
 
 <a name="getTrustFactor"></a>
 # **getTrustFactor**
-> GetUserTrustFactorResponse getTrustFactor(userId, tenantId, sso)
+> GetUserTrustFactorResponse getTrustFactor(tenantId, userId, sso)
 
 
 
@@ -623,8 +623,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -650,7 +650,7 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -668,7 +668,7 @@ No authorization required
 
 <a name="getUserInternalProfile"></a>
 # **getUserInternalProfile**
-> GetUserInternalProfileResponse getUserInternalProfile(commentId, tenantId, sso)
+> GetUserInternalProfileResponse getUserInternalProfile(tenantId, commentId, sso)
 
 
 
@@ -676,8 +676,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -695,7 +695,7 @@ No authorization required
 
 <a name="postAdjustCommentVotes"></a>
 # **postAdjustCommentVotes**
-> AdjustVotesResponse postAdjustCommentVotes(commentId, AdjustCommentVotesParams, tenantId, broadcastId, sso)
+> AdjustVotesResponse postAdjustCommentVotes(tenantId, commentId, AdjustCommentVotesParams, broadcastId, sso)
 
 
 
@@ -703,9 +703,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **AdjustCommentVotesParams** | [**AdjustCommentVotesParams**](../Models/AdjustCommentVotesParams.md)|  | |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -724,7 +724,7 @@ No authorization required
 
 <a name="postApiExport"></a>
 # **postApiExport**
-> ModerationExportResponse postApiExport(text-search, byIPFromComment, filters, searchFilters, sorts, tenantId, sso)
+> ModerationExportResponse postApiExport(tenantId, text-search, byIPFromComment, filters, searchFilters, sorts, sso)
 
 
 
@@ -732,12 +732,12 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **text-search** | **String**|  | [optional] [default to null] |
 | **byIPFromComment** | **String**|  | [optional] [default to null] |
 | **filters** | **String**|  | [optional] [default to null] |
 | **searchFilters** | **String**|  | [optional] [default to null] |
 | **sorts** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -755,7 +755,7 @@ No authorization required
 
 <a name="postBanUserFromComment"></a>
 # **postBanUserFromComment**
-> BanUserFromCommentResult postBanUserFromComment(commentId, banEmail, banEmailDomain, banIP, deleteAllUsersComments, bannedUntil, isShadowBan, updateId, banReason, tenantId, sso)
+> BanUserFromCommentResult postBanUserFromComment(tenantId, commentId, banEmail, banEmailDomain, banIP, deleteAllUsersComments, bannedUntil, isShadowBan, updateId, banReason, sso)
 
 
 
@@ -763,6 +763,7 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **banEmail** | **Boolean**|  | [optional] [default to null] |
 | **banEmailDomain** | **Boolean**|  | [optional] [default to null] |
@@ -772,7 +773,6 @@ No authorization required
 | **isShadowBan** | **Boolean**|  | [optional] [default to null] |
 | **updateId** | **String**|  | [optional] [default to null] |
 | **banReason** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -790,7 +790,7 @@ No authorization required
 
 <a name="postBanUserUndo"></a>
 # **postBanUserUndo**
-> APIEmptyResponse postBanUserUndo(BanUserUndoParams, tenantId, sso)
+> APIEmptyResponse postBanUserUndo(tenantId, BanUserUndoParams, sso)
 
 
 
@@ -798,8 +798,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **BanUserUndoParams** | [**BanUserUndoParams**](../Models/BanUserUndoParams.md)|  | |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -817,7 +817,7 @@ No authorization required
 
 <a name="postBulkPreBanSummary"></a>
 # **postBulkPreBanSummary**
-> BulkPreBanSummary postBulkPreBanSummary(BulkPreBanParams, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, tenantId, sso)
+> BulkPreBanSummary postBulkPreBanSummary(tenantId, BulkPreBanParams, includeByUserIdAndEmail, includeByIP, includeByEmailDomain, sso)
 
 
 
@@ -825,11 +825,11 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **BulkPreBanParams** | [**BulkPreBanParams**](../Models/BulkPreBanParams.md)|  | |
 | **includeByUserIdAndEmail** | **Boolean**|  | [optional] [default to null] |
 | **includeByIP** | **Boolean**|  | [optional] [default to null] |
 | **includeByEmailDomain** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -847,7 +847,7 @@ No authorization required
 
 <a name="postCommentsByIds"></a>
 # **postCommentsByIds**
-> ModerationAPIChildCommentsResponse postCommentsByIds(CommentsByIdsParams, tenantId, sso)
+> ModerationAPIChildCommentsResponse postCommentsByIds(tenantId, CommentsByIdsParams, sso)
 
 
 
@@ -855,8 +855,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **CommentsByIdsParams** | [**CommentsByIdsParams**](../Models/CommentsByIdsParams.md)|  | |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -874,7 +874,7 @@ No authorization required
 
 <a name="postFlagComment"></a>
 # **postFlagComment**
-> APIEmptyResponse postFlagComment(commentId, tenantId, broadcastId, sso)
+> APIEmptyResponse postFlagComment(tenantId, commentId, broadcastId, sso)
 
 
 
@@ -882,8 +882,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -902,7 +902,7 @@ No authorization required
 
 <a name="postRemoveComment"></a>
 # **postRemoveComment**
-> PostRemoveCommentResponse postRemoveComment(commentId, tenantId, broadcastId, sso)
+> PostRemoveCommentApiResponse postRemoveComment(tenantId, commentId, broadcastId, sso)
 
 
 
@@ -910,14 +910,14 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
 
-[**PostRemoveCommentResponse**](../Models/PostRemoveCommentResponse.md)
+[**PostRemoveCommentApiResponse**](../Models/PostRemoveCommentApiResponse.md)
 
 ### Authorization
 
@@ -930,7 +930,7 @@ No authorization required
 
 <a name="postRestoreDeletedComment"></a>
 # **postRestoreDeletedComment**
-> APIEmptyResponse postRestoreDeletedComment(commentId, tenantId, broadcastId, sso)
+> APIEmptyResponse postRestoreDeletedComment(tenantId, commentId, broadcastId, sso)
 
 
 
@@ -938,8 +938,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -958,7 +958,7 @@ No authorization required
 
 <a name="postSetCommentApprovalStatus"></a>
 # **postSetCommentApprovalStatus**
-> SetCommentApprovedResponse postSetCommentApprovalStatus(commentId, approved, tenantId, broadcastId, sso)
+> SetCommentApprovedResponse postSetCommentApprovalStatus(tenantId, commentId, approved, broadcastId, sso)
 
 
 
@@ -966,9 +966,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **approved** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -987,7 +987,7 @@ No authorization required
 
 <a name="postSetCommentReviewStatus"></a>
 # **postSetCommentReviewStatus**
-> APIEmptyResponse postSetCommentReviewStatus(commentId, reviewed, tenantId, broadcastId, sso)
+> APIEmptyResponse postSetCommentReviewStatus(tenantId, commentId, reviewed, broadcastId, sso)
 
 
 
@@ -995,9 +995,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **reviewed** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1016,7 +1016,7 @@ No authorization required
 
 <a name="postSetCommentSpamStatus"></a>
 # **postSetCommentSpamStatus**
-> APIEmptyResponse postSetCommentSpamStatus(commentId, spam, permNotSpam, tenantId, broadcastId, sso)
+> APIEmptyResponse postSetCommentSpamStatus(tenantId, commentId, spam, permNotSpam, broadcastId, sso)
 
 
 
@@ -1024,10 +1024,10 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **spam** | **Boolean**|  | [optional] [default to null] |
 | **permNotSpam** | **Boolean**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1046,7 +1046,7 @@ No authorization required
 
 <a name="postSetCommentText"></a>
 # **postSetCommentText**
-> SetCommentTextResponse postSetCommentText(commentId, SetCommentTextParams, tenantId, broadcastId, sso)
+> SetCommentTextResponse postSetCommentText(tenantId, commentId, SetCommentTextParams, broadcastId, sso)
 
 
 
@@ -1054,9 +1054,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **SetCommentTextParams** | [**SetCommentTextParams**](../Models/SetCommentTextParams.md)|  | |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1075,7 +1075,7 @@ No authorization required
 
 <a name="postUnFlagComment"></a>
 # **postUnFlagComment**
-> APIEmptyResponse postUnFlagComment(commentId, tenantId, broadcastId, sso)
+> APIEmptyResponse postUnFlagComment(tenantId, commentId, broadcastId, sso)
 
 
 
@@ -1083,8 +1083,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1103,7 +1103,7 @@ No authorization required
 
 <a name="postVote"></a>
 # **postVote**
-> VoteResponse postVote(commentId, direction, tenantId, broadcastId, sso)
+> VoteResponse postVote(tenantId, commentId, direction, broadcastId, sso)
 
 
 
@@ -1111,9 +1111,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **commentId** | **String**|  | [default to null] |
 | **direction** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1132,7 +1132,7 @@ No authorization required
 
 <a name="putAwardBadge"></a>
 # **putAwardBadge**
-> AwardUserBadgeResponse putAwardBadge(badgeId, userId, commentId, tenantId, broadcastId, sso)
+> AwardUserBadgeResponse putAwardBadge(tenantId, badgeId, userId, commentId, broadcastId, sso)
 
 
 
@@ -1140,10 +1140,10 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **badgeId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1162,7 +1162,7 @@ No authorization required
 
 <a name="putCloseThread"></a>
 # **putCloseThread**
-> APIEmptyResponse putCloseThread(urlId, tenantId, sso)
+> APIEmptyResponse putCloseThread(tenantId, urlId, sso)
 
 
 
@@ -1170,8 +1170,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **urlId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1189,7 +1189,7 @@ No authorization required
 
 <a name="putRemoveBadge"></a>
 # **putRemoveBadge**
-> RemoveUserBadgeResponse putRemoveBadge(badgeId, userId, commentId, tenantId, broadcastId, sso)
+> RemoveUserBadgeResponse putRemoveBadge(tenantId, badgeId, userId, commentId, broadcastId, sso)
 
 
 
@@ -1197,10 +1197,10 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **badgeId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
 | **commentId** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **broadcastId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
@@ -1219,7 +1219,7 @@ No authorization required
 
 <a name="putReopenThread"></a>
 # **putReopenThread**
-> APIEmptyResponse putReopenThread(urlId, tenantId, sso)
+> APIEmptyResponse putReopenThread(tenantId, urlId, sso)
 
 
 
@@ -1227,8 +1227,8 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **urlId** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type
@@ -1246,7 +1246,7 @@ No authorization required
 
 <a name="setTrustFactor"></a>
 # **setTrustFactor**
-> SetUserTrustFactorResponse setTrustFactor(userId, trustFactor, tenantId, sso)
+> SetUserTrustFactorResponse setTrustFactor(tenantId, userId, trustFactor, sso)
 
 
 
@@ -1254,9 +1254,9 @@ No authorization required
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **userId** | **String**|  | [optional] [default to null] |
 | **trustFactor** | **String**|  | [optional] [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **sso** | **String**|  | [optional] [default to null] |
 
 ### Return type

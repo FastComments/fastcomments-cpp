@@ -11,14 +11,14 @@
 
 
 
-#include "FastCommentsClient/model/PostRemoveCommentResponse.h"
+#include "FastCommentsClient/model/PostRemoveCommentApiResponse.h"
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-PostRemoveCommentResponse::PostRemoveCommentResponse()
+PostRemoveCommentApiResponse::PostRemoveCommentApiResponse()
 {
     m_Action = utility::conversions::to_string_t("");
     m_ActionIsSet = false;
@@ -26,16 +26,16 @@ PostRemoveCommentResponse::PostRemoveCommentResponse()
     m_StatusIsSet = false;
 }
 
-PostRemoveCommentResponse::~PostRemoveCommentResponse()
+PostRemoveCommentApiResponse::~PostRemoveCommentApiResponse()
 {
 }
 
-void PostRemoveCommentResponse::validate()
+void PostRemoveCommentApiResponse::validate()
 {
     // TODO: implement validation
 }
 
-web::json::value PostRemoveCommentResponse::toJson() const
+web::json::value PostRemoveCommentApiResponse::toJson() const
 {
     web::json::value val = web::json::value::object();
     if(m_ActionIsSet)
@@ -52,7 +52,7 @@ web::json::value PostRemoveCommentResponse::toJson() const
     return val;
 }
 
-bool PostRemoveCommentResponse::fromJson(const web::json::value& val)
+bool PostRemoveCommentApiResponse::fromJson(const web::json::value& val)
 {
     bool ok = true;
     if(val.has_field(utility::conversions::to_string_t(_XPLATSTR("action"))))
@@ -80,7 +80,7 @@ bool PostRemoveCommentResponse::fromJson(const web::json::value& val)
     return ok;
 }
 
-void PostRemoveCommentResponse::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
+void PostRemoveCommentApiResponse::toMultipart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix) const
 {
     utility::string_t namePrefix = prefix;
     if(namePrefix.size() > 0 && namePrefix.substr(namePrefix.size() - 1) != utility::conversions::to_string_t(_XPLATSTR(".")))
@@ -97,7 +97,7 @@ void PostRemoveCommentResponse::toMultipart(std::shared_ptr<MultipartFormData> m
     }
 }
 
-bool PostRemoveCommentResponse::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
+bool PostRemoveCommentApiResponse::fromMultiPart(std::shared_ptr<MultipartFormData> multipart, const utility::string_t& prefix)
 {
     bool ok = true;
     utility::string_t namePrefix = prefix;
@@ -122,45 +122,45 @@ bool PostRemoveCommentResponse::fromMultiPart(std::shared_ptr<MultipartFormData>
 }
 
 
-utility::string_t PostRemoveCommentResponse::getAction() const
+utility::string_t PostRemoveCommentApiResponse::getAction() const
 {
     return m_Action;
 }
 
 
-void PostRemoveCommentResponse::setAction(const utility::string_t& value)
+void PostRemoveCommentApiResponse::setAction(const utility::string_t& value)
 {
     m_Action = value;
     m_ActionIsSet = true;
 }
 
-bool PostRemoveCommentResponse::actionIsSet() const
+bool PostRemoveCommentApiResponse::actionIsSet() const
 {
     return m_ActionIsSet;
 }
 
-void PostRemoveCommentResponse::unsetAction()
+void PostRemoveCommentApiResponse::unsetAction()
 {
     m_ActionIsSet = false;
 }
-utility::string_t PostRemoveCommentResponse::getStatus() const
+utility::string_t PostRemoveCommentApiResponse::getStatus() const
 {
     return m_Status;
 }
 
 
-void PostRemoveCommentResponse::setStatus(const utility::string_t& value)
+void PostRemoveCommentApiResponse::setStatus(const utility::string_t& value)
 {
     m_Status = value;
     m_StatusIsSet = true;
 }
 
-bool PostRemoveCommentResponse::statusIsSet() const
+bool PostRemoveCommentApiResponse::statusIsSet() const
 {
     return m_StatusIsSet;
 }
 
-void PostRemoveCommentResponse::unsetStatus()
+void PostRemoveCommentApiResponse::unsetStatus()
 {
     m_StatusIsSet = false;
 }

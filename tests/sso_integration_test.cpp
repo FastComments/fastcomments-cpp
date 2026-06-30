@@ -93,7 +93,7 @@ TEST_F(SSOIntegrationTest, PublicAPIWithSecureSSO) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    ApiCreateCommentPublicOptions createOpts;
+    CreateCommentPublicOptions createOpts;
     createOpts.sso = utility::conversions::to_string_t(token);
 
     auto createResponse = publicApi.createCommentPublic(
@@ -106,7 +106,7 @@ TEST_F(SSOIntegrationTest, PublicAPIWithSecureSSO) {
 
     ASSERT_NE(createResponse, nullptr);
 
-    ApiGetCommentsPublicOptions getOpts;
+    GetCommentsPublicOptions getOpts;
     getOpts.sso = utility::conversions::to_string_t(token);
 
     auto getResponse = publicApi.getCommentsPublic(
@@ -150,7 +150,7 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    ApiCreateCommentPublicOptions createOpts;
+    CreateCommentPublicOptions createOpts;
     createOpts.sso = utility::conversions::to_string_t(token);
 
     auto createResponse = publicApi.createCommentPublic(
@@ -174,7 +174,7 @@ TEST_F(SSOIntegrationTest, DefaultAPIWithAPIKey) {
         auto defaultApiClient = std::make_shared<org::openapitools::client::api::ApiClient>(defaultConfig);
         DefaultApi defaultApi(defaultApiClient);
 
-        ApiGetCommentsOptions getOpts;
+        GetCommentsOptions getOpts;
         getOpts.urlId = utility::conversions::to_string_t(testUrlId);
 
         auto getResponse = defaultApi.getComments(
@@ -250,7 +250,7 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     commentData->setCommenterName(utility::conversions::to_string_t(user.username));
     commentData->setDate(timestamp);
 
-    ApiCreateCommentPublicOptions createOpts;
+    CreateCommentPublicOptions createOpts;
     createOpts.sso = utility::conversions::to_string_t(token);
 
     auto createResponse = publicApi.createCommentPublic(
@@ -267,7 +267,7 @@ TEST_F(SSOIntegrationTest, PublicAPICreateAndFetch) {
     // Step 2: Fetch the comment back using PUBLIC API with SSO
     std::cout << "Step 2: Fetching comments for page '" << testUrlId << "' with SSO..." << std::endl;
 
-    ApiGetCommentsPublicOptions getOpts;
+    GetCommentsPublicOptions getOpts;
     getOpts.sso = utility::conversions::to_string_t(token);
 
     auto getResponse = publicApi.getCommentsPublic(

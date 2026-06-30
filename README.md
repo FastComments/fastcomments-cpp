@@ -126,7 +126,7 @@ int main() {
     // Pass the moderator's SSO token to authenticate the call
     auto ssoToken = utility::conversions::to_string_t("YOUR_MODERATOR_SSO_TOKEN");
 
-    org::openapitools::client::api::ApiGetCountOptions options;
+    org::openapitools::client::api::GetCountOptions options;
     options.sso = ssoToken;
 
     auto response = moderationApi.getCount(options).get();
@@ -159,7 +159,7 @@ auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(con
 org::openapitools::client::api::DefaultApi api(apiClient);
 
 // Required parameters are positional; optional ones go in the options struct
-org::openapitools::client::api::ApiGetCommentsOptions options;
+org::openapitools::client::api::GetCommentsOptions options;
 options.urlId = utility::conversions::to_string_t("your-url-id");
 
 // Call .get() to block and get the result synchronously
@@ -187,7 +187,7 @@ auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(con
 org::openapitools::client::api::DefaultApi api(apiClient);
 
 // Required parameters are positional; optional ones go in the options struct
-org::openapitools::client::api::ApiGetCommentsOptions options;
+org::openapitools::client::api::GetCommentsOptions options;
 options.urlId = utility::conversions::to_string_t("your-url-id");
 
 // Use .then() for asynchronous callback-based execution

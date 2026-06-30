@@ -13107,9 +13107,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/count": {
+		"/auth/my-account/moderate-comments/mod_api/count": {
 			"get": {
-				"operationId": "GetCount",
+				"operationId": "getCount",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13137,6 +13137,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "text-search",
@@ -13179,14 +13187,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13196,9 +13196,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/api/ids": {
+		"/auth/my-account/moderate-comments/mod_api/api/ids": {
 			"get": {
-				"operationId": "GetApiIds",
+				"operationId": "getApiIds",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13226,6 +13226,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "text-search",
@@ -13276,14 +13284,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13293,9 +13293,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/api/comments": {
+		"/auth/my-account/moderate-comments/mod_api/api/comments": {
 			"get": {
-				"operationId": "GetApiComments",
+				"operationId": "getApiComments",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13323,6 +13323,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "page",
@@ -13391,14 +13399,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13408,9 +13408,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/api/export": {
+		"/auth/my-account/moderate-comments/mod_api/api/export": {
 			"post": {
-				"operationId": "PostApiExport",
+				"operationId": "postApiExport",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13438,6 +13438,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "query",
 						"name": "text-search",
@@ -13480,14 +13488,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13497,9 +13497,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/api/export/status": {
+		"/auth/my-account/moderate-comments/mod_api/api/export/status": {
 			"get": {
-				"operationId": "GetApiExportStatus",
+				"operationId": "getApiExportStatus",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13529,15 +13529,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "batchJobId",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "batchJobId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13554,9 +13554,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/search/users": {
+		"/auth/my-account/moderate-comments/mod_api/search/users": {
 			"get": {
-				"operationId": "GetSearchUsers",
+				"operationId": "getSearchUsers",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13586,15 +13586,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "value",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "value",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13611,9 +13611,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/search/pages": {
+		"/auth/my-account/moderate-comments/mod_api/search/pages": {
 			"get": {
-				"operationId": "GetSearchPages",
+				"operationId": "getSearchPages",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13643,15 +13643,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "value",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "value",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13668,9 +13668,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/search/sites": {
+		"/auth/my-account/moderate-comments/mod_api/search/sites": {
 			"get": {
-				"operationId": "GetSearchSites",
+				"operationId": "getSearchSites",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13700,15 +13700,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "value",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "value",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13725,9 +13725,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/search/comments/summary": {
+		"/auth/my-account/moderate-comments/mod_api/search/comments/summary": {
 			"get": {
-				"operationId": "GetSearchCommentsSummary",
+				"operationId": "getSearchCommentsSummary",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13757,6 +13757,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "value",
 						"required": false,
 						"schema": {
@@ -13781,14 +13789,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13798,9 +13798,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/search/suggest": {
+		"/auth/my-account/moderate-comments/mod_api/search/suggest": {
 			"get": {
-				"operationId": "GetSearchSuggest",
+				"operationId": "getSearchSuggest",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13830,15 +13830,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "text-search",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "text-search",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -13855,9 +13855,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/pre-ban-summary/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/pre-ban-summary/{commentId}": {
 			"get": {
-				"operationId": "GetPreBanSummary",
+				"operationId": "getPreBanSummary",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13885,6 +13885,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "path",
 						"name": "commentId",
@@ -13919,14 +13927,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -13936,9 +13936,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/bulk-pre-ban-summary": {
+		"/auth/my-account/moderate-comments/mod_api/bulk-pre-ban-summary": {
 			"post": {
-				"operationId": "PostBulkPreBanSummary",
+				"operationId": "postBulkPreBanSummary",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -13968,6 +13968,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "includeByUserIdAndEmail",
 						"required": false,
 						"schema": {
@@ -13992,14 +14000,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14019,9 +14019,9 @@
 				}
 			}
 		},
-		"/auth/my-account/moderate-comments/ban-user/from-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/ban-user/from-comment/{commentId}": {
 			"post": {
-				"operationId": "PostBanUserFromComment",
+				"operationId": "postBanUserFromComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14049,6 +14049,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "path",
 						"name": "commentId",
@@ -14123,14 +14131,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14140,9 +14140,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/ban-users/from-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/ban-users/from-comment/{commentId}": {
 			"get": {
-				"operationId": "GetBanUsersFromComment",
+				"operationId": "getBanUsersFromComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14171,17 +14171,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14197,9 +14197,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/ban-user/undo": {
+		"/auth/my-account/moderate-comments/mod_api/ban-user/undo": {
 			"post": {
-				"operationId": "PostBanUserUndo",
+				"operationId": "postBanUserUndo",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14230,7 +14230,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14256,16 +14256,16 @@
 				}
 			}
 		},
-		"/auth/my-account/moderate-comments/remove-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/remove-comment/{commentId}": {
 			"post": {
-				"operationId": "PostRemoveComment",
+				"operationId": "postRemoveComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
 						"content": {
 							"application/json": {
 								"schema": {
-									"title": "PostRemoveCommentResponse",
+									"title": "PostRemoveCommentApiResponse",
 									"anyOf": [
 										{
 											"$ref": "#/components/schemas/DeleteCommentResult"
@@ -14295,17 +14295,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14329,9 +14329,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/restore-deleted-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/restore-deleted-comment/{commentId}": {
 			"post": {
-				"operationId": "PostRestoreDeletedComment",
+				"operationId": "postRestoreDeletedComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14360,17 +14360,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14394,9 +14394,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/flag-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/flag-comment/{commentId}": {
 			"post": {
-				"operationId": "PostFlagComment",
+				"operationId": "postFlagComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14425,17 +14425,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14459,9 +14459,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/un-flag-comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/un-flag-comment/{commentId}": {
 			"post": {
-				"operationId": "PostUnFlagComment",
+				"operationId": "postUnFlagComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14490,17 +14490,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14524,9 +14524,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/set-comment-review-status/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/set-comment-review-status/{commentId}": {
 			"post": {
-				"operationId": "PostSetCommentReviewStatus",
+				"operationId": "postSetCommentReviewStatus",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14554,6 +14554,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "path",
 						"name": "commentId",
@@ -14572,14 +14580,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "broadcastId",
 						"required": false,
 						"schema": {
@@ -14597,9 +14597,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/set-comment-spam-status/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/set-comment-spam-status/{commentId}": {
 			"post": {
-				"operationId": "PostSetCommentSpamStatus",
+				"operationId": "postSetCommentSpamStatus",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14627,6 +14627,14 @@
 				],
 				"security": [],
 				"parameters": [
+					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
 					{
 						"in": "path",
 						"name": "commentId",
@@ -14653,14 +14661,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "broadcastId",
 						"required": false,
 						"schema": {
@@ -14678,9 +14678,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/set-comment-approval-status/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/set-comment-approval-status/{commentId}": {
 			"post": {
-				"operationId": "PostSetCommentApprovalStatus",
+				"operationId": "postSetCommentApprovalStatus",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14709,6 +14709,14 @@
 				"security": [],
 				"parameters": [
 					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
 						"in": "path",
 						"name": "commentId",
 						"required": true,
@@ -14722,14 +14730,6 @@
 						"required": false,
 						"schema": {
 							"type": "boolean"
-						}
-					},
-					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
 						}
 					},
 					{
@@ -14751,9 +14751,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/logs/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/logs/{commentId}": {
 			"get": {
-				"operationId": "GetLogs",
+				"operationId": "getLogs",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14782,17 +14782,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14808,9 +14808,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/comment/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/comment/{commentId}": {
 			"get": {
-				"operationId": "GetModerationComment",
+				"operationId": "getModerationComment",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14839,6 +14839,14 @@
 				"security": [],
 				"parameters": [
 					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
 						"in": "path",
 						"name": "commentId",
 						"required": true,
@@ -14864,14 +14872,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -14881,9 +14881,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/comments-by-ids": {
+		"/auth/my-account/moderate-comments/mod_api/comments-by-ids": {
 			"post": {
-				"operationId": "PostCommentsByIds",
+				"operationId": "postCommentsByIds",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14914,7 +14914,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14940,9 +14940,9 @@
 				}
 			}
 		},
-		"/auth/my-account/moderate-comments/comment-children/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/comment-children/{commentId}": {
 			"get": {
-				"operationId": "GetCommentChildren",
+				"operationId": "getCommentChildren",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -14971,17 +14971,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -14997,9 +14997,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-comment-text/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/get-comment-text/{commentId}": {
 			"get": {
-				"operationId": "GetModerationCommentText",
+				"operationId": "getModerationCommentText",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15028,17 +15028,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15054,9 +15054,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/set-comment-text/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/set-comment-text/{commentId}": {
 			"post": {
-				"operationId": "PostSetCommentText",
+				"operationId": "postSetCommentText",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15085,17 +15085,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15129,9 +15129,9 @@
 				}
 			}
 		},
-		"/auth/my-account/moderate-comments/adjust-comment-votes/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/adjust-comment-votes/{commentId}": {
 			"post": {
-				"operationId": "PostAdjustCommentVotes",
+				"operationId": "postAdjustCommentVotes",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15160,17 +15160,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15204,9 +15204,9 @@
 				}
 			}
 		},
-		"/auth/my-account/moderate-comments/vote/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/vote/{commentId}": {
 			"post": {
-				"operationId": "PostVote",
+				"operationId": "postVote",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15235,6 +15235,14 @@
 				"security": [],
 				"parameters": [
 					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
 						"in": "path",
 						"name": "commentId",
 						"required": true,
@@ -15245,14 +15253,6 @@
 					{
 						"in": "query",
 						"name": "direction",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
-						"name": "tenantId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15277,9 +15277,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/vote/{commentId}/{voteId}": {
+		"/auth/my-account/moderate-comments/mod_api/vote/{commentId}/{voteId}": {
 			"delete": {
-				"operationId": "DeleteModerationVote",
+				"operationId": "deleteModerationVote",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15308,6 +15308,14 @@
 				"security": [],
 				"parameters": [
 					{
+						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
 						"in": "path",
 						"name": "commentId",
 						"required": true,
@@ -15319,14 +15327,6 @@
 						"in": "path",
 						"name": "voteId",
 						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
 						"schema": {
 							"type": "string"
 						}
@@ -15350,9 +15350,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-comment-ban-status/{commentId}": {
+		"/auth/my-account/moderate-comments/mod_api/get-comment-ban-status/{commentId}": {
 			"get": {
-				"operationId": "GetCommentBanStatus",
+				"operationId": "getCommentBanStatus",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15381,17 +15381,17 @@
 				"security": [],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "commentId",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "commentId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15407,9 +15407,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/user-ban-preference": {
+		"/auth/my-account/moderate-comments/mod_api/user-ban-preference": {
 			"get": {
-				"operationId": "GetUserBanPreference",
+				"operationId": "getUserBanPreference",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15440,7 +15440,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15456,9 +15456,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-manual-badges": {
+		"/auth/my-account/moderate-comments/mod_api/get-manual-badges": {
 			"get": {
-				"operationId": "GetManualBadges",
+				"operationId": "getManualBadges",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15489,7 +15489,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15505,9 +15505,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-manual-badges-for-user": {
+		"/auth/my-account/moderate-comments/mod_api/get-manual-badges-for-user": {
 			"get": {
-				"operationId": "GetManualBadgesForUser",
+				"operationId": "getManualBadgesForUser",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15537,6 +15537,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "badgesUserId",
 						"required": false,
 						"schema": {
@@ -15553,14 +15561,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15570,9 +15570,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/award-badge": {
+		"/auth/my-account/moderate-comments/mod_api/award-badge": {
 			"put": {
-				"operationId": "PutAwardBadge",
+				"operationId": "putAwardBadge",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15602,6 +15602,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "badgeId",
 						"required": true,
 						"schema": {
@@ -15626,14 +15634,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "broadcastId",
 						"required": false,
 						"schema": {
@@ -15651,9 +15651,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/remove-badge": {
+		"/auth/my-account/moderate-comments/mod_api/remove-badge": {
 			"put": {
-				"operationId": "PutRemoveBadge",
+				"operationId": "putRemoveBadge",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15683,6 +15683,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "badgeId",
 						"required": true,
 						"schema": {
@@ -15707,14 +15715,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "broadcastId",
 						"required": false,
 						"schema": {
@@ -15732,9 +15732,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-trust-factor": {
+		"/auth/my-account/moderate-comments/mod_api/get-trust-factor": {
 			"get": {
-				"operationId": "GetTrustFactor",
+				"operationId": "getTrustFactor",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15764,15 +15764,15 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "userId",
-						"required": false,
+						"name": "tenantId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
+						"name": "userId",
 						"required": false,
 						"schema": {
 							"type": "string"
@@ -15789,9 +15789,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/set-trust-factor": {
+		"/auth/my-account/moderate-comments/mod_api/set-trust-factor": {
 			"put": {
-				"operationId": "SetTrustFactor",
+				"operationId": "setTrustFactor",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15821,6 +15821,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "userId",
 						"required": false,
 						"schema": {
@@ -15837,14 +15845,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15854,9 +15854,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/get-user-internal-profile": {
+		"/auth/my-account/moderate-comments/mod_api/get-user-internal-profile": {
 			"get": {
-				"operationId": "GetUserInternalProfile",
+				"operationId": "getUserInternalProfile",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15886,6 +15886,14 @@
 				"parameters": [
 					{
 						"in": "query",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
 						"name": "commentId",
 						"required": false,
 						"schema": {
@@ -15894,14 +15902,6 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
-						"schema": {
-							"type": "string"
-						}
-					},
-					{
-						"in": "query",
 						"name": "sso",
 						"required": false,
 						"schema": {
@@ -15911,9 +15911,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/reopen-thread": {
+		"/auth/my-account/moderate-comments/mod_api/reopen-thread": {
 			"put": {
-				"operationId": "PutReopenThread",
+				"operationId": "putReopenThread",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -15943,7 +15943,7 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "urlId",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
@@ -15951,8 +15951,8 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"name": "urlId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -15968,9 +15968,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/close-thread": {
+		"/auth/my-account/moderate-comments/mod_api/close-thread": {
 			"put": {
-				"operationId": "PutCloseThread",
+				"operationId": "putCloseThread",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -16000,7 +16000,7 @@
 				"parameters": [
 					{
 						"in": "query",
-						"name": "urlId",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
@@ -16008,8 +16008,8 @@
 					},
 					{
 						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"name": "urlId",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -16025,9 +16025,9 @@
 				]
 			}
 		},
-		"/auth/my-account/moderate-comments/banned-users/counts": {
+		"/auth/my-account/moderate-comments/banned-users/mod_api/counts": {
 			"get": {
-				"operationId": "GetCounts",
+				"operationId": "getCounts",
 				"responses": {
 					"200": {
 						"description": "Ok",
@@ -16058,7 +16058,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -23027,7 +23027,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -23079,7 +23079,7 @@
 					{
 						"in": "query",
 						"name": "tenantId",
-						"required": false,
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -23129,17 +23129,17 @@
 				],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "tag",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "tag",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}
@@ -23187,17 +23187,17 @@
 				],
 				"parameters": [
 					{
-						"in": "path",
-						"name": "tag",
+						"in": "query",
+						"name": "tenantId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					},
 					{
-						"in": "query",
-						"name": "tenantId",
-						"required": false,
+						"in": "path",
+						"name": "tag",
+						"required": true,
 						"schema": {
 							"type": "string"
 						}

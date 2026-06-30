@@ -334,7 +334,7 @@ pplx::task<std::shared_ptr<SaveCommentsResponseWithPresence>> PublicApi::createC
         utility::string_t broadcastId,
         std::shared_ptr<CommentData> commentData
         
-        , const ApiCreateCommentPublicOptions& options
+        , const CreateCommentPublicOptions& options
 ) const
 {
     auto sessionId = options.sessionId;
@@ -500,7 +500,7 @@ pplx::task<std::shared_ptr<CreateFeedPostResponse>> PublicApi::createFeedPostPub
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams
         
-        , const ApiCreateFeedPostPublicOptions& options
+        , const CreateFeedPostPublicOptions& options
 ) const
 {
     auto broadcastId = options.broadcastId;
@@ -933,7 +933,7 @@ pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> PublicApi::deleteCom
         utility::string_t commentId,
         utility::string_t broadcastId
         
-        , const ApiDeleteCommentPublicOptions& options
+        , const DeleteCommentPublicOptions& options
 ) const
 {
     auto editKey = options.editKey;
@@ -1078,7 +1078,7 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> PublicApi::deleteCommentVote(
         utility::string_t urlId,
         utility::string_t broadcastId
         
-        , const ApiDeleteCommentVoteOptions& options
+        , const DeleteCommentVoteOptions& options
 ) const
 {
     auto editKey = options.editKey;
@@ -1224,7 +1224,7 @@ pplx::task<std::shared_ptr<DeleteFeedPostPublicResponse>> PublicApi::deleteFeedP
         utility::string_t tenantId,
         utility::string_t postId
         
-        , const ApiDeleteFeedPostPublicOptions& options
+        , const DeleteFeedPostPublicOptions& options
 ) const
 {
     auto broadcastId = options.broadcastId;
@@ -1765,7 +1765,7 @@ pplx::task<std::shared_ptr<PublicAPIGetCommentTextResponse>> PublicApi::getComme
         utility::string_t tenantId,
         utility::string_t commentId
         
-        , const ApiGetCommentTextOptions& options
+        , const GetCommentTextOptions& options
 ) const
 {
     auto editKey = options.editKey;
@@ -2038,7 +2038,7 @@ pplx::task<std::shared_ptr<GetCommentVoteUserNamesSuccessResponse>> PublicApi::g
 }
 pplx::task<std::shared_ptr<GetCommentsForUserResponse>> PublicApi::getCommentsForUser(
         
-        const ApiGetCommentsForUserOptions& options
+        const GetCommentsForUserOptions& options
 ) const
 {
     auto userId = options.userId;
@@ -2200,7 +2200,7 @@ pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> Publ
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiGetCommentsPublicOptions& options
+        , const GetCommentsPublicOptions& options
 ) const
 {
     auto page = options.page;
@@ -2602,7 +2602,7 @@ pplx::task<std::shared_ptr<GetEventLogResponse>> PublicApi::getEventLog(
 pplx::task<std::shared_ptr<PublicFeedPostsResponse>> PublicApi::getFeedPostsPublic(
         utility::string_t tenantId
         
-        , const ApiGetFeedPostsPublicOptions& options
+        , const GetFeedPostsPublicOptions& options
 ) const
 {
     auto afterId = options.afterId;
@@ -3024,7 +3024,7 @@ pplx::task<std::shared_ptr<GetGifsSearchResponse>> PublicApi::getGifsSearch(
         utility::string_t tenantId,
         utility::string_t search
         
-        , const ApiGetGifsSearchOptions& options
+        , const GetGifsSearchOptions& options
 ) const
 {
     auto locale = options.locale;
@@ -3169,7 +3169,7 @@ pplx::task<std::shared_ptr<GetGifsSearchResponse>> PublicApi::getGifsSearch(
 pplx::task<std::shared_ptr<GetGifsTrendingResponse>> PublicApi::getGifsTrending(
         utility::string_t tenantId
         
-        , const ApiGetGifsTrendingOptions& options
+        , const GetGifsTrendingOptions& options
 ) const
 {
     auto locale = options.locale;
@@ -3454,7 +3454,7 @@ pplx::task<std::shared_ptr<PageUsersOfflineResponse>> PublicApi::getOfflineUsers
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiGetOfflineUsersOptions& options
+        , const GetOfflineUsersOptions& options
 ) const
 {
     auto afterName = options.afterName;
@@ -3595,7 +3595,7 @@ pplx::task<std::shared_ptr<PageUsersOnlineResponse>> PublicApi::getOnlineUsers(
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiGetOnlineUsersOptions& options
+        , const GetOnlineUsersOptions& options
 ) const
 {
     auto afterName = options.afterName;
@@ -3735,7 +3735,7 @@ pplx::task<std::shared_ptr<PageUsersOnlineResponse>> PublicApi::getOnlineUsers(
 pplx::task<std::shared_ptr<GetPublicPagesResponse>> PublicApi::getPagesPublic(
         utility::string_t tenantId
         
-        , const ApiGetPagesPublicOptions& options
+        , const GetPagesPublicOptions& options
 ) const
 {
     auto cursor = options.cursor;
@@ -3888,7 +3888,7 @@ pplx::task<std::shared_ptr<GetTranslationsResponse>> PublicApi::getTranslations(
         utility::string_t r_namespace,
         utility::string_t component
         
-        , const ApiGetTranslationsOptions& options
+        , const GetTranslationsOptions& options
 ) const
 {
     auto locale = options.locale;
@@ -4158,7 +4158,7 @@ pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> PublicApi::getUser
 pplx::task<std::shared_ptr<GetMyNotificationsResponse>> PublicApi::getUserNotifications(
         utility::string_t tenantId
         
-        , const ApiGetUserNotificationsOptions& options
+        , const GetUserNotificationsOptions& options
 ) const
 {
     auto urlId = options.urlId;
@@ -4478,7 +4478,7 @@ pplx::task<std::shared_ptr<GetUserPresenceStatusesResponse>> PublicApi::getUserP
 pplx::task<std::shared_ptr<UserReactsResponse>> PublicApi::getUserReactsPublic(
         utility::string_t tenantId
         
-        , const ApiGetUserReactsPublicOptions& options
+        , const GetUserReactsPublicOptions& options
 ) const
 {
     auto postIds = options.postIds;
@@ -5537,7 +5537,7 @@ pplx::task<std::shared_ptr<ReactFeedPostResponse>> PublicApi::reactFeedPostPubli
         utility::string_t postId,
         std::shared_ptr<ReactBodyParams> reactBodyParams
         
-        , const ApiReactFeedPostPublicOptions& options
+        , const ReactFeedPostPublicOptions& options
 ) const
 {
     auto isUndo = options.isUndo;
@@ -5834,7 +5834,7 @@ pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUser
 pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> PublicApi::resetUserNotifications(
         utility::string_t tenantId
         
-        , const ApiResetUserNotificationsOptions& options
+        , const ResetUserNotificationsOptions& options
 ) const
 {
     auto afterId = options.afterId;
@@ -5994,7 +5994,7 @@ pplx::task<std::shared_ptr<SearchUsersResult>> PublicApi::searchUsers(
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiSearchUsersOptions& options
+        , const SearchUsersOptions& options
 ) const
 {
     auto usernameStartsWith = options.usernameStartsWith;
@@ -6147,7 +6147,7 @@ pplx::task<std::shared_ptr<PublicAPISetCommentTextResponse>> PublicApi::setComme
         utility::string_t broadcastId,
         std::shared_ptr<CommentTextUpdateRequest> commentTextUpdateRequest
         
-        , const ApiSetCommentTextOptions& options
+        , const SetCommentTextOptions& options
 ) const
 {
     auto editKey = options.editKey;
@@ -6741,7 +6741,7 @@ pplx::task<std::shared_ptr<CreateFeedPostResponse>> PublicApi::updateFeedPostPub
         utility::string_t postId,
         std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams
         
-        , const ApiUpdateFeedPostPublicOptions& options
+        , const UpdateFeedPostPublicOptions& options
 ) const
 {
     auto broadcastId = options.broadcastId;
@@ -7324,7 +7324,7 @@ pplx::task<std::shared_ptr<UploadImageResponse>> PublicApi::uploadImage(
         utility::string_t tenantId,
         std::shared_ptr<HttpContent> file
         
-        , const ApiUploadImageOptions& options
+        , const UploadImageOptions& options
 ) const
 {
     auto sizePreset = options.sizePreset;
@@ -7469,7 +7469,7 @@ pplx::task<std::shared_ptr<VoteResponse>> PublicApi::voteComment(
         utility::string_t broadcastId,
         std::shared_ptr<VoteBodyParams> voteBodyParams
         
-        , const ApiVoteCommentOptions& options
+        , const VoteCommentOptions& options
 ) const
 {
     auto sessionId = options.sessionId;

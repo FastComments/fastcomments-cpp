@@ -167,12 +167,12 @@ namespace api {
 
 using namespace org::openapitools::client::model;
 
-struct ApiAggregateOptions
+struct AggregateOptions
 {
     boost::optional<utility::string_t> parentTenantId;
     boost::optional<bool> includeStats;
 };
-struct ApiAggregateQuestionResultsOptions
+struct AggregateQuestionResultsOptions
 {
     boost::optional<utility::string_t> questionId;
     boost::optional<std::vector<utility::string_t>> questionIds;
@@ -181,12 +181,12 @@ struct ApiAggregateQuestionResultsOptions
     boost::optional<utility::datetime> startDate;
     boost::optional<bool> forceRecalculate;
 };
-struct ApiBlockUserFromCommentOptions
+struct BlockUserFromCommentOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiCombineCommentsWithQuestionResultsOptions
+struct CombineCommentsWithQuestionResultsOptions
 {
     boost::optional<utility::string_t> questionId;
     boost::optional<std::vector<utility::string_t>> questionIds;
@@ -197,39 +197,39 @@ struct ApiCombineCommentsWithQuestionResultsOptions
     boost::optional<double> maxValue;
     boost::optional<double> limit;
 };
-struct ApiCreateFeedPostOptions
+struct CreateFeedPostOptions
 {
     boost::optional<utility::string_t> broadcastId;
     boost::optional<bool> isLive;
     boost::optional<bool> doSpamCheck;
     boost::optional<bool> skipDupCheck;
 };
-struct ApiCreateVoteOptions
+struct CreateVoteOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiDeleteCommentOptions
+struct DeleteCommentOptions
 {
     boost::optional<utility::string_t> contextUserId;
     boost::optional<bool> isLive;
 };
-struct ApiDeleteSSOUserOptions
+struct DeleteSSOUserOptions
 {
     boost::optional<bool> deleteComments;
     boost::optional<utility::string_t> commentDeleteMode;
 };
-struct ApiDeleteTenantUserOptions
+struct DeleteTenantUserOptions
 {
     boost::optional<utility::string_t> deleteComments;
     boost::optional<utility::string_t> commentDeleteMode;
 };
-struct ApiFlagCommentOptions
+struct FlagCommentOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiGetAuditLogsOptions
+struct GetAuditLogsOptions
 {
     boost::optional<double> limit;
     boost::optional<double> skip;
@@ -237,7 +237,7 @@ struct ApiGetAuditLogsOptions
     boost::optional<double> after;
     boost::optional<double> before;
 };
-struct ApiGetCommentsOptions
+struct GetCommentsOptions
 {
     boost::optional<int32_t> page;
     boost::optional<int32_t> limit;
@@ -256,13 +256,13 @@ struct ApiGetCommentsOptions
     boost::optional<int64_t> fromDate;
     boost::optional<int64_t> toDate;
 };
-struct ApiGetFeedPostsOptions
+struct GetFeedPostsOptions
 {
     boost::optional<utility::string_t> afterId;
     boost::optional<int32_t> limit;
     boost::optional<std::vector<utility::string_t>> tags;
 };
-struct ApiGetNotificationCountOptions
+struct GetNotificationCountOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> urlId;
@@ -270,7 +270,7 @@ struct ApiGetNotificationCountOptions
     boost::optional<bool> viewed;
     boost::optional<utility::string_t> type;
 };
-struct ApiGetNotificationsOptions
+struct GetNotificationsOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> urlId;
@@ -279,7 +279,7 @@ struct ApiGetNotificationsOptions
     boost::optional<utility::string_t> type;
     boost::optional<double> skip;
 };
-struct ApiGetPendingWebhookEventCountOptions
+struct GetPendingWebhookEventCountOptions
 {
     boost::optional<utility::string_t> commentId;
     boost::optional<utility::string_t> externalId;
@@ -288,7 +288,7 @@ struct ApiGetPendingWebhookEventCountOptions
     boost::optional<utility::string_t> domain;
     boost::optional<double> attemptCountGT;
 };
-struct ApiGetPendingWebhookEventsOptions
+struct GetPendingWebhookEventsOptions
 {
     boost::optional<utility::string_t> commentId;
     boost::optional<utility::string_t> externalId;
@@ -298,7 +298,7 @@ struct ApiGetPendingWebhookEventsOptions
     boost::optional<double> attemptCountGT;
     boost::optional<double> skip;
 };
-struct ApiGetQuestionResultsOptions
+struct GetQuestionResultsOptions
 {
     boost::optional<utility::string_t> urlId;
     boost::optional<utility::string_t> userId;
@@ -307,32 +307,32 @@ struct ApiGetQuestionResultsOptions
     boost::optional<utility::string_t> questionIds;
     boost::optional<double> skip;
 };
-struct ApiGetTenantDailyUsagesOptions
+struct GetTenantDailyUsagesOptions
 {
     boost::optional<double> yearNumber;
     boost::optional<double> monthNumber;
     boost::optional<double> dayNumber;
     boost::optional<double> skip;
 };
-struct ApiGetTenantsOptions
+struct GetTenantsOptions
 {
     boost::optional<utility::string_t> meta;
     boost::optional<double> skip;
 };
-struct ApiGetTicketsOptions
+struct GetTicketsOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<double> state;
     boost::optional<double> skip;
     boost::optional<double> limit;
 };
-struct ApiGetUserBadgeProgressListOptions
+struct GetUserBadgeProgressListOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<double> limit;
     boost::optional<double> skip;
 };
-struct ApiGetUserBadgesOptions
+struct GetUserBadgesOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> badgeId;
@@ -341,36 +341,36 @@ struct ApiGetUserBadgesOptions
     boost::optional<double> limit;
     boost::optional<double> skip;
 };
-struct ApiGetVotesForUserOptions
+struct GetVotesForUserOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiSaveCommentOptions
+struct SaveCommentOptions
 {
     boost::optional<bool> isLive;
     boost::optional<bool> doSpamCheck;
     boost::optional<bool> sendEmails;
     boost::optional<bool> populateNotifications;
 };
-struct ApiSaveCommentsBulkOptions
+struct SaveCommentsBulkOptions
 {
     boost::optional<bool> isLive;
     boost::optional<bool> doSpamCheck;
     boost::optional<bool> sendEmails;
     boost::optional<bool> populateNotifications;
 };
-struct ApiUnBlockUserFromCommentOptions
+struct UnBlockUserFromCommentOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiUnFlagCommentOptions
+struct UnFlagCommentOptions
 {
     boost::optional<utility::string_t> userId;
     boost::optional<utility::string_t> anonUserId;
 };
-struct ApiUpdateCommentOptions
+struct UpdateCommentOptions
 {
     boost::optional<utility::string_t> contextUserId;
     boost::optional<bool> doSpamCheck;
@@ -406,11 +406,12 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="tenantId"></param>
     /// <param name="createHashTagBody"> (optional)</param>
     pplx::task<std::shared_ptr<CreateHashTagResponse>> addHashTag(
+        utility::string_t tenantId,
         std::shared_ptr<CreateHashTagBody> createHashTagBody
-        , boost::optional<utility::string_t> tenantId = boost::none
+        
     ) const;
     /// <summary>
     /// 
@@ -418,11 +419,12 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="tenantId"></param>
     /// <param name="bulkCreateHashTagsBody"> (optional)</param>
     pplx::task<std::shared_ptr<BulkCreateHashTagsResponse>> addHashTagsBulk(
+        utility::string_t tenantId,
         std::shared_ptr<BulkCreateHashTagsBody> bulkCreateHashTagsBody
-        , boost::optional<utility::string_t> tenantId = boost::none
+        
     ) const;
     /// <summary>
     /// 
@@ -464,7 +466,7 @@ public:
         utility::string_t tenantId,
         std::shared_ptr<AggregationRequest> aggregationRequest
         
-        , const ApiAggregateOptions& options = {}
+        , const AggregateOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -482,7 +484,7 @@ public:
     pplx::task<std::shared_ptr<AggregateQuestionResultsResponse>> aggregateQuestionResults(
         utility::string_t tenantId
         
-        , const ApiAggregateQuestionResultsOptions& options = {}
+        , const AggregateQuestionResultsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -500,7 +502,7 @@ public:
         utility::string_t id,
         std::shared_ptr<BlockFromCommentParams> blockFromCommentParams
         
-        , const ApiBlockUserFromCommentOptions& options = {}
+        , const BlockUserFromCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -551,7 +553,7 @@ public:
     pplx::task<std::shared_ptr<CombineQuestionResultsWithCommentsResponse>> combineCommentsWithQuestionResults(
         utility::string_t tenantId
         
-        , const ApiCombineCommentsWithQuestionResultsOptions& options = {}
+        , const CombineCommentsWithQuestionResultsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -582,7 +584,7 @@ public:
         utility::string_t tenantId,
         std::shared_ptr<CreateFeedPostParams> createFeedPostParams
         
-        , const ApiCreateFeedPostOptions& options = {}
+        , const CreateFeedPostOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -719,7 +721,7 @@ public:
         utility::string_t commentId,
         utility::string_t direction
         
-        , const ApiCreateVoteOptions& options = {}
+        , const CreateVoteOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -735,7 +737,7 @@ public:
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteCommentOptions& options = {}
+        , const DeleteCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -784,13 +786,14 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
+    /// <param name="tenantId"></param>
     /// <param name="tag"></param>
-    /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="deleteHashTagRequestBody"> (optional)</param>
     pplx::task<std::shared_ptr<APIEmptyResponse>> deleteHashTag(
+        utility::string_t tenantId,
         utility::string_t tag,
         std::shared_ptr<DeleteHashTagRequestBody> deleteHashTagRequestBody
-        , boost::optional<utility::string_t> tenantId = boost::none
+        
     ) const;
     /// <summary>
     /// 
@@ -885,7 +888,7 @@ public:
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteSSOUserOptions& options = {}
+        , const DeleteSSOUserOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -942,7 +945,7 @@ public:
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiDeleteTenantUserOptions& options = {}
+        , const DeleteTenantUserOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -985,7 +988,7 @@ public:
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiFlagCommentOptions& options = {}
+        , const FlagCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1002,7 +1005,7 @@ public:
     pplx::task<std::shared_ptr<GetAuditLogsResponse>> getAuditLogs(
         utility::string_t tenantId
         
-        , const ApiGetAuditLogsOptions& options = {}
+        , const GetAuditLogsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1056,7 +1059,7 @@ public:
     pplx::task<std::shared_ptr<APIGetCommentsResponse>> getComments(
         utility::string_t tenantId
         
-        , const ApiGetCommentsOptions& options = {}
+        , const GetCommentsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1145,7 +1148,7 @@ public:
     pplx::task<std::shared_ptr<GetFeedPostsResponse>> getFeedPosts(
         utility::string_t tenantId
         
-        , const ApiGetFeedPostsOptions& options = {}
+        , const GetFeedPostsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1199,7 +1202,7 @@ public:
     pplx::task<std::shared_ptr<GetNotificationCountResponse>> getNotificationCount(
         utility::string_t tenantId
         
-        , const ApiGetNotificationCountOptions& options = {}
+        , const GetNotificationCountOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1217,7 +1220,7 @@ public:
     pplx::task<std::shared_ptr<GetNotificationsResponse>> getNotifications(
         utility::string_t tenantId
         
-        , const ApiGetNotificationsOptions& options = {}
+        , const GetNotificationsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1259,7 +1262,7 @@ public:
     pplx::task<std::shared_ptr<GetPendingWebhookEventCountResponse>> getPendingWebhookEventCount(
         utility::string_t tenantId
         
-        , const ApiGetPendingWebhookEventCountOptions& options = {}
+        , const GetPendingWebhookEventCountOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1278,7 +1281,7 @@ public:
     pplx::task<std::shared_ptr<GetPendingWebhookEventsResponse>> getPendingWebhookEvents(
         utility::string_t tenantId
         
-        , const ApiGetPendingWebhookEventsOptions& options = {}
+        , const GetPendingWebhookEventsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1334,7 +1337,7 @@ public:
     pplx::task<std::shared_ptr<GetQuestionResultsResponse>> getQuestionResults(
         utility::string_t tenantId
         
-        , const ApiGetQuestionResultsOptions& options = {}
+        , const GetQuestionResultsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1413,7 +1416,7 @@ public:
     pplx::task<std::shared_ptr<GetTenantDailyUsagesResponse>> getTenantDailyUsages(
         utility::string_t tenantId
         
-        , const ApiGetTenantDailyUsagesOptions& options = {}
+        , const GetTenantDailyUsagesOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1477,7 +1480,7 @@ public:
     pplx::task<std::shared_ptr<GetTenantsResponse>> getTenants(
         utility::string_t tenantId
         
-        , const ApiGetTenantsOptions& options = {}
+        , const GetTenantsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1507,7 +1510,7 @@ public:
     pplx::task<std::shared_ptr<GetTicketsResponse>> getTickets(
         utility::string_t tenantId
         
-        , const ApiGetTicketsOptions& options = {}
+        , const GetTicketsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1574,7 +1577,7 @@ public:
     pplx::task<std::shared_ptr<APIGetUserBadgeProgressListResponse>> getUserBadgeProgressList(
         utility::string_t tenantId
         
-        , const ApiGetUserBadgeProgressListOptions& options = {}
+        , const GetUserBadgeProgressListOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1592,7 +1595,7 @@ public:
     pplx::task<std::shared_ptr<APIGetUserBadgesResponse>> getUserBadges(
         utility::string_t tenantId
         
-        , const ApiGetUserBadgesOptions& options = {}
+        , const GetUserBadgesOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1621,7 +1624,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId
         
-        , const ApiGetVotesForUserOptions& options = {}
+        , const GetVotesForUserOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1644,13 +1647,14 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
+    /// <param name="tenantId"></param>
     /// <param name="tag"></param>
-    /// <param name="tenantId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="updateHashTagBody"> (optional)</param>
     pplx::task<std::shared_ptr<UpdateHashTagResponse>> patchHashTag(
+        utility::string_t tenantId,
         utility::string_t tag,
         std::shared_ptr<UpdateHashTagBody> updateHashTagBody
-        , boost::optional<utility::string_t> tenantId = boost::none
+        
     ) const;
     /// <summary>
     /// 
@@ -1775,7 +1779,7 @@ public:
         utility::string_t tenantId,
         std::shared_ptr<CreateCommentParams> createCommentParams
         
-        , const ApiSaveCommentOptions& options = {}
+        , const SaveCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1793,7 +1797,7 @@ public:
         utility::string_t tenantId,
         std::vector<std::shared_ptr<CreateCommentParams>> createCommentParams
         
-        , const ApiSaveCommentsBulkOptions& options = {}
+        , const SaveCommentsBulkOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1840,7 +1844,7 @@ public:
         utility::string_t id,
         std::shared_ptr<UnBlockFromCommentParams> unBlockFromCommentParams
         
-        , const ApiUnBlockUserFromCommentOptions& options = {}
+        , const UnBlockUserFromCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1856,7 +1860,7 @@ public:
         utility::string_t tenantId,
         utility::string_t id
         
-        , const ApiUnFlagCommentOptions& options = {}
+        , const UnFlagCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1875,7 +1879,7 @@ public:
         utility::string_t id,
         std::shared_ptr<UpdatableCommentParams> updatableCommentParams
         
-        , const ApiUpdateCommentOptions& options = {}
+        , const UpdateCommentOptions& options = {}
     ) const;
     /// <summary>
     /// 
