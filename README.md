@@ -42,10 +42,7 @@ This library contains the generated API client and the SSO utilities to make wor
 ### Public vs Secured APIs
 
 For the API client, there are three classes, `DefaultApi`, `PublicApi`, and `ModerationApi`. The `DefaultApi` contains methods that require your API key, and `PublicApi` contains
-methods that can be made directly from a browser/mobile device/etc without authentication. The `ModerationApi` contains methods that power the moderator dashboard - listing,
-counting, searching, exporting and pulling logs for comments, moderation actions (remove/restore, flag, set review/spam/approval status, adjust votes, reopen/close threads),
-bans (ban from a comment, undo bans, pre-ban summaries, ban status and preferences, banned-user counts), and badges & trust (award/remove badges, manual badges, get/set trust
-factor, user internal profile). Every `ModerationApi` method accepts an `sso` parameter so the call is performed on behalf of an SSO-authenticated moderator.
+methods that can be made directly from a browser/mobile device/etc without authentication. The `ModerationApi` provides an extensive suite of live and fast moderation APIs. Every `ModerationApi` method accepts an `sso` parameter and can authenticate via SSO or a FastComments.com session cookie.
 
 ## Quick Start
 
@@ -126,14 +123,10 @@ int main() {
     // Pass the moderator's SSO token to authenticate the call
     auto ssoToken = utility::conversions::to_string_t("YOUR_MODERATOR_SSO_TOKEN");
 
-    auto response = moderationApi.getCount(
-        boost::none,  // textSearch
-        boost::none,  // byIPFromComment
-        boost::none,  // filter
-        boost::none,  // searchFilters
-        boost::none,  // demo
-        ssoToken      // sso
-    ).get();
+    org::openapitools::client::api::GetCountOptions options;
+    options.sso = ssoToken;
+
+    auto response = moderationApi.getCount(options).get();
 
     return 0;
 }
@@ -162,23 +155,14 @@ config->setApiKey(utility::conversions::to_string_t("api_key"),
 auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
 org::openapitools::client::api::DefaultApi api(apiClient);
 
+// Required parameters are positional; optional ones go in the options struct
+org::openapitools::client::api::GetCommentsOptions options;
+options.urlId = utility::conversions::to_string_t("your-url-id");
+
 // Call .get() to block and get the result synchronously
 auto response = api.getComments(
     utility::conversions::to_string_t("your-tenant-id"),
-    boost::none,  // page
-    boost::none,  // limit
-    boost::none,  // skip
-    boost::none,  // asTree
-    boost::none,  // skipChildren
-    boost::none,  // limitChildren
-    boost::none,  // maxTreeDepth
-    utility::conversions::to_string_t("your-url-id"),  // urlId
-    boost::none,  // userId
-    boost::none,  // anonUserId
-    boost::none,  // contextUserId
-    boost::none,  // hashTag
-    boost::none,  // parentId
-    boost::none   // direction
+    options
 ).get();  // Blocks until the HTTP request completes
 
 if (response && response->comments) {
@@ -199,13 +183,14 @@ config->setApiKey(utility::conversions::to_string_t("api_key"),
 auto apiClient = std::make_shared<org::openapitools::client::api::ApiClient>(config);
 org::openapitools::client::api::DefaultApi api(apiClient);
 
+// Required parameters are positional; optional ones go in the options struct
+org::openapitools::client::api::GetCommentsOptions options;
+options.urlId = utility::conversions::to_string_t("your-url-id");
+
 // Use .then() for asynchronous callback-based execution
 api.getComments(
     utility::conversions::to_string_t("your-tenant-id"),
-    boost::none, boost::none, boost::none, boost::none, boost::none,
-    boost::none, boost::none,
-    utility::conversions::to_string_t("your-url-id"),
-    boost::none, boost::none, boost::none, boost::none, boost::none, boost::none
+    options
 ).then([](std::shared_ptr<GetComments_200_response> response) {
     // This runs asynchronously when the request completes
     if (response && response->comments) {

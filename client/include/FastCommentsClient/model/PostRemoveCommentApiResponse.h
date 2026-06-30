@@ -10,13 +10,13 @@
  */
 
 /*
- * PostRemoveCommentResponse.h
+ * PostRemoveCommentApiResponse.h
  *
  * 
  */
 
-#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentResponse_H_
-#define ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentResponse_H_
+#ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentApiResponse_H_
+#define ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentApiResponse_H_
 
 #include <boost/optional.hpp>
 
@@ -33,12 +33,12 @@ namespace model {
 
 
 
-class  PostRemoveCommentResponse
+class  PostRemoveCommentApiResponse
     : public ModelBase
 {
 public:
-    PostRemoveCommentResponse();
-    virtual ~PostRemoveCommentResponse();
+    PostRemoveCommentApiResponse();
+    virtual ~PostRemoveCommentApiResponse();
 
     /////////////////////////////////////////////
     /// ModelBase overrides
@@ -53,7 +53,7 @@ public:
 
 
     /////////////////////////////////////////////
-    /// PostRemoveCommentResponse members
+    /// PostRemoveCommentApiResponse members
 
 
     utility::string_t getAction() const;
@@ -82,4 +82,4 @@ protected:
 }
 }
 
-#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentResponse_H_ */
+#endif /* ORG_OPENAPITOOLS_CLIENT_MODEL_PostRemoveCommentApiResponse_H_ */

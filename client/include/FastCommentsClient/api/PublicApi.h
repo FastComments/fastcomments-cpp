@@ -87,6 +87,181 @@ namespace api {
 
 using namespace org::openapitools::client::model;
 
+struct CreateCommentPublicOptions
+{
+    boost::optional<utility::string_t> sessionId;
+    boost::optional<utility::string_t> sso;
+};
+struct CreateFeedPostPublicOptions
+{
+    boost::optional<utility::string_t> broadcastId;
+    boost::optional<utility::string_t> sso;
+};
+struct DeleteCommentPublicOptions
+{
+    boost::optional<utility::string_t> editKey;
+    boost::optional<utility::string_t> sso;
+};
+struct DeleteCommentVoteOptions
+{
+    boost::optional<utility::string_t> editKey;
+    boost::optional<utility::string_t> sso;
+};
+struct DeleteFeedPostPublicOptions
+{
+    boost::optional<utility::string_t> broadcastId;
+    boost::optional<utility::string_t> sso;
+};
+struct GetCommentTextOptions
+{
+    boost::optional<utility::string_t> editKey;
+    boost::optional<utility::string_t> sso;
+};
+struct GetCommentsForUserOptions
+{
+    boost::optional<utility::string_t> userId;
+    boost::optional<std::shared_ptr<SortDirections>> direction;
+    boost::optional<utility::string_t> repliesToUserId;
+    boost::optional<double> page;
+    boost::optional<bool> includei10n;
+    boost::optional<utility::string_t> locale;
+    boost::optional<bool> isCrawler;
+};
+struct GetCommentsPublicOptions
+{
+    boost::optional<int32_t> page;
+    boost::optional<std::shared_ptr<SortDirections>> direction;
+    boost::optional<utility::string_t> sso;
+    boost::optional<int32_t> skip;
+    boost::optional<int32_t> skipChildren;
+    boost::optional<int32_t> limit;
+    boost::optional<int32_t> limitChildren;
+    boost::optional<bool> countChildren;
+    boost::optional<utility::string_t> fetchPageForCommentId;
+    boost::optional<bool> includeConfig;
+    boost::optional<bool> countAll;
+    boost::optional<bool> includei10n;
+    boost::optional<utility::string_t> locale;
+    boost::optional<utility::string_t> modules;
+    boost::optional<bool> isCrawler;
+    boost::optional<bool> includeNotificationCount;
+    boost::optional<bool> asTree;
+    boost::optional<int32_t> maxTreeDepth;
+    boost::optional<bool> useFullTranslationIds;
+    boost::optional<utility::string_t> parentId;
+    boost::optional<utility::string_t> searchText;
+    boost::optional<std::vector<utility::string_t>> hashTags;
+    boost::optional<utility::string_t> userId;
+    boost::optional<utility::string_t> customConfigStr;
+    boost::optional<utility::string_t> afterCommentId;
+    boost::optional<utility::string_t> beforeCommentId;
+};
+struct GetFeedPostsPublicOptions
+{
+    boost::optional<utility::string_t> afterId;
+    boost::optional<int32_t> limit;
+    boost::optional<std::vector<utility::string_t>> tags;
+    boost::optional<utility::string_t> sso;
+    boost::optional<bool> isCrawler;
+    boost::optional<bool> includeUserInfo;
+};
+struct GetGifsSearchOptions
+{
+    boost::optional<utility::string_t> locale;
+    boost::optional<utility::string_t> rating;
+    boost::optional<double> page;
+};
+struct GetGifsTrendingOptions
+{
+    boost::optional<utility::string_t> locale;
+    boost::optional<utility::string_t> rating;
+    boost::optional<double> page;
+};
+struct GetOfflineUsersOptions
+{
+    boost::optional<utility::string_t> afterName;
+    boost::optional<utility::string_t> afterUserId;
+};
+struct GetOnlineUsersOptions
+{
+    boost::optional<utility::string_t> afterName;
+    boost::optional<utility::string_t> afterUserId;
+};
+struct GetPagesPublicOptions
+{
+    boost::optional<utility::string_t> cursor;
+    boost::optional<int32_t> limit;
+    boost::optional<utility::string_t> q;
+    boost::optional<std::shared_ptr<PagesSortBy>> sortBy;
+    boost::optional<bool> hasComments;
+};
+struct GetTranslationsOptions
+{
+    boost::optional<utility::string_t> locale;
+    boost::optional<bool> useFullTranslationIds;
+};
+struct GetUserNotificationsOptions
+{
+    boost::optional<utility::string_t> urlId;
+    boost::optional<int32_t> pageSize;
+    boost::optional<utility::string_t> afterId;
+    boost::optional<bool> includeContext;
+    boost::optional<int64_t> afterCreatedAt;
+    boost::optional<bool> unreadOnly;
+    boost::optional<bool> dmOnly;
+    boost::optional<bool> noDm;
+    boost::optional<bool> includeTranslations;
+    boost::optional<bool> includeTenantNotifications;
+    boost::optional<utility::string_t> sso;
+};
+struct GetUserReactsPublicOptions
+{
+    boost::optional<std::vector<utility::string_t>> postIds;
+    boost::optional<utility::string_t> sso;
+};
+struct ReactFeedPostPublicOptions
+{
+    boost::optional<bool> isUndo;
+    boost::optional<utility::string_t> broadcastId;
+    boost::optional<utility::string_t> sso;
+};
+struct ResetUserNotificationsOptions
+{
+    boost::optional<utility::string_t> afterId;
+    boost::optional<int64_t> afterCreatedAt;
+    boost::optional<bool> unreadOnly;
+    boost::optional<bool> dmOnly;
+    boost::optional<bool> noDm;
+    boost::optional<utility::string_t> sso;
+};
+struct SearchUsersOptions
+{
+    boost::optional<utility::string_t> usernameStartsWith;
+    boost::optional<std::vector<utility::string_t>> mentionGroupIds;
+    boost::optional<utility::string_t> sso;
+    boost::optional<utility::string_t> searchSection;
+};
+struct SetCommentTextOptions
+{
+    boost::optional<utility::string_t> editKey;
+    boost::optional<utility::string_t> sso;
+};
+struct UpdateFeedPostPublicOptions
+{
+    boost::optional<utility::string_t> broadcastId;
+    boost::optional<utility::string_t> sso;
+};
+struct UploadImageOptions
+{
+    boost::optional<std::shared_ptr<SizePreset>> sizePreset;
+    boost::optional<utility::string_t> urlId;
+};
+struct VoteCommentOptions
+{
+    boost::optional<utility::string_t> sessionId;
+    boost::optional<utility::string_t> sso;
+};
+
 
 
 class  PublicApi 
@@ -110,8 +285,8 @@ public:
     pplx::task<std::shared_ptr<BlockSuccess>> blockFromCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
-        std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -124,8 +299,8 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<CheckBlockedCommentsResponse>> checkedCommentsForBlocked(
         utility::string_t tenantId,
-        utility::string_t commentIds,
-        boost::optional<utility::string_t> sso
+        utility::string_t commentIds
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -143,9 +318,9 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t broadcastId,
-        std::shared_ptr<CommentData> commentData,
-        boost::optional<utility::string_t> sessionId,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<CommentData> commentData
+        
+        , const CreateCommentPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -159,9 +334,9 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<CreateFeedPostResponse>> createFeedPostPublic(
         utility::string_t tenantId,
-        std::shared_ptr<CreateFeedPostParams> createFeedPostParams,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<CreateFeedPostParams> createFeedPostParams
+        
+        , const CreateFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -174,8 +349,8 @@ public:
     /// <param name="title"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<CreateV1PageReact>> createV1PageReact(
         utility::string_t tenantId,
-        utility::string_t urlId,
-        boost::optional<utility::string_t> title
+        utility::string_t urlId
+        , boost::optional<utility::string_t> title = boost::none
     ) const;
     /// <summary>
     /// 
@@ -190,8 +365,8 @@ public:
     pplx::task<std::shared_ptr<CreateV1PageReact>> createV2PageReact(
         utility::string_t tenantId,
         utility::string_t urlId,
-        utility::string_t id,
-        boost::optional<utility::string_t> title
+        utility::string_t id
+        , boost::optional<utility::string_t> title = boost::none
     ) const;
     /// <summary>
     /// 
@@ -207,9 +382,9 @@ public:
     pplx::task<std::shared_ptr<PublicAPIDeleteCommentResponse>> deleteCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> editKey,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        
+        , const DeleteCommentPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -229,9 +404,9 @@ public:
         utility::string_t commentId,
         utility::string_t voteId,
         utility::string_t urlId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> editKey,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        
+        , const DeleteCommentVoteOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -245,9 +420,9 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<DeleteFeedPostPublicResponse>> deleteFeedPostPublic(
         utility::string_t tenantId,
-        utility::string_t postId,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> sso
+        utility::string_t postId
+        
+        , const DeleteFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -260,6 +435,7 @@ public:
     pplx::task<std::shared_ptr<CreateV1PageReact>> deleteV1PageReact(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -274,6 +450,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
     ) const;
     /// <summary>
     /// 
@@ -288,8 +465,8 @@ public:
     pplx::task<std::shared_ptr<APIEmptyResponse>> flagCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
-        bool isFlagged,
-        boost::optional<utility::string_t> sso
+        bool isFlagged
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -303,9 +480,9 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<PublicAPIGetCommentTextResponse>> getCommentText(
         utility::string_t tenantId,
-        utility::string_t commentId,
-        boost::optional<utility::string_t> editKey,
-        boost::optional<utility::string_t> sso
+        utility::string_t commentId
+        
+        , const GetCommentTextOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -320,8 +497,8 @@ public:
     pplx::task<std::shared_ptr<GetCommentVoteUserNamesSuccessResponse>> getCommentVoteUserNames(
         utility::string_t tenantId,
         utility::string_t commentId,
-        int32_t dir,
-        boost::optional<utility::string_t> sso
+        int32_t dir
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -337,13 +514,8 @@ public:
     /// <param name="locale"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="isCrawler"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<GetCommentsForUserResponse>> getCommentsForUser(
-        boost::optional<utility::string_t> userId,
-        boost::optional<std::shared_ptr<SortDirections>> direction,
-        boost::optional<utility::string_t> repliesToUserId,
-        boost::optional<double> page,
-        boost::optional<bool> includei10n,
-        boost::optional<utility::string_t> locale,
-        boost::optional<bool> isCrawler
+        
+        const GetCommentsForUserOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -381,33 +553,9 @@ public:
     /// <param name="beforeCommentId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<GetCommentsResponseWithPresence_PublicComment_>> getCommentsPublic(
         utility::string_t tenantId,
-        utility::string_t urlId,
-        boost::optional<int32_t> page,
-        boost::optional<std::shared_ptr<SortDirections>> direction,
-        boost::optional<utility::string_t> sso,
-        boost::optional<int32_t> skip,
-        boost::optional<int32_t> skipChildren,
-        boost::optional<int32_t> limit,
-        boost::optional<int32_t> limitChildren,
-        boost::optional<bool> countChildren,
-        boost::optional<utility::string_t> fetchPageForCommentId,
-        boost::optional<bool> includeConfig,
-        boost::optional<bool> countAll,
-        boost::optional<bool> includei10n,
-        boost::optional<utility::string_t> locale,
-        boost::optional<utility::string_t> modules,
-        boost::optional<bool> isCrawler,
-        boost::optional<bool> includeNotificationCount,
-        boost::optional<bool> asTree,
-        boost::optional<int32_t> maxTreeDepth,
-        boost::optional<bool> useFullTranslationIds,
-        boost::optional<utility::string_t> parentId,
-        boost::optional<utility::string_t> searchText,
-        boost::optional<std::vector<utility::string_t>> hashTags,
-        boost::optional<utility::string_t> userId,
-        boost::optional<utility::string_t> customConfigStr,
-        boost::optional<utility::string_t> afterCommentId,
-        boost::optional<utility::string_t> beforeCommentId
+        utility::string_t urlId
+        
+        , const GetCommentsPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -424,8 +572,8 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t userIdWS,
-        int64_t startTime,
-        boost::optional<int64_t> endTime
+        int64_t startTime
+        , boost::optional<int64_t> endTime = boost::none
     ) const;
     /// <summary>
     /// 
@@ -441,13 +589,9 @@ public:
     /// <param name="isCrawler"> (optional, default to false)</param>
     /// <param name="includeUserInfo"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<PublicFeedPostsResponse>> getFeedPostsPublic(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> afterId,
-        boost::optional<int32_t> limit,
-        boost::optional<std::vector<utility::string_t>> tags,
-        boost::optional<utility::string_t> sso,
-        boost::optional<bool> isCrawler,
-        boost::optional<bool> includeUserInfo
+        utility::string_t tenantId
+        
+        , const GetFeedPostsPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -460,8 +604,8 @@ public:
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<FeedPostsStatsResponse>> getFeedPostsStats(
         utility::string_t tenantId,
-        std::vector<utility::string_t> postIds,
-        boost::optional<utility::string_t> sso
+        std::vector<utility::string_t> postIds
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -474,6 +618,7 @@ public:
     pplx::task<std::shared_ptr<GifGetLargeResponse>> getGifLarge(
         utility::string_t tenantId,
         utility::string_t largeInternalURLSanitized
+        
     ) const;
     /// <summary>
     /// 
@@ -488,10 +633,9 @@ public:
     /// <param name="page"> (optional, default to 0.0)</param>
     pplx::task<std::shared_ptr<GetGifsSearchResponse>> getGifsSearch(
         utility::string_t tenantId,
-        utility::string_t search,
-        boost::optional<utility::string_t> locale,
-        boost::optional<utility::string_t> rating,
-        boost::optional<double> page
+        utility::string_t search
+        
+        , const GetGifsSearchOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -504,10 +648,9 @@ public:
     /// <param name="rating"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="page"> (optional, default to 0.0)</param>
     pplx::task<std::shared_ptr<GetGifsTrendingResponse>> getGifsTrending(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> locale,
-        boost::optional<utility::string_t> rating,
-        boost::optional<double> page
+        utility::string_t tenantId
+        
+        , const GetGifsTrendingOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -524,8 +667,8 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t userIdWS,
-        int64_t startTime,
-        boost::optional<int64_t> endTime
+        int64_t startTime
+        , boost::optional<int64_t> endTime = boost::none
     ) const;
     /// <summary>
     /// 
@@ -539,9 +682,9 @@ public:
     /// <param name="afterUserId">Cursor tiebreaker: pass nextAfterUserId from the previous response. Required when afterName is set so name-ties don&#39;t drop entries. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<PageUsersOfflineResponse>> getOfflineUsers(
         utility::string_t tenantId,
-        utility::string_t urlId,
-        boost::optional<utility::string_t> afterName,
-        boost::optional<utility::string_t> afterUserId
+        utility::string_t urlId
+        
+        , const GetOfflineUsersOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -555,9 +698,9 @@ public:
     /// <param name="afterUserId">Cursor tiebreaker: pass nextAfterUserId from the previous response. Required when afterName is set so name-ties don&#39;t drop entries. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<PageUsersOnlineResponse>> getOnlineUsers(
         utility::string_t tenantId,
-        utility::string_t urlId,
-        boost::optional<utility::string_t> afterName,
-        boost::optional<utility::string_t> afterUserId
+        utility::string_t urlId
+        
+        , const GetOnlineUsersOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -572,12 +715,9 @@ public:
     /// <param name="sortBy">Sort order. &#x60;updatedAt&#x60; (default, newest first), &#x60;commentCount&#x60; (most comments first), or &#x60;title&#x60; (alphabetical). (optional, default to new PagesSortBy())</param>
     /// <param name="hasComments">If true, only return pages with at least one comment. (optional, default to false)</param>
     pplx::task<std::shared_ptr<GetPublicPagesResponse>> getPagesPublic(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> cursor,
-        boost::optional<int32_t> limit,
-        boost::optional<utility::string_t> q,
-        boost::optional<std::shared_ptr<PagesSortBy>> sortBy,
-        boost::optional<bool> hasComments
+        utility::string_t tenantId
+        
+        , const GetPagesPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -591,9 +731,9 @@ public:
     /// <param name="useFullTranslationIds"> (optional, default to false)</param>
     pplx::task<std::shared_ptr<GetTranslationsResponse>> getTranslations(
         utility::string_t r_namespace,
-        utility::string_t component,
-        boost::optional<utility::string_t> locale,
-        boost::optional<bool> useFullTranslationIds
+        utility::string_t component
+        
+        , const GetTranslationsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -604,8 +744,8 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<GetUserNotificationCountResponse>> getUserNotificationCount(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> sso
+        utility::string_t tenantId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -626,18 +766,9 @@ public:
     /// <param name="includeTenantNotifications"> (optional, default to false)</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<GetMyNotificationsResponse>> getUserNotifications(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> urlId,
-        boost::optional<int32_t> pageSize,
-        boost::optional<utility::string_t> afterId,
-        boost::optional<bool> includeContext,
-        boost::optional<int64_t> afterCreatedAt,
-        boost::optional<bool> unreadOnly,
-        boost::optional<bool> dmOnly,
-        boost::optional<bool> noDm,
-        boost::optional<bool> includeTranslations,
-        boost::optional<bool> includeTenantNotifications,
-        boost::optional<utility::string_t> sso
+        utility::string_t tenantId
+        
+        , const GetUserNotificationsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -652,6 +783,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlIdWS,
         utility::string_t userIds
+        
     ) const;
     /// <summary>
     /// 
@@ -663,9 +795,9 @@ public:
     /// <param name="postIds"> (optional, default to std::vector&lt;std::shared_ptr&lt;utility::string_t&gt;&gt;())</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<UserReactsResponse>> getUserReactsPublic(
-        utility::string_t tenantId,
-        boost::optional<std::vector<utility::string_t>> postIds,
-        boost::optional<utility::string_t> sso
+        utility::string_t tenantId
+        
+        , const GetUserReactsPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -678,6 +810,7 @@ public:
     pplx::task<std::shared_ptr<PageUsersInfoResponse>> getUsersInfo(
         utility::string_t tenantId,
         utility::string_t ids
+        
     ) const;
     /// <summary>
     /// 
@@ -690,6 +823,7 @@ public:
     pplx::task<std::shared_ptr<GetV1PageLikes>> getV1PageLikes(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -704,6 +838,7 @@ public:
         utility::string_t tenantId,
         utility::string_t urlId,
         utility::string_t id
+        
     ) const;
     /// <summary>
     /// 
@@ -716,6 +851,7 @@ public:
     pplx::task<std::shared_ptr<GetV2PageReacts>> getV2PageReacts(
         utility::string_t tenantId,
         utility::string_t urlId
+        
     ) const;
     /// <summary>
     /// 
@@ -730,8 +866,8 @@ public:
     pplx::task<std::shared_ptr<APIEmptyResponse>> lockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -740,6 +876,7 @@ public:
     /// 
     /// </remarks>
     pplx::task<std::shared_ptr<APIEmptyResponse>> logoutPublic(
+        
     ) const;
     /// <summary>
     /// 
@@ -754,8 +891,8 @@ public:
     pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> pinComment(
         utility::string_t tenantId,
         utility::string_t commentId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -772,10 +909,9 @@ public:
     pplx::task<std::shared_ptr<ReactFeedPostResponse>> reactFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId,
-        std::shared_ptr<ReactBodyParams> reactBodyParams,
-        boost::optional<bool> isUndo,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<ReactBodyParams> reactBodyParams
+        
+        , const ReactFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -786,8 +922,8 @@ public:
     /// <param name="tenantId"></param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotificationCount(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> sso
+        utility::string_t tenantId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -803,13 +939,9 @@ public:
     /// <param name="noDm"> (optional, default to false)</param>
     /// <param name="sso"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<ResetUserNotificationsResponse>> resetUserNotifications(
-        utility::string_t tenantId,
-        boost::optional<utility::string_t> afterId,
-        boost::optional<int64_t> afterCreatedAt,
-        boost::optional<bool> unreadOnly,
-        boost::optional<bool> dmOnly,
-        boost::optional<bool> noDm,
-        boost::optional<utility::string_t> sso
+        utility::string_t tenantId
+        
+        , const ResetUserNotificationsOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -825,11 +957,9 @@ public:
     /// <param name="searchSection"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<SearchUsersResult>> searchUsers(
         utility::string_t tenantId,
-        utility::string_t urlId,
-        boost::optional<utility::string_t> usernameStartsWith,
-        boost::optional<std::vector<utility::string_t>> mentionGroupIds,
-        boost::optional<utility::string_t> sso,
-        boost::optional<utility::string_t> searchSection
+        utility::string_t urlId
+        
+        , const SearchUsersOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -847,9 +977,9 @@ public:
         utility::string_t tenantId,
         utility::string_t commentId,
         utility::string_t broadcastId,
-        std::shared_ptr<CommentTextUpdateRequest> commentTextUpdateRequest,
-        boost::optional<utility::string_t> editKey,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<CommentTextUpdateRequest> commentTextUpdateRequest
+        
+        , const SetCommentTextOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -864,8 +994,8 @@ public:
     pplx::task<std::shared_ptr<UnblockSuccess>> unBlockCommentPublic(
         utility::string_t tenantId,
         utility::string_t commentId,
-        std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<PublicBlockFromCommentParams> publicBlockFromCommentParams
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -880,8 +1010,8 @@ public:
     pplx::task<std::shared_ptr<APIEmptyResponse>> unLockComment(
         utility::string_t tenantId,
         utility::string_t commentId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -896,8 +1026,8 @@ public:
     pplx::task<std::shared_ptr<ChangeCommentPinStatusResponse>> unPinComment(
         utility::string_t tenantId,
         utility::string_t commentId,
-        utility::string_t broadcastId,
-        boost::optional<utility::string_t> sso
+        utility::string_t broadcastId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -913,9 +1043,9 @@ public:
     pplx::task<std::shared_ptr<CreateFeedPostResponse>> updateFeedPostPublic(
         utility::string_t tenantId,
         utility::string_t postId,
-        std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams,
-        boost::optional<utility::string_t> broadcastId,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<UpdateFeedPostParams> updateFeedPostParams
+        
+        , const UpdateFeedPostPublicOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -932,8 +1062,8 @@ public:
         utility::string_t tenantId,
         utility::string_t notificationId,
         utility::string_t optedInOrOut,
-        utility::string_t commentId,
-        boost::optional<utility::string_t> sso
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -952,8 +1082,8 @@ public:
         utility::string_t urlId,
         utility::string_t url,
         utility::string_t pageTitle,
-        utility::string_t subscribedOrUnsubscribed,
-        boost::optional<utility::string_t> sso
+        utility::string_t subscribedOrUnsubscribed
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -968,8 +1098,8 @@ public:
     pplx::task<std::shared_ptr<UpdateUserNotificationStatusResponse>> updateUserNotificationStatus(
         utility::string_t tenantId,
         utility::string_t notificationId,
-        utility::string_t newStatus,
-        boost::optional<utility::string_t> sso
+        utility::string_t newStatus
+        , boost::optional<utility::string_t> sso = boost::none
     ) const;
     /// <summary>
     /// 
@@ -983,9 +1113,9 @@ public:
     /// <param name="urlId">Page id that upload is happening from, to configure (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::shared_ptr<UploadImageResponse>> uploadImage(
         utility::string_t tenantId,
-        std::shared_ptr<HttpContent> file,
-        boost::optional<std::shared_ptr<SizePreset>> sizePreset,
-        boost::optional<utility::string_t> urlId
+        std::shared_ptr<HttpContent> file
+        
+        , const UploadImageOptions& options = {}
     ) const;
     /// <summary>
     /// 
@@ -1005,9 +1135,9 @@ public:
         utility::string_t commentId,
         utility::string_t urlId,
         utility::string_t broadcastId,
-        std::shared_ptr<VoteBodyParams> voteBodyParams,
-        boost::optional<utility::string_t> sessionId,
-        boost::optional<utility::string_t> sso
+        std::shared_ptr<VoteBodyParams> voteBodyParams
+        
+        , const VoteCommentOptions& options = {}
     ) const;
 
 protected:

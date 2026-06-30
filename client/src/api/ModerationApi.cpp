@@ -35,12 +35,20 @@ ModerationApi::~ModerationApi()
 {
 }
 
-pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(utility::string_t commentId, utility::string_t voteId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationVote(
+        utility::string_t tenantId,
+        utility::string_t commentId,
+        utility::string_t voteId
+        
+        , const DeleteModerationVoteOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/vote/{commentId}/{voteId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/vote/{commentId}/{voteId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("voteId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(voteId)));
 
@@ -78,13 +86,12 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationV
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -171,12 +178,25 @@ pplx::task<std::shared_ptr<VoteDeleteResponse>> ModerationApi::deleteModerationV
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(boost::optional<double> page, boost::optional<double> count, boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::getApiComments(
+        utility::string_t tenantId
+        
+        , const GetApiCommentsOptions& options
+) const
 {
+    auto page = options.page;
+    auto count = options.count;
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto sorts = options.sorts;
+    auto demo = options.demo;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/api/comments");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/api/comments");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -212,6 +232,9 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::get
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (page)
     {
         localVarQueryParams[utility::conversions::to_string_t("page")] = ApiClient::parameterToString(*page);
@@ -243,10 +266,6 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::get
     if (demo)
     {
         localVarQueryParams[utility::conversions::to_string_t("demo")] = ApiClient::parameterToString(*demo);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -333,12 +352,18 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentsResponse>> ModerationApi::get
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(boost::optional<utility::string_t> batchJobId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getApiExportStatus(
+        utility::string_t tenantId
+        
+        , const GetApiExportStatusOptions& options
+) const
 {
+    auto batchJobId = options.batchJobId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/api/export/status");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/api/export/status");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -374,13 +399,12 @@ pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getAp
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (batchJobId)
     {
         localVarQueryParams[utility::conversions::to_string_t("batchJobId")] = ApiClient::parameterToString(*batchJobId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -467,12 +491,23 @@ pplx::task<std::shared_ptr<ModerationExportStatusResponse>> ModerationApi::getAp
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> afterId, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::getApiIds(
+        utility::string_t tenantId
+        
+        , const GetApiIdsOptions& options
+) const
 {
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto afterId = options.afterId;
+    auto demo = options.demo;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/api/ids");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/api/ids");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -508,6 +543,9 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::g
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (textSearch)
     {
         localVarQueryParams[utility::conversions::to_string_t("text-search")] = ApiClient::parameterToString(*textSearch);
@@ -531,10 +569,6 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::g
     if (demo)
     {
         localVarQueryParams[utility::conversions::to_string_t("demo")] = ApiClient::parameterToString(*demo);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -621,12 +655,16 @@ pplx::task<std::shared_ptr<ModerationAPIGetCommentIdsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::getBanUsersFromComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/ban-users/from-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/ban-users/from-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -663,9 +701,8 @@ pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::ge
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -752,12 +789,16 @@ pplx::task<std::shared_ptr<GetBannedUsersFromCommentResponse>> ModerationApi::ge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getCommentBanStatus(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-comment-ban-status/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-comment-ban-status/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -794,9 +835,8 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getComme
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -883,12 +923,16 @@ pplx::task<std::shared_ptr<GetCommentBanStatusResponse>> ModerationApi::getComme
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::getCommentChildren(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/comment-children/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/comment-children/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -925,9 +969,8 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::g
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -1014,12 +1057,22 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filter, boost::optional<utility::string_t> searchFilters, boost::optional<bool> demo, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::getCount(
+        utility::string_t tenantId
+        
+        , const GetCountOptions& options
+) const
 {
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filter = options.filter;
+    auto searchFilters = options.searchFilters;
+    auto demo = options.demo;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/count");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/count");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1055,6 +1108,9 @@ pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::g
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (textSearch)
     {
         localVarQueryParams[utility::conversions::to_string_t("text-search")] = ApiClient::parameterToString(*textSearch);
@@ -1074,10 +1130,6 @@ pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::g
     if (demo)
     {
         localVarQueryParams[utility::conversions::to_string_t("demo")] = ApiClient::parameterToString(*demo);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -1164,12 +1216,15 @@ pplx::task<std::shared_ptr<ModerationAPICountCommentsResponse>> ModerationApi::g
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCounts(
+        utility::string_t tenantId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/banned-users/counts");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/banned-users/mod_api/counts");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1205,9 +1260,8 @@ pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCount
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -1294,12 +1348,16 @@ pplx::task<std::shared_ptr<GetBannedUsersCountResponse>> ModerationApi::getCount
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/logs/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/logs/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -1336,9 +1394,8 @@ pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -1425,12 +1482,15 @@ pplx::task<std::shared_ptr<ModerationAPIGetLogsResponse>> ModerationApi::getLogs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getManualBadges(
+        utility::string_t tenantId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-manual-badges");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-manual-badges");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1466,9 +1526,8 @@ pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getMan
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -1555,12 +1614,19 @@ pplx::task<std::shared_ptr<GetTenantManualBadgesResponse>> ModerationApi::getMan
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(boost::optional<utility::string_t> badgesUserId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManualBadgesForUser(
+        utility::string_t tenantId
+        
+        , const GetManualBadgesForUserOptions& options
+) const
 {
+    auto badgesUserId = options.badgesUserId;
+    auto commentId = options.commentId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-manual-badges-for-user");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-manual-badges-for-user");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1596,6 +1662,9 @@ pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManua
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (badgesUserId)
     {
         localVarQueryParams[utility::conversions::to_string_t("badgesUserId")] = ApiClient::parameterToString(*badgesUserId);
@@ -1603,10 +1672,6 @@ pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManua
     if (commentId)
     {
         localVarQueryParams[utility::conversions::to_string_t("commentId")] = ApiClient::parameterToString(*commentId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -1693,12 +1758,20 @@ pplx::task<std::shared_ptr<GetUserManualBadgesResponse>> ModerationApi::getManua
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(utility::string_t commentId, boost::optional<bool> includeEmail, boost::optional<bool> includeIP, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getModerationComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const GetModerationCommentOptions& options
+) const
 {
+    auto includeEmail = options.includeEmail;
+    auto includeIP = options.includeIP;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -1735,6 +1808,9 @@ pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getMode
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (includeEmail)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeEmail")] = ApiClient::parameterToString(*includeEmail);
@@ -1742,10 +1818,6 @@ pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getMode
     if (includeIP)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeIP")] = ApiClient::parameterToString(*includeIP);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -1832,12 +1904,16 @@ pplx::task<std::shared_ptr<ModerationAPICommentResponse>> ModerationApi::getMode
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(utility::string_t commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModerationCommentText(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-comment-text/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-comment-text/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -1874,9 +1950,8 @@ pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModeration
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -1963,12 +2038,21 @@ pplx::task<std::shared_ptr<GetCommentTextResponse>> ModerationApi::getModeration
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(utility::string_t commentId, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const GetPreBanSummaryOptions& options
+) const
 {
+    auto includeByUserIdAndEmail = options.includeByUserIdAndEmail;
+    auto includeByIP = options.includeByIP;
+    auto includeByEmailDomain = options.includeByEmailDomain;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/pre-ban-summary/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/pre-ban-summary/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -2005,6 +2089,9 @@ pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(utili
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (includeByUserIdAndEmail)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeByUserIdAndEmail")] = ApiClient::parameterToString(*includeByUserIdAndEmail);
@@ -2016,10 +2103,6 @@ pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(utili
     if (includeByEmailDomain)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeByEmailDomain")] = ApiClient::parameterToString(*includeByEmailDomain);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2106,12 +2189,20 @@ pplx::task<std::shared_ptr<PreBanSummary>> ModerationApi::getPreBanSummary(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(boost::optional<utility::string_t> value, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getSearchCommentsSummary(
+        utility::string_t tenantId
+        
+        , const GetSearchCommentsSummaryOptions& options
+) const
 {
+    auto value = options.value;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/search/comments/summary");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/search/comments/summary");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2147,6 +2238,9 @@ pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getS
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (value)
     {
         localVarQueryParams[utility::conversions::to_string_t("value")] = ApiClient::parameterToString(*value);
@@ -2158,10 +2252,6 @@ pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getS
     if (searchFilters)
     {
         localVarQueryParams[utility::conversions::to_string_t("searchFilters")] = ApiClient::parameterToString(*searchFilters);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2248,12 +2338,18 @@ pplx::task<std::shared_ptr<ModerationCommentSearchResponse>> ModerationApi::getS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSearchPages(
+        utility::string_t tenantId
+        
+        , const GetSearchPagesOptions& options
+) const
 {
+    auto value = options.value;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/search/pages");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/search/pages");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2289,13 +2385,12 @@ pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSear
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (value)
     {
         localVarQueryParams[utility::conversions::to_string_t("value")] = ApiClient::parameterToString(*value);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2382,12 +2477,18 @@ pplx::task<std::shared_ptr<ModerationPageSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSearchSites(
+        utility::string_t tenantId
+        
+        , const GetSearchSitesOptions& options
+) const
 {
+    auto value = options.value;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/search/sites");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/search/sites");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2423,13 +2524,12 @@ pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSear
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (value)
     {
         localVarQueryParams[utility::conversions::to_string_t("value")] = ApiClient::parameterToString(*value);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2516,12 +2616,18 @@ pplx::task<std::shared_ptr<ModerationSiteSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchSuggest(
+        utility::string_t tenantId
+        
+        , const GetSearchSuggestOptions& options
+) const
 {
+    auto textSearch = options.textSearch;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/search/suggest");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/search/suggest");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2557,13 +2663,12 @@ pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchS
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (textSearch)
     {
         localVarQueryParams[utility::conversions::to_string_t("text-search")] = ApiClient::parameterToString(*textSearch);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2650,12 +2755,18 @@ pplx::task<std::shared_ptr<ModerationSuggestResponse>> ModerationApi::getSearchS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(boost::optional<utility::string_t> value, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSearchUsers(
+        utility::string_t tenantId
+        
+        , const GetSearchUsersOptions& options
+) const
 {
+    auto value = options.value;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/search/users");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/search/users");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2691,13 +2802,12 @@ pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSear
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (value)
     {
         localVarQueryParams[utility::conversions::to_string_t("value")] = ApiClient::parameterToString(*value);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2784,12 +2894,18 @@ pplx::task<std::shared_ptr<ModerationUserSearchResponse>> ModerationApi::getSear
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustFactor(
+        utility::string_t tenantId
+        
+        , const GetTrustFactorOptions& options
+) const
 {
+    auto userId = options.userId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-trust-factor");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-trust-factor");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2825,13 +2941,12 @@ pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustF
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (userId)
     {
         localVarQueryParams[utility::conversions::to_string_t("userId")] = ApiClient::parameterToString(*userId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -2918,12 +3033,15 @@ pplx::task<std::shared_ptr<GetUserTrustFactorResponse>> ModerationApi::getTrustF
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> ModerationApi::getUserBanPreference(
+        utility::string_t tenantId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/user-ban-preference");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/user-ban-preference");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2959,9 +3077,8 @@ pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> Moderation
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -3048,12 +3165,18 @@ pplx::task<std::shared_ptr<APIModerateGetUserBanPreferencesResponse>> Moderation
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUserInternalProfile(
+        utility::string_t tenantId
+        
+        , const GetUserInternalProfileOptions& options
+) const
 {
+    auto commentId = options.commentId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/get-user-internal-profile");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/get-user-internal-profile");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3089,13 +3212,12 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUs
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (commentId)
     {
         localVarQueryParams[utility::conversions::to_string_t("commentId")] = ApiClient::parameterToString(*commentId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -3182,8 +3304,16 @@ pplx::task<std::shared_ptr<GetUserInternalProfileResponse>> ModerationApi::getUs
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(utility::string_t commentId, std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommentVotes(
+        utility::string_t tenantId,
+        utility::string_t commentId,
+        std::shared_ptr<AdjustCommentVotesParams> adjustCommentVotesParams
+        
+        , const PostAdjustCommentVotesOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
     // verify the required parameter 'adjustCommentVotesParams' is set
     if (adjustCommentVotesParams == nullptr)
@@ -3193,7 +3323,7 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/adjust-comment-votes/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/adjust-comment-votes/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -3231,13 +3361,12 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -3254,7 +3383,6 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(adjustCommentVotesParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -3340,12 +3468,22 @@ pplx::task<std::shared_ptr<AdjustVotesResponse>> ModerationApi::postAdjustCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(boost::optional<utility::string_t> textSearch, boost::optional<utility::string_t> byIPFromComment, boost::optional<utility::string_t> filters, boost::optional<utility::string_t> searchFilters, boost::optional<utility::string_t> sorts, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExport(
+        utility::string_t tenantId
+        
+        , const PostApiExportOptions& options
+) const
 {
+    auto textSearch = options.textSearch;
+    auto byIPFromComment = options.byIPFromComment;
+    auto filters = options.filters;
+    auto searchFilters = options.searchFilters;
+    auto sorts = options.sorts;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/api/export");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/api/export");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3381,6 +3519,9 @@ pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExpo
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (textSearch)
     {
         localVarQueryParams[utility::conversions::to_string_t("text-search")] = ApiClient::parameterToString(*textSearch);
@@ -3400,10 +3541,6 @@ pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExpo
     if (sorts)
     {
         localVarQueryParams[utility::conversions::to_string_t("sorts")] = ApiClient::parameterToString(*sorts);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -3490,12 +3627,26 @@ pplx::task<std::shared_ptr<ModerationExportResponse>> ModerationApi::postApiExpo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(utility::string_t commentId, boost::optional<bool> banEmail, boost::optional<bool> banEmailDomain, boost::optional<bool> banIP, boost::optional<bool> deleteAllUsersComments, boost::optional<utility::string_t> bannedUntil, boost::optional<bool> isShadowBan, boost::optional<utility::string_t> updateId, boost::optional<utility::string_t> banReason, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUserFromComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostBanUserFromCommentOptions& options
+) const
 {
+    auto banEmail = options.banEmail;
+    auto banEmailDomain = options.banEmailDomain;
+    auto banIP = options.banIP;
+    auto deleteAllUsersComments = options.deleteAllUsersComments;
+    auto bannedUntil = options.bannedUntil;
+    auto isShadowBan = options.isShadowBan;
+    auto updateId = options.updateId;
+    auto banReason = options.banReason;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/ban-user/from-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/ban-user/from-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -3532,6 +3683,9 @@ pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUser
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (banEmail)
     {
         localVarQueryParams[utility::conversions::to_string_t("banEmail")] = ApiClient::parameterToString(*banEmail);
@@ -3563,10 +3717,6 @@ pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUser
     if (banReason)
     {
         localVarQueryParams[utility::conversions::to_string_t("banReason")] = ApiClient::parameterToString(*banReason);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -3653,7 +3803,11 @@ pplx::task<std::shared_ptr<BanUserFromCommentResult>> ModerationApi::postBanUser
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std::shared_ptr<BanUserUndoParams> banUserUndoParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(
+        utility::string_t tenantId,
+        std::shared_ptr<BanUserUndoParams> banUserUndoParams
+        , boost::optional<utility::string_t> sso
+) const
 {
 
     // verify the required parameter 'banUserUndoParams' is set
@@ -3664,7 +3818,7 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/ban-user/undo");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/ban-user/undo");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3701,9 +3855,8 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -3720,7 +3873,6 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(banUserUndoParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -3806,8 +3958,17 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postBanUserUndo(std
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(std::shared_ptr<BulkPreBanParams> bulkPreBanParams, boost::optional<bool> includeByUserIdAndEmail, boost::optional<bool> includeByIP, boost::optional<bool> includeByEmailDomain, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSummary(
+        utility::string_t tenantId,
+        std::shared_ptr<BulkPreBanParams> bulkPreBanParams
+        
+        , const PostBulkPreBanSummaryOptions& options
+) const
 {
+    auto includeByUserIdAndEmail = options.includeByUserIdAndEmail;
+    auto includeByIP = options.includeByIP;
+    auto includeByEmailDomain = options.includeByEmailDomain;
+    auto sso = options.sso;
 
     // verify the required parameter 'bulkPreBanParams' is set
     if (bulkPreBanParams == nullptr)
@@ -3817,7 +3978,7 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/bulk-pre-ban-summary");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/bulk-pre-ban-summary");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3854,6 +4015,9 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (includeByUserIdAndEmail)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeByUserIdAndEmail")] = ApiClient::parameterToString(*includeByUserIdAndEmail);
@@ -3865,10 +4029,6 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
     if (includeByEmailDomain)
     {
         localVarQueryParams[utility::conversions::to_string_t("includeByEmailDomain")] = ApiClient::parameterToString(*includeByEmailDomain);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -3885,7 +4045,6 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(bulkPreBanParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -3971,7 +4130,11 @@ pplx::task<std::shared_ptr<BulkPreBanSummary>> ModerationApi::postBulkPreBanSumm
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(std::shared_ptr<CommentsByIdsParams> commentsByIdsParams, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::postCommentsByIds(
+        utility::string_t tenantId,
+        std::shared_ptr<CommentsByIdsParams> commentsByIdsParams
+        , boost::optional<utility::string_t> sso
+) const
 {
 
     // verify the required parameter 'commentsByIdsParams' is set
@@ -3982,7 +4145,7 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/comments-by-ids");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/comments-by-ids");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -4019,9 +4182,8 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
     if (sso)
     {
@@ -4038,7 +4200,6 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(commentsByIdsParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -4124,12 +4285,19 @@ pplx::task<std::shared_ptr<ModerationAPIChildCommentsResponse>> ModerationApi::p
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostFlagCommentOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/flag-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/flag-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4166,13 +4334,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(uti
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4259,12 +4426,19 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postFlagComment(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemoveComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<PostRemoveCommentApiResponse>> ModerationApi::postRemoveComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostRemoveCommentOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/remove-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/remove-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4301,13 +4475,12 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4373,7 +4546,7 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
     })
     .then([=, this](utility::string_t localVarResponse)
     {
-        std::shared_ptr<PostRemoveCommentResponse> localVarResult(new PostRemoveCommentResponse());
+        std::shared_ptr<PostRemoveCommentApiResponse> localVarResult(new PostRemoveCommentApiResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
@@ -4394,12 +4567,19 @@ pplx::task<std::shared_ptr<PostRemoveCommentResponse>> ModerationApi::postRemove
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostRestoreDeletedCommentOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/restore-deleted-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/restore-deleted-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4436,13 +4616,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedC
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4529,12 +4708,20 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postRestoreDeletedC
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(utility::string_t commentId, boost::optional<bool> approved, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCommentApprovalStatus(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostSetCommentApprovalStatusOptions& options
+) const
 {
+    auto approved = options.approved;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/set-comment-approval-status/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/set-comment-approval-status/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4571,6 +4758,9 @@ pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCo
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (approved)
     {
         localVarQueryParams[utility::conversions::to_string_t("approved")] = ApiClient::parameterToString(*approved);
@@ -4578,10 +4768,6 @@ pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCo
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4668,12 +4854,20 @@ pplx::task<std::shared_ptr<SetCommentApprovedResponse>> ModerationApi::postSetCo
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(utility::string_t commentId, boost::optional<bool> reviewed, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentReviewStatus(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostSetCommentReviewStatusOptions& options
+) const
 {
+    auto reviewed = options.reviewed;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/set-comment-review-status/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/set-comment-review-status/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4710,6 +4904,9 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentRevie
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (reviewed)
     {
         localVarQueryParams[utility::conversions::to_string_t("reviewed")] = ApiClient::parameterToString(*reviewed);
@@ -4717,10 +4914,6 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentRevie
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4807,12 +5000,21 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentRevie
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(utility::string_t commentId, boost::optional<bool> spam, boost::optional<bool> permNotSpam, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamStatus(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostSetCommentSpamStatusOptions& options
+) const
 {
+    auto spam = options.spam;
+    auto permNotSpam = options.permNotSpam;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/set-comment-spam-status/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/set-comment-spam-status/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4849,6 +5051,9 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamS
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (spam)
     {
         localVarQueryParams[utility::conversions::to_string_t("spam")] = ApiClient::parameterToString(*spam);
@@ -4860,10 +5065,6 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamS
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -4950,8 +5151,16 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postSetCommentSpamS
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(utility::string_t commentId, std::shared_ptr<SetCommentTextParams> setCommentTextParams, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommentText(
+        utility::string_t tenantId,
+        utility::string_t commentId,
+        std::shared_ptr<SetCommentTextParams> setCommentTextParams
+        
+        , const PostSetCommentTextOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
     // verify the required parameter 'setCommentTextParams' is set
     if (setCommentTextParams == nullptr)
@@ -4961,7 +5170,7 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/set-comment-text/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/set-comment-text/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -4999,13 +5208,12 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
     localVarConsumeHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -5022,7 +5230,6 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
         web::json::value localVarJson;
 
         localVarJson = ModelBase::toJson(setCommentTextParams);
-        
 
         localVarHttpBody = std::shared_ptr<IHttpBody>( new JsonBody( localVarJson ) );
     }
@@ -5108,12 +5315,19 @@ pplx::task<std::shared_ptr<SetCommentTextResponse>> ModerationApi::postSetCommen
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(utility::string_t commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostUnFlagCommentOptions& options
+) const
 {
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/un-flag-comment/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/un-flag-comment/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -5150,13 +5364,12 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(u
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -5243,12 +5456,20 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::postUnFlagComment(u
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(utility::string_t commentId, boost::optional<utility::string_t> direction, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(
+        utility::string_t tenantId,
+        utility::string_t commentId
+        
+        , const PostVoteOptions& options
+) const
 {
+    auto direction = options.direction;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/vote/{commentId}");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/vote/{commentId}");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("commentId") + utility::conversions::to_string_t("}"), web::uri::encode_uri(ApiClient::parameterToString(commentId)));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -5285,6 +5506,9 @@ pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(utility::strin
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (direction)
     {
         localVarQueryParams[utility::conversions::to_string_t("direction")] = ApiClient::parameterToString(*direction);
@@ -5292,10 +5516,6 @@ pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(utility::strin
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -5382,12 +5602,21 @@ pplx::task<std::shared_ptr<VoteResponse>> ModerationApi::postVote(utility::strin
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge(
+        utility::string_t tenantId,
+        utility::string_t badgeId
+        
+        , const PutAwardBadgeOptions& options
+) const
 {
+    auto userId = options.userId;
+    auto commentId = options.commentId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/award-badge");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/award-badge");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -5424,6 +5653,9 @@ pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
     {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
+    {
         localVarQueryParams[utility::conversions::to_string_t("badgeId")] = ApiClient::parameterToString(badgeId);
     }
     if (userId)
@@ -5437,10 +5669,6 @@ pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -5527,12 +5755,16 @@ pplx::task<std::shared_ptr<AwardUserBadgeResponse>> ModerationApi::putAwardBadge
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(
+        utility::string_t tenantId,
+        utility::string_t urlId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/close-thread");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/close-thread");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -5569,11 +5801,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(util
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
     {
-        localVarQueryParams[utility::conversions::to_string_t("urlId")] = ApiClient::parameterToString(urlId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("urlId")] = ApiClient::parameterToString(urlId);
     }
     if (sso)
     {
@@ -5660,12 +5891,21 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putCloseThread(util
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(utility::string_t badgeId, boost::optional<utility::string_t> userId, boost::optional<utility::string_t> commentId, boost::optional<utility::string_t> broadcastId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBadge(
+        utility::string_t tenantId,
+        utility::string_t badgeId
+        
+        , const PutRemoveBadgeOptions& options
+) const
 {
+    auto userId = options.userId;
+    auto commentId = options.commentId;
+    auto broadcastId = options.broadcastId;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/remove-badge");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/remove-badge");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -5702,6 +5942,9 @@ pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBad
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
     {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
+    {
         localVarQueryParams[utility::conversions::to_string_t("badgeId")] = ApiClient::parameterToString(badgeId);
     }
     if (userId)
@@ -5715,10 +5958,6 @@ pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBad
     if (broadcastId)
     {
         localVarQueryParams[utility::conversions::to_string_t("broadcastId")] = ApiClient::parameterToString(*broadcastId);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {
@@ -5805,12 +6044,16 @@ pplx::task<std::shared_ptr<RemoveUserBadgeResponse>> ModerationApi::putRemoveBad
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(utility::string_t urlId, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(
+        utility::string_t tenantId,
+        utility::string_t urlId
+        , boost::optional<utility::string_t> sso
+) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/reopen-thread");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/reopen-thread");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -5847,11 +6090,10 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(uti
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
     {
-        localVarQueryParams[utility::conversions::to_string_t("urlId")] = ApiClient::parameterToString(urlId);
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
     }
-    if (tenantId)
     {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
+        localVarQueryParams[utility::conversions::to_string_t("urlId")] = ApiClient::parameterToString(urlId);
     }
     if (sso)
     {
@@ -5938,12 +6180,19 @@ pplx::task<std::shared_ptr<APIEmptyResponse>> ModerationApi::putReopenThread(uti
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(boost::optional<utility::string_t> userId, boost::optional<utility::string_t> trustFactor, boost::optional<utility::string_t> tenantId, boost::optional<utility::string_t> sso) const
+pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustFactor(
+        utility::string_t tenantId
+        
+        , const SetTrustFactorOptions& options
+) const
 {
+    auto userId = options.userId;
+    auto trustFactor = options.trustFactor;
+    auto sso = options.sso;
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/set-trust-factor");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/auth/my-account/moderate-comments/mod_api/set-trust-factor");
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -5979,6 +6228,9 @@ pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustF
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(tenantId);
+    }
     if (userId)
     {
         localVarQueryParams[utility::conversions::to_string_t("userId")] = ApiClient::parameterToString(*userId);
@@ -5986,10 +6238,6 @@ pplx::task<std::shared_ptr<SetUserTrustFactorResponse>> ModerationApi::setTrustF
     if (trustFactor)
     {
         localVarQueryParams[utility::conversions::to_string_t("trustFactor")] = ApiClient::parameterToString(*trustFactor);
-    }
-    if (tenantId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("tenantId")] = ApiClient::parameterToString(*tenantId);
     }
     if (sso)
     {

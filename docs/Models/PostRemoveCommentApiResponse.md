@@ -1,4 +1,4 @@
-# PostRemoveCommentResponse
+# PostRemoveCommentApiResponse
 ## Properties
 
 | Name | Type | Description | Notes |

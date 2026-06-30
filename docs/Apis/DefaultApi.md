@@ -156,7 +156,7 @@ All URIs are relative to *https://fastcomments.com*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [default to null] |
 | **CreateHashTagBody** | [**CreateHashTagBody**](../Models/CreateHashTagBody.md)|  | [optional] |
 
 ### Return type
@@ -182,7 +182,7 @@ All URIs are relative to *https://fastcomments.com*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**|  | [optional] [default to null] |
+| **tenantId** | **String**|  | [default to null] |
 | **BulkCreateHashTagsBody** | [**BulkCreateHashTagsBody**](../Models/BulkCreateHashTagsBody.md)|  | [optional] |
 
 ### Return type
@@ -857,7 +857,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="deleteHashTag"></a>
 # **deleteHashTag**
-> APIEmptyResponse deleteHashTag(tag, tenantId, DeleteHashTagRequestBody)
+> APIEmptyResponse deleteHashTag(tenantId, tag, DeleteHashTagRequestBody)
 
 
 
@@ -865,8 +865,8 @@ All URIs are relative to *https://fastcomments.com*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **tag** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **DeleteHashTagRequestBody** | [**DeleteHashTagRequestBody**](../Models/DeleteHashTagRequestBody.md)|  | [optional] |
 
 ### Return type
@@ -2518,7 +2518,7 @@ All URIs are relative to *https://fastcomments.com*
 
 <a name="patchHashTag"></a>
 # **patchHashTag**
-> UpdateHashTagResponse patchHashTag(tag, tenantId, UpdateHashTagBody)
+> UpdateHashTagResponse patchHashTag(tenantId, tag, UpdateHashTagBody)
 
 
 
@@ -2526,8 +2526,8 @@ All URIs are relative to *https://fastcomments.com*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **tenantId** | **String**|  | [default to null] |
 | **tag** | **String**|  | [default to null] |
-| **tenantId** | **String**|  | [optional] [default to null] |
 | **UpdateHashTagBody** | [**UpdateHashTagBody**](../Models/UpdateHashTagBody.md)|  | [optional] |
 
 ### Return type
